@@ -1,0 +1,11 @@
+diff -ru /tmp/mut_Lang_43_b/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java /tmp/mut_Lang_43_f/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java
+--- /tmp/mut_Lang_43_b/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java	2026-08-29 10:47:38.221916281 -0700
++++ /tmp/mut_Lang_43_f/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java	2026-08-29 10:47:34.739358305 -0700
+@@ -419,6 +419,7 @@
+         int start = pos.getIndex();
+         char[] c = pattern.toCharArray();
+         if (escapingOn && c[start] == QUOTE) {
++            next(pos);
+             return appendTo == null ? null : appendTo.append(QUOTE);
+         }
+         int lastHold = start;

@@ -1,0 +1,28 @@
+diff -ru /tmp/mut_Lang_56_b/src/java/org/apache/commons/lang/time/FastDateFormat.java /tmp/mut_Lang_56_f/src/java/org/apache/commons/lang/time/FastDateFormat.java
+--- /tmp/mut_Lang_56_b/src/java/org/apache/commons/lang/time/FastDateFormat.java	2026-08-29 10:50:27.090208262 -0700
++++ /tmp/mut_Lang_56_f/src/java/org/apache/commons/lang/time/FastDateFormat.java	2026-08-29 10:50:23.567889424 -0700
+@@ -137,11 +137,11 @@
+     /**
+      * The parsed rules.
+      */
+-    private Rule[] mRules;
++    private transient Rule[] mRules;
+     /**
+      * The estimated maximum length.
+      */
+-    private int mMaxLengthEstimate;
++    private transient int mMaxLengthEstimate;
+ 
+     //-----------------------------------------------------------------------
+     /**
+@@ -1019,6 +1019,10 @@
+ 
+     // Serializing
+     //-----------------------------------------------------------------------
++    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
++        in.defaultReadObject();
++        init();
++    }
+     
+     // Rules
+     //-----------------------------------------------------------------------

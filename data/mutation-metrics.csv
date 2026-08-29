@@ -1,0 +1,4 @@
+bug_id,status,n_triggers,n_mutants,n_killed_full,n_live_full,n_uncov_full,n_coupled,n_killed_only_by_others,n_fix_methods,n_mutants_in_fix_methods,n_coupled_in_fix_methods,n_coupled_on_touch_lines,live_in_fix_methods,ops_coupled_in_fix_methods,kill_kinds_coupled_in_fix_methods,ops_all,ops_coupled,kill_kinds_coupled,kill_kinds_full
+Lang-13,ok,1,30,21,9,0,14,7,2,13,9,9,4,STD:9,EXC:9,STD:18|ROR:8|LVR:4,STD:13|LVR:1,EXC:14,EXC:21|LIVE:9
+Lang-43,ok,1,233,109,88,36,85,24,1,34,7,1,15,COR:3|ROR:2|STD:2,EXC:3|FAIL:2|TIME:2,ROR:72|STD:53|LVR:42|COR:38|AOR:28,LVR:24|STD:24|ROR:19|COR:11|AOR:7,EXC:66|TIME:14|FAIL:5,LIVE:88|EXC:78|UNCOV:36|FAIL:16|TIME:15
+Lang-56,ok,1,780,431,176,173,63,368,1,2,1,1,1,STD:1,EXC:1,AOR:216|LVR:195|ROR:174|STD:103|COR:90|ORU:2,LVR:25|ROR:14|COR:11|STD:8|AOR:5,EXC:47|TIME:16,FAIL:312|LIVE:176|UNCOV:173|EXC:99|TIME:20
