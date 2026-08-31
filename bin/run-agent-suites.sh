@@ -256,7 +256,8 @@ cost = d.get('total_cost_usd') or 0
 turns = d.get('num_turns') or 0
 err = bool(d.get('is_error'))
 res = (d.get('result') or '').replace('|', ' ')[:120]
-state = 'ok' if not err else ('dead' if cost == 0 else 'error')
+limit = 'session limit' in res or 'rate limit' in res or d.get('api_error_status') == 429
+state = 'ok' if not err else ('dead' if (cost == 0 or limit) else 'error')
 print(f'{state}|{res}|{cost:.3f}|{turns}')" 2>/dev/null)
 
     STATE="${VERDICT%%|*}"
