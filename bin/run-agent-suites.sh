@@ -12,8 +12,8 @@
 #   - package it as <Project>-<bid>f-agent.1.tar.bz2 into a FLAT directory
 #
 # Analysis is phase 2 (analyze-agent-suites.sh), deliberately separate: this
-# phase costs real money (~$1/bug) and must never be repeated to fix a parsing
-# bug downstream.
+# phase costs real money (~$1-2/bug) and must never be repeated to fix a
+# parsing bug downstream.
 #
 # CONTAMINATION CONTROL
 # ---------------------
@@ -49,6 +49,16 @@
 # developer test for the class under test. The stub is never packaged: only
 # *AgentTest.java goes into the archive.
 #
+# CIRCUIT BREAKER
+# ---------------
+# The first full run burned through 35 bugs in minutes after hitting a usage
+# limit: every call returned `is_error` with $0.00 and 1 turn, and the loop
+# marked each bug as failed. Those .status files then have to be cleaned up by
+# hand before a retry.
+#
+# Two consecutive zero-cost errors now abort the whole run, leaving the
+# remaining bugs untouched so a later resume picks them up cleanly.
+#
 # Usage:
 #   ./bin/run-agent-suites.sh                    # whole sample
 #   ./bin/run-agent-suites.sh data/sample.txt 3  # first 3 bugs
@@ -64,6 +74,7 @@ RUNS=data/agent-runs              # one JSON + log per bug
 ARM=${ARM:-agent}                 # generator label inside the archive name
 MODEL=${MODEL:-opus}
 MAX_TURNS=${MAX_TURNS:-25}
+MAX_DEAD=${MAX_DEAD:-2}           # consecutive zero-cost errors before aborting
 
 command -v defects4j >/dev/null || { echo "defects4j not on PATH"; exit 1; }
 command -v claude    >/dev/null || { echo "claude not on PATH"; exit 1; }
@@ -122,6 +133,8 @@ EOF
 }
 
 n=0
+DEAD=0
+ABORTED=no
 
 while IFS=, read -r P B _rest; do
     P=$(echo "${P:-}" | tr -d '[:space:]')
@@ -183,7 +196,6 @@ while IFS=, read -r P B _rest; do
 
     STUBBED=no
     if ! (cd "$W" && defects4j compile) > "$RUNDIR/${TAG}.precompile" 2>&1; then
-        # Aggregator suites reference deleted classes by name — put stubs back.
         echo "[$TAG] compile broke after deletion, writing stubs"
         for D in $DELETED; do
             write_stub "$W/$SRC_TESTS/$(echo "${D%%:*}" | tr '.' '/').java" \
@@ -233,23 +245,42 @@ Verify with:
         --max-turns "$MAX_TURNS" \
         --output-format json) > "$RUNDIR/${TAG}.json" 2>"$RUNDIR/${TAG}.stderr"
 
-    SUMMARY=$(python3 -c "
+    # verdict: ok | error | dead   (dead = errored with no API call billed)
+    VERDICT=$(python3 -c "
 import json
 try:
     d = json.load(open('$RUNDIR/${TAG}.json'))
-    print(f\"{d.get('total_cost_usd',0):.3f} turns={d.get('num_turns','?')} err={d.get('is_error')}\")
 except Exception:
-    print('unparseable')" 2>/dev/null)
-    echo "[$TAG] agent done: \$$SUMMARY"
+    print('dead|unparseable|0|0'); raise SystemExit
+cost = d.get('total_cost_usd') or 0
+turns = d.get('num_turns') or 0
+err = bool(d.get('is_error'))
+res = (d.get('result') or '').replace('|', ' ')[:120]
+state = 'ok' if not err else ('dead' if cost == 0 else 'error')
+print(f'{state}|{res}|{cost:.3f}|{turns}')" 2>/dev/null)
 
-    # an errored run must not fall through to packaging
-    if python3 -c "
-import json, sys
-try:
-    d = json.load(open('$RUNDIR/${TAG}.json'))
-except Exception:
-    sys.exit(0)
-sys.exit(0 if d.get('is_error') else 1)" 2>/dev/null; then
+    STATE="${VERDICT%%|*}"
+    REST="${VERDICT#*|}"
+    MSG="${REST%%|*}"
+    NUMS="${REST#*|}"
+    echo "[$TAG] agent done: \$${NUMS%|*} turns=${NUMS#*|} state=$STATE"
+
+    if [ "$STATE" = "dead" ]; then
+        DEAD=$((DEAD + 1))
+        echo "[$TAG] no API call was billed: $MSG"
+        if [ "$DEAD" -ge "$MAX_DEAD" ]; then
+            echo
+            echo "ABORTING: $DEAD consecutive runs failed without being billed."
+            echo "Most likely a usage or rate limit. Remaining bugs untouched;"
+            echo "rerun this script later to resume."
+            ABORTED=yes
+            break
+        fi
+        continue                     # no .status: this bug stays retryable
+    fi
+    DEAD=0
+
+    if [ "$STATE" = "error" ]; then
         fail "agent run returned an error — see ${TAG}.json"; continue
     fi
 
@@ -287,7 +318,10 @@ sys.exit(0 if d.get('is_error') else 1)" 2>/dev/null; then
     echo "[$TAG] packaged: $SUITES/$(basename "$ARCHIVE")"
 done < "$SAMPLE"
 
+TOTAL=$(grep -c '[^[:space:]]' "$SAMPLE" 2>/dev/null || echo "?")
 echo
+[ "$ABORTED" = "yes" ] && echo "*** run aborted early — resume by rerunning ***" && echo
+echo "sample size:     $TOTAL"
 echo "suites packaged: $(ls "$ROOT/$SUITES"/*.tar.bz2 2>/dev/null | wc -l)"
 echo "stubbed bugs:    $(grep -lx 'yes' "$ROOT/$RUNS"/*.stubbed 2>/dev/null | wc -l)"
 echo "failures:        $(grep -Lx 'ok' "$ROOT/$RUNS"/*.status 2>/dev/null | wc -l)"
@@ -302,10 +336,14 @@ for f in glob.glob('data/agent-runs/*.json'):
 print(f"{t:.2f}")
 EOF
 )"
-echo
-echo "failed bugs:"
-grep -Lx 'ok' "$ROOT/$RUNS"/*.status 2>/dev/null | while read -r s; do
-    echo "  $(basename "$s" .status): $(cat "$s")"
-done
+
+FAILED=$(grep -Lx 'ok' "$ROOT/$RUNS"/*.status 2>/dev/null)
+if [ -n "$FAILED" ]; then
+    echo
+    echo "failed bugs:"
+    echo "$FAILED" | while read -r s; do
+        echo "  $(basename "$s" .status): $(cat "$s")"
+    done
+fi
 echo
 echo "Next: ./bin/analyze-agent-suites.sh"
