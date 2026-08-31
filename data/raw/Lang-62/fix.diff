@@ -1,0 +1,31 @@
+diff -ru /tmp/mut_Lang_62_b/src/java/org/apache/commons/lang/Entities.java /tmp/mut_Lang_62_f/src/java/org/apache/commons/lang/Entities.java
+--- /tmp/mut_Lang_62_b/src/java/org/apache/commons/lang/Entities.java	2026-08-29 12:00:07.662444638 -0700
++++ /tmp/mut_Lang_62_f/src/java/org/apache/commons/lang/Entities.java	2026-08-29 12:00:04.105043781 -0700
+@@ -847,6 +847,9 @@
+                             } else {
+                                 entityValue = Integer.parseInt(entityName.substring(1));
+                             }
++                            if (entityValue > 0xFFFF) {
++                                entityValue = -1;
++                            }
+                         } catch (NumberFormatException ex) {
+                             entityValue = -1;
+                         }
+@@ -917,12 +920,17 @@
+                                     case 'X' :
+                                     case 'x' : {
+                                         entityValue = Integer.parseInt(entityContent.substring(2), 16);
++                                        break;
+                                     }
+                                     default : {
+                                         entityValue = Integer.parseInt(entityContent.substring(1), 10);
+                                     }
+                                 }
++                                if (entityValue > 0xFFFF) {
++                                    entityValue = -1;
++                                }
+                             } catch (NumberFormatException e) {
++                                entityValue = -1;
+                             }
+                         }
+                     } else { //escaped value content is an entity name

@@ -1,0 +1,12 @@
+diff -ru /tmp/mut_Csv_4_b/src/main/java/org/apache/commons/csv/CSVParser.java /tmp/mut_Csv_4_f/src/main/java/org/apache/commons/csv/CSVParser.java
+--- /tmp/mut_Csv_4_b/src/main/java/org/apache/commons/csv/CSVParser.java	2026-08-29 12:12:24.153359438 -0700
++++ /tmp/mut_Csv_4_f/src/main/java/org/apache/commons/csv/CSVParser.java	2026-08-29 12:12:22.710041258 -0700
+@@ -285,7 +285,7 @@
+      * @return a copy of the header map that iterates in column order.
+      */
+     public Map<String, Integer> getHeaderMap() {
+-        return new LinkedHashMap<String, Integer>(this.headerMap);
++        return this.headerMap == null ? null : new LinkedHashMap<String, Integer>(this.headerMap);
+     }
+ 
+     /**

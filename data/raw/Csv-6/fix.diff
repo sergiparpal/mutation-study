@@ -1,0 +1,13 @@
+diff -ru /tmp/mut_Csv_6_b/src/main/java/org/apache/commons/csv/CSVRecord.java /tmp/mut_Csv_6_f/src/main/java/org/apache/commons/csv/CSVRecord.java
+--- /tmp/mut_Csv_6_b/src/main/java/org/apache/commons/csv/CSVRecord.java	2026-08-29 12:11:55.894371083 -0700
++++ /tmp/mut_Csv_6_f/src/main/java/org/apache/commons/csv/CSVRecord.java	2026-08-29 12:11:54.210848783 -0700
+@@ -179,7 +179,9 @@
+     <M extends Map<String, String>> M putIn(final M map) {
+         for (final Entry<String, Integer> entry : mapping.entrySet()) {
+             final int col = entry.getValue().intValue();
++            if (col < values.length) {
+                 map.put(entry.getKey(), values[col]);
++            }
+         }
+         return map;
+     }

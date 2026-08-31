@@ -1,0 +1,12 @@
+diff -ru /tmp/mut_Gson_15_b/gson/src/main/java/com/google/gson/stream/JsonWriter.java /tmp/mut_Gson_15_f/gson/src/main/java/com/google/gson/stream/JsonWriter.java
+--- /tmp/mut_Gson_15_b/gson/src/main/java/com/google/gson/stream/JsonWriter.java	2026-08-29 12:24:25.912163596 -0700
++++ /tmp/mut_Gson_15_f/gson/src/main/java/com/google/gson/stream/JsonWriter.java	2026-08-29 12:24:25.631184721 -0700
+@@ -492,7 +492,7 @@
+    */
+   public JsonWriter value(double value) throws IOException {
+     writeDeferredName();
+-    if (Double.isNaN(value) || Double.isInfinite(value)) {
++    if (!lenient && (Double.isNaN(value) || Double.isInfinite(value))) {
+       throw new IllegalArgumentException("Numeric values must be finite, but was " + value);
+     }
+     beforeValue();

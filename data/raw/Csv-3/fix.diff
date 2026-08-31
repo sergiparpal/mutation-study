@@ -1,0 +1,15 @@
+diff -ru /tmp/mut_Csv_3_b/src/main/java/org/apache/commons/csv/Lexer.java /tmp/mut_Csv_3_f/src/main/java/org/apache/commons/csv/Lexer.java
+--- /tmp/mut_Csv_3_b/src/main/java/org/apache/commons/csv/Lexer.java	2026-08-29 12:13:22.015890422 -0700
++++ /tmp/mut_Csv_3_f/src/main/java/org/apache/commons/csv/Lexer.java	2026-08-29 12:13:21.032794129 -0700
+@@ -108,8 +108,11 @@
+             throw new IOException("EOF whilst processing escape sequence");
+         default:
+             // Now check for meta-characters
++            if (isDelimiter(c) || isEscape(c) || isQuoteChar(c) || isCommentStart(c)) {
+                 return c;
++            }
+             // indicate unexpected char - available from in.getLastChar()
++            return END_OF_STREAM;
+         }
+     }
+ 

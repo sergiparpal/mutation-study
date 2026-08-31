@@ -1,0 +1,27 @@
+diff -ru /tmp/mut_Gson_14_b/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /tmp/mut_Gson_14_f/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
+--- /tmp/mut_Gson_14_b/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2026-08-29 12:15:57.928118760 -0700
++++ /tmp/mut_Gson_14_f/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2026-08-29 12:15:57.650619370 -0700
+@@ -76,7 +76,11 @@
+    */
+   public static WildcardType subtypeOf(Type bound) {
+     Type[] upperBounds;
++    if (bound instanceof WildcardType) {
++      upperBounds = ((WildcardType) bound).getUpperBounds();
++    } else {
+       upperBounds = new Type[] { bound };
++    }
+     return new WildcardTypeImpl(upperBounds, EMPTY_TYPE_ARRAY);
+   }
+ 
+@@ -87,7 +91,11 @@
+    */
+   public static WildcardType supertypeOf(Type bound) {
+     Type[] lowerBounds;
++    if (bound instanceof WildcardType) {
++      lowerBounds = ((WildcardType) bound).getLowerBounds();
++    } else {
+       lowerBounds = new Type[] { bound };
++    }
+     return new WildcardTypeImpl(new Type[] { Object.class }, lowerBounds);
+   }
+ 

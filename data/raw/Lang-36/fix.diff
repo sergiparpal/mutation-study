@@ -1,0 +1,27 @@
+diff -ru /tmp/mut_Lang_36_b/src/java/org/apache/commons/lang3/math/NumberUtils.java /tmp/mut_Lang_36_f/src/java/org/apache/commons/lang3/math/NumberUtils.java
+--- /tmp/mut_Lang_36_b/src/java/org/apache/commons/lang3/math/NumberUtils.java	2026-08-29 12:08:54.300401505 -0700
++++ /tmp/mut_Lang_36_f/src/java/org/apache/commons/lang3/math/NumberUtils.java	2026-08-29 12:08:50.847721008 -0700
+@@ -488,7 +488,7 @@
+             }
+             dec = null;
+         }
+-        if (!Character.isDigit(lastChar)) {
++        if (!Character.isDigit(lastChar) && lastChar != '.') {
+             if (expPos > -1 && expPos < str.length() - 1) {
+                 exp = str.substring(expPos + 1, str.length() - 1);
+             } else {
+@@ -1385,6 +1385,14 @@
+                 // can't have an E at the last byte
+                 return false;
+             }
++            if (chars[i] == '.') {
++                if (hasDecPoint || hasExp) {
++                    // two decimal points or dec in exponent
++                    return false;
++                }
++                // single trailing decimal point after non-exponent is ok
++                return foundDigit;
++            }
+             if (!allowSigns
+                 && (chars[i] == 'd'
+                     || chars[i] == 'D'

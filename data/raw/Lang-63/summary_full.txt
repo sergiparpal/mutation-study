@@ -1,0 +1,10 @@
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.tests)................................................ OK
+Running ant (mutation.test)................................................ OK
+Mutants generated: 455
+ Mutants retained: 455
+  Mutants covered: 411
+   Mutants killed: 286
+   Mutation score: 69.6% (62.9%)
+   Total run time: 128.4 seconds

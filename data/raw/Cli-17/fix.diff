@@ -1,0 +1,11 @@
+diff -ru /tmp/mut_Cli_17_b/src/java/org/apache/commons/cli/PosixParser.java /tmp/mut_Cli_17_f/src/java/org/apache/commons/cli/PosixParser.java
+--- /tmp/mut_Cli_17_b/src/java/org/apache/commons/cli/PosixParser.java	2026-08-29 12:26:08.903696441 -0700
++++ /tmp/mut_Cli_17_f/src/java/org/apache/commons/cli/PosixParser.java	2026-08-29 12:26:06.616675515 -0700
+@@ -300,6 +300,7 @@
+             else if (stopAtNonOption)
+             {
+                 process(token.substring(i));
++                break;
+             }
+             else
+             {

@@ -1,0 +1,13 @@
+diff -ru /tmp/mut_Csv_5_b/src/main/java/org/apache/commons/csv/CSVPrinter.java /tmp/mut_Csv_5_f/src/main/java/org/apache/commons/csv/CSVPrinter.java
+--- /tmp/mut_Csv_5_b/src/main/java/org/apache/commons/csv/CSVPrinter.java	2026-08-29 12:12:51.849644924 -0700
++++ /tmp/mut_Csv_5_f/src/main/java/org/apache/commons/csv/CSVPrinter.java	2026-08-29 12:12:50.141909352 -0700
+@@ -322,7 +322,9 @@
+      */
+     public void println() throws IOException {
+         final String recordSeparator = format.getRecordSeparator();
++        if (recordSeparator != null) {
+             out.append(recordSeparator);
++        }
+         newRecord = true;
+     }
+ 

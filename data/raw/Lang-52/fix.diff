@@ -1,0 +1,14 @@
+diff -ru /tmp/mut_Lang_52_b/src/java/org/apache/commons/lang/StringEscapeUtils.java /tmp/mut_Lang_52_f/src/java/org/apache/commons/lang/StringEscapeUtils.java
+--- /tmp/mut_Lang_52_b/src/java/org/apache/commons/lang/StringEscapeUtils.java	2026-08-29 11:55:48.913256810 -0700
++++ /tmp/mut_Lang_52_f/src/java/org/apache/commons/lang/StringEscapeUtils.java	2026-08-29 11:55:45.434790749 -0700
+@@ -233,6 +233,10 @@
+                         out.write('\\');
+                         out.write('\\');
+                         break;
++                    case '/':
++                        out.write('\\');
++                        out.write('/');
++                        break;
+                     default :
+                         out.write(ch);
+                         break;

@@ -1,0 +1,21 @@
+diff -ru /tmp/mut_Csv_7_b/src/main/java/org/apache/commons/csv/CSVParser.java /tmp/mut_Csv_7_f/src/main/java/org/apache/commons/csv/CSVParser.java
+--- /tmp/mut_Csv_7_b/src/main/java/org/apache/commons/csv/CSVParser.java	2026-08-29 12:12:38.820650496 -0700
++++ /tmp/mut_Csv_7_f/src/main/java/org/apache/commons/csv/CSVParser.java	2026-08-29 12:12:37.152998650 -0700
+@@ -29,6 +29,7 @@
+ import java.net.URL;
+ import java.nio.charset.Charset;
+ import java.util.ArrayList;
++import java.util.Arrays;
+ import java.util.Collection;
+ import java.util.Iterator;
+ import java.util.LinkedHashMap;
+@@ -368,6 +369,9 @@
+             // build the name to index mappings
+             if (header != null) {
+                 for (int i = 0; i < header.length; i++) {
++                    if (hdrMap.containsKey(header[i])) {
++                        throw new IllegalStateException("The header contains duplicate names: " + Arrays.toString(header));
++                    }
+                     hdrMap.put(header[i], Integer.valueOf(i));
+                 }
+             }

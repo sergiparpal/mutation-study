@@ -1,0 +1,20 @@
+diff -ru /tmp/mut_Cli_10_b/src/java/org/apache/commons/cli/Parser.java /tmp/mut_Cli_10_f/src/java/org/apache/commons/cli/Parser.java
+--- /tmp/mut_Cli_10_b/src/java/org/apache/commons/cli/Parser.java	2026-08-29 12:25:53.951472439 -0700
++++ /tmp/mut_Cli_10_f/src/java/org/apache/commons/cli/Parser.java	2026-08-29 12:25:52.730224635 -0700
+@@ -16,6 +16,7 @@
+  */
+ package org.apache.commons.cli;
+ 
++import java.util.ArrayList;
+ import java.util.Arrays;
+ import java.util.Enumeration;
+ import java.util.Iterator;
+@@ -43,7 +44,7 @@
+ 
+     protected void setOptions(final Options options) {
+         this.options = options;
+-        this.requiredOptions = options.getRequiredOptions();
++        this.requiredOptions = new ArrayList(options.getRequiredOptions());
+     }
+ 
+     protected Options getOptions() {

@@ -1,0 +1,14 @@
+diff -ru /tmp/mut_Gson_10_b/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java /tmp/mut_Gson_10_f/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java
+--- /tmp/mut_Gson_10_b/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java	2026-08-29 12:20:12.008570941 -0700
++++ /tmp/mut_Gson_10_f/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java	2026-08-29 12:20:11.748463988 -0700
+@@ -119,8 +119,8 @@
+       @Override void write(JsonWriter writer, Object value)
+           throws IOException, IllegalAccessException {
+         Object fieldValue = field.get(value);
+-        TypeAdapter t =
+-          new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());
++        TypeAdapter t = jsonAdapterPresent ? typeAdapter
++            : new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());
+         t.write(writer, fieldValue);
+       }
+       @Override void read(JsonReader reader, Object value)

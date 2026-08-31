@@ -1,0 +1,19 @@
+diff -ru /tmp/mut_Cli_12_b/src/java/org/apache/commons/cli/GnuParser.java /tmp/mut_Cli_12_f/src/java/org/apache/commons/cli/GnuParser.java
+--- /tmp/mut_Cli_12_b/src/java/org/apache/commons/cli/GnuParser.java	2026-08-29 12:25:14.606120595 -0700
++++ /tmp/mut_Cli_12_f/src/java/org/apache/commons/cli/GnuParser.java	2026-08-29 12:25:12.363001918 -0700
+@@ -78,9 +78,14 @@
+                 }
+                 else
+                 {
+-                    if (options.hasOption(arg.substring(0, 2)))
++                    if (opt.indexOf('=') != -1 && options.hasOption(opt.substring(0, opt.indexOf('='))))
+                     {
+                         // the format is --foo=value or -foo=value
++                        tokens.add(arg.substring(0, arg.indexOf('='))); // --foo
++                        tokens.add(arg.substring(arg.indexOf('=') + 1)); // value
++                    }
++                    else if (options.hasOption(arg.substring(0, 2)))
++                    {
+                         // the format is a special properties option (-Dproperty=value)
+                         tokens.add(arg.substring(0, 2)); // -D
+                         tokens.add(arg.substring(2)); // property=value

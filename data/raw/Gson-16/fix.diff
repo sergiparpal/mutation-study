@@ -1,0 +1,16 @@
+diff -ru /tmp/mut_Gson_16_b/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /tmp/mut_Gson_16_f/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
+--- /tmp/mut_Gson_16_b/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2026-08-29 12:20:47.526574847 -0700
++++ /tmp/mut_Gson_16_f/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2026-08-29 12:20:47.245808012 -0700
+@@ -339,7 +339,12 @@
+     while (true) {
+       if (toResolve instanceof TypeVariable) {
+         TypeVariable<?> typeVariable = (TypeVariable<?>) toResolve;
++        if (visitedTypeVariables.contains(typeVariable)) {
+           // cannot reduce due to infinite recursion
++          return toResolve;
++        } else {
++          visitedTypeVariables.add(typeVariable);
++        }
+         toResolve = resolveTypeVariable(context, contextRawType, typeVariable);
+         if (toResolve == typeVariable) {
+           return toResolve;

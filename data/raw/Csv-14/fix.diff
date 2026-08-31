@@ -1,0 +1,12 @@
+diff -ru /tmp/mut_Csv_14_b/src/main/java/org/apache/commons/csv/CSVFormat.java /tmp/mut_Csv_14_f/src/main/java/org/apache/commons/csv/CSVFormat.java
+--- /tmp/mut_Csv_14_b/src/main/java/org/apache/commons/csv/CSVFormat.java	2026-08-29 12:09:25.591582191 -0700
++++ /tmp/mut_Csv_14_f/src/main/java/org/apache/commons/csv/CSVFormat.java	2026-08-29 12:09:23.871157030 -0700
+@@ -1036,7 +1036,7 @@
+                 char c = value.charAt(pos);
+ 
+                 // RFC4180 (https://tools.ietf.org/html/rfc4180) TEXTDATA =  %x20-21 / %x23-2B / %x2D-7E
+-                if (newRecord && (c < '0' || c > '9' && c < 'A' || c > 'Z' && c < 'a' || c > 'z')) {
++                if (newRecord && (c < 0x20 || c > 0x21 && c < 0x23 || c > 0x2B && c < 0x2D || c > 0x7E)) {
+                     quote = true;
+                 } else if (c <= COMMENT) {
+                     // Some other chars at the start of a value caused the parser to fail, so for now

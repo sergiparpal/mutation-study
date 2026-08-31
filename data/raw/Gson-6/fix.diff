@@ -1,0 +1,13 @@
+diff -ru /tmp/mut_Gson_6_b/gson/src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java /tmp/mut_Gson_6_f/gson/src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java
+--- /tmp/mut_Gson_6_b/gson/src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java	2026-08-29 12:19:55.810025433 -0700
++++ /tmp/mut_Gson_6_f/gson/src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java	2026-08-29 12:19:55.534096562 -0700
+@@ -64,7 +64,9 @@
+       throw new IllegalArgumentException(
+           "@JsonAdapter value must be TypeAdapter or TypeAdapterFactory reference.");
+     }
++    if (typeAdapter != null) {
+       typeAdapter = typeAdapter.nullSafe();
++    }
+     return typeAdapter;
+   }
+ }

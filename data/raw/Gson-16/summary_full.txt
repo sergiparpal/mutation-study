@@ -1,0 +1,15 @@
+Compiling mutant definition (mml).......................................... FAIL
+Executed command: /home/sergi/defects4j/major/bin/mmlc /tmp/mut_Gson_16_f/.mml/default.mml 2>&1
+line 57:42 Error: invalid scope: com.google.gson.internal.$Gson$Types
+line 58:42 Error: invalid scope: com.google.gson.internal.$Gson$Types
+line 59:42 Error: invalid scope: com.google.gson.internal.$Gson$Types
+line 60:42 Error: invalid scope: com.google.gson.internal.$Gson$Types
+line 61:42 Error: invalid scope: com.google.gson.internal.$Gson$Types
+line 62:42 Error: invalid scope: com.google.gson.internal.$Gson$Types
+line 63:42 Error: invalid scope: com.google.gson.internal.$Gson$Types
+line 64:42 Error: invalid scope: com.google.gson.internal.$Gson$Types
+[0;31m[!!!][0m [0;37mParsing encountered an error[0m 
+[0;31m[!!!][0m [0;37m
+The compilation process ended with errors![0m 
+Cannot compile mml file: /tmp/mut_Gson_16_f/.mml/default.mml! at /home/sergi/defects4j/framework/core/Mutation.pm line 99.
+Compilation failed in require at /home/sergi/defects4j/framework/bin/defects4j line 195.

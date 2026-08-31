@@ -1,0 +1,12 @@
+diff -ru /tmp/mut_Cli_28_b/src/java/org/apache/commons/cli/Parser.java /tmp/mut_Cli_28_f/src/java/org/apache/commons/cli/Parser.java
+--- /tmp/mut_Cli_28_b/src/java/org/apache/commons/cli/Parser.java	2026-08-29 12:25:27.991663123 -0700
++++ /tmp/mut_Cli_28_f/src/java/org/apache/commons/cli/Parser.java	2026-08-29 12:25:26.775547600 -0700
+@@ -287,7 +287,7 @@
+                 {
+                     // if the value is not yes, true or 1 then don't add the
+                     // option to the CommandLine
+-                    break;
++                    continue;
+                 }
+ 
+                 cmd.addOption(opt);

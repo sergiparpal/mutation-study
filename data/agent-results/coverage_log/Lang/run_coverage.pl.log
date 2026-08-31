@@ -1,0 +1,6 @@
+######  Start code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-08-30 23:38:15  ######
+ - Executing test suite: Lang-23f-agent.1.tar.bz2
+ - Executing test suite: Lang-13f-agent.1.tar.bz2
+ - Executing test suite: Lang-43f-agent.1.tar.bz2
+ - Executing test suite: Lang-56f-agent.1.tar.bz2
+######  End code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-08-30 23:38:57  ######

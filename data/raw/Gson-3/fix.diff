@@ -1,0 +1,35 @@
+diff -ru /tmp/mut_Gson_3_b/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java /tmp/mut_Gson_3_f/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java
+--- /tmp/mut_Gson_3_b/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java	2026-08-29 12:16:04.002826558 -0700
++++ /tmp/mut_Gson_3_f/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java	2026-08-29 12:16:03.695561225 -0700
+@@ -33,6 +33,10 @@
+ import java.util.SortedSet;
+ import java.util.TreeMap;
+ import java.util.TreeSet;
++import java.util.concurrent.ConcurrentHashMap;
++import java.util.concurrent.ConcurrentMap;
++import java.util.concurrent.ConcurrentNavigableMap;
++import java.util.concurrent.ConcurrentSkipListMap;
+ 
+ import com.google.gson.InstanceCreator;
+ import com.google.gson.JsonIOException;
+@@ -172,7 +176,19 @@
+     }
+ 
+     if (Map.class.isAssignableFrom(rawType)) {
+-      if (SortedMap.class.isAssignableFrom(rawType)) {
++      if (ConcurrentNavigableMap.class.isAssignableFrom(rawType)) {
++        return new ObjectConstructor<T>() {
++          @Override public T construct() {
++            return (T) new ConcurrentSkipListMap<Object, Object>();
++          }
++        };
++      } else if (ConcurrentMap.class.isAssignableFrom(rawType)) {
++        return new ObjectConstructor<T>() {
++          @Override public T construct() {
++            return (T) new ConcurrentHashMap<Object, Object>();
++          }
++        };
++      } else if (SortedMap.class.isAssignableFrom(rawType)) {
+         return new ObjectConstructor<T>() {
+           @Override public T construct() {
+             return (T) new TreeMap<Object, Object>();
