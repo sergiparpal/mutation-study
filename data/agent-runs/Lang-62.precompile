@@ -35,6 +35,6 @@ compile.tests:
 BUILD FAILED
 /tmp/agentB_Lang_62_f/build.xml:73: Compile failed; see the compiler error output for details.
 
-Total time: 2 seconds
+Total time: 0 seconds
 Cannot compile tests! at /home/sergi/defects4j/framework/bin/d4j/d4j-compile line 83.
 Compilation failed in require at /home/sergi/defects4j/framework/bin/defects4j line 195.
