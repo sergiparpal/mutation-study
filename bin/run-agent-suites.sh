@@ -49,15 +49,27 @@
 # developer test for the class under test. The stub is never packaged: only
 # *AgentTest.java goes into the archive.
 #
+# JUNIT 3 VS 4 VERIFICATION
+# -------------------------
+# The verification step originally hard-coded org.junit.runner.JUnitCore. Cli
+# ships JUnit 3.8.1 only, where that class does not exist, so all 6 Cli bugs
+# attempted in one batch were recorded as "agent tests fail on the fixed
+# version" when in fact they had never been run:
+#   Error: Could not find or load main class org.junit.runner.JUnitCore
+# Lang 2.x is also JUnit 3 in style but carries JUnit 4 on the classpath, which
+# is why it was not caught earlier.
+#
+# Verification now falls back to junit.textui.TestRunner, one class at a time
+# (it accepts a single argument), and the prompt no longer names a runner.
+#
 # CIRCUIT BREAKER
 # ---------------
 # The first full run burned through 35 bugs in minutes after hitting a usage
 # limit: every call returned `is_error` with $0.00 and 1 turn, and the loop
-# marked each bug as failed. Those .status files then have to be cleaned up by
-# hand before a retry.
-#
-# Two consecutive zero-cost errors now abort the whole run, leaving the
-# remaining bugs untouched so a later resume picks them up cleanly.
+# marked each bug as failed. Two consecutive unbilled failures now abort the
+# whole run, leaving the remaining bugs untouched so a later resume picks them
+# up cleanly. A run cut off mid-way still counts as unbilled if the message
+# names a session or rate limit, even when tokens were already spent.
 #
 # Usage:
 #   ./bin/run-agent-suites.sh                    # whole sample
@@ -74,7 +86,7 @@ RUNS=data/agent-runs              # one JSON + log per bug
 ARM=${ARM:-agent}                 # generator label inside the archive name
 MODEL=${MODEL:-opus}
 MAX_TURNS=${MAX_TURNS:-25}
-MAX_DEAD=${MAX_DEAD:-2}           # consecutive zero-cost errors before aborting
+MAX_DEAD=${MAX_DEAD:-2}           # consecutive unbilled errors before aborting
 
 command -v defects4j >/dev/null || { echo "defects4j not on PATH"; exit 1; }
 command -v claude    >/dev/null || { echo "claude not on PATH"; exit 1; }
@@ -210,7 +222,6 @@ while IFS=, read -r P B _rest; do
 
     # --- build the prompt ---------------------------------------------------
     CLASS_LIST=$(printf '  - %s\n' $CLASSES)
-    EXPECTED=$(for c in $CLASSES; do echo "${c}AgentTest"; done | tr '\n' ' ')
 
     PROMPT="Write JUnit test classes for the following classes:
 
@@ -220,7 +231,8 @@ Requirements:
 - One test class per class above, named <ClassName>AgentTest, in the same
   package, under $SRC_TESTS/
 - Match the JUnit version and assertion style used by the other test classes
-  already in this project. Check them before writing.
+  already in this project. Check them before writing. Some of these projects
+  ship JUnit 3.8 only, where org.junit.Test and org.junit.Assert do not exist.
 - Test only the public API.
 - Assert on returned values and on observable state, not merely that no
   exception is thrown.
@@ -233,9 +245,10 @@ Restrictions:
   you need to compile.
 - Do not search the web.
 
-Verify with:
-  defects4j compile
-  java -cp \"\$(defects4j export -p cp.test)\" org.junit.runner.JUnitCore $EXPECTED"
+Verify with 'defects4j compile', then run each test class with whichever JUnit
+runner this project actually provides on \$(defects4j export -p cp.test):
+junit.textui.TestRunner for JUnit 3, org.junit.runner.JUnitCore for JUnit 4.
+All tests must pass."
 
     echo "[$TAG] invoking agent ($MODEL)"
     (cd "$W" && claude -p "$PROMPT" \
@@ -245,7 +258,7 @@ Verify with:
         --max-turns "$MAX_TURNS" \
         --output-format json) > "$RUNDIR/${TAG}.json" 2>"$RUNDIR/${TAG}.stderr"
 
-    # verdict: ok | error | dead   (dead = errored with no API call billed)
+    # verdict: ok | error | dead   (dead = quota exhausted, retryable)
     VERDICT=$(python3 -c "
 import json
 try:
@@ -268,12 +281,11 @@ print(f'{state}|{res}|{cost:.3f}|{turns}')" 2>/dev/null)
 
     if [ "$STATE" = "dead" ]; then
         DEAD=$((DEAD + 1))
-        echo "[$TAG] no API call was billed: $MSG"
+        echo "[$TAG] no usable API call: $MSG"
         if [ "$DEAD" -ge "$MAX_DEAD" ]; then
             echo
-            echo "ABORTING: $DEAD consecutive runs failed without being billed."
-            echo "Most likely a usage or rate limit. Remaining bugs untouched;"
-            echo "rerun this script later to resume."
+            echo "ABORTING: $DEAD consecutive runs hit a usage limit."
+            echo "Remaining bugs untouched; rerun this script later to resume."
             ABORTED=yes
             break
         fi
@@ -296,11 +308,35 @@ print(f'{state}|{res}|{cost:.3f}|{turns}')" 2>/dev/null)
     fi
 
     CP=$(cd "$W" && defects4j export -p cp.test 2>/dev/null | grep -v '^Running' | tail -1)
+    # cli2 declares jars in cp.test that were never materialised; fall back to
+    # the copies defects4j keeps per project
+    EXTRA=$(find ~/defects4j/framework/projects/"$P"/lib -name '*.jar' 2>/dev/null | tr '\n' ':')
+    CP="$CP:$EXTRA"
     RUN_CLASSES=$(echo "$WRITTEN" | sed 's|^\./||; s|\.java$||; s|/|.|g' | tr '\n' ' ')
-    if ! (cd "$W" && java -cp "$CP" org.junit.runner.JUnitCore $RUN_CLASSES) \
+
+    RUNNER=junit4
+    if (cd "$W" && java -cp "$CP" org.junit.runner.JUnitCore $RUN_CLASSES) \
             > "$RUNDIR/${TAG}.junit" 2>&1; then
+        :
+    elif grep -q "Could not find or load main class org.junit.runner.JUnitCore" \
+            "$RUNDIR/${TAG}.junit"; then
+        # JUnit 3-only project (Cli): textui takes one class per invocation
+        RUNNER=junit3
+        : > "$RUNDIR/${TAG}.junit"
+        JUNIT3_OK=yes
+        for RC in $RUN_CLASSES; do
+            if ! (cd "$W" && java -cp "$CP" junit.textui.TestRunner "$RC") \
+                    >> "$RUNDIR/${TAG}.junit" 2>&1; then
+                JUNIT3_OK=no; break
+            fi
+        done
+        if [ "$JUNIT3_OK" != "yes" ]; then
+            fail "agent tests fail on the fixed version"; continue
+        fi
+    else
         fail "agent tests fail on the fixed version"; continue
     fi
+    echo "$RUNNER" > "$RUNDIR/${TAG}.runner"
 
     # --- package (flat dir, evosuite-compatible layout) ---------------------
     # only *AgentTest.java: any stub stays behind in the working copy
@@ -325,6 +361,7 @@ echo
 echo "sample size:     $TOTAL"
 echo "suites packaged: $(ls "$ROOT/$SUITES"/*.tar.bz2 2>/dev/null | wc -l)"
 echo "stubbed bugs:    $(grep -lx 'yes' "$ROOT/$RUNS"/*.stubbed 2>/dev/null | wc -l)"
+echo "junit3 verified: $(grep -lx 'junit3' "$ROOT/$RUNS"/*.runner 2>/dev/null | wc -l)"
 echo "failures:        $(grep -Lx 'ok' "$ROOT/$RUNS"/*.status 2>/dev/null | wc -l)"
 echo "total cost:      \$$(cd "$ROOT" && python3 - <<'EOF'
 import json, glob
