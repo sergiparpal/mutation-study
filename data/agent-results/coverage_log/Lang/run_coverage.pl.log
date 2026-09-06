@@ -1,6 +1,20 @@
-######  Start code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-08-30 23:38:15  ######
+######  Start code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-09-06 02:56:06  ######
  - Executing test suite: Lang-23f-agent.1.tar.bz2
- - Executing test suite: Lang-13f-agent.1.tar.bz2
- - Executing test suite: Lang-43f-agent.1.tar.bz2
+ - Executing test suite: Lang-23f-agentopus.1.tar.bz2
+ - Executing test suite: Lang-63f-agent.1.tar.bz2
+ - Executing test suite: Lang-36f-agent.1.tar.bz2
+ - Executing test suite: Lang-21f-agent.1.tar.bz2
  - Executing test suite: Lang-56f-agent.1.tar.bz2
-######  End code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-08-30 23:38:57  ######
+ - Executing test suite: Lang-56f-agentopus.1.tar.bz2
+ - Executing test suite: Lang-8f-agent.1.tar.bz2
+ - Executing test suite: Lang-8f-agentopus.1.tar.bz2
+ - Executing test suite: Lang-43f-agentopus.1.tar.bz2
+ - Executing test suite: Lang-43f-agent.1.tar.bz2
+ - Executing test suite: Lang-65f-agent.1.tar.bz2
+ - Executing test suite: Lang-52f-agent.1.tar.bz2
+ - Executing test suite: Lang-13f-agent.1.tar.bz2
+ - Executing test suite: Lang-13f-agentopus.1.tar.bz2
+ - Executing test suite: Lang-62f-agent.1.tar.bz2
+ - Executing test suite: Lang-62f-agentopus.1.tar.bz2
+ - Executing test suite: Lang-34f-agent.1.tar.bz2
+######  End code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-09-06 02:59:07  ######

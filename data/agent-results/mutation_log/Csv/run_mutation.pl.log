@@ -1,0 +1,11 @@
+######  Start mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-06 02:45:50  ######
+ - Executing test suite: Csv-16f-agent.1.tar.bz2
+ - Executing test suite: Csv-4f-agent.1.tar.bz2
+ - Executing test suite: Csv-15f-agent.1.tar.bz2
+ - Executing test suite: Csv-8f-agent.1.tar.bz2
+ - Executing test suite: Csv-14f-agent.1.tar.bz2
+ - Executing test suite: Csv-6f-agent.1.tar.bz2
+ - Executing test suite: Csv-5f-agent.1.tar.bz2
+ - Executing test suite: Csv-7f-agent.1.tar.bz2
+ - Executing test suite: Csv-10f-agent.1.tar.bz2
+######  End mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-06 02:47:38  ######

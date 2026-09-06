@@ -1,0 +1,8 @@
+/tmp/specB_Lang_43_f/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java:108: warning - invalid usage of tag <
+/tmp/specB_Lang_43_f/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java:108: warning - invalid usage of tag >
+/tmp/specB_Lang_43_f/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java:120: warning - invalid usage of tag <
+/tmp/specB_Lang_43_f/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java:120: warning - invalid usage of tag >
+/tmp/specB_Lang_43_f/src/java/org/apache/commons/lang/text/package.html:20: warning - Tag @link: reference not found: java.text
+/tmp/specB_Lang_43_f/src/java/org/apache/commons/lang/text/package.html:20: warning - Tag @link: reference not found: java.text
+/tmp/specB_Lang_43_f/src/java/org/apache/commons/lang/text/package.html:20: warning - Tag @link: reference not found: java.text
+7 warnings

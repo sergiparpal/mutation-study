@@ -1,10 +1,11 @@
---- org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest::testHashCodeChangesWithPattern
+--- org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest::testNotEqualsWhenRegistriesDiffer
 junit.framework.AssertionFailedError
 	at junit.framework.Assert.fail(Assert.java:55)
 	at junit.framework.Assert.assertTrue(Assert.java:22)
-	at junit.framework.Assert.assertTrue(Assert.java:31)
-	at junit.framework.TestCase.assertTrue(TestCase.java:201)
-	at org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest.testHashCodeChangesWithPattern(ExtendedMessageFormatAgentTest.java:440)
+	at junit.framework.Assert.assertFalse(Assert.java:39)
+	at junit.framework.Assert.assertFalse(Assert.java:47)
+	at junit.framework.TestCase.assertFalse(TestCase.java:219)
+	at org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest.testNotEqualsWhenRegistriesDiffer(ExtendedMessageFormatAgentTest.java:404)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -20,14 +21,14 @@ junit.framework.AssertionFailedError
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1060)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:911)
---- org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest::testEqualsRegistryVersusNoRegistry
+--- org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest::testNotEqualsWhenOneRegistryIsNull
 junit.framework.AssertionFailedError
 	at junit.framework.Assert.fail(Assert.java:55)
 	at junit.framework.Assert.assertTrue(Assert.java:22)
 	at junit.framework.Assert.assertFalse(Assert.java:39)
 	at junit.framework.Assert.assertFalse(Assert.java:47)
 	at junit.framework.TestCase.assertFalse(TestCase.java:219)
-	at org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest.testEqualsRegistryVersusNoRegistry(ExtendedMessageFormatAgentTest.java:425)
+	at org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest.testNotEqualsWhenOneRegistryIsNull(ExtendedMessageFormatAgentTest.java:412)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

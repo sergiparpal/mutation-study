@@ -1,0 +1,22 @@
+--- com.google.gson.internal.bind.util.ISO8601UtilsAgentTest::testParse_offsetHourOnlyImpliesZeroMinutes
+java.text.ParseException: Failed to parse date ["2018-06-25T10:20:30+02']: Mismatching time zone indicator: GMT+02 given, resolves to GMT+02:00
+	at com.google.gson.internal.bind.util.ISO8601Utils.parse(ISO8601Utils.java:273)
+	at com.google.gson.internal.bind.util.ISO8601UtilsAgentTest.testParse_offsetHourOnlyImpliesZeroMinutes(ISO8601UtilsAgentTest.java:161)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at junit.framework.TestCase.runTest(TestCase.java:176)
+	at junit.framework.TestCase.runBare(TestCase.java:141)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:129)
+	at junit.framework.TestSuite.runTest(TestSuite.java:252)
+	at junit.framework.TestSuite.run(TestSuite.java:247)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1060)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:911)
+Caused by: java.lang.IndexOutOfBoundsException: Mismatching time zone indicator: GMT+02 given, resolves to GMT+02:00
+	at com.google.gson.internal.bind.util.ISO8601Utils.parse(ISO8601Utils.java:239)
+	... 16 more

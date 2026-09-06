@@ -1,0 +1,14 @@
+######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-06 02:40:23  ######
+ - Executing test suite: Cli-10f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Cli-10f-agent.1.tar.bz2
+ - Executing test suite: Cli-15f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Cli-15f-agent.1.tar.bz2
+ - Executing test suite: Cli-28f-agent.1.tar.bz2
+ - Executing test suite: Cli-38f-agent.1.tar.bz2
+ - Executing test suite: Cli-12f-agent.1.tar.bz2
+ - Found 3 failing tests on buggy version: Cli-12f-agent.1.tar.bz2
+ - Executing test suite: Cli-32f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Cli-32f-agent.1.tar.bz2
+ - Executing test suite: Cli-17f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Cli-17f-agent.1.tar.bz2
+######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-06 02:41:26  ######

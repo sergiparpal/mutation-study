@@ -1,0 +1,9 @@
+######  Start code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-09-06 02:41:27  ######
+ - Executing test suite: Cli-15f-agent.1.tar.bz2
+ - Executing test suite: Cli-38f-agent.1.tar.bz2
+ - Executing test suite: Cli-32f-agent.1.tar.bz2
+ - Executing test suite: Cli-10f-agent.1.tar.bz2
+ - Executing test suite: Cli-12f-agent.1.tar.bz2
+ - Executing test suite: Cli-17f-agent.1.tar.bz2
+ - Executing test suite: Cli-28f-agent.1.tar.bz2
+######  End code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-09-06 02:42:18  ######

@@ -1,0 +1,448 @@
+1:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities:367:21265:XML.addEntities(BASIC_ARRAY); |==> <NO-OP>
+2:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities:368:21303:XML.addEntities(APOS_ARRAY); |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities:373:21393:HTML32.addEntities(BASIC_ARRAY); |==> <NO-OP>
+4:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities:374:21434:HTML32.addEntities(ISO8859_1_ARRAY); |==> <NO-OP>
+5:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities:379:21532:fillWithHtml40Entities(HTML40); |==> <NO-OP>
+6:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@fillWithHtml40Entities(org.apache.commons.lang.Entities):388:21788:entities.addEntities(BASIC_ARRAY); |==> <NO-OP>
+7:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@fillWithHtml40Entities(org.apache.commons.lang.Entities):389:21831:entities.addEntities(ISO8859_1_ARRAY); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@fillWithHtml40Entities(org.apache.commons.lang.Entities):390:21878:entities.addEntities(HTML40_ARRAY); |==> <NO-OP>
+9:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities$PrimitiveEntityMap@add(java.lang.String,int):427:22981:mapNameToValue.put(name, new Integer(value)); |==> <NO-OP>
+10:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities$PrimitiveEntityMap@add(java.lang.String,int):428:23039:mapValueToName.put(value, name); |==> <NO-OP>
+11:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.Entities$PrimitiveEntityMap@value(java.lang.String):443:23402:value == null |==> false
+12:LVR:NEG:0:org.apache.commons.lang.Entities$PrimitiveEntityMap@value(java.lang.String):444:23436:-1 |==> 0
+13:LVR:NEG:POS:org.apache.commons.lang.Entities$PrimitiveEntityMap@value(java.lang.String):444:23436:-1 |==> 1
+14:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities$MapIntMap@add(java.lang.String,int):459:23777:mapNameToValue.put(name, new Integer(value)); |==> <NO-OP>
+15:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities$MapIntMap@add(java.lang.String,int):460:23835:mapValueToName.put(new Integer(value), name); |==> <NO-OP>
+16:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.Entities$MapIntMap@value(java.lang.String):475:24224:value == null |==> false
+17:LVR:NEG:0:org.apache.commons.lang.Entities$MapIntMap@value(java.lang.String):476:24258:-1 |==> 0
+18:LVR:NEG:POS:org.apache.commons.lang.Entities$MapIntMap@value(java.lang.String):476:24258:-1 |==> 1
+19:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$HashEntityMap@<init>():487:24530:mapNameToValue = new HashMap(); |==> <NO-OP>
+20:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$HashEntityMap@<init>():488:24574:mapValueToName = new HashMap(); |==> <NO-OP>
+21:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$TreeEntityMap@<init>():497:24805:mapNameToValue = new TreeMap(); |==> <NO-OP>
+22:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$TreeEntityMap@<init>():498:24849:mapValueToName = new TreeMap(); |==> <NO-OP>
+23:LVR:POS:0:org.apache.commons.lang.Entities$LookupEntityMap:504:25038:256 |==> 0
+24:LVR:POS:NEG:org.apache.commons.lang.Entities$LookupEntityMap:504:25038:256 |==> -256
+25:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities$LookupEntityMap@name(int):510:25149:value < LOOKUP_TABLE_SIZE |==> value != LOOKUP_TABLE_SIZE
+26:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities$LookupEntityMap@name(int):510:25149:value < LOOKUP_TABLE_SIZE |==> value <= LOOKUP_TABLE_SIZE
+27:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities$LookupEntityMap@name(int):510:25155:value < LOOKUP_TABLE_SIZE |==> false
+28:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.Entities$LookupEntityMap@lookupTable():523:25562:lookupTable == null |==> false
+29:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities$LookupEntityMap@lookupTable():524:25589:createLookupTable(); |==> <NO-OP>
+30:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$LookupEntityMap@createLookupTable():533:25857:lookupTable = new String[LOOKUP_TABLE_SIZE]; |==> <NO-OP>
+31:LVR:0:POS:org.apache.commons.lang.Entities$LookupEntityMap@createLookupTable():534:25927:0 |==> 1
+32:LVR:0:NEG:org.apache.commons.lang.Entities$LookupEntityMap@createLookupTable():534:25927:0 |==> -1
+33:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities$LookupEntityMap@createLookupTable():534:25930:i < LOOKUP_TABLE_SIZE |==> i != LOOKUP_TABLE_SIZE
+34:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities$LookupEntityMap@createLookupTable():534:25930:i < LOOKUP_TABLE_SIZE |==> i <= LOOKUP_TABLE_SIZE
+35:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities$LookupEntityMap@createLookupTable():534:25932:i < LOOKUP_TABLE_SIZE |==> false
+36:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$LookupEntityMap@createLookupTable():535:25976:lookupTable[i] = super.name(i); |==> <NO-OP>
+37:LVR:POS:0:org.apache.commons.lang.Entities$ArrayEntityMap:541:26125:100 |==> 0
+38:LVR:POS:NEG:org.apache.commons.lang.Entities$ArrayEntityMap:541:26125:100 |==> -100
+39:LVR:0:POS:org.apache.commons.lang.Entities$ArrayEntityMap:542:26159:0 |==> 1
+40:LVR:0:NEG:org.apache.commons.lang.Entities$ArrayEntityMap:542:26159:0 |==> -1
+41:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@<init>():550:26368:names = new String[growBy]; |==> <NO-OP>
+42:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@<init>():551:26408:values = new int[growBy]; |==> <NO-OP>
+43:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@<init>(int):561:26751:this.growBy = growBy; |==> <NO-OP>
+44:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@<init>(int):562:26785:names = new String[growBy]; |==> <NO-OP>
+45:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@<init>(int):563:26825:values = new int[growBy]; |==> <NO-OP>
+46:LVR:POS:0:org.apache.commons.lang.Entities$ArrayEntityMap@add(java.lang.String,int):570:26995:1 |==> 0
+47:LVR:POS:NEG:org.apache.commons.lang.Entities$ArrayEntityMap@add(java.lang.String,int):570:26995:1 |==> -1
+48:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@add(java.lang.String,int):570:26988:size + 1 |==> size % 1
+49:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@add(java.lang.String,int):570:26988:size + 1 |==> size * 1
+50:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@add(java.lang.String,int):570:26988:size + 1 |==> size - 1
+51:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@add(java.lang.String,int):570:26988:size + 1 |==> size / 1
+52:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@add(java.lang.String,int):570:26973:ensureCapacity(size + 1); |==> <NO-OP>
+53:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@add(java.lang.String,int):571:27011:names[size] = name; |==> <NO-OP>
+54:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@add(java.lang.String,int):572:27043:values[size] = value; |==> <NO-OP>
+55:STD:<INC>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@add(java.lang.String,int):573:27077:size++; |==> <NO-OP>
+56:ROR:>(int,int):!=(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):582:27341:capacity > names.length |==> capacity != names.length
+57:ROR:>(int,int):>=(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):582:27341:capacity > names.length |==> capacity >= names.length
+58:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):582:27350:capacity > names.length |==> false
+59:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):583:27417:size + growBy |==> size % growBy
+60:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):583:27417:size + growBy |==> size * growBy
+61:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):583:27417:size + growBy |==> size - growBy
+62:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):583:27417:size + growBy |==> size / growBy
+63:LVR:0:POS:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):585:27530:0 |==> 1
+64:LVR:0:NEG:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):585:27530:0 |==> -1
+65:LVR:0:POS:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):585:27543:0 |==> 1
+66:LVR:0:NEG:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):585:27543:0 |==> -1
+67:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):585:27506:System.arraycopy(names, 0, newNames, 0, size); |==> <NO-OP>
+68:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):586:27569:names = newNames; |==> <NO-OP>
+69:LVR:0:POS:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):588:27680:0 |==> 1
+70:LVR:0:NEG:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):588:27680:0 |==> -1
+71:LVR:0:POS:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):588:27694:0 |==> 1
+72:LVR:0:NEG:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):588:27694:0 |==> -1
+73:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):588:27655:System.arraycopy(values, 0, newValues, 0, size); |==> <NO-OP>
+74:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$ArrayEntityMap@ensureCapacity(int):589:27720:values = newValues; |==> <NO-OP>
+75:LVR:0:POS:org.apache.commons.lang.Entities$ArrayEntityMap@name(int):597:27879:0 |==> 1
+76:LVR:0:NEG:org.apache.commons.lang.Entities$ArrayEntityMap@name(int):597:27879:0 |==> -1
+77:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@name(int):597:27882:i < size |==> i != size
+78:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@name(int):597:27882:i < size |==> i <= size
+79:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@name(int):597:27884:i < size |==> false
+80:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@name(int):598:27919:values[i] == value |==> values[i] <= value
+81:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@name(int):598:27919:values[i] == value |==> values[i] >= value
+82:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@name(int):598:27929:values[i] == value |==> false
+83:LVR:0:POS:org.apache.commons.lang.Entities$ArrayEntityMap@value(java.lang.String):609:28160:0 |==> 1
+84:LVR:0:NEG:org.apache.commons.lang.Entities$ArrayEntityMap@value(java.lang.String):609:28160:0 |==> -1
+85:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@value(java.lang.String):609:28163:i < size |==> i != size
+86:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@value(java.lang.String):609:28163:i < size |==> i <= size
+87:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities$ArrayEntityMap@value(java.lang.String):609:28165:i < size |==> false
+88:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.Entities$ArrayEntityMap@value(java.lang.String):610:28215:names[i].equals(name) |==> false
+89:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.Entities$ArrayEntityMap@value(java.lang.String):610:28215:names[i].equals(name) |==> true
+90:LVR:NEG:0:org.apache.commons.lang.Entities$ArrayEntityMap@value(java.lang.String):614:28314:-1 |==> 0
+91:LVR:NEG:POS:org.apache.commons.lang.Entities$ArrayEntityMap@value(java.lang.String):614:28314:-1 |==> 1
+92:LVR:0:POS:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):645:29265:0 |==> 1
+93:LVR:0:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):645:29265:0 |==> -1
+94:LVR:POS:0:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):646:29298:1 |==> 0
+95:LVR:POS:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):646:29298:1 |==> -1
+96:AOR:-(int,int):%(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):646:29291:size - 1 |==> size % 1
+97:AOR:-(int,int):*(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):646:29291:size - 1 |==> size * 1
+98:AOR:-(int,int):+(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):646:29291:size - 1 |==> size + 1
+99:AOR:-(int,int):/(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):646:29291:size - 1 |==> size / 1
+100:ROR:<=(int,int):<(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):648:29321:low <= high |==> low < high
+101:ROR:<=(int,int):==(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):648:29321:low <= high |==> low == high
+102:ROR:<=(int,int):TRUE(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):648:29325:low <= high |==> true
+103:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):649:29363:low + high |==> low % high
+104:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):649:29363:low + high |==> low * high
+105:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):649:29363:low + high |==> low - high
+106:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):649:29363:low + high |==> low / high
+107:LVR:POS:0:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):649:29378:1 |==> 0
+108:LVR:POS:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):649:29378:1 |==> -1
+109:SOR:>>(int,int):<<(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):649:29362:(low + high) >> 1 |==> (low + high) << 1
+110:SOR:>>(int,int):>>>(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):649:29362:(low + high) >> 1 |==> (low + high) >>> 1
+111:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):652:29444:midVal < key |==> midVal != key
+112:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):652:29444:midVal < key |==> midVal <= key
+113:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):652:29451:midVal < key |==> false
+114:LVR:POS:0:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):653:29492:1 |==> 0
+115:LVR:POS:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):653:29492:1 |==> -1
+116:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):653:29486:mid + 1 |==> mid % 1
+117:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):653:29486:mid + 1 |==> mid * 1
+118:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):653:29486:mid + 1 |==> mid - 1
+119:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):653:29486:mid + 1 |==> mid / 1
+120:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):653:29480:low = mid + 1; |==> <NO-OP>
+121:ROR:>(int,int):!=(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):654:29522:midVal > key |==> midVal != key
+122:ROR:>(int,int):>=(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):654:29522:midVal > key |==> midVal >= key
+123:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):654:29529:midVal > key |==> false
+124:LVR:POS:0:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):655:29571:1 |==> 0
+125:LVR:POS:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):655:29571:1 |==> -1
+126:AOR:-(int,int):%(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):655:29565:mid - 1 |==> mid % 1
+127:AOR:-(int,int):*(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):655:29565:mid - 1 |==> mid * 1
+128:AOR:-(int,int):+(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):655:29565:mid - 1 |==> mid + 1
+129:AOR:-(int,int):/(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):655:29565:mid - 1 |==> mid / 1
+130:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):655:29558:high = mid - 1; |==> <NO-OP>
+131:ORU:-(int):+(int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):660:29695:-(low + 1) |==> +(low + 1)
+132:ORU:-(int):~(int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):660:29695:-(low + 1) |==> ~(low + 1)
+133:LVR:POS:0:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):660:29703:1 |==> 0
+134:LVR:POS:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):660:29703:1 |==> -1
+135:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):660:29697:low + 1 |==> low % 1
+136:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):660:29697:low + 1 |==> low * 1
+137:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):660:29697:low + 1 |==> low - 1
+138:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@binarySearch(int):660:29697:low + 1 |==> low / 1
+139:LVR:POS:0:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):667:29870:1 |==> 0
+140:LVR:POS:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):667:29870:1 |==> -1
+141:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):667:29863:size + 1 |==> size % 1
+142:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):667:29863:size + 1 |==> size * 1
+143:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):667:29863:size + 1 |==> size - 1
+144:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):667:29863:size + 1 |==> size / 1
+145:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):667:29848:ensureCapacity(size + 1); |==> <NO-OP>
+146:LVR:0:POS:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):669:29949:0 |==> 1
+147:LVR:0:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):669:29949:0 |==> -1
+148:ROR:>(int,int):!=(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):669:29938:insertAt > 0 |==> insertAt != 0
+149:ROR:>(int,int):>=(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):669:29938:insertAt > 0 |==> insertAt >= 0
+150:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):669:29947:insertAt > 0 |==> false
+151:ORU:-(int):+(int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):672:30076:-(insertAt + 1) |==> +(insertAt + 1)
+152:ORU:-(int):~(int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):672:30076:-(insertAt + 1) |==> ~(insertAt + 1)
+153:LVR:POS:0:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):672:30089:1 |==> 0
+154:LVR:POS:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):672:30089:1 |==> -1
+155:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):672:30078:insertAt + 1 |==> insertAt % 1
+156:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):672:30078:insertAt + 1 |==> insertAt * 1
+157:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):672:30078:insertAt + 1 |==> insertAt - 1
+158:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):672:30078:insertAt + 1 |==> insertAt / 1
+159:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):672:30065:insertAt = -(insertAt + 1); |==> <NO-OP>
+160:LVR:POS:0:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):673:30211:1 |==> 0
+161:LVR:POS:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):673:30211:1 |==> -1
+162:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):673:30200:insertAt + 1 |==> insertAt % 1
+163:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):673:30200:insertAt + 1 |==> insertAt * 1
+164:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):673:30200:insertAt + 1 |==> insertAt - 1
+165:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):673:30200:insertAt + 1 |==> insertAt / 1
+166:AOR:-(int,int):%(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):673:30214:size - insertAt |==> size % insertAt
+167:AOR:-(int,int):*(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):673:30214:size - insertAt |==> size * insertAt
+168:AOR:-(int,int):+(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):673:30214:size - insertAt |==> size + insertAt
+169:AOR:-(int,int):/(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):673:30214:size - insertAt |==> size / insertAt
+170:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):673:30157:System.arraycopy(values, insertAt, values, insertAt + 1, size - insertAt); |==> <NO-OP>
+171:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):674:30244:values[insertAt] = value; |==> <NO-OP>
+172:LVR:POS:0:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):675:30334:1 |==> 0
+173:LVR:POS:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):675:30334:1 |==> -1
+174:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):675:30323:insertAt + 1 |==> insertAt % 1
+175:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):675:30323:insertAt + 1 |==> insertAt * 1
+176:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):675:30323:insertAt + 1 |==> insertAt - 1
+177:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):675:30323:insertAt + 1 |==> insertAt / 1
+178:AOR:-(int,int):%(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):675:30337:size - insertAt |==> size % insertAt
+179:AOR:-(int,int):*(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):675:30337:size - insertAt |==> size * insertAt
+180:AOR:-(int,int):+(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):675:30337:size - insertAt |==> size + insertAt
+181:AOR:-(int,int):/(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):675:30337:size - insertAt |==> size / insertAt
+182:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):675:30282:System.arraycopy(names, insertAt, names, insertAt + 1, size - insertAt); |==> <NO-OP>
+183:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):676:30367:names[insertAt] = name; |==> <NO-OP>
+184:STD:<INC>:<NO-OP>:org.apache.commons.lang.Entities$BinaryEntityMap@add(java.lang.String,int):677:30403:size++; |==> <NO-OP>
+185:LVR:0:POS:org.apache.commons.lang.Entities$BinaryEntityMap@name(int):685:30580:0 |==> 1
+186:LVR:0:NEG:org.apache.commons.lang.Entities$BinaryEntityMap@name(int):685:30580:0 |==> -1
+187:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@name(int):685:30572:index < 0 |==> index != 0
+188:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@name(int):685:30572:index < 0 |==> index <= 0
+189:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities$BinaryEntityMap@name(int):685:30578:index < 0 |==> false
+190:LVR:0:POS:org.apache.commons.lang.Entities@addEntities(java.lang.String[][]):701:30964:0 |==> 1
+191:LVR:0:NEG:org.apache.commons.lang.Entities@addEntities(java.lang.String[][]):701:30964:0 |==> -1
+192:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities@addEntities(java.lang.String[][]):701:30967:i < entityArray.length |==> i <= entityArray.length
+193:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities@addEntities(java.lang.String[][]):701:30969:i < entityArray.length |==> false
+194:LVR:0:POS:org.apache.commons.lang.Entities@addEntities(java.lang.String[][]):702:31035:0 |==> 1
+195:LVR:0:NEG:org.apache.commons.lang.Entities@addEntities(java.lang.String[][]):702:31035:0 |==> -1
+196:LVR:POS:0:org.apache.commons.lang.Entities@addEntities(java.lang.String[][]):702:31071:1 |==> 0
+197:LVR:POS:NEG:org.apache.commons.lang.Entities@addEntities(java.lang.String[][]):702:31071:1 |==> -1
+198:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@addEntities(java.lang.String[][]):702:31010:addEntity(entityArray[i][0], Integer.parseInt(entityArray[i][1])); |==> <NO-OP>
+199:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@addEntity(java.lang.String,int):713:31299:map.add(name, value); |==> <NO-OP>
+200:LVR:POS:0:org.apache.commons.lang.Entities@escape(java.lang.String):747:32384:2 |==> 0
+201:LVR:POS:NEG:org.apache.commons.lang.Entities@escape(java.lang.String):747:32384:2 |==> -2
+202:AOR:*(int,int):%(int,int):org.apache.commons.lang.Entities@escape(java.lang.String):747:32369:str.length() * 2 |==> str.length() % 2
+203:AOR:*(int,int):+(int,int):org.apache.commons.lang.Entities@escape(java.lang.String):747:32369:str.length() * 2 |==> str.length() + 2
+204:AOR:*(int,int):-(int,int):org.apache.commons.lang.Entities@escape(java.lang.String):747:32369:str.length() * 2 |==> str.length() - 2
+205:AOR:*(int,int):/(int,int):org.apache.commons.lang.Entities@escape(java.lang.String):747:32369:str.length() * 2 |==> str.length() / 2
+206:LVR:0:POS:org.apache.commons.lang.Entities@escape(java.lang.String):749:32420:0 |==> 1
+207:LVR:0:NEG:org.apache.commons.lang.Entities@escape(java.lang.String):749:32420:0 |==> -1
+208:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities@escape(java.lang.String):749:32423:i < str.length() |==> i != str.length()
+209:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities@escape(java.lang.String):749:32423:i < str.length() |==> i <= str.length()
+210:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities@escape(java.lang.String):749:32425:i < str.length() |==> false
+211:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.Entities@escape(java.lang.String):752:32565:entityName == null |==> false
+212:LVR:POS:0:org.apache.commons.lang.Entities@escape(java.lang.String):753:32601:127 |==> 0
+213:LVR:POS:NEG:org.apache.commons.lang.Entities@escape(java.lang.String):753:32601:127 |==> -127
+214:ROR:>(int,int):!=(int,int):org.apache.commons.lang.Entities@escape(java.lang.String):753:32596:ch > 127 |==> ch != 127
+215:ROR:>(int,int):>=(int,int):org.apache.commons.lang.Entities@escape(java.lang.String):753:32596:ch > 127 |==> ch >= 127
+216:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.Entities@escape(java.lang.String):753:32599:ch > 127 |==> false
+217:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.lang.String):755:32668:buf.append("&#"); |==> <NO-OP>
+218:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.lang.String):756:32706:buf.append(intValue); |==> <NO-OP>
+219:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.lang.String):757:32748:buf.append(';'); |==> <NO-OP>
+220:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.lang.String):759:32810:buf.append(ch); |==> <NO-OP>
+221:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.lang.String):762:32881:buf.append('&'); |==> <NO-OP>
+222:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.lang.String):763:32914:buf.append(entityName); |==> <NO-OP>
+223:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.lang.String):764:32954:buf.append(';'); |==> <NO-OP>
+224:LVR:0:POS:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):785:33825:0 |==> 1
+225:LVR:0:NEG:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):785:33825:0 |==> -1
+226:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):785:33828:i < len |==> i != len
+227:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):785:33828:i < len |==> i <= len
+228:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):785:33830:i < len |==> false
+229:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):788:33959:entityName == null |==> false
+230:LVR:POS:0:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):789:33994:127 |==> 0
+231:LVR:POS:NEG:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):789:33994:127 |==> -127
+232:ROR:>(int,int):!=(int,int):org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):789:33990:c > 127 |==> c != 127
+233:ROR:>(int,int):>=(int,int):org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):789:33990:c > 127 |==> c >= 127
+234:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):789:33992:c > 127 |==> false
+235:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):790:34022:writer.write("&#"); |==> <NO-OP>
+236:LVR:POS:0:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):791:34095:10 |==> 0
+237:LVR:POS:NEG:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):791:34095:10 |==> -10
+238:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):791:34062:writer.write(Integer.toString(c, 10)); |==> <NO-OP>
+239:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):792:34121:writer.write(';'); |==> <NO-OP>
+240:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):794:34185:writer.write(c); |==> <NO-OP>
+241:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):797:34257:writer.write('&'); |==> <NO-OP>
+242:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):798:34292:writer.write(entityName); |==> <NO-OP>
+243:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@escape(java.io.Writer,java.lang.String):799:34334:writer.write(';'); |==> <NO-OP>
+244:LVR:0:POS:org.apache.commons.lang.Entities@unescape(java.lang.String):815:34839:0 |==> 1
+245:LVR:0:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):815:34839:0 |==> -1
+246:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):815:34828:firstAmp < 0 |==> firstAmp != 0
+247:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):815:34828:firstAmp < 0 |==> firstAmp <= 0
+248:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):815:34837:firstAmp < 0 |==> false
+249:LVR:0:POS:org.apache.commons.lang.Entities@unescape(java.lang.String):820:34971:0 |==> 1
+250:LVR:0:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):820:34971:0 |==> -1
+251:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.lang.String):820:34946:buf.append(str.substring(0, firstAmp)); |==> <NO-OP>
+252:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):821:35017:i < str.length() |==> i != str.length()
+253:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):821:35017:i < str.length() |==> i <= str.length()
+254:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):821:35019:i < str.length() |==> false
+255:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):823:35095:ch == '&' |==> ch <= '&'
+256:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):823:35095:ch == '&' |==> ch >= '&'
+257:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):823:35098:ch == '&' |==> false
+258:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.lang.String):824:35156:1 |==> 0
+259:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):824:35156:1 |==> -1
+260:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):824:35152:i + 1 |==> i % 1
+261:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):824:35152:i + 1 |==> i * 1
+262:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):824:35152:i + 1 |==> i - 1
+263:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):824:35152:i + 1 |==> i / 1
+264:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.lang.String):825:35188:-1 |==> 0
+265:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.lang.String):825:35188:-1 |==> 1
+266:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):825:35180:semi == -1 |==> semi <= -1
+267:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):825:35180:semi == -1 |==> semi >= -1
+268:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):825:35185:semi == -1 |==> false
+269:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.lang.String):826:35214:buf.append(ch); |==> <NO-OP>
+270:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.lang.String):829:35326:1 |==> 0
+271:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):829:35326:1 |==> -1
+272:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):829:35322:i + 1 |==> i % 1
+273:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):829:35322:i + 1 |==> i * 1
+274:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):829:35322:i + 1 |==> i - 1
+275:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):829:35322:i + 1 |==> i / 1
+276:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.lang.String):830:35358:-1 |==> 0
+277:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.lang.String):830:35358:-1 |==> 1
+278:ROR:!=(int,int):<(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):830:35350:amph != -1 |==> amph < -1
+279:ROR:!=(int,int):>(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):830:35350:amph != -1 |==> amph > -1
+280:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):830:35355:amph != -1 |==> true
+281:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):830:35364:amph < semi |==> amph != semi
+282:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):830:35364:amph < semi |==> amph <= semi
+283:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):830:35369:amph < semi |==> false
+284:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.Entities@unescape(java.lang.String):830:35350:amph != -1 && amph < semi |==> amph != -1 == amph < semi
+285:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.Entities@unescape(java.lang.String):830:35361:amph != -1 && amph < semi |==> false
+286:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.Entities@unescape(java.lang.String):830:35350:amph != -1 && amph < semi |==> amph != -1
+287:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.Entities@unescape(java.lang.String):830:35364:amph != -1 && amph < semi |==> amph < semi
+288:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.lang.String):832:35458:buf.append(ch); |==> <NO-OP>
+289:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.lang.String):835:35576:1 |==> 0
+290:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):835:35576:1 |==> -1
+291:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):835:35572:i + 1 |==> i % 1
+292:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):835:35572:i + 1 |==> i * 1
+293:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):835:35572:i + 1 |==> i - 1
+294:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):835:35572:i + 1 |==> i / 1
+295:LVR:0:POS:org.apache.commons.lang.Entities@unescape(java.lang.String):837:35662:0 |==> 1
+296:LVR:0:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):837:35662:0 |==> -1
+297:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):837:35639:entityName.length() == 0 |==> entityName.length() >= 0
+298:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):837:35659:entityName.length() == 0 |==> false
+299:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.lang.String):838:35701:-1 |==> 0
+300:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.lang.String):838:35701:-1 |==> 1
+301:LVR:0:POS:org.apache.commons.lang.Entities@unescape(java.lang.String):839:35750:0 |==> 1
+302:LVR:0:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):839:35750:0 |==> -1
+303:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):839:35732:entityName.charAt(0) == '#' |==> entityName.charAt(0) <= '#'
+304:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):839:35732:entityName.charAt(0) == '#' |==> entityName.charAt(0) >= '#'
+305:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):839:35753:entityName.charAt(0) == '#' |==> false
+306:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.lang.String):840:35810:1 |==> 0
+307:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):840:35810:1 |==> -1
+308:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):840:35787:entityName.length() == 1 |==> entityName.length() <= 1
+309:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):840:35787:entityName.length() == 1 |==> entityName.length() >= 1
+310:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):840:35807:entityName.length() == 1 |==> false
+311:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.lang.String):841:35853:-1 |==> 0
+312:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.lang.String):841:35853:-1 |==> 1
+313:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.lang.String):843:35943:1 |==> 0
+314:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):843:35943:1 |==> -1
+315:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):845:36009:charAt1 == 'x' |==> charAt1 <= 'x'
+316:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):845:36009:charAt1 == 'x' |==> charAt1 >= 'x'
+317:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):845:36017:charAt1 == 'x' |==> false
+318:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):845:36027:charAt1 == 'X' |==> charAt1 <= 'X'
+319:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):845:36027:charAt1 == 'X' |==> charAt1 >= 'X'
+320:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):845:36034:charAt1 == 'X' |==> false
+321:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.Entities@unescape(java.lang.String):845:36009:charAt1 == 'x' || charAt1 == 'X' |==> charAt1 == 'x'
+322:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.Entities@unescape(java.lang.String):845:36027:charAt1 == 'x' || charAt1 == 'X' |==> charAt1 == 'X'
+323:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.Entities@unescape(java.lang.String):845:36024:charAt1 == 'x' || charAt1 == 'X' |==> true
+324:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.lang.String):846:36126:2 |==> 0
+325:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):846:36126:2 |==> -2
+326:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.lang.String):846:36130:16 |==> 0
+327:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):846:36130:16 |==> -16
+328:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.lang.String):848:36267:1 |==> 0
+329:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):848:36267:1 |==> -1
+330:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.lang.String):850:36348:65535 |==> 0
+331:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.lang.String):850:36348:65535 |==> -65535
+332:ROR:>(int,int):!=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):850:36334:entityValue > 65535 |==> entityValue != 65535
+333:ROR:>(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):850:36334:entityValue > 65535 |==> entityValue >= 65535
+334:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):850:36346:entityValue > 65535 |==> false
+335:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.lang.String):851:36404:-1 |==> 0
+336:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.lang.String):851:36404:-1 |==> 1
+337:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.lang.String):851:36390:entityValue = -1; |==> <NO-OP>
+338:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.lang.String):854:36541:-1 |==> 0
+339:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.lang.String):854:36541:-1 |==> 1
+340:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.lang.String):860:36735:-1 |==> 0
+341:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.lang.String):860:36735:-1 |==> 1
+342:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):860:36720:entityValue == -1 |==> entityValue <= -1
+343:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):860:36720:entityValue == -1 |==> entityValue >= -1
+344:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.lang.String):860:36732:entityValue == -1 |==> false
+345:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.lang.String):861:36761:buf.append('&'); |==> <NO-OP>
+346:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.lang.String):862:36798:buf.append(entityName); |==> <NO-OP>
+347:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.lang.String):863:36842:buf.append(';'); |==> <NO-OP>
+348:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.lang.String):865:36904:buf.append((char)(entityValue)); |==> <NO-OP>
+349:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.lang.String):867:36972:i = semi; |==> <NO-OP>
+350:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.lang.String):869:37019:buf.append(ch); |==> <NO-OP>
+351:LVR:0:POS:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):889:37866:0 |==> 1
+352:LVR:0:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):889:37866:0 |==> -1
+353:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):889:37855:firstAmp < 0 |==> firstAmp != 0
+354:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):889:37855:firstAmp < 0 |==> firstAmp <= 0
+355:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):889:37864:firstAmp < 0 |==> false
+356:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):890:37883:writer.write(string); |==> <NO-OP>
+357:LVR:0:POS:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):894:37965:0 |==> 1
+358:LVR:0:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):894:37965:0 |==> -1
+359:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):894:37944:writer.write(string, 0, firstAmp); |==> <NO-OP>
+360:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):896:38045:i < len |==> i != len
+361:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):896:38045:i < len |==> i <= len
+362:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):896:38047:i < len |==> false
+363:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):898:38116:c == '&' |==> c <= '&'
+364:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):898:38116:c == '&' |==> c >= '&'
+365:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):898:38118:c == '&' |==> false
+366:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):899:38160:1 |==> 0
+367:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):899:38160:1 |==> -1
+368:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):899:38158:i + 1 |==> i % 1
+369:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):899:38158:i + 1 |==> i * 1
+370:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):899:38158:i + 1 |==> i - 1
+371:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):899:38158:i + 1 |==> i / 1
+372:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):901:38264:-1 |==> 0
+373:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):901:38264:-1 |==> 1
+374:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):901:38248:semiColonIdx == -1 |==> semiColonIdx <= -1
+375:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):901:38248:semiColonIdx == -1 |==> semiColonIdx >= -1
+376:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):901:38261:semiColonIdx == -1 |==> false
+377:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):902:38290:writer.write(c); |==> <NO-OP>
+378:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):905:38415:1 |==> 0
+379:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):905:38415:1 |==> -1
+380:AOR:+(int,int):%(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):905:38411:i + 1 |==> i % 1
+381:AOR:+(int,int):*(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):905:38411:i + 1 |==> i * 1
+382:AOR:+(int,int):-(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):905:38411:i + 1 |==> i - 1
+383:AOR:+(int,int):/(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):905:38411:i + 1 |==> i / 1
+384:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38456:-1 |==> 0
+385:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38456:-1 |==> 1
+386:ROR:!=(int,int):<(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38439:amphersandIdx != -1 |==> amphersandIdx < -1
+387:ROR:!=(int,int):>(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38439:amphersandIdx != -1 |==> amphersandIdx > -1
+388:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38453:amphersandIdx != -1 |==> true
+389:ROR:<(int,int):!=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38462:amphersandIdx < semiColonIdx |==> amphersandIdx != semiColonIdx
+390:ROR:<(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38462:amphersandIdx < semiColonIdx |==> amphersandIdx <= semiColonIdx
+391:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38476:amphersandIdx < semiColonIdx |==> false
+392:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38439:amphersandIdx != -1 && amphersandIdx < semiColonIdx |==> amphersandIdx != -1 == amphersandIdx < semiColonIdx
+393:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38459:amphersandIdx != -1 && amphersandIdx < semiColonIdx |==> false
+394:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38439:amphersandIdx != -1 && amphersandIdx < semiColonIdx |==> amphersandIdx != -1
+395:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):906:38462:amphersandIdx != -1 && amphersandIdx < semiColonIdx |==> amphersandIdx < semiColonIdx
+396:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):908:38573:writer.write(c); |==> <NO-OP>
+397:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):912:38752:-1 |==> 0
+398:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):912:38752:-1 |==> 1
+399:LVR:0:POS:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):914:38858:0 |==> 1
+400:LVR:0:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):914:38858:0 |==> -1
+401:ROR:>(int,int):!=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):914:38839:entityContentLen > 0 |==> entityContentLen != 0
+402:ROR:>(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):914:38839:entityContentLen > 0 |==> entityContentLen >= 0
+403:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):914:38856:entityContentLen > 0 |==> false
+404:LVR:0:POS:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):915:38908:0 |==> 1
+405:LVR:0:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):915:38908:0 |==> -1
+406:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):915:38887:entityContent.charAt(0) == '#' |==> entityContent.charAt(0) <= '#'
+407:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):915:38887:entityContent.charAt(0) == '#' |==> entityContent.charAt(0) >= '#'
+408:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):915:38911:entityContent.charAt(0) == '#' |==> false
+409:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):916:39031:1 |==> 0
+410:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):916:39031:1 |==> -1
+411:ROR:>(int,int):!=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):916:39012:entityContentLen > 1 |==> entityContentLen != 1
+412:ROR:>(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):916:39012:entityContentLen > 1 |==> entityContentLen >= 1
+413:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):916:39029:entityContentLen > 1 |==> false
+414:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):917:39104:1 |==> 0
+415:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):917:39104:1 |==> -1
+416:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):922:39386:2 |==> 0
+417:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):922:39386:2 |==> -2
+418:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):922:39390:16 |==> 0
+419:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):922:39390:16 |==> -16
+420:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):922:39331:entityValue = Integer.parseInt(entityContent.substring(2), 16); |==> <NO-OP>
+421:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):926:39623:1 |==> 0
+422:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):926:39623:1 |==> -1
+423:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):926:39627:10 |==> 0
+424:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):926:39627:10 |==> -10
+425:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):926:39568:entityValue = Integer.parseInt(entityContent.substring(1), 10); |==> <NO-OP>
+426:LVR:POS:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):929:39754:65535 |==> 0
+427:LVR:POS:NEG:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):929:39754:65535 |==> -65535
+428:ROR:>(int,int):!=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):929:39740:entityValue > 65535 |==> entityValue != 65535
+429:ROR:>(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):929:39740:entityValue > 65535 |==> entityValue >= 65535
+430:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):929:39752:entityValue > 65535 |==> false
+431:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):930:39814:-1 |==> 0
+432:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):930:39814:-1 |==> 1
+433:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):930:39800:entityValue = -1; |==> <NO-OP>
+434:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):933:39962:-1 |==> 0
+435:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):933:39962:-1 |==> 1
+436:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):933:39948:entityValue = -1; |==> <NO-OP>
+437:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):937:40117:entityValue = this.entityValue(entityContent); |==> <NO-OP>
+438:LVR:NEG:0:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):941:40256:-1 |==> 0
+439:LVR:NEG:POS:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):941:40256:-1 |==> 1
+440:ROR:==(int,int):<=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):941:40241:entityValue == -1 |==> entityValue <= -1
+441:ROR:==(int,int):>=(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):941:40241:entityValue == -1 |==> entityValue >= -1
+442:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):941:40253:entityValue == -1 |==> false
+443:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):942:40282:writer.write('&'); |==> <NO-OP>
+444:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):943:40321:writer.write(entityContent); |==> <NO-OP>
+445:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):944:40370:writer.write(';'); |==> <NO-OP>
+446:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):946:40434:writer.write(entityValue); |==> <NO-OP>
+447:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):948:40495:i = semiColonIdx; |==> <NO-OP>
+448:STD:<CALL>:<NO-OP>:org.apache.commons.lang.Entities@unescape(java.io.Writer,java.lang.String):950:40600:writer.write(c); |==> <NO-OP>

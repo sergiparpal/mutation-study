@@ -1,6 +1,123 @@
+Extract test suite......................................................... Executing test suite: Lang-21f-agent.1.tar.bz2
+OK
+Checking out 3e5d5dc9 to /tmp/run_mutation.pl_103324_1788688747/21f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/21f/maven-bui OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 3e5d5dc9:a655a3fa..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-21f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-63f-agent.1.tar.bz2
+OK
+Checking out 1d5c03fa to /tmp/run_mutation.pl_103324_1788688747/63f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Rename enum package in src................................................. OK
+Move enum package in src................................................... OK
+Rename enum package in test................................................ OK
+Move enum package in test.................................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/63f/project.p OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/63f/default.p OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 1d5c03fa:e91541fc..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-63f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-52f-agent.1.tar.bz2
+OK
+Checking out c22d9d59 to /tmp/run_mutation.pl_103324_1788688747/52f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Rename enum package in src................................................. OK
+Move enum package in src................................................... OK
+Rename enum package in test................................................ OK
+Move enum package in test.................................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/52f/project.p OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/52f/default.p OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff c22d9d59:ed7e9b43..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-52f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-65f-agent.1.tar.bz2
+OK
+Checking out 9cbf70d8 to /tmp/run_mutation.pl_103324_1788688747/65f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Rename enum package in src................................................. OK
+Move enum package in src................................................... OK
+Rename enum package in test................................................ OK
+Move enum package in test.................................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/65f/project.p OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/65f/default.p OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 9cbf70d8:c62bd307..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-65f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
 Extract test suite......................................................... Executing test suite: Lang-13f-agent.1.tar.bz2
 OK
-Checking out e9429c05 to /tmp/run_mutation.pl_362274_1788158337/13f........ OK
+Checking out e9429c05 to /tmp/run_mutation.pl_103324_1788688747/13f........ OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -10,7 +127,7 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_mutation.pl_362274_1788158337/13f/default.p OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/13f/default.p OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
@@ -22,9 +139,39 @@ Compiling mutant definition (mml).......................................... OK
 Running ant (mutate)....................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-43f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-13f-agentopus.1.tar.bz2
 OK
-Checking out a38e2e94 to /tmp/run_mutation.pl_362274_1788158337/43f........ OK
+Check out program version: Lang-13f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-34f-agent.1.tar.bz2
+OK
+Checking out a2bb711a to /tmp/run_mutation.pl_103324_1788688747/34f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/34f/maven-bui OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff a2bb711a:5c3ec55e..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-34f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-43f-agentopus.1.tar.bz2
+OK
+Checking out a38e2e94 to /tmp/run_mutation.pl_103324_1788688747/43f........ OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -39,7 +186,7 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_mutation.pl_362274_1788158337/43f/default.p OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/43f/default.p OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
@@ -51,33 +198,53 @@ Compiling mutant definition (mml).......................................... OK
 Running ant (mutate)....................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-23f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-43f-agent.1.tar.bz2
 OK
-Checking out 249788d7 to /tmp/run_mutation.pl_362274_1788158337/23f........ OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_mutation.pl_362274_1788158337/23f/maven-bui OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 249788d7:66e42dc8..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-23f........................................ OK
+Check out program version: Lang-43f........................................ OK
 Compiling mutant definition (mml).......................................... OK
 Running ant (mutate)....................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-56f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-62f-agentopus.1.tar.bz2
 OK
-Checking out e9e167f9 to /tmp/run_mutation.pl_362274_1788158337/56f........ OK
+Checking out d8b6f5b5 to /tmp/run_mutation.pl_103324_1788688747/62f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Rename enum package in src................................................. OK
+Move enum package in src................................................... OK
+Rename enum package in test................................................ OK
+Move enum package in test.................................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/62f/project.p OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/62f/default.p OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff d8b6f5b5:8fde2caf..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-62f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-62f-agent.1.tar.bz2
+OK
+Check out program version: Lang-62f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-56f-agentopus.1.tar.bz2
+OK
+Checking out e9e167f9 to /tmp/run_mutation.pl_103324_1788688747/56f........ OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -93,8 +260,8 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_mutation.pl_362274_1788158337/56f/project.p OK
-Backing up build file: /tmp/run_mutation.pl_362274_1788158337/56f/default.p OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/56f/project.p OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/56f/default.p OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
@@ -102,6 +269,99 @@ Diff e9e167f9:c47d6ce5..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
 Check out program version: Lang-56f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-56f-agent.1.tar.bz2
+OK
+Check out program version: Lang-56f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-23f-agentopus.1.tar.bz2
+OK
+Checking out 249788d7 to /tmp/run_mutation.pl_103324_1788688747/23f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/23f/maven-bui OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 249788d7:66e42dc8..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-23f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-23f-agent.1.tar.bz2
+OK
+Check out program version: Lang-23f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-36f-agent.1.tar.bz2
+OK
+Checking out 26bc3fe0 to /tmp/run_mutation.pl_103324_1788688747/36f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/36f/maven-bui OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 26bc3fe0:506bd018..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-36f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-8f-agent.1.tar.bz2
+OK
+Checking out 04babff3 to /tmp/run_mutation.pl_103324_1788688747/8f......... OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_mutation.pl_103324_1788688747/8f/default.pr OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 04babff3:cfab1e4f..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-8f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-8f-agentopus.1.tar.bz2
+OK
+Check out program version: Lang-8f......................................... OK
 Compiling mutant definition (mml).......................................... OK
 Running ant (mutate)....................................................... OK
 Running ant (compile.gen.tests)............................................ OK
