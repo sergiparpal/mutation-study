@@ -1,0 +1,40 @@
+Running ant (compile)...................................................... OK
+Running ant (compile.tests)................................................ FAIL
+Executed command:  cd /tmp/specB_Lang_63_f && /home/sergi/defects4j/major/bin/ant -f /home/sergi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/sergi/defects4j -Dd4j.dir.projects=/home/sergi/defects4j/framework/projects -Dbasedir=/tmp/specB_Lang_63_f  compile.tests 2>&1
+Buildfile: /home/sergi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+     [echo] -------- commons-lang 2.3-SNAPSHOT --------
+
+prepare:
+
+static:
+
+compile:
+    [javac] /tmp/specB_Lang_63_f/build.xml:65: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [javac] /tmp/specB_Lang_63_f/build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 139 source files to /tmp/specB_Lang_63_f/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/specB_Lang_63_f/src/test/org/apache/commons/lang/time/TimeTestSuite.java:54: error: cannot find symbol
+    [javac]         suite.addTest(DurationFormatUtilsTest.suite());
+    [javac]                       ^
+    [javac]   symbol:   variable DurationFormatUtilsTest
+    [javac]   location: class TimeTestSuite
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 error
+    [javac] 4 warnings
+
+BUILD FAILED
+/tmp/specB_Lang_63_f/build.xml:73: Compile failed; see the compiler error output for details.
+
+Total time: 2 seconds
+Cannot compile tests! at /home/sergi/defects4j/framework/bin/d4j/d4j-compile line 83.
+Compilation failed in require at /home/sergi/defects4j/framework/bin/defects4j line 195.

@@ -1,0 +1,11 @@
+/tmp/specB_Lang_52_f/src/java/org/apache/commons/lang/StringEscapeUtils.java:425: warning - invalid usage of tag &
+/tmp/specB_Lang_52_f/src/java/org/apache/commons/lang/StringEscapeUtils.java:468: warning - invalid usage of tag &
+/tmp/specB_Lang_52_f/src/java/org/apache/commons/lang/StringEscapeUtils.java:565: warning - invalid usage of tag &
+/tmp/specB_Lang_52_f/src/java/org/apache/commons/lang/StringEscapeUtils.java:565: warning - invalid usage of tag >
+/tmp/specB_Lang_52_f/src/java/org/apache/commons/lang/StringEscapeUtils.java:594: warning - invalid usage of tag &
+/tmp/specB_Lang_52_f/src/java/org/apache/commons/lang/StringEscapeUtils.java:594: warning - invalid usage of tag >
+/tmp/specB_Lang_52_f/src/java/org/apache/commons/lang/StringEscapeUtils.java:677: warning - invalid usage of tag >
+/tmp/specB_Lang_52_f/src/java/org/apache/commons/lang/package.html:20: warning - Tag @link: reference not found: java.lang
+/tmp/specB_Lang_52_f/src/java/org/apache/commons/lang/package.html:20: warning - Tag @link: reference not found: java.lang
+/tmp/specB_Lang_52_f/src/java/org/apache/commons/lang/package.html:20: warning - Tag @link: reference not found: java.lang
+10 warnings

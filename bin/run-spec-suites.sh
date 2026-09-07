@@ -17,10 +17,11 @@
 #
 # PER-METHOD FILTER
 # -----------------
-# In the M arm no suite failed. Here many will: an agent guessing from the API
-# gets some expectations wrong. Discarding a whole suite over one wrong
-# expectation would throw away most of the sample, so failing methods are
-# disabled individually (bin/prune-failing-tests.py) and the rest are kept.
+# Failing methods are disabled individually (bin/prune-failing-tests.py) rather
+# than discarding the whole suite. Measured on the first seven bugs, the prune
+# rate was 2 of 258 methods (1%): writing from the javadoc alone turns out to
+# produce almost no wrong expectations, which retires the hypothesis that the
+# spec arm would mostly guess.
 #
 # Declared bias: that filter uses the implementation as an oracle, so what
 # survives is precisely the subset agreeing with the code. It only removes,
@@ -28,27 +29,34 @@
 # biased and must be reported as such. The M arm carries the same bias, so the
 # comparison between arms stays clean.
 #
-# The prune rate is itself a result: how often an expectation written from the
-# API alone disagrees with the implementation.
-#
 # JAVADOC INVOCATION
 # ------------------
-# Three details had to line up, found the hard way on Lang-43:
+# Four details had to line up, all found the hard way:
 #   - Pass FILE PATHS, not fully-qualified class names. Given a qualified name
-#     without .java, javadoc treats it as a package and reports
-#     "No source files for package org.apache.commons.lang.text.Extended..."
+#     without .java, javadoc treats it as a package (Lang-43).
 #   - Keep -sourcepath anyway, so sibling classes referenced by the source
-#     resolve (otherwise: "cannot find symbol: class Validate").
-#   - Use cp.compile, and judge success by the existence of api/index.html,
-#     never by the exit status: this vintage of source produces warnings that
-#     javadoc reports as a non-zero exit.
+#     resolve — otherwise "cannot find symbol: class Validate".
+#   - Use -package, not -public: some classes under test are package-private
+#     and -public documents nothing at all (Lang-62, "No public or protected
+#     classes found to document"). -package gives the agent what a developer
+#     in the same package would see, which is the situation being modelled.
+#   - Judge success by the existence of api/index.html, never by exit status:
+#     this vintage of source produces warnings javadoc reports as non-zero.
+#
+# SOURCE LEVEL
+# ------------
+# The sandbox must compile with the project's own -source level. Lang-65 was
+# lost because the agent wrote 1_017_320_701_000L, valid under the sandbox's
+# default javac but not under the project's -source 1.6. The level is read
+# from the project's default.properties and passed both to compile.sh and to
+# the prompt.
 #
 # KNOWN LIMITATION
 # ----------------
 # lib/ contains compiled classes, so a decompiler or `javap -c` would recover
 # the logic. The prompt forbids it, but this is an honour-system control, not
-# a technical one. Shipping no jar would leave the agent unable to compile,
-# which would cost more than the risk.
+# a technical one. The sandboxes are kept (not deleted after a successful run)
+# so the transcript and workspace can be audited.
 #
 # Usage:
 #   ARM=spec MODEL=sonnet MAX_TURNS=50 ./bin/run-spec-suites.sh
@@ -109,6 +117,15 @@ EOF
     fi
 }
 
+count_tests() {   # count_tests <file...>
+    local total=0 f c
+    for f in "$@"; do
+        c=$(grep -cE "@Test|public void test" "$f" 2>/dev/null || echo 0)
+        total=$((total + c))
+    done
+    echo "$total"
+}
+
 n=0
 DEAD=0
 ABORTED=no
@@ -154,6 +171,12 @@ while IFS=, read -r P B _rest; do
     fi
     printf '%s\n' "$CLASSES" > "$RUNDIR/${TAG}.classes"
 
+    # the project's own -source level; the sandbox must not be more permissive
+    SRC_LEVEL=$(grep -h "^compile\.source" "$W"/*.properties 2>/dev/null \
+                  | head -1 | cut -d= -f2 | tr -d '[:space:]')
+    SRC_LEVEL=${SRC_LEVEL:-8}
+    echo "$SRC_LEVEL" > "$RUNDIR/${TAG}.srclevel"
+
     rm -rf "$W/.git"
 
     DELETED=""
@@ -190,8 +213,7 @@ while IFS=, read -r P B _rest; do
         SRC_FILES="$SRC_FILES $W/$SRC_CLASSES/$(echo "$C" | tr '.' '/').java"
     done
 
-    # exit status is unreliable here (warnings on vintage source); the index is
-    javadoc -quiet -public -Xdoclint:none \
+    javadoc -quiet -package -Xdoclint:none \
         -d "$SPEC/api" \
         -sourcepath "$W/$SRC_CLASSES" \
         -classpath "$CP_COMPILE" \
@@ -213,15 +235,16 @@ while IFS=, read -r P B _rest; do
         fail "no junit jar found for the sandbox"; continue
     fi
 
-    cat > "$SPEC/compile.sh" <<'EOS'
+    cat > "$SPEC/compile.sh" <<EOS
 #!/bin/bash
-# Compile the tests under tests/ against the project's public API.
+# Compile the tests under tests/ against the project's public API, using the
+# same -source level as the project itself.
 # There is no run script: executing the tests is not part of this task.
 set -e
-cd "$(dirname "$0")"
+cd "\$(dirname "\$0")"
 mkdir -p out
 find tests -name '*.java' > .sources
-javac -nowarn -cp "lib/*" -d out @.sources
+javac -nowarn -source $SRC_LEVEL -target $SRC_LEVEL -cp "lib/*" -d out @.sources
 echo "compiled OK"
 EOS
     chmod +x "$SPEC/compile.sh"
@@ -246,6 +269,9 @@ Requirements:
   test class or test helper. Any fixture you need, define inside your file.
 - Match the JUnit version present in lib/. Some of these projects ship
   JUnit 3.8 only, where org.junit.Test and org.junit.Assert do not exist.
+- This project compiles with -source $SRC_LEVEL. Use only syntax valid at that
+  level: no underscores in numeric literals, no diamond operator, no lambdas,
+  no try-with-resources unless the level allows them.
 - Assert on returned values and on observable state, not merely that no
   exception is thrown.
 - Cover boundary and error cases, not just the happy path.
@@ -262,7 +288,7 @@ Restrictions:
 
 Finish when ./compile.sh reports success."
 
-    echo "[$TAG] invoking agent ($MODEL, spec arm)"
+    echo "[$TAG] invoking agent ($MODEL, spec arm, -source $SRC_LEVEL)"
     (cd "$SPEC" && claude -p "$PROMPT" \
         --model "$MODEL" \
         --allowedTools "Read,Write,Bash" \
@@ -314,9 +340,14 @@ print(f'{state}|{res}|{cost:.3f}|{turns}')" 2>/dev/null)
         fail "agent tests do not compile in the project"; continue
     fi
 
+    # counted BEFORE any pruning, so the denominator is the suite as written
+    TEST_PATHS=""
+    for f in $WRITTEN; do TEST_PATHS="$TEST_PATHS $W/$SRC_TESTS/$f"; done
+    METHODS_TOTAL=$(count_tests $TEST_PATHS)
+
     RUN_CLASSES=$(echo "$WRITTEN" | sed 's|^\./||; s|\.java$||; s|/|.|g' | tr '\n' ' ')
     JUNIT3=no
-    PRUNED_TOTAL=0; METHODS_TOTAL=0
+    PRUNED_TOTAL=0
 
     for round in $(seq 1 $MAX_PRUNE_ROUNDS); do
         : > "$RUNDIR/${TAG}.junit"
@@ -343,30 +374,29 @@ print(f'{state}|{res}|{cost:.3f}|{turns}')" 2>/dev/null)
             fail "tests fail but no method names could be parsed (round $round)"
             break
         fi
-
+        NPRUNED=0
         for f in $WRITTEN; do
             OUT=$("$ROOT/bin/prune-failing-tests.py" "$W/$SRC_TESTS/$f" $FAILING)
-            PRUNED_TOTAL=$((PRUNED_TOTAL + ${OUT%% *}))
-            METHODS_TOTAL=${OUT##* }
+            NPRUNED=$((NPRUNED + ${OUT%% *}))
+            touch "$W/$SRC_TESTS/$f"
         done
-        echo "[$TAG] round $round: pruned $(echo "$FAILING" | wc -w) failing methods"
+        PRUNED_TOTAL=$((PRUNED_TOTAL + NPRUNED))
+        echo "[$TAG] round $round: disabled $NPRUNED failing methods"
 
+        if [ "$NPRUNED" -eq 0 ]; then
+            fail "failing methods could not be disabled (round $round)"; break
+        fi
         if ! (cd "$W" && defects4j compile) >> "$RUNDIR/${TAG}.compile" 2>&1; then
             fail "compile broke after pruning"; break
         fi
     done
     [ -f "$STATUS" ] && continue
 
-    METHODS_TOTAL=0
-    for f in $WRITTEN; do
-        C=$(grep -cE "@Test|public void test" "$W/$SRC_TESTS/$f")
-        METHODS_TOTAL=$((METHODS_TOTAL + C))
-    done
     echo "$PRUNED_TOTAL $METHODS_TOTAL" > "$RUNDIR/${TAG}.pruned"
-    echo "[$TAG] pruned $PRUNED_TOTAL of $METHODS_TOTAL methods"
+    echo "[$TAG] pruned $PRUNED_TOTAL of $METHODS_TOTAL tests"
 
-    if [ "$PRUNED_TOTAL" -ge "$METHODS_TOTAL" ] && [ "$METHODS_TOTAL" -gt 0 ]; then
-        fail "every test method failed on the fixed version"; continue
+    if [ "$METHODS_TOTAL" -gt 0 ] && [ "$PRUNED_TOTAL" -ge "$METHODS_TOTAL" ]; then
+        fail "every test failed on the fixed version"; continue
     fi
 
     STAGE=$(mktemp -d)
@@ -378,7 +408,7 @@ print(f'{state}|{res}|{cost:.3f}|{turns}')" 2>/dev/null)
     rm -rf "$STAGE"
 
     echo "ok" > "$STATUS"
-    rm -rf "$W"
+    rm -rf "$W"          # $SPEC is kept: it is the audit trail for this arm
     echo "[$TAG] packaged: $SUITES/$(basename "$ARCHIVE")"
 done < "$SAMPLE"
 
@@ -386,7 +416,7 @@ echo
 [ "$ABORTED" = "yes" ] && echo "*** run aborted early — resume by rerunning ***" && echo
 echo "spec suites packaged: $(ls "$ROOT/$SUITES"/*-${ARM}.1.tar.bz2 2>/dev/null | wc -l)"
 echo "failures:             $(grep -Lx 'ok' "$ROOT/$RUNS"/*.status 2>/dev/null | wc -l)"
-echo "pruned methods:       $(cd "$ROOT" && awk '{p+=$1; t+=$2} END{if(t)printf "%d of %d (%.0f%%)", p, t, 100*p/t}' "$RUNS"/*.pruned 2>/dev/null)"
+echo "pruned tests:         $(cd "$ROOT" && awk '{p+=$1; t+=$2} END{if(t)printf "%d of %d (%.0f%%)", p, t, 100*p/t}' "$RUNS"/*.pruned 2>/dev/null)"
 echo "total cost:           \$$(cd "$ROOT" && python3 - <<EOF
 import json, glob
 t = 0.0
