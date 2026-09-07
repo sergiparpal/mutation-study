@@ -1,15 +1,15 @@
 JUnit version 4.7
-.....................E.................................................E.....................
-Time: 0.04
+...................................E..E.....................................................
+Time: 0.068
 There were 2 failures:
-1) testGetFragmentInHoursForDate(org.apache.commons.lang3.time.DateUtilsAgentTest)
-java.lang.AssertionError: expected:<127> but was:<151>
+1) getFragmentInHoursForDate(org.apache.commons.lang3.time.DateUtilsAgentTest)
+java.lang.AssertionError: expected:<7> but was:<31>
 	at org.junit.Assert.fail(Assert.java:91)
 	at org.junit.Assert.failNotEquals(Assert.java:645)
 	at org.junit.Assert.assertEquals(Assert.java:126)
 	at org.junit.Assert.assertEquals(Assert.java:470)
 	at org.junit.Assert.assertEquals(Assert.java:454)
-	at org.apache.commons.lang3.time.DateUtilsAgentTest.testGetFragmentInHoursForDate(DateUtilsAgentTest.java:860)
+	at org.apache.commons.lang3.time.DateUtilsAgentTest.getFragmentInHoursForDate(DateUtilsAgentTest.java:927)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -42,14 +42,14 @@ java.lang.AssertionError: expected:<127> but was:<151>
 	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:98)
 	at org.junit.runner.JUnitCore.runMainAndExit(JUnitCore.java:53)
 	at org.junit.runner.JUnitCore.main(JUnitCore.java:45)
-2) testCeilingOfValueAlreadyOnBoundaryIsUnchanged(org.apache.commons.lang3.time.DateUtilsAgentTest)
-java.lang.AssertionError: day-of-month expected:<28> but was:<29>
+2) getFragmentMethodsAcceptCalendar(org.apache.commons.lang3.time.DateUtilsAgentTest)
+java.lang.AssertionError: expected:<127> but was:<151>
 	at org.junit.Assert.fail(Assert.java:91)
 	at org.junit.Assert.failNotEquals(Assert.java:645)
 	at org.junit.Assert.assertEquals(Assert.java:126)
 	at org.junit.Assert.assertEquals(Assert.java:470)
-	at org.apache.commons.lang3.time.DateUtilsAgentTest.assertFields(DateUtilsAgentTest.java:80)
-	at org.apache.commons.lang3.time.DateUtilsAgentTest.testCeilingOfValueAlreadyOnBoundaryIsUnchanged(DateUtilsAgentTest.java:465)
+	at org.junit.Assert.assertEquals(Assert.java:454)
+	at org.apache.commons.lang3.time.DateUtilsAgentTest.getFragmentMethodsAcceptCalendar(DateUtilsAgentTest.java:962)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -84,5 +84,5 @@ java.lang.AssertionError: day-of-month expected:<28> but was:<29>
 	at org.junit.runner.JUnitCore.main(JUnitCore.java:45)
 
 FAILURES!!!
-Tests run: 91,  Failures: 2
+Tests run: 90,  Failures: 2
 
