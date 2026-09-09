@@ -15,13 +15,17 @@
 # tests it writes — executing would let it observe behaviour and become a
 # mirror through the back door, which is the very thing being measured.
 #
+# Measured on the first nine bugs: 1/9 real-fault detection against 8/9 for the
+# same bugs in the M arm, at a slightly HIGHER mutation score. Writing from the
+# javadoc produces suites that discriminate behaviour just as well and catch
+# almost no real faults.
+#
 # PER-METHOD FILTER
 # -----------------
 # Failing methods are disabled individually (bin/prune-failing-tests.py) rather
-# than discarding the whole suite. Measured on the first seven bugs, the prune
-# rate was 2 of 258 methods (1%): writing from the javadoc alone turns out to
-# produce almost no wrong expectations, which retires the hypothesis that the
-# spec arm would mostly guess.
+# than discarding the whole suite. Measured prune rate: 2 of 365 methods (1%).
+# Writing from the javadoc alone turns out to produce almost no wrong
+# expectations, which retires the hypothesis that the spec arm would guess.
 #
 # Declared bias: that filter uses the implementation as an oracle, so what
 # survives is precisely the subset agreeing with the code. It only removes,
@@ -50,6 +54,15 @@
 # default javac but not under the project's -source 1.6. The level is read
 # from the project's default.properties and passed both to compile.sh and to
 # the prompt.
+#
+# STALE CLASS FILES AFTER PRUNING
+# -------------------------------
+# Disabling a method only comments out its @Test annotation, so the .java file
+# changes by a few bytes within the same second. Ant compares timestamps at
+# one-second granularity and skips the recompile, and the next run executes the
+# OLD .class — the same methods fail round after round and the loop gives up
+# (Lang-21). `touch` does not help for the same reason. The compiled test
+# classes are therefore DELETED before recompiling, inner classes included.
 #
 # KNOWN LIMITATION
 # ----------------
@@ -162,6 +175,7 @@ while IFS=, read -r P B _rest; do
     SRC_TESTS=$(cd "$W" && defects4j export -p dir.src.tests 2>/dev/null | grep -v '^Running' | tail -1)
     SRC_CLASSES=$(cd "$W" && defects4j export -p dir.src.classes 2>/dev/null | grep -v '^Running' | tail -1)
     BIN_CLASSES=$(cd "$W" && defects4j export -p dir.bin.classes 2>/dev/null | grep -v '^Running' | tail -1)
+    BIN_TESTS=$(cd "$W" && defects4j export -p dir.bin.tests 2>/dev/null | grep -v '^Running' | tail -1)
     CP_COMPILE=$(cd "$W" && defects4j export -p cp.compile 2>/dev/null | grep -v '^Running' | tail -1)
     CLASSES=$(cd "$W" && defects4j export -p classes.modified 2>/dev/null | grep -v '^Running' | grep -v '^$')
     TRIGGERS=$(cd "$W" && defects4j export -p tests.trigger 2>/dev/null | grep '::')
@@ -368,17 +382,25 @@ print(f'{state}|{res}|{cost:.3f}|{turns}')" 2>/dev/null)
             [ "$ALLOK" = "yes" ] && break
         fi
 
-        # "1) testFoo(pkg.FooAgentTest)" in both runners
+        # "1) someTest(pkg.FooAgentTest)" in both runners. The `test` prefix is
+        # optional under JUnit 4, so do not assume it.
         FAILING=$(grep -oP '^\d+\)\s*\K\w+(?=\()' "$RUNDIR/${TAG}.junit" | sort -u)
         if [ -z "$FAILING" ]; then
             fail "tests fail but no method names could be parsed (round $round)"
             break
         fi
+
         NPRUNED=0
         for f in $WRITTEN; do
             OUT=$("$ROOT/bin/prune-failing-tests.py" "$W/$SRC_TESTS/$f" $FAILING)
             NPRUNED=$((NPRUNED + ${OUT%% *}))
-            touch "$W/$SRC_TESTS/$f"
+            # delete the compiled classes: ant's one-second timestamp
+            # granularity otherwise skips the recompile and the next run
+            # executes the pre-prune bytecode
+            if [ -n "$BIN_TESTS" ]; then
+                REL="${f#./}"; REL="${REL%.java}"
+                rm -f "$W/$BIN_TESTS/$REL.class" "$W/$BIN_TESTS/$REL"\$*.class
+            fi
         done
         PRUNED_TOTAL=$((PRUNED_TOTAL + NPRUNED))
         echo "[$TAG] round $round: disabled $NPRUNED failing methods"
