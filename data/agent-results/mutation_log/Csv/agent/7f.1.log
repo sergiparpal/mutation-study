@@ -4,31 +4,31 @@ test-offline:
 get-deps:
 
 commons-csv-from-maven.compile:
-    [javac] /tmp/run_mutation.pl_31531_1789628690/7f/maven-build.xml:79: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /tmp/run_mutation.pl_129278_1789641901/7f/maven-build.xml:79: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
 
 compile:
 
 commons-csv-from-maven.compile-tests:
-    [mkdir] Created dir: /tmp/run_mutation.pl_31531_1789628690/7f/target/test-classes
-    [javac] /tmp/run_mutation.pl_31531_1789628690/7f/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-    [javac] Compiling 14 source files to /tmp/run_mutation.pl_31531_1789628690/7f/target/test-classes
+    [mkdir] Created dir: /tmp/run_mutation.pl_129278_1789641901/7f/target/test-classes
+    [javac] /tmp/run_mutation.pl_129278_1789641901/7f/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 14 source files to /tmp/run_mutation.pl_129278_1789641901/7f/target/test-classes
     [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
     [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
     [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
     [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
-    [javac] /tmp/run_mutation.pl_31531_1789628690/7f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:207: warning: [deprecation] Character(char) in Character has been deprecated
+    [javac] /tmp/run_mutation.pl_129278_1789641901/7f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:207: warning: [deprecation] Character(char) in Character has been deprecated
     [javac]         CSVFormat.DEFAULT.withEscape(new Character('!')).withCommentStart(new Character('!')).validate();
     [javac]                                                                           ^
-    [javac] /tmp/run_mutation.pl_31531_1789628690/7f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:207: warning: [deprecation] Character(char) in Character has been deprecated
+    [javac] /tmp/run_mutation.pl_129278_1789641901/7f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:207: warning: [deprecation] Character(char) in Character has been deprecated
     [javac]         CSVFormat.DEFAULT.withEscape(new Character('!')).withCommentStart(new Character('!')).validate();
     [javac]                                      ^
-    [javac] /tmp/run_mutation.pl_31531_1789628690/7f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:248: warning: [deprecation] Character(char) in Character has been deprecated
+    [javac] /tmp/run_mutation.pl_129278_1789641901/7f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:248: warning: [deprecation] Character(char) in Character has been deprecated
     [javac]         CSVFormat.DEFAULT.withQuoteChar(new Character('!')).withCommentStart('!').validate();
     [javac]                                         ^
     [javac] 7 warnings
-     [copy] Copying 14 files to /tmp/run_mutation.pl_31531_1789628690/7f/target/test-classes
-    [mkdir] Created dir: /tmp/run_mutation.pl_31531_1789628690/7f/target/test-classes/META-INF
-     [copy] Copying 2 files to /tmp/run_mutation.pl_31531_1789628690/7f/target/test-classes/META-INF
+     [copy] Copying 14 files to /tmp/run_mutation.pl_129278_1789641901/7f/target/test-classes
+    [mkdir] Created dir: /tmp/run_mutation.pl_129278_1789641901/7f/target/test-classes/META-INF
+     [copy] Copying 2 files to /tmp/run_mutation.pl_129278_1789641901/7f/target/test-classes/META-INF
 
 compile.tests:
 
@@ -40,7 +40,7 @@ mutation.test:
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Run 1 ordered test(s)to verify independence
     [junit] MAJOR: ------------------------------------------------------------
-    [junit] MAJOR: Preprocessing time: 0.09 seconds
+    [junit] MAJOR: Preprocessing time: 0.21 seconds
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Serialize preprocessing results to preprocessing.ser
     [junit] MAJOR: ------------------------------------------------------------
@@ -52,23 +52,23 @@ mutation.test:
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Run mutation analysis with 67 mutant(s) and 1 test(s).
     [junit] MAJOR: ------------------------------------------------------------
-    [junit] MAJOR: [1;34m1/1 - org.apache.commons.csv.CSVParserAgentTest (68ms / 67):[0m
-    [junit] MAJOR: 2174 (61 / 67 / 67) -> AVG-RTPM: 32ms
+    [junit] MAJOR: [1;34m1/1 - org.apache.commons.csv.CSVParserAgentTest (125ms / 67):[0m
+    [junit] MAJOR: 5043 (61 / 67 / 67) -> AVG-RTPM: 75ms
     [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 61 (28-29-4) / 6
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Summary:
     [junit] MAJOR: 
-    [junit] MAJOR: Analysis time                 : 2.17 seconds
+    [junit] MAJOR: Analysis time                 : 5.04 seconds
     [junit] MAJOR: Mutation score                : 87.14% (91.04%)
     [junit] MAJOR: Mutants killed (FAIL-EXC-TIME): 61 (28-29-4)
     [junit] MAJOR: Mutants live                  : 6
     [junit] MAJOR: Mutant executions             : 67
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Export summary of results to summary.csv
-    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_31531_1789628690/7f/kill.csv
+    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_129278_1789641901/7f/kill.csv
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: [1;34mDone![0m
     [junit] MAJOR: ------------------------------------------------------------
 
 BUILD SUCCESSFUL
-Total time: 3 seconds
+Total time: 7 seconds

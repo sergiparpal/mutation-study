@@ -1,24 +1,24 @@
-######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-16 23:54:56  ######
- - Executing test suite: Cli-10f-spec.1.tar.bz2
- - Executing test suite: Cli-10f-agent.1.tar.bz2
- - Found 1 failing tests on buggy version: Cli-10f-agent.1.tar.bz2
+######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 03:13:26  ######
  - Executing test suite: Cli-28f-spec.1.tar.bz2
  - Executing test suite: Cli-28f-agent.1.tar.bz2
- - Executing test suite: Cli-21f-spec.1.tar.bz2
- - Tests do not compile on buggy version: Cli-21f-spec.1.tar.bz2
- - Executing test suite: Cli-15f-spec.1.tar.bz2
- - Executing test suite: Cli-15f-agent.1.tar.bz2
- - Found 1 failing tests on buggy version: Cli-15f-agent.1.tar.bz2
- - Executing test suite: Cli-17f-spec.1.tar.bz2
- - Executing test suite: Cli-17f-agent.1.tar.bz2
- - Found 1 failing tests on buggy version: Cli-17f-agent.1.tar.bz2
+ - Executing test suite: Cli-38f-agent.1.tar.bz2
+ - Executing test suite: Cli-38f-spec.1.tar.bz2
  - Executing test suite: Cli-32f-agent.1.tar.bz2
  - Found 1 failing tests on buggy version: Cli-32f-agent.1.tar.bz2
  - Executing test suite: Cli-32f-spec.1.tar.bz2
  - Found 1 failing tests on buggy version: Cli-32f-spec.1.tar.bz2
+ - Executing test suite: Cli-17f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Cli-17f-agent.1.tar.bz2
+ - Executing test suite: Cli-17f-spec.1.tar.bz2
+ - Executing test suite: Cli-15f-spec.1.tar.bz2
+ - Executing test suite: Cli-15f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Cli-15f-agent.1.tar.bz2
+ - Executing test suite: Cli-10f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Cli-10f-agent.1.tar.bz2
+ - Executing test suite: Cli-10f-spec.1.tar.bz2
  - Executing test suite: Cli-12f-spec.1.tar.bz2
  - Executing test suite: Cli-12f-agent.1.tar.bz2
  - Found 3 failing tests on buggy version: Cli-12f-agent.1.tar.bz2
- - Executing test suite: Cli-38f-spec.1.tar.bz2
- - Executing test suite: Cli-38f-agent.1.tar.bz2
-######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-16 23:56:45  ######
+ - Executing test suite: Cli-21f-spec.1.tar.bz2
+ - Tests do not compile on buggy version: Cli-21f-spec.1.tar.bz2
+######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 03:16:38  ######

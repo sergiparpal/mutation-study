@@ -1,0 +1,18 @@
+######  Start mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-17 04:38:46  ######
+ - Executing test suite: Gson-10f-spec.1.tar.bz2
+ - Executing test suite: Gson-10f-agent.1.tar.bz2
+ - Executing test suite: Gson-5f-agent.1.tar.bz2
+ - Executing test suite: Gson-5f-spec.1.tar.bz2
+ - Executing test suite: Gson-15f-spec.1.tar.bz2
+ - Executing test suite: Gson-15f-agent.1.tar.bz2
+ - Executing test suite: Gson-6f-spec.1.tar.bz2
+ - Executing test suite: Gson-6f-agent.1.tar.bz2
+ - Executing test suite: Gson-4f-agent.1.tar.bz2
+ - Executing test suite: Gson-4f-spec.1.tar.bz2
+ - Executing test suite: Gson-3f-agent.1.tar.bz2
+ - Executing test suite: Gson-3f-spec.1.tar.bz2
+ - Executing test suite: Gson-7f-spec.1.tar.bz2
+ - Executing test suite: Gson-7f-agent.1.tar.bz2
+ - Executing test suite: Gson-8f-agent.1.tar.bz2
+ - Executing test suite: Gson-8f-spec.1.tar.bz2
+######  End mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-17 04:43:19  ######

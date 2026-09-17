@@ -252,12 +252,14 @@ Per arm, over every suite that produced all three measurements:
 |---|---|---|---|---|
 | `agent` (Sonnet, M) | 36 | **26/36 — 72%** | 72% | 85% |
 | `agentopus` (Opus, M) | 6 | 6/6 — 100% | 80% | 89% |
-| `spec` (Sonnet, S) | 40 | **6/40 — 15%** | 71% | 72% |
+| `spec` (Sonnet, S) | 38 | 6/38 — 16% | 70% | 73% |
 
 Paired over the 36 bugs present in both Sonnet arms:
 
 ```
-M 26/36 (72%)   vs   S 5/36 (14%)
+detection   M 26/36 (72%)   vs   S 5/36 (14%)
+mutation    M 72%           vs   S 70%
+coverage    M 85%           vs   S 73%
 
 Cli    n=7    M=5   S=1
 Csv    n=9    M=7   S=2

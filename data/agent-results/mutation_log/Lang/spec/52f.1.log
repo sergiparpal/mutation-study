@@ -7,11 +7,11 @@ prepare:
 static:
 
 compile:
-    [javac] /tmp/run_mutation.pl_74246_1789629869/52f/build.xml:65: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /tmp/run_mutation.pl_177123_1789647017/52f/build.xml:65: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
 
 compile.tests:
-    [javac] /tmp/run_mutation.pl_74246_1789629869/52f/build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-    [javac] Compiling 141 source files to /tmp/run_mutation.pl_74246_1789629869/52f/target/tests
+    [javac] /tmp/run_mutation.pl_177123_1789647017/52f/build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 141 source files to /tmp/run_mutation.pl_177123_1789647017/52f/target/tests
     [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
     [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
     [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
@@ -21,7 +21,7 @@ compile.tests:
     [javac] Note: Some input files use unchecked or unsafe operations.
     [javac] Note: Recompile with -Xlint:unchecked for details.
     [javac] 4 warnings
-     [copy] Copying 30 files to /tmp/run_mutation.pl_74246_1789629869/52f/target/tests
+     [copy] Copying 30 files to /tmp/run_mutation.pl_177123_1789647017/52f/target/tests
 
 update.all.tests:
 
@@ -31,7 +31,7 @@ mutation.test:
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Run 1 ordered test(s)to verify independence
     [junit] MAJOR: ------------------------------------------------------------
-    [junit] MAJOR: Preprocessing time: 0.07 seconds
+    [junit] MAJOR: Preprocessing time: 0.28 seconds
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Serialize preprocessing results to preprocessing.ser
     [junit] MAJOR: ------------------------------------------------------------
@@ -43,23 +43,23 @@ mutation.test:
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Run mutation analysis with 141 mutant(s) and 1 test(s).
     [junit] MAJOR: ------------------------------------------------------------
-    [junit] MAJOR: [1;34m1/1 - org.apache.commons.lang.StringEscapeUtilsAgentTest (105ms / 141):[0m
-    [junit] MAJOR: 1068 (107 / 141 / 141) -> AVG-RTPM: 7ms
+    [junit] MAJOR: [1;34m1/1 - org.apache.commons.lang.StringEscapeUtilsAgentTest (143ms / 141):[0m
+    [junit] MAJOR: 1895 (107 / 141 / 141) -> AVG-RTPM: 13ms
     [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 107 (79-28-0) / 34
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Summary:
     [junit] MAJOR: 
-    [junit] MAJOR: Analysis time                 : 1.07 seconds
+    [junit] MAJOR: Analysis time                 : 1.90 seconds
     [junit] MAJOR: Mutation score                : 65.64% (75.89%)
     [junit] MAJOR: Mutants killed (FAIL-EXC-TIME): 107 (79-28-0)
     [junit] MAJOR: Mutants live                  : 34
     [junit] MAJOR: Mutant executions             : 141
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Export summary of results to summary.csv
-    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_74246_1789629869/52f/kill.csv
+    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_177123_1789647017/52f/kill.csv
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: [1;34mDone![0m
     [junit] MAJOR: ------------------------------------------------------------
 
 BUILD SUCCESSFUL
-Total time: 4 seconds
+Total time: 6 seconds

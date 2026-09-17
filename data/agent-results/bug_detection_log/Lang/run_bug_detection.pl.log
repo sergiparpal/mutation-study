@@ -1,47 +1,47 @@
-######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 00:13:11  ######
- - Executing test suite: Lang-23f-spec.1.tar.bz2
- - Executing test suite: Lang-23f-agentopus.1.tar.bz2
- - Found 2 failing tests on buggy version: Lang-23f-agentopus.1.tar.bz2
- - Executing test suite: Lang-23f-agent.1.tar.bz2
- - Found 2 failing tests on buggy version: Lang-23f-agent.1.tar.bz2
- - Executing test suite: Lang-8f-agent.1.tar.bz2
+######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 04:43:20  ######
  - Executing test suite: Lang-8f-agentopus.1.tar.bz2
  - Found 2 failing tests on buggy version: Lang-8f-agentopus.1.tar.bz2
  - Executing test suite: Lang-8f-spec.1.tar.bz2
- - Executing test suite: Lang-13f-agent.1.tar.bz2
- - Found 1 failing tests on buggy version: Lang-13f-agent.1.tar.bz2
- - Executing test suite: Lang-13f-agentopus.1.tar.bz2
- - Found 1 failing tests on buggy version: Lang-13f-agentopus.1.tar.bz2
- - Executing test suite: Lang-13f-spec.1.tar.bz2
- - Found 1 failing tests on buggy version: Lang-13f-spec.1.tar.bz2
- - Executing test suite: Lang-65f-agent.1.tar.bz2
- - Executing test suite: Lang-65f-spec.1.tar.bz2
+ - Executing test suite: Lang-8f-agent.1.tar.bz2
+ - Executing test suite: Lang-34f-agent.1.tar.bz2
+ - Executing test suite: Lang-34f-spec.1.tar.bz2
+ - Executing test suite: Lang-21f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Lang-21f-agent.1.tar.bz2
+ - Executing test suite: Lang-21f-spec.1.tar.bz2
+ - Executing test suite: Lang-52f-agent.1.tar.bz2
+ - Found 4 failing tests on buggy version: Lang-52f-agent.1.tar.bz2
+ - Executing test suite: Lang-52f-spec.1.tar.bz2
+ - Executing test suite: Lang-36f-agent.1.tar.bz2
+ - Executing test suite: Lang-36f-spec.1.tar.bz2
+ - Executing test suite: Lang-56f-spec.1.tar.bz2
  - Executing test suite: Lang-56f-agent.1.tar.bz2
  - Found 1 failing tests on buggy version: Lang-56f-agent.1.tar.bz2
  - Executing test suite: Lang-56f-agentopus.1.tar.bz2
  - Found 2 failing tests on buggy version: Lang-56f-agentopus.1.tar.bz2
- - Executing test suite: Lang-56f-spec.1.tar.bz2
- - Executing test suite: Lang-52f-spec.1.tar.bz2
- - Executing test suite: Lang-52f-agent.1.tar.bz2
- - Found 4 failing tests on buggy version: Lang-52f-agent.1.tar.bz2
- - Executing test suite: Lang-21f-spec.1.tar.bz2
- - Executing test suite: Lang-21f-agent.1.tar.bz2
- - Found 1 failing tests on buggy version: Lang-21f-agent.1.tar.bz2
+ - Executing test suite: Lang-13f-agentopus.1.tar.bz2
+ - Found 1 failing tests on buggy version: Lang-13f-agentopus.1.tar.bz2
+ - Executing test suite: Lang-13f-spec.1.tar.bz2
+ - Found 1 failing tests on buggy version: Lang-13f-spec.1.tar.bz2
+ - Executing test suite: Lang-13f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Lang-13f-agent.1.tar.bz2
+ - Executing test suite: Lang-65f-spec.1.tar.bz2
+ - Executing test suite: Lang-65f-agent.1.tar.bz2
+ - Executing test suite: Lang-23f-agentopus.1.tar.bz2
+ - Found 2 failing tests on buggy version: Lang-23f-agentopus.1.tar.bz2
+ - Executing test suite: Lang-23f-spec.1.tar.bz2
+ - Executing test suite: Lang-23f-agent.1.tar.bz2
+ - Found 2 failing tests on buggy version: Lang-23f-agent.1.tar.bz2
+ - Executing test suite: Lang-43f-spec.1.tar.bz2
  - Executing test suite: Lang-43f-agent.1.tar.bz2
  - Found 2 failing tests on buggy version: Lang-43f-agent.1.tar.bz2
- - Executing test suite: Lang-43f-spec.1.tar.bz2
  - Executing test suite: Lang-43f-agentopus.1.tar.bz2
  - Found 4 failing tests on buggy version: Lang-43f-agentopus.1.tar.bz2
- - Executing test suite: Lang-34f-agent.1.tar.bz2
- - Executing test suite: Lang-34f-spec.1.tar.bz2
  - Executing test suite: Lang-62f-agent.1.tar.bz2
  - Found 1 failing tests on buggy version: Lang-62f-agent.1.tar.bz2
+ - Executing test suite: Lang-62f-spec.1.tar.bz2
  - Executing test suite: Lang-62f-agentopus.1.tar.bz2
  - Found 1 failing tests on buggy version: Lang-62f-agentopus.1.tar.bz2
- - Executing test suite: Lang-62f-spec.1.tar.bz2
  - Executing test suite: Lang-63f-agent.1.tar.bz2
  - Found 1 failing tests on buggy version: Lang-63f-agent.1.tar.bz2
  - Executing test suite: Lang-63f-spec.1.tar.bz2
- - Executing test suite: Lang-36f-spec.1.tar.bz2
- - Executing test suite: Lang-36f-agent.1.tar.bz2
-######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 00:19:56  ######
+######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 05:03:27  ######

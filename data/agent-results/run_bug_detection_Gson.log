@@ -1,6 +1,6 @@
-Extract test suite......................................................... Executing test suite: Gson-14f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Gson-6f-agent.1.tar.bz2
 OK
-Checking out a3001480 to /tmp/run_bug_detection.pl_40270_1789628874/V_fixed OK
+Checking out dea30550 to /tmp/run_bug_detection.pl_138118_1789643529/V_fixe OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -9,14 +9,14 @@ Run post-checkout hook..................................................... OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff a3001480:5848096f..................................................... OK
+Diff dea30550:67bd3a2c..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Gson-14f........................................ OK
+Check out program version: Gson-6f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out a3001480 to /tmp/run_bug_detection.pl_40270_1789628874/V_buggy OK
+Checking out dea30550 to /tmp/run_bug_detection.pl_138118_1789643529/V_bugg OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -25,129 +25,59 @@ Run post-checkout hook..................................................... OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff a3001480:5848096f..................................................... OK
+Diff dea30550:67bd3a2c..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Gson-14b........................................ OK
+Check out program version: Gson-6b......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-16f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Gson-6f-spec.1.tar.bz2
 OK
-Checking out 03a72e75 to /tmp/run_bug_detection.pl_40270_1789628874/V_fixed OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 03a72e75:ee691fba..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-16f........................................ OK
+Check out program version: Gson-6f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out 03a72e75 to /tmp/run_bug_detection.pl_40270_1789628874/V_buggy OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 03a72e75:ee691fba..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-16b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-4f-spec.1.tar.bz2
-OK
-Checking out af68d70c to /tmp/run_bug_detection.pl_40270_1789628874/V_fixed OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_40270_1789628874/V_fixed/p OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff af68d70c:2ab776b5..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-4f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Checking out af68d70c to /tmp/run_bug_detection.pl_40270_1789628874/V_buggy OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_40270_1789628874/V_buggy/p OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff af68d70c:2ab776b5..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-4b......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-4f-agent.1.tar.bz2
-OK
-Check out program version: Gson-4f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Check out program version: Gson-4b......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-7f-agent.1.tar.bz2
-OK
-Checking out 2b08c88c to /tmp/run_bug_detection.pl_40270_1789628874/V_fixed OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 2b08c88c:a02f5757..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-7f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Checking out 2b08c88c to /tmp/run_bug_detection.pl_40270_1789628874/V_buggy OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 2b08c88c:a02f5757..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-7b......................................... OK
+Check out program version: Gson-6b......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
 Extract test suite......................................................... Executing test suite: Gson-7f-spec.1.tar.bz2
 OK
+Checking out 2b08c88c to /tmp/run_bug_detection.pl_138118_1789643529/V_fixe OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 2b08c88c:a02f5757..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-7f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out 2b08c88c to /tmp/run_bug_detection.pl_138118_1789643529/V_bugg OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 2b08c88c:a02f5757..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-7b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-7f-agent.1.tar.bz2
+OK
 Check out program version: Gson-7f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
@@ -156,61 +86,59 @@ Check out program version: Gson-7b......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-5f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Gson-10f-agent.1.tar.bz2
 OK
-Checking out 8383f5c7 to /tmp/run_bug_detection.pl_40270_1789628874/V_fixed OK
+Checking out bb451eac to /tmp/run_bug_detection.pl_138118_1789643529/V_fixe OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
 Copy generated Ant build file.............................................. OK
 Run post-checkout hook..................................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_40270_1789628874/V_fixed/p OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff 8383f5c7:af68d70c..................................................... OK
+Diff bb451eac:ecda3582..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Gson-5f......................................... OK
+Check out program version: Gson-10f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out 8383f5c7 to /tmp/run_bug_detection.pl_40270_1789628874/V_buggy OK
+Checking out bb451eac to /tmp/run_bug_detection.pl_138118_1789643529/V_bugg OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
 Copy generated Ant build file.............................................. OK
 Run post-checkout hook..................................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_40270_1789628874/V_buggy/p OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff 8383f5c7:af68d70c..................................................... OK
+Diff bb451eac:ecda3582..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Gson-5b......................................... OK
+Check out program version: Gson-10b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-5f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Gson-10f-spec.1.tar.bz2
 OK
-Check out program version: Gson-5f......................................... OK
+Check out program version: Gson-10f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Check out program version: Gson-5b......................................... OK
+Check out program version: Gson-10b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
 Extract test suite......................................................... Executing test suite: Gson-3f-spec.1.tar.bz2
 OK
-Checking out 64107353 to /tmp/run_bug_detection.pl_40270_1789628874/V_fixed OK
+Checking out 64107353 to /tmp/run_bug_detection.pl_138118_1789643529/V_fixe OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
 Copy generated Ant build file.............................................. OK
 Run post-checkout hook..................................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_40270_1789628874/V_fixed/p OK
+Backing up build file: /tmp/run_bug_detection.pl_138118_1789643529/V_fixed/ OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
@@ -221,13 +149,13 @@ Check out program version: Gson-3f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out 64107353 to /tmp/run_bug_detection.pl_40270_1789628874/V_buggy OK
+Checking out 64107353 to /tmp/run_bug_detection.pl_138118_1789643529/V_bugg OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
 Copy generated Ant build file.............................................. OK
 Run post-checkout hook..................................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_40270_1789628874/V_buggy/p OK
+Backing up build file: /tmp/run_bug_detection.pl_138118_1789643529/V_buggy/ OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
@@ -248,97 +176,55 @@ Check out program version: Gson-3b......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-6f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Gson-5f-agent.1.tar.bz2
 OK
-Checking out dea30550 to /tmp/run_bug_detection.pl_40270_1789628874/V_fixed OK
+Checking out 8383f5c7 to /tmp/run_bug_detection.pl_138118_1789643529/V_fixe OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
 Copy generated Ant build file.............................................. OK
 Run post-checkout hook..................................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_138118_1789643529/V_fixed/ OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff dea30550:67bd3a2c..................................................... OK
+Diff 8383f5c7:af68d70c..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Gson-6f......................................... OK
+Check out program version: Gson-5f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out dea30550 to /tmp/run_bug_detection.pl_40270_1789628874/V_buggy OK
+Checking out 8383f5c7 to /tmp/run_bug_detection.pl_138118_1789643529/V_bugg OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
 Copy generated Ant build file.............................................. OK
 Run post-checkout hook..................................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_138118_1789643529/V_buggy/ OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff dea30550:67bd3a2c..................................................... OK
+Diff 8383f5c7:af68d70c..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Gson-6b......................................... OK
+Check out program version: Gson-5b......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-6f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Gson-5f-spec.1.tar.bz2
 OK
-Check out program version: Gson-6f......................................... OK
+Check out program version: Gson-5f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Check out program version: Gson-6b......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-15f-agent.1.tar.bz2
-OK
-Checking out ada597e6 to /tmp/run_bug_detection.pl_40270_1789628874/V_fixed OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff ada597e6:0aaef0fd..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-15f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Checking out ada597e6 to /tmp/run_bug_detection.pl_40270_1789628874/V_buggy OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff ada597e6:0aaef0fd..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-15b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-15f-spec.1.tar.bz2
-OK
-Check out program version: Gson-15f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Check out program version: Gson-15b........................................ OK
+Check out program version: Gson-5b......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
 Extract test suite......................................................... Executing test suite: Gson-8f-spec.1.tar.bz2
 OK
-Checking out 0f66f4fa to /tmp/run_bug_detection.pl_40270_1789628874/V_fixed OK
+Checking out 0f66f4fa to /tmp/run_bug_detection.pl_138118_1789643529/V_fixe OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -354,7 +240,7 @@ Check out program version: Gson-8f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out 0f66f4fa to /tmp/run_bug_detection.pl_40270_1789628874/V_buggy OK
+Checking out 0f66f4fa to /tmp/run_bug_detection.pl_138118_1789643529/V_bugg OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -380,9 +266,55 @@ Check out program version: Gson-8b......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-10f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Gson-4f-agent.1.tar.bz2
 OK
-Checking out bb451eac to /tmp/run_bug_detection.pl_40270_1789628874/V_fixed OK
+Checking out af68d70c to /tmp/run_bug_detection.pl_138118_1789643529/V_fixe OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_138118_1789643529/V_fixed/ OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff af68d70c:2ab776b5..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-4f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out af68d70c to /tmp/run_bug_detection.pl_138118_1789643529/V_bugg OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_138118_1789643529/V_buggy/ OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff af68d70c:2ab776b5..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-4b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-4f-spec.1.tar.bz2
+OK
+Check out program version: Gson-4f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Gson-4b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-15f-spec.1.tar.bz2
+OK
+Checking out ada597e6 to /tmp/run_bug_detection.pl_138118_1789643529/V_fixe OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -391,14 +323,14 @@ Run post-checkout hook..................................................... OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff bb451eac:ecda3582..................................................... OK
+Diff ada597e6:0aaef0fd..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Gson-10f........................................ OK
+Check out program version: Gson-15f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out bb451eac to /tmp/run_bug_detection.pl_40270_1789628874/V_buggy OK
+Checking out ada597e6 to /tmp/run_bug_detection.pl_138118_1789643529/V_bugg OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -407,20 +339,20 @@ Run post-checkout hook..................................................... OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff bb451eac:ecda3582..................................................... OK
+Diff ada597e6:0aaef0fd..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Gson-10b........................................ OK
+Check out program version: Gson-15b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-10f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Gson-15f-agent.1.tar.bz2
 OK
-Check out program version: Gson-10f........................................ OK
+Check out program version: Gson-15f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Check out program version: Gson-10b........................................ OK
+Check out program version: Gson-15b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK

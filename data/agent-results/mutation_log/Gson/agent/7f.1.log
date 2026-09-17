@@ -1,0 +1,167 @@
+
+test-offline:
+
+get-deps:
+
+gson-from-maven.compile:
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/maven-build.xml:73: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+gson-from-maven.compile-tests:
+    [mkdir] Created dir: /tmp/run_mutation.pl_148032_1789645126/7f/target/test-classes
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/maven-build.xml:98: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 92 source files to /tmp/run_mutation.pl_148032_1789645126/7f/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:93: warning: [deprecation] Double(String) in Double has been deprecated
+    [javac]     assertEquals(new Double("1E+7"), json.getAsDouble(), 0.00001);
+    [javac]                  ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:94: warning: [deprecation] Float(String) in Float has been deprecated
+    [javac]     assertEquals(new Float("1E+7"), json.getAsDouble(), 0.00001);
+    [javac]                  ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:103: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:104: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:110: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:111: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:117: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:118: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Long(10L));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:124: warning: [deprecation] Byte(byte) in Byte has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Byte((byte)10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:131: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:132: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:138: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:139: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Long(10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:145: warning: [deprecation] Short(short) in Short has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Short((short)10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:152: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:153: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Long(10L));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:159: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Integer(10));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:166: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Long(10L));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:173: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Float(10.25F));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:174: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]     JsonPrimitive p2 = new JsonPrimitive(new Double(10.25D));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:180: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Float(10.25F));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java:187: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]     JsonPrimitive p1 = new JsonPrimitive(new Double(10.25D));
+    [javac]                                          ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/functional/MapAsArrayTypeAdapterTest.java:62: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]     original.put(new Double(1.0), "a");
+    [javac]                  ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/functional/MapAsArrayTypeAdapterTest.java:63: warning: [deprecation] Float(double) in Float has been deprecated
+    [javac]     original.put(new Float(1.0), "b");
+    [javac]                  ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/functional/MapTest.java:367: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]     assertEquals(new Long(123L), map.get("test"));
+    [javac]                  ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/functional/ParameterizedTypesTest.java:124: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]             new MyParameterizedTypeInstanceCreator<Integer>(new Integer(0)))
+    [javac]                                                             ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/functional/PrimitiveTest.java:147: warning: [deprecation] Integer(String) in Integer has been deprecated
+    [javac]     Number expected = new Integer(json);
+    [javac]                       ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/functional/PrimitiveTest.java:152: warning: [deprecation] Long(String) in Long has been deprecated
+    [javac]     expected = new Long(json);
+    [javac]                ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/functional/PrimitiveTest.java:163: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]     assertEquals("122.08112002", gson.toJson(new Double(122.08112002)));
+    [javac]                                              ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/internal/bind/JsonTreeWriterTest.java:160: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       writer.value(new Double(Double.NaN));
+    [javac]                    ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/internal/bind/JsonTreeWriterTest.java:165: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       writer.value(new Double(Double.NEGATIVE_INFINITY));
+    [javac]                    ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/internal/bind/JsonTreeWriterTest.java:170: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       writer.value(new Double(Double.POSITIVE_INFINITY));
+    [javac]                    ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/stream/JsonWriterTest.java:200: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       jsonWriter.value(new Double(Double.NaN));
+    [javac]                        ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/stream/JsonWriterTest.java:205: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       jsonWriter.value(new Double(Double.NEGATIVE_INFINITY));
+    [javac]                        ^
+    [javac] /tmp/run_mutation.pl_148032_1789645126/7f/gson/src/test/java/com/google/gson/stream/JsonWriterTest.java:210: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]       jsonWriter.value(new Double(Double.POSITIVE_INFINITY));
+    [javac]                        ^
+    [javac] 39 warnings
+
+compile.tests:
+
+update.all.tests:
+
+mutation.test:
+     [echo] Running mutation analysis ...
+    [junit] MAJOR: Mutation analysis enabled
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Run 1 ordered test(s)to verify independence
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Preprocessing time: 0.11 seconds
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Serialize preprocessing results to preprocessing.ser
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Mutants generated: 1409
+    [junit] MAJOR: Mutants covered:   1146 (81.33%)
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Export coverage map to covMap.csv
+    [junit] MAJOR: Export test map to testMap.csv
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Run mutation analysis with 1146 mutant(s) and 1 test(s).
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34m1/1 - com.google.gson.stream.JsonReaderAgentTest (66ms / 1146):[0m
+    [junit] MAJOR: 12043 (647 / 1146 / 1146) -> AVG-RTPM: 10ms
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 647 (168-471-8) / 499
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Summary:
+    [junit] MAJOR: 
+    [junit] MAJOR: Analysis time                 : 12.04 seconds
+    [junit] MAJOR: Mutation score                : 45.92% (56.46%)
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME): 647 (168-471-8)
+    [junit] MAJOR: Mutants live                  : 499
+    [junit] MAJOR: Mutant executions             : 1146
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Export summary of results to summary.csv
+    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_148032_1789645126/7f/kill.csv
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34mDone![0m
+    [junit] MAJOR: ------------------------------------------------------------
+
+BUILD SUCCESSFUL
+Total time: 15 seconds

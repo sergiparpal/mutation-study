@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.6916488222698073" branch-rate="0.5646551724137931" lines-covered="323" lines-valid="467" branches-covered="131" branches-valid="232" complexity="2.4242424242424243" version="2.0.3" timestamp="1789629709103">
+<coverage line-rate="0.6895074946466809" branch-rate="0.5603448275862069" lines-covered="322" lines-valid="467" branches-covered="130" branches-valid="232" complexity="2.4242424242424243" version="2.0.3" timestamp="1789646815625">
 	<sources>
 		<source>src/java</source>
 	</sources>
 	<packages>
-		<package name="org.apache.commons.lang.time" line-rate="0.6916488222698073" branch-rate="0.5646551724137931" complexity="2.4242424242424243">
+		<package name="org.apache.commons.lang.time" line-rate="0.6895074946466809" branch-rate="0.5603448275862069" complexity="2.4242424242424243">
 			<classes>
 				<class name="org.apache.commons.lang.time.FastDateFormat" filename="org/apache/commons/lang/time/FastDateFormat.java" line-rate="0.7340823970037453" branch-rate="0.7105263157894737" complexity="2.4242424242424243">
 					<methods>
@@ -58,15 +58,15 @@
 						</method>
 						<method name="applyRules" signature="(Ljava/util/Calendar;Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="890" hits="2375" branch="false"/>
-								<line number="891" hits="2380" branch="false"/>
-								<line number="892" hits="25781" branch="true" condition-coverage="100% (2/2)">
+								<line number="890" hits="2413" branch="false"/>
+								<line number="891" hits="2415" branch="false"/>
+								<line number="892" hits="28475" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="893" hits="23529" branch="false"/>
-								<line number="895" hits="2354" branch="false"/>
+								<line number="893" hits="26083" branch="false"/>
+								<line number="895" hits="2414" branch="false"/>
 							</lines>
 						</method>
 						<method name="equals" signature="(Ljava/lang/Object;)Z" line-rate="1.0" branch-rate="0.7777777777777778">
@@ -163,9 +163,9 @@
 						</method>
 						<method name="format" signature="(Ljava/util/Date;)Ljava/lang/String;" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="823" hits="2354" branch="false"/>
-								<line number="824" hits="2403" branch="false"/>
-								<line number="825" hits="2401" branch="false"/>
+								<line number="823" hits="2407" branch="false"/>
+								<line number="824" hits="2418" branch="false"/>
+								<line number="825" hits="2416" branch="false"/>
 							</lines>
 						</method>
 						<method name="format" signature="(Ljava/util/Date;Ljava/lang/StringBuffer;)Ljava/lang/StringBuffer;" line-rate="1.0" branch-rate="1.0">
@@ -1089,9 +1089,9 @@
 							</conditions>
 						</line>
 						<line number="813" hits="8" branch="false"/>
-						<line number="823" hits="2354" branch="false"/>
-						<line number="824" hits="2403" branch="false"/>
-						<line number="825" hits="2401" branch="false"/>
+						<line number="823" hits="2407" branch="false"/>
+						<line number="824" hits="2418" branch="false"/>
+						<line number="825" hits="2416" branch="false"/>
 						<line number="835" hits="2" branch="false"/>
 						<line number="848" hits="2" branch="false"/>
 						<line number="860" hits="4" branch="false"/>
@@ -1105,15 +1105,15 @@
 						<line number="875" hits="4" branch="false"/>
 						<line number="876" hits="4" branch="false"/>
 						<line number="878" hits="4" branch="false"/>
-						<line number="890" hits="2375" branch="false"/>
-						<line number="891" hits="2380" branch="false"/>
-						<line number="892" hits="25781" branch="true" condition-coverage="100% (2/2)">
+						<line number="890" hits="2413" branch="false"/>
+						<line number="891" hits="2415" branch="false"/>
+						<line number="892" hits="28475" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="893" hits="23529" branch="false"/>
-						<line number="895" hits="2354" branch="false"/>
+						<line number="893" hits="26083" branch="false"/>
+						<line number="895" hits="2414" branch="false"/>
 						<line number="908" hits="3" branch="false"/>
 						<line number="909" hits="3" branch="false"/>
 						<line number="910" hits="3" branch="false"/>
@@ -1187,8 +1187,8 @@
 						</method>
 						<method name="appendTo" signature="(Ljava/lang/StringBuffer;Ljava/util/Calendar;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="1089" hits="11197" branch="false"/>
-								<line number="1090" hits="11145" branch="false"/>
+								<line number="1089" hits="11971" branch="false"/>
+								<line number="1090" hits="11955" branch="false"/>
 							</lines>
 						</method>
 						<method name="estimateLength" signature="()I" line-rate="1.0" branch-rate="1.0">
@@ -1202,8 +1202,8 @@
 						<line number="1075" hits="41" branch="false"/>
 						<line number="1076" hits="41" branch="false"/>
 						<line number="1082" hits="41" branch="false"/>
-						<line number="1089" hits="11197" branch="false"/>
-						<line number="1090" hits="11145" branch="false"/>
+						<line number="1089" hits="11971" branch="false"/>
+						<line number="1090" hits="11955" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.apache.commons.lang.time.FastDateFormat$NumberRule" filename="org/apache/commons/lang/time/FastDateFormat.java" line-rate="1.0" branch-rate="1.0" complexity="2.4242424242424243">
@@ -1230,7 +1230,7 @@
 						</method>
 						<method name="appendTo" signature="(Ljava/lang/StringBuffer;I)V" line-rate="0.6153846153846154" branch-rate="0.5">
 							<lines>
-								<line number="1292" hits="2323" branch="true" condition-coverage="50% (1/2)">
+								<line number="1292" hits="2394" branch="true" condition-coverage="50% (1/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="50%"/>
 									</conditions>
@@ -1243,32 +1243,32 @@
 								<line number="1294" hits="0" branch="false"/>
 								<line number="1296" hits="0" branch="false"/>
 								<line number="1297" hits="0" branch="false"/>
-								<line number="1300" hits="2362" branch="true" condition-coverage="100% (2/2)">
+								<line number="1300" hits="2406" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
 								<line number="1301" hits="2" branch="false"/>
-								<line number="1303" hits="2387" branch="true" condition-coverage="50% (1/2)">
+								<line number="1303" hits="2410" branch="true" condition-coverage="50% (1/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="50%"/>
 									</conditions>
 								</line>
-								<line number="1304" hits="2371" branch="false"/>
-								<line number="1306" hits="2398" branch="true" condition-coverage="50% (1/2)">
+								<line number="1304" hits="2409" branch="false"/>
+								<line number="1306" hits="2421" branch="true" condition-coverage="50% (1/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="50%"/>
 									</conditions>
 								</line>
 								<line number="1307" hits="0" branch="false"/>
-								<line number="1309" hits="2397" branch="false"/>
-								<line number="1311" hits="2401" branch="false"/>
+								<line number="1309" hits="2420" branch="false"/>
+								<line number="1311" hits="2419" branch="false"/>
 							</lines>
 						</method>
 						<method name="appendTo" signature="(Ljava/lang/StringBuffer;Ljava/util/Calendar;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="1285" hits="2340" branch="false"/>
-								<line number="1286" hits="2396" branch="false"/>
+								<line number="1285" hits="2402" branch="false"/>
+								<line number="1286" hits="2421" branch="false"/>
 							</lines>
 						</method>
 						<method name="estimateLength" signature="()I" line-rate="1.0" branch-rate="1.0">
@@ -1289,9 +1289,9 @@
 						<line number="1271" hits="13" branch="false"/>
 						<line number="1272" hits="13" branch="false"/>
 						<line number="1278" hits="13" branch="false"/>
-						<line number="1285" hits="2340" branch="false"/>
-						<line number="1286" hits="2396" branch="false"/>
-						<line number="1292" hits="2323" branch="true" condition-coverage="50% (1/2)">
+						<line number="1285" hits="2402" branch="false"/>
+						<line number="1286" hits="2421" branch="false"/>
+						<line number="1292" hits="2394" branch="true" condition-coverage="50% (1/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="50%"/>
 							</conditions>
@@ -1304,26 +1304,26 @@
 						<line number="1294" hits="0" branch="false"/>
 						<line number="1296" hits="0" branch="false"/>
 						<line number="1297" hits="0" branch="false"/>
-						<line number="1300" hits="2362" branch="true" condition-coverage="100% (2/2)">
+						<line number="1300" hits="2406" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
 						<line number="1301" hits="2" branch="false"/>
-						<line number="1303" hits="2387" branch="true" condition-coverage="50% (1/2)">
+						<line number="1303" hits="2410" branch="true" condition-coverage="50% (1/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="50%"/>
 							</conditions>
 						</line>
-						<line number="1304" hits="2371" branch="false"/>
-						<line number="1306" hits="2398" branch="true" condition-coverage="50% (1/2)">
+						<line number="1304" hits="2409" branch="false"/>
+						<line number="1306" hits="2421" branch="true" condition-coverage="50% (1/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="50%"/>
 							</conditions>
 						</line>
 						<line number="1307" hits="0" branch="false"/>
-						<line number="1309" hits="2397" branch="false"/>
-						<line number="1311" hits="2401" branch="false"/>
+						<line number="1309" hits="2420" branch="false"/>
+						<line number="1311" hits="2419" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.apache.commons.lang.time.FastDateFormat$Pair" filename="org/apache/commons/lang/time/FastDateFormat.java" line-rate="0.4375" branch-rate="0.1" complexity="2.4242424242424243">
@@ -1828,7 +1828,7 @@
 						<line number="1630" hits="6" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.apache.commons.lang.time.FastDateFormat$TwelveHourField" filename="org/apache/commons/lang/time/FastDateFormat.java" line-rate="0.8181818181818182" branch-rate="1.0" complexity="2.4242424242424243">
+				<class name="org.apache.commons.lang.time.FastDateFormat$TwelveHourField" filename="org/apache/commons/lang/time/FastDateFormat.java" line-rate="0.7272727272727273" branch-rate="0.5" complexity="2.4242424242424243">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lorg/apache/commons/lang/time/FastDateFormat$NumberRule;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
@@ -1843,15 +1843,15 @@
 								<line number="1467" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="appendTo" signature="(Ljava/lang/StringBuffer;Ljava/util/Calendar;)V" line-rate="1.0" branch-rate="1.0">
+						<method name="appendTo" signature="(Ljava/lang/StringBuffer;Ljava/util/Calendar;)V" line-rate="0.8" branch-rate="0.5">
 							<lines>
 								<line number="1455" hits="2" branch="false"/>
-								<line number="1456" hits="2" branch="true" condition-coverage="100% (2/2)">
+								<line number="1456" hits="2" branch="true" condition-coverage="50% (1/2)">
 									<conditions>
-										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="0" type="jump" coverage="50%"/>
 									</conditions>
 								</line>
-								<line number="1457" hits="1" branch="false"/>
+								<line number="1457" hits="0" branch="false"/>
 								<line number="1459" hits="2" branch="false"/>
 								<line number="1460" hits="2" branch="false"/>
 							</lines>
@@ -1868,12 +1868,12 @@
 						<line number="1442" hits="2" branch="false"/>
 						<line number="1448" hits="2" branch="false"/>
 						<line number="1455" hits="2" branch="false"/>
-						<line number="1456" hits="2" branch="true" condition-coverage="100% (2/2)">
+						<line number="1456" hits="2" branch="true" condition-coverage="50% (1/2)">
 							<conditions>
-								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="0" type="jump" coverage="50%"/>
 							</conditions>
 						</line>
-						<line number="1457" hits="1" branch="false"/>
+						<line number="1457" hits="0" branch="false"/>
 						<line number="1459" hits="2" branch="false"/>
 						<line number="1460" hits="2" branch="false"/>
 						<line number="1466" hits="0" branch="false"/>
@@ -1947,15 +1947,15 @@
 						</method>
 						<method name="appendTo" signature="(Ljava/lang/StringBuffer;I)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="1423" hits="2318" branch="false"/>
-								<line number="1424" hits="2361" branch="false"/>
-								<line number="1425" hits="2368" branch="false"/>
+								<line number="1423" hits="2403" branch="false"/>
+								<line number="1424" hits="2413" branch="false"/>
+								<line number="1425" hits="2412" branch="false"/>
 							</lines>
 						</method>
 						<method name="appendTo" signature="(Ljava/lang/StringBuffer;Ljava/util/Calendar;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="1416" hits="2354" branch="false"/>
-								<line number="1417" hits="2376" branch="false"/>
+								<line number="1416" hits="2406" branch="false"/>
+								<line number="1417" hits="2416" branch="false"/>
 							</lines>
 						</method>
 						<method name="estimateLength" signature="()I" line-rate="1.0" branch-rate="1.0">
@@ -1969,11 +1969,11 @@
 						<line number="1402" hits="1" branch="false"/>
 						<line number="1403" hits="1" branch="false"/>
 						<line number="1409" hits="10" branch="false"/>
-						<line number="1416" hits="2354" branch="false"/>
-						<line number="1417" hits="2376" branch="false"/>
-						<line number="1423" hits="2318" branch="false"/>
-						<line number="1424" hits="2361" branch="false"/>
-						<line number="1425" hits="2368" branch="false"/>
+						<line number="1416" hits="2406" branch="false"/>
+						<line number="1417" hits="2416" branch="false"/>
+						<line number="1423" hits="2403" branch="false"/>
+						<line number="1424" hits="2413" branch="false"/>
+						<line number="1425" hits="2412" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.apache.commons.lang.time.FastDateFormat$TwoDigitNumberField" filename="org/apache/commons/lang/time/FastDateFormat.java" line-rate="0.9090909090909091" branch-rate="0.5" complexity="2.4242424242424243">
@@ -1987,21 +1987,21 @@
 						</method>
 						<method name="appendTo" signature="(Ljava/lang/StringBuffer;I)V" line-rate="0.8" branch-rate="0.5">
 							<lines>
-								<line number="1347" hits="8905" branch="true" condition-coverage="50% (1/2)">
+								<line number="1347" hits="9553" branch="true" condition-coverage="50% (1/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="50%"/>
 									</conditions>
 								</line>
-								<line number="1348" hits="8894" branch="false"/>
-								<line number="1349" hits="8900" branch="false"/>
+								<line number="1348" hits="9559" branch="false"/>
+								<line number="1349" hits="9555" branch="false"/>
 								<line number="1351" hits="0" branch="false"/>
-								<line number="1353" hits="8925" branch="false"/>
+								<line number="1353" hits="9550" branch="false"/>
 							</lines>
 						</method>
 						<method name="appendTo" signature="(Ljava/lang/StringBuffer;Ljava/util/Calendar;)V" line-rate="1.0" branch-rate="1.0">
 							<lines>
-								<line number="1340" hits="8975" branch="false"/>
-								<line number="1341" hits="8927" branch="false"/>
+								<line number="1340" hits="9562" branch="false"/>
+								<line number="1341" hits="9560" branch="false"/>
 							</lines>
 						</method>
 						<method name="estimateLength" signature="()I" line-rate="1.0" branch-rate="1.0">
@@ -2015,17 +2015,17 @@
 						<line number="1326" hits="26" branch="false"/>
 						<line number="1327" hits="26" branch="false"/>
 						<line number="1333" hits="26" branch="false"/>
-						<line number="1340" hits="8975" branch="false"/>
-						<line number="1341" hits="8927" branch="false"/>
-						<line number="1347" hits="8905" branch="true" condition-coverage="50% (1/2)">
+						<line number="1340" hits="9562" branch="false"/>
+						<line number="1341" hits="9560" branch="false"/>
+						<line number="1347" hits="9553" branch="true" condition-coverage="50% (1/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="50%"/>
 							</conditions>
 						</line>
-						<line number="1348" hits="8894" branch="false"/>
-						<line number="1349" hits="8900" branch="false"/>
+						<line number="1348" hits="9559" branch="false"/>
+						<line number="1349" hits="9555" branch="false"/>
 						<line number="1351" hits="0" branch="false"/>
-						<line number="1353" hits="8925" branch="false"/>
+						<line number="1353" hits="9550" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.apache.commons.lang.time.FastDateFormat$TwoDigitYearField" filename="org/apache/commons/lang/time/FastDateFormat.java" line-rate="1.0" branch-rate="1.0" complexity="2.4242424242424243">
@@ -2149,14 +2149,14 @@
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="1201" hits="1" branch="false"/>
-								<line number="1202" hits="2" branch="true" condition-coverage="50% (1/2)">
+								<line number="1201" hits="2" branch="false"/>
+								<line number="1202" hits="1" branch="true" condition-coverage="50% (1/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="50%"/>
 									</conditions>
 								</line>
-								<line number="1203" hits="2" branch="false"/>
-								<line number="1204" hits="2" branch="false"/>
+								<line number="1203" hits="1" branch="false"/>
+								<line number="1204" hits="1" branch="false"/>
 								<line number="1206" hits="0" branch="false"/>
 								<line number="1208" hits="3" branch="false"/>
 							</lines>
@@ -2186,14 +2186,14 @@
 								<condition number="0" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="1201" hits="1" branch="false"/>
-						<line number="1202" hits="2" branch="true" condition-coverage="50% (1/2)">
+						<line number="1201" hits="2" branch="false"/>
+						<line number="1202" hits="1" branch="true" condition-coverage="50% (1/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="50%"/>
 							</conditions>
 						</line>
-						<line number="1203" hits="2" branch="false"/>
-						<line number="1204" hits="2" branch="false"/>
+						<line number="1203" hits="1" branch="false"/>
+						<line number="1204" hits="1" branch="false"/>
 						<line number="1206" hits="0" branch="false"/>
 						<line number="1208" hits="3" branch="false"/>
 					</lines>

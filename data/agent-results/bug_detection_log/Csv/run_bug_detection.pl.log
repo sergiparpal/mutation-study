@@ -1,31 +1,31 @@
-######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 00:00:13  ######
- - Executing test suite: Csv-14f-agent.1.tar.bz2
+######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 03:34:02  ######
+ - Executing test suite: Csv-5f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Csv-5f-agent.1.tar.bz2
+ - Executing test suite: Csv-5f-spec.1.tar.bz2
+ - Executing test suite: Csv-6f-spec.1.tar.bz2
+ - Found 1 failing tests on buggy version: Csv-6f-spec.1.tar.bz2
+ - Executing test suite: Csv-6f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Csv-6f-agent.1.tar.bz2
+ - Executing test suite: Csv-10f-spec.1.tar.bz2
+ - Executing test suite: Csv-10f-agent.1.tar.bz2
+ - Found 3 failing tests on buggy version: Csv-10f-agent.1.tar.bz2
  - Executing test suite: Csv-14f-spec.1.tar.bz2
+ - Executing test suite: Csv-14f-agent.1.tar.bz2
+ - Executing test suite: Csv-16f-spec.1.tar.bz2
+ - Executing test suite: Csv-16f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Csv-16f-agent.1.tar.bz2
+ - Executing test suite: Csv-3f-spec.1.tar.bz2
+ - Found 1 failing tests on buggy version: Csv-3f-spec.1.tar.bz2
+ - Executing test suite: Csv-7f-spec.1.tar.bz2
+ - Executing test suite: Csv-7f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Csv-7f-agent.1.tar.bz2
  - Executing test suite: Csv-4f-agent.1.tar.bz2
  - Found 1 failing tests on buggy version: Csv-4f-agent.1.tar.bz2
  - Executing test suite: Csv-4f-spec.1.tar.bz2
  - Found 1 failing tests on buggy version: Csv-4f-spec.1.tar.bz2
- - Executing test suite: Csv-16f-agent.1.tar.bz2
- - Found 1 failing tests on buggy version: Csv-16f-agent.1.tar.bz2
- - Executing test suite: Csv-16f-spec.1.tar.bz2
  - Executing test suite: Csv-8f-spec.1.tar.bz2
  - Executing test suite: Csv-8f-agent.1.tar.bz2
  - Found 1 failing tests on buggy version: Csv-8f-agent.1.tar.bz2
- - Executing test suite: Csv-10f-agent.1.tar.bz2
- - Found 3 failing tests on buggy version: Csv-10f-agent.1.tar.bz2
- - Executing test suite: Csv-10f-spec.1.tar.bz2
- - Executing test suite: Csv-5f-spec.1.tar.bz2
- - Executing test suite: Csv-5f-agent.1.tar.bz2
- - Found 1 failing tests on buggy version: Csv-5f-agent.1.tar.bz2
- - Executing test suite: Csv-6f-agent.1.tar.bz2
- - Found 1 failing tests on buggy version: Csv-6f-agent.1.tar.bz2
- - Executing test suite: Csv-6f-spec.1.tar.bz2
- - Found 1 failing tests on buggy version: Csv-6f-spec.1.tar.bz2
- - Executing test suite: Csv-3f-spec.1.tar.bz2
- - Found 1 failing tests on buggy version: Csv-3f-spec.1.tar.bz2
- - Executing test suite: Csv-15f-spec.1.tar.bz2
  - Executing test suite: Csv-15f-agent.1.tar.bz2
- - Executing test suite: Csv-7f-spec.1.tar.bz2
- - Executing test suite: Csv-7f-agent.1.tar.bz2
- - Found 1 failing tests on buggy version: Csv-7f-agent.1.tar.bz2
-######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 00:02:37  ######
+ - Executing test suite: Csv-15f-spec.1.tar.bz2
+######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 03:38:27  ######
