@@ -9,9 +9,10 @@ Two kinds of content live here and must not be confused:
 - **Measured** — tool output, reproducible by re-running a script.
 - **Judged** — read off diffs by hand. Everything below the measured section.
 
-The distinction earned its keep on 2026-08-29, when the first measurement
-refuted a judged claim that eleven bugs' worth of classification had been
-built on.
+The distinction earned its keep repeatedly. Every hypothesis in this file that
+was formed from two or three bugs and later measured across the sample turned
+out to be wrong: the sterile-region count, the dominance of statement deletion,
+and the EXC/FAIL kill split were all refuted by their own measurement.
 
 ## Bias warning
 
@@ -22,7 +23,39 @@ this file needs a fresh set of bugs (another project, or GitBug-Java).
 
 ---
 
-## Measured with Major (fixed version)
+## The headline refutation: mutation score does not detect the mirror
+
+**This is the result of Study B and it undercuts the premise most entries below
+are built on.** Two arms, same 40 bugs, same model, one variable — whether the
+agent could read the implementation:
+
+| arm | real fault detected | mutation score | line coverage |
+|---|---|---|---|
+| implementation-visible | **26/36 (72%)** | 72% | 85% |
+| spec-only (javadoc) | **5/36 (14%)** | **71%** | 72% |
+
+Detection differs five-fold. **Mutation score is indistinguishable.** Coverage
+drops far less than detection does.
+
+A suite that catches three real faults in four and a suite that catches one in
+seven look the same under mutation analysis, and nearly the same under
+coverage. Whatever separates a test grounded in the contract from one grounded
+in the current code, mutation testing does not measure it — because both suites
+genuinely discriminate behaviour. What differs is the *origin of the oracle*,
+and no execution-based metric sees that.
+
+Consequence for every detector idea below: if the idea's mechanism is "run
+mutants and see what survives", it inherits this blind spot. The ideas that
+look at *documented intent* (announced-but-absent code, comment–code
+divergence) are unaffected, because they never relied on execution.
+
+The only mechanism shown to separate the two is the contrafactual itself:
+generate the suite twice, with and without the implementation, and compare.
+Expensive — it doubles the cost — but measured to work.
+
+---
+
+## Measured with Major
 
 Tool output, not judgement. Produced by `bin/run-mutation.sh` and
 `bin/analyze-mutation.py`; raw artifacts in `data/raw/`.
@@ -33,52 +66,46 @@ Tool output, not judgement. Produced by `bin/run-mutation.sh` and
 ROR, ORU, LVR, STD**. Statement deletion is on by default, and by default only
 the classes modified by the fix are mutated.
 
-This was the standing counter-argument to the working hypothesis, and it holds.
-Measured on Lang-13: of the 14 mutants killed by the trigger test alone, 9 sit
-on lines the fix *adds*, and STD dominates — mutants 19 and 20 delete the
-`primitiveTypes.put(...)` statements the fix introduced. Meanwhile the three
-mutants anchored inside the faulty region (two LVR on the `false` argument of
-`Class.forName`, one ROR on `cls != null`) survive both the trigger test and
-the full suite.
+### Refuted: STD does not dominate coupled mutants
 
-Reformulation this suggests: **mutation catches omission faults by deleting the
-repair, not by exploring the faulty region** — a mechanism only available once
-the missing code exists. In the buggy version those lines do not exist to
-delete. Needs the full sample before it can be claimed.
+> **⚠ An earlier version of this entry claimed the opposite.** On Lang-13,
+> 9 of the 14 coupled mutants were STD deletions of lines the fix adds, which
+> suggested that *mutation catches omission faults by deleting the repair* — a
+> mechanism only available once the missing code exists.
+>
+> Measured across 36 bugs, that does not hold. Operators generating coupled
+> mutants: **ROR 234, LVR 208, COR 205, STD 137, AOR 135.** STD is the least
+> frequent, not the dominant one. Lang-13 and Lang-56 were small cases that
+> suggested a pattern that is not there.
 
-### Kill quality: EXC/TIME vs FAIL
+### Refuted: coupled mutants mostly die by assertion, not by crashing
 
-Major records *how* each mutant died: FAIL (assertion), TIME (timeout), EXC
-(exception). Measured on the first two bugs, of 80 mutants coupled to the real
-fault, only 5 died by assertion. The rest died because the code threw or hung.
+> **⚠ An earlier version of this entry claimed the opposite.** Measured on the
+> first two bugs, only 5 of 80 coupled mutants died by assertion; the rest died
+> by exception or timeout. That suggested a high mutation score demonstrates
+> code fragility rather than test strength, and that an agent given mutation
+> feedback would learn to provoke exceptions.
+>
+> Across 36 bugs with `-r`: **FAIL 520, EXC 377, TIME 22 — 56% die by
+> assertion.** The early figure came from two bugs measured before the flaky-
+> test workaround, and did not survive the sample.
 
-```
-Lang-13   coupled: EXC:14
-Lang-43   coupled: EXC:66 | TIME:14 | FAIL:5
-```
+The FAIL/EXC/TIME split is still worth reporting alongside any mutation score —
+it is nearly free and no existing tool does it — but it is not the indictment
+it first appeared to be.
 
-A test that kills a mutant by crashing is not verifying the result — the same
-test would pass with an empty assertion. High mutation score therefore
-demonstrates code fragility as much as test strength.
+### Measurement caveats that did hold
 
-Direct product consequence: an agent given mutation feedback learns to provoke
-exceptions, the cheapest way to raise the score, rather than to write correct
-assertions. Reporting the FAIL/EXC/TIME split alongside the score is nearly
-free and no existing tool does it.
-
-Needs measuring across the full sample before it can be claimed.
-
-### Known measurement caveats
-
-- **"Coupled" is a superset.** It means "killed by a trigger test run in
-  isolation". That test also kills mutants unrelated to the fault it was
-  written for: Lang-43's single-line fix yields 85 coupled mutants, of which 1
-  is on a fix line. A per-method filter is needed before the number means
-  anything.
+- **"Coupled" is a superset unless restricted by method.** It means "killed by
+  a trigger test run in isolation". That test also kills mutants unrelated to
+  the fault: Lang-43's single-line fix yields 85 coupled mutants, of which 1 is
+  on a fix line. Restricting to the methods the fix touches cuts 2150 down to
+  919 — **an unrestricted coupling measure overestimates by ~2.3x.** Worth
+  reporting on its own as a methodological point.
 - **Flaky tests abort the full run.** Lang-56 failed on
   `StopWatchTest::testStopWatchSplit`, a wall-clock test unrelated to the bug.
-  `defects4j mutation -r` (relevant tests only) is the workaround, at the cost
-  of redefining "full suite" — document it if adopted.
+  `defects4j mutation -r` is the workaround, at the cost of redefining "full
+  suite" as "relevant tests".
 
 ---
 
@@ -139,7 +166,8 @@ of lenient mode. Cli-32 removed a loop that scanned past the requested width.
 
 **Four of the forty bugs are fixes that delete incorrect logic.** In all four,
 mutation would have raised the score while defending the fault. This is the
-Goodhart risk observed in the corpus, not argued from theory.
+Goodhart risk observed in the corpus, not argued from theory — and it points
+the same way as the Study B result at the top of this file.
 
 ### A mutant that fixes the bug — from Cli-32
 
@@ -153,6 +181,43 @@ It is a fault reported inside out.
 
 Any witness-based design has to handle this case explicitly: a distinguishing
 input exists, but it exonerates the mutant and indicts the original.
+
+---
+
+## Measured in Study B: what the spec arm can and cannot see
+
+### The five faults a spec-only suite does catch
+
+Of 36 paired bugs, the spec arm detected Cli-32, Csv-4, Csv-6, Gson-15 and
+Lang-13. Four of the five are cases where the code contradicts a contract the
+javadoc states:
+
+- **Csv-4** — missing null guard on a documented return value.
+- **Csv-6** — unchecked index into an array.
+- **Gson-15** — `NaN`/`Infinity` rejected regardless of the documented lenient
+  mode.
+- **Lang-13** — primitive classes failing a documented deserialization
+  contract.
+
+The spec arm catches faults visible from the specification and essentially
+nothing else. This is the positive version of the announced-but-absent and
+comment–code-divergence ideas below: those faults really are findable from
+documented intent alone, and an agent finds them without being told to look.
+
+### Javadoc quality is enough, and measurably varies
+
+Prune rate — tests written blind that turned out to disagree with the
+implementation — was **59 of 1806 (3%)**, with a gradient:
+
+```
+Lang   ~0%    Commons javadoc is unusually explicit
+Csv    ~2%
+Gson   ~6%    reflection and generics, sparser documentation
+```
+
+This retires the hypothesis that writing from the API alone would mostly be
+guesswork. It also suggests javadoc density is measurable and matters, which
+may be worth a variable of its own if this is replicated.
 
 ---
 
@@ -192,6 +257,10 @@ second reason that variable needs remeasuring.
 ---
 
 ## Detector ideas (non-mutation)
+
+These do not inherit the blind spot at the top of this file: none of them
+depends on execution, so none of them is fooled by a suite that discriminates
+behaviour it learned from the code.
 
 ### Structural contract checks — from Lang-23
 
@@ -253,6 +322,10 @@ With comment–code divergence below, **11 of the 40 bugs (27.5%) have documente
 intent diverging from implementation**, across all four projects. The most
 recurrent shape in the sample, and unlike `nearby_mutant` this variable is
 objective: the comment is either there or it is not.
+
+Study B corroborates the mechanism from the other direction: the faults the
+spec-only arm detected are precisely the ones where the documented contract
+and the code disagree.
 
 ### Comment–code divergence — from Csv-14, Cli-12
 
@@ -321,6 +394,9 @@ an array access with no bound established by a comparison against `length`.
 
 Detectable by dataflow analysis, and a natural probe for an LLM: "which array
 accesses here could exceed bounds, and does any test exercise that?"
+
+Note that the spec arm caught this one unaided: the missing bound contradicts
+the documented behaviour of the accessor.
 
 ### Missing null guard on a returned value — from Csv-4, Csv-5, Gson-6
 

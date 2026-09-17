@@ -1,9 +1,17 @@
-######  Start mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-06 02:42:18  ######
- - Executing test suite: Cli-12f-agent.1.tar.bz2
- - Executing test suite: Cli-15f-agent.1.tar.bz2
- - Executing test suite: Cli-17f-agent.1.tar.bz2
- - Executing test suite: Cli-28f-agent.1.tar.bz2
+######  Start mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-16 23:58:26  ######
+ - Executing test suite: Cli-32f-spec.1.tar.bz2
  - Executing test suite: Cli-32f-agent.1.tar.bz2
- - Executing test suite: Cli-10f-agent.1.tar.bz2
+ - Executing test suite: Cli-21f-spec.1.tar.bz2
+ - Executing test suite: Cli-38f-spec.1.tar.bz2
  - Executing test suite: Cli-38f-agent.1.tar.bz2
-######  End mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-06 02:43:16  ######
+ - Executing test suite: Cli-12f-spec.1.tar.bz2
+ - Executing test suite: Cli-12f-agent.1.tar.bz2
+ - Executing test suite: Cli-28f-agent.1.tar.bz2
+ - Executing test suite: Cli-28f-spec.1.tar.bz2
+ - Executing test suite: Cli-10f-spec.1.tar.bz2
+ - Executing test suite: Cli-10f-agent.1.tar.bz2
+ - Executing test suite: Cli-17f-agent.1.tar.bz2
+ - Executing test suite: Cli-17f-spec.1.tar.bz2
+ - Executing test suite: Cli-15f-agent.1.tar.bz2
+ - Executing test suite: Cli-15f-spec.1.tar.bz2
+######  End mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-17 00:00:12  ######

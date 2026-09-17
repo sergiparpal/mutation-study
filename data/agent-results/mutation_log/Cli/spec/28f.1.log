@@ -1,0 +1,353 @@
+
+test-offline:
+
+get-deps:
+
+commons-cli-from-maven.compile:
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/maven-build.xml:75: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-cli-from-maven.compile.tests:
+    [mkdir] Created dir: /tmp/run_mutation.pl_14050_1789628306/28f/target/test-classes
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/maven-build.xml:108: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 24 source files to /tmp/run_mutation.pl_14050_1789628306/28f/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/bug/BugCLI133Test.java:24: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.PosixParser;
+    [javac]                              ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/bug/BugCLI13Test.java:25: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.PosixParser;
+    [javac]                              ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/bug/BugCLI148Test.java:25: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.PosixParser;
+    [javac]                              ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/bug/BugCLI71Test.java:26: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac] import org.apache.commons.cli.PosixParser;
+    [javac]                              ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ApplicationTest.java:41: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ApplicationTest.java:67: warning: [deprecation] GnuParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new GnuParser( );
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ApplicationTest.java:166: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ApplicationTest.java:166: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ApplicationTest.java:268: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ArgumentIsOptionTest.java:31: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         parser = new PosixParser();
+    [javac]                      ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BasicParserTest.java:29: warning: [deprecation] BasicParser in org.apache.commons.cli has been deprecated
+    [javac]         parser = new BasicParser();
+    [javac]                      ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:37: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:50: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:93: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:109: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:120: warning: [deprecation] GnuParser in org.apache.commons.cli has been deprecated
+    [javac]         parser = new GnuParser();
+    [javac]                      ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:154: warning: [deprecation] GnuParser in org.apache.commons.cli has been deprecated
+    [javac]         GnuParser parser = new GnuParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:154: warning: [deprecation] GnuParser in org.apache.commons.cli has been deprecated
+    [javac]         GnuParser parser = new GnuParser();
+    [javac]                                ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:203: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:203: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:266: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:332: warning: [deprecation] GnuParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new GnuParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:342: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:359: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:376: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/BugsTest.java:376: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/CommandLineTest.java:38: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new GnuParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/CommandLineTest.java:38: warning: [deprecation] GnuParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new GnuParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/GnuParserTest.java:25: warning: [deprecation] GnuParser in org.apache.commons.cli has been deprecated
+    [javac]         parser = new GnuParser();
+    [javac]                      ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/OptionBuilderTest.java:29: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]                                      .withType( new Float( 10 ) )
+    [javac]                                                 ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/OptionBuilderTest.java:47: warning: [deprecation] Float(float) in Float has been deprecated
+    [javac]                                      .withType( new Float( 10 ) )
+    [javac]                                                 ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/OptionGroupTest.java:29: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]     private CommandLineParser parser = new PosixParser();
+    [javac]                                            ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/OptionTest.java:34: warning: [deprecation] addValue(String) in Option has been deprecated
+    [javac]         public boolean addValue(String value)
+    [javac]                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/OptionsTest.java:107: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]             new PosixParser().parse(options, new String[0]);
+    [javac]                 ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/OptionsTest.java:123: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]             new PosixParser().parse(options, new String[0]);
+    [javac]                 ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:40: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:44: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("string flag a", "foo", line.getOptionObject("a"));
+    [javac]                                                  ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:45: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("object flag b", new Vector(), line.getOptionObject("b"));
+    [javac]                                                         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:48: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("file flag e", new File("build.xml"), line.getOptionObject("e"));
+    [javac]                                                                ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:49: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("class flag f", Calendar.class, line.getOptionObject("f"));
+    [javac]                                                          ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:50: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         assertEquals("number flag n", new Double(4.5), line.getOptionObject("n"));
+    [javac]                                       ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:50: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("number flag n", new Double(4.5), line.getOptionObject("n"));
+    [javac]                                                            ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:51: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("url flag t", new URL("http://commons.apache.org"), line.getOptionObject("t"));
+    [javac]                                                                              ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:61: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         assertEquals("number flag n", new Double(4.5), line.getOptionObject('n'));
+    [javac]                                       ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:90: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:104: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:107: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("n object class", Long.class, line.getOptionObject("n").getClass());
+    [javac]                                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:108: warning: [deprecation] Long(long) in Long has been deprecated
+    [javac]         assertEquals("n value", new Long(1), line.getOptionObject("n"));
+    [javac]                                 ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:108: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("n value", new Long(1), line.getOptionObject("n"));
+    [javac]                                                  ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:110: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("d object class", Double.class, line.getOptionObject("d").getClass());
+    [javac]                                                          ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:111: warning: [deprecation] Double(double) in Double has been deprecated
+    [javac]         assertEquals("d value", new Double(2.1), line.getOptionObject("d"));
+    [javac]                                 ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:111: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("d value", new Double(2.1), line.getOptionObject("d"));
+    [javac]                                                      ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:113: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertNull("x object", line.getOptionObject("x"));
+    [javac]                                    ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:119: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:122: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("c value", Calendar.class, line.getOptionObject("c"));
+    [javac]                                                     ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:123: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertNull("d value", line.getOptionObject("d"));
+    [javac]                                   ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:129: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:132: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("o value", "", line.getOptionObject("o"));
+    [javac]                                         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:133: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertNull("i value", line.getOptionObject("i"));
+    [javac]                                   ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:134: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertNull("n value", line.getOptionObject("n"));
+    [javac]                                   ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:140: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:143: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("u value", new URL("http://commons.apache.org"), line.getOptionObject("u"));
+    [javac]                                                                           ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:144: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertNull("v value", line.getOptionObject("v"));
+    [javac]                                   ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:150: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:153: warning: [deprecation] getOptionObject(String) in CommandLine has been deprecated
+    [javac]         assertEquals("f value", new File("test.properties"), line.getOptionObject("f"));
+    [javac]                                                                  ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PatternOptionBuilderTest.java:161: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/PosixParserTest.java:30: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         parser = new PosixParser();
+    [javac]                      ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:51: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:51: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:85: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:85: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:95: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:95: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:105: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:105: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:115: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:115: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:125: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:125: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:138: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:138: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:151: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:151: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:168: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:168: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:184: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:184: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:199: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:199: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:244: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:244: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:267: warning: [deprecation] Parser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValueTest.java:267: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         Parser parser = new PosixParser();
+    [javac]                             ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/ValuesTest.java:61: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         CommandLineParser parser = new PosixParser();
+    [javac]                                        ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/bug/BugCLI133Test.java:36: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         PosixParser posixParser = new PosixParser();
+    [javac]         ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/bug/BugCLI133Test.java:36: warning: [deprecation] PosixParser in org.apache.commons.cli has been deprecated
+    [javac]         PosixParser posixParser = new PosixParser();
+    [javac]                                       ^
+    [javac] Note: Some input files additionally use or override a deprecated API.
+    [javac] Note: /tmp/run_mutation.pl_14050_1789628306/28f/src/test/org/apache/commons/cli/OptionsTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 100 warnings
+
+compile.tests:
+
+update.all.tests:
+
+mutation.test:
+     [echo] Running mutation analysis ...
+    [junit] MAJOR: Mutation analysis enabled
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Run 1 ordered test(s)to verify independence
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Preprocessing time: 0.03 seconds
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Serialize preprocessing results to preprocessing.ser
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Mutants generated: 99
+    [junit] MAJOR: Mutants covered:   64 (64.65%)
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Export coverage map to covMap.csv
+    [junit] MAJOR: Export test map to testMap.csv
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Run mutation analysis with 64 mutant(s) and 1 test(s).
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34m1/1 - org.apache.commons.cli.ParserAgentTest (23ms / 64):[0m
+    [junit] MAJOR: 379 (43 / 64 / 64) -> AVG-RTPM: 5ms
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 43 (23-20-0) / 21
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Summary:
+    [junit] MAJOR: 
+    [junit] MAJOR: Analysis time                 : 0.38 seconds
+    [junit] MAJOR: Mutation score                : 43.43% (67.19%)
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME): 43 (23-20-0)
+    [junit] MAJOR: Mutants live                  : 21
+    [junit] MAJOR: Mutant executions             : 64
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Export summary of results to summary.csv
+    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_14050_1789628306/28f/kill.csv
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34mDone![0m
+    [junit] MAJOR: ------------------------------------------------------------
+
+BUILD SUCCESSFUL
+Total time: 1 second

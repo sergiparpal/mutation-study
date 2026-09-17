@@ -1,6 +1,6 @@
-Extract test suite......................................................... Executing test suite: Cli-10f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-10f-spec.1.tar.bz2
 OK
-Checking out d72a578a to /tmp/run_bug_detection.pl_60173_1788687623/V_fixed OK
+Checking out d72a578a to /tmp/run_bug_detection.pl_4942_1789628096/V_fixed. OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Run post-checkout hook..................................................... OK
@@ -15,7 +15,7 @@ Check out program version: Cli-10f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out d72a578a to /tmp/run_bug_detection.pl_60173_1788687623/V_buggy OK
+Checking out d72a578a to /tmp/run_bug_detection.pl_4942_1789628096/V_buggy. OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Run post-checkout hook..................................................... OK
@@ -30,9 +30,149 @@ Check out program version: Cli-10b......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Cli-15f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-10f-agent.1.tar.bz2
 OK
-Checking out a9313916 to /tmp/run_bug_detection.pl_60173_1788687623/V_fixed OK
+Check out program version: Cli-10f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Cli-10b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Cli-28f-spec.1.tar.bz2
+OK
+Checking out 3433f467 to /tmp/run_bug_detection.pl_4942_1789628096/V_fixed. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_4942_1789628096/V_fixed/ma OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 3433f467:10b14afb..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-28f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out 3433f467 to /tmp/run_bug_detection.pl_4942_1789628096/V_buggy. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/ma OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 3433f467:10b14afb..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-28b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Cli-28f-agent.1.tar.bz2
+OK
+Check out program version: Cli-28f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Cli-28b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Cli-21f-spec.1.tar.bz2
+OK
+Checking out 9cd78b4c to /tmp/run_bug_detection.pl_4942_1789628096/V_fixed. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 9cd78b4c:028893da..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-21f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out 9cd78b4c to /tmp/run_bug_detection.pl_4942_1789628096/V_buggy. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 9cd78b4c:028893da..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-21b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ FAIL
+Executed command:  cd /tmp/run_bug_detection.pl_4942_1789628096/V_buggy && ant -f /home/sergi/defects4j/framework/projects/defects4j.build.xml -Dd4j.home=/home/sergi/defects4j -Dd4j.dir.projects=/home/sergi/defects4j/framework/projects -Dbasedir=/tmp/run_bug_detection.pl_4942_1789628096/V_buggy -Dd4j.test.dir=/tmp/run_bug_detection.pl_4942_1789628096/spec compile.gen.tests 2>&1
+Buildfile: /home/sergi/defects4j/framework/projects/defects4j.build.xml
+
+init:
+
+setProxy:
+
+noProxy:
+     [echo] Proxy not used.
+
+get-custom-dep-commons-lang.jar:
+
+get-dep-commons-lang.jar:
+      [get] Getting: file:/home/sergi/defects4j/framework/projects/Cli/lib/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+      [get] To: /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/target/lib/commons-lang/jars/commons-lang-2.1.jar
+
+get-custom-dep-junit.jar:
+      [get] Getting: file:/home/sergi/defects4j/framework/projects/lib/junit-4.12.jar
+      [get] To: /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/target/lib/junit/jars/junit-3.8.1.jar
+      [get] Error getting file:/home/sergi/defects4j/framework/projects/lib/junit-4.12.jar to /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/target/lib/junit/jars/junit-3.8.1.jar
+
+get-dep-junit.jar:
+
+get-custom-dep-jdepend.jar:
+
+get-dep-jdepend.jar:
+      [get] Getting: file:/home/sergi/defects4j/framework/projects/Cli/lib/jdepend/jdepend/2.5/jdepend-2.5.jar
+      [get] To: /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/target/lib/jdepend/jars/jdepend-2.5.jar
+
+get-deps:
+
+compile:
+    [javac] /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.gen.tests:
+     [echo] classes.dir: /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/target/classes
+     [echo] build.home: /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/target/classes/..
+    [mkdir] Created dir: /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/.classes_testgen
+    [javac] /home/sergi/defects4j/framework/projects/defects4j.build.xml:268: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 3 source files to /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/.classes_testgen
+    [javac] /tmp/run_bug_detection.pl_4942_1789628096/spec/org/apache/commons/cli2/WriteableCommandLineAgentTest.java:98: error: cannot find symbol
+    [javac]         wcli.setCurrentOption(opt);
+    [javac]             ^
+    [javac]   symbol:   method setCurrentOption(Option)
+    [javac]   location: variable wcli of type WriteableCommandLine
+    [javac] 1 error
+
+BUILD FAILED
+/home/sergi/defects4j/framework/projects/defects4j.build.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
+Extract test suite......................................................... Executing test suite: Cli-15f-spec.1.tar.bz2
+OK
+Checking out a9313916 to /tmp/run_bug_detection.pl_4942_1789628096/V_fixed. OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -48,7 +188,7 @@ Check out program version: Cli-15f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out a9313916 to /tmp/run_bug_detection.pl_60173_1788687623/V_buggy OK
+Checking out a9313916 to /tmp/run_bug_detection.pl_4942_1789628096/V_buggy. OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -64,151 +204,19 @@ Check out program version: Cli-15b......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Cli-28f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-15f-agent.1.tar.bz2
 OK
-Checking out 3433f467 to /tmp/run_bug_detection.pl_60173_1788687623/V_fixed OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_60173_1788687623/V_fixed/m OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 3433f467:10b14afb..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Cli-28f......................................... OK
+Check out program version: Cli-15f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out 3433f467 to /tmp/run_bug_detection.pl_60173_1788687623/V_buggy OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_60173_1788687623/V_buggy/m OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 3433f467:10b14afb..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Cli-28b......................................... OK
+Check out program version: Cli-15b......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Cli-38f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-17f-spec.1.tar.bz2
 OK
-Checking out ac2a1c85 to /tmp/run_bug_detection.pl_60173_1788687623/V_fixed OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_60173_1788687623/V_fixed/m OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff ac2a1c85:5764b627..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Cli-38f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Checking out ac2a1c85 to /tmp/run_bug_detection.pl_60173_1788687623/V_buggy OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_60173_1788687623/V_buggy/m OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff ac2a1c85:5764b627..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Cli-38b......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Cli-12f-agent.1.tar.bz2
-OK
-Checking out aa050a69 to /tmp/run_bug_detection.pl_60173_1788687623/V_fixed OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff aa050a69:b8f82593..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Cli-12f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Checking out aa050a69 to /tmp/run_bug_detection.pl_60173_1788687623/V_buggy OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff aa050a69:b8f82593..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Cli-12b......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Cli-32f-agent.1.tar.bz2
-OK
-Checking out 777cb810 to /tmp/run_bug_detection.pl_60173_1788687623/V_fixed OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_60173_1788687623/V_fixed/m OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 777cb810:23df3834..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Cli-32f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Checking out 777cb810 to /tmp/run_bug_detection.pl_60173_1788687623/V_buggy OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_60173_1788687623/V_buggy/m OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 777cb810:23df3834..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Cli-32b......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Cli-17f-agent.1.tar.bz2
-OK
-Checking out 9c5ce350 to /tmp/run_bug_detection.pl_60173_1788687623/V_fixed OK
+Checking out 9c5ce350 to /tmp/run_bug_detection.pl_4942_1789628096/V_fixed. OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Run post-checkout hook..................................................... OK
@@ -224,7 +232,7 @@ Check out program version: Cli-17f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out 9c5ce350 to /tmp/run_bug_detection.pl_60173_1788687623/V_buggy OK
+Checking out 9c5ce350 to /tmp/run_bug_detection.pl_4942_1789628096/V_buggy. OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Run post-checkout hook..................................................... OK
@@ -237,6 +245,152 @@ Diff 9c5ce350:cfbb46ad..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
 Check out program version: Cli-17b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Cli-17f-agent.1.tar.bz2
+OK
+Check out program version: Cli-17f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Cli-17b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Cli-32f-agent.1.tar.bz2
+OK
+Checking out 777cb810 to /tmp/run_bug_detection.pl_4942_1789628096/V_fixed. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_4942_1789628096/V_fixed/ma OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 777cb810:23df3834..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-32f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out 777cb810 to /tmp/run_bug_detection.pl_4942_1789628096/V_buggy. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/ma OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 777cb810:23df3834..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-32b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Cli-32f-spec.1.tar.bz2
+OK
+Check out program version: Cli-32f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Cli-32b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Cli-12f-spec.1.tar.bz2
+OK
+Checking out aa050a69 to /tmp/run_bug_detection.pl_4942_1789628096/V_fixed. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff aa050a69:b8f82593..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-12f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out aa050a69 to /tmp/run_bug_detection.pl_4942_1789628096/V_buggy. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff aa050a69:b8f82593..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-12b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Cli-12f-agent.1.tar.bz2
+OK
+Check out program version: Cli-12f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Cli-12b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Cli-38f-spec.1.tar.bz2
+OK
+Checking out ac2a1c85 to /tmp/run_bug_detection.pl_4942_1789628096/V_fixed. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_4942_1789628096/V_fixed/ma OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff ac2a1c85:5764b627..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-38f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out ac2a1c85 to /tmp/run_bug_detection.pl_4942_1789628096/V_buggy. OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_4942_1789628096/V_buggy/ma OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff ac2a1c85:5764b627..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-38b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Cli-38f-agent.1.tar.bz2
+OK
+Check out program version: Cli-38f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Cli-38b......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK

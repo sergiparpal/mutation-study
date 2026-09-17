@@ -1,16 +1,27 @@
-######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-06 02:47:38  ######
- - Executing test suite: Gson-3f-agent.1.tar.bz2
- - Found 3 failing tests on buggy version: Gson-3f-agent.1.tar.bz2
+######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 00:07:54  ######
+ - Executing test suite: Gson-14f-spec.1.tar.bz2
+ - Executing test suite: Gson-16f-spec.1.tar.bz2
+ - Executing test suite: Gson-4f-spec.1.tar.bz2
  - Executing test suite: Gson-4f-agent.1.tar.bz2
  - Found 2 failing tests on buggy version: Gson-4f-agent.1.tar.bz2
- - Executing test suite: Gson-8f-agent.1.tar.bz2
- - Found 3 failing tests on buggy version: Gson-8f-agent.1.tar.bz2
- - Executing test suite: Gson-15f-agent.1.tar.bz2
- - Found 1 failing tests on buggy version: Gson-15f-agent.1.tar.bz2
- - Executing test suite: Gson-10f-agent.1.tar.bz2
  - Executing test suite: Gson-7f-agent.1.tar.bz2
- - Executing test suite: Gson-6f-agent.1.tar.bz2
- - Found 1 failing tests on buggy version: Gson-6f-agent.1.tar.bz2
+ - Executing test suite: Gson-7f-spec.1.tar.bz2
+ - Executing test suite: Gson-5f-spec.1.tar.bz2
  - Executing test suite: Gson-5f-agent.1.tar.bz2
  - Found 1 failing tests on buggy version: Gson-5f-agent.1.tar.bz2
-######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-06 02:48:39  ######
+ - Executing test suite: Gson-3f-spec.1.tar.bz2
+ - Executing test suite: Gson-3f-agent.1.tar.bz2
+ - Found 3 failing tests on buggy version: Gson-3f-agent.1.tar.bz2
+ - Executing test suite: Gson-6f-spec.1.tar.bz2
+ - Executing test suite: Gson-6f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Gson-6f-agent.1.tar.bz2
+ - Executing test suite: Gson-15f-agent.1.tar.bz2
+ - Found 1 failing tests on buggy version: Gson-15f-agent.1.tar.bz2
+ - Executing test suite: Gson-15f-spec.1.tar.bz2
+ - Found 1 failing tests on buggy version: Gson-15f-spec.1.tar.bz2
+ - Executing test suite: Gson-8f-spec.1.tar.bz2
+ - Executing test suite: Gson-8f-agent.1.tar.bz2
+ - Found 3 failing tests on buggy version: Gson-8f-agent.1.tar.bz2
+ - Executing test suite: Gson-10f-spec.1.tar.bz2
+ - Executing test suite: Gson-10f-agent.1.tar.bz2
+######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-09-17 00:10:13  ######

@@ -1,0 +1,233 @@
+1:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@<init>(java.lang.String,java.util.Locale,java.util.Map):125:5109:setLocale(locale); |==> <NO-OP>
+2:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@<init>(java.lang.String,java.util.Locale,java.util.Map):126:5136:this.registry = registry; |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@<init>(java.lang.String,java.util.Locale,java.util.Map):127:5170:applyPattern(pattern); |==> <NO-OP>
+4:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):143:5465:registry == null |==> false
+5:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):144:5488:super.applyPattern(pattern); |==> <NO-OP>
+6:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):145:5529:toPattern = super.toPattern(); |==> <NO-OP>
+7:LVR:0:POS:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):152:5813:0 |==> 1
+8:LVR:0:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):152:5813:0 |==> -1
+9:LVR:0:POS:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):154:5882:0 |==> 1
+10:LVR:0:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):154:5882:0 |==> -1
+11:ROR:<(int,int):!=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):155:5900:pos.getIndex() < pattern.length() |==> pos.getIndex() != pattern.length()
+12:ROR:<(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):155:5900:pos.getIndex() < pattern.length() |==> pos.getIndex() <= pattern.length()
+13:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):155:5915:pos.getIndex() < pattern.length() |==> false
+14:LVR:TRUE:FALSE:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):158:6064:true |==> false
+15:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):158:6018:appendQuotedString(pattern, pos, stripCustom, true); |==> <NO-OP>
+16:STD:<INC>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):161:6137:fmtCount++; |==> <NO-OP>
+17:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):162:6165:seekNonWs(pattern, pos); |==> <NO-OP>
+18:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):165:6317:stripCustom.append(START_FE).append(index); |==> <NO-OP>
+19:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):166:6377:seekNonWs(pattern, pos); |==> <NO-OP>
+20:ROR:==(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):169:6509:c[pos.getIndex()] == START_FMT |==> c[pos.getIndex()] <= START_FMT
+21:ROR:==(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):169:6509:c[pos.getIndex()] == START_FMT |==> c[pos.getIndex()] >= START_FMT
+22:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):169:6527:c[pos.getIndex()] == START_FMT |==> false
+23:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):170:6563:formatDescription = parseFormatDescription(pattern, next(pos)); |==> <NO-OP>
+24:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):172:6675:format = getFormat(formatDescription); |==> <NO-OP>
+25:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):173:6745:format == null |==> false
+26:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):174:6780:stripCustom.append(START_FMT).append(formatDescription); |==> <NO-OP>
+27:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):177:6893:foundFormats.add(format); |==> <NO-OP>
+28:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):178:6964:format == null |==> false
+29:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):178:6935:foundDescriptions.add(format == null ? null : formatDescription); |==> <NO-OP>
+30:ROR:==(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):179:7033:foundFormats.size() == fmtCount |==> foundFormats.size() <= fmtCount
+31:ROR:==(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):179:7033:foundFormats.size() == fmtCount |==> foundFormats.size() >= fmtCount
+32:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):179:7053:foundFormats.size() == fmtCount |==> false
+33:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):179:7017:Validate.isTrue(foundFormats.size() == fmtCount); |==> <NO-OP>
+34:ROR:==(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):180:7099:foundDescriptions.size() == fmtCount |==> foundDescriptions.size() <= fmtCount
+35:ROR:==(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):180:7099:foundDescriptions.size() == fmtCount |==> foundDescriptions.size() >= fmtCount
+36:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):180:7124:foundDescriptions.size() == fmtCount |==> false
+37:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):180:7083:Validate.isTrue(foundDescriptions.size() == fmtCount); |==> <NO-OP>
+38:ROR:!=(int,int):<(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):181:7158:c[pos.getIndex()] != END_FE |==> c[pos.getIndex()] < END_FE
+39:ROR:!=(int,int):>(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):181:7158:c[pos.getIndex()] != END_FE |==> c[pos.getIndex()] > END_FE
+40:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):181:7176:c[pos.getIndex()] != END_FE |==> true
+41:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):187:7411:stripCustom.append(c[pos.getIndex()]); |==> <NO-OP>
+42:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):188:7466:next(pos); |==> <NO-OP>
+43:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):191:7509:super.applyPattern(stripCustom.toString()); |==> <NO-OP>
+44:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):192:7561:toPattern = insertFormats(super.toPattern(), foundDescriptions); |==> <NO-OP>
+45:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):193:7654:containsElements(foundFormats) |==> false
+46:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):193:7654:containsElements(foundFormats) |==> true
+47:LVR:0:POS:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):197:7880:0 |==> 1
+48:LVR:0:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):197:7880:0 |==> -1
+49:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):200:8029:f != null |==> true
+50:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):201:8060:origFormats[i] = f; |==> <NO-OP>
+51:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@applyPattern(java.lang.String):204:8124:super.setFormats(origFormats); |==> <NO-OP>
+52:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):247:9188:registry != null |==> true
+53:LVR:0:POS:org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):251:9328:0 |==> 1
+54:LVR:0:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):251:9328:0 |==> -1
+55:ROR:>(int,int):!=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):251:9324:i > 0 |==> i != 0
+56:ROR:>(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):251:9324:i > 0 |==> i >= 0
+57:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):251:9326:i > 0 |==> false
+58:LVR:0:POS:org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):252:9371:0 |==> 1
+59:LVR:0:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):252:9371:0 |==> -1
+60:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):252:9349:name = desc.substring(0, i).trim(); |==> <NO-OP>
+61:LVR:POS:0:org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):253:9427:1 |==> 0
+62:LVR:POS:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):253:9427:1 |==> -1
+63:AOR:+(int,int):%(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):253:9423:i + 1 |==> i % 1
+64:AOR:+(int,int):*(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):253:9423:i + 1 |==> i * 1
+65:AOR:+(int,int):-(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):253:9423:i + 1 |==> i - 1
+66:AOR:+(int,int):/(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):253:9423:i + 1 |==> i / 1
+67:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):253:9401:args = desc.substring(i + 1).trim(); |==> <NO-OP>
+68:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.lang.text.ExtendedMessageFormat@getFormat(java.lang.String):256:9548:factory != null |==> true
+69:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):272:9990:seekNonWs(pattern, pos); |==> <NO-OP>
+70:LVR:FALSE:TRUE:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):274:10089:false |==> true
+71:ROR:<(int,int):!=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):275:10121:pos.getIndex() < pattern.length() |==> pos.getIndex() != pattern.length()
+72:ROR:<(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):275:10121:pos.getIndex() < pattern.length() |==> pos.getIndex() <= pattern.length()
+73:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):275:10136:pos.getIndex() < pattern.length() |==> false
+74:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):275:10111:!error && pos.getIndex() < pattern.length() |==> !error == pos.getIndex() < pattern.length()
+75:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):275:10118:!error && pos.getIndex() < pattern.length() |==> false
+76:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):275:10111:!error && pos.getIndex() < pattern.length() |==> !error
+77:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):275:10121:!error && pos.getIndex() < pattern.length() |==> pos.getIndex() < pattern.length()
+78:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):277:10260:Character.isWhitespace(c) |==> false
+79:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):277:10260:Character.isWhitespace(c) |==> true
+80:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):278:10283:seekNonWs(pattern, pos); |==> <NO-OP>
+81:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):279:10324:c = pattern.charAt(pos.getIndex()); |==> <NO-OP>
+82:ROR:!=(int,int):<(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):280:10380:c != START_FMT |==> c < START_FMT
+83:ROR:!=(int,int):>(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):280:10380:c != START_FMT |==> c > START_FMT
+84:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):280:10382:c != START_FMT |==> true
+85:ROR:!=(int,int):<(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):280:10398:c != END_FE |==> c < END_FE
+86:ROR:!=(int,int):>(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):280:10398:c != END_FE |==> c > END_FE
+87:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):280:10400:c != END_FE |==> true
+88:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):280:10395:c != START_FMT && c != END_FE |==> false
+89:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):280:10380:c != START_FMT && c != END_FE |==> c != START_FMT
+90:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):280:10398:c != START_FMT && c != END_FE |==> c != END_FE
+91:LVR:TRUE:FALSE:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):281:10441:true |==> false
+92:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):281:10433:error = true; |==> <NO-OP>
+93:ROR:==(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10526:c == START_FMT |==> c <= START_FMT
+94:ROR:==(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10526:c == START_FMT |==> c >= START_FMT
+95:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10528:c == START_FMT |==> false
+96:ROR:==(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10544:c == END_FE |==> c <= END_FE
+97:ROR:==(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10544:c == END_FE |==> c >= END_FE
+98:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10546:c == END_FE |==> false
+99:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10526:c == START_FMT || c == END_FE |==> c == START_FMT
+100:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10544:c == START_FMT || c == END_FE |==> c == END_FE
+101:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10541:c == START_FMT || c == END_FE |==> true
+102:LVR:0:POS:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10578:0 |==> 1
+103:LVR:0:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10578:0 |==> -1
+104:ROR:>(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10560:result.length() > 0 |==> result.length() >= 0
+105:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10576:result.length() > 0 |==> false
+106:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10525:(c == START_FMT || c == END_FE) && result.length() > 0 |==> (c == START_FMT || c == END_FE) == result.length() > 0
+107:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10557:(c == START_FMT || c == END_FE) && result.length() > 0 |==> false
+108:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10525:(c == START_FMT || c == END_FE) && result.length() > 0 |==> (c == START_FMT || c == END_FE)
+109:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):285:10560:(c == START_FMT || c == END_FE) && result.length() > 0 |==> result.length() > 0
+110:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):293:10918:error = !Character.isDigit(c); |==> <NO-OP>
+111:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):294:10961:result.append(c); |==> <NO-OP>
+112:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):296:11001:error |==> false
+113:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.text.ExtendedMessageFormat@readArgumentIndex(java.lang.String,java.text.ParsePosition):296:11001:error |==> true
+114:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):314:11663:seekNonWs(pattern, pos); |==> <NO-OP>
+115:LVR:POS:0:org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):316:11743:1 |==> 0
+116:LVR:POS:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):316:11743:1 |==> -1
+117:ROR:<(int,int):!=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):317:11761:pos.getIndex() < pattern.length() |==> pos.getIndex() != pattern.length()
+118:ROR:<(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):317:11761:pos.getIndex() < pattern.length() |==> pos.getIndex() <= pattern.length()
+119:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):317:11776:pos.getIndex() < pattern.length() |==> false
+120:STD:<INC>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):320:11906:depth++; |==> <NO-OP>
+121:STD:<DEC>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):323:11979:depth--; |==> <NO-OP>
+122:LVR:0:POS:org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):324:12017:0 |==> 1
+123:LVR:0:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):324:12017:0 |==> -1
+124:ROR:==(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):324:12008:depth == 0 |==> depth <= 0
+125:ROR:==(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):324:12008:depth == 0 |==> depth >= 0
+126:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):324:12014:depth == 0 |==> false
+127:LVR:FALSE:TRUE:org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):329:12201:false |==> true
+128:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@parseFormatDescription(java.lang.String,java.text.ParsePosition):329:12171:getQuotedString(pattern, pos, false); |==> <NO-OP>
+129:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):345:12701:containsElements(customPatterns) |==> false
+130:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):345:12701:containsElements(customPatterns) |==> true
+131:LVR:POS:0:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):348:12821:2 |==> 0
+132:LVR:POS:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):348:12821:2 |==> -2
+133:AOR:*(int,int):%(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):348:12802:pattern.length() * 2 |==> pattern.length() % 2
+134:AOR:*(int,int):+(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):348:12802:pattern.length() * 2 |==> pattern.length() + 2
+135:AOR:*(int,int):-(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):348:12802:pattern.length() * 2 |==> pattern.length() - 2
+136:AOR:*(int,int):/(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):348:12802:pattern.length() * 2 |==> pattern.length() / 2
+137:LVR:0:POS:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):349:12871:0 |==> 1
+138:LVR:0:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):349:12871:0 |==> -1
+139:LVR:NEG:0:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):350:12892:-1 |==> 0
+140:LVR:NEG:POS:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):350:12892:-1 |==> 1
+141:LVR:0:POS:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):351:12916:0 |==> 1
+142:LVR:0:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):351:12916:0 |==> -1
+143:ROR:<(int,int):!=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):352:12934:pos.getIndex() < pattern.length() |==> pos.getIndex() != pattern.length()
+144:ROR:<(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):352:12934:pos.getIndex() < pattern.length() |==> pos.getIndex() <= pattern.length()
+145:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):352:12949:pos.getIndex() < pattern.length() |==> false
+146:LVR:FALSE:TRUE:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):356:13126:false |==> true
+147:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):356:13089:appendQuotedString(pattern, pos, sb, false); |==> <NO-OP>
+148:STD:<INC>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):359:13200:depth++; |==> <NO-OP>
+149:LVR:POS:0:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):360:13238:1 |==> 0
+150:LVR:POS:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):360:13238:1 |==> -1
+151:ROR:==(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):360:13229:depth == 1 |==> depth <= 1
+152:ROR:==(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):360:13229:depth == 1 |==> depth >= 1
+153:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):360:13235:depth == 1 |==> false
+154:STD:<INC>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):361:13263:fe++; |==> <NO-OP>
+155:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):362:13289:sb.append(START_FE).append(readArgumentIndex(pattern, next(pos))); |==> <NO-OP>
+156:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):365:13499:customPattern != null |==> true
+157:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):366:13534:sb.append(START_FMT).append(customPattern); |==> <NO-OP>
+158:STD:<DEC>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):371:13682:depth--; |==> <NO-OP>
+159:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):374:13760:sb.append(c); |==> <NO-OP>
+160:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@insertFormats(java.lang.String,java.util.ArrayList):375:13790:next(pos); |==> <NO-OP>
+161:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):391:14174:len = StrMatcher.splitMatcher().isMatch(buffer, pos.getIndex()); |==> <NO-OP>
+162:AOR:+(int,int):%(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):392:14264:pos.getIndex() + len |==> pos.getIndex() % len
+163:AOR:+(int,int):*(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):392:14264:pos.getIndex() + len |==> pos.getIndex() * len
+164:AOR:+(int,int):-(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):392:14264:pos.getIndex() + len |==> pos.getIndex() - len
+165:AOR:+(int,int):/(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):392:14264:pos.getIndex() + len |==> pos.getIndex() / len
+166:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):392:14251:pos.setIndex(pos.getIndex() + len); |==> <NO-OP>
+167:LVR:0:POS:org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14310:0 |==> 1
+168:LVR:0:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14310:0 |==> -1
+169:ROR:>(int,int):!=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14304:len > 0 |==> len != 0
+170:ROR:>(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14304:len > 0 |==> len >= 0
+171:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14308:len > 0 |==> false
+172:ROR:<(int,int):!=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14315:pos.getIndex() < pattern.length() |==> pos.getIndex() != pattern.length()
+173:ROR:<(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14315:pos.getIndex() < pattern.length() |==> pos.getIndex() <= pattern.length()
+174:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14330:pos.getIndex() < pattern.length() |==> false
+175:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14304:len > 0 && pos.getIndex() < pattern.length() |==> len > 0 == pos.getIndex() < pattern.length()
+176:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14312:len > 0 && pos.getIndex() < pattern.length() |==> false
+177:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14304:len > 0 && pos.getIndex() < pattern.length() |==> len > 0
+178:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@seekNonWs(java.lang.String,java.text.ParsePosition):393:14315:len > 0 && pos.getIndex() < pattern.length() |==> pos.getIndex() < pattern.length()
+179:LVR:POS:0:org.apache.commons.lang.text.ExtendedMessageFormat@next(java.text.ParsePosition):403:14593:1 |==> 0
+180:LVR:POS:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@next(java.text.ParsePosition):403:14593:1 |==> -1
+181:AOR:+(int,int):%(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@next(java.text.ParsePosition):403:14576:pos.getIndex() + 1 |==> pos.getIndex() % 1
+182:AOR:+(int,int):*(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@next(java.text.ParsePosition):403:14576:pos.getIndex() + 1 |==> pos.getIndex() * 1
+183:AOR:+(int,int):-(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@next(java.text.ParsePosition):403:14576:pos.getIndex() + 1 |==> pos.getIndex() - 1
+184:AOR:+(int,int):/(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@next(java.text.ParsePosition):403:14576:pos.getIndex() + 1 |==> pos.getIndex() / 1
+185:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@next(java.text.ParsePosition):403:14563:pos.setIndex(pos.getIndex() + 1); |==> <NO-OP>
+186:ROR:==(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):421:15207:c[start] == QUOTE |==> c[start] <= QUOTE
+187:ROR:==(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):421:15207:c[start] == QUOTE |==> c[start] >= QUOTE
+188:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):421:15216:c[start] == QUOTE |==> false
+189:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):421:15193:escapingOn && c[start] == QUOTE |==> escapingOn == (c[start] == QUOTE)
+190:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):421:15204:escapingOn && c[start] == QUOTE |==> false
+191:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):421:15193:escapingOn && c[start] == QUOTE |==> escapingOn
+192:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):421:15207:escapingOn && c[start] == QUOTE |==> c[start] == QUOTE
+193:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):422:15240:next(pos); |==> <NO-OP>
+194:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):423:15279:appendTo == null |==> false
+195:ROR:<(int,int):!=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):426:15397:i < pattern.length() |==> i != pattern.length()
+196:ROR:<(int,int):<=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):426:15397:i < pattern.length() |==> i <= pattern.length()
+197:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):426:15399:i < pattern.length() |==> false
+198:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):427:15442:escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE) |==> escapingOn == pattern.substring(i).startsWith(ESCAPED_QUOTE)
+199:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):427:15453:escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE) |==> false
+200:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):427:15442:escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE) |==> escapingOn
+201:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):427:15456:escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE) |==> pattern.substring(i).startsWith(ESCAPED_QUOTE)
+202:AOR:-(int,int):%(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):428:15551:pos.getIndex() - lastHold |==> pos.getIndex() % lastHold
+203:AOR:-(int,int):*(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):428:15551:pos.getIndex() - lastHold |==> pos.getIndex() * lastHold
+204:AOR:-(int,int):+(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):428:15551:pos.getIndex() - lastHold |==> pos.getIndex() + lastHold
+205:AOR:-(int,int):/(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):428:15551:pos.getIndex() - lastHold |==> pos.getIndex() / lastHold
+206:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):428:15522:appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE); |==> <NO-OP>
+207:AOR:+(int,int):%(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):430:15647:i + ESCAPED_QUOTE.length() |==> i % ESCAPED_QUOTE.length()
+208:AOR:+(int,int):*(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):430:15647:i + ESCAPED_QUOTE.length() |==> i * ESCAPED_QUOTE.length()
+209:AOR:+(int,int):-(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):430:15647:i + ESCAPED_QUOTE.length() |==> i - ESCAPED_QUOTE.length()
+210:AOR:+(int,int):/(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):430:15647:i + ESCAPED_QUOTE.length() |==> i / ESCAPED_QUOTE.length()
+211:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):430:15634:pos.setIndex(i + ESCAPED_QUOTE.length()); |==> <NO-OP>
+212:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):431:15692:lastHold = pos.getIndex(); |==> <NO-OP>
+213:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):436:15840:next(pos); |==> <NO-OP>
+214:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):437:15883:appendTo == null |==> false
+215:AOR:-(int,int):%(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):438:15953:pos.getIndex() - lastHold |==> pos.getIndex() % lastHold
+216:AOR:-(int,int):*(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):438:15953:pos.getIndex() - lastHold |==> pos.getIndex() * lastHold
+217:AOR:-(int,int):+(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):438:15953:pos.getIndex() - lastHold |==> pos.getIndex() + lastHold
+218:AOR:-(int,int):/(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):438:15953:pos.getIndex() - lastHold |==> pos.getIndex() / lastHold
+219:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@appendQuotedString(java.lang.String,java.text.ParsePosition,java.lang.StringBuffer,boolean):440:16018:next(pos); |==> <NO-OP>
+220:STD:<CALL>:<NO-OP>:org.apache.commons.lang.text.ExtendedMessageFormat@getQuotedString(java.lang.String,java.text.ParsePosition,boolean):456:16479:appendQuotedString(pattern, pos, null, escapingOn); |==> <NO-OP>
+221:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):465:16818:coll == null |==> false
+222:LVR:0:POS:org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):465:16844:0 |==> 1
+223:LVR:0:NEG:org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):465:16844:0 |==> -1
+224:ROR:==(int,int):>=(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):465:16829:coll.size() == 0 |==> coll.size() >= 0
+225:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):465:16841:coll.size() == 0 |==> false
+226:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):465:16813:coll == null || coll.size() == 0 |==> coll == null != (coll.size() == 0)
+227:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):465:16813:coll == null || coll.size() == 0 |==> coll == null
+228:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):465:16829:coll == null || coll.size() == 0 |==> coll.size() == 0
+229:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):465:16826:coll == null || coll.size() == 0 |==> true
+230:LVR:FALSE:TRUE:org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):466:16868:false |==> true
+231:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):469:16978:iter.next() != null |==> true
+232:LVR:TRUE:FALSE:org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):470:17012:true |==> false
+233:LVR:FALSE:TRUE:org.apache.commons.lang.text.ExtendedMessageFormat@containsElements(java.util.Collection):473:17057:false |==> true

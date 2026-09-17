@@ -1,4 +1,4 @@
-bug_id,phase,fault_type,nearby_mutant,lines,method,note
+bug_id,phase,fault_type,nearby_mutant_RETIRED,lines,method,note
 Lang-1,pilot,OMISSION,YES,+9/-2,NumberUtils.createNumber,"leading zeroes not counted + missing sign-bit check"
 Lang-3,pilot,OMISSION,NO,+4/-0,NumberUtils.createNumber,"missing numDecimals<=7 and <=16 guards; buggy code has no condition for a mutant to anchor to"
 Lang-43,sample,OMISSION,YES,+1/-0,ExtendedMessageFormat.appendQuotedString,"missing next(pos) call; parser fails to advance past escaped quote"

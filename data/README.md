@@ -104,31 +104,54 @@ Known cases:
 - **Lang-65** — a 30-line truncation block absent between existing marker
   comments, plus two minor missing guards. Classified on the dominant fault.
 
-### `nearby_mutant` — SUPERSEDED
+### `nearby_mutant_RETIRED` — withdrawn, do not use
 
-> **⚠ This variable was judged by reading diffs, not measured, and the first
-> measurement refuted it (2026-08-29).** Major generates mutants in Lang-13's
-> faulty region — two LVR on the `false` argument of `Class.forName` — which the
-> definition missed because it counted only arithmetic, relational and logical
-> operators and numeric literals, overlooking boolean, null and string literals.
-> Those are pervasive in object-oriented code.
->
-> The column is kept for provenance. **Do not use the 17/40 sterile figure.**
-> It is replaced by the measured columns in `mutation-metrics.csv`.
+**Status: retired 2026-09-09.** The column remains in the CSV for provenance
+and is renamed so it cannot be mistaken for a live variable. **No figure
+derived from it appears in any result.**
 
 Original definition: `YES` when at least one arithmetic, relational or logical
 operator, or one literal constant, appears in the lines the fix modifies or in
-lines immediately adjacent.
+lines immediately adjacent. Intended to capture whether a classical mutation
+operator would have anywhere to anchor within the faulty region.
+
+Two independent reasons for withdrawal:
+
+1. **Miscalibrated.** It was judged by reading diffs, never measured. The first
+   measurement refuted it: Major generates mutants in Lang-13's faulty region
+   (two LVR on the `false` argument of `Class.forName`), which the definition
+   missed because it counted only arithmetic, relational and logical operators
+   and numeric literals — overlooking boolean, null and string literals, which
+   are pervasive in object-oriented code. The 17/40 "sterile region" figure it
+   produced is void.
+
+2. **Superseded by measurement.** The question it was reaching for is answered
+   directly, and mechanically, by `mutation-metrics.csv`:
+   `n_mutants_in_fix_methods`, `n_coupled_in_fix_methods`,
+   `n_coupled_on_touch_lines` and `ops_coupled_in_fix_methods`. Those are tool
+   output over 36 bugs; this was one person's reading of 40 diffs.
+
+Remeasuring it with a corrected definition was considered and rejected: the
+corrected number would duplicate what the measured columns already report,
+at the cost of re-reading all 40 diffs by hand.
+
+`fault_type` is unaffected and remains in use — it is the variable that
+explains which faults the spec-only arm of Study B detects.
 
 ## Classification protocol
 
 1. Only the diff over `dir.src.classes` between buggy and fixed versions is
    examined.
 2. **Trigger tests are not consulted** during classification: they reveal where
-   the fault lies and bias the judgement on `nearby_mutant`.
+   the fault lies and bias the judgement on `nearby_mutant_RETIRED`.
 3. `UNCLEAR` entries are reviewed as a batch at the end.
-4. Once finished, the first 10 entries are re-read under the final criteria,
-   since criteria drift over the course of classification.
+4. **Re-read performed.** Once finished, the first 10 entries were re-read
+   under the final criteria, since criteria drift over the course of
+   classification. All ten were sustained: the six `OMISSION` entries satisfy
+   the mechanical `+n/-0` test, and the four others (Lang-56 `STATE`, Lang-8
+   and Lang-21 `SUBSTITUTION`, Lang-63 `ALGORITHM`) were confirmed to remove
+   real logic rather than re-indented context. The criteria were fixed early
+   enough — around the third and fifth bug — that no drift accumulated.
 
 ## Mutation measurement (`mutation-metrics.csv`)
 
@@ -206,23 +229,77 @@ Both figures contradict hypotheses formed earlier from two or three bugs. See
 
 ---
 
-# Study B — do agent-written suites catch real bugs?
+# Study B — what does an agent-written suite owe to reading the code?
 
-Not started. Setup notes recorded here as they are established.
+Complete. Two arms over the same 40 bugs, differing in one variable: whether
+the agent can read the implementation.
 
-## Agent configuration
+- **M arm (implementation-visible)** — `bin/run-agent-suites.sh`. The agent
+  works inside the checked-out project and reads the fixed source. This is
+  what happens when anyone asks a coding agent for tests on existing code.
+- **S arm (spec-only)** — `bin/run-spec-suites.sh`. The agent works in a
+  sandbox holding generated javadoc, the compiled jar and JUnit. It never sees
+  implementation source and may not execute its tests.
+
+Suites are analysed by `bin/analyze-agent-suites.sh`, which wraps Defects4J's
+own `run_bug_detection.pl`, `run_coverage.pl` and `run_mutation.pl`.
+
+## Results
+
+Per arm, over every suite that produced all three measurements:
+
+| arm | n | real fault detected | mutation score | line coverage |
+|---|---|---|---|---|
+| `agent` (Sonnet, M) | 36 | **26/36 — 72%** | 72% | 85% |
+| `agentopus` (Opus, M) | 6 | 6/6 — 100% | 80% | 89% |
+| `spec` (Sonnet, S) | 40 | **6/40 — 15%** | 71% | 72% |
+
+Paired over the 36 bugs present in both Sonnet arms:
+
+```
+M 26/36 (72%)   vs   S 5/36 (14%)
+
+Cli    n=7    M=5   S=1
+Csv    n=9    M=7   S=2
+Gson   n=8    M=6   S=1
+Lang   n=12   M=8   S=1
+```
+
+**Two things follow.**
+
+Roughly five sixths of an agent's real-fault detection comes from having read
+the implementation, not from knowing how to test. The effect holds in all four
+projects.
+
+And **no standard metric separates the two cases**: mutation score is 72% vs
+71%, statistically indistinguishable, while detection differs five-fold. Line
+coverage drops from 85% to 72% — far less than detection does. A suite that
+catches three faults in four and a suite that catches one in seven look
+identical under mutation analysis.
+
+### Which faults the spec arm does catch
+
+Cli-32, Csv-4, Csv-6, Gson-15, Lang-13 — five of thirty-six, and four of them
+are cases where the code contradicts a contract the javadoc states: a missing
+null guard on a documented return, an unchecked index, `NaN` rejected
+regardless of the documented lenient mode, primitive classes failing a
+documented deserialization contract. The spec arm catches faults that are
+visible from the specification, and essentially nothing else.
+
+## M arm — configuration
 
 | | |
 |---|---|
 | Claude Code | 2.1.251 (native install, linux-x64) |
-| Model | `--model opus`, passed explicitly |
-| Turn cap | `--max-turns 15` |
+| Models | `--model opus` (6 bugs), `--model sonnet` (40 bugs) |
+| Turn cap | 25 for the Opus runs, 40 then 50 for Sonnet |
 | Tools | `Read,Write,Bash` |
 | Permissions | `--permission-mode acceptEdits` |
 | Output | `--output-format json`, one file per run |
+| Cost | $42.61 for 46 suites (list price against subscription quota) |
 
 The model is passed on the command line rather than left to
-`~/.claude/settings.json`, which currently holds `"model": "opus"` and
+`~/.claude/settings.json`, which held `"model": "opus"` and
 `"effortLevel": "xhigh"`. Local configuration must not silently define the
 experiment.
 
@@ -232,44 +309,144 @@ reproducibility wants — but with `--bare` every run fails with
 `Not logged in · Please run /login` despite valid credentials in
 `~/.claude/.credentials.json`. Runs are therefore made **without** `--bare`
 from a clean checkout under `/tmp`, which contains no project-level
-configuration. User-level settings still apply; their contents at the time of
-the runs were:
+configuration.
 
-```json
-{"model": "opus", "effortLevel": "xhigh", "tui": "fullscreen",
- "skipDangerousModePermissionPrompt": true, "skipWorkflowUsageWarning": true,
- "agentPushNotifEnabled": true}
-```
+### Model arms are not comparable as a designed contrast
 
-## Measurement loop, per bug
+The six Opus suites are the first six bugs of the sample, not a random subset:
+the run switched to Sonnet after exhausting quota. They are reported separately
+as an opportunistic indication, never as a model comparison. The turn cap also
+differs between them (25 vs 40/50).
+
+### Loop per bug
 
 ```
 checkout _f
-defects4j export -p classes.modified     which classes to test
-delete the trigger tests' file           or the agent copies the answer
+export metadata                          BEFORE removing .git
+rm -rf .git                              contamination control, below
+delete the developer test files holding the trigger tests
+  → if that breaks the build, replace them with stubs
 [agent writes tests]
-verify they compile and pass on _f       discard the rest
-defects4j coverage -t <agent test class>
-defects4j mutation -t <agent test class>
-copy the tests to _b, defects4j test     any failure = real fault detected
+verify: file exists, compiles, passes on _f
+package as <Project>-<bid>f-agent.1.tar.bz2
 ```
 
-Test classes are named `<Class>AgentTest` so they never collide with developer
-tests and can always be measured in isolation with `-t`.
+## S arm — configuration
 
-### Contamination controls
+Same model and flags as the M Sonnet arm, `MAX_TURNS=50`. Cost: $37.02 for 40
+suites. The sandbox given to the agent:
 
-- The trigger test **file** is deleted, not just the failing method: leaving the
-  rest of the class in place would show the agent what is tested and how.
-- Defects4J has been public for years and may be in the model's training data.
-  This cannot be eliminated. Planned mitigation is a later comparison against
+```
+api/          javadoc for the classes under test — the spec
+lib/          the compiled project jar and JUnit — so tests can be COMPILED
+tests/        where the agent writes
+compile.sh    compiles tests/ against lib/ at the project's own -source level
+```
+
+The prompt forbids running the tests, decompiling or disassembling `lib/`,
+inspecting version control and searching the web. Sandboxes are kept under
+`/tmp/specW_*` as an audit trail.
+
+### Javadoc invocation — four details that had to line up
+
+- Pass **file paths**, not fully-qualified class names. Given a qualified name
+  without `.java`, javadoc treats it as a package (found on Lang-43).
+- Keep `-sourcepath` anyway, so sibling classes referenced by the source
+  resolve, otherwise "cannot find symbol: class Validate".
+- Use `-package`, not `-public`: some classes under test are package-private
+  and `-public` documents nothing (Lang-62). `-package` gives the agent what a
+  developer in the same package would see, which is the situation modelled.
+- Judge success by the existence of `api/index.html`, never by exit status:
+  this vintage of source produces warnings javadoc reports as non-zero.
+
+### Source level
+
+The sandbox compiles with the project's own `-source` level, read from
+`default.properties`. Lang-65 was initially lost because the agent wrote
+`1_017_320_701_000L`, valid under the sandbox's default javac but not under the
+project's `-source 1.6`. The level is passed to `compile.sh` and stated in the
+prompt.
+
+### Per-method filter, and its bias
+
+An agent writing from the API alone gets some expectations wrong. Discarding a
+whole suite over one wrong expectation would throw away most of the sample, so
+failing methods are disabled individually by `bin/prune-failing-tests.py` — the
+`@Test` annotation is commented out (JUnit 4) or the method renamed
+(JUnit 3) — and the rest are kept.
+
+**Measured prune rate: 59 of 1806 tests (3%)**, with a clear gradient:
+
+```
+Lang   ~0%    Commons javadoc is unusually explicit
+Csv    ~2%
+Gson   ~6%    reflection and generics, sparser documentation
+```
+
+This retires the hypothesis that the spec arm would mostly guess: writing from
+javadoc produces almost no wrong expectations.
+
+**Declared bias.** That filter uses the implementation as an oracle, so what
+survives is precisely the subset agreeing with the code. It only removes, never
+rewrites, and the survivors were written blind — but the selection is biased
+and is reported as such. The M arm carries the same bias, so the comparison
+between arms stays clean.
+
+*(Stale class files: disabling a method changes the `.java` by a few bytes
+within the same second, and ant's one-second timestamp granularity then skips
+the recompile, so the next run executes the pre-prune bytecode and the loop
+never converges (Lang-21). `touch` does not help. The compiled test classes are
+deleted before recompiling, inner classes included.)*
+
+## Contamination controls
+
+- **Git history is removed before the agent starts.** A Defects4J checkout
+  ships the project's full history including the fix commit: for Lang-13 the
+  log subject reads `[LANG-788] SerializationUtils throws ClassNotFoundException
+  when cloning primitive classes`, and the `D4J_Lang_13_BUGGY_VERSION` /
+  `_FIXED_VERSION` tags make `git diff` yield the patch. The first pilot run
+  produced a test citing "LANG-788" in a comment.
+
+  *Measured effect on that pilot:* none on mutation score or fault detection
+  (identical), +6 covered lines. A real leak but a weak one when the agent can
+  already read the fixed implementation — it matters far more for the S arm,
+  where the code is withheld.
+
+- **The trigger test file is deleted, not just the failing method.** Leaving
+  the rest of the class would show the agent what is tested and how.
+
+- **Training-data contamination cannot be eliminated.** Defects4J has been
+  public for years. Planned mitigation is a later comparison against
   GitBug-Java, whose bugs postdate the cutoff.
 
-### Baselines available at no cost
+## Baselines
 
-`gen_tests` ships with EvoSuite and Randoop, and the developer suite itself is
-an upper bound. The agent is measured against three references, not against
-nothing.
+`gen_tests` ships with EvoSuite and Randoop. On Lang-13, EvoSuite's suite is
+classified `Pass` — it does not detect the fault — against `Fail` for both
+agent arms. The developer suite is the upper bound: 70% mutation score on
+Lang-13 against 77% for the M-arm agent suite.
+
+## Infrastructure failures and exclusions
+
+Each project contributed its own, all recorded here because they are easy to
+mistake for results:
+
+- **JUnit 3 vs 4.** Verification originally hard-coded
+  `org.junit.runner.JUnitCore`, which does not exist in Cli's JUnit 3.8.1. Six
+  Cli suites were recorded as failing when they had never been run. Verification
+  now falls back to `junit.textui.TestRunner`.
+- **cli2 declares jars it never materialises.** `cp.test` lists
+  `target/lib/junit/jars/junit-3.8.1.jar`, which is absent; the jars Defects4J
+  keeps under `framework/projects/<P>/lib` are appended to the classpath.
+- **Suites that do not compile in isolation.** Cli-21 and Csv-3 extended test
+  helpers from the project's test tree (`CLITestCase`, `TokenMatchers`), which
+  compile in the working copy but not inside the packaged archive. The M-arm
+  prompt now requires self-contained test classes. Both were moved to
+  `data/agent-suites-broken/`.
+- **Gson-14 and Gson-16 break `run_mutation.pl`** for the same `$Gson$Types`
+  reason as in Study A, and the script aborts the whole project at the first
+  failure — which silently cost six other Gson bugs their mutation figures
+  until the two were moved aside.
 
 ---
 
@@ -277,8 +454,12 @@ nothing.
 
 - [x] Sample fixed
 - [x] Classification, 40/40
-- [ ] Review of unclear entries and of the first 10
+- [x] No `UNCLEAR` entries to review (the category was never used)
+- [x] First 10 classifications re-read under the final rules — all sustained
 - [x] Mutation measurement, 38/40 (Gson-14, Gson-16 excluded — tool limitation)
-- [ ] `nearby_mutant` remeasured, or formally retired
-- [ ] Study B: agent prompt validated on one bug
-- [ ] Study B: full run
+- [x] `nearby_mutant` retired (column renamed, no figure derived from it)
+- [x] Study B, M arm: 40/40 suites (Sonnet), 6 extra (Opus)
+- [x] Study B, S arm: 40/40 suites
+- [x] Study B analysed: 72% vs 14% detection at equal mutation score
+- [ ] Write-up
+- [ ] Replication on post-cutoff bugs (GitBug-Java)

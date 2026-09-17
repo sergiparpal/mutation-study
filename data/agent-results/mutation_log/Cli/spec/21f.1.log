@@ -1,0 +1,110 @@
+
+init:
+
+junit-present:
+
+setProxy:
+
+noProxy:
+     [echo] Proxy not used.
+
+get-custom-dep-commons-lang.jar:
+
+get-dep-commons-lang.jar:
+      [get] Getting: file:/home/sergi/defects4j/framework/projects/Cli/lib/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+      [get] To: /tmp/run_mutation.pl_14050_1789628306/21f/target/lib/commons-lang/jars/commons-lang-2.1.jar
+
+get-custom-dep-junit.jar:
+      [get] Getting: file:/home/sergi/defects4j/framework/projects/lib/junit-4.12.jar
+      [get] To: /tmp/run_mutation.pl_14050_1789628306/21f/target/lib/junit/jars/junit-3.8.1.jar
+      [get] Error getting file:/home/sergi/defects4j/framework/projects/lib/junit-4.12.jar to /tmp/run_mutation.pl_14050_1789628306/21f/target/lib/junit/jars/junit-3.8.1.jar
+
+get-dep-junit.jar:
+
+get-custom-dep-jdepend.jar:
+
+get-dep-jdepend.jar:
+      [get] Getting: file:/home/sergi/defects4j/framework/projects/Cli/lib/jdepend/jdepend/2.5/jdepend-2.5.jar
+      [get] To: /tmp/run_mutation.pl_14050_1789628306/21f/target/lib/jdepend/jars/jdepend-2.5.jar
+
+get-deps:
+
+compile:
+    [javac] /tmp/run_mutation.pl_14050_1789628306/21f/build.xml:74: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile.tests:
+    [mkdir] Created dir: /tmp/run_mutation.pl_14050_1789628306/21f/target/test-classes
+    [javac] /tmp/run_mutation.pl_14050_1789628306/21f/build.xml:151: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 60 source files to /tmp/run_mutation.pl_14050_1789628306/21f/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/run_mutation.pl_14050_1789628306/21f/src/test/org/apache/commons/cli2/option/ArgumentTest.java:553: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertEquals(new Integer(20), commandLine.getValue(size, new Integer(20)));
+    [javac]                      ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/21f/src/test/org/apache/commons/cli2/option/ArgumentTest.java:553: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         assertEquals(new Integer(20), commandLine.getValue(size, new Integer(20)));
+    [javac]                                                                  ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/21f/src/test/org/apache/commons/cli2/util/HelpFormatterTest.java:413: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]                                               new Object[] { new Integer(-1) }), e.getMessage());
+    [javac]                                                              ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/21f/src/test/org/apache/commons/cli2/validation/NumberValidatorTest.java:134: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Integer max = new Integer(100);
+    [javac]                       ^
+    [javac] /tmp/run_mutation.pl_14050_1789628306/21f/src/test/org/apache/commons/cli2/validation/NumberValidatorTest.java:154: warning: [deprecation] Integer(int) in Integer has been deprecated
+    [javac]         Integer min = new Integer(100);
+    [javac]                       ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 9 warnings
+     [copy] Copying 1 file to /tmp/run_mutation.pl_14050_1789628306/21f/target/test-classes/org/apache/commons/cli2
+
+update.all.tests:
+
+mutation.test:
+     [echo] Running mutation analysis ...
+    [junit] MAJOR: Mutation analysis enabled
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Run 3 ordered test(s)to verify independence
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Preprocessing time: 0.07 seconds
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Serialize preprocessing results to preprocessing.ser
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Mutants generated: 268
+    [junit] MAJOR: Mutants covered:   146 (54.48%)
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Export coverage map to covMap.csv
+    [junit] MAJOR: Export test map to testMap.csv
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Run mutation analysis with 146 mutant(s) and 3 test(s).
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34m1/3 - org.apache.commons.cli2.commandline.WriteableCommandLineImplAgentTest (20ms / 61):[0m
+    [junit] MAJOR: 462 (32 / 61 / 146) -> AVG-RTPM: 7ms
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 32 (20-12-0) / 114
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34m2/3 - org.apache.commons.cli2.option.GroupImplAgentTest (21ms / 93):[0m
+    [junit] MAJOR: 876 (24 / 90 / 146) -> AVG-RTPM: 4ms
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 56 (43-13-0) / 90
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34m3/3 - org.apache.commons.cli2.WriteableCommandLineAgentTest (23ms / 39):[0m
+    [junit] MAJOR: 936 (0 / 15 / 146) -> AVG-RTPM: 4ms
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 56 (43-13-0) / 90
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Summary:
+    [junit] MAJOR: 
+    [junit] MAJOR: Analysis time                 : 0.94 seconds
+    [junit] MAJOR: Mutation score                : 20.90% (38.36%)
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME): 56 (43-13-0)
+    [junit] MAJOR: Mutants live                  : 90
+    [junit] MAJOR: Mutant executions             : 166
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Export summary of results to summary.csv
+    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_14050_1789628306/21f/kill.csv
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34mDone![0m
+    [junit] MAJOR: ------------------------------------------------------------
+
+BUILD SUCCESSFUL
+Total time: 2 seconds
