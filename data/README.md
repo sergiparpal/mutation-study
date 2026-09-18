@@ -165,7 +165,7 @@ defects4j work.
 For each bug, on the **fixed** version:
 
 - `defects4j mutation -r` — the relevant developer test suite.
-- `defects4j mutation -t <trigger>` — once per trigger test, in isolation.
+- `defects4j mutation -t` with a single trigger test — once per trigger test, in isolation.
 - `diff -ru` between buggy and fixed `dir.src.classes` — to know which lines
   the fix touches.
 
@@ -439,7 +439,7 @@ mistake for results:
   now falls back to `junit.textui.TestRunner`.
 - **cli2 declares jars it never materialises.** `cp.test` lists
   `target/lib/junit/jars/junit-3.8.1.jar`, which is absent; the jars Defects4J
-  keeps under `framework/projects/<P>/lib` are appended to the classpath.
+  keeps under the per-project `lib` directory under `framework/projects` are appended to the classpath.
 - **Suites that do not compile in isolation.** Cli-21 and Csv-3 extended test
   helpers from the project's test tree (`CLITestCase`, `TokenMatchers`), which
   compile in the working copy but not inside the packaged archive. The M-arm
