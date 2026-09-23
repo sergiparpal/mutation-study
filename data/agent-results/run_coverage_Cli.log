@@ -1,34 +1,102 @@
-Extract test suite......................................................... Executing test suite: Cli-12f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-32f-evosuite.1.tar.bz2
 OK
-Checking out aa050a69 to /tmp/run_coverage.pl_107571_1789640198/12f........ OK
+Checking out 777cb810 to /tmp/run_coverage.pl_812088_1789806572/32f........ OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
 Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_coverage.pl_812088_1789806572/32f/maven-bui OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 777cb810:23df3834..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-32f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Broken test suite: Cli-32f-evosuite.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-32f-agent.1.tar.bz2
+OK
+Check out program version: Cli-32f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Cli-32f-spec.1.tar.bz2
+OK
+Check out program version: Cli-32f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Cli-28f-spec.1.tar.bz2
+OK
+Checking out 3433f467 to /tmp/run_coverage.pl_812088_1789806572/28f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_coverage.pl_812088_1789806572/28f/maven-bui OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 3433f467:10b14afb..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-28f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Cli-28f-agent.1.tar.bz2
+OK
+Check out program version: Cli-28f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Cli-28f-evosuite.1.tar.bz2
+OK
+Check out program version: Cli-28f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Broken test suite: Cli-28f-evosuite.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-21f-spec.1.tar.bz2
+OK
+Checking out 9cd78b4c to /tmp/run_coverage.pl_812088_1789806572/21f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff aa050a69:b8f82593..................................................... OK
+Diff 9cd78b4c:028893da..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Cli-12f......................................... OK
+Check out program version: Cli-21f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK
 Running ant (run.gen.tests)................................................ OK
 Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-12f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-15f-spec.1.tar.bz2
 OK
-Check out program version: Cli-12f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (coverage.instrument).......................................... OK
-Running ant (run.gen.tests)................................................ OK
-Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-15f-agent.1.tar.bz2
-OK
-Checking out a9313916 to /tmp/run_coverage.pl_107571_1789640198/15f........ OK
+Checking out a9313916 to /tmp/run_coverage.pl_812088_1789806572/15f........ OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -46,7 +114,7 @@ Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK
 Running ant (run.gen.tests)................................................ OK
 Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-15f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-15f-agent.1.tar.bz2
 OK
 Check out program version: Cli-15f......................................... OK
 Running ant (compile)...................................................... OK
@@ -54,9 +122,46 @@ Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK
 Running ant (run.gen.tests)................................................ OK
 Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-10f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-17f-agent.1.tar.bz2
 OK
-Checking out d72a578a to /tmp/run_coverage.pl_107571_1789640198/10f........ OK
+Checking out 9c5ce350 to /tmp/run_coverage.pl_812088_1789806572/17f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 9c5ce350:cfbb46ad..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-17f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Cli-17f-evosuite.1.tar.bz2
+OK
+Check out program version: Cli-17f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Broken test suite: Cli-17f-evosuite.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-17f-spec.1.tar.bz2
+OK
+Check out program version: Cli-17f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Cli-10f-evosuite.1.tar.bz2
+OK
+Checking out d72a578a to /tmp/run_coverage.pl_812088_1789806572/10f........ OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Run post-checkout hook..................................................... OK
@@ -73,6 +178,7 @@ Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK
 Running ant (run.gen.tests)................................................ OK
 Running ant (coverage.report).............................................. OK
+Broken test suite: Cli-10f-evosuite.1.tar.bz2
 Extract test suite......................................................... Executing test suite: Cli-10f-agent.1.tar.bz2
 OK
 Check out program version: Cli-10f......................................... OK
@@ -81,15 +187,23 @@ Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK
 Running ant (run.gen.tests)................................................ OK
 Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-38f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-10f-spec.1.tar.bz2
 OK
-Checking out ac2a1c85 to /tmp/run_coverage.pl_107571_1789640198/38f........ OK
+Check out program version: Cli-10f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Cli-38f-evosuite.1.tar.bz2
+OK
+Checking out ac2a1c85 to /tmp/run_coverage.pl_812088_1789806572/38f........ OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Copy generated Ant build file.............................................. OK
 Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_coverage.pl_107571_1789640198/38f/maven-bui OK
+Backing up build file: /tmp/run_coverage.pl_812088_1789806572/38f/maven-bui OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
@@ -110,9 +224,17 @@ Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK
 Running ant (run.gen.tests)................................................ OK
 Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-17f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-38f-spec.1.tar.bz2
 OK
-Checking out 9c5ce350 to /tmp/run_coverage.pl_107571_1789640198/17f........ OK
+Check out program version: Cli-38f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Cli-12f-spec.1.tar.bz2
+OK
+Checking out aa050a69 to /tmp/run_coverage.pl_812088_1789806572/12f........ OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Run post-checkout hook..................................................... OK
@@ -121,96 +243,27 @@ Excluding broken/flaky tests............................................... OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff 9c5ce350:cfbb46ad..................................................... OK
+Diff aa050a69:b8f82593..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Cli-17f......................................... OK
+Check out program version: Cli-12f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK
 Running ant (run.gen.tests)................................................ OK
 Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-17f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-12f-evosuite.1.tar.bz2
 OK
-Check out program version: Cli-17f......................................... OK
+Check out program version: Cli-12f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK
 Running ant (run.gen.tests)................................................ OK
 Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-28f-agent.1.tar.bz2
+Broken test suite: Cli-12f-evosuite.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Cli-12f-agent.1.tar.bz2
 OK
-Checking out 3433f467 to /tmp/run_coverage.pl_107571_1789640198/28f........ OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_coverage.pl_107571_1789640198/28f/maven-bui OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 3433f467:10b14afb..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Cli-28f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (coverage.instrument).......................................... OK
-Running ant (run.gen.tests)................................................ OK
-Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-28f-spec.1.tar.bz2
-OK
-Check out program version: Cli-28f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (coverage.instrument).......................................... OK
-Running ant (run.gen.tests)................................................ OK
-Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-21f-spec.1.tar.bz2
-OK
-Checking out 9cd78b4c to /tmp/run_coverage.pl_107571_1789640198/21f........ OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 9cd78b4c:028893da..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Cli-21f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (coverage.instrument).......................................... OK
-Running ant (run.gen.tests)................................................ OK
-Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-32f-spec.1.tar.bz2
-OK
-Checking out 777cb810 to /tmp/run_coverage.pl_107571_1789640198/32f........ OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_coverage.pl_107571_1789640198/32f/maven-bui OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 777cb810:23df3834..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Cli-32f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (coverage.instrument).......................................... OK
-Running ant (run.gen.tests)................................................ OK
-Running ant (coverage.report).............................................. OK
-Extract test suite......................................................... Executing test suite: Cli-32f-agent.1.tar.bz2
-OK
-Check out program version: Cli-32f......................................... OK
+Check out program version: Cli-12f......................................... OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (coverage.instrument).......................................... OK

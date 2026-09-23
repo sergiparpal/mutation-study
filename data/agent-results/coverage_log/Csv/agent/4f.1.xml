@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.28" branch-rate="0.23076923076923078" lines-covered="28" lines-valid="100" branches-covered="12" branches-valid="52" complexity="2.9444444444444446" version="2.0.3" timestamp="1789641875966">
+<coverage line-rate="0.28" branch-rate="0.23076923076923078" lines-covered="28" lines-valid="100" branches-covered="12" branches-valid="52" complexity="2.9444444444444446" version="2.0.3" timestamp="1789807341267">
 	<sources>
 		<source>src/main/java</source>
 	</sources>

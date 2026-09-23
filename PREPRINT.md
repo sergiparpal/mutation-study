@@ -1,7 +1,52 @@
-# Reading the Repaired Code: An Evaluation Artifact in Agent-Based Test Generation
+# Oracle Provenance Is Invisible to Mutation Score
 
-*Draft. Method, results and threats to validity are written. Related work is a
-stub pending a read of the primary sources.*
+### Agent-Generated Test Suites on Defects4J, With and Without the Implementation
+
+*Draft.*
+
+---
+
+## Abstract
+
+Evaluations of automated test generation on Defects4J generate a suite against
+the **fixed** revision of a bug and then check it against the buggy one. For a
+language-model agent this is not neutral: the agent reads the code it is
+writing tests for, and on the fixed revision that code already contains the
+repair.
+
+We generate two suites per bug with the same agent, model and instructions,
+varying only whether the agent can read the implementation. In the
+implementation-visible arm it works inside the checked-out project; in the
+specification-only arm it works in a sandbox with generated javadoc and a
+compiled jar, sees no source, and may not execute its tests. Over 36 bugs from
+four Java projects measured in both arms, real-fault detection falls from **72%
+to 14%**. Every fault the specification-only suites catch is also caught by the
+implementation-visible suites and none the other way round (exact McNemar,
+*p* = 9.5 × 10⁻⁷).
+
+**Mutation score does not register the difference: 72% against 70%.** Adding an
+EvoSuite baseline over the same subjects shows the failure is not confined to
+our manipulation. Ranked by mutation score the three populations are 72%, 70%
+and 59%; ranked by fault detection they are 71%, 14% and 34%. The
+specification-only suites score eleven points higher on mutation than EvoSuite
+and detect less than half as many faults. Line coverage moves in the right
+direction but far too little, from 85% to 73%.
+
+Mutation score measures the strength of a suite's assertions. It does not
+measure where those assertions' expected values came from, and provenance
+leaves no trace in execution. This bears on how agent-written suites are
+evaluated, and on proposals to improve them by feeding mutation results back to
+the generating agent — a loop that optimises precisely the quantity that is
+blind to the distinction.
+
+Three further observations. Writing tests from javadoc alone yields wrong
+expectations in only 3.3% of tests, so the specification-only arm is not
+guesswork: it catches a small, coherent class of faults, those where the
+implementation contradicts documented contract. The agent and EvoSuite are
+complementary rather than ordered — 17 faults are found only by the agent, 4
+only by EvoSuite, 6 by neither. And Defects4J checkouts ship the fix commit in
+their git history, subject line included; we remove it before generation, a
+control we have not seen reported elsewhere.
 
 ---
 
@@ -35,7 +80,10 @@ implementation-visible suites; none is caught only by the former. An exact
 McNemar test on the 21 discordant pairs gives *p* = 9.5 × 10⁻⁷.
 
 **Mutation score does not move: 72% against 70%.** Line coverage falls from 85%
-to 73%, far less than detection does. Both sets of suites discriminate
+to 73%, far less than detection does. Adding an EvoSuite baseline over the same
+subjects makes the metric's failure sharper still: ranked by mutation score the
+three populations are 72%, 70% and 59%, while their detection rates are 71%,
+14% and 34% — the middle two in reverse order. Both sets of suites discriminate
 behaviour to essentially the same degree; what differs is where their
 expectations came from, and no execution-based metric observes that.
 
@@ -43,12 +91,19 @@ Contributions:
 
 1. A controlled measurement of how much of an agent's apparent fault-detection
    ability on Defects4J is attributable to reading the repaired implementation
-   (roughly five sixths of it), on real faults from four real projects.
+   (roughly five sixths of it), on real faults from four real projects. That
+   the regression evaluation setting flatters generated suites is not a new
+   observation — Dinella et al. state it in 2022 (§6) — but to our knowledge it
+   has not been quantified for an agent that reads the codebase.
 2. The finding that **mutation score and coverage are near-blind to this
    difference**, which bears directly on how agent-written suites are currently
    evaluated and on proposals to use mutation feedback to improve them.
 3. A characterisation of what specification-only generation does catch: faults
    where the implementation contradicts a contract the documentation states.
+   With an EvoSuite baseline over the same subjects, which shows the two
+   approaches to be complementary rather than ordered — 17 faults are found
+   only by the agent, 4 only by EvoSuite — and which shows mutation score
+   ranking three suite populations in the wrong order.
 4. A contamination control that appears not to be standard practice — Defects4J
    checkouts ship the fix commit in their git history, including its subject
    line naming the fault.
@@ -143,9 +198,9 @@ and one trivial passing test.
 **Version-control history is removed.** A Defects4J checkout ships the
 project's full git history, including the fix commit. For Lang-13 the log
 subject reads `[LANG-788] SerializationUtils throws ClassNotFoundException when
-cloning primitive classes`, and the `D4J_<P>_<n>_BUGGY_VERSION` /
-`_FIXED_VERSION` tags make `git diff` yield the patch directly. A pilot run
-without this control produced a test citing "LANG-788" in a comment. `.git` is
+cloning primitive classes`, and the per-bug `BUGGY_VERSION` / `FIXED_VERSION`
+tags make `git diff` yield the patch directly. A pilot run without this control
+produced a test citing "LANG-788" in a comment. `.git` is
 therefore deleted before the agent starts, and the prompt forbids git and web
 search.
 
@@ -204,10 +259,14 @@ the treatment:
 | Bug | Arms affected | Reason |
 |---|---|---|
 | Cli-21, Csv-3 | M | Suite extended a test helper from the project's test tree, so it compiles in the working copy but not as a standalone archive |
-| Gson-14, Gson-16 | both, mutation only | Major's mml compiler rejects the class name: `invalid scope: com.google.gson.internal.$Gson$Types` |
+| Gson-14, Gson-16 | all, mutation and coverage | Major's mml compiler rejects the class name: `invalid scope: com.google.gson.internal.$Gson$Types`. EvoSuite's generated suite for the same class does not compile either — `illegal start of expression` on the `$` in the identifier. Three independent tools fail on this one class, which is why we treat it as a tooling limitation rather than a property of the bugs |
+| Cli-15, Cli-21 | EvoSuite | `gen_tests` produced no output and no log; both are `cli2` subjects, whose declared classpath references jars that the checkout never materialises |
 
-This leaves 36 M-arm suites and 38 S-arm suites fully measured, with **36 bugs
-present in both arms**. All paired figures use those 36.
+This leaves 36 M-arm suites and 38 S-arm suites with all three measurements,
+and **36 bugs present in both arms**. All paired figures use those 36. Gson-14
+and Gson-16 do have detection and coverage figures; they are omitted from the
+tables so that every reported arm total covers the same set of suites in all
+three metrics.
 
 ---
 
@@ -238,9 +297,13 @@ Reported per arm over every suite measured, including the unpaired ones:
 |---|---|---|---|---|
 | Sonnet, implementation-visible | 36 | 26/36 (72%) | 72% | 85% |
 | Sonnet, specification-only | 38 | 6/38 (16%) | 70% | 73% |
-| Opus, implementation-visible † | 6 | 6/6 (100%) | 80% | 89% |
+| EvoSuite | 36 | 13/36 (36%) | 59% | 85% |
+| Opus, implementation-visible † | 6 | 6/6 | 79% | 89% |
 
-† Not a designed comparison; see §2.3.
+† Six bugs, and the first six of the sample rather than a random subset: the
+run switched models on exhausting quota (§2.3). The detection figure is
+reported as a count rather than a percentage to discourage reading it as a
+model comparison.
 
 ### 3.2 Consistency across projects
 
@@ -257,8 +320,8 @@ style and documentation density:
 ### 3.3 What the specification-only arm does detect
 
 The five faults detected by the S arm are Cli-32, Csv-4, Csv-6, Gson-15 and
-Lang-13. Four of the five are cases where the implementation contradicts a
-contract the javadoc states:
+Lang-13. Four are cases where the implementation contradicts a contract the
+javadoc states:
 
 - **Csv-4** — a documented accessor returns `null` in a documented case, and
   the value is used without a guard.
@@ -269,6 +332,13 @@ contract the javadoc states:
 - **Lang-13** — primitive class objects fail a documented deserialization
   contract.
 
+The fifth, **Cli-32**, is detected by a different route. Its faulty loop reads
+`text.charAt(pos)` under the condition `pos <= text.length()`, so a boundary
+input throws `StringIndexOutOfBoundsException`. No knowledge of the intended
+wrapping semantics is needed to expose it: any test that reaches that boundary
+does, and a crash needs no oracle at all. It is the only one of the five that
+the specification-only arm could have caught without the specification.
+
 The specification-only arm detects faults that are visible from the
 specification, and very little else. This is consistent with the mechanism the
 design isolates: without the implementation, the agent's only oracle is the
@@ -277,30 +347,59 @@ disagree.
 
 ### 3.4 Writing from documentation produces few wrong expectations
 
-Across the S arm, **59 of 1806 tests (3%)** were disabled for failing on the
-fixed revision. The rate varies by project in the expected direction:
+Across the S arm, **59 of 1806 tests (3.3%)** were disabled for failing on the
+fixed revision. Per project:
 
-| project | prune rate |
-|---|---|
-| Commons Lang | ~0% |
-| Commons CSV | ~2% |
-| Gson | ~6% |
+| project | pruned / total | rate |
+|---|---|---|
+| Commons Lang | 4 / 541 | 0.7% |
+| Commons CSV | 10 / 467 | 2.1% |
+| Commons CLI | 12 / 221 | 5.4% |
+| Gson | 33 / 577 | 5.7% |
 
-Commons Lang's javadoc is unusually explicit; Gson's reflection and generics
-code is documented more sparsely. The overall figure retires the hypothesis
-that specification-only generation would largely be guesswork: agents write
-tests from javadoc that are almost always correct about behaviour, and still
+The rate spans an order of magnitude across subjects. Commons Lang's javadoc is
+unusually explicit, and its rate is under one percent; Gson documents
+reflection and generics code far more sparsely, and Commons CLI's older
+`cli2` tree is sparser still. Documentation density plausibly explains the
+spread, though we did not measure it and cannot separate it from differences in
+API complexity.
+
+Even at the high end the rate is low. This retires the hypothesis that
+specification-only generation would largely be guesswork: agents write tests
+from javadoc that are almost always correct about what the code does, and still
 fail to catch real faults.
 
-### 3.5 Baselines
+### 3.5 Search-based baseline
 
-Defects4J ships EvoSuite and Randoop via `gen_tests`. On Lang-13, an EvoSuite
-suite generated for the same class is classified `Pass` — it does not detect
-the fault — where both agent arms detect it. On the same bug, the developer
-test suite scores 70% mutation against 77% for the M-arm agent suite.
+EvoSuite, invoked through Defects4J's `gen_tests` with a 120-second budget per
+class, produced suites for 38 of the 40 bugs; the two failures are the `cli2`
+subjects (§2.7). Like the implementation-visible arm, EvoSuite generates
+against the fixed revision and has the same access to the repaired code.
 
-These are single-bug observations and are reported as context, not as a
-systematic comparison.
+Over the 35 bugs measured for all three generators:
+
+| | detection | mutation | coverage |
+|---|---|---|---|
+| agent, implementation-visible | 25/35 (71%) | 72% | 85% |
+| EvoSuite | 12/35 (34%) | 59% | 85% |
+| agent, specification-only | 5/35 (14%) | 70% | 73% |
+
+EvoSuite falls between the two arms. Since it has the same access to the
+repaired implementation as the implementation-visible arm, the gap from 71% to
+34% is attributable to the generator rather than to the information available;
+the gap from 71% to 14% is attributable to the information.
+
+**The two approaches are complementary, not ordered.** Of the 35 bugs, 8 are
+detected by both, 17 by the agent alone, 4 by EvoSuite alone, and 6 by neither
+— a union of 29 (83%). A search-based generator that asserts observed behaviour
+without interpreting it still reaches four faults that the agent misses.
+
+**Mutation score does not rank the three populations correctly.** Ordered by
+mutation score the prediction would be agent (72%) > specification-only (70%) >
+EvoSuite (59%); the observed detection order is agent (71%) > EvoSuite (34%) >
+specification-only (14%). The specification-only suites score eleven points
+higher on mutation than EvoSuite and detect less than half as many faults. The
+metric's failure is therefore not confined to the two arms of our manipulation.
 
 ### 3.6 Cost
 
@@ -332,30 +431,50 @@ code. The specification-only arm's 14% is closer to that question but is not
 the answer either, because withholding the implementation removes information a
 real developer would have.
 
-### 4.2 Mutation score measures discrimination, not provenance
+### 4.2 Mutation score measures strength, not provenance
 
 The central observation is that the two arms are almost indistinguishable under
 mutation analysis — 72% against 70% on the same 36 bugs — while differing
 five-fold in fault detection.
 
-This is not a failure of mutation analysis on its own terms. Mutation score
-asks whether a suite's assertions are strong enough to distinguish the program
-from small variants of it. Both arms produce suites that do: the
+This is not a failure of mutation analysis on its own terms, and it does not
+contradict the established result that mutation score predicts real-fault
+detection (Just et al., FSE 2014; see §6). Mutation score asks whether a
+suite's assertions are strong enough to distinguish the program from small
+syntactic variants of it. Both arms produce suites that are: the
 specification-only suites assert on returned values, exact exception messages
-and persisted state, and kill mutants at the same rate. What differs between
-the arms is the **provenance of the expected values** — read off the
-implementation, or derived from documentation — and provenance leaves no trace
-in execution. No metric defined over program behaviour can see it.
+and persisted state, and kill mutants at the same rate as suites written with
+the source in view.
+
+What the metric cannot see is where the expected values came from. Just et al.
+establish the correlation by varying suite *strength* while holding the
+generation process fixed — every suite in their study, developer-written or
+search-based, derives its expectations from the same implementation. We hold
+strength roughly fixed and vary the *information available to the generator*.
+Along that second axis the metric is uninformative.
+
+The EvoSuite baseline sharpens this. Across three populations the metric does
+not merely fail to separate our two arms; it orders them wrongly. Ranked by
+mutation score: implementation-visible 72%, specification-only 70%, EvoSuite
+59%. Ranked by fault detection: implementation-visible 71%, EvoSuite 34%,
+specification-only 14%. The middle two swap places, and not marginally — the
+population with the higher mutation score detects less than half as many
+faults.
+
+Stated as one sentence: **mutation score tracks the strength of a suite's
+assertions, not the provenance of its expectations.** Provenance leaves no
+trace in execution, so no metric defined over program behaviour can recover it.
 
 The practical consequence for anyone evaluating agent-written suites: a high
 mutation score is evidence that the tests exercise the code and that their
 assertions bite. It is not evidence that the expectations are correct, and it
-cannot be used to argue that a generated suite would have caught the bugs the
+cannot support the claim that a generated suite would have caught the faults a
 project actually had.
 
-This also bears on proposals to close the loop by feeding mutation results back
-to the generating agent. Such a loop optimises exactly the quantity that our
-measurement shows to be insensitive to the difference that matters.
+This bears directly on proposals to close the loop by feeding mutation results
+back to the generating agent. Such a loop optimises precisely the quantity our
+measurement shows to be insensitive to the difference that matters — and an
+agent that can read the implementation has a cheap way to raise it.
 
 ### 4.3 Oracle quality, not oracle presence
 
@@ -397,14 +516,19 @@ and we have not built or evaluated such a tool. We report it as the one
 approach the data supports, in contrast to mutation feedback, which the data
 does not.
 
-### 4.6 An untested variant
+### 4.6 The condition we did not run
 
 The complementary condition — the agent writing tests against the **buggy**
-revision — is not covered here. A faithful mirror would then certify the fault:
-the suite would pass on the buggy revision and fail on the fixed one. The
-harness supports this with a one-character change, and it would give a direct
-measure of how often agent-written tests lock a defect in place rather than
-merely failing to find it.
+revision — is not covered by our arms, though it is well represented in the
+literature: it is TOGA's evaluation setting, TDD-Bench Verified's premise, and
+half of Konstantinou et al.'s design (§6).
+
+What would be specific to this harness is the *certification* rate: how often a
+suite written against the buggy revision passes on it and fails on the fixed
+one, locking the defect in place rather than merely missing it. Published work
+measures how often such suites fail to detect; none that we found reports how
+often they actively encode the fault as expected behaviour. The harness
+supports the condition with a one-character change to the checkout.
 
 ## 5. Threats to validity
 
@@ -526,15 +650,56 @@ different corpus.
 
 ## 6. Related work
 
-> **Partially verified.** The Konstantinou et al. subsection below has been
-> checked against the paper itself. The remaining entries are still assembled
-> from abstracts and must be read before publication.
+All figures below were checked against the bodies of the papers themselves,
+not against abstracts or search results.
+
+### The regression evaluation setting was already named
+
+Dinella, Ryan, Mytkowicz and Lahiri, *"TOGA: A Neural Method for Test Oracle
+Generation"* (ICSE 2022) state the problem this paper quantifies. Their framing
+of the oracle task is that synthesising a functional oracle "must capture the
+intended functionality rather than the implemented functionality", and they
+explicitly set their evaluation apart from the standard one:
+
+> "It is important to note that our evaluation setting is fundamentally
+> different from the regression evaluation setting in which the Defects4J
+> benchmark is most often used. In a regression evaluation, tests are generated
+> on the fixed program version and evaluated on the buggy version. Regression
+> studies of randomized test generation tools report finding larger numbers of
+> bugs than in our setting as they use regression assumptions to generate higher
+> quality oracles. In our setting where tests are generated on the buggy program
+> version, regression test oracles will not find bugs as they assume the
+> observed buggy behavior is correct."
+
+**The artifact is therefore not our discovery, and we do not claim it.** What
+this paper adds is the magnitude — 72% against 14% on the same 36 bugs with the
+same agent — measured in the agentic setting rather than argued for
+neural-oracle inference over EvoSuite prefixes, and the demonstration that the
+metrics ordinarily reported alongside detection are blind to it.
+
+Hossain, Filieri, Dwyer, Elbaum and Visser, *"Neural-Based Test Oracle
+Generation: A Large-Scale Evaluation and Lessons Learned"* (ESEC/FSE 2023)
+replicate and extend TOGA over 25 Java systems, 223.5K test cases and 51K
+injected faults. TOGA's Defects4J result does not survive the extension. Where
+the original reports 69% accuracy for assertion-oracle inference and 86% for
+exceptional oracles, they measure 52% and 75%. TOGA declines to emit any
+assertion in 62% of the cases where it correctly predicts one is needed, and
+more than 47% of the assertions it does emit are false positives. On their
+mutation-based measure, EvoSuite's own assertions kill 30,411 of 51,385
+mutants and TOGA's add 105 — 0.3%.
+
+Two points carry over to our setting. The first is the caution: a benchmark
+result that looks strong on Defects4J need not survive a broader evaluation,
+which is the same concern as ours approached from the other side. The second is
+that TOGA is explicitly designed "to leverage natural language specifications
+(docstrings)" — the same source of truth as our specification-only arm, seven
+years earlier and with a far smaller model.
 
 ### Error propagation in code-then-test workflows
 
 Konstantinou, Tambon and Papadakis, *"On the risk of coding before testing: An
 empirical study on LLM-based test generation workflow"* (arXiv:2607.05139)
-study the complementary condition to ours. Their pipeline generates candidate
+study the complementary condition. Their pipeline generates candidate
 implementations with an LLM, retains only the faulty ones — "we discard the
 cases that the model is generating correct code and keep only those that are
 faulty" — and compares test suites generated from that faulty implementation
@@ -544,70 +709,86 @@ description; exposing the implementation reduces detection by 9 to 18 points
 across five models. They name the phenomenon *error propagation*.
 
 Their subjects are HumanEval+, MBPP and BigCodeBench: Python programming tasks
-with LLM-generated faulty implementations. Their specification is the
-benchmark's natural-language task description.
+with LLM-generated faults, and their specification is the benchmark's
+natural-language task description. They measure fault detection and statement
+coverage — finding "no consistent relationship between statement coverage and
+fault detection", which independently corroborates part of our result on a
+different language, corpus and set of models — but not mutation score.
 
-Taken together, the two studies cover four conditions along one axis — the
-quality of the oracle available to the generating agent:
+We also adopt their distinction between **fault triggering**, where the test
+provokes behaviour differing from the reference, and **fault detection**, which
+additionally requires the assertion to be correct. Our harness reports
+detection only.
+
+### Tests written before the fix exists
+
+Ahmed, Hirzel, Pan, Shinnar and Sinha, *"TDD-Bench Verified: Can LLMs Generate
+Tests for Issues Before They Get Resolved?"* (arXiv:2412.02883, IBM Research)
+build a benchmark of 449 issues mined from GitHub and measure *fail-to-pass*
+rate — a test that fails before the issue is resolved and passes after — which
+is the same criterion as the `Fail` classification used here. Their Auto-TDD
+takes an issue description plus the codebase *prior* to resolution; its best
+result is 23.6% with GPT-4o on their benchmark.
+
+The comparison point closest to our setting is one they cite rather than one
+they run: LIBRO, prompted with Defects4J issues, reaches **19.9% fail-to-pass
+at pass@1** (33% at pass@50, i.e. fifty attempts per issue), and Plein et al.
+reach 6% with ChatGPT on the same corpus. Same benchmark family as ours, a
+single attempt, and the model is given a natural-language description of what
+is wrong — which our specification-only arm is not.
+
+### The four conditions
 
 | oracle available to the agent | detection | source |
 |---|---|---|
 | complete natural-language specification | 25% | Konstantinou et al. |
-| partial documentation (javadoc) | 14% | this work |
+| issue description + pre-fix codebase | 19.9% (pass@1) | LIBRO on Defects4J, via TDD-Bench Verified |
+| partial API documentation (javadoc) | 14% | this work |
 | faulty implementation | 14% | Konstantinou et al. |
 | **repaired implementation** | **72%** | this work |
 
-The two middle rows agreeing at 14% is coincidence; the figures come from
-different corpora, languages and models, and are not directly comparable. The
-ordering is the point. A complete specification is a usable independent
-oracle. Partial documentation is a weak one. A faulty implementation is an
-actively misleading one. And a *repaired* implementation is not an oracle at
-all in the relevant sense: it hands the agent the answer.
+The figures are not directly comparable — different corpora, languages, models
+and fault distributions — and the two 14% entries agreeing is coincidence. The
+ordering is the point, and the last row is the one that concerns evaluation
+methodology rather than development practice.
 
-Three differences position this work against theirs:
+### Coverage and mutants as proxies
 
-- **Subjects.** Real faults from four real projects, with the fault
-  distribution that comes with them, rather than LLM-generated faults on
-  benchmark tasks.
-- **Metrics.** They measure fault detection and statement coverage. They do not
-  measure mutation score in this contrast, and the insensitivity of mutation
-  score to the manipulation is our central observation. Their coverage result
-  — "no consistent relationship between statement coverage and fault
-  detection" — independently corroborates half of ours, on a different
-  language, corpus and set of models.
-- **Framing.** Their threat to validity concerns coupled generation pipelines
-  in which one model produces both code and tests. Ours concerns the
-  evaluation protocol of real-fault benchmarks, where the suite is generated
-  against the repaired revision. The two are adjacent and distinct: theirs is
-  about development workflows, ours about measurement.
+Inozemtseva and Holmes, *"Coverage Is Not Strongly Correlated with Test Suite
+Effectiveness"* (ICSE 2014), generated 31,000 suites over five Java systems and
+found only a low to moderate correlation between coverage and effectiveness
+once suite size is controlled for, and that stronger coverage criteria add no
+insight. Note that they operationalise effectiveness as **mutation score**, not
+as real-fault detection; their result therefore concerns the relationship
+between two proxies, and is consistent with the pattern we observe, where
+coverage falls from 85% to 73% while mutation score barely moves.
 
-We also adopt their distinction between **fault triggering** — the test
-provokes behaviour differing from the reference — and **fault detection**,
-which additionally requires the assertion to be correct. The gap between the
-two measures wrongly expressed assertions. Our harness reports detection only;
-reporting triggering as well is straightforward and left for future work.
+Just, Jalali, Inozemtseva, Ernst, Holmes and Fraser, *"Are Mutants a Valid
+Substitute for Real Faults in Software Testing?"* (FSE 2014), examined 357 real
+faults in five applications totalling 321,000 lines. They report that 73% of
+real faults are coupled to mutants from commonly used operators, that 17% are
+coupled to no mutant at all — mostly faults involving algorithmic changes or
+code deletion — and that mutation score correlates positively with real-fault
+detection, significantly more strongly than statement coverage does, when
+controlling for coverage.
 
-### Other threads to check
+**Our result is not in tension with theirs, because the two vary different
+things.** Just et al. hold the generation process roughly constant and vary
+suite *strength*: for a given fault they compare the suites that detect it
+against those that do not, within the same program, and the detecting suites
+have significantly higher mutation scores (in 182 of 194 faults across their
+five subjects, Â₁₂ between 0.66 and 0.81). Every suite in their study —
+developer-written and search-based alike — derives its expectations from the
+same implementation.
 
-*(Not yet verified against sources.)*
-
-- **Just, Jalali, Inozemtseva, Ernst, Holmes and Fraser, "Are Mutants a Valid
-  Substitute for Real Faults in Software Testing?"** (FSE 2014). The
-  foundational study on mutant–real-fault coupling, by the authors of
-  Defects4J, over 357 real faults, reported to find a significant correlation
-  between mutant detection and real-fault detection, independent of coverage.
-  Our result does not contradict it: within each arm the suites may couple
-  normally. What we observe is that the metric does not separate two
-  *populations* of suites. This needs stating carefully.
-- **Inozemtseva and Holmes** on coverage as a poor proxy for suite
-  effectiveness, and recent replication work questioning those correlations for
-  LLM-generated suites specifically.
-- **Oracle-generation work** (TOGA, TOGLL and successors), reported to note
-  that models are "prone to asserting the current (potentially buggy)
-  implementation" — the mirror hypothesis already stated in the literature,
-  and to be cited as such rather than presented as new.
-- **TDD-Bench Verified** (Ahmed et al.) for tests written before a fix exists,
-  the closest published framing to our specification-only arm.
+We hold suite strength roughly constant, at 72% and 70%, and vary the
+*information available to the generator*. Along that axis the metric predicts
+nothing. The two compose into one statement: **mutation score tracks the
+strength of a suite's assertions, not the provenance of its expectations.** It
+is a sound proxy when strength is what varies between the suites compared,
+which is the setting Just et al. establish; it is uninformative when provenance
+varies, a setting their design could not surface because no suite in it had an
+oracle independent of the code.
 
 ## Data availability
 

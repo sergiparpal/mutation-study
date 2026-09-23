@@ -1,182 +1,6 @@
-Extract test suite......................................................... Executing test suite: Lang-8f-agentopus.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-43f-agent.1.tar.bz2
 OK
-Checking out 04babff3 to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 04babff3:cfab1e4f..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-8f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Checking out 04babff3 to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 04babff3:cfab1e4f..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-8b......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-8f-spec.1.tar.bz2
-OK
-Check out program version: Lang-8f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-8b......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-8f-agent.1.tar.bz2
-OK
-Check out program version: Lang-8f......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-8b......................................... OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-34f-agent.1.tar.bz2
-OK
-Checking out a2bb711a to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff a2bb711a:5c3ec55e..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-34f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Checking out a2bb711a to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff a2bb711a:5c3ec55e..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-34b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-34f-spec.1.tar.bz2
-OK
-Check out program version: Lang-34f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-34b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-21f-agent.1.tar.bz2
-OK
-Checking out 3e5d5dc9 to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 3e5d5dc9:a655a3fa..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-21f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Checking out 3e5d5dc9 to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 3e5d5dc9:a655a3fa..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-21b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-21f-spec.1.tar.bz2
-OK
-Check out program version: Lang-21f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-21b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-52f-agent.1.tar.bz2
-OK
-Checking out c22d9d59 to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
+Checking out a38e2e94 to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -191,19 +15,18 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff c22d9d59:ed7e9b43..................................................... OK
+Diff a38e2e94:eb8b39b1..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Lang-52f........................................ OK
+Check out program version: Lang-43f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out c22d9d59 to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
+Checking out a38e2e94 to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -218,86 +41,52 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff c22d9d59:ed7e9b43..................................................... OK
+Diff a38e2e94:eb8b39b1..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Lang-52b........................................ OK
+Check out program version: Lang-43b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-52f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-43f-evosuite.1.tar.bz2
 OK
-Check out program version: Lang-52f........................................ OK
+Check out program version: Lang-43f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-52b........................................ OK
+Check out program version: Lang-43b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-36f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-43f-agentopus.1.tar.bz2
 OK
-Checking out 26bc3fe0 to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
+Check out program version: Lang-43f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-43b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-43f-spec.1.tar.bz2
+OK
+Check out program version: Lang-43f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-43b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-63f-agent.1.tar.bz2
+OK
+Checking out 1d5c03fa to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 26bc3fe0:506bd018..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-36f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Checking out 26bc3fe0 to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 26bc3fe0:506bd018..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-36b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-36f-spec.1.tar.bz2
-OK
-Check out program version: Lang-36f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-36b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-56f-spec.1.tar.bz2
-OK
-Checking out e9e167f9 to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
 Apply patch................................................................ OK
 Apply patch................................................................ OK
 Apply patch................................................................ OK
@@ -310,22 +99,21 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff e9e167f9:c47d6ce5..................................................... OK
+Diff 1d5c03fa:e91541fc..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Lang-56f........................................ OK
+Check out program version: Lang-63f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out e9e167f9 to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
+Checking out 1d5c03fa to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
 Apply patch................................................................ OK
 Apply patch................................................................ OK
 Apply patch................................................................ OK
@@ -338,41 +126,41 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff e9e167f9:c47d6ce5..................................................... OK
+Diff 1d5c03fa:e91541fc..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Lang-56b........................................ OK
+Check out program version: Lang-63b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-56f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-63f-evosuite.1.tar.bz2
 OK
-Check out program version: Lang-56f........................................ OK
+Check out program version: Lang-63f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-56b........................................ OK
+Check out program version: Lang-63b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-56f-agentopus.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-63f-spec.1.tar.bz2
 OK
-Check out program version: Lang-56f........................................ OK
+Check out program version: Lang-63f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-56b........................................ OK
+Check out program version: Lang-63b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-13f-agentopus.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-13f-agent.1.tar.bz2
 OK
-Checking out e9429c05 to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
+Checking out e9429c05 to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -382,7 +170,7 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
@@ -393,7 +181,7 @@ Check out program version: Lang-13f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out e9429c05 to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
+Checking out e9429c05 to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -403,13 +191,23 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
 Diff e9429c05:81797ed4..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
+Check out program version: Lang-13b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-13f-evosuite.1.tar.bz2
+OK
+Check out program version: Lang-13f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
 Check out program version: Lang-13b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
@@ -424,7 +222,7 @@ Check out program version: Lang-13b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-13f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-13f-agentopus.1.tar.bz2
 OK
 Check out program version: Lang-13f........................................ OK
 Running ant (compile)...................................................... OK
@@ -436,7 +234,7 @@ Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
 Extract test suite......................................................... Executing test suite: Lang-65f-spec.1.tar.bz2
 OK
-Checking out 9cbf70d8 to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
+Checking out 9cbf70d8 to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -452,8 +250,8 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
@@ -464,7 +262,7 @@ Check out program version: Lang-65f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out 9cbf70d8 to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
+Checking out 9cbf70d8 to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -480,8 +278,8 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
@@ -502,73 +300,19 @@ Check out program version: Lang-65b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-23f-agentopus.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-65f-evosuite.1.tar.bz2
 OK
-Checking out 249788d7 to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 249788d7:66e42dc8..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-23f........................................ OK
+Check out program version: Lang-65f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out 249788d7 to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 249788d7:66e42dc8..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-23b........................................ OK
+Check out program version: Lang-65b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-23f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-62f-evosuite.1.tar.bz2
 OK
-Check out program version: Lang-23f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-23b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-23f-agent.1.tar.bz2
-OK
-Check out program version: Lang-23f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-23b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-43f-spec.1.tar.bz2
-OK
-Checking out a38e2e94 to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
+Checking out d8b6f5b5 to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -583,82 +327,8 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff a38e2e94:eb8b39b1..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-43f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Checking out a38e2e94 to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Rename enum package in src................................................. OK
-Move enum package in src................................................... OK
-Rename enum package in test................................................ OK
-Move enum package in test.................................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff a38e2e94:eb8b39b1..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Lang-43b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-43f-agent.1.tar.bz2
-OK
-Check out program version: Lang-43f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-43b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-43f-agentopus.1.tar.bz2
-OK
-Check out program version: Lang-43f........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-43b........................................ OK
-Running ant (compile)...................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-62f-agent.1.tar.bz2
-OK
-Checking out d8b6f5b5 to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Apply patch................................................................ OK
-Rename enum package in src................................................. OK
-Move enum package in src................................................... OK
-Rename enum package in test................................................ OK
-Move enum package in test.................................................. OK
-Run post-checkout hook..................................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
@@ -669,7 +339,7 @@ Check out program version: Lang-62f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out d8b6f5b5 to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
+Checking out d8b6f5b5 to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -684,14 +354,24 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
 Diff d8b6f5b5:8fde2caf..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
+Check out program version: Lang-62b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-62f-agent.1.tar.bz2
+OK
+Check out program version: Lang-62f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
 Check out program version: Lang-62b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
@@ -716,9 +396,153 @@ Check out program version: Lang-62b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-63f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-21f-spec.1.tar.bz2
 OK
-Checking out 1d5c03fa to /tmp/run_bug_detection.pl_158135_1789645400/V_fixe OK
+Checking out 3e5d5dc9 to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 3e5d5dc9:a655a3fa..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-21f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out 3e5d5dc9 to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 3e5d5dc9:a655a3fa..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-21b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-21f-agent.1.tar.bz2
+OK
+Check out program version: Lang-21f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-21b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-21f-evosuite.1.tar.bz2
+OK
+Check out program version: Lang-21f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-21b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-8f-evosuite.1.tar.bz2
+OK
+Checking out 04babff3 to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 04babff3:cfab1e4f..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-8f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out 04babff3 to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 04babff3:cfab1e4f..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-8b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-8f-agent.1.tar.bz2
+OK
+Check out program version: Lang-8f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-8b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-8f-spec.1.tar.bz2
+OK
+Check out program version: Lang-8f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-8b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-8f-agentopus.1.tar.bz2
+OK
+Check out program version: Lang-8f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-8b......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-52f-spec.1.tar.bz2
+OK
+Checking out c22d9d59 to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -733,19 +557,19 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_fixed/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff 1d5c03fa:e91541fc..................................................... OK
+Diff c22d9d59:ed7e9b43..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Lang-63f........................................ OK
+Check out program version: Lang-52f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Checking out 1d5c03fa to /tmp/run_bug_detection.pl_158135_1789645400/V_bugg OK
+Checking out c22d9d59 to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -760,25 +584,321 @@ Run post-checkout hook..................................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
 Excluding broken/flaky tests............................................... OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
-Backing up build file: /tmp/run_bug_detection.pl_158135_1789645400/V_buggy/ OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
 Initialize fixed program version........................................... OK
 Apply patch................................................................ OK
 Initialize buggy program version........................................... OK
-Diff 1d5c03fa:e91541fc..................................................... OK
+Diff c22d9d59:ed7e9b43..................................................... OK
 Apply patch................................................................ OK
 Tag pre-fix revision....................................................... OK
-Check out program version: Lang-63b........................................ OK
+Check out program version: Lang-52b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Extract test suite......................................................... Executing test suite: Lang-63f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Lang-52f-evosuite.1.tar.bz2
 OK
-Check out program version: Lang-63f........................................ OK
+Check out program version: Lang-52f........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK
-Check out program version: Lang-63b........................................ OK
+Check out program version: Lang-52b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-52f-agent.1.tar.bz2
+OK
+Check out program version: Lang-52f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-52b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-56f-agentopus.1.tar.bz2
+OK
+Checking out e9e167f9 to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Rename enum package in src................................................. OK
+Move enum package in src................................................... OK
+Rename enum package in test................................................ OK
+Move enum package in test.................................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff e9e167f9:c47d6ce5..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-56f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out e9e167f9 to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Rename enum package in src................................................. OK
+Move enum package in src................................................... OK
+Rename enum package in test................................................ OK
+Move enum package in test.................................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff e9e167f9:c47d6ce5..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-56b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-56f-spec.1.tar.bz2
+OK
+Check out program version: Lang-56f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-56b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-56f-evosuite.1.tar.bz2
+OK
+Check out program version: Lang-56f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-56b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-56f-agent.1.tar.bz2
+OK
+Check out program version: Lang-56f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-56b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-23f-agent.1.tar.bz2
+OK
+Checking out 249788d7 to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 249788d7:66e42dc8..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-23f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out 249788d7 to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 249788d7:66e42dc8..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-23b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-23f-evosuite.1.tar.bz2
+OK
+Check out program version: Lang-23f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-23b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-23f-spec.1.tar.bz2
+OK
+Check out program version: Lang-23f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-23b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-23f-agentopus.1.tar.bz2
+OK
+Check out program version: Lang-23f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-23b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-34f-agent.1.tar.bz2
+OK
+Checking out a2bb711a to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff a2bb711a:5c3ec55e..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-34f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out a2bb711a to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff a2bb711a:5c3ec55e..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-34b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-34f-evosuite.1.tar.bz2
+OK
+Check out program version: Lang-34f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-34b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-34f-spec.1.tar.bz2
+OK
+Check out program version: Lang-34f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-34b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-36f-spec.1.tar.bz2
+OK
+Checking out 26bc3fe0 to /tmp/run_bug_detection.pl_1165929_1789809970/V_fix OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_fixed OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 26bc3fe0:506bd018..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-36f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Checking out 26bc3fe0 to /tmp/run_bug_detection.pl_1165929_1789809970/V_bug OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /tmp/run_bug_detection.pl_1165929_1789809970/V_buggy OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 26bc3fe0:506bd018..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Lang-36b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-36f-evosuite.1.tar.bz2
+OK
+Check out program version: Lang-36f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-36b........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Extract test suite......................................................... Executing test suite: Lang-36f-agent.1.tar.bz2
+OK
+Check out program version: Lang-36f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (run.gen.tests)................................................ OK
+Check out program version: Lang-36b........................................ OK
 Running ant (compile)...................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (run.gen.tests)................................................ OK

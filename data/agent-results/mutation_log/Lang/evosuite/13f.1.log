@@ -1,0 +1,58 @@
+
+init:
+     [echo] -------- commons-lang3 3.2-SNAPSHOT --------
+
+compile:
+
+compile.tests:
+    [mkdir] Created dir: /tmp/run_mutation.pl_1193472_1789810843/13f/target/tests
+    [javac] Compiling 126 source files to /tmp/run_mutation.pl_1193472_1789810843/13f/target/tests
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 4 warnings
+     [copy] Copying 4 files to /tmp/run_mutation.pl_1193472_1789810843/13f/target/tests
+
+update.all.tests:
+
+mutation.test:
+     [echo] Running mutation analysis ...
+    [junit] MAJOR: Mutation analysis enabled
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Run 1 ordered test(s)to verify independence
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Preprocessing time: -2.49 seconds
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Serialize preprocessing results to preprocessing.ser
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Mutants generated: 30
+    [junit] MAJOR: Mutants covered:   27 (90.00%)
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Export coverage map to covMap.csv
+    [junit] MAJOR: Export test map to testMap.csv
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Run mutation analysis with 27 mutant(s) and 1 test(s).
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34m1/1 - org.apache.commons.lang3.SerializationUtils_ESTest (46ms / 27):[0m
+    [junit] MAJOR: 2564 (10 / 27 / 27) -> AVG-RTPM: 94ms
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 10 (0-10-0) / 17
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Summary:
+    [junit] MAJOR: 
+    [junit] MAJOR: Analysis time                 : 2.56 seconds
+    [junit] MAJOR: Mutation score                : 33.33% (37.04%)
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME): 10 (0-10-0)
+    [junit] MAJOR: Mutants live                  : 17
+    [junit] MAJOR: Mutant executions             : 27
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Export summary of results to summary.csv
+    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_1193472_1789810843/13f/kill.csv
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34mDone![0m
+    [junit] MAJOR: ------------------------------------------------------------
+
+BUILD SUCCESSFUL
+Total time: 4 seconds

@@ -4,36 +4,36 @@ test-offline:
 get-deps:
 
 commons-csv-from-maven.compile:
-    [javac] /tmp/run_mutation.pl_129278_1789641901/16f/maven-build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] /tmp/run_mutation.pl_863348_1789807501/16f/maven-build.xml:88: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
 
 compile:
 
 commons-csv-from-maven.compile-tests:
-    [mkdir] Created dir: /tmp/run_mutation.pl_129278_1789641901/16f/target/test-classes
-    [javac] /tmp/run_mutation.pl_129278_1789641901/16f/maven-build.xml:121: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-    [javac] Compiling 20 source files to /tmp/run_mutation.pl_129278_1789641901/16f/target/test-classes
+    [mkdir] Created dir: /tmp/run_mutation.pl_863348_1789807501/16f/target/test-classes
+    [javac] /tmp/run_mutation.pl_863348_1789807501/16f/maven-build.xml:121: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 20 source files to /tmp/run_mutation.pl_863348_1789807501/16f/target/test-classes
     [javac] warning: [options] bootstrap class path not set in conjunction with -source 7
-    [javac] /tmp/run_mutation.pl_129278_1789641901/16f/src/test/java/org/apache/commons/csv/CSVBenchmark.java:158: warning: [deprecation] CSVReader(Reader,char) in CSVReader has been deprecated
+    [javac] /tmp/run_mutation.pl_863348_1789807501/16f/src/test/java/org/apache/commons/csv/CSVBenchmark.java:158: warning: [deprecation] CSVReader(Reader,char) in CSVReader has been deprecated
     [javac]         final com.opencsv.CSVReader reader = new com.opencsv.CSVReader(in, ',');
     [javac]                                              ^
-    [javac] /tmp/run_mutation.pl_129278_1789641901/16f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:459: warning: [deprecation] Character(char) in Character has been deprecated
+    [javac] /tmp/run_mutation.pl_863348_1789807501/16f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:459: warning: [deprecation] Character(char) in Character has been deprecated
     [javac]         CSVFormat.DEFAULT.withEscape(new Character('!')).withCommentMarker(new Character('!'));
     [javac]                                                                            ^
-    [javac] /tmp/run_mutation.pl_129278_1789641901/16f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:459: warning: [deprecation] Character(char) in Character has been deprecated
+    [javac] /tmp/run_mutation.pl_863348_1789807501/16f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:459: warning: [deprecation] Character(char) in Character has been deprecated
     [javac]         CSVFormat.DEFAULT.withEscape(new Character('!')).withCommentMarker(new Character('!'));
     [javac]                                      ^
-    [javac] /tmp/run_mutation.pl_129278_1789641901/16f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:477: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+    [javac] /tmp/run_mutation.pl_863348_1789807501/16f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:477: warning: non-varargs call of varargs method with inexact argument type for last parameter;
     [javac]             cSVFormat.format(null);
     [javac]                              ^
     [javac]   cast to Object for a varargs call
     [javac]   cast to Object[] for a non-varargs call and to suppress this warning
-    [javac] /tmp/run_mutation.pl_129278_1789641901/16f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:592: warning: [deprecation] Character(char) in Character has been deprecated
+    [javac] /tmp/run_mutation.pl_863348_1789807501/16f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:592: warning: [deprecation] Character(char) in Character has been deprecated
     [javac]         CSVFormat.DEFAULT.withQuote(new Character('!')).withCommentMarker('!');
     [javac]                                     ^
     [javac] 6 warnings
-     [copy] Copying 14 files to /tmp/run_mutation.pl_129278_1789641901/16f/target/test-classes
-    [mkdir] Created dir: /tmp/run_mutation.pl_129278_1789641901/16f/target/test-classes/META-INF
-     [copy] Copying 2 files to /tmp/run_mutation.pl_129278_1789641901/16f/target/test-classes/META-INF
+     [copy] Copying 14 files to /tmp/run_mutation.pl_863348_1789807501/16f/target/test-classes
+    [mkdir] Created dir: /tmp/run_mutation.pl_863348_1789807501/16f/target/test-classes/META-INF
+     [copy] Copying 2 files to /tmp/run_mutation.pl_863348_1789807501/16f/target/test-classes/META-INF
 
 compile.tests:
 
@@ -45,7 +45,7 @@ mutation.test:
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Run 1 ordered test(s)to verify independence
     [junit] MAJOR: ------------------------------------------------------------
-    [junit] MAJOR: Preprocessing time: 0.13 seconds
+    [junit] MAJOR: Preprocessing time: 0.07 seconds
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Serialize preprocessing results to preprocessing.ser
     [junit] MAJOR: ------------------------------------------------------------
@@ -57,23 +57,23 @@ mutation.test:
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Run mutation analysis with 105 mutant(s) and 1 test(s).
     [junit] MAJOR: ------------------------------------------------------------
-    [junit] MAJOR: [1;34m1/1 - org.apache.commons.csv.CSVParserAgentTest (73ms / 105):[0m
-    [junit] MAJOR: 3530 (67 / 105 / 105) -> AVG-RTPM: 33ms
+    [junit] MAJOR: [1;34m1/1 - org.apache.commons.csv.CSVParserAgentTest (67ms / 105):[0m
+    [junit] MAJOR: 2022 (67 / 105 / 105) -> AVG-RTPM: 19ms
     [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 67 (33-31-3) / 38
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Summary:
     [junit] MAJOR: 
-    [junit] MAJOR: Analysis time                 : 3.53 seconds
+    [junit] MAJOR: Analysis time                 : 2.02 seconds
     [junit] MAJOR: Mutation score                : 59.82% (63.81%)
     [junit] MAJOR: Mutants killed (FAIL-EXC-TIME): 67 (33-31-3)
     [junit] MAJOR: Mutants live                  : 38
     [junit] MAJOR: Mutant executions             : 105
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Export summary of results to summary.csv
-    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_129278_1789641901/16f/kill.csv
+    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_863348_1789807501/16f/kill.csv
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: [1;34mDone![0m
     [junit] MAJOR: ------------------------------------------------------------
 
 BUILD SUCCESSFUL
-Total time: 6 seconds
+Total time: 4 seconds

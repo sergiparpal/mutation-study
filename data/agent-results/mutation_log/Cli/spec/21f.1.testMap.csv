@@ -1,4 +1,4 @@
 TestNo,TestName,Runtime
-1,org.apache.commons.cli2.commandline.WriteableCommandLineImplAgentTest,32
-2,org.apache.commons.cli2.option.GroupImplAgentTest,43
-3,org.apache.commons.cli2.WriteableCommandLineAgentTest,55
+1,org.apache.commons.cli2.option.GroupImplAgentTest,22
+2,org.apache.commons.cli2.commandline.WriteableCommandLineImplAgentTest,24
+3,org.apache.commons.cli2.WriteableCommandLineAgentTest,25

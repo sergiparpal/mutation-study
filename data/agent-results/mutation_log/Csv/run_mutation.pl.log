@@ -1,21 +1,31 @@
-######  Start mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-17 03:45:01  ######
- - Executing test suite: Csv-4f-agent.1.tar.bz2
- - Executing test suite: Csv-4f-spec.1.tar.bz2
+######  Start mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-19 01:45:01  ######
+ - Executing test suite: Csv-8f-agent.1.tar.bz2
+ - Executing test suite: Csv-8f-evosuite.1.tar.bz2
+ - Executing test suite: Csv-8f-spec.1.tar.bz2
  - Executing test suite: Csv-14f-spec.1.tar.bz2
+ - Executing test suite: Csv-14f-evosuite.1.tar.bz2
  - Executing test suite: Csv-14f-agent.1.tar.bz2
+ - Executing test suite: Csv-3f-evosuite.1.tar.bz2
+ - Executing test suite: Csv-3f-spec.1.tar.bz2
  - Executing test suite: Csv-16f-agent.1.tar.bz2
  - Executing test suite: Csv-16f-spec.1.tar.bz2
+ - Executing test suite: Csv-16f-evosuite.1.tar.bz2
+ - Executing test suite: Csv-6f-evosuite.1.tar.bz2
  - Executing test suite: Csv-6f-spec.1.tar.bz2
  - Executing test suite: Csv-6f-agent.1.tar.bz2
+ - Executing test suite: Csv-5f-evosuite.1.tar.bz2
  - Executing test suite: Csv-5f-spec.1.tar.bz2
  - Executing test suite: Csv-5f-agent.1.tar.bz2
- - Executing test suite: Csv-7f-agent.1.tar.bz2
- - Executing test suite: Csv-7f-spec.1.tar.bz2
- - Executing test suite: Csv-15f-spec.1.tar.bz2
- - Executing test suite: Csv-15f-agent.1.tar.bz2
- - Executing test suite: Csv-3f-spec.1.tar.bz2
  - Executing test suite: Csv-10f-spec.1.tar.bz2
+ - Executing test suite: Csv-10f-evosuite.1.tar.bz2
  - Executing test suite: Csv-10f-agent.1.tar.bz2
- - Executing test suite: Csv-8f-agent.1.tar.bz2
- - Executing test suite: Csv-8f-spec.1.tar.bz2
-######  End mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-17 04:12:09  ######
+ - Executing test suite: Csv-15f-agent.1.tar.bz2
+ - Executing test suite: Csv-15f-spec.1.tar.bz2
+ - Executing test suite: Csv-15f-evosuite.1.tar.bz2
+ - Executing test suite: Csv-7f-spec.1.tar.bz2
+ - Executing test suite: Csv-7f-evosuite.1.tar.bz2
+ - Executing test suite: Csv-7f-agent.1.tar.bz2
+ - Executing test suite: Csv-4f-agent.1.tar.bz2
+ - Executing test suite: Csv-4f-evosuite.1.tar.bz2
+ - Executing test suite: Csv-4f-spec.1.tar.bz2
+######  End mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-19 02:04:22  ######

@@ -1,85 +1,6 @@
-Extract test suite......................................................... Executing test suite: Gson-10f-spec.1.tar.bz2
-OK
-Checking out bb451eac to /tmp/run_mutation.pl_148032_1789645126/10f........ OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff bb451eac:ecda3582..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-10f........................................ OK
-Compiling mutant definition (mml).......................................... OK
-Running ant (mutate)....................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-10f-agent.1.tar.bz2
-OK
-Check out program version: Gson-10f........................................ OK
-Compiling mutant definition (mml).......................................... OK
-Running ant (mutate)....................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-5f-agent.1.tar.bz2
-OK
-Checking out 8383f5c7 to /tmp/run_mutation.pl_148032_1789645126/5f......... OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Backing up build file: /tmp/run_mutation.pl_148032_1789645126/5f/pom.xml... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 8383f5c7:af68d70c..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-5f......................................... OK
-Compiling mutant definition (mml).......................................... OK
-Running ant (mutate)....................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-5f-spec.1.tar.bz2
-OK
-Check out program version: Gson-5f......................................... OK
-Compiling mutant definition (mml).......................................... OK
-Running ant (mutate)....................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-15f-spec.1.tar.bz2
-OK
-Checking out ada597e6 to /tmp/run_mutation.pl_148032_1789645126/15f........ OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff ada597e6:0aaef0fd..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-15f........................................ OK
-Compiling mutant definition (mml).......................................... OK
-Running ant (mutate)....................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-15f-agent.1.tar.bz2
-OK
-Check out program version: Gson-15f........................................ OK
-Compiling mutant definition (mml).......................................... OK
-Running ant (mutate)....................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (mutation.test)................................................ OK
 Extract test suite......................................................... Executing test suite: Gson-6f-spec.1.tar.bz2
 OK
-Checking out dea30550 to /tmp/run_mutation.pl_148032_1789645126/6f......... OK
+Checking out dea30550 to /tmp/run_mutation.pl_979594_1789809023/6f......... OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -103,63 +24,16 @@ Compiling mutant definition (mml).......................................... OK
 Running ant (mutate)....................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-4f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Gson-6f-evosuite.1.tar.bz2
 OK
-Checking out af68d70c to /tmp/run_mutation.pl_148032_1789645126/4f......... OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Backing up build file: /tmp/run_mutation.pl_148032_1789645126/4f/pom.xml... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff af68d70c:2ab776b5..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-4f......................................... OK
-Compiling mutant definition (mml).......................................... OK
-Running ant (mutate)....................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-4f-spec.1.tar.bz2
-OK
-Check out program version: Gson-4f......................................... OK
-Compiling mutant definition (mml).......................................... OK
-Running ant (mutate)....................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-3f-agent.1.tar.bz2
-OK
-Checking out 64107353 to /tmp/run_mutation.pl_148032_1789645126/3f......... OK
-Init local repository...................................................... OK
-Tag post-fix revision...................................................... OK
-Apply patch................................................................ OK
-Copy generated Ant build file.............................................. OK
-Run post-checkout hook..................................................... OK
-Backing up build file: /tmp/run_mutation.pl_148032_1789645126/3f/pom.xml... OK
-Initialize fixed program version........................................... OK
-Apply patch................................................................ OK
-Initialize buggy program version........................................... OK
-Diff 64107353:9e5f86d1..................................................... OK
-Apply patch................................................................ OK
-Tag pre-fix revision....................................................... OK
-Check out program version: Gson-3f......................................... OK
-Compiling mutant definition (mml).......................................... OK
-Running ant (mutate)....................................................... OK
-Running ant (compile.gen.tests)............................................ OK
-Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-3f-spec.1.tar.bz2
-OK
-Check out program version: Gson-3f......................................... OK
+Check out program version: Gson-6f......................................... OK
 Compiling mutant definition (mml).......................................... OK
 Running ant (mutate)....................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (mutation.test)................................................ OK
 Extract test suite......................................................... Executing test suite: Gson-7f-spec.1.tar.bz2
 OK
-Checking out 2b08c88c to /tmp/run_mutation.pl_148032_1789645126/7f......... OK
+Checking out 2b08c88c to /tmp/run_mutation.pl_979594_1789809023/7f......... OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -183,9 +57,50 @@ Compiling mutant definition (mml).......................................... OK
 Running ant (mutate)....................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-8f-agent.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Gson-7f-evosuite.1.tar.bz2
 OK
-Checking out 0f66f4fa to /tmp/run_mutation.pl_148032_1789645126/8f......... OK
+Check out program version: Gson-7f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-5f-spec.1.tar.bz2
+OK
+Checking out 8383f5c7 to /tmp/run_mutation.pl_979594_1789809023/5f......... OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Backing up build file: /tmp/run_mutation.pl_979594_1789809023/5f/pom.xml... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 8383f5c7:af68d70c..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-5f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-5f-evosuite.1.tar.bz2
+OK
+Check out program version: Gson-5f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-5f-agent.1.tar.bz2
+OK
+Check out program version: Gson-5f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-8f-spec.1.tar.bz2
+OK
+Checking out 0f66f4fa to /tmp/run_mutation.pl_979594_1789809023/8f......... OK
 Init local repository...................................................... OK
 Tag post-fix revision...................................................... OK
 Apply patch................................................................ OK
@@ -202,9 +117,150 @@ Compiling mutant definition (mml).......................................... OK
 Running ant (mutate)....................................................... OK
 Running ant (compile.gen.tests)............................................ OK
 Running ant (mutation.test)................................................ OK
-Extract test suite......................................................... Executing test suite: Gson-8f-spec.1.tar.bz2
+Extract test suite......................................................... Executing test suite: Gson-8f-evosuite.1.tar.bz2
 OK
 Check out program version: Gson-8f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-8f-agent.1.tar.bz2
+OK
+Check out program version: Gson-8f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-10f-spec.1.tar.bz2
+OK
+Checking out bb451eac to /tmp/run_mutation.pl_979594_1789809023/10f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff bb451eac:ecda3582..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-10f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-10f-evosuite.1.tar.bz2
+OK
+Check out program version: Gson-10f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-10f-agent.1.tar.bz2
+OK
+Check out program version: Gson-10f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-4f-evosuite.1.tar.bz2
+OK
+Checking out af68d70c to /tmp/run_mutation.pl_979594_1789809023/4f......... OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Backing up build file: /tmp/run_mutation.pl_979594_1789809023/4f/pom.xml... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff af68d70c:2ab776b5..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-4f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-4f-agent.1.tar.bz2
+OK
+Check out program version: Gson-4f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-4f-spec.1.tar.bz2
+OK
+Check out program version: Gson-4f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-3f-agent.1.tar.bz2
+OK
+Checking out 64107353 to /tmp/run_mutation.pl_979594_1789809023/3f......... OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Backing up build file: /tmp/run_mutation.pl_979594_1789809023/3f/pom.xml... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 64107353:9e5f86d1..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-3f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-3f-evosuite.1.tar.bz2
+OK
+Check out program version: Gson-3f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-3f-spec.1.tar.bz2
+OK
+Check out program version: Gson-3f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-15f-agent.1.tar.bz2
+OK
+Checking out ada597e6 to /tmp/run_mutation.pl_979594_1789809023/15f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff ada597e6:0aaef0fd..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-15f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-15f-evosuite.1.tar.bz2
+OK
+Check out program version: Gson-15f........................................ OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK
+Extract test suite......................................................... Executing test suite: Gson-15f-spec.1.tar.bz2
+OK
+Check out program version: Gson-15f........................................ OK
 Compiling mutant definition (mml).......................................... OK
 Running ant (mutate)....................................................... OK
 Running ant (compile.gen.tests)............................................ OK

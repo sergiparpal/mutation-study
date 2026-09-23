@@ -1,0 +1,74 @@
+
+test-offline:
+
+get-deps:
+
+commons-csv-from-maven.compile:
+    [javac] /tmp/run_mutation.pl_863348_1789807501/4f/maven-build.xml:79: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+compile:
+
+commons-csv-from-maven.compile-tests:
+    [mkdir] Created dir: /tmp/run_mutation.pl_863348_1789807501/4f/target/test-classes
+    [javac] /tmp/run_mutation.pl_863348_1789807501/4f/maven-build.xml:112: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 14 source files to /tmp/run_mutation.pl_863348_1789807501/4f/target/test-classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
+    [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
+    [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
+    [javac] warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+    [javac] /tmp/run_mutation.pl_863348_1789807501/4f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:203: warning: [deprecation] Character(char) in Character has been deprecated
+    [javac]         CSVFormat.DEFAULT.withEscape(new Character('!')).withCommentStart(new Character('!')).validate();
+    [javac]                                                                           ^
+    [javac] /tmp/run_mutation.pl_863348_1789807501/4f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:203: warning: [deprecation] Character(char) in Character has been deprecated
+    [javac]         CSVFormat.DEFAULT.withEscape(new Character('!')).withCommentStart(new Character('!')).validate();
+    [javac]                                      ^
+    [javac] /tmp/run_mutation.pl_863348_1789807501/4f/src/test/java/org/apache/commons/csv/CSVFormatTest.java:236: warning: [deprecation] Character(char) in Character has been deprecated
+    [javac]         CSVFormat.DEFAULT.withQuoteChar(new Character('!')).withCommentStart('!').validate();
+    [javac]                                         ^
+    [javac] 7 warnings
+     [copy] Copying 13 files to /tmp/run_mutation.pl_863348_1789807501/4f/target/test-classes
+    [mkdir] Created dir: /tmp/run_mutation.pl_863348_1789807501/4f/target/test-classes/META-INF
+     [copy] Copying 2 files to /tmp/run_mutation.pl_863348_1789807501/4f/target/test-classes/META-INF
+
+compile.tests:
+
+update.all.tests:
+
+mutation.test:
+     [echo] Running mutation analysis ...
+    [junit] MAJOR: Mutation analysis enabled
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Run 1 ordered test(s)to verify independence
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Preprocessing time: 1.12 seconds
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Serialize preprocessing results to preprocessing.ser
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Mutants generated: 69
+    [junit] MAJOR: Mutants covered:   65 (94.20%)
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Export coverage map to covMap.csv
+    [junit] MAJOR: Export test map to testMap.csv
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Run mutation analysis with 65 mutant(s) and 1 test(s).
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34m1/1 - org.apache.commons.csv.CSVParser_ESTest (103ms / 65):[0m
+    [junit] MAJOR: 16983 (44 / 65 / 65) -> AVG-RTPM: 261ms
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 44 (24-20-0) / 21
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Summary:
+    [junit] MAJOR: 
+    [junit] MAJOR: Analysis time                 : 16.98 seconds
+    [junit] MAJOR: Mutation score                : 63.77% (67.69%)
+    [junit] MAJOR: Mutants killed (FAIL-EXC-TIME): 44 (24-20-0)
+    [junit] MAJOR: Mutants live                  : 21
+    [junit] MAJOR: Mutant executions             : 65
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: Export summary of results to summary.csv
+    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_863348_1789807501/4f/kill.csv
+    [junit] MAJOR: ------------------------------------------------------------
+    [junit] MAJOR: [1;34mDone![0m
+    [junit] MAJOR: ------------------------------------------------------------
+
+BUILD SUCCESSFUL
+Total time: 19 seconds

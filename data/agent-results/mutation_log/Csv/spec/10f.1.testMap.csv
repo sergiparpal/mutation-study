@@ -1,2 +1,2 @@
 TestNo,TestName,Runtime
-1,org.apache.commons.csv.CSVPrinterAgentTest,63
+1,org.apache.commons.csv.CSVPrinterAgentTest,55

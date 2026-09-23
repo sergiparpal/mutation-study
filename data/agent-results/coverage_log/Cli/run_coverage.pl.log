@@ -1,17 +1,28 @@
-######  Start code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-09-17 03:16:38  ######
- - Executing test suite: Cli-12f-agent.1.tar.bz2
- - Executing test suite: Cli-12f-spec.1.tar.bz2
- - Executing test suite: Cli-15f-agent.1.tar.bz2
- - Executing test suite: Cli-15f-spec.1.tar.bz2
- - Executing test suite: Cli-10f-spec.1.tar.bz2
- - Executing test suite: Cli-10f-agent.1.tar.bz2
- - Executing test suite: Cli-38f-spec.1.tar.bz2
- - Executing test suite: Cli-38f-agent.1.tar.bz2
- - Executing test suite: Cli-17f-spec.1.tar.bz2
- - Executing test suite: Cli-17f-agent.1.tar.bz2
- - Executing test suite: Cli-28f-agent.1.tar.bz2
- - Executing test suite: Cli-28f-spec.1.tar.bz2
- - Executing test suite: Cli-21f-spec.1.tar.bz2
- - Executing test suite: Cli-32f-spec.1.tar.bz2
+######  Start code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-09-19 01:29:32  ######
+ - Executing test suite: Cli-32f-evosuite.1.tar.bz2
+ - Broken test suite: Cli-32f-evosuite.1.tar.bz2
  - Executing test suite: Cli-32f-agent.1.tar.bz2
-######  End code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-09-17 03:19:31  ######
+ - Executing test suite: Cli-32f-spec.1.tar.bz2
+ - Executing test suite: Cli-28f-spec.1.tar.bz2
+ - Executing test suite: Cli-28f-agent.1.tar.bz2
+ - Executing test suite: Cli-28f-evosuite.1.tar.bz2
+ - Broken test suite: Cli-28f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-21f-spec.1.tar.bz2
+ - Executing test suite: Cli-15f-spec.1.tar.bz2
+ - Executing test suite: Cli-15f-agent.1.tar.bz2
+ - Executing test suite: Cli-17f-agent.1.tar.bz2
+ - Executing test suite: Cli-17f-evosuite.1.tar.bz2
+ - Broken test suite: Cli-17f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-17f-spec.1.tar.bz2
+ - Executing test suite: Cli-10f-evosuite.1.tar.bz2
+ - Broken test suite: Cli-10f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-10f-agent.1.tar.bz2
+ - Executing test suite: Cli-10f-spec.1.tar.bz2
+ - Executing test suite: Cli-38f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-38f-agent.1.tar.bz2
+ - Executing test suite: Cli-38f-spec.1.tar.bz2
+ - Executing test suite: Cli-12f-spec.1.tar.bz2
+ - Executing test suite: Cli-12f-evosuite.1.tar.bz2
+ - Broken test suite: Cli-12f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-12f-agent.1.tar.bz2
+######  End code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-09-19 01:31:39  ######

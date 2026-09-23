@@ -1,17 +1,23 @@
-######  Start mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-17 03:19:31  ######
- - Executing test suite: Cli-10f-spec.1.tar.bz2
- - Executing test suite: Cli-10f-agent.1.tar.bz2
- - Executing test suite: Cli-17f-spec.1.tar.bz2
+######  Start mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-19 01:31:39  ######
  - Executing test suite: Cli-17f-agent.1.tar.bz2
- - Executing test suite: Cli-15f-spec.1.tar.bz2
- - Executing test suite: Cli-15f-agent.1.tar.bz2
- - Executing test suite: Cli-38f-spec.1.tar.bz2
- - Executing test suite: Cli-38f-agent.1.tar.bz2
+ - Executing test suite: Cli-17f-spec.1.tar.bz2
+ - Executing test suite: Cli-17f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-12f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-12f-spec.1.tar.bz2
+ - Executing test suite: Cli-12f-agent.1.tar.bz2
  - Executing test suite: Cli-32f-agent.1.tar.bz2
  - Executing test suite: Cli-32f-spec.1.tar.bz2
+ - Executing test suite: Cli-32f-evosuite.1.tar.bz2
  - Executing test suite: Cli-21f-spec.1.tar.bz2
- - Executing test suite: Cli-12f-agent.1.tar.bz2
- - Executing test suite: Cli-12f-spec.1.tar.bz2
+ - Executing test suite: Cli-10f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-10f-agent.1.tar.bz2
+ - Executing test suite: Cli-10f-spec.1.tar.bz2
+ - Executing test suite: Cli-38f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-38f-spec.1.tar.bz2
+ - Executing test suite: Cli-38f-agent.1.tar.bz2
+ - Executing test suite: Cli-15f-agent.1.tar.bz2
+ - Executing test suite: Cli-15f-spec.1.tar.bz2
  - Executing test suite: Cli-28f-spec.1.tar.bz2
+ - Executing test suite: Cli-28f-evosuite.1.tar.bz2
  - Executing test suite: Cli-28f-agent.1.tar.bz2
-######  End mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-17 03:34:02  ######
+######  End mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-09-19 01:37:55  ######

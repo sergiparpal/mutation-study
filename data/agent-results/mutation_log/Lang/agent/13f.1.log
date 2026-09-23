@@ -5,8 +5,8 @@ init:
 compile:
 
 compile.tests:
-    [mkdir] Created dir: /tmp/run_mutation.pl_177123_1789647017/13f/target/tests
-    [javac] Compiling 126 source files to /tmp/run_mutation.pl_177123_1789647017/13f/target/tests
+    [mkdir] Created dir: /tmp/run_mutation.pl_1193472_1789810843/13f/target/tests
+    [javac] Compiling 126 source files to /tmp/run_mutation.pl_1193472_1789810843/13f/target/tests
     [javac] warning: [options] bootstrap class path not set in conjunction with -source 6
     [javac] warning: [options] source value 6 is obsolete and will be removed in a future release
     [javac] warning: [options] target value 1.6 is obsolete and will be removed in a future release
@@ -14,7 +14,7 @@ compile.tests:
     [javac] Note: Some input files use or override a deprecated API.
     [javac] Note: Recompile with -Xlint:deprecation for details.
     [javac] 4 warnings
-     [copy] Copying 4 files to /tmp/run_mutation.pl_177123_1789647017/13f/target/tests
+     [copy] Copying 4 files to /tmp/run_mutation.pl_1193472_1789810843/13f/target/tests
 
 update.all.tests:
 
@@ -24,7 +24,7 @@ mutation.test:
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Run 1 ordered test(s)to verify independence
     [junit] MAJOR: ------------------------------------------------------------
-    [junit] MAJOR: Preprocessing time: 0.26 seconds
+    [junit] MAJOR: Preprocessing time: 0.08 seconds
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Serialize preprocessing results to preprocessing.ser
     [junit] MAJOR: ------------------------------------------------------------
@@ -36,23 +36,23 @@ mutation.test:
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Run mutation analysis with 30 mutant(s) and 1 test(s).
     [junit] MAJOR: ------------------------------------------------------------
-    [junit] MAJOR: [1;34m1/1 - org.apache.commons.lang3.SerializationUtilsAgentTest (97ms / 30):[0m
-    [junit] MAJOR: 591 (21 / 30 / 30) -> AVG-RTPM: 19ms
+    [junit] MAJOR: [1;34m1/1 - org.apache.commons.lang3.SerializationUtilsAgentTest (51ms / 30):[0m
+    [junit] MAJOR: 323 (21 / 30 / 30) -> AVG-RTPM: 10ms
     [junit] MAJOR: Mutants killed (FAIL-EXC-TIME) / live: 21 (3-18-0) / 9
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Summary:
     [junit] MAJOR: 
-    [junit] MAJOR: Analysis time                 : 0.59 seconds
+    [junit] MAJOR: Analysis time                 : 0.32 seconds
     [junit] MAJOR: Mutation score                : 70.00% (70.00%)
     [junit] MAJOR: Mutants killed (FAIL-EXC-TIME): 21 (3-18-0)
     [junit] MAJOR: Mutants live                  : 9
     [junit] MAJOR: Mutant executions             : 30
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: Export summary of results to summary.csv
-    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_177123_1789647017/13f/kill.csv
+    [junit] MAJOR: Export mutant details to /tmp/run_mutation.pl_1193472_1789810843/13f/kill.csv
     [junit] MAJOR: ------------------------------------------------------------
     [junit] MAJOR: [1;34mDone![0m
     [junit] MAJOR: ------------------------------------------------------------
 
 BUILD SUCCESSFUL
-Total time: 5 seconds
+Total time: 4 seconds

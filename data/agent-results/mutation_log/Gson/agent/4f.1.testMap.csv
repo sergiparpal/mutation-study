@@ -1,3 +1,3 @@
 TestNo,TestName,Runtime
-1,com.google.gson.stream.JsonWriterAgentTest,57
-2,com.google.gson.stream.JsonReaderAgentTest,62
+1,com.google.gson.stream.JsonWriterAgentTest,43
+2,com.google.gson.stream.JsonReaderAgentTest,53
