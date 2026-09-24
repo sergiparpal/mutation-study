@@ -1,0 +1,5 @@
+project=commons-lang
+sha=1d6ef29ce004309e50bd91e27f0f5e80e1a57a76
+short=1d6ef29ce
+date=2026-08-17
+subject=Fix CharRange.contains for negated argument ranges (#1775)

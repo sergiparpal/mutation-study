@@ -1,0 +1,5 @@
+project=commons-csv
+sha=966b38519e45c1fd85c76fbbdc47cb5bb1905238
+short=966b3851
+date=2026-06-09
+subject=[CSV-327] Limit parser maxRows by produced records

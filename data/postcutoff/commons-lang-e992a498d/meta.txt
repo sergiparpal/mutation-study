@@ -1,0 +1,5 @@
+project=commons-lang
+sha=e992a498d711fc4302d5ad89e80511db41db2f11
+short=e992a498d
+date=2026-09-19
+subject=LANG-1834 Fix Fraction reduction for Integer.MIN_VALUE (#1794)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=7e5906fb0cb679d630527fc1bc18018f935518dc
+short=7e5906fb0
+date=2026-07-30
+subject=[LANG-1815] Fix AnnotationUtils.equals for package-private annotations. (#1760)

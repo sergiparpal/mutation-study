@@ -1,0 +1,5 @@
+project=commons-cli
+sha=dc69e8423b163da5fca292e2bf9d6482ec6202f0
+short=dc69e842
+date=2026-08-08
+subject=Fix integer overflow in TextHelpAppendable.indexOfWrap (#437)

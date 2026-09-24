@@ -1,0 +1,5 @@
+project=commons-csv
+sha=a6ee67ecf0d4b9208ffc640f433d8b40c258e1f3
+short=a6ee67ec
+date=2026-06-19
+subject=[CSV-328] Fix quoted null string after disabling quote

@@ -1,0 +1,226 @@
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/101/commons-parent-101.pom
+Progress (1): 702 BProgress (1): 1.6 kBProgress (1): 2.9 kBProgress (1): 4.3 kBProgress (1): 5.4 kBProgress (1): 7.8 kBProgress (1): 10 kB Progress (1): 11 kBProgress (1): 14 kBProgress (1): 16 kBProgress (1): 17 kBProgress (1): 20 kBProgress (1): 23 kBProgress (1): 24 kBProgress (1): 27 kBProgress (1): 30 kBProgress (1): 32 kBProgress (1): 38 kBProgress (1): 41 kBProgress (1): 44 kBProgress (1): 46 kBProgress (1): 49 kBProgress (1): 50 kBProgress (1): 53 kBProgress (1): 57 kBProgress (1): 58 kBProgress (1): 61 kBProgress (1): 64 kBProgress (1): 67 kBProgress (1): 70 kBProgress (1): 73 kBProgress (1): 74 kBProgress (1): 77 kBProgress (1): 79 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/101/commons-parent-101.pom (79 kB at 345 kB/s)
+[INFO] 
+[INFO] -------------------< org.apache.commons:commons-csv >-------------------
+[INFO] Building Apache Commons CSV 1.15.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.14/jacoco-maven-plugin-0.8.14.pom
+Progress (1): 870 BProgress (1): 2.5 kBProgress (1): 4.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.14/jacoco-maven-plugin-0.8.14.pom (4.2 kB at 176 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.build/0.8.14/org.jacoco.build-0.8.14.pom
+Progress (1): 748 BProgress (1): 2.0 kBProgress (1): 4.1 kBProgress (1): 6.7 kBProgress (1): 9.8 kBProgress (1): 14 kB Progress (1): 18 kBProgress (1): 19 kBProgress (1): 23 kBProgress (1): 25 kBProgress (1): 27 kBProgress (1): 29 kBProgress (1): 35 kBProgress (1): 39 kBProgress (1): 46 kBProgress (1): 46 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.build/0.8.14/org.jacoco.build-0.8.14.pom (46 kB at 1.7 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-bom/9.9/asm-bom-9.9.pom
+Progress (1): 1.1 kBProgress (1): 3.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-bom/9.9/asm-bom-9.9.pom (3.3 kB at 102 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.14/jacoco-maven-plugin-0.8.14.jar
+Progress (1): 0.9/57 kBProgress (1): 2.3/57 kBProgress (1): 3.6/57 kBProgress (1): 5.0/57 kBProgress (1): 6.4/57 kBProgress (1): 7.7/57 kBProgress (1): 9.1/57 kBProgress (1): 10/57 kB Progress (1): 11/57 kBProgress (1): 13/57 kBProgress (1): 14/57 kBProgress (1): 15/57 kBProgress (1): 17/57 kBProgress (1): 18/57 kBProgress (1): 20/57 kBProgress (1): 21/57 kBProgress (1): 25/57 kBProgress (1): 29/57 kBProgress (1): 34/57 kBProgress (1): 38/57 kBProgress (1): 42/57 kBProgress (1): 46/57 kBProgress (1): 51/57 kBProgress (1): 55/57 kBProgress (1): 57 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.14/jacoco-maven-plugin-0.8.14.jar (57 kB at 2.4 MB/s)
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven-version) @ commons-csv ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-java-version) @ commons-csv ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-csv ---
+[WARNING] Basedir is : /home/sergi/code/mining/commons-csv
+[INFO] Excluding patterns: src/test/resources/org/apache/commons/csv/empty.txt, src/test/resources/org/apache/commons/csv/CSV-141/csv-141.csv, src/test/resources/org/apache/commons/csv/csv-167/sample1.csv, src/test/resources/org/apache/commons/csv/CSV-198/optd_por_public.csv, src/test/resources/org/apache/commons/csv/CSV-196/emoji.csv, src/test/resources/org/apache/commons/csv/CSV-196/japanese.csv, src/test/resources/org/apache/commons/csv/CSV-213/999751170.patch.csv, src/test/resources/org/apache/commons/csv/CSV-254/csv-254.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/bom.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/test.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/test_default.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_default_comment.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180_trim.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_default.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_ignoreEmpty.txt, src/test/resources/org/apache/commons/csv/ferc.gov/contract.txt, src/test/resources/org/apache/commons/csv/ferc.gov/transaction.txt, src/test/resources/**/*.bin, src/test/resources/org/apache/commons/csv/CSV-259/sample.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246_checkWithNoComment.txt, src/test/resources/org/apache/commons/csv/CSV-290/psql.csv, src/test/resources/org/apache/commons/csv/CSV-290/psql.tsv, site-content/**, .checkstyle, .fbprefs, .pmd, .asf.yaml, .gitattributes, src/site/resources/download_*.cgi, maven-eclipse.xml, .externalToolBuilders/**, .vscode/**, .project, .classpath, .settings/**, **/*.svg, **/*.xcf
+[INFO] Excluding MAVEN collection.
+[INFO] Excluding ECLIPSE collection.
+[INFO] Excluding IDEA collection.
+[INFO] Processing exclude file from STANDARD_SCMS.
+[INFO] Excluding STANDARD_SCMS collection.
+[INFO] Excluding MISC collection.
+[INFO] Excluding HIDDEN_DIR collection.
+[INFO] RAT summary:
+[INFO]   Approved:  79
+[INFO]   Archives:  1
+[INFO]   Binaries:  3
+[INFO]   Document types:  5
+[INFO]   Ignored:  32
+[INFO]   License categories:  1
+[INFO]   License names:  1
+[INFO]   Notices:  4
+[INFO]   Standards:  79
+[INFO]   Unapproved:  0
+[INFO]   Unknown:  0
+[INFO] 
+[INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-csv ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.1:parse-version (parse-version) @ commons-csv ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-csv ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-csv ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-csv ---
+[INFO] skip non existing resourceDirectory /home/sergi/code/mining/commons-csv/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ commons-csv ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 12 source files with javac [debug release 8] to target/classes
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-csv ---
+[INFO] Writing manifest: /home/sergi/code/mining/commons-csv/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-csv ---
+[INFO] Copying 25 resources from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ commons-csv ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 42 source files with javac [debug release 8] to target/test-classes
+[INFO] /home/sergi/code/mining/commons-csv/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Some input files use or override a deprecated API.
+[INFO] /home/sergi/code/mining/commons-csv/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- jacoco:0.8.14:prepare-agent (prepare-agent) @ commons-csv ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.agent/0.8.14/org.jacoco.agent-0.8.14.pom
+Progress (1): 884 BProgress (1): 3.5 kBProgress (1): 3.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.agent/0.8.14/org.jacoco.agent-0.8.14.pom (3.5 kB at 130 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.core/0.8.14/org.jacoco.core-0.8.14.pom
+Progress (1): 895 BProgress (1): 2.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.core/0.8.14/org.jacoco.core-0.8.14.pom (2.1 kB at 37 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.9/asm-9.9.pom
+Progress (1): 1.3 kBProgress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.9/asm-9.9.pom (2.4 kB at 118 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.9/asm-commons-9.9.pom
+Progress (1): 1.1 kBProgress (1): 2.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.9/asm-commons-9.9.pom (2.8 kB at 103 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.9/asm-tree-9.9.pom
+Progress (1): 1.1 kBProgress (1): 2.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.9/asm-tree-9.9.pom (2.6 kB at 89 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.report/0.8.14/org.jacoco.report-0.8.14.pom
+Progress (1): 898 BProgress (1): 1.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.report/0.8.14/org.jacoco.report-0.8.14.pom (1.9 kB at 99 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.agent/0.8.14/org.jacoco.agent-0.8.14-runtime.jar
+Progress (1): 3.2/307 kBProgress (1): 7.4/307 kBProgress (1): 12/307 kB Progress (1): 16/307 kBProgress (1): 20/307 kBProgress (1): 24/307 kBProgress (1): 29/307 kBProgress (1): 33/307 kBProgress (1): 37/307 kBProgress (1): 41/307 kBProgress (1): 45/307 kBProgress (1): 50/307 kBProgress (1): 54/307 kBProgress (1): 58/307 kBProgress (1): 61/307 kBProgress (1): 65/307 kBProgress (1): 69/307 kBProgress (1): 73/307 kBProgress (1): 77/307 kBProgress (1): 94/307 kBProgress (1): 110/307 kBProgress (1): 126/307 kBProgress (1): 142/307 kBProgress (1): 159/307 kBProgress (1): 175/307 kBProgress (1): 192/307 kBProgress (1): 200/307 kBProgress (1): 217/307 kBProgress (1): 233/307 kBProgress (1): 250/307 kBProgress (1): 266/307 kBProgress (1): 282/307 kBProgress (1): 299/307 kBProgress (1): 307 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.agent/0.8.14/org.jacoco.agent-0.8.14-runtime.jar (307 kB at 9.9 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.core/0.8.14/org.jacoco.core-0.8.14.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.9/asm-9.9.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.9/asm-commons-9.9.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.9/asm-tree-9.9.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.report/0.8.14/org.jacoco.report-0.8.14.jar
+Progress (1): 7.7/126 kBProgress (1): 16/126 kB Progress (1): 24/126 kBProgress (1): 40/126 kBProgress (1): 57/126 kBProgress (1): 73/126 kBProgress (1): 90/126 kBProgress (1): 106/126 kBProgress (1): 122/126 kBProgress (1): 126 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.9/asm-9.9.jar (126 kB at 4.9 MB/s)
+Progress (1): 0.9/52 kBProgress (2): 0.9/52 kB | 0.9/230 kBProgress (2): 2.3/52 kB | 0.9/230 kBProgress (2): 2.3/52 kB | 2.3/230 kBProgress (2): 3.6/52 kB | 2.3/230 kBProgress (2): 3.6/52 kB | 3.6/230 kBProgress (2): 5.0/52 kB | 3.6/230 kBProgress (2): 5.0/52 kB | 5.0/230 kBProgress (2): 6.4/52 kB | 5.0/230 kBProgress (2): 6.4/52 kB | 6.4/230 kBProgress (2): 7.7/52 kB | 6.4/230 kBProgress (2): 7.7/52 kB | 7.7/230 kBProgress (2): 9.1/52 kB | 7.7/230 kBProgress (2): 9.1/52 kB | 9.1/230 kBProgress (2): 10/52 kB | 9.1/230 kB Progress (2): 10/52 kB | 10/230 kB Progress (2): 11/52 kB | 10/230 kBProgress (2): 13/52 kB | 10/230 kBProgress (2): 14/52 kB | 10/230 kBProgress (2): 14/52 kB | 11/230 kBProgress (2): 14/52 kB | 13/230 kBProgress (2): 15/52 kB | 13/230 kBProgress (2): 17/52 kB | 13/230 kBProgress (2): 17/52 kB | 14/230 kBProgress (2): 17/52 kB | 15/230 kBProgress (2): 18/52 kB | 15/230 kBProgress (2): 18/52 kB | 17/230 kBProgress (2): 20/52 kB | 17/230 kBProgress (3): 20/52 kB | 17/230 kB | 0.9/131 kBProgress (3): 20/52 kB | 18/230 kB | 0.9/131 kBProgress (3): 20/52 kB | 18/230 kB | 2.3/131 kBProgress (3): 21/52 kB | 18/230 kB | 2.3/131 kBProgress (3): 21/52 kB | 20/230 kB | 2.3/131 kBProgress (3): 21/52 kB | 21/230 kB | 2.3/131 kBProgress (3): 21/52 kB | 21/230 kB | 3.1/131 kBProgress (3): 22/52 kB | 21/230 kB | 3.1/131 kBProgress (3): 24/52 kB | 21/230 kB | 3.1/131 kBProgress (3): 24/52 kB | 21/230 kB | 4.5/131 kBProgress (3): 24/52 kB | 22/230 kB | 4.5/131 kBProgress (3): 24/52 kB | 22/230 kB | 5.9/131 kBProgress (3): 25/52 kB | 22/230 kB | 5.9/131 kBProgress (3): 25/52 kB | 24/230 kB | 5.9/131 kBProgress (3): 25/52 kB | 24/230 kB | 7.3/131 kBProgress (3): 26/52 kB | 24/230 kB | 7.3/131 kBProgress (3): 26/52 kB | 24/230 kB | 8.6/131 kBProgress (3): 28/52 kB | 24/230 kB | 8.6/131 kBProgress (3): 28/52 kB | 25/230 kB | 8.6/131 kBProgress (3): 28/52 kB | 25/230 kB | 10.0/131 kBProgress (3): 29/52 kB | 25/230 kB | 10.0/131 kBProgress (3): 29/52 kB | 26/230 kB | 10.0/131 kBProgress (3): 29/52 kB | 26/230 kB | 11/131 kB  Progress (3): 29/52 kB | 28/230 kB | 11/131 kBProgress (3): 31/52 kB | 28/230 kB | 11/131 kBProgress (4): 31/52 kB | 28/230 kB | 11/131 kB | 0.9/74 kBProgress (4): 31/52 kB | 28/230 kB | 11/131 kB | 2.3/74 kBProgress (4): 32/52 kB | 28/230 kB | 11/131 kB | 2.3/74 kBProgress (4): 32/52 kB | 28/230 kB | 11/131 kB | 3.6/74 kBProgress (4): 33/52 kB | 28/230 kB | 11/131 kB | 3.6/74 kBProgress (4): 33/52 kB | 29/230 kB | 11/131 kB | 3.6/74 kBProgress (4): 33/52 kB | 31/230 kB | 11/131 kB | 3.6/74 kBProgress (4): 35/52 kB | 31/230 kB | 11/131 kB | 3.6/74 kBProgress (4): 35/52 kB | 31/230 kB | 11/131 kB | 5.0/74 kBProgress (4): 35/52 kB | 31/230 kB | 13/131 kB | 5.0/74 kBProgress (4): 35/52 kB | 32/230 kB | 13/131 kB | 5.0/74 kBProgress (4): 36/52 kB | 32/230 kB | 13/131 kB | 5.0/74 kBProgress (4): 36/52 kB | 32/230 kB | 13/131 kB | 6.4/74 kBProgress (4): 36/52 kB | 32/230 kB | 14/131 kB | 6.4/74 kBProgress (4): 37/52 kB | 32/230 kB | 14/131 kB | 6.4/74 kBProgress (4): 37/52 kB | 33/230 kB | 14/131 kB | 6.4/74 kBProgress (4): 37/52 kB | 33/230 kB | 14/131 kB | 7.7/74 kBProgress (4): 37/52 kB | 33/230 kB | 15/131 kB | 7.7/74 kBProgress (4): 39/52 kB | 33/230 kB | 15/131 kB | 7.7/74 kBProgress (4): 40/52 kB | 33/230 kB | 15/131 kB | 7.7/74 kBProgress (4): 40/52 kB | 33/230 kB | 17/131 kB | 7.7/74 kBProgress (4): 40/52 kB | 35/230 kB | 17/131 kB | 7.7/74 kBProgress (4): 40/52 kB | 35/230 kB | 17/131 kB | 9.1/74 kBProgress (4): 41/52 kB | 35/230 kB | 17/131 kB | 9.1/74 kBProgress (4): 41/52 kB | 35/230 kB | 18/131 kB | 9.1/74 kBProgress (4): 41/52 kB | 36/230 kB | 18/131 kB | 9.1/74 kBProgress (4): 41/52 kB | 36/230 kB | 18/131 kB | 10/74 kB Progress (4): 43/52 kB | 36/230 kB | 18/131 kB | 10/74 kBProgress (4): 43/52 kB | 37/230 kB | 18/131 kB | 10/74 kBProgress (4): 43/52 kB | 37/230 kB | 20/131 kB | 10/74 kBProgress (4): 43/52 kB | 37/230 kB | 20/131 kB | 11/74 kBProgress (4): 44/52 kB | 37/230 kB | 20/131 kB | 11/74 kBProgress (4): 44/52 kB | 39/230 kB | 20/131 kB | 11/74 kBProgress (4): 44/52 kB | 39/230 kB | 20/131 kB | 13/74 kBProgress (4): 44/52 kB | 39/230 kB | 21/131 kB | 13/74 kBProgress (4): 46/52 kB | 39/230 kB | 21/131 kB | 13/74 kBProgress (4): 46/52 kB | 39/230 kB | 21/131 kB | 14/74 kBProgress (4): 47/52 kB | 39/230 kB | 21/131 kB | 14/74 kBProgress (4): 47/52 kB | 40/230 kB | 21/131 kB | 14/74 kBProgress (4): 47/52 kB | 40/230 kB | 22/131 kB | 14/74 kBProgress (4): 47/52 kB | 40/230 kB | 22/131 kB | 15/74 kBProgress (4): 48/52 kB | 40/230 kB | 22/131 kB | 15/74 kBProgress (4): 48/52 kB | 41/230 kB | 22/131 kB | 15/74 kBProgress (4): 48/52 kB | 41/230 kB | 22/131 kB | 17/74 kBProgress (4): 50/52 kB | 41/230 kB | 22/131 kB | 17/74 kBProgress (4): 50/52 kB | 43/230 kB | 22/131 kB | 17/74 kBProgress (4): 50/52 kB | 43/230 kB | 24/131 kB | 17/74 kBProgress (4): 50/52 kB | 43/230 kB | 24/131 kB | 18/74 kBProgress (4): 50/52 kB | 44/230 kB | 24/131 kB | 18/74 kBProgress (4): 51/52 kB | 44/230 kB | 24/131 kB | 18/74 kBProgress (4): 51/52 kB | 44/230 kB | 24/131 kB | 20/74 kBProgress (4): 51/52 kB | 46/230 kB | 24/131 kB | 20/74 kBProgress (4): 52 kB | 46/230 kB | 24/131 kB | 20/74 kB   Progress (4): 52 kB | 46/230 kB | 24/131 kB | 21/74 kBProgress (4): 52 kB | 46/230 kB | 25/131 kB | 21/74 kBProgress (4): 52 kB | 47/230 kB | 25/131 kB | 21/74 kBProgress (4): 52 kB | 47/230 kB | 25/131 kB | 22/74 kBProgress (4): 52 kB | 48/230 kB | 25/131 kB | 22/74 kBProgress (4): 52 kB | 48/230 kB | 25/131 kB | 24/74 kBProgress (4): 52 kB | 48/230 kB | 26/131 kB | 24/74 kBProgress (4): 52 kB | 50/230 kB | 26/131 kB | 24/74 kBProgress (4): 52 kB | 50/230 kB | 26/131 kB | 25/74 kBProgress (4): 52 kB | 51/230 kB | 26/131 kB | 25/74 kBProgress (4): 52 kB | 51/230 kB | 26/131 kB | 26/74 kBProgress (4): 52 kB | 51/230 kB | 28/131 kB | 26/74 kBProgress (4): 52 kB | 52/230 kB | 28/131 kB | 26/74 kBProgress (4): 52 kB | 52/230 kB | 28/131 kB | 28/74 kBProgress (4): 52 kB | 54/230 kB | 28/131 kB | 28/74 kBProgress (4): 52 kB | 54/230 kB | 28/131 kB | 29/74 kBProgress (4): 52 kB | 55/230 kB | 28/131 kB | 29/74 kBProgress (4): 52 kB | 55/230 kB | 28/131 kB | 31/74 kBProgress (4): 52 kB | 55/230 kB | 29/131 kB | 31/74 kBProgress (4): 52 kB | 55/230 kB | 29/131 kB | 32/74 kBProgress (4): 52 kB | 55/230 kB | 31/131 kB | 32/74 kBProgress (4): 52 kB | 59/230 kB | 31/131 kB | 32/74 kBProgress (4): 52 kB | 59/230 kB | 31/131 kB | 33/74 kBProgress (4): 52 kB | 59/230 kB | 31/131 kB | 35/74 kBProgress (4): 52 kB | 59/230 kB | 32/131 kB | 35/74 kBProgress (4): 52 kB | 64/230 kB | 32/131 kB | 35/74 kB                                                      Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.9/asm-tree-9.9.jar (52 kB at 571 kB/s)
+Progress (3): 64/230 kB | 32/131 kB | 36/74 kBProgress (3): 64/230 kB | 33/131 kB | 36/74 kBProgress (3): 68/230 kB | 33/131 kB | 36/74 kBProgress (3): 68/230 kB | 33/131 kB | 37/74 kBProgress (3): 68/230 kB | 35/131 kB | 37/74 kBProgress (3): 68/230 kB | 35/131 kB | 39/74 kBProgress (3): 68/230 kB | 35/131 kB | 40/74 kBProgress (3): 68/230 kB | 36/131 kB | 40/74 kBProgress (3): 68/230 kB | 36/131 kB | 41/74 kBProgress (3): 68/230 kB | 36/131 kB | 43/74 kBProgress (3): 68/230 kB | 37/131 kB | 43/74 kBProgress (3): 68/230 kB | 37/131 kB | 44/74 kBProgress (3): 68/230 kB | 39/131 kB | 44/74 kBProgress (3): 68/230 kB | 39/131 kB | 46/74 kBProgress (3): 68/230 kB | 39/131 kB | 47/74 kBProgress (3): 68/230 kB | 40/131 kB | 47/74 kBProgress (3): 68/230 kB | 40/131 kB | 48/74 kBProgress (3): 68/230 kB | 40/131 kB | 50/74 kBProgress (3): 68/230 kB | 40/131 kB | 51/74 kBProgress (3): 68/230 kB | 41/131 kB | 51/74 kBProgress (3): 68/230 kB | 41/131 kB | 52/74 kBProgress (3): 68/230 kB | 41/131 kB | 54/74 kBProgress (3): 68/230 kB | 43/131 kB | 54/74 kBProgress (3): 68/230 kB | 43/131 kB | 55/74 kBProgress (3): 68/230 kB | 44/131 kB | 55/74 kBProgress (3): 68/230 kB | 44/131 kB | 59/74 kBProgress (3): 68/230 kB | 46/131 kB | 59/74 kBProgress (3): 68/230 kB | 46/131 kB | 64/74 kBProgress (3): 68/230 kB | 47/131 kB | 64/74 kBProgress (3): 68/230 kB | 47/131 kB | 68/74 kBProgress (3): 68/230 kB | 47/131 kB | 72/74 kBProgress (3): 68/230 kB | 48/131 kB | 72/74 kBProgress (3): 68/230 kB | 48/131 kB | 74 kB   Progress (3): 68/230 kB | 50/131 kB | 74 kBProgress (3): 68/230 kB | 51/131 kB | 74 kBProgress (3): 68/230 kB | 52/131 kB | 74 kBProgress (3): 68/230 kB | 54/131 kB | 74 kBProgress (3): 68/230 kB | 55/131 kB | 74 kBProgress (3): 68/230 kB | 59/131 kB | 74 kBProgress (3): 68/230 kB | 60/131 kB | 74 kBProgress (3): 72/230 kB | 60/131 kB | 74 kBProgress (3): 72/230 kB | 65/131 kB | 74 kBProgress (3): 76/230 kB | 65/131 kB | 74 kB                                           Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.9/asm-commons-9.9.jar (74 kB at 808 kB/s)
+Progress (2): 76/230 kB | 69/131 kBProgress (2): 76/230 kB | 73/131 kBProgress (2): 81/230 kB | 73/131 kBProgress (2): 81/230 kB | 77/131 kBProgress (2): 85/230 kB | 77/131 kBProgress (2): 85/230 kB | 82/131 kBProgress (2): 89/230 kB | 82/131 kBProgress (2): 89/230 kB | 86/131 kBProgress (2): 93/230 kB | 86/131 kBProgress (2): 97/230 kB | 86/131 kBProgress (2): 102/230 kB | 86/131 kBProgress (2): 106/230 kB | 86/131 kBProgress (2): 110/230 kB | 86/131 kBProgress (2): 114/230 kB | 86/131 kBProgress (2): 119/230 kB | 86/131 kBProgress (2): 123/230 kB | 86/131 kBProgress (2): 127/230 kB | 86/131 kBProgress (2): 127/230 kB | 90/131 kBProgress (2): 131/230 kB | 90/131 kBProgress (2): 131/230 kB | 94/131 kBProgress (2): 131/230 kB | 99/131 kBProgress (2): 136/230 kB | 99/131 kBProgress (2): 136/230 kB | 103/131 kBProgress (2): 136/230 kB | 107/131 kBProgress (2): 140/230 kB | 107/131 kBProgress (2): 140/230 kB | 111/131 kBProgress (2): 142/230 kB | 111/131 kBProgress (2): 142/230 kB | 115/131 kBProgress (2): 142/230 kB | 120/131 kBProgress (2): 147/230 kB | 120/131 kBProgress (2): 147/230 kB | 124/131 kBProgress (2): 151/230 kB | 124/131 kBProgress (2): 151/230 kB | 128/131 kBProgress (2): 155/230 kB | 128/131 kBProgress (2): 159/230 kB | 128/131 kBProgress (2): 159/230 kB | 131 kB    Progress (2): 164/230 kB | 131 kBProgress (2): 168/230 kB | 131 kBProgress (2): 172/230 kB | 131 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.report/0.8.14/org.jacoco.report-0.8.14.jar (131 kB at 1.4 MB/s)
+Progress (1): 176/230 kBProgress (1): 181/230 kBProgress (1): 185/230 kBProgress (1): 189/230 kBProgress (1): 193/230 kBProgress (1): 197/230 kBProgress (1): 202/230 kBProgress (1): 206/230 kBProgress (1): 210/230 kBProgress (1): 214/230 kBProgress (1): 219/230 kBProgress (1): 223/230 kBProgress (1): 230 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.core/0.8.14/org.jacoco.core-0.8.14.jar (230 kB at 2.3 MB/s)
+[INFO] argLine set to -javaagent:/home/sergi/.m2/repository/org/jacoco/org.jacoco.agent/0.8.14/org.jacoco.agent-0.8.14-runtime.jar=destfile=/home/sergi/code/mining/commons-csv/target/jacoco.exec
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ commons-csv ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.commons.csv.JiraCsv318Test
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.110 s -- in org.apache.commons.csv.JiraCsv318Test
+[INFO] Running org.apache.commons.csv.UserGuideTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.075 s -- in org.apache.commons.csv.UserGuideTest
+[INFO] Running org.apache.commons.csv.ExtendedBufferedReaderTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in org.apache.commons.csv.ExtendedBufferedReaderTest
+[INFO] Running org.apache.commons.csv.CSVFormatPredefinedTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in org.apache.commons.csv.CSVFormatPredefinedTest
+[INFO] Running org.apache.commons.csv.CSVDuplicateHeaderTest
+[INFO] Tests run: 348, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.389 s -- in org.apache.commons.csv.CSVDuplicateHeaderTest
+[INFO] Running org.apache.commons.csv.CSVPrinterTest
+[WARNING] Tests run: 144, Failures: 0, Errors: 0, Skipped: 7, Time elapsed: 3.366 s -- in org.apache.commons.csv.CSVPrinterTest
+[INFO] Running org.apache.commons.csv.CSVParserTest
+[ERROR] Tests run: 158, Failures: 1, Errors: 0, Skipped: 4, Time elapsed: 0.110 s <<< FAILURE! -- in org.apache.commons.csv.CSVParserTest
+[ERROR] org.apache.commons.csv.CSVParserTest.testGetRecordsMaxRowsWithRecordNumberOffset -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at org.apache.commons.csv.CSVParserTest.testGetRecordsMaxRowsWithRecordNumberOffset(CSVParserTest.java:979)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.apache.commons.csv.CSVRecordTest
+[INFO] Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.030 s -- in org.apache.commons.csv.CSVRecordTest
+[INFO] Running org.apache.commons.csv.JiraCsv196Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.commons.csv.JiraCsv196Test
+[INFO] Running org.apache.commons.csv.CSVFileParserTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s -- in org.apache.commons.csv.CSVFileParserTest
+[INFO] Running org.apache.commons.csv.issues.JiraCsv154Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv154Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv149Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv149Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv93Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.commons.csv.issues.JiraCsv93Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv213Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv213Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv290Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.commons.csv.issues.JiraCsv290Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv249Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv249Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv150Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv150Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv263Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv263Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv211Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv211Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv167Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.csv.issues.JiraCsv167Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv203Test
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.commons.csv.issues.JiraCsv203Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv294Test
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.commons.csv.issues.JiraCsv294Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv148Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv148Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv271Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv271Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv247Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.csv.issues.JiraCsv247Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv248Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.commons.csv.issues.JiraCsv248Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv198Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.241 s -- in org.apache.commons.csv.issues.JiraCsv198Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv253Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv253Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv254Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv254Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv206Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv206Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv257Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.csv.issues.JiraCsv257Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv264Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.commons.csv.issues.JiraCsv264Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv227Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv227Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv265Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv265Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv288Test
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.commons.csv.issues.JiraCsv288Test
+[INFO] Running org.apache.commons.csv.CSVFormatTest
+[INFO] Tests run: 111, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 s -- in org.apache.commons.csv.CSVFormatTest
+[INFO] Running org.apache.commons.csv.TokenTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.csv.TokenTest
+[INFO] Running org.apache.commons.csv.LexerTest
+[INFO] Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in org.apache.commons.csv.LexerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   CSVParserTest.testGetRecordsMaxRowsWithRecordNumberOffset:979 expected: <1> but was: <0>
+[INFO] 
+[ERROR] Tests run: 931, Failures: 1, Errors: 0, Skipped: 11
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.548 s
+[INFO] Finished at: 2026-09-24T07:59:59-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-csv: There are test failures.
+[ERROR] 
+[ERROR] See /home/sergi/code/mining/commons-csv/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

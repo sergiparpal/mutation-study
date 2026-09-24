@@ -1,0 +1,25 @@
+diff --git a/src/main/java/org/apache/commons/csv/CSVParser.java b/src/main/java/org/apache/commons/csv/CSVParser.java
+index c9b2dc44..83b60170 100644
+--- a/src/main/java/org/apache/commons/csv/CSVParser.java
++++ b/src/main/java/org/apache/commons/csv/CSVParser.java
+@@ -237,6 +237,7 @@ public final class CSVParser implements Iterable<CSVRecord>, Closeable {
+ 
+     final class CSVRecordIterator implements Iterator<CSVRecord> {
+         private CSVRecord current;
++        private long recordCount;
+ 
+         /**
+          * Gets the next record or null at the end of stream or max rows read.
+@@ -247,8 +248,11 @@ public final class CSVParser implements Iterable<CSVRecord>, Closeable {
+          */
+         private CSVRecord getNextRecord() {
+             CSVRecord record = null;
+-            if (format.useRow(recordNumber + 1)) {
++            if (format.useRow(recordCount + 1)) {
+                 record = Uncheck.get(CSVParser.this::nextRecord);
++                if (record != null) {
++                    recordCount++;
++                }
+             }
+             return record;
+         }

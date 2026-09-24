@@ -1,0 +1,5 @@
+project=commons-lang
+sha=e0dba35f9e41dfdbbbb646fcd377b8af8ef7344e
+short=e0dba35f9
+date=2026-07-28
+subject=[LANG-1833] Handle ParsePosition index beyond source string length cleanly (#1757)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=98dc24990bf93234cf63ed5c5dd43a4f07847baa
+short=98dc24990
+date=2026-07-17
+subject=Fix sign extension in BitField.getValue for top-bit fields (#1749)

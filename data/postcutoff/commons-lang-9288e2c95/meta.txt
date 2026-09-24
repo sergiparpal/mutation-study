@@ -1,0 +1,5 @@
+project=commons-lang
+sha=9288e2c95f39abd1ff115aeddafaa276ceafae6d
+short=9288e2c95
+date=2026-08-04
+subject=Fix the overflow bound direction in Instants.toMillisSince(Instant) (#1766)

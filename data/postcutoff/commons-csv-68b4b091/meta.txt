@@ -1,0 +1,5 @@
+project=commons-csv
+sha=68b4b0910be1b9c0beb52a39b906851f0c41c75c
+short=68b4b091
+date=2026-06-09
+subject=[CSV-326] Escape Reader values with quote and escape

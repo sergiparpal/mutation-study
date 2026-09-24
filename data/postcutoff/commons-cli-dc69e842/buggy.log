@@ -1,0 +1,234 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< commons-cli:commons-cli >-----------------------
+[INFO] Building Apache Commons CLI 1.12.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ commons-cli ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ commons-cli ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-cli ---
+[WARNING] Basedir is : /home/sergi/code/mining/commons-cli
+[INFO] Excluding patterns: site-content/**, .checkstyle, .fbprefs, .pmd, .asf.yaml, .gitattributes, src/site/resources/download_*.cgi, maven-eclipse.xml, .externalToolBuilders/**, .vscode/**, .project, .classpath, .settings/**, **/*.svg, **/*.xcf
+[INFO] Excluding MAVEN collection.
+[INFO] Excluding ECLIPSE collection.
+[INFO] Excluding IDEA collection.
+[INFO] Processing exclude file from STANDARD_SCMS.
+[INFO] Excluding STANDARD_SCMS collection.
+[INFO] Excluding MISC collection.
+[INFO] Excluding HIDDEN_DIR collection.
+[INFO] RAT summary:
+[INFO]   Approved:  116
+[INFO]   Archives:  0
+[INFO]   Binaries:  7
+[INFO]   Document types:  4
+[INFO]   Ignored:  13
+[INFO]   License categories:  1
+[INFO]   License names:  1
+[INFO]   Notices:  3
+[INFO]   Standards:  116
+[INFO]   Unapproved:  0
+[INFO]   Unknown:  0
+[INFO] 
+[INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-cli ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.1:parse-version (parse-version) @ commons-cli ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-cli ---
+[INFO] Executing tasks
+[INFO]      [copy] Copying 2 files to /home/sergi/code/mining/commons-cli/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-cli ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-cli ---
+[INFO] skip non existing resourceDirectory /home/sergi/code/mining/commons-cli/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ commons-cli ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 36 source files with javac [debug release 8] to target/classes
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-cli ---
+[INFO] No MANIFEST.MF file found, generating manifest.
+[INFO] Writing manifest: /home/sergi/code/mining/commons-cli/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-cli ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ commons-cli ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 51 source files with javac [debug release 8] to target/test-classes
+[INFO] /home/sergi/code/mining/commons-cli/src/test/java/org/apache/commons/cli/HelpFormatterTest.java: Some input files use or override a deprecated API.
+[INFO] /home/sergi/code/mining/commons-cli/src/test/java/org/apache/commons/cli/HelpFormatterTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (prepare-agent) @ commons-cli ---
+[INFO] argLine set to -javaagent:/home/sergi/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/home/sergi/code/mining/commons-cli/target/jacoco.exec,exclclassloader=jdk.internal.loader.ClassLoaders$PlatformClassLoader
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ commons-cli ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.commons.cli.BasicParserTest
+[WARNING] Tests run: 67, Failures: 0, Errors: 0, Skipped: 27, Time elapsed: 0.203 s -- in org.apache.commons.cli.BasicParserTest
+[INFO] Running org.apache.commons.cli.example.AptHelpAppendableTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 s -- in org.apache.commons.cli.example.AptHelpAppendableTest
+[INFO] Running org.apache.commons.cli.example.XhtmlHelpAppendableTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s -- in org.apache.commons.cli.example.XhtmlHelpAppendableTest
+[INFO] Running org.apache.commons.cli.ParseExceptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.commons.cli.ParseExceptionTest
+[INFO] Running org.apache.commons.cli.UtilTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.commons.cli.UtilTest
+[INFO] Running org.apache.commons.cli.ValuesTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in org.apache.commons.cli.ValuesTest
+[INFO] Running org.apache.commons.cli.ConverterTests
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.211 s -- in org.apache.commons.cli.ConverterTests
+[INFO] Running org.apache.commons.cli.bug.BugsTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in org.apache.commons.cli.bug.BugsTest
+[INFO] Running org.apache.commons.cli.bug.BugCLI148Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.cli.bug.BugCLI148Test
+[INFO] Running org.apache.commons.cli.bug.BugCLI325Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.cli.bug.BugCLI325Test
+[INFO] Running org.apache.commons.cli.bug.BugCLI18Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.cli.bug.BugCLI18Test
+[INFO] Running org.apache.commons.cli.bug.BugCLI162Test
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in org.apache.commons.cli.bug.BugCLI162Test
+[INFO] Running org.apache.commons.cli.bug.BugCLI133Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.cli.bug.BugCLI133Test
+[INFO] Running org.apache.commons.cli.bug.BugCLI252Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.commons.cli.bug.BugCLI252Test
+[INFO] Running org.apache.commons.cli.bug.BugCLI71Test
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.commons.cli.bug.BugCLI71Test
+[INFO] Running org.apache.commons.cli.bug.BugCLI265Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.commons.cli.bug.BugCLI265Test
+[INFO] Running org.apache.commons.cli.bug.BugCLI312Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.commons.cli.bug.BugCLI312Test
+[INFO] Running org.apache.commons.cli.bug.BugCLI13Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.cli.bug.BugCLI13Test
+[INFO] Running org.apache.commons.cli.bug.BugCLI266Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.cli.bug.BugCLI266Test
+[INFO] Running org.apache.commons.cli.UnrecognizedOptionExceptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.cli.UnrecognizedOptionExceptionTest
+[INFO] Running org.apache.commons.cli.OptionTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s -- in org.apache.commons.cli.OptionTest
+[INFO] Running org.apache.commons.cli.ApplicationTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.commons.cli.ApplicationTest
+[INFO] Running org.apache.commons.cli.AlreadySelectedExceptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.cli.AlreadySelectedExceptionTest
+[INFO] Running org.apache.commons.cli.SolrCreateToolTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.cli.SolrCreateToolTest
+[INFO] Running org.apache.commons.cli.OptionBuilderTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.commons.cli.OptionBuilderTest
+[INFO] Running org.apache.commons.cli.OptionValidatorTest
+[INFO] Tests run: 115, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.129 s -- in org.apache.commons.cli.OptionValidatorTest
+[INFO] Running org.apache.commons.cli.SolrCliTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.cli.SolrCliTest
+[INFO] Running org.apache.commons.cli.DeprecatedAttributesTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.cli.DeprecatedAttributesTest
+[INFO] Running org.apache.commons.cli.DefaultParserTest
+[WARNING] Tests run: 87, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.078 s -- in org.apache.commons.cli.DefaultParserTest
+[INFO] Running org.apache.commons.cli.PosixParserTest
+[WARNING] Tests run: 67, Failures: 0, Errors: 0, Skipped: 10, Time elapsed: 0.045 s -- in org.apache.commons.cli.PosixParserTest
+[INFO] Running org.apache.commons.cli.ArgumentIsOptionTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.cli.ArgumentIsOptionTest
+[INFO] Running org.apache.commons.cli.PatternOptionBuilderTest
+Exception found converting v to desired type: java.net.MalformedURLException: unknown protocol: foo
+Exception found converting d to desired type: java.lang.ClassNotFoundException: System.DateTime
+Exception found converting f to desired type: java.io.FileNotFoundException: non-existing.file (No such file or directory)
+Exception found converting x to desired type: java.lang.NumberFormatException: For input string: "3,5"
+Exception found converting i to desired type: java.lang.NoSuchMethodException: java.util.Calendar.<init>()
+Exception found converting n to desired type: java.lang.ClassNotFoundException: System.DateTime
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in org.apache.commons.cli.PatternOptionBuilderTest
+[INFO] Running org.apache.commons.cli.MissingOptionExceptionTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.cli.MissingOptionExceptionTest
+[INFO] Running org.apache.commons.cli.TypeHandlerTest
+[INFO] Tests run: 64, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 s -- in org.apache.commons.cli.TypeHandlerTest
+[INFO] Running org.apache.commons.cli.CommandLineTest
+[INFO] Tests run: 138, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.156 s -- in org.apache.commons.cli.CommandLineTest
+[INFO] Running org.apache.commons.cli.OptionCountTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.commons.cli.OptionCountTest
+[INFO] Running org.apache.commons.cli.GnuParserTest
+[WARNING] Tests run: 67, Failures: 0, Errors: 0, Skipped: 22, Time elapsed: 0.032 s -- in org.apache.commons.cli.GnuParserTest
+[INFO] Running org.apache.commons.cli.OptionGroupTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.commons.cli.OptionGroupTest
+[INFO] Running org.apache.commons.cli.OptionsTest
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.commons.cli.OptionsTest
+[INFO] Running org.apache.commons.cli.HelpFormatterTest
+[INFO] Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.731 s -- in org.apache.commons.cli.HelpFormatterTest
+[INFO] Running org.apache.commons.cli.ValueTest
+[INFO] Tests run: 40, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s -- in org.apache.commons.cli.ValueTest
+[INFO] Running org.apache.commons.cli.DisablePartialMatchingTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.cli.DisablePartialMatchingTest
+[INFO] Running org.apache.commons.cli.help.UtilTest
+[INFO] Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in org.apache.commons.cli.help.UtilTest
+[INFO] Running org.apache.commons.cli.help.TextHelpAppendableTest
+[ERROR] Tests run: 33, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.028 s <<< FAILURE! -- in org.apache.commons.cli.help.TextHelpAppendableTest
+[ERROR] org.apache.commons.cli.help.TextHelpAppendableTest.testindexOfWrapPos -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: overflow produced a negative wrap index ==> expected: <43> but was: <-2147483619>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:563)
+	at org.apache.commons.cli.help.TextHelpAppendableTest.testindexOfWrapPos(TextHelpAppendableTest.java:286)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.apache.commons.cli.help.TextStyleTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in org.apache.commons.cli.help.TextStyleTest
+[INFO] Running org.apache.commons.cli.help.OptionFormatterTest
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.commons.cli.help.OptionFormatterTest
+[INFO] Running org.apache.commons.cli.help.HelpFormatterTest
+ usage:  CL syntax
+
+ Header
+
+ Options     Since     Description
+
+ Footer
+
+ usage:  CL syntax
+
+ Header
+
+
+ Options     Since     Description
+
+ Footer
+
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in org.apache.commons.cli.help.HelpFormatterTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TextHelpAppendableTest.testindexOfWrapPos:286 overflow produced a negative wrap index ==> expected: <43> but was: <-2147483619>
+[INFO] 
+[ERROR] Tests run: 985, Failures: 1, Errors: 0, Skipped: 61
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.845 s
+[INFO] Finished at: 2026-09-24T08:00:47-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-cli: There are test failures.
+[ERROR] 
+[ERROR] See /home/sergi/code/mining/commons-cli/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

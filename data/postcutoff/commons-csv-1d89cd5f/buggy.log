@@ -1,0 +1,215 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.apache.commons:commons-csv >-------------------
+[INFO] Building Apache Commons CSV 1.15.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/2.2.224/h2-2.2.224.pom
+Progress (1): 1.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/2.2.224/h2-2.2.224.pom (1.1 kB at 5.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.12.19/byte-buddy-1.12.19.jar
+Progress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.1/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.2/4.0 MBProgress (1): 0.3/4.0 MBProgress (1): 0.3/4.0 MBProgress (1): 0.3/4.0 MBProgress (1): 0.3/4.0 MBProgress (1): 0.3/4.0 MBProgress (1): 0.3/4.0 MBProgress (1): 0.4/4.0 MBProgress (1): 0.4/4.0 MBProgress (1): 0.4/4.0 MBProgress (1): 0.4/4.0 MBProgress (1): 0.4/4.0 MBProgress (1): 0.4/4.0 MBProgress (1): 0.4/4.0 MBProgress (1): 0.5/4.0 MBProgress (1): 0.5/4.0 MBProgress (1): 0.5/4.0 MBProgress (1): 0.5/4.0 MBProgress (1): 0.5/4.0 MBProgress (1): 0.5/4.0 MBProgress (1): 0.6/4.0 MBProgress (1): 0.6/4.0 MBProgress (1): 0.6/4.0 MBProgress (1): 0.6/4.0 MBProgress (1): 0.6/4.0 MBProgress (1): 0.6/4.0 MBProgress (1): 0.6/4.0 MBProgress (1): 0.7/4.0 MBProgress (1): 0.7/4.0 MBProgress (1): 0.7/4.0 MBProgress (1): 0.7/4.0 MBProgress (1): 0.7/4.0 MBProgress (1): 0.7/4.0 MBProgress (1): 0.8/4.0 MBProgress (1): 0.8/4.0 MBProgress (1): 0.8/4.0 MBProgress (1): 0.8/4.0 MBProgress (1): 0.8/4.0 MBProgress (1): 0.8/4.0 MBProgress (1): 0.9/4.0 MBProgress (1): 0.9/4.0 MBProgress (1): 0.9/4.0 MBProgress (1): 0.9/4.0 MBProgress (1): 0.9/4.0 MBProgress (1): 0.9/4.0 MBProgress (1): 1.0/4.0 MBProgress (1): 1.0/4.0 MBProgress (1): 1.0/4.0 MBProgress (1): 1.0/4.0 MBProgress (1): 1.0/4.0 MBProgress (1): 1.0/4.0 MBProgress (1): 1.1/4.0 MBProgress (1): 1.1/4.0 MBProgress (1): 1.1/4.0 MBProgress (1): 1.1/4.0 MBProgress (1): 1.1/4.0 MBProgress (1): 1.1/4.0 MBProgress (1): 1.2/4.0 MBProgress (1): 1.2/4.0 MBProgress (1): 1.2/4.0 MBProgress (1): 1.2/4.0 MBProgress (1): 1.2/4.0 MBProgress (1): 1.2/4.0 MBProgress (1): 1.2/4.0 MBProgress (1): 1.3/4.0 MBProgress (1): 1.3/4.0 MBProgress (1): 1.3/4.0 MBProgress (1): 1.3/4.0 MBProgress (1): 1.3/4.0 MBProgress (1): 1.3/4.0 MBProgress (1): 1.4/4.0 MBProgress (1): 1.4/4.0 MBProgress (1): 1.4/4.0 MBProgress (1): 1.4/4.0 MBProgress (1): 1.4/4.0 MBProgress (1): 1.4/4.0 MBProgress (1): 1.5/4.0 MBProgress (1): 1.5/4.0 MBProgress (1): 1.5/4.0 MBProgress (1): 1.5/4.0 MBProgress (1): 1.5/4.0 MBProgress (1): 1.5/4.0 MBProgress (1): 1.6/4.0 MBProgress (1): 1.6/4.0 MBProgress (1): 1.6/4.0 MBProgress (1): 1.6/4.0 MBProgress (1): 1.6/4.0 MBProgress (1): 1.6/4.0 MBProgress (1): 1.7/4.0 MBProgress (1): 1.7/4.0 MBProgress (1): 1.7/4.0 MBProgress (1): 1.7/4.0 MBProgress (1): 1.7/4.0 MBProgress (1): 1.7/4.0 MBProgress (1): 1.8/4.0 MBProgress (1): 1.8/4.0 MBProgress (1): 1.8/4.0 MBProgress (1): 1.8/4.0 MBProgress (1): 1.8/4.0 MBProgress (1): 1.8/4.0 MBProgress (1): 1.8/4.0 MBProgress (1): 1.9/4.0 MBProgress (1): 1.9/4.0 MBProgress (1): 1.9/4.0 MBProgress (1): 1.9/4.0 MBProgress (1): 1.9/4.0 MBProgress (1): 1.9/4.0 MBProgress (1): 2.0/4.0 MBProgress (1): 2.0/4.0 MBProgress (1): 2.0/4.0 MBProgress (1): 2.0/4.0 MBProgress (1): 2.0/4.0 MBProgress (1): 2.0/4.0 MBProgress (1): 2.1/4.0 MBProgress (1): 2.1/4.0 MBProgress (1): 2.1/4.0 MBProgress (1): 2.1/4.0 MBProgress (1): 2.1/4.0 MBProgress (1): 2.1/4.0 MBProgress (1): 2.1/4.0 MBProgress (1): 2.2/4.0 MBProgress (1): 2.2/4.0 MBProgress (1): 2.2/4.0 MBProgress (1): 2.2/4.0 MBProgress (1): 2.2/4.0 MBProgress (1): 2.2/4.0 MBProgress (1): 2.3/4.0 MBProgress (1): 2.3/4.0 MBProgress (1): 2.3/4.0 MBProgress (1): 2.3/4.0 MBProgress (1): 2.3/4.0 MBProgress (1): 2.3/4.0 MBProgress (1): 2.4/4.0 MBProgress (1): 2.4/4.0 MBProgress (1): 2.4/4.0 MBProgress (1): 2.4/4.0 MBProgress (1): 2.4/4.0 MBProgress (1): 2.4/4.0 MBProgress (1): 2.4/4.0 MBProgress (1): 2.5/4.0 MBProgress (1): 2.5/4.0 MBProgress (1): 2.5/4.0 MBProgress (1): 2.5/4.0 MBProgress (1): 2.5/4.0 MBProgress (1): 2.5/4.0 MBProgress (1): 2.6/4.0 MBProgress (1): 2.6/4.0 MBProgress (1): 2.6/4.0 MBProgress (1): 2.6/4.0 MBProgress (1): 2.6/4.0 MBProgress (1): 2.6/4.0 MBProgress (1): 2.7/4.0 MBProgress (1): 2.7/4.0 MBProgress (1): 2.7/4.0 MBProgress (1): 2.7/4.0 MBProgress (1): 2.7/4.0 MBProgress (1): 2.7/4.0 MBProgress (1): 2.8/4.0 MBProgress (1): 2.8/4.0 MBProgress (1): 2.8/4.0 MBProgress (1): 2.8/4.0 MBProgress (1): 2.8/4.0 MBProgress (1): 2.8/4.0 MBProgress (1): 2.8/4.0 MBProgress (1): 2.9/4.0 MBProgress (1): 2.9/4.0 MBProgress (1): 2.9/4.0 MBProgress (1): 2.9/4.0 MBProgress (1): 2.9/4.0 MBProgress (1): 2.9/4.0 MBProgress (1): 3.0/4.0 MBProgress (1): 3.0/4.0 MBProgress (1): 3.0/4.0 MBProgress (1): 3.0/4.0 MBProgress (1): 3.0/4.0 MBProgress (1): 3.0/4.0 MBProgress (1): 3.0/4.0 MBProgress (1): 3.1/4.0 MBProgress (1): 3.1/4.0 MBProgress (1): 3.1/4.0 MBProgress (1): 3.1/4.0 MBProgress (1): 3.1/4.0 MBProgress (1): 3.1/4.0 MBProgress (1): 3.1/4.0 MBProgress (1): 3.2/4.0 MBProgress (1): 3.2/4.0 MBProgress (1): 3.2/4.0 MBProgress (1): 3.2/4.0 MBProgress (1): 3.2/4.0 MBProgress (1): 3.2/4.0 MBProgress (1): 3.3/4.0 MBProgress (1): 3.3/4.0 MBProgress (1): 3.3/4.0 MBProgress (1): 3.3/4.0 MBProgress (1): 3.3/4.0 MBProgress (1): 3.3/4.0 MBProgress (1): 3.4/4.0 MBProgress (1): 3.4/4.0 MBProgress (1): 3.4/4.0 MBProgress (1): 3.4/4.0 MBProgress (1): 3.4/4.0 MBProgress (1): 3.4/4.0 MBProgress (1): 3.5/4.0 MBProgress (1): 3.5/4.0 MBProgress (1): 3.5/4.0 MBProgress (1): 3.5/4.0 MBProgress (1): 3.5/4.0 MBProgress (1): 3.5/4.0 MBProgress (1): 3.6/4.0 MBProgress (1): 3.6/4.0 MBProgress (1): 3.6/4.0 MBProgress (1): 3.6/4.0 MBProgress (1): 3.6/4.0 MBProgress (1): 3.6/4.0 MBProgress (1): 3.7/4.0 MBProgress (1): 3.7/4.0 MBProgress (1): 3.7/4.0 MBProgress (1): 3.7/4.0 MBProgress (1): 3.7/4.0 MBProgress (1): 3.7/4.0 MBProgress (1): 3.8/4.0 MBProgress (1): 3.8/4.0 MBProgress (1): 3.8/4.0 MBProgress (1): 3.8/4.0 MBProgress (1): 3.8/4.0 MBProgress (1): 3.8/4.0 MBProgress (1): 3.9/4.0 MBProgress (1): 3.9/4.0 MBProgress (1): 3.9/4.0 MBProgress (1): 3.9/4.0 MBProgress (1): 3.9/4.0 MBProgress (1): 3.9/4.0 MBProgress (1): 4.0/4.0 MBProgress (1): 4.0 MB                        Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.12.19/byte-buddy-1.12.19.jar (4.0 MB at 25 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis/3.3/objenesis-3.3.jar
+Downloading from central: https://repo.maven.apache.org/maven2/com/h2database/h2/2.2.224/h2-2.2.224.jar
+Progress (1): 3.2/49 kBProgress (1): 20/49 kB Progress (1): 36/49 kBProgress (1): 49 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis/3.3/objenesis-3.3.jar (49 kB at 1.9 MB/s)
+Progress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.1/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.2/2.6 MBProgress (1): 0.3/2.6 MBProgress (1): 0.3/2.6 MBProgress (1): 0.3/2.6 MBProgress (1): 0.3/2.6 MBProgress (1): 0.3/2.6 MBProgress (1): 0.3/2.6 MBProgress (1): 0.3/2.6 MBProgress (1): 0.4/2.6 MBProgress (1): 0.4/2.6 MBProgress (1): 0.4/2.6 MBProgress (1): 0.4/2.6 MBProgress (1): 0.4/2.6 MBProgress (1): 0.4/2.6 MBProgress (1): 0.5/2.6 MBProgress (1): 0.5/2.6 MBProgress (1): 0.5/2.6 MBProgress (1): 0.5/2.6 MBProgress (1): 0.5/2.6 MBProgress (1): 0.5/2.6 MBProgress (1): 0.6/2.6 MBProgress (1): 0.6/2.6 MBProgress (1): 0.6/2.6 MBProgress (1): 0.6/2.6 MBProgress (1): 0.6/2.6 MBProgress (1): 0.6/2.6 MBProgress (1): 0.7/2.6 MBProgress (1): 0.7/2.6 MBProgress (1): 0.7/2.6 MBProgress (1): 0.7/2.6 MBProgress (1): 0.7/2.6 MBProgress (1): 0.7/2.6 MBProgress (1): 0.8/2.6 MBProgress (1): 0.8/2.6 MBProgress (1): 0.8/2.6 MBProgress (1): 0.8/2.6 MBProgress (1): 0.8/2.6 MBProgress (1): 0.8/2.6 MBProgress (1): 0.8/2.6 MBProgress (1): 0.9/2.6 MBProgress (1): 0.9/2.6 MBProgress (1): 0.9/2.6 MBProgress (1): 0.9/2.6 MBProgress (1): 0.9/2.6 MBProgress (1): 0.9/2.6 MBProgress (1): 1.0/2.6 MBProgress (1): 1.0/2.6 MBProgress (1): 1.0/2.6 MBProgress (1): 1.0/2.6 MBProgress (1): 1.0/2.6 MBProgress (1): 1.0/2.6 MBProgress (1): 1.1/2.6 MBProgress (1): 1.1/2.6 MBProgress (1): 1.1/2.6 MBProgress (1): 1.1/2.6 MBProgress (1): 1.1/2.6 MBProgress (1): 1.1/2.6 MBProgress (1): 1.2/2.6 MBProgress (1): 1.2/2.6 MBProgress (1): 1.2/2.6 MBProgress (1): 1.2/2.6 MBProgress (1): 1.2/2.6 MBProgress (1): 1.2/2.6 MBProgress (1): 1.3/2.6 MBProgress (1): 1.3/2.6 MBProgress (1): 1.3/2.6 MBProgress (1): 1.3/2.6 MBProgress (1): 1.3/2.6 MBProgress (1): 1.3/2.6 MBProgress (1): 1.3/2.6 MBProgress (1): 1.4/2.6 MBProgress (1): 1.4/2.6 MBProgress (1): 1.4/2.6 MBProgress (1): 1.4/2.6 MBProgress (1): 1.4/2.6 MBProgress (1): 1.4/2.6 MBProgress (1): 1.5/2.6 MBProgress (1): 1.5/2.6 MBProgress (1): 1.5/2.6 MBProgress (1): 1.5/2.6 MBProgress (1): 1.5/2.6 MBProgress (1): 1.5/2.6 MBProgress (1): 1.6/2.6 MBProgress (1): 1.6/2.6 MBProgress (1): 1.6/2.6 MBProgress (1): 1.6/2.6 MBProgress (1): 1.6/2.6 MBProgress (1): 1.6/2.6 MBProgress (1): 1.7/2.6 MBProgress (1): 1.7/2.6 MBProgress (1): 1.7/2.6 MBProgress (1): 1.7/2.6 MBProgress (1): 1.7/2.6 MBProgress (1): 1.7/2.6 MBProgress (1): 1.7/2.6 MBProgress (1): 1.8/2.6 MBProgress (1): 1.8/2.6 MBProgress (1): 1.8/2.6 MBProgress (1): 1.8/2.6 MBProgress (1): 1.8/2.6 MBProgress (1): 1.8/2.6 MBProgress (1): 1.9/2.6 MBProgress (1): 1.9/2.6 MBProgress (1): 1.9/2.6 MBProgress (1): 1.9/2.6 MBProgress (1): 1.9/2.6 MBProgress (1): 1.9/2.6 MBProgress (1): 2.0/2.6 MBProgress (1): 2.0/2.6 MBProgress (1): 2.0/2.6 MBProgress (1): 2.0/2.6 MBProgress (1): 2.0/2.6 MBProgress (1): 2.0/2.6 MBProgress (1): 2.1/2.6 MBProgress (1): 2.1/2.6 MBProgress (1): 2.1/2.6 MBProgress (1): 2.1/2.6 MBProgress (1): 2.1/2.6 MBProgress (1): 2.1/2.6 MBProgress (1): 2.2/2.6 MBProgress (1): 2.2/2.6 MBProgress (1): 2.2/2.6 MBProgress (1): 2.2/2.6 MBProgress (1): 2.2/2.6 MBProgress (1): 2.2/2.6 MBProgress (1): 2.3/2.6 MBProgress (1): 2.3/2.6 MBProgress (1): 2.3/2.6 MBProgress (1): 2.3/2.6 MBProgress (1): 2.3/2.6 MBProgress (1): 2.3/2.6 MBProgress (1): 2.4/2.6 MBProgress (1): 2.4/2.6 MBProgress (1): 2.4/2.6 MBProgress (1): 2.4/2.6 MBProgress (1): 2.4/2.6 MBProgress (1): 2.4/2.6 MBProgress (1): 2.5/2.6 MBProgress (1): 2.5/2.6 MBProgress (1): 2.5/2.6 MBProgress (1): 2.5/2.6 MBProgress (1): 2.5/2.6 MBProgress (1): 2.5/2.6 MBProgress (1): 2.6/2.6 MBProgress (1): 2.6/2.6 MBProgress (1): 2.6/2.6 MBProgress (1): 2.6/2.6 MBProgress (1): 2.6 MB                        Downloaded from central: https://repo.maven.apache.org/maven2/com/h2database/h2/2.2.224/h2-2.2.224.jar (2.6 MB at 17 MB/s)
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven-version) @ commons-csv ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-java-version) @ commons-csv ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-csv ---
+[WARNING] Basedir is : /home/sergi/code/mining/commons-csv
+[INFO] Excluding patterns: src/test/resources/org/apache/commons/csv/empty.txt, src/test/resources/org/apache/commons/csv/CSV-141/csv-141.csv, src/test/resources/org/apache/commons/csv/csv-167/sample1.csv, src/test/resources/org/apache/commons/csv/CSV-198/optd_por_public.csv, src/test/resources/org/apache/commons/csv/CSV-196/emoji.csv, src/test/resources/org/apache/commons/csv/CSV-196/japanese.csv, src/test/resources/org/apache/commons/csv/CSV-213/999751170.patch.csv, src/test/resources/org/apache/commons/csv/CSV-254/csv-254.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/bom.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/test.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/test_default.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_default_comment.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180_trim.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_default.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_ignoreEmpty.txt, src/test/resources/org/apache/commons/csv/ferc.gov/contract.txt, src/test/resources/org/apache/commons/csv/ferc.gov/transaction.txt, src/test/resources/**/*.bin, src/test/resources/org/apache/commons/csv/CSV-259/sample.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246_checkWithNoComment.txt, src/test/resources/org/apache/commons/csv/CSV-290/psql.csv, src/test/resources/org/apache/commons/csv/CSV-290/psql.tsv, site-content/**, .checkstyle, .fbprefs, .pmd, .asf.yaml, .gitattributes, src/site/resources/download_*.cgi, maven-eclipse.xml, .externalToolBuilders/**, .vscode/**, .project, .classpath, .settings/**, **/*.svg, **/*.xcf
+[INFO] Excluding MAVEN collection.
+[INFO] Excluding ECLIPSE collection.
+[INFO] Excluding IDEA collection.
+[INFO] Processing exclude file from STANDARD_SCMS.
+[INFO] Excluding STANDARD_SCMS collection.
+[INFO] Excluding MISC collection.
+[INFO] Excluding HIDDEN_DIR collection.
+[INFO] RAT summary:
+[INFO]   Approved:  79
+[INFO]   Archives:  1
+[INFO]   Binaries:  3
+[INFO]   Document types:  5
+[INFO]   Ignored:  32
+[INFO]   License categories:  1
+[INFO]   License names:  1
+[INFO]   Notices:  4
+[INFO]   Standards:  79
+[INFO]   Unapproved:  0
+[INFO]   Unknown:  0
+[INFO] 
+[INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-csv ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.1:parse-version (parse-version) @ commons-csv ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-csv ---
+[INFO] Executing tasks
+[INFO]      [copy] Copying 2 files to /home/sergi/code/mining/commons-csv/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-csv ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-csv ---
+[INFO] skip non existing resourceDirectory /home/sergi/code/mining/commons-csv/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ commons-csv ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 12 source files with javac [debug release 8] to target/classes
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-csv ---
+[INFO] No MANIFEST.MF file found, generating manifest.
+[INFO] Writing manifest: /home/sergi/code/mining/commons-csv/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-csv ---
+[INFO] Copying 25 resources from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ commons-csv ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 42 source files with javac [debug release 8] to target/test-classes
+[INFO] /home/sergi/code/mining/commons-csv/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Some input files use or override a deprecated API.
+[INFO] /home/sergi/code/mining/commons-csv/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (prepare-agent) @ commons-csv ---
+[INFO] argLine set to -javaagent:/home/sergi/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/home/sergi/code/mining/commons-csv/target/jacoco.exec,exclclassloader=jdk.internal.loader.ClassLoaders$PlatformClassLoader
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ commons-csv ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.commons.csv.JiraCsv318Test
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.148 s -- in org.apache.commons.csv.JiraCsv318Test
+[INFO] Running org.apache.commons.csv.UserGuideTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 s -- in org.apache.commons.csv.UserGuideTest
+[INFO] Running org.apache.commons.csv.ExtendedBufferedReaderTest
+[ERROR] Tests run: 7, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.028 s <<< FAILURE! -- in org.apache.commons.csv.ExtendedBufferedReaderTest
+[ERROR] org.apache.commons.csv.ExtendedBufferedReaderTest.testReadingSupplementaryCharacterTracksBytes -- Time elapsed: 0.007 s <<< ERROR!
+java.nio.charset.CharacterCodingException
+	at org.apache.commons.csv.ExtendedBufferedReader.getEncodedCharLength(ExtendedBufferedReader.java:156)
+	at org.apache.commons.csv.ExtendedBufferedReader.getEncodedCharLength(ExtendedBufferedReader.java:113)
+	at org.apache.commons.csv.ExtendedBufferedReader.read(ExtendedBufferedReader.java:237)
+	at org.apache.commons.csv.ExtendedBufferedReaderTest.testReadingSupplementaryCharacterTracksBytes(ExtendedBufferedReaderTest.java:113)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.apache.commons.csv.CSVFormatPredefinedTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in org.apache.commons.csv.CSVFormatPredefinedTest
+[INFO] Running org.apache.commons.csv.CSVDuplicateHeaderTest
+[INFO] Tests run: 348, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.373 s -- in org.apache.commons.csv.CSVDuplicateHeaderTest
+[INFO] Running org.apache.commons.csv.CSVPrinterTest
+[WARNING] Tests run: 146, Failures: 0, Errors: 0, Skipped: 7, Time elapsed: 3.230 s -- in org.apache.commons.csv.CSVPrinterTest
+[INFO] Running org.apache.commons.csv.CSVParserTest
+[ERROR] Tests run: 161, Failures: 0, Errors: 1, Skipped: 4, Time elapsed: 0.112 s <<< FAILURE! -- in org.apache.commons.csv.CSVParserTest
+[ERROR] org.apache.commons.csv.CSVParserTest.testGetBytePositionMultiCharacterDelimiterWithSupplementaryCharacter -- Time elapsed: 0.001 s <<< ERROR!
+java.nio.charset.CharacterCodingException
+	at org.apache.commons.csv.ExtendedBufferedReader.getEncodedCharLength(ExtendedBufferedReader.java:156)
+	at org.apache.commons.csv.ExtendedBufferedReader.getEncodedCharLength(ExtendedBufferedReader.java:113)
+	at org.apache.commons.csv.ExtendedBufferedReader.read(ExtendedBufferedReader.java:237)
+	at org.apache.commons.io.input.UnsynchronizedBufferedReader.peek(UnsynchronizedBufferedReader.java:236)
+	at org.apache.commons.csv.Lexer.isDelimiter(Lexer.java:157)
+	at org.apache.commons.csv.Lexer.parseSimpleToken(Lexer.java:425)
+	at org.apache.commons.csv.Lexer.nextToken(Lexer.java:306)
+	at org.apache.commons.csv.CSVParser.nextRecord(CSVParser.java:905)
+	at org.apache.commons.csv.CSVParserTest.testGetBytePositionMultiCharacterDelimiterWithSupplementaryCharacter(CSVParserTest.java:683)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.apache.commons.csv.CSVRecordTest
+[INFO] Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s -- in org.apache.commons.csv.CSVRecordTest
+[INFO] Running org.apache.commons.csv.JiraCsv196Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.commons.csv.JiraCsv196Test
+[INFO] Running org.apache.commons.csv.CSVFileParserTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in org.apache.commons.csv.CSVFileParserTest
+[INFO] Running org.apache.commons.csv.issues.JiraCsv154Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv154Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv149Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv149Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv93Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.commons.csv.issues.JiraCsv93Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv213Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv213Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv290Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in org.apache.commons.csv.issues.JiraCsv290Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv249Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv249Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv150Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.csv.issues.JiraCsv150Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv263Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv263Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv211Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv211Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv167Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.csv.issues.JiraCsv167Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv203Test
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.commons.csv.issues.JiraCsv203Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv294Test
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.csv.issues.JiraCsv294Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv148Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv148Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv271Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv271Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv247Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv247Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv248Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in org.apache.commons.csv.issues.JiraCsv248Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv198Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.205 s -- in org.apache.commons.csv.issues.JiraCsv198Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv253Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv253Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv254Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv254Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv206Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv206Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv257Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv257Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv264Test
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in org.apache.commons.csv.issues.JiraCsv264Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv227Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in org.apache.commons.csv.issues.JiraCsv227Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv265Test
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in org.apache.commons.csv.issues.JiraCsv265Test
+[INFO] Running org.apache.commons.csv.issues.JiraCsv288Test
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in org.apache.commons.csv.issues.JiraCsv288Test
+[INFO] Running org.apache.commons.csv.CSVFormatTest
+[INFO] Tests run: 112, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s -- in org.apache.commons.csv.CSVFormatTest
+[INFO] Running org.apache.commons.csv.TokenTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in org.apache.commons.csv.TokenTest
+[INFO] Running org.apache.commons.csv.LexerTest
+[INFO] Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in org.apache.commons.csv.LexerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   CSVParserTest.testGetBytePositionMultiCharacterDelimiterWithSupplementaryCharacter:683 » CharacterCoding
+[ERROR]   ExtendedBufferedReaderTest.testReadingSupplementaryCharacterTracksBytes:113 » CharacterCoding
+[INFO] 
+[ERROR] Tests run: 940, Failures: 0, Errors: 2, Skipped: 11
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.075 s
+[INFO] Finished at: 2026-09-24T07:59:11-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-csv: 
+[ERROR] 
+[ERROR] See /home/sergi/code/mining/commons-csv/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

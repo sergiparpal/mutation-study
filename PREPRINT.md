@@ -44,9 +44,13 @@ expectations in only 3.3% of tests, so the specification-only arm is not
 guesswork: it catches a small, coherent class of faults, those where the
 implementation contradicts documented contract. The agent and EvoSuite are
 complementary rather than ordered — 17 faults are found only by the agent, 4
-only by EvoSuite, 6 by neither. And Defects4J checkouts ship the fix commit in
-their git history, subject line included; we remove it before generation, a
-control we have not seen reported elsewhere.
+only by EvoSuite, 6 by neither. And two contamination controls we have not seen
+reported elsewhere: Defects4J checkouts ship the fix commit in their git
+history, subject line included, which we remove before generation; and a direct
+probe of what the model recalls with no code in context, which finds benchmark
+identifiers entirely unmemorised and exactly one of the forty faults genuinely
+recalled — four of the five answers that a mechanical screen flagged turn out
+to be confident, specific confabulations.
 
 ---
 
@@ -95,18 +99,22 @@ Contributions:
    the regression evaluation setting flatters generated suites is not a new
    observation — Dinella et al. state it in 2022 (§6) — but to our knowledge it
    has not been quantified for an agent that reads the codebase.
-2. The finding that **mutation score and coverage are near-blind to this
-   difference**, which bears directly on how agent-written suites are currently
-   evaluated and on proposals to use mutation feedback to improve them.
+2. The finding that **mutation score does not register the difference at all**
+   (72% against 70%) and that line coverage registers far too little of it
+   (85% against 73%) to account for a five-fold gap in detection. This bears
+   directly on how agent-written suites are currently evaluated and on
+   proposals to use mutation feedback to improve them.
 3. A characterisation of what specification-only generation does catch: faults
    where the implementation contradicts a contract the documentation states.
    With an EvoSuite baseline over the same subjects, which shows the two
    approaches to be complementary rather than ordered — 17 faults are found
    only by the agent, 4 only by EvoSuite — and which shows mutation score
    ranking three suite populations in the wrong order.
-4. A contamination control that appears not to be standard practice — Defects4J
-   checkouts ship the fix commit in their git history, including its subject
-   line naming the fault.
+4. Two contamination controls that appear not to be standard practice:
+   Defects4J checkouts ship the fix commit in their git history, including its
+   subject line naming the fault, which we remove before generation; and a
+   direct probe of what the model recalls about each fault with no code in
+   context, which finds one memorised fault in forty.
 
 ---
 
@@ -139,11 +147,11 @@ fixed and are excluded from all figures.
 Two arms over the same forty bugs, differing in exactly one variable: whether
 the agent can read the implementation under test.
 
-**M arm (implementation-visible).** The agent works inside the checked-out
+**Implementation-visible arm ("M").** The agent works inside the checked-out
 project at the *fixed* revision and reads the source freely. This is the
 situation when a developer asks a coding agent for tests on existing code.
 
-**S arm (specification-only).** The agent works in a sandbox containing:
+**Specification-only arm ("S").** The agent works in a sandbox containing:
 
 ```
 api/          javadoc generated for the classes under test
@@ -156,6 +164,8 @@ It never sees implementation source. It may compile its tests but **not run
 them**: executing would let it observe behaviour and reconstruct the oracle
 from the implementation by another route, which is the very thing the design
 isolates.
+
+The short forms **M** and **S** are used throughout for the two arms.
 
 Both arms are given the same target classes — those the fix modifies, from
 `defects4j export -p classes.modified` — and the same instructions about
@@ -212,11 +222,11 @@ more for the S arm, where the code is withheld.
 We note this control because, as far as we are aware, it is not standard
 practice in work that generates tests over Defects4J checkouts.
 
-**Training-data contamination is not controlled.** Defects4J has been public
-for years and may appear in the model's training data. The S arm is a partial
-control — a model recalling the fault would plausibly recall it without the
-source too — but not a conclusive one. Replication on a post-cutoff corpus
-(GitBug-Java) is pending.
+**Training-data contamination is measured rather than eliminated.** Defects4J
+has been public for years and may appear in the model's training data. The S
+arm is a partial control — a model recalling a fault would plausibly recall it
+without the source too — and §2.8 adds a direct probe of what the model
+actually remembers. Results in §3.7.
 
 ### 2.5 Suite acceptance
 
@@ -251,10 +261,45 @@ packaged suite:
   AOR, LOR, SOR, COR, ROR, ORU, LVR, STD.
 - **Line and branch coverage** — `run_coverage.pl`.
 
-### 2.7 Exclusions
+### 2.7 Search-based baseline
 
-Four bugs are excluded from some or all measurements, for reasons unrelated to
-the treatment:
+EvoSuite, as bundled with Defects4J v3.0.1 and invoked through `gen_tests` with
+a 120-second search budget per class, provides a non-agent point of comparison.
+It is not a third arm of the manipulation: like the implementation-visible arm
+it generates against the fixed revision and has the same access to the repaired
+code. What it lacks is any interpretation of that code — it asserts observed
+behaviour. The comparison therefore separates the contribution of the generator
+from the contribution of the information available to it.
+
+### 2.8 Memorisation probe
+
+Defects4J has been public for years and may be present in the model's training
+data, in which case detection could reflect recall rather than reasoning. The
+obvious replication corpus does not settle this: GitBug-Java's 199 bugs come
+from 2023 commit histories, selected in early 2024 because that postdated the
+training cutoff of models available then. It no longer does.
+
+We probe the model directly instead. For each of the 40 bugs, two questions are
+put to the same model with no tools, no web access, no repository and no
+conversational context, one turn each:
+
+- **A, identifier cue.** *"What is Defects4J bug Lang-13? Describe the specific
+  fault."* Answering requires having seen the benchmark itself.
+- **B, location cue.** *"Was there a known bug in the class
+  `org.apache.commons.lang3.SerializationUtils`? Describe the specific fault if
+  you recall one."* This matches what the implementation-visible agent actually
+  had — project and class, never the bug identifier.
+
+Each prompt offers an exact disclaimer phrase, so that declining is cheaper
+than guessing. Answers are screened mechanically against identifiers taken from
+the fix diff, and every answer flagged by that screen is then read against the
+actual fault, because domain vocabulary alone produces false hits.
+
+### 2.9 Exclusions
+
+Five bugs are excluded from some or all measurements, for reasons unrelated to
+the treatment. Cli-21 appears twice: it is affected by two independent
+problems.
 
 | Bug | Arms affected | Reason |
 |---|---|---|
@@ -285,20 +330,19 @@ Over the 36 bugs measured in both arms:
 Detection differs by a factor of five. Mutation score differs by two points.
 
 The paired outcomes are strongly asymmetric: of the 36 bugs, 21 were detected
-by the M arm alone and **none** by the S arm alone — every fault the
-specification-only suites caught was also caught by the implementation-visible
-suites — the S arm's detections are a strict subset of the M arm's, not a
-partially overlapping set. An exact McNemar test on the 21 discordant pairs
-gives *p* = 9.5 × 10⁻⁷.
+by the M arm alone and **none** by the S arm alone. The S arm's detections are
+therefore a strict subset of the M arm's rather than a partially overlapping
+set. An exact McNemar test on the 21 discordant pairs gives
+*p* = 9.5 × 10⁻⁷.
 
 Reported per arm over every suite measured, including the unpaired ones:
 
 | arm | n | detection | mutation | coverage |
 |---|---|---|---|---|
-| Sonnet, implementation-visible | 36 | 26/36 (72%) | 72% | 85% |
-| Sonnet, specification-only | 38 | 6/38 (16%) | 70% | 73% |
+| M arm, Sonnet | 36 | 26/36 (72%) | 72% | 85% |
+| S arm, Sonnet | 38 | 6/38 (16%) | 70% | 73% |
 | EvoSuite | 36 | 13/36 (36%) | 59% | 85% |
-| Opus, implementation-visible † | 6 | 6/6 | 79% | 89% |
+| M arm, Opus † | 6 | 6/6 | 79% | 89% |
 
 † Six bugs, and the first six of the sample rather than a random subset: the
 run switched models on exhausting quota (§2.3). The detection figure is
@@ -373,16 +417,18 @@ fail to catch real faults.
 
 EvoSuite, invoked through Defects4J's `gen_tests` with a 120-second budget per
 class, produced suites for 38 of the 40 bugs; the two failures are the `cli2`
-subjects (§2.7). Like the implementation-visible arm, EvoSuite generates
+subjects (§2.9). Like the implementation-visible arm, EvoSuite generates
 against the fixed revision and has the same access to the repaired code.
 
-Over the 35 bugs measured for all three generators:
+Thirty-five bugs are measured for all three generators, one fewer than the 36
+paired between the two agent arms, because EvoSuite lost an additional subject
+to the exclusions in §2.9. Over those 35:
 
 | | detection | mutation | coverage |
 |---|---|---|---|
-| agent, implementation-visible | 25/35 (71%) | 72% | 85% |
+| M arm (implementation-visible) | 25/35 (71%) | 72% | 85% |
 | EvoSuite | 12/35 (34%) | 59% | 85% |
-| agent, specification-only | 5/35 (14%) | 70% | 73% |
+| S arm (specification-only) | 5/35 (14%) | 70% | 73% |
 
 EvoSuite falls between the two arms. Since it has the same access to the
 repaired implementation as the implementation-visible arm, the gap from 71% to
@@ -407,6 +453,41 @@ At list prices, the M arm cost $42.61 for 46 suites and the S arm $37.02 for
 40 suites — roughly $0.90 to $1.00 per suite. Both arms were produced against
 a subscription quota rather than metered billing, so these figures are token
 valuations rather than amounts charged.
+
+### 3.7 Memorisation
+
+Under the identifier cue, the model disclaimed knowledge for **all 40 bugs**:
+the benchmark identifiers are not memorised.
+
+Under the location cue, 25 answers disclaimed, 10 made unspecific claims, and 5
+reproduced three or more identifiers from the fix. Reading those five against
+the actual faults, **four are confabulations**: the model describes a
+plausible, internally coherent, confidently stated bug in the right class that
+is not the bug in question.
+
+| bug | actual fault | model's answer |
+|---|---|---|
+| Lang-8 | reads the construction-time zone instead of the calendar's | mutates the caller's `Calendar` without cloning |
+| Lang-63 | hardcoded `days += 31` and a `reduceAndCorrect` correction pass | calendar arithmetic sensitive to DST transitions |
+| Lang-65 | an absent truncation block between existing marker comments | missing special case for `Calendar.SEMI_MONTH` |
+| Gson-4 | an obsolete restriction on top-level JSON values | missing delimiter check after `true`/`null` literals |
+
+**One bug of the forty is genuinely recalled: Lang-13.** The model reproduces
+the mechanism in full — `ClassLoaderAwareObjectInputStream`, `resolveClass()`,
+`Class.forName()` failing on primitive type names, and the repair mapping
+primitive names to their `TYPE` constants — without being shown any code. It
+misattributes the JIRA identifier, which is characteristic of recall of a
+mechanism rather than of a record.
+
+Two things follow. Recall cannot account for the implementation-visible arm's
+result: it detects 26 faults and has memorised one. And Lang-13 is the single
+bug detected by *both* arms, which is what recall available to both would
+predict — rather than recall explaining the gap between them.
+
+The confabulation rate is itself worth noting alongside §3.4. The same model
+that writes tests from javadoc with a 3.3% error rate invents four confident,
+specific and wrong faults when asked about code it cannot see. Correctness here
+tracks whether there is something to check against.
 
 ---
 
@@ -453,13 +534,10 @@ search-based, derives its expectations from the same implementation. We hold
 strength roughly fixed and vary the *information available to the generator*.
 Along that second axis the metric is uninformative.
 
-The EvoSuite baseline sharpens this. Across three populations the metric does
-not merely fail to separate our two arms; it orders them wrongly. Ranked by
-mutation score: implementation-visible 72%, specification-only 70%, EvoSuite
-59%. Ranked by fault detection: implementation-visible 71%, EvoSuite 34%,
-specification-only 14%. The middle two swap places, and not marginally — the
-population with the higher mutation score detects less than half as many
-faults.
+The EvoSuite baseline (§3.5) sharpens this. Across three populations the metric
+does not merely fail to separate the two arms; it ranks them in the wrong
+order, and the population it rates second detects less than half as many faults
+as the one it rates third.
 
 Stated as one sentence: **mutation score tracks the strength of a suite's
 assertions, not the provenance of its expectations.** Provenance leaves no
@@ -493,7 +571,7 @@ code is measuring the protocol rather than the agent.
 ### 4.4 What a specification-only agent can do
 
 The specification-only arm is not incompetent. Its suites compile, pass, cover
-73% of lines, and are wrong about behaviour in only 3% of tests — an agent
+73% of lines, and are wrong about behaviour in only 3.3% of tests — an agent
 writing from javadoc alone rarely misstates what the code does. It simply
 catches a different, much smaller class of faults: those where the
 implementation contradicts documentation. Four of its five detections are of
@@ -548,15 +626,25 @@ reaches it by adjusting expectations to the code, which is precisely the
 behaviour under study. The asymmetry does not manufacture the effect; it is
 part of it.
 
-**Training-data contamination is bounded but not eliminated.** Defects4J has
-been public for years. If the M arm's detection rate reflected recall of known
-faults rather than test-writing skill, the S arm would be expected to recall
-them too and detect more than 14%. That it does not is evidence against pure
-recall — but recall may be *cued* by the source rather than spontaneous, in
-which case withholding the source suppresses the cue and not the memory. The
-design cannot separate these. Replication on GitBug-Java, whose faults postdate
-the model's training cutoff, is pending and is the single most important open
-check.
+**Training-data contamination is bounded, and now measured.** Defects4J has
+been public for years. Two lines of evidence bound the threat. Structurally, if
+the M arm's detection rate reflected recall rather than test-writing, the S arm
+would be expected to recall the same faults and detect far more than 14%.
+Directly, the probe in §2.8 finds that the model recalls exactly one of the
+forty faults (§3.7), against 26 detected by the M arm; benchmark identifiers
+are not memorised at all, and four of the five answers the mechanical screen
+flagged turn out to be confabulations.
+
+Two residual limitations. Recall may be *cued* by the source rather than
+spontaneous, in which case the probe — which withholds the source — suppresses
+the cue and not the memory; the design cannot separate these. And the probe
+tests one model at one point in time.
+
+Replication on a corpus postdating the model's training cutoff remains the
+stronger check. GitBug-Java, the obvious candidate, no longer serves: its bugs
+come from 2023 commit histories, selected in early 2024 precisely because that
+postdated the then-current cutoffs. A corpus mined from post-cutoff commits
+would be required.
 
 **The acceptance filter uses the implementation as an oracle.** Tests that
 disagree with the fixed code are removed, so what survives in the S arm is the
@@ -790,9 +878,44 @@ which is the setting Just et al. establish; it is uninformative when provenance
 varies, a setting their design could not surface because no suite in it had an
 oracle independent of the code.
 
+## 7. Conclusion
+
+An agent asked to write tests for existing code will encode that code's
+behaviour as the expected behaviour. Evaluating it on the repaired revision of
+a known fault therefore measures, in large part, how well it transcribes a
+repair it was handed. On 36 real faults, withholding the implementation and
+supplying only the public documentation drops detection from 72% to 14%, with
+every remaining detection a strict subset of the original.
+
+The measurement that matters is not that number but what happens to the metrics
+around it. Mutation score does not move. With a search-based baseline added it
+ranks three suite populations in the wrong order. Coverage moves in the right
+direction by nowhere near enough. A suite's assertions can be strong,
+discriminating and well-targeted while its expectations were copied from the
+program they are meant to judge, and nothing observable at execution time
+distinguishes the two cases.
+
+The immediate consequence is for evaluation: figures reported for generated
+suites on real-fault benchmarks should state what the generator was allowed to
+read, and should not be read as capability without it. The longer consequence
+is for tooling. If mutation feedback cannot see the difference, closing the
+generation loop on it optimises the wrong quantity. The only mechanism our data
+supports is the counterfactual — generate twice, with and without the
+implementation, and compare — which we have measured but not built.
+
 ## Data availability
 
-All scripts, raw artifacts and per-bug measurements are in the repository:
-`bin/run-agent-suites.sh`, `bin/run-spec-suites.sh`,
-`bin/analyze-agent-suites.sh`, with raw output under `data/` and the full
-method record in `data/README.md`.
+All scripts, raw artifacts and per-bug measurements are in the repository.
+Generation: `bin/run-agent-suites.sh` (implementation-visible arm),
+`bin/run-spec-suites.sh` (specification-only arm, including sandbox
+construction) and `bin/prune-failing-tests.py` (the per-method acceptance
+filter). The search-based baseline is produced with Defects4J's own
+`gen_tests.pl`. Measurement: `bin/analyze-agent-suites.sh`, which wraps
+`run_bug_detection.pl`, `run_coverage.pl` and `run_mutation.pl`.
+
+Raw artifacts are under `data/`: one directory per bug per arm with the agent
+transcript, cost record and intermediate logs; the packaged suites; the
+specification-only sandboxes, retained as an audit trail; and the merged
+per-suite measurements in `data/agent-metrics-final.csv`. The full method
+record, including every deviation and tooling failure encountered, is in
+`data/README.md`.

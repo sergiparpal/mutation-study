@@ -1,0 +1,5 @@
+project=commons-csv
+sha=1d89cd5f0aa454ef3853dfc7528242399ef26b74
+short=1d89cd5f
+date=2026-06-19
+subject=[CSV-329] Fix byte tracking for supplementary delimiters
