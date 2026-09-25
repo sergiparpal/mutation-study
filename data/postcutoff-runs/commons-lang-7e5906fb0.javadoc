@@ -1,0 +1,7 @@
+/tmp/pcF_commons-lang-7e5906fb0_spec/src/main/java/org/apache/commons/lang3/package-info.java:19: warning - Tag @link: reference not found: java.lang
+/tmp/pcF_commons-lang-7e5906fb0_spec/src/main/java/org/apache/commons/lang3/package-info.java:23: warning - Tag @link: reference not found: org.apache.commons.lang3.math
+/tmp/pcF_commons-lang-7e5906fb0_spec/src/main/java/org/apache/commons/lang3/package-info.java:23: warning - Tag @link: reference not found: org.apache.commons.lang3.concurrent
+/tmp/pcF_commons-lang-7e5906fb0_spec/src/main/java/org/apache/commons/lang3/package-info.java:19: warning - Tag @link: reference not found: java.lang
+/tmp/pcF_commons-lang-7e5906fb0_spec/src/main/java/org/apache/commons/lang3/package-info.java:19: warning - Tag @link: reference not found: java.lang
+/tmp/pcF_commons-lang-7e5906fb0_spec/src/main/java/org/apache/commons/lang3/package-info.java:19: warning - Tag @link: reference not found: java.lang
+6 warnings

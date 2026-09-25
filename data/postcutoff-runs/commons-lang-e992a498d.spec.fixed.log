@@ -1,0 +1,55 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.commons:commons-lang3 >------------------
+[INFO] Building Apache Commons Lang 3.21.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ commons-lang3 ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ commons-lang3 ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-lang3 ---
+[WARNING] Basedir is : /tmp/pcF_commons-lang-e992a498d_spec
+[INFO] Excluding patterns: site-content/**, src/site/resources/.htaccess, src/site/resources/download_lang.cgi, src/site/resources/release-notes/RELEASE-NOTES-*.txt, src/test/resources/lang-708-input.txt, **/*.svg, **/*.xcf, site-content/**, .checkstyle, .fbprefs, .pmd, .asf.yaml, .gitattributes, src/site/resources/download_*.cgi, maven-eclipse.xml, .externalToolBuilders/**, .vscode/**, .project, .classpath, .settings/**, **/*.svg, **/*.xcf
+[INFO] Excluding MAVEN collection.
+[INFO] Excluding ECLIPSE collection.
+[INFO] Excluding IDEA collection.
+[INFO] Processing exclude file from STANDARD_SCMS.
+[INFO] Excluding STANDARD_SCMS collection.
+[INFO] Excluding MISC collection.
+[INFO] Excluding HIDDEN_DIR collection.
+[INFO] RAT summary:
+[INFO]   Approved:  668
+[INFO]   Archives:  0
+[INFO]   Binaries:  6
+[INFO]   Document types:  4
+[INFO]   Ignored:  36
+[INFO]   License categories:  2
+[INFO]   License names:  2
+[INFO]   Notices:  3
+[INFO]   Standards:  669
+[INFO]   Unapproved:  1
+[INFO]   Unknown:  1
+[ERROR] Unexpected count for UNAPPROVED, limit is [0,0].  Count: 1
+[INFO] UNAPPROVED (Unapproved) is a count of unapproved licenses.
+[WARNING] *****************************************************
+Generated at: 2026-09-25T02:45:31-07:00
+
+Files with unapproved licenses:
+  /src/test/java/org/apache/commons/lang3/math/FractionAgentTest.java
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.421 s
+[INFO] Finished at: 2026-09-25T02:45:36-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.rat:apache-rat-plugin:0.17:check (rat-check) on project commons-lang3: Counter(s) UNAPPROVED exceeded minimum or maximum values. See RAT report in: '/tmp/pcF_commons-lang-e992a498d_spec/target/rat.txt'. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,136 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< commons-cli:commons-cli >-----------------------
+[INFO] Building Apache Commons CLI 1.12.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ commons-cli ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ commons-cli ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-cli ---
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-cli ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.1:parse-version (parse-version) @ commons-cli ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-cli ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-cli ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-cli ---
+[INFO] skip non existing resourceDirectory /tmp/pcF_commons-cli-dc69e842_spec/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ commons-cli ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-cli ---
+[INFO] Writing manifest: /tmp/pcF_commons-cli-dc69e842_spec/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-cli ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ commons-cli ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 51 source files with javac [debug release 8] to target/test-classes
+[INFO] /tmp/pcF_commons-cli-dc69e842_spec/src/test/java/org/apache/commons/cli/HelpFormatterTest.java: Some input files use or override a deprecated API.
+[INFO] /tmp/pcF_commons-cli-dc69e842_spec/src/test/java/org/apache/commons/cli/HelpFormatterTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (prepare-agent) @ commons-cli ---
+[INFO] argLine set to -javaagent:/home/sergi/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/tmp/pcF_commons-cli-dc69e842_spec/target/jacoco.exec,exclclassloader=jdk.internal.loader.ClassLoaders$PlatformClassLoader
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ commons-cli ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.commons.cli.help.TextHelpAppendableAgentTest
+[ERROR] Tests run: 43, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 0.174 s <<< FAILURE! -- in org.apache.commons.cli.help.TextHelpAppendableAgentTest
+[ERROR] org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapWithNoWhitespaceWithinTextLengthReturnsStartPlusWidth -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <4> but was: <3>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapWithNoWhitespaceWithinTextLengthReturnsStartPlusWidth(TextHelpAppendableAgentTest.java:176)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.apache.commons.cli.help.TextHelpAppendableAgentTest.testResizeScalesMaxWidthAndIndent -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <5> but was: <10>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testResizeScalesMaxWidthAndIndent(TextHelpAppendableAgentTest.java:368)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapFindsWhitespaceBeforeBoundary -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <5> but was: <11>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapFindsWhitespaceBeforeBoundary(TextHelpAppendableAgentTest.java:157)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.apache.commons.cli.help.TextHelpAppendableAgentTest.testAppendTableWithNullIsNoop -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.commons.cli.help.TextHelpAppendable.adjustTableFormat(TextHelpAppendable.java:154)
+	at org.apache.commons.cli.help.TextHelpAppendable.appendTable(TextHelpAppendable.java:244)
+	at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testAppendTableWithNullIsNoop(TextHelpAppendableAgentTest.java:307)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TextHelpAppendableAgentTest.testIndexOfWrapFindsWhitespaceBeforeBoundary:157 expected: <5> but was: <11>
+[ERROR]   TextHelpAppendableAgentTest.testIndexOfWrapWithNoWhitespaceWithinTextLengthReturnsStartPlusWidth:176 expected: <4> but was: <3>
+[ERROR]   TextHelpAppendableAgentTest.testResizeScalesMaxWidthAndIndent:368 expected: <5> but was: <10>
+[ERROR] Errors: 
+[ERROR]   TextHelpAppendableAgentTest.testAppendTableWithNullIsNoop:307 » NullPointer
+[INFO] 
+[ERROR] Tests run: 43, Failures: 3, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.319 s
+[INFO] Finished at: 2026-09-25T07:05:04-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-cli: There are test failures.
+[ERROR] 
+[ERROR] See /tmp/pcF_commons-cli-dc69e842_spec/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
