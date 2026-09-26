@@ -84,7 +84,8 @@ for D in "$ROOT/$SUBJECTS"/*/; do
     for tc in $TESTCLASSES; do
         rm -f "$WF/src/test/java/$(echo "$tc" | tr '.' '/').java"
     done
-    if ! (cd "$WF" && mvn -q test-compile) > "$ROOT/$RUNS/${TAG}.${ARM}.precompile" 2>&1; then
+    if ! (cd "$WF" && mvn -q test-compile -Drat.skip=true -Dcheckstyle.skip=true -Dpmd.skip=true -Dspotbugs.skip=true) \
+            > "$ROOT/$RUNS/${TAG}.${ARM}.precompile" 2>&1; then
         fail "test-compile fails after removing developer tests"; continue
     fi
 
@@ -220,18 +221,71 @@ print(('ok' if not err else ('dead' if (cost == 0 or limit) else 'error'))
     RUN_ARG=$(echo "$WRITTEN" | sed 's|.*/||; s|\.java$||' | paste -sd, -)
     echo "$WRITTEN" > "$ROOT/$RUNS/${TAG}.${ARM}.written"
 
-    # ---- acceptance: must pass on the fixed revision -----------------------
-    if ! (cd "$WF" && mvn test -Dtest="$RUN_ARG" -DfailIfNoTests=false -Drat.skip=true -Dcheckstyle.skip=true -Dpmd.skip=true -Dspotbugs.skip=true) \
-            > "$ROOT/$RUNS/${TAG}.${ARM}.fixed.log" 2>&1; then
-        fail "agent tests do not pass on the fixed revision"; continue
+    # ---- acceptance: prune failing methods, keep the rest ------------------
+    #
+    # Rejecting a whole suite over one wrong expectation is not an option here.
+    # On the Defects4J corpus the specification-only arm needed 3.3% of tests
+    # disabled; applying an all-or-nothing filter to this corpus discarded half
+    # the suites outright, and the survivors were a biased sample — only those
+    # that happened to come out perfect. Both arms use the same filter, so the
+    # between-arm comparison stays clean.
+    #
+    # Note the .class deletion: editing a @Test annotation changes the .java by
+    # a few bytes within the same second, and Maven's incremental compile can
+    # skip the rebuild, leaving the previous bytecode in place and the loop
+    # never converging.
+    METHODS_TOTAL=0
+    for f in $WRITTEN; do
+        C=$(grep -cE "@Test|public void test" "$WF/src/test/java/$f" 2>/dev/null || echo 0)
+        METHODS_TOTAL=$((METHODS_TOTAL + C))
+    done
+    PRUNED_TOTAL=0
+    ACCEPTED=no
+
+    for round in 1 2 3 4 5; do
+        if (cd "$WF" && mvn test -Dtest="$RUN_ARG" -DfailIfNoTests=false -Drat.skip=true -Dcheckstyle.skip=true -Dpmd.skip=true -Dspotbugs.skip=true) \
+                > "$ROOT/$RUNS/${TAG}.${ARM}.fixed.log" 2>&1; then
+            ACCEPTED=yes; break
+        fi
+
+        if grep -q "COMPILATION ERROR" "$ROOT/$RUNS/${TAG}.${ARM}.fixed.log"; then
+            fail "agent tests do not compile in the project"; break
+        fi
+
+        # surefire lists failures as "  ClassName.methodName:LINE ..."
+        FAILING=$(grep -oP '^\[ERROR\]\s+\K\w+\.\w+(?=[:(])' \
+                    "$ROOT/$RUNS/${TAG}.${ARM}.fixed.log" \
+                  | sed 's|.*\.||' | sort -u)
+        if [ -z "$FAILING" ]; then
+            fail "tests fail on the fixed revision but no method names parsed"; break
+        fi
+
+        NPRUNED=0
+        for f in $WRITTEN; do
+            OUT=$("$ROOT/bin/prune-failing-tests.py" "$WF/src/test/java/$f" $FAILING)
+            NPRUNED=$((NPRUNED + ${OUT%% *}))
+            REL="${f#./}"; REL="${REL%.java}"
+            rm -f "$WF/target/test-classes/$REL.class" "$WF/target/test-classes/$REL"\$*.class
+        done
+        PRUNED_TOTAL=$((PRUNED_TOTAL + NPRUNED))
+        echo "[$TAG/$ARM] round $round: disabled $NPRUNED failing test(s)"
+        [ "$NPRUNED" -eq 0 ] && { fail "failing methods could not be disabled"; break; }
+    done
+    [ -f "$STATUS" ] && continue
+    [ "$ACCEPTED" != yes ] && { fail "suite did not converge after pruning"; continue; }
+
+    echo "$PRUNED_TOTAL $METHODS_TOTAL" > "$ROOT/$RUNS/${TAG}.${ARM}.pruned"
+    if [ "$METHODS_TOTAL" -gt 0 ] && [ "$PRUNED_TOTAL" -ge "$METHODS_TOTAL" ]; then
+        fail "every test failed on the fixed revision"; continue
     fi
+    echo "[$TAG/$ARM] pruned $PRUNED_TOTAL of $METHODS_TOTAL tests"
 
     # ---- detection: copy into the buggy worktree and run -------------------
     for f in $WRITTEN; do
         mkdir -p "$WB/src/test/java/$(dirname "$f")"
         cp "$WF/src/test/java/$f" "$WB/src/test/java/$f"
     done
-    (cd "$WB" && mvn test -Dtest="$RUN_ARG" -DfailIfNoTests=false -Drat.skip=true -Dcheckstyle.skip=true -Dpmd.skip=true -Dspotbugs.skip=true) \
+    (cd "$WB" && mvn test -Dtest="$RUN_ARG" -DfailIfNoTests=false) \
         > "$ROOT/$RUNS/${TAG}.${ARM}.buggy.log" 2>&1
     BUGGY_RC=$?
 
@@ -255,6 +309,7 @@ echo
 TOT=$(ls "$ROOT/$RUNS"/*.${ARM}.detection 2>/dev/null | wc -l)
 DET=$(grep -lx Fail "$ROOT/$RUNS"/*.${ARM}.detection 2>/dev/null | wc -l)
 echo "arm $ARM: $DET/$TOT detected"
+echo "pruned:  $(cd "$ROOT" && awk '{p+=$1; t+=$2} END{if(t) printf "%d of %d (%.1f%%)", p, t, 100*p/t}' "$RUNS"/*.$ARM.pruned 2>/dev/null)"
 echo "cost:    \$$(cd "$ROOT" && python3 - <<EOF
 import json, glob
 t = 0.0

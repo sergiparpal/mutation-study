@@ -88,8 +88,8 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.commons.lang3.CharRangeAgentTest
-[ERROR] Tests run: 31, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.146 s <<< FAILURE! -- in org.apache.commons.lang3.CharRangeAgentTest
-[ERROR] org.apache.commons.lang3.CharRangeAgentTest.testContainsCharRangeThisPlainOtherNegatedDenotingEmptySet -- Time elapsed: 0.048 s <<< FAILURE!
+[ERROR] Tests run: 43, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.188 s <<< FAILURE! -- in org.apache.commons.lang3.CharRangeAgentTest
+[ERROR] org.apache.commons.lang3.CharRangeAgentTest.testContainsRange_nonNegatedThis_negatedArg_bothEmpty -- Time elapsed: 0.009 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -97,12 +97,12 @@ org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at org.apache.commons.lang3.CharRangeAgentTest.testContainsCharRangeThisPlainOtherNegatedDenotingEmptySet(CharRangeAgentTest.java:162)
+	at org.apache.commons.lang3.CharRangeAgentTest.testContainsRange_nonNegatedThis_negatedArg_bothEmpty(CharRangeAgentTest.java:236)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 
-[ERROR] org.apache.commons.lang3.CharRangeAgentTest.testContainsCharRangeThisPlainOtherNegatedTouchingLowBoundary -- Time elapsed: 0.003 s <<< FAILURE!
+[ERROR] org.apache.commons.lang3.CharRangeAgentTest.testContainsRange_nonNegatedThis_negatedArg_highEmpty -- Time elapsed: 0.003 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -110,12 +110,12 @@ org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at org.apache.commons.lang3.CharRangeAgentTest.testContainsCharRangeThisPlainOtherNegatedTouchingLowBoundary(CharRangeAgentTest.java:170)
+	at org.apache.commons.lang3.CharRangeAgentTest.testContainsRange_nonNegatedThis_negatedArg_highEmpty(CharRangeAgentTest.java:255)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 
-[ERROR] org.apache.commons.lang3.CharRangeAgentTest.testContainsCharRangeThisPlainOtherNegatedTouchingHighBoundary -- Time elapsed: 0.001 s <<< FAILURE!
+[ERROR] org.apache.commons.lang3.CharRangeAgentTest.testContainsRange_nonNegatedThis_negatedArg_lowEmpty -- Time elapsed: 0.002 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -123,7 +123,7 @@ org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at org.apache.commons.lang3.CharRangeAgentTest.testContainsCharRangeThisPlainOtherNegatedTouchingHighBoundary(CharRangeAgentTest.java:178)
+	at org.apache.commons.lang3.CharRangeAgentTest.testContainsRange_nonNegatedThis_negatedArg_lowEmpty(CharRangeAgentTest.java:245)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
@@ -132,17 +132,17 @@ org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
-[ERROR]   CharRangeAgentTest.testContainsCharRangeThisPlainOtherNegatedDenotingEmptySet:162 expected: <true> but was: <false>
-[ERROR]   CharRangeAgentTest.testContainsCharRangeThisPlainOtherNegatedTouchingHighBoundary:178 expected: <true> but was: <false>
-[ERROR]   CharRangeAgentTest.testContainsCharRangeThisPlainOtherNegatedTouchingLowBoundary:170 expected: <true> but was: <false>
+[ERROR]   CharRangeAgentTest.testContainsRange_nonNegatedThis_negatedArg_bothEmpty:236 expected: <true> but was: <false>
+[ERROR]   CharRangeAgentTest.testContainsRange_nonNegatedThis_negatedArg_highEmpty:255 expected: <true> but was: <false>
+[ERROR]   CharRangeAgentTest.testContainsRange_nonNegatedThis_negatedArg_lowEmpty:245 expected: <true> but was: <false>
 [INFO] 
-[ERROR] Tests run: 31, Failures: 3, Errors: 0, Skipped: 0
+[ERROR] Tests run: 43, Failures: 3, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.427 s
-[INFO] Finished at: 2026-09-24T15:20:40-07:00
+[INFO] Total time:  14.242 s
+[INFO] Finished at: 2026-09-25T12:32:57-07:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-lang3: There are test failures.
 [ERROR] 

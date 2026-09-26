@@ -12,27 +12,7 @@
 [INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
 [INFO] 
 [INFO] --- apache-rat:0.17:check (rat-check) @ commons-cli ---
-[WARNING] Basedir is : /tmp/pcF_commons-cli-dc69e842_agent
-[INFO] Excluding patterns: site-content/**, .checkstyle, .fbprefs, .pmd, .asf.yaml, .gitattributes, src/site/resources/download_*.cgi, maven-eclipse.xml, .externalToolBuilders/**, .vscode/**, .project, .classpath, .settings/**, **/*.svg, **/*.xcf
-[INFO] Excluding MAVEN collection.
-[INFO] Excluding ECLIPSE collection.
-[INFO] Excluding IDEA collection.
-[INFO] Processing exclude file from STANDARD_SCMS.
-[INFO] Excluding STANDARD_SCMS collection.
-[INFO] Excluding MISC collection.
-[INFO] Excluding HIDDEN_DIR collection.
-[INFO] RAT summary:
-[INFO]   Approved:  116
-[INFO]   Archives:  0
-[INFO]   Binaries:  7
-[INFO]   Document types:  4
-[INFO]   Ignored:  13
-[INFO]   License categories:  1
-[INFO]   License names:  1
-[INFO]   Notices:  3
-[INFO]   Standards:  116
-[INFO]   Unapproved:  0
-[INFO]   Unknown:  0
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
 [INFO] 
 [INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-cli ---
 [INFO] No known issue in 20 plugins
@@ -73,15 +53,15 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.commons.cli.help.TextHelpAppendableAgentTest
-[INFO] Tests run: 41, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.204 s -- in org.apache.commons.cli.help.TextHelpAppendableAgentTest
+[INFO] Tests run: 38, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.187 s -- in org.apache.commons.cli.help.TextHelpAppendableAgentTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[INFO] Tests run: 41, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 38, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.693 s
-[INFO] Finished at: 2026-09-24T15:06:13-07:00
+[INFO] Total time:  3.572 s
+[INFO] Finished at: 2026-09-25T12:16:10-07:00
 [INFO] ------------------------------------------------------------------------

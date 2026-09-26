@@ -79,15 +79,15 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.commons.csv.CSVParserAgentTest
-[INFO] Tests run: 42, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.269 s -- in org.apache.commons.csv.CSVParserAgentTest
+[INFO] Tests run: 37, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.241 s -- in org.apache.commons.csv.CSVParserAgentTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[INFO] Tests run: 42, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 37, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.475 s
-[INFO] Finished at: 2026-09-24T15:16:13-07:00
+[INFO] Total time:  6.713 s
+[INFO] Finished at: 2026-09-25T12:27:23-07:00
 [INFO] ------------------------------------------------------------------------

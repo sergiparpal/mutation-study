@@ -88,8 +88,8 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.commons.lang3.BitFieldAgentTest
-[ERROR] Tests run: 35, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.137 s <<< FAILURE! -- in org.apache.commons.lang3.BitFieldAgentTest
-[ERROR] org.apache.commons.lang3.BitFieldAgentTest.testGetValueTopBitIntMask -- Time elapsed: 0.007 s <<< FAILURE!
+[ERROR] Tests run: 32, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.142 s <<< FAILURE! -- in org.apache.commons.lang3.BitFieldAgentTest
+[ERROR] org.apache.commons.lang3.BitFieldAgentTest.testTopBitIntMask -- Time elapsed: 0.011 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <1> but was: <-1>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -97,12 +97,12 @@ org.opentest4j.AssertionFailedError: expected: <1> but was: <-1>
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at org.apache.commons.lang3.BitFieldAgentTest.testGetValueTopBitIntMask(BitFieldAgentTest.java:163)
+	at org.apache.commons.lang3.BitFieldAgentTest.testTopBitIntMask(BitFieldAgentTest.java:232)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 
-[ERROR] org.apache.commons.lang3.BitFieldAgentTest.testGetValueTopBitLongMask -- Time elapsed: 0.001 s <<< FAILURE!
+[ERROR] org.apache.commons.lang3.BitFieldAgentTest.testTopBitLongMask -- Time elapsed: 0.003 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <1> but was: <-1>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -110,7 +110,7 @@ org.opentest4j.AssertionFailedError: expected: <1> but was: <-1>
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:166)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:161)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:632)
-	at org.apache.commons.lang3.BitFieldAgentTest.testGetValueTopBitLongMask(BitFieldAgentTest.java:172)
+	at org.apache.commons.lang3.BitFieldAgentTest.testTopBitLongMask(BitFieldAgentTest.java:243)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
@@ -119,16 +119,16 @@ org.opentest4j.AssertionFailedError: expected: <1> but was: <-1>
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
-[ERROR]   BitFieldAgentTest.testGetValueTopBitIntMask:163 expected: <1> but was: <-1>
-[ERROR]   BitFieldAgentTest.testGetValueTopBitLongMask:172 expected: <1> but was: <-1>
+[ERROR]   BitFieldAgentTest.testTopBitIntMask:232 expected: <1> but was: <-1>
+[ERROR]   BitFieldAgentTest.testTopBitLongMask:243 expected: <1> but was: <-1>
 [INFO] 
-[ERROR] Tests run: 35, Failures: 2, Errors: 0, Skipped: 0
+[ERROR] Tests run: 32, Failures: 2, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.287 s
-[INFO] Finished at: 2026-09-24T15:30:20-07:00
+[INFO] Total time:  16.823 s
+[INFO] Finished at: 2026-09-25T12:42:48-07:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-lang3: There are test failures.
 [ERROR] 

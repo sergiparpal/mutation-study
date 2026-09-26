@@ -88,8 +88,16 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.commons.lang3.builder.AbstractReflectionAgentTest
-[ERROR] Tests run: 12, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.169 s <<< FAILURE! -- in org.apache.commons.lang3.builder.AbstractReflectionAgentTest
-[ERROR] org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testSetAccessibleAlreadyAccessibleReturnsTrueRegardlessOfFlag -- Time elapsed: 0.010 s <<< FAILURE!
+[ERROR] Tests run: 9, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.157 s <<< FAILURE! -- in org.apache.commons.lang3.builder.AbstractReflectionAgentTest
+[ERROR] org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testSetAccessibleNullObjectReturnsFalse -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.commons.lang3.builder.AbstractReflection.setAccessible(AbstractReflection.java:138)
+	at org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testSetAccessibleNullObjectReturnsFalse(AbstractReflectionAgentTest.java:121)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testSetAccessibleAlreadyAccessibleIgnoresForceFlag -- Time elapsed: 0.008 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -97,36 +105,28 @@ org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testSetAccessibleAlreadyAccessibleReturnsTrueRegardlessOfFlag(AbstractReflectionAgentTest.java:124)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-
-[ERROR] org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testSetAccessibleNullObjectReturnsFalse -- Time elapsed: 0.003 s <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.commons.lang3.builder.AbstractReflection.setAccessible(AbstractReflection.java:138)
-	at org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testSetAccessibleNullObjectReturnsFalse(AbstractReflectionAgentTest.java:114)
+	at org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testSetAccessibleAlreadyAccessibleIgnoresForceFlag(AbstractReflectionAgentTest.java:99)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 
 [INFO] Running org.apache.commons.lang3.AnnotationUtilsAgentTest
-[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 s -- in org.apache.commons.lang3.AnnotationUtilsAgentTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 s -- in org.apache.commons.lang3.AnnotationUtilsAgentTest
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
-[ERROR]   AbstractReflectionAgentTest.testSetAccessibleAlreadyAccessibleReturnsTrueRegardlessOfFlag:124 expected: <true> but was: <false>
+[ERROR]   AbstractReflectionAgentTest.testSetAccessibleAlreadyAccessibleIgnoresForceFlag:99 expected: <true> but was: <false>
 [ERROR] Errors: 
-[ERROR]   AbstractReflectionAgentTest.testSetAccessibleNullObjectReturnsFalse:114 » NullPointer
+[ERROR]   AbstractReflectionAgentTest.testSetAccessibleNullObjectReturnsFalse:121 » NullPointer
 [INFO] 
-[ERROR] Tests run: 33, Failures: 1, Errors: 1, Skipped: 0
+[ERROR] Tests run: 32, Failures: 1, Errors: 1, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.551 s
-[INFO] Finished at: 2026-09-24T15:25:03-07:00
+[INFO] Total time:  16.980 s
+[INFO] Finished at: 2026-09-25T12:37:17-07:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-lang3: There are test failures.
 [ERROR] 

@@ -88,15 +88,15 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.commons.lang3.math.FractionAgentTest
-[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.125 s -- in org.apache.commons.lang3.math.FractionAgentTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.165 s -- in org.apache.commons.lang3.math.FractionAgentTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.576 s
-[INFO] Finished at: 2026-09-24T15:34:50-07:00
+[INFO] Total time:  14.517 s
+[INFO] Finished at: 2026-09-25T12:46:45-07:00
 [INFO] ------------------------------------------------------------------------

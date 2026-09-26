@@ -79,15 +79,29 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.commons.cli.help.TextHelpAppendableAgentTest
-[ERROR] Tests run: 41, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.230 s <<< FAILURE! -- in org.apache.commons.cli.help.TextHelpAppendableAgentTest
-[ERROR] org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapWithMaxWidthDoesNotOverflow -- Time elapsed: 0.009 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: wrap position must not be negative ==> expected: <true> but was: <false>
+[ERROR] Tests run: 38, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.292 s <<< FAILURE! -- in org.apache.commons.cli.help.TextHelpAppendableAgentTest
+[ERROR] org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapReturnsTextLengthWhenNoWrapNeeded -- Time elapsed: 0.010 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <4> but was: <-2147483648>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
-	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
-	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
-	at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapWithMaxWidthDoesNotOverflow(TextHelpAppendableAgentTest.java:151)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapReturnsTextLengthWhenNoWrapNeeded(TextHelpAppendableAgentTest.java:94)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapWithLargeWidthDoesNotOverflow -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <11> but was: <-2147483645>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapWithLargeWidthDoesNotOverflow(TextHelpAppendableAgentTest.java:117)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
@@ -96,15 +110,16 @@ org.opentest4j.AssertionFailedError: wrap position must not be negative ==> expe
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
-[ERROR]   TextHelpAppendableAgentTest.testIndexOfWrapWithMaxWidthDoesNotOverflow:151 wrap position must not be negative ==> expected: <true> but was: <false>
+[ERROR]   TextHelpAppendableAgentTest.testIndexOfWrapReturnsTextLengthWhenNoWrapNeeded:94 expected: <4> but was: <-2147483648>
+[ERROR]   TextHelpAppendableAgentTest.testIndexOfWrapWithLargeWidthDoesNotOverflow:117 expected: <11> but was: <-2147483645>
 [INFO] 
-[ERROR] Tests run: 41, Failures: 1, Errors: 0, Skipped: 0
+[ERROR] Tests run: 38, Failures: 2, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.506 s
-[INFO] Finished at: 2026-09-24T15:06:18-07:00
+[INFO] Total time:  7.473 s
+[INFO] Finished at: 2026-09-25T12:16:18-07:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-cli: There are test failures.
 [ERROR] 
