@@ -53,42 +53,15 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.commons.lang3.time.InstantsAgentTest
-[ERROR] Tests run: 14, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.147 s <<< FAILURE! -- in org.apache.commons.lang3.time.InstantsAgentTest
-[ERROR] org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceNullTreatedAsEpoch -- Time elapsed: 0.012 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <1790365133251> but was: <1790365133252>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:166)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:161)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:632)
-	at org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceNullTreatedAsEpoch(InstantsAgentTest.java:95)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 s -- in org.apache.commons.lang3.time.InstantsAgentTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Failures: 
-[ERROR]   InstantsAgentTest.testToMillisSinceNullTreatedAsEpoch:95 expected: <1790365133251> but was: <1790365133252>
-[INFO] 
-[ERROR] Tests run: 14, Failures: 1, Errors: 0, Skipped: 0
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.663 s
-[INFO] Finished at: 2026-09-25T12:38:53-07:00
+[INFO] Total time:  3.190 s
+[INFO] Finished at: 2026-09-26T01:36:15-07:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-lang3: There are test failures.
-[ERROR] 
-[ERROR] See /tmp/pcF_commons-lang-9288e2c95_agent/target/surefire-reports for the individual test results.
-[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

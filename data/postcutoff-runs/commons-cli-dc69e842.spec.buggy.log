@@ -1,0 +1,55 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< commons-cli:commons-cli >-----------------------
+[INFO] Building Apache Commons CLI 1.12.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ commons-cli ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ commons-cli ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-cli ---
+[WARNING] Basedir is : /tmp/pcB_commons-cli-dc69e842_spec
+[INFO] Excluding patterns: site-content/**, .checkstyle, .fbprefs, .pmd, .asf.yaml, .gitattributes, src/site/resources/download_*.cgi, maven-eclipse.xml, .externalToolBuilders/**, .vscode/**, .project, .classpath, .settings/**, **/*.svg, **/*.xcf
+[INFO] Excluding MAVEN collection.
+[INFO] Excluding ECLIPSE collection.
+[INFO] Excluding IDEA collection.
+[INFO] Processing exclude file from STANDARD_SCMS.
+[INFO] Excluding STANDARD_SCMS collection.
+[INFO] Excluding MISC collection.
+[INFO] Excluding HIDDEN_DIR collection.
+[INFO] RAT summary:
+[INFO]   Approved:  116
+[INFO]   Archives:  0
+[INFO]   Binaries:  7
+[INFO]   Document types:  4
+[INFO]   Ignored:  13
+[INFO]   License categories:  2
+[INFO]   License names:  2
+[INFO]   Notices:  3
+[INFO]   Standards:  117
+[INFO]   Unapproved:  1
+[INFO]   Unknown:  1
+[ERROR] Unexpected count for UNAPPROVED, limit is [0,0].  Count: 1
+[INFO] UNAPPROVED (Unapproved) is a count of unapproved licenses.
+[WARNING] *****************************************************
+Generated at: 2026-09-27T09:20:40-07:00
+
+Files with unapproved licenses:
+  /src/test/java/org/apache/commons/cli/help/TextHelpAppendableAgentTest.java
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.012 s
+[INFO] Finished at: 2026-09-27T09:20:41-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.rat:apache-rat-plugin:0.17:check (rat-check) on project commons-cli: Counter(s) UNAPPROVED exceeded minimum or maximum values. See RAT report in: '/tmp/pcB_commons-cli-dc69e842_spec/target/rat.txt'. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

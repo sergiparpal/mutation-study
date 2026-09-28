@@ -35,14 +35,15 @@ def main():
     src = "".join(lines)
     junit3 = "extends TestCase" in src or "junit.framework.TestCase" in src
 
-    total = (len(re.findall(r"public\s+void\s+test\w*\s*\(", src)) if junit3
+    total = (len(re.findall(r"(?:public\s+)?void\s+test\w*\s*\(", src)) if junit3
         else len(re.findall(r"@Test\b", src)))
     pruned = 0
 
     for name in failing:
         # locate the declaration of this method
         idx = None
-        decl = re.compile(r"public\s+void\s+" + re.escape(name) + r"\s*\(")
+        decl = re.compile(r"(?:public\s+|protected\s+|private\s+)?void\s+"
+                          + re.escape(name) + r"\s*\(")
         for i, line in enumerate(lines):
             if decl.search(line):
                 idx = i
@@ -51,7 +52,8 @@ def main():
             continue
 
         if junit3:
-            lines[idx] = decl.sub(f"public void pruned_{name}(", lines[idx])
+            lines[idx] = re.sub(r"\bvoid\s+" + re.escape(name) + r"\s*\(",
+                                f"void pruned_{name}(", lines[idx])
             pruned += 1
         else:
             # walk back over annotations and comments to find @Test

@@ -61,15 +61,15 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.commons.lang3.time.InstantsAgentTest
-[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 s -- in org.apache.commons.lang3.time.InstantsAgentTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 s -- in org.apache.commons.lang3.time.InstantsAgentTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  10.898 s
-[INFO] Finished at: 2026-09-25T07:41:41-07:00
+[INFO] Total time:  10.483 s
+[INFO] Finished at: 2026-09-28T03:16:32-07:00
 [INFO] ------------------------------------------------------------------------

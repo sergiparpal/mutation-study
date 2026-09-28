@@ -88,21 +88,8 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.commons.lang3.time.InstantsAgentTest
-[ERROR] Tests run: 15, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.131 s <<< FAILURE! -- in org.apache.commons.lang3.time.InstantsAgentTest
-[ERROR] org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceOverflowClampsToMaxValue -- Time elapsed: 0.007 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <9223372036854775807> but was: <-9223372036854775808>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:166)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:161)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:632)
-	at org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceOverflowClampsToMaxValue(InstantsAgentTest.java:124)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-
-[ERROR] org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceUnderflowClampsToMinValue -- Time elapsed: 0.004 s <<< FAILURE!
+[ERROR] Tests run: 16, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.142 s <<< FAILURE! -- in org.apache.commons.lang3.time.InstantsAgentTest
+[ERROR] org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceOverflowInstantMax -- Time elapsed: 0.011 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <-9223372036854775808> but was: <9223372036854775807>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -110,7 +97,20 @@ org.opentest4j.AssertionFailedError: expected: <-9223372036854775808> but was: <
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:166)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:161)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:632)
-	at org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceUnderflowClampsToMinValue(InstantsAgentTest.java:130)
+	at org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceOverflowInstantMax(InstantsAgentTest.java:125)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceOverflowInstantMin -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <9223372036854775807> but was: <-9223372036854775808>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:166)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:161)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:632)
+	at org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceOverflowInstantMin(InstantsAgentTest.java:132)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
@@ -119,16 +119,16 @@ org.opentest4j.AssertionFailedError: expected: <-9223372036854775808> but was: <
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
-[ERROR]   InstantsAgentTest.testToMillisSinceOverflowClampsToMaxValue:124 expected: <9223372036854775807> but was: <-9223372036854775808>
-[ERROR]   InstantsAgentTest.testToMillisSinceUnderflowClampsToMinValue:130 expected: <-9223372036854775808> but was: <9223372036854775807>
+[ERROR]   InstantsAgentTest.testToMillisSinceOverflowInstantMax:125 expected: <-9223372036854775808> but was: <9223372036854775807>
+[ERROR]   InstantsAgentTest.testToMillisSinceOverflowInstantMin:132 expected: <9223372036854775807> but was: <-9223372036854775808>
 [INFO] 
-[ERROR] Tests run: 15, Failures: 2, Errors: 0, Skipped: 0
+[ERROR] Tests run: 16, Failures: 2, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.413 s
-[INFO] Finished at: 2026-09-24T15:27:06-07:00
+[INFO] Total time:  14.202 s
+[INFO] Finished at: 2026-09-26T01:36:30-07:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-lang3: There are test failures.
 [ERROR] 

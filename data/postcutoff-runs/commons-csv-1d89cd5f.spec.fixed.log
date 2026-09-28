@@ -56,56 +56,15 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.commons.csv.ExtendedBufferedReaderAgentTest
-[ERROR] Tests run: 15, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.153 s <<< FAILURE! -- in org.apache.commons.csv.ExtendedBufferedReaderAgentTest
-[ERROR] org.apache.commons.csv.ExtendedBufferedReaderAgentTest.readLineDropsTerminatorsAndTracksLineNumber -- Time elapsed: 0.062 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <-1> but was: <10>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.readLineDropsTerminatorsAndTracksLineNumber(ExtendedBufferedReaderAgentTest.java:96)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-
-[ERROR] org.apache.commons.csv.ExtendedBufferedReaderAgentTest.readLineOnEmptyStreamReturnsNull -- Time elapsed: 0.001 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <-1> but was: <-2>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.readLineOnEmptyStreamReturnsNull(ExtendedBufferedReaderAgentTest.java:115)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.136 s -- in org.apache.commons.csv.ExtendedBufferedReaderAgentTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Failures: 
-[ERROR]   ExtendedBufferedReaderAgentTest.readLineDropsTerminatorsAndTracksLineNumber:96 expected: <-1> but was: <10>
-[ERROR]   ExtendedBufferedReaderAgentTest.readLineOnEmptyStreamReturnsNull:115 expected: <-1> but was: <-2>
-[INFO] 
-[ERROR] Tests run: 15, Failures: 2, Errors: 0, Skipped: 0
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.047 s
-[INFO] Finished at: 2026-09-25T07:14:26-07:00
+[INFO] Total time:  4.346 s
+[INFO] Finished at: 2026-09-27T09:28:57-07:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-csv: There are test failures.
-[ERROR] 
-[ERROR] See /tmp/pcF_commons-csv-1d89cd5f_spec/target/surefire-reports for the individual test results.
-[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

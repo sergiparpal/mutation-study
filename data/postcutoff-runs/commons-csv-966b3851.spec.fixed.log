@@ -45,29 +45,26 @@
 [INFO] Compiling 42 source files with javac [debug release 8] to target/test-classes
 [INFO] /tmp/pcF_commons-csv-966b3851_spec/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Some input files use or override a deprecated API.
 [INFO] /tmp/pcF_commons-csv-966b3851_spec/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /tmp/pcF_commons-csv-966b3851_spec/src/test/java/org/apache/commons/csv/CSVParserAgentTest.java:[546,30] cannot find symbol
-  symbol:   method of(java.lang.String,java.lang.String)
-  location: interface java.util.List
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.14:prepare-agent (prepare-agent) @ commons-csv ---
+[INFO] argLine set to -javaagent:/home/sergi/.m2/repository/org/jacoco/org.jacoco.agent/0.8.14/org.jacoco.agent-0.8.14-runtime.jar=destfile=/tmp/pcF_commons-csv-966b3851_spec/target/jacoco.exec
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ commons-csv ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.commons.csv.CSVParserAgentTest
+[INFO] Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.192 s -- in org.apache.commons.csv.CSVParserAgentTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 36, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.521 s
-[INFO] Finished at: 2026-09-25T07:26:28-07:00
+[INFO] Total time:  4.223 s
+[INFO] Finished at: 2026-09-27T09:38:11-07:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.15.0:testCompile (default-testCompile) on project commons-csv: Compilation failure
-[ERROR] /tmp/pcF_commons-csv-966b3851_spec/src/test/java/org/apache/commons/csv/CSVParserAgentTest.java:[546,30] cannot find symbol
-[ERROR]   symbol:   method of(java.lang.String,java.lang.String)
-[ERROR]   location: interface java.util.List
-[ERROR] 
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

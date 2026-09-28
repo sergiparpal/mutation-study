@@ -489,6 +489,66 @@ that writes tests from javadoc with a 3.3% error rate invents four confident,
 specific and wrong faults when asked about code it cannot see. Correctness here
 tracks whether there is something to check against.
 
+### 3.8 Post-cutoff replication, and why it does not settle contamination
+
+The probe in §3.7 bounds training-data contamination but cannot rule out recall
+*cued* by the source, since withholding the source withholds the cue. Faults the
+model cannot have seen would settle it. We therefore mined a small corpus from
+the same four upstream repositories, taking fix commits from June to September
+2026 — recent enough to postdate the training data, and from the same
+codebases, so that the only intended difference from the Defects4J sample is
+the date.
+
+Candidates were fix commits that change both production and test code, touch at
+most three production files, and for which the fix's tests fail on the parent
+commit and pass on the fix. Eleven subjects passed that validation. Three could
+not be used: removing the developer test file that contains the trigger tests
+breaks compilation, because other test classes call static helpers defined in
+it — `FastDateParserJava15BugTest` uses `FastDateParserTest.checkParse` and
+`LONG_FORMAT`, and `CSVPrinterTest` likewise depends on `CSVFormatTest`. That
+leaves **eight subjects**, measured for detection only (§3.8 rationale below).
+
+| arm | detected | tests pruned |
+|---|---|---|
+| implementation-visible | 6/8 (75%) | 0 of 267 |
+| specification-only | 8/8 (100%) † | 11 of 181 (6.1%) |
+
+† Provisional; see the note on completion in the repository.
+
+The implementation-visible figure reproduces the Defects4J result closely: 75%
+against 72%, with no tests pruned in either. **The specification-only figure
+does not, and the reason is the corpus, not the date.**
+
+Reading the eight faults, they are overwhelmingly extreme-value faults:
+`Integer.MIN_VALUE` in fraction reduction; integer overflow in a wrap-position
+calculation; sign extension from `>>` where `>>>` was needed; a `ParsePosition`
+index equal to the source length; a negated `CharRange` touching its own
+bounds; byte tracking for supplementary characters; an overflow bound in the
+wrong direction.
+
+Both arms' prompts instruct the agent to "cover boundary and error cases, not
+just the happy path". A fault that manifests only at `Integer.MIN_VALUE`, or on
+arithmetic overflow, or at an index equal to a length, is reached by following
+that instruction. It requires no specification at all — which is a different
+mechanism from the one that produced the five Defects4J detections, four of
+which were cases where the implementation contradicts a documented contract
+(§3.3).
+
+The selection criteria are the cause. Requiring small, ticket-tracked commits
+that fix and test in one change filters toward precisely this class of fault.
+The Defects4J sample has a different composition: 21 of its 40 faults are
+omissions — absent logic, which documentation cannot reveal because it does not
+describe what is not there.
+
+**This replication therefore varies two things at once, date and fault
+composition, and composition dominates.** It does not bound contamination,
+which was its purpose. We report it because it establishes something else: the
+specification-only arm has a second competence beyond contract violations. Told
+to probe boundaries, it finds extreme-value faults without needing a
+specification, and on a corpus made of them it matches the
+implementation-visible arm. Whether that generalises to a corpus sampled
+without this bias is untested.
+
 ---
 
 ## 4. Discussion
@@ -641,39 +701,16 @@ the cue and not the memory; the design cannot separate these. And the probe
 tests one model at one point in time.
 
 Replication on a corpus postdating the model's training cutoff remains the
-stronger check. GitBug-Java, the obvious candidate, no longer serves: its bugs
-come from 2023 commit histories, selected in early 2024 precisely because that
-postdated the then-current cutoffs. A corpus mined from post-cutoff commits
-would be required.
+stronger check, and our attempt at one does not deliver it (§3.8). GitBug-Java,
+the obvious candidate, no longer serves: its bugs come from 2023 commit
+histories, selected in early 2024 precisely because that postdated the
+then-current cutoffs. Mining our own post-cutoff corpus produced subjects whose
+fault composition differs systematically from the Defects4J sample — a
+consequence of the selection criteria — so the comparison confounds date with
+composition. A corpus matched on fault type would be required, and building one
+is harder than building either corpus alone.
 
-**The acceptance filter uses the implementation as an oracle.** Tests that
-disagree with the fixed code are removed, so what survives in the S arm is the
-subset agreeing with the implementation. This favours the S arm, not the
-finding: an unfiltered S arm would score no better. The M arm is subject to the
-same filter.
-
-**The sandbox contains compiled classes.** A decompiler or `javap -c` would
-recover the logic. The prompt forbids it and the sandboxes are retained for
-audit, but this is an honour-system control rather than a technical one.
-Withholding the jar would leave the agent unable to compile, which was judged
-the larger cost.
-
-**The turn cap changed during the M-arm run** (25, then 40, then 50) as bugs in
-older projects proved to need more iterations. Six M-arm suites ran under the
-lowest cap. This works against the M arm, so against the reported effect.
-
-**Six Lang bugs required stub test classes** to keep the build compiling after
-deleting the developer tests. Those bugs ran in a slightly different
-environment from the other 34, in both arms equally.
-
-**Only one side of the mirror is tested.** The implementation-visible arm reads
-the *repaired* revision. The complementary condition — an agent reading the
-*faulty* revision, where a mirror would certify the defect rather than expose
-it — is not covered here and is reported by Konstantinou et al. (see §6). Our
-72% therefore characterises an evaluation protocol, not agent behaviour during
-development.
-
-### 5.2 Construct validity
+## 5.2 Construct validity
 
 **Fault detection is binary and coarse.** Defects4J classifies a suite as
 detecting the fault when at least one test passes on the fixed revision and
