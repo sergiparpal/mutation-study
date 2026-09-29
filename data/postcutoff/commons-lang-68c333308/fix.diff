@@ -1,0 +1,15 @@
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java b/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
+index 6063e8aaf..42a309f02 100644
+--- a/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
+@@ -862,7 +862,9 @@ private static final class WeekYear implements NumberRule {
+ 
+         @Override
+         public void appendTo(final Appendable buffer, final Calendar calendar) throws IOException {
+-            rule.appendTo(buffer, calendar.getWeekYear());
++            // Some Calendar implementations (JapaneseImperialCalendar) do not support week-dates.
++            // Fall back to Calendar.YEAR in that case.
++            rule.appendTo(buffer, calendar.isWeekDateSupported() ? calendar.getWeekYear() : calendar.get(Calendar.YEAR));
+         }
+ 
+         @Override

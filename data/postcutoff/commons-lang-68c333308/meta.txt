@@ -1,0 +1,5 @@
+project=commons-lang
+sha=68c33330820f94f1f335e16eeb201988ad8c1edd
+short=68c333308
+date=2026-05-18
+subject=FastDatePrinter WeekYear rule calls Calendar.getWeekYear() without checking isWeekDateSupported() (#1659)

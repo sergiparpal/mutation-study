@@ -115,3 +115,13 @@ candidates per accepted `OMISSION` subject.
 Candidates examined, in order, with their assigned category and the reason for
 acceptance or rejection, go in `data/matched-candidates.csv`. The log is the
 evidence that quotas were filled by appearance order and not by convenience.
+
+## Outcome
+
+**Deviation from the pre-registered quotas.** The ALGORITHM quota closed at
+3 of 4. The fourth subject (gson-698ba9eb) failed fail-to-pass validation and
+no replacement of that category was found in the remaining pool: approach
+rewrites are rare in routine maintenance, and four were identified across 227
+candidates. The corpus is therefore 19 subjects with OMISSION 10, ALGORITHM 3,
+SUBSTITUTION 3, STATE 2, MISSING_CLAUSE 1 — a composition still far closer to
+the Defects4J sample than the first post-cutoff corpus was.
