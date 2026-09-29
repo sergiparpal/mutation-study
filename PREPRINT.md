@@ -502,37 +502,48 @@ the date.
 Candidates were fix commits that change both production and test code, touch at
 most three production files, and for which the fix's tests fail on the parent
 commit and pass on the fix. Eleven subjects passed that validation. Three could
-not be used: removing the developer test file that contains the trigger tests
-breaks compilation, because other test classes call static helpers defined in
-it — `FastDateParserJava15BugTest` uses `FastDateParserTest.checkParse` and
-`LONG_FORMAT`, and `CSVPrinterTest` likewise depends on `CSVFormatTest`. That
-leaves **eight subjects**, measured for detection only (§3.8 rationale below).
+not be used in either arm: removing the developer test file that holds the
+trigger tests breaks compilation, because other test classes call static
+helpers defined in it — `FastDateParserJava15BugTest` uses
+`FastDateParserTest.checkParse` and `LONG_FORMAT`, and `CSVPrinterTest`
+likewise depends on `CSVFormatTest`. One further subject was lost in the
+specification-only arm, where the generated suite did not compile against the
+project. That leaves eight subjects in the implementation-visible arm and
+**seven measured in both**.
+
+Only detection is measured here. Mutation score and coverage are not: recall
+affects detection — the model remembers a fault and writes the test that
+catches it — but not assertion strength against whatever code is in front of
+the agent. Both are already measured over 36 Defects4J bugs, and at this sample
+size would add nothing.
 
 | arm | detected | tests pruned |
 |---|---|---|
 | implementation-visible | 6/8 (75%) | 0 of 267 |
-| specification-only | 8/8 (100%) † | 11 of 181 (6.1%) |
-
-† Provisional; see the note on completion in the repository.
+| specification-only | 7/7 (100%) | 11 of 327 (3.4%) |
 
 The implementation-visible figure reproduces the Defects4J result closely: 75%
-against 72%, with no tests pruned in either. **The specification-only figure
-does not, and the reason is the corpus, not the date.**
+against 72%, with no tests pruned in either. The prune rate in the
+specification-only arm, 3.4%, is likewise almost identical to the 3.3% measured
+on Defects4J — so whatever differs between the two corpora, it is not that
+writing tests blind against these APIs is harder.
 
-Reading the eight faults, they are overwhelmingly extreme-value faults:
+**The detection figure does not reproduce, and the reason is the corpus, not
+the date.**
+
+Reading the faults, they are overwhelmingly extreme-value faults:
 `Integer.MIN_VALUE` in fraction reduction; integer overflow in a wrap-position
 calculation; sign extension from `>>` where `>>>` was needed; a `ParsePosition`
 index equal to the source length; a negated `CharRange` touching its own
-bounds; byte tracking for supplementary characters; an overflow bound in the
-wrong direction.
+bounds; byte tracking for supplementary characters; an overflow bound applied
+in the wrong direction.
 
 Both arms' prompts instruct the agent to "cover boundary and error cases, not
 just the happy path". A fault that manifests only at `Integer.MIN_VALUE`, or on
 arithmetic overflow, or at an index equal to a length, is reached by following
-that instruction. It requires no specification at all — which is a different
-mechanism from the one that produced the five Defects4J detections, four of
-which were cases where the implementation contradicts a documented contract
-(§3.3).
+that instruction. It requires no specification at all — a different mechanism
+from the one behind the five Defects4J detections, four of which were cases
+where the implementation contradicts a documented contract (§3.3).
 
 The selection criteria are the cause. Requiring small, ticket-tracked commits
 that fix and test in one change filters toward precisely this class of fault.
