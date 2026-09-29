@@ -56,6 +56,17 @@ pool and are excluded as a population, not case by case:
 
 The residual pool after both exclusions is 259 candidates.
 
+**Also excluded: performance-only changes.** A commit that leaves observable
+behaviour unchanged and improves only time or space complexity is not a fault
+subject, since no test can distinguish the two revisions by result. Defects4J
+contains no such subjects.
+
+**Thematic sweeps count once.** Where a maintainer works through one concern
+across several classes in a short window — mutable TimeZone defensive copies,
+reflective accessibility on non-public classes — the first candidate is taken
+and the rest are rejected. The faults are not independent observations even
+when the code differs.
+
 ## Protocol
 
 1. **Mine without the biasing filters.** No size cap, no ticket requirement.

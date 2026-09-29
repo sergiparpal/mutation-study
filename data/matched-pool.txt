@@ -1,0 +1,227 @@
+commons-lang 9a92df9fa33d2f84a7c2037c52ca37e9cb647be1 2026-09-22 1 Fix NumberUtils.createNumber() and isCreatable() for positive Long literals with explicit '+' sign (#1796)
+commons-lang 8065c45316bf417dd40f28b72956bf8be7755de8 2026-09-21 2 Add JavaVersion.JAVA_28 (#1797)
+commons-lang 963c337d772ec4e27a4501a9dda1ffd860c59d7e 2026-09-21 1 Add equality and hash code support to ImmutableTimeZone
+commons-lang ed311151c9d1322020aa3970822d0a0923bf0e85 2026-09-21 63 Javadoc
+commons-lang 117a9ea791b87af1b90413fa8290891ca3106cfd 2026-09-19 3 Clone the TimeZone in FastDatePrinter and FastDateParser (#1795)
+commons-lang 55dcbc4bb1449aa9f7c6ee422cc22b465a35fa2f 2026-09-19 1 Fix mutable time zone keys in the FastDateFormat cache
+commons-lang 82483775157159a8edcc9220498f034fa1621611 2026-09-19 1 Fix ConstructorUtils.getMatchingAccessibleConstructor on non-public classes (#1793)
+commons-lang e992a498d711fc4302d5ad89e80511db41db2f11 2026-09-19 1 LANG-1834 Fix Fraction reduction for Integer.MIN_VALUE (#1794)
+gson 115bcc7e1136f50eb89c9f7ae579e340fd27d117 2026-09-16 1 Avoid quadratic removeIf in JsonArray list views (#3115)
+gson 698ba9ebfdbf629ca4ccc393d9cecd69c1e7115f 2026-09-16 1 use the runtime type for a wildcard element type (#3112)
+commons-lang e1ce120c6a60df8fe1bf37b78127eea7562662e4 2026-09-14 1 Fix TypeUtils.toString() recursion and bound handling on recursive generic types (#1789)
+commons-lang 45f08d9e3b03177e12559878fc95cf3266b65052 2026-09-13 1 Fix TypeUtils.toString() recursion and bound handling on recursive generic types (#1789).
+commons-lang de0184561dd0c8c7a176470016b9df89414f8bed 2026-09-12 1 Return null for out-of-range offset in FastTimeZone.getGmtTimeZone (#1788)
+gson ed99017a3b7ff41a08b96f3b972e7599743abe99 2026-09-12 1 Remove redundant `recordPromotedName` calls (#3117)
+commons-lang 284be5d6a5bc8d903297e2a6f86ecf3494e44d1d 2026-09-09 1 Fraction.add and subtract return the reduced form when an operand is zero (#1787)
+commons-lang d8f4116d4ba03ed32b104b3af891de7a67f2ce97 2026-09-09 1 Fix MethodUtils.invokeMethod on instances of non-public classes (#1783)
+commons-lang df1e91895d3d5380efa18a8e8e9d3d7b64ecceab 2026-09-08 1 Fix TypeUtils.isAssignable() for wildcards with multiple upper bounds (#1782)
+commons-lang e213b85ce46aca72b284813c74a15e9ac9d55d90 2026-09-08 1 Fix Fraction.add and subtract for operands not in lowest terms (#1784)
+commons-lang 715d1238562d3c031318606a29859438f4b7d014 2026-09-05 1 Add missing test
+commons-lang c8dc3121a2d97a63c86eab02ae71a05d9f8066c0 2026-09-05 1 StrSubstitutor (deprecated) recursive expansion has a cycle check but no fan-out, depth, or size bound.
+commons-lang e4380908b4675dda241247422d6c3dd021bf1253 2026-09-03 1 Fix DurationFormatUtils.formatPeriod() calculation when pattern omits M (#1780)
+commons-lang 0edbb4ae03fbe14a8204dbb866b0a17f22a4c6f1 2026-09-02 1 fix int overflow in Conversion count and position bounds guards (#1779)
+commons-cli 03960a4d9a0a8473b3ea0ad11cbd5891fafa2716 2026-08-29 1 Load classes without initializing them in Converter.CLASS (#432).
+commons-csv f9e7d792dc6cb8a46f3e164e5cc50e38dc65264b 2026-08-29 3 Keep an escaped value that equals the null string (#626).
+gson 61f2c646066e959f65cb99a826a2a759be42dbdd 2026-08-26 2 Add JsonReader.getCharacterOffset to track stream position (#3102)
+gson a3b9f1f7377d7ce308221b44eacd5571701174fb 2026-08-26 1 Use `switch` statements instead of if-chains. (#3101)
+gson b3f4ca20087f9066de4c340522ff84e0558e1ad1 2026-08-26 2 Update JSON path after promoteNameToValue (#3098)
+commons-lang d1e60e04f7ddfd51772fbf0859c12407d17e600b 2026-08-24 2 Align ReflectionDiffBuilder with AbstractReflection and add cycle detection (#1778)
+commons-lang 1a6598c51336de5611632fc672848919b0abfec3 2026-08-23 1 Align ReflectionDiffBuilder with AbstractReflection and add cycle detection (#1778).
+commons-cli 0f561e5979d1f10b93ae98ef1fcd908ec33c048e 2026-08-22 1 [CLI-354] Fix HelpFormatter wrapped description indent (#439)
+commons-lang df5245a79364b7e117d00962829a303086c7e5d5 2026-08-22 1 Keep StopWatch.formatSplitTime from clamping splits to int millis (#1777)
+commons-lang 1d6ef29ce004309e50bd91e27f0f5e80e1a57a76 2026-08-17 1 Fix CharRange.contains for negated argument ranges (#1775)
+commons-lang 8d9ada1291429cd53b0b5432df2f97aebc1d7749 2026-08-17 5 Fix typos in Javadoc and example comments (#1774)
+commons-lang 13e38e1fb3b37c93c2ce0497c5ab1428695ccf96 2026-08-16 1 Internal refactoring.
+commons-lang 596269f16d33cd4a20223978c245a15c898c5084 2026-08-16 1 Javadoc
+gson dae37cf0fe12235b76fb09f01118a0a8c8823f42 2026-08-14 2 Fix some adapter exceptions not including JSON document location (#3096)
+commons-csv be3b160d9dd67db5eec67bed8592cc14e5fe4c57 2026-08-13 1 validate CSVFormat invariants when deserializing
+commons-lang 10f4421456b891d5a426348511383f387c99f3e1 2026-08-10 1 Fix spurious overflow in Fraction.multiplyBy for unreduced operands (#1769)
+commons-cli dc69e8423b163da5fca292e2bf9d6482ec6202f0 2026-08-08 1 Fix integer overflow in TextHelpAppendable.indexOfWrap (#437)
+commons-csv 9a33a61732bd334159d0b072aa90ba35aae14e67 2026-08-08 1 fix quadratic printWithEscapes(Reader) delimiter look-ahead
+gson 9835b6f90192f79cdf5300c528fc6212455fb6c1 2026-08-08 12 Fix typos and grammar issues (#3092)
+commons-csv f1bf8cd22d97d99efa7b554cffa3e8144bd14de3 2026-08-05 1 Close the stream parse(Path) and parse(URL) open on construction failure (#630).
+commons-lang 54ee8ec1c9c44a6617e8e41acf475a79857ac564 2026-08-04 1 Reject non-ASCII hex characters in Conversion.hexDigitToInt (#1767)
+commons-lang 9288e2c95f39abd1ff115aeddafaa276ceafae6d 2026-08-04 1 Fix the overflow bound direction in Instants.toMillisSince(Instant) (#1766)
+commons-csv 673123864d868bc204fca916f284d301e046f555 2026-08-02 2 Javadoc
+commons-lang 7d15536229e0f565ead115538b30ebeeeefdac4e 2026-08-02 11 Javadoc
+commons-cli 7d77ecce8b11763b7282d6b40dffdb4ce8e85668 2026-08-01 1 Reject trailing text after the date in Converter.DATE (#435)
+commons-cli db57942a6a593ebf2be28172a22a2f1db6bdccb9 2026-08-01 1 Reject an empty option name in getMatchingOptions (#434)
+commons-lang a1c12e6d4887d66d2112def35d6109905806410d 2026-07-31 1 Fix two Javadoc errors in StringUtils (#1763)
+commons-lang 0add789ed39fb3d59ce16048a3960821ee313bf7 2026-07-30 1 fix negative week year formatting in FastDatePrinter (#1762)
+commons-lang 7e5906fb0cb679d630527fc1bc18018f935518dc 2026-07-30 2 [LANG-1815] Fix AnnotationUtils.equals for package-private annotations. (#1760)
+commons-lang b1aba6833f31ac2c9cc5a1302cac966f997db31e 2026-07-30 1 fix StrBuilder.lastIndexOf(String) start index for an empty search (#1759)
+commons-csv 4026d3a789f0761d12a2b31405e429bda76a7a4b 2026-07-29 1 pin ALL null encoding in test and drop magic size number
+gson 169bb7a34b30611996d893b7c6a779180109cf78 2026-07-29 1 Only deserialize `InetAddress` from numeric IP addresses. (#3075)
+gson 4b46b6ce6c175d0742a6f9f813219053fb5e36c3 2026-07-29 1 Make `LazilyParsedNumber` implement `Comparable`. (#3076)
+commons-csv 1022094157af387b1db5738dd3f4e6a03f43950d 2026-07-28 1 quote null value that starts a record in minimal quote mode
+commons-lang e0dba35f9e41dfdbbbb646fcd377b8af8ef7344e 2026-07-28 1 [LANG-1833] Handle ParsePosition index beyond source string length cleanly (#1757)
+gson 138377c6b6c724dc1e0579f7c62337f85d9ee836 2026-07-28 1 Include location in NumberFormatException thrown by JsonTreeReader (#3062)
+gson b9c70acc46c0b950bba2571406b94d00bca4d208 2026-07-24 2 Reject non-ASCII digits in JsonTreeReader.nextInt/nextLong (#3063)
+commons-csv 68f17d8a9bd91a60b336f87eee040b3d667cfd97 2026-07-23 1 handle null name in CSVRecord accessors under ignoreHeaderCase
+gson 5e277e42786ab6441b7dd6b1a8c34d545d132307 2026-07-23 1 Fix JsonPrimitive.hashCode to honor the equals/hashCode contract (#992) (#3059)
+gson 961517decce0aa907c285c19d8b93d5c746ecdcb 2026-07-23 1 Fix URI type adapter to preserve identity for non-ASCII URIs (#3067)
+commons-lang a821cc4b80c7d3c8a301c0e9886aa9e3bbb3e94a 2026-07-22 27 Add messages when throwing NullPointerException.
+gson 79264af6370092ea795293ab896b16a5d67c1fd2 2026-07-22 1 Add StructTypeAdapter for direct Struct ↔ JsonObject conversion (#3061)
+gson fcb5ded364f325e41bf3801e51110b2c1a103019 2026-07-22 7 Bump Error Prone to 2.50.0 (#3053)
+commons-csv 09e27ffdb76540136e710a2026a0d77bc9a49aee 2026-07-21 1 count rows produced instead of getRow() in printRecords(ResultSet)
+gson 866bc38923123f4ad8025c3c363511deb4380edf 2026-07-21 2 Use LinkedHashMap as the default Map. (#3057)
+commons-csv 89784890bddd98a2945e9cde74247e3732536c63 2026-07-20 1 fill the lookahead buffer on short reads from a chunked source
+commons-csv 1a8403dd53e2164d9d8520e2628e180feed3bfdc 2026-07-18 1 synchronize private CSVFormat print overload on writeLock
+commons-lang 1d1044848b38fa82063de9e33b9e54caaddfbf09 2026-07-18 1 Fix int overflow in FluentBitSet.setInclusive at Integer.MAX_VALUE (#1751)
+commons-csv 8379c942b28e54985d7c073627ce3e84aae7bb44 2026-07-17 1 Sort members.
+commons-lang 98dc24990bf93234cf63ed5c5dd43a4f07847baa 2026-07-17 1 Fix sign extension in BitField.getValue for top-bit fields (#1749)
+commons-lang b6ae058bfabc3144c0a19e566c3765f108f9eed1 2026-07-17 1 Sort members.
+commons-lang c99f2ddfe2fc9294070b697cdd1f603b0a31078b 2026-07-17 1 Fix ArrayUtils.reverse range underflow on Integer.MIN_VALUE end (#1750)
+commons-csv ab3d7236ed76a1a19bf91c7fbed84247a9819bd3 2026-07-16 1 skip trailing delimiter on comment lines in printComment
+commons-csv f53d04737a47ef7762b01ef33fa2c2117f7820ac 2026-07-13 1 exclude byte-order mark from ExtendedBufferedReader byte counting
+commons-lang 0c409392897ac41e06f76ecdd1c639e4bee52505 2026-07-13 1 Fix FieldUtils.getField false ambiguity on inherited interface field (#1748)
+commons-lang 7b7be629d6383ae8ddd7e0ed8c6d700ec23aebd0 2026-07-12 1 Keep HashCodeBuilder.append(Object) from poisoning reflection hashCode (#1747)
+commons-cli 5b2558e0149d2f27906026808d42126f28a08826 2026-07-11 30 Javadoc
+commons-cli 8010193eec848982cb4618a0a31487aca76851a2 2026-07-11 1 reject invalid dates in Converter.DATE (#430)
+commons-cli f92c4ce0f80fd09b648a9b73b6495417eb97edbf 2026-07-11 1 reject non-BMP code points in the Character type converter (#425)
+commons-csv 3385046f08174435c1c12889f6e05505493064ad 2026-07-11 5 Javadoc
+commons-csv 578fd573a9126a157a02ba6a6ebe3b2012938f28 2026-07-11 5 Javadoc
+commons-csv 8205bb6397be64f1ee446e856ba8d82e43d6810d 2026-07-11 6 Javadoc
+commons-lang 16fe275f398e21907b1d5fdf15693bd02d078b14 2026-07-11 122 Javadoc
+commons-lang 376fcce78cec0a6f29d59bc1a186c1b45f848b0b 2026-07-11 186 Javadoc
+commons-lang 7c91ce9898e2bfe0eb938ed16d4e1b8840d39aef 2026-07-11 1 Match String case folding in StrBuilder.equalsIgnoreCase (#1745)
+commons-lang 84966e01e511a76a4851945b162fd0e01091c174 2026-07-11 158 Javadoc
+commons-csv 6595acc0902f6e185eee1dbc3dec8ada0bb5dbd7 2026-07-08 1 quote value with leading or trailing unicode whitespace
+commons-lang 8425918f90e8c3c6e39f14e18335ecb8e4589b91 2026-07-07 1 Keep ExtendedMessageFormat from rejecting a quoted format style (#1744)
+commons-lang dda92830127b7486fb02932e87a05891feb9cef1 2026-07-06 1 Keep FastDateParser.parse error message intact for imperial locale (#1743)
+commons-csv fe6fe22afb6f4e1b4b6ceb2dd293bae104889669 2026-07-05 1 Quote value ending with multi-character delimiter prefix (#620).
+commons-lang 2011ce3ba2386669086882182dc41d76148e5489 2026-07-04 1 Stop ExtendedMessageFormat seekNonWs reading past the pattern end (#1740)
+commons-lang d4b4d8c352d048f5dab3c85dd6ef380cfe04bdee 2026-07-04 1 Keep FastDateParser numeric parse from throwing on int overflow (#1741)
+commons-lang f015a7ed9934c5fcb73901c47420ef0005ec0af4 2026-07-04 1 reject hex letters in NumericEntityUnescaper decimal scan (#1739)
+commons-lang 3f0c0fd5cb8af9f2ae6d7f869d7e87c66985ab90 2026-07-02 1 Keep DurationFormatUtils.lexx() from merging repeated fields split by a literal (#1738)
+commons-csv bbdfad773199ec4edeb64b70b85e256ea7687852 2026-07-01 1 quote value ending with multi-character delimiter prefix
+commons-lang 68ee18aa5ab14e1ec8ddd4a80fd7f43860fd874c 2026-07-01 1 [LANG-1827] Support escaped single quotes ('') in DurationFormatUtils format patterns (#1700)
+commons-lang 35d652e9e26461ddbeb19aa32bc6acd012ccc641 2026-06-30 1 Fix Strings.CI.indexOf returning out-of-range index for empty search (#1737)
+commons-lang ae85262f04df19b6307de18758cfdcc31cae733d 2026-06-29 1 [LANG-1828] Fix OOM in StringUtils.leftPad/rightPad when size is Integer.MIN_VALUE (#1736).
+commons-cli f3ba9c9518edf3702a8d06d211a91959611ff413 2026-06-28 1 Use Locale.ENGLISH when parsing dates in Converter.DATE (#426)
+commons-cli 5fa27caa82890f508d60af8860290df53b5a34bb 2026-06-27 1 Fix broken Javadoc links, replace deprecated methods in usage examples, and add a missing method to HelpFormatter (#424)
+commons-lang 6c4269eb8a2aeb722ee81a41a4a88a46c2deccf8 2026-06-26 1 fix WordUtils.containsAllWords missing words across line breaks (#1732)
+commons-lang aafee70bfdfc7617ed509b54e3971441a3a5f57d 2026-06-26 1 fix NumberUtils min/max varargs dropping the sign of zero (#1733)
+commons-csv afbf34ad92cbf741b9dfad84699e890d8695a6f9 2026-06-25 1 evaluate isDelimiter once in nextToken whitespace skip
+commons-lang aae7f0e61c51040dbdc7556f9eca5786eb9f63bd 2026-06-24 1 fix getMatchingMethod false ambiguity for boxed primitive args (#1727)
+commons-csv 609a228e35adf9d73275a6b88e065de091c94be6 2026-06-22 1 keep quoted empty trailing field with trailingDelimiter
+gson e4f54f78c93dae0507fcac5be81253974bc9042d 2026-06-22 1 Throw JsonSyntaxException instead of NPE for a null AtomicLongArray element (#3038)
+commons-lang 0cd35067e9e01462bda2fb371d9991ca34d7e7dd 2026-06-21 1 Sort members.
+commons-lang 13d93944ff76c6ca3e140d15478111b18acad0e6 2026-06-21 1 [LANG-1824] Fix Strings.replace overflow on large replacements (#1716)
+commons-lang 581ce79c4d39571ac98db3e32b0d813540684324 2026-06-21 1 [LANG-1824] Fix Strings.replace overflow on large replacements (#1716).
+commons-lang 6dbbbb308bb77ba9c0ddab1ae400ee2ff76026b4 2026-06-21 1 fix unescapeCsv bounds error on a single quote field (#1723)
+commons-csv 274b4ceba4e418726a5c9e7043bf9d460b0429c5 2026-06-20 1 skip byte counting at EOF in ExtendedBufferedReader.read
+commons-lang 13d25e0591e640e53f1238e78f6b0e69d0fd6aea 2026-06-20 1 Fix int overflow in DurationFormatUtils.formatPeriod (#1720)
+commons-lang 3e50a7f9cf103357d781483d41ec9c9386e69e9d 2026-06-20 1 Find NaN in ArrayUtils.lastIndexOf for double and float arrays (#1718)
+commons-lang 4e1f3eef1f16de28c83d67040b7a5e554b81fcdf 2026-06-20 1 reject sign characters in UnicodeUnescaper hex values (#1721)
+commons-lang 66faf46919ce196886953993697f3a1b3efd6a20 2026-06-20 1 Reject sign characters in UnicodeUnescaper hex values (#1721).
+commons-csv 61aa0555d60c68120914b4952232f8c6bfc72ed3 2026-06-19 1 escape leading comment marker in printWithEscapes
+commons-csv a6ee67ecf0d4b9208ffc640f433d8b40c258e1f3 2026-06-19 1 [CSV-328] Fix quoted null string after disabling quote
+commons-lang a0ffef035d6a0e7803da8405ebceacb011efbaa0 2026-06-19 1 fix silent int overflow in Fraction.getFraction(double) (#1717)
+commons-lang 18063c1f6d935d60d0e7341d68434ab4c88a34ee 2026-06-18 1 strip L suffix for oversized hex literals in createNumber (#1712)
+commons-lang 46d9a80e548f792c5ee1a9e63f82a84256bf18a4 2026-06-18 1 Fix spurious overflow in Fraction.add/subtract for coprime denominators (#1709)
+commons-lang ddf5625d50a4c2fbe9346f12a26fc60e68af894e 2026-06-18 1 Fix int mask sign extension in BitField long methods (#1711)
+commons-lang eedd91729833cedcb31b0fd8116869c71e57ac74 2026-06-18 1 count duplicate values in ObjectUtils.median (#1715)
+commons-lang fbae26f0819b795b38b4a251021c3086751f69f4 2026-06-18 1 Drop trailing empty token from splitByWholeSeparator (#1710)
+commons-csv 110e830616e44844a0a57256401093a151ae0e66 2026-06-17 1 clear delimiter buffer before each peek in isDelimiter
+commons-csv a99f2609299a72b08a3e43c2968822555528da4e 2026-06-15 1 quote value starting with comment marker in minimal quote mode
+commons-lang 86ed42da5c1ac09888dfe2481aaa06df13fb1a68 2026-06-15 1 Fix RandomStringUtils.random() false rejection of letters and digits (#1703)
+commons-lang 60d4c9843891f07596d2caf52fb8689d80179344 2026-06-14 1 Add tests to ensure nulls compare correctly
+commons-csv b5940a642eef0de550733887fc5b78451d4a8eed 2026-06-13 1 escape quote char in printWithEscapes when QuoteMode is NONE
+commons-lang 060ab31e517d856292e97428345821b5b289249a 2026-06-13 1 reject doubled leading sign in createBigInteger (#1702)
+commons-lang 2240c1f93e5f96b12a83ec8615c29dfac46258e9 2026-06-11 2 Fix int overflow in StringUtils.midString() length handling (#1699)
+commons-lang d927bfc848c409af2050d1c32b3e7cf1daed304e 2026-06-11 1 Throw IllegalArgumentException for trailing whitespace in (#1701)
+commons-lang 2c3748412e5a4f4f167ac4f15c8fe0a093ea5e2b 2026-06-10 1 drop redundant lowercase in case-insensitive Strings.replace (#1697)
+commons-csv 1e3de1274636959d3cf70acbba14ae10128369a5 2026-06-09 1 clear escape delimiter buffer before peek in isEscapeDelimiter
+commons-csv 68b4b0910be1b9c0beb52a39b906851f0c41c75c 2026-06-09 1 [CSV-326] Escape Reader values with quote and escape
+commons-csv 966b38519e45c1fd85c76fbbdc47cb5bb1905238 2026-06-09 1 [CSV-327] Limit parser maxRows by produced records
+commons-lang 6e02b0a4d22f376a9414ff0a73f00ad9ef265241 2026-06-05 1 Add and use Instants.toInstant(Instant[, Instant]) (#1690)
+commons-lang 0cd12b10588b09895a370198d87303c8774205af 2026-06-04 1 Rename new method and make it handle the DEL control character. (#1689)
+gson 004e7a4949e08b430e3c8996998ee5a17ff9423a 2026-06-04 1 Fix: peekNumber rejects some numerals like 2^64 + "0" (#3034)
+commons-lang 9abd79314b19676c54eab02d441cfb3051bb2d8c 2026-06-03 1 Add CharUtils isHex(int), isAsciiNumeric(int), isOctal(int). (#1685)
+commons-lang bda0680763ad90264b9cca8233bb3369c03f4e13 2026-06-03 1 Add Instants.toMillisSince(Instant) (#1683)
+gson 9eb61b30acdfd1c8497eee7de9bec3a7448ff41e 2026-06-01 2 Bump Error Prone to 2.49.0 and fix new warnings (#3030)
+commons-lang 531e2a2cf1c1e56708859ad2579a5e5760140714 2026-05-29 1 Add Instants.toEpochMillis(Instant) (#1680)
+commons-lang bd7ffdf5b27004908f10345f3048d4790291fbe0 2026-05-29 1 Add StringUtils.trimControl(String) (#1681)
+commons-lang d95e17f1c173a6259886e577cf5acc914ec44c2d 2026-05-29 1 Add DurationUtils.toMillisLong(Duration) (#1679)
+gson df53d2f1f50b1c3abb2937e7675867e3f284eb1a 2026-05-28 1 fix(proto): cap bitFieldXXX_ index to prevent OOM in LegacyProtoTypeAdapterFactory (#3027)
+commons-lang 9bcc0d0bf84f6278a000eaf39af0e9780be9046c 2026-05-27 1 [LANG-1801] RandomStringUtils.random() does not strictly validate (#1682)
+commons-lang 14deed1bff705a46c485733451f462f549ac528d 2026-05-24 1 NumericEntityUnescaper.translate() for entity values out of range passed (#1673)
+commons-lang 28f46460d63b4c7806a2b9cce382b2b79ba6fd50 2026-05-24 1 ClassUtils.toCleanName(String) resolves malformed array suffixes instead (#1670)
+commons-lang 2c0b8483606efbfbaccf600e3bc31fe10533e004 2026-05-24 2 FastTimeZone.getGmtTimeZone() Javadoc promises null on no-match; regex always matches. (#1674)
+commons-lang 7db3e126dd480698eb523e72e8dc4e5ed7e7a5c7 2026-05-24 1 Add ArrayFill.clear(char[]|byte[]) (#1667)
+commons-lang 8e2d1bed8623e0f5b281504d151476689f21690a 2026-05-24 3 CompareToBuilder lacks cycle guard on Object[] recursion. (#1669)
+commons-lang ef39bc92712d47c100af3b243a8bfcd84a45f116 2026-05-24 1 StrBuilder.replaceImpl shrink-branch leaves residual chars in buffer (#1672)
+commons-lang f3e64b3b0e67d7faa0f10b698e08207f972a15b1 2026-05-24 2 StrBuilder.setLength(int) shrink-branch leaves residual chars in buffer tail (#1671)
+commons-csv 513aac23983337ddd2dddb266e43a5eff145957e 2026-05-22 1 [CSV-325] CSVParser applies characterOffset to bytePosition, which breaks getBytePosition() for multi-byte prefixes
+commons-csv b29fb40acd3ecc09bb4f43d20f88ad5ee9fa8324 2026-05-21 1 Lexer.isDelimiter() accepts a partial multi-character delimiter at EOF.
+commons-lang 344df301589744f0a4dc0f4eea91e078b2f97443 2026-05-21 2 TimeZones.GMT is a mutable public static final field, setRawOffset() and setID() (#1666)
+commons-csv 23eb602d25a9cf0c989085e9a618dd2b3bff5b45 2026-05-20 1 [CSV-323] ExtendedBufferedReader byte tracking leads to an incorrect CSVRecord.getBytePosition()
+commons-csv 4a28ba8254ce1af6985e3dcd95c753ef1c7165ea 2026-05-20 1 [CSV-322] CSVFormat.Builder.setQuote() does not refresh quotedNullString
+commons-csv 5e2d0590ca74424d5a51defef489e374abfb921a 2026-05-20 1 [CSV-321] CSVFormat.equals()/hashCode() ignores maxRows
+commons-lang c79a10240bd7ddcb956c3f6853f956e0251fb745 2026-05-20 1 ClassUtils.getShortClassName(String) can throw NoClassDefFoundError on malformed inner classes (#1665)
+commons-lang 0b4a9d95df610bfcc83c375110ac100d08662ba1 2026-05-18 1 LocaleUtils.parseLocale(String) operator precedence bug allows invalid language with numeric country (#1658)
+commons-lang 526a03a8701f85e422786f0a4d1fadd3f0c249c1 2026-05-18 1 DateUtils.parseDateWithLeniency(String, Locale, String[], boolean) doesn't reset its time zone (#1660)
+commons-lang 68c33330820f94f1f335e16eeb201988ad8c1edd 2026-05-18 1 FastDatePrinter WeekYear rule calls Calendar.getWeekYear() without checking isWeekDateSupported() (#1659)
+commons-lang 79380dba919716065f5e16465671782119449a36 2026-05-18 2 DurationUtils.toMillisInt() throws ArithmeticException on long overflows before clamping (#1657)
+commons-lang 9f7d3b5ec3aab40ee404a652495848213a608f01 2026-05-18 1 Fix `WordUtils.wrap` for `wrapOn` matches different from one character (#1655)
+commons-lang b11591895eed00e9f6e0bcb19178dedbaab4a971 2026-05-18 1 FormattableUtils.append re-parses literal output as format string (#1661)
+commons-lang 0953617b75115d2bedb50f8c11bac433b68da182 2026-05-17 1 HashCodeBuilder.append(Object) StackOverflowError on (#1650)
+commons-lang 184c9e83211a0552698a934d45d3ebca2c789881 2026-05-17 1 WordUtils.wrap() zero-width wrapOn regex match causes infinite loop. (#1649)
+commons-lang 18979f30e963081e5e0f018448dd3aadc429f51e 2026-05-17 1 StrBuilder.deleteImpl(int, int, int) doesn't clear its unused bytes. (#1654)
+commons-lang 245d8dffcdab9ba3286b6493da595e28094d42a9 2026-05-17 1 EqualsBuilder.reflectionEquals() array branch missing cycle guard causes (#1653)
+commons-lang 552d7d07d06708961b12272280cca3704901b835 2026-05-17 1 ToStringStyle.appendDetail(StringBuffer,String,Collection|Map) bypass (#1648)
+commons-lang 9b95001e9801399c62794aadacf198c787d960a9 2026-05-17 6 [LANG-1825] EqualsBuilder.reflectionAppend tries to set visibility on (#1647)
+commons-lang b368d10351e049fd25ecf63442a6a6ce2ff6808d 2026-05-17 1 AtomicSafeInitializer.get() busy-spin without yield burns CPU during slow initialization (#1651)
+commons-lang b401c34a438f0dd7ec1e98939fb68232af86a448 2026-05-17 1 StrBuilder.readFrom(Readable), exposes stale internal buffer to Readable parameter (#1652)
+commons-lang e2838b281f874302856114e75767fb24799e0cca 2026-05-17 1 StringUtils.indexOfAny(CharSequence, int, char...) should not throw for a bad index (#1656)
+commons-lang 4c3f1dd00ee7b8800478edb2b50dd687103b5f2a 2026-05-15 1 StringUtils.repeat(String, [String,] int) now throws IllegalArgumentException (#1644)
+commons-lang 990e1f62bd3ead86785bdca2312ed6fe8ed7782c 2026-05-10 1 Add AutoCloseables (#1643)
+commons-lang b353b31066b0f0626fcc743039161b2f2be63a1f 2026-05-10 6 Make object accessibility optional (#1558)
+commons-lang eb202b0b905ac3bbea742f1aad426f5a6c7d604d 2026-05-09 1 Add FailableConsumer.accept(FailableConsumer<T, E>, T) (#1641)
+commons-lang 313d877d57abefdbb1ad0c42781bf719b83d5a35 2026-05-07 1 Two fixes in RandomStringUtils.random(int, int, int, boolean, boolean, (#1638)
+commons-lang 5914a8e80a547301b76bf8ef691053e4dfc901a7 2026-05-07 1 TimedSemaphore.shutdown() must wake threads blocked in acquire(). (#1639)
+commons-lang 864dd6ea887fd394f15e3b55203d6f52f717373b 2026-05-07 1 NaN bypass in primitive double range validators. (#1640)
+commons-lang daa17b8629a7a9921ffe42e7c2c0f0051af42571 2026-05-07 1 Annotation lookup matches unrelated overloads via assignable-parameter resolution (#1637)
+commons-lang 19b59ffddbde0db1405c2cf4df8413ccee189be0 2026-05-06 1 StringUtils.joins() for primitive types can throw OOME before index (#1636)
+commons-lang 5904c573ffacaa5d8836ffc2b346f400c8901ed1 2026-05-05 1 NumberUtils.createNumber(String): Float shortcut can bypass exact (#1635)
+commons-lang c07bc828f0e208455b3f44345f69414eddf00b2f 2026-05-05 1 Fix typo in SystemProperties.JDK_XML_ENTITY_REPLACEMENT_LIMIT (#1631)
+commons-lang eb560776a3430a600dacce67239e69420a607501 2026-05-05 2 A serialized Fraction can't store a bad cached hashCode. (#1634)
+commons-lang 3df7f4440e7447bc55e95400ec511323e708c652 2026-04-30 1 [LANG-1823] LocaleUtils.toLocale cannot parse valid JDK Locale string containing '#'  (#1630)
+commons-lang fa59a31596ce37abe09c5f058c6f2e035f7c6677 2026-04-25 1 [LANG-1821] NumberUtils.isCreatable fails for hexadecimal numbers with long type qualifier (#1629)
+gson 6bf8bf6cbf4d4f5f72f69262be890a5a5e28259d 2026-04-24 1 fix: Include location info in NumberFormatException from JsonReader (#3000)
+gson 48db33cbf93af6b2f5b117dfdfd826de47f7229c 2026-04-17 1 Add `LegacyProtoTypeAdapterFactory`. (#3014)
+commons-lang 127050d2b54bd6224bc53573228e8774dc7be28b 2026-04-16 1 NumberUtils.isCreatable(String) should match NumberUtils.createNumber(String), exactly (#1626)
+commons-lang 23a730b8ed392ba424cc275df793dcae88f4cebe 2026-04-15 3 No need to end exception messages with an exclamation!
+commons-lang bb675e1127adb7f7c8d8687667bc11779d8e75eb 2026-04-15 1 Add "ppc64le" to ArchUtils (#1625)
+gson f4d371d29c04066dbe7fdb31f642831f9c7f40cd 2026-04-05 1 Fix duplicate key detection when first value is null (#3006)
+gson 1fa9b7a0a994b006b3be00e2df9de778e71e6807 2026-03-19 1 Validate that strings being parsed as integers consist of ASCII characters (#2995)
+gson dbf0f0416596add88c9d38b3e80b4e44059863ca 2026-03-06 1 Remove `com.google.gson.graph`. (#2990)
+commons-lang 677e57f56bfae93af520637d47a615013c930266 2026-03-04 1 Fix NullPointerException in StopWatch.getStopTime()
+commons-lang aa47951bd0223d674d2b85d06ccc6f7f1749a682 2026-03-04 1 fix: Make stopInstant be in sync with stopTimeNanos for split (#1610)
+commons-lang a9a0dd8a72c51b14f0e5ea4bddfbf228685ff977 2026-02-23 1 LANG-771 Fix DateUtils.ceiling increment on exact boundary (#1609)
+commons-lang 7489d6e21334673dc56399de7decaaa00f11ebcf 2026-02-21 1 CharSet now maintains iteration order
+commons-lang 4a6a98432f57e6286ba48777268a26b68dfd9547 2026-02-12 1 StringUtils.abbreviate(String, String, int) contract violations (#1572)
+commons-lang fa392404994e3e505317f2babf78560363da2330 2026-02-07 1 [LANG-1817] UncheckedFutureImpl clears thread interrupt status when wrapping InterruptedException.
+gson 8526dbd2f0a7e61d5fbcc5caa163f2352fb0ddc0 2026-01-29 2 Optimize `new Gson()` (#2864)
+commons-lang 4052e9862bf540f0b294bcf58aad5b5e85eae4ad 2026-01-28 1 LANG-1818: Fix ClassUtils.getShortClassName(Class) to correctly handle $ in valid class names (#1591)
+commons-lang 52c06bea2f2b6c277c517dc9f5bb0d62d17e073c 2026-01-28 1 fix LANG-1816 (#1589)
+commons-lang e1ffb6ea0b9e21ea71c4540b0fca4db8e4c1dd93 2026-01-28 1 ThreadUtils.sleepQuietly(Duration) now restores the current thread's interrupt flag when catching InterruptedException.
+commons-lang 26ead6134ad55bf1350e41f05f4d0cbe6d0be4be 2026-01-26 1 [LANG-1814] ArrayUtils.subarray(..) may overflow index arithmetic and violate contract for extreme index values #1585
+commons-lang 1418a770ba436d15693c3bb29a67e501c2008274 2026-01-25 1 [LANG-1452] RecursiveToStringStyle and MultilineRecursiveToStringStyle shouldn't recurse into a java.math.BigDecimal (#1584)
+commons-lang eefe5c88bc54a164380652f8c48c375c0ed2fa31 2026-01-25 1 [LANG-1707] Add ArrayUtils.concat methods for concatenating multiple arrays (#1519)
+commons-lang b98942fba3b2b4ba90c43bfa4effb48a170fe1a6 2026-01-24 1 Add ArrayUtils.getDimensions(Object)
+commons-lang b6224451728562b0a4b33b63e8589753b1e2a57c 2026-01-23 1 Fix ClassNotFoundException message variable (#1577)
+commons-lang b8286523defe897679c18a3e85be227e9ec2956a 2026-01-22 1 Sort members
+commons-lang 5d46a39e450f5dd69027329c9bc0542c113a04be 2026-01-19 1 RandomStringUtils.random() methods may not return when asked to generate only letters or only numbers while provided with a range that contains neither
+commons-lang f2bdb0cb74a08b15439abf18df6ac2b52549394a 2026-01-19 1 Add long support to `BitField` (#1561)
+commons-lang 47aea5993d289b82c7febdbf9b05ffaad31b6ec9 2026-01-18 2 Sort the available TimeZone IDs once.
+commons-lang 2f07d02fca0a66144b7106298fd9eb207783fecc 2026-01-17 1 'abbreviate' contract violations (#1490)
+commons-lang 4a5ef8ed29f0c135627f43b58c7ab7b6defe37b7 2026-01-17 1 Fix handling of null marker in StringUtils.abbreviate(String, String, int, int)  (#1571)
+commons-lang 67f50236bf337e20c6daa987d4d42c4fedb482ce 2026-01-16 1 Revert "'abbreviate' contract violations (#1490)"
+gson 286843d4a90a4690e5e1f438c944569b3fbfb1d2 2026-01-12 4 refactor: move derived adapters from Gson to TypeAdapters (#2951)
+commons-lang 8089a0c2d3207ed26531f877352336baf1c6c5bb 2026-01-11 1 [LANG-1806] NumberUtils.isParsable("1.f") should return true (#1560)
+commons-lang d9de2fd5b8c65506b1ab14df631cc26ffcd647dc 2026-01-11 1 [LANG-1810] Deprecate SOFT_MAX_ARRAY_LENGTH in favor of MAX_ARRAY_LENGTH (#1559)
+commons-lang 623235ebca46bea1a6e8cc02b7d7084c1698ab80 2026-01-06 1 [LANG-1811] ArrayUtils.shuffle() throws NullPointerException for null array input.
+commons-cli 4f8117eb49096e13a14e5e17c3da0b85fc920896 2026-01-04 4 Javadoc
+commons-lang 48d6e758f79255da5a1e307a2bbcfa60726ad8a0 2026-01-04 38 Use a code comment, not Javadoc inside a method
