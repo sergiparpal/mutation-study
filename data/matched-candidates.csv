@@ -1,0 +1,3 @@
+n,repo,sha,date,fault_type,decision,note
+1,commons-lang,9a92df9fa,2026-09-22,SUBSTITUTION,accept,"charAt(0)=='-' replaced by isSign(charAt(0)); +1/-1"
+2,commons-lang,8065c4531,2026-09-21,,reject,"adds JavaVersion.JAVA_28 — new feature, not a fault fix"

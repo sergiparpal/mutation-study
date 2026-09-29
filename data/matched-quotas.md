@@ -32,6 +32,30 @@ Scaled from the 40-bug Defects4J sample (21 OMISSION, 7 ALGORITHM,
 API rounds to zero at this sample size. Recorded so the omission is visible
 rather than silent.
 
+## Window and exclusions (added before classification began)
+
+**Window: 2026-01-01 to 2026-09-22.** Verified post-cutoff by probing the model
+with five issue identifiers from the earliest part of the window
+(LANG-1806, 1811, 1814, 1817, 1818); all five were disclaimed. Note this
+probes the identifier cue only; the location cue (§2.8, probe B) was not
+run for this corpus.
+
+**Excluded: systematic audit campaigns.** Two are visible in the candidate
+pool and are excluded as a population, not case by case:
+
+- Commits suffixed `(fNNN)` — 23 of them, a maintainer's own audit sweep.
+  Many are performance or resource-exhaustion hardening rather than
+  correctness faults ("O(width^2) padding", "cache grows without bound"),
+  and several are explicitly documented-contract violations, the class the
+  specification-only arm catches. Neither resembles a user-reported defect.
+- A `readObject` invariant-validation sweep across six classes (CharRange,
+  EventListenerSupport, FluentBitSet, FastDateParser, Fraction, Range), and
+  a supplementary-character sweep. Both are one fault repeated; filling the
+  OMISSION quota from them would yield ten copies of a single case rather
+  than ten faults.
+
+The residual pool after both exclusions is 259 candidates.
+
 ## Protocol
 
 1. **Mine without the biasing filters.** No size cap, no ticket requirement.
