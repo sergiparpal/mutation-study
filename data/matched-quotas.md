@@ -67,6 +67,12 @@ reflective accessibility on non-public classes — the first candidate is taken
 and the rest are rejected. The faults are not independent observations even
 when the code differs.
 
+**Deviation.** Once the ALGORITHM and MISSING_CLAUSE quotas closed, remaining
+candidates were screened by commit subject for the open categories rather than
+examined one by one. Candidates skipped this way are not individually logged.
+The screen used: missing, guard, null, validate, check, throw, handle, does
+not, ignore.
+
 ## Protocol
 
 1. **Mine without the biasing filters.** No size cap, no ticket requirement.
