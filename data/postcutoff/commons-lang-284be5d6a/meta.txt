@@ -1,0 +1,5 @@
+project=commons-lang
+sha=284be5d6a5bc8d903297e2a6f86ecf3494e44d1d
+short=284be5d6a
+date=2026-09-09
+subject=Fraction.add and subtract return the reduced form when an operand is zero (#1787)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=de0184561dd0c8c7a176470016b9df89414f8bed
+short=de0184561
+date=2026-09-12
+subject=Return null for out-of-range offset in FastTimeZone.getGmtTimeZone (#1788)

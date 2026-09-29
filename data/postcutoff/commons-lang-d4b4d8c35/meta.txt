@@ -1,0 +1,5 @@
+project=commons-lang
+sha=d4b4d8c352d048f5dab3c85dd6ef380cfe04bdee
+short=d4b4d8c35
+date=2026-07-04
+subject=Keep FastDateParser numeric parse from throwing on int overflow (#1741)

@@ -1,0 +1,57 @@
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/central/central-publishing-maven-plugin/0.10.0/central-publishing-maven-plugin-0.10.0.pom
+Progress (1): 920 BProgress (1): 3.0 kBProgress (1): 5.7 kBProgress (1): 8.5 kBProgress (1): 11 kB Progress (1): 15 kBProgress (1): 17 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/central/central-publishing-maven-plugin/0.10.0/central-publishing-maven-plugin-0.10.0.pom (17 kB at 74 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/buildsupport/buildsupport/32/buildsupport-32.pom
+Progress (1): 788 BProgress (1): 1.9 kBProgress (1): 3.8 kBProgress (1): 5.9 kBProgress (1): 8.1 kBProgress (1): 12 kB Progress (1): 16 kBProgress (1): 18 kBProgress (1): 22 kBProgress (1): 24 kBProgress (1): 27 kBProgress (1): 29 kBProgress (1): 32 kBProgress (1): 34 kBProgress (1): 36 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/buildsupport/buildsupport/32/buildsupport-32.pom (36 kB at 861 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/central/central-publishing-maven-plugin/0.10.0/central-publishing-maven-plugin-0.10.0.jar
+Progress (1): 0.9/112 kBProgress (1): 2.3/112 kBProgress (1): 3.6/112 kBProgress (1): 5.0/112 kBProgress (1): 6.4/112 kBProgress (1): 7.7/112 kBProgress (1): 9.1/112 kBProgress (1): 10/112 kB Progress (1): 12/112 kBProgress (1): 12/112 kBProgress (1): 14/112 kBProgress (1): 15/112 kBProgress (1): 16/112 kBProgress (1): 18/112 kBProgress (1): 19/112 kBProgress (1): 21/112 kBProgress (1): 22/112 kBProgress (1): 23/112 kBProgress (1): 25/112 kBProgress (1): 26/112 kBProgress (1): 27/112 kBProgress (1): 29/112 kBProgress (1): 30/112 kBProgress (1): 31/112 kBProgress (1): 33/112 kBProgress (1): 34/112 kBProgress (1): 36/112 kBProgress (1): 37/112 kBProgress (1): 38/112 kBProgress (1): 40/112 kBProgress (1): 44/112 kBProgress (1): 48/112 kBProgress (1): 52/112 kBProgress (1): 57/112 kBProgress (1): 61/112 kBProgress (1): 65/112 kBProgress (1): 69/112 kBProgress (1): 74/112 kBProgress (1): 78/112 kBProgress (1): 82/112 kBProgress (1): 86/112 kBProgress (1): 90/112 kBProgress (1): 95/112 kBProgress (1): 99/112 kBProgress (1): 103/112 kBProgress (1): 107/112 kBProgress (1): 112/112 kBProgress (1): 112 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/central/central-publishing-maven-plugin/0.10.0/central-publishing-maven-plugin-0.10.0.jar (112 kB at 2.0 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/6.0.3/junit-bom-6.0.3.pom
+Progress (1): 915 BProgress (1): 4.3 kBProgress (1): 5.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/6.0.3/junit-bom-6.0.3.pom (5.1 kB at 139 kB/s)
+[INFO] Inspecting build with total of 8 modules
+[INFO] Installing Central Publishing features
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Gson Parent                                                        [pom]
+[INFO] Gson                                                               [jar]
+[INFO] Test: Java Platform Module System (JPMS)                           [jar]
+[INFO] Test: GraalVM Native Image                                         [jar]
+[INFO] Test: Code shrinking (ProGuard / R8)                               [jar]
+[INFO] Gson Extras                                                        [jar]
+[INFO] Gson Metrics                                                       [jar]
+[INFO] Gson Protobuf Support                                              [jar]
+[INFO] 
+[INFO] ------------------< com.google.code.gson:gson-parent >------------------
+[INFO] Building Gson Parent 2.14.1-SNAPSHOT                               [1/8]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-versions) @ gson-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Gson Parent 2.14.1-SNAPSHOT:
+[INFO] 
+[INFO] Gson Parent ........................................ FAILURE [  0.160 s]
+[INFO] Gson ............................................... SKIPPED
+[INFO] Test: Java Platform Module System (JPMS) ........... SKIPPED
+[INFO] Test: GraalVM Native Image ......................... SKIPPED
+[INFO] Test: Code shrinking (ProGuard / R8) ............... SKIPPED
+[INFO] Gson Extras ........................................ SKIPPED
+[INFO] Gson Metrics ....................................... SKIPPED
+[INFO] Gson Protobuf Support .............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.969 s
+[INFO] Finished at: 2026-09-29T16:08:26-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-enforcer-plugin:3.6.3:enforce (enforce-versions) on project gson-parent: 
+[ERROR] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion failed with message:
+[ERROR] Detected JDK /usr/lib/jvm/java-11-openjdk-amd64 is version 11.0.32-1 which is not in the allowed range [17,22).
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

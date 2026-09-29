@@ -1,0 +1,5 @@
+project=commons-csv
+sha=68f17d8a9bd91a60b336f87eee040b3d667cfd97
+short=68f17d8a
+date=2026-07-23
+subject=handle null name in CSVRecord accessors under ignoreHeaderCase

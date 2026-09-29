@@ -1,0 +1,41 @@
+diff --git a/src/main/java/org/apache/commons/lang3/time/ImmutableTimeZone.java b/src/main/java/org/apache/commons/lang3/time/ImmutableTimeZone.java
+index 0d09c869a..e5593f54f 100644
+--- a/src/main/java/org/apache/commons/lang3/time/ImmutableTimeZone.java
++++ b/src/main/java/org/apache/commons/lang3/time/ImmutableTimeZone.java
+@@ -41,6 +41,21 @@ public Object clone() {
+         return this;
+     }
+ 
++    /**
++     * {@inheritDoc}
++     */
++    @Override
++    public boolean equals(final Object obj) {
++        if (this == obj) {
++            return true;
++        }
++        if (!(obj instanceof TimeZone)) {
++            return false;
++        }
++        final TimeZone other = (TimeZone) obj;
++        return timeZone.equals(other instanceof ImmutableTimeZone ? ((ImmutableTimeZone) other).timeZone : other);
++    }
++
+     /**
+      * {@inheritDoc}
+      */
+@@ -89,6 +104,14 @@ public int getRawOffset() {
+         return timeZone.getRawOffset();
+     }
+ 
++    /**
++     * {@inheritDoc}
++     */
++    @Override
++    public int hashCode() {
++        return timeZone.hashCode();
++    }
++
+     /**
+      * {@inheritDoc}
+      */

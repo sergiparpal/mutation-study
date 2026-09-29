@@ -1,0 +1,150 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.apache.commons:commons-csv >-------------------
+[INFO] Building Apache Commons CSV 1.15.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ commons-csv ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ commons-csv ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-csv ---
+[WARNING] Basedir is : /home/sergi/code/mining/commons-csv
+[INFO] Excluding patterns: src/test/resources/org/apache/commons/csv/empty.txt, src/test/resources/org/apache/commons/csv/CSV-141/csv-141.csv, src/test/resources/org/apache/commons/csv/csv-167/sample1.csv, src/test/resources/org/apache/commons/csv/CSV-198/optd_por_public.csv, src/test/resources/org/apache/commons/csv/CSV-196/emoji.csv, src/test/resources/org/apache/commons/csv/CSV-196/japanese.csv, src/test/resources/org/apache/commons/csv/CSV-213/999751170.patch.csv, src/test/resources/org/apache/commons/csv/CSV-254/csv-254.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/bom.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/test.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/test_default.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_default_comment.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180_trim.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_default.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_ignoreEmpty.txt, src/test/resources/org/apache/commons/csv/ferc.gov/contract.txt, src/test/resources/org/apache/commons/csv/ferc.gov/transaction.txt, src/test/resources/**/*.bin, src/test/resources/org/apache/commons/csv/CSV-259/sample.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246_checkWithNoComment.txt, src/test/resources/org/apache/commons/csv/CSV-290/psql.csv, src/test/resources/org/apache/commons/csv/CSV-290/psql.tsv, site-content/**, .checkstyle, .fbprefs, .pmd, .asf.yaml, .gitattributes, src/site/resources/download_*.cgi, maven-eclipse.xml, .externalToolBuilders/**, .vscode/**, .project, .classpath, .settings/**, **/*.svg, **/*.xcf
+[INFO] Excluding MAVEN collection.
+[INFO] Excluding ECLIPSE collection.
+[INFO] Excluding IDEA collection.
+[INFO] Processing exclude file from STANDARD_SCMS.
+[INFO] Excluding STANDARD_SCMS collection.
+[INFO] Excluding MISC collection.
+[INFO] Excluding HIDDEN_DIR collection.
+[INFO] RAT summary:
+[INFO]   Approved:  80
+[INFO]   Archives:  1
+[INFO]   Binaries:  3
+[INFO]   Document types:  5
+[INFO]   Ignored:  32
+[INFO]   License categories:  1
+[INFO]   License names:  1
+[INFO]   Notices:  4
+[INFO]   Standards:  80
+[INFO]   Unapproved:  0
+[INFO]   Unknown:  0
+[INFO] 
+[INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-csv ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.1:parse-version (parse-version) @ commons-csv ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-csv ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-csv ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-csv ---
+[INFO] skip non existing resourceDirectory /home/sergi/code/mining/commons-csv/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ commons-csv ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 12 source files with javac [debug release 8] to target/classes
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-csv ---
+[INFO] Writing manifest: /home/sergi/code/mining/commons-csv/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-csv ---
+[INFO] Copying 25 resources from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ commons-csv ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 43 source files with javac [debug release 8] to target/test-classes
+[INFO] /home/sergi/code/mining/commons-csv/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Some input files use or override a deprecated API.
+[INFO] /home/sergi/code/mining/commons-csv/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (prepare-agent) @ commons-csv ---
+[INFO] argLine set to -javaagent:/home/sergi/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/home/sergi/code/mining/commons-csv/target/jacoco.exec,exclclassloader=jdk.internal.loader.ClassLoaders$PlatformClassLoader
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ commons-csv ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.commons.csv.CSVRecordTest
+[ERROR] Tests run: 33, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.318 s <<< FAILURE! -- in org.apache.commons.csv.CSVRecordTest
+[ERROR] org.apache.commons.csv.CSVRecordTest.testNullNameAccessorsMatchAcrossIgnoreHeaderCase(boolean)[2] -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.NullPointerException
+	at java.base/java.lang.String$CaseInsensitiveComparator.compare(String.java:1224)
+	at java.base/java.lang.String$CaseInsensitiveComparator.compare(String.java:1218)
+	at java.base/java.util.TreeMap.getEntryUsingComparator(TreeMap.java:374)
+	at java.base/java.util.TreeMap.getEntry(TreeMap.java:343)
+	at java.base/java.util.TreeMap.containsKey(TreeMap.java:231)
+	at org.apache.commons.csv.CSVRecord.isMapped(CSVRecord.java:246)
+	at org.apache.commons.csv.CSVRecordTest.testNullNameAccessorsMatchAcrossIgnoreHeaderCase(CSVRecordTest.java:241)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.Optional.ifPresent(Optional.java:183)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   CSVRecordTest.testNullNameAccessorsMatchAcrossIgnoreHeaderCase:241 » NullPointer
+[INFO] 
+[ERROR] Tests run: 33, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.152 s
+[INFO] Finished at: 2026-09-29T16:08:16-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-csv: 
+[ERROR] 
+[ERROR] See /home/sergi/code/mining/commons-csv/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,168 @@
+[INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/100/commons-parent-100.pom
+Progress (1): 702 BProgress (1): 1.6 kBProgress (1): 2.9 kBProgress (1): 4.3 kBProgress (1): 5.4 kBProgress (1): 7.7 kBProgress (1): 10 kB Progress (1): 11 kBProgress (1): 14 kBProgress (1): 16 kBProgress (1): 17 kBProgress (1): 20 kBProgress (1): 23 kBProgress (1): 24 kBProgress (1): 27 kBProgress (1): 30 kBProgress (1): 32 kBProgress (1): 38 kBProgress (1): 41 kBProgress (1): 44 kBProgress (1): 46 kBProgress (1): 49 kBProgress (1): 50 kBProgress (1): 53 kBProgress (1): 57 kBProgress (1): 58 kBProgress (1): 61 kBProgress (1): 64 kBProgress (1): 67 kBProgress (1): 70 kBProgress (1): 72 kBProgress (1): 74 kBProgress (1): 76 kBProgress (1): 79 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/100/commons-parent-100.pom (79 kB at 333 kB/s)
+[INFO] 
+[INFO] -------------------< org.apache.commons:commons-csv >-------------------
+[INFO] Building Apache Commons CSV 1.14.2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.21.0/maven-site-plugin-3.21.0.pom
+Progress (1): 815 BProgress (1): 1.8 kBProgress (1): 4.5 kBProgress (1): 6.4 kBProgress (1): 9.2 kBProgress (1): 15 kB Progress (1): 18 kBProgress (1): 20 kBProgress (1): 22 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.21.0/maven-site-plugin-3.21.0.pom (22 kB at 565 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.21.0/maven-site-plugin-3.21.0.jar
+Progress (1): 0.9/117 kBProgress (1): 2.3/117 kBProgress (1): 3.6/117 kBProgress (1): 5.0/117 kBProgress (1): 6.4/117 kBProgress (1): 7.7/117 kBProgress (1): 9.1/117 kBProgress (1): 10/117 kB Progress (1): 12/117 kBProgress (1): 13/117 kBProgress (1): 15/117 kBProgress (1): 16/117 kBProgress (1): 17/117 kBProgress (1): 19/117 kBProgress (1): 20/117 kBProgress (1): 21/117 kBProgress (1): 23/117 kBProgress (1): 24/117 kBProgress (1): 25/117 kBProgress (1): 27/117 kBProgress (1): 28/117 kBProgress (1): 30/117 kBProgress (1): 31/117 kBProgress (1): 33/117 kBProgress (1): 37/117 kBProgress (1): 41/117 kBProgress (1): 45/117 kBProgress (1): 49/117 kBProgress (1): 53/117 kBProgress (1): 58/117 kBProgress (1): 62/117 kBProgress (1): 66/117 kBProgress (1): 70/117 kBProgress (1): 74/117 kBProgress (1): 78/117 kBProgress (1): 82/117 kBProgress (1): 86/117 kBProgress (1): 90/117 kBProgress (1): 95/117 kBProgress (1): 99/117 kBProgress (1): 103/117 kBProgress (1): 107/117 kBProgress (1): 112/117 kBProgress (1): 115/117 kBProgress (1): 117 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.21.0/maven-site-plugin-3.21.0.jar (117 kB at 2.3 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.5.5/maven-surefire-plugin-3.5.5.pom
+Progress (1): 839 BProgress (1): 3.2 kBProgress (1): 4.9 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.5.5/maven-surefire-plugin-3.5.5.pom (4.9 kB at 139 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.5.5/surefire-3.5.5.pom
+Progress (1): 791 BProgress (1): 2.4 kBProgress (1): 4.1 kBProgress (1): 7.6 kBProgress (1): 11 kB Progress (1): 13 kBProgress (1): 16 kBProgress (1): 17 kBProgress (1): 19 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.5.5/surefire-3.5.5.pom (19 kB at 565 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.5.5/maven-surefire-plugin-3.5.5.jar
+Progress (1): 3.8/47 kBProgress (1): 8.0/47 kBProgress (1): 12/47 kB Progress (1): 16/47 kBProgress (1): 21/47 kBProgress (1): 24/47 kBProgress (1): 28/47 kBProgress (1): 33/47 kBProgress (1): 37/47 kBProgress (1): 41/47 kBProgress (1): 45/47 kBProgress (1): 47 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.5.5/maven-surefire-plugin-3.5.5.jar (47 kB at 1.5 MB/s)
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven-version) @ commons-csv ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-java-version) @ commons-csv ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-csv ---
+[WARNING] Basedir is : /home/sergi/code/mining/commons-csv
+[INFO] Excluding patterns: src/test/resources/org/apache/commons/csv/empty.txt, src/test/resources/org/apache/commons/csv/CSV-141/csv-141.csv, src/test/resources/org/apache/commons/csv/csv-167/sample1.csv, src/test/resources/org/apache/commons/csv/CSV-198/optd_por_public.csv, src/test/resources/org/apache/commons/csv/CSV-196/emoji.csv, src/test/resources/org/apache/commons/csv/CSV-196/japanese.csv, src/test/resources/org/apache/commons/csv/CSV-213/999751170.patch.csv, src/test/resources/org/apache/commons/csv/CSV-254/csv-254.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/bom.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/test.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/test_default.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_default_comment.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180_trim.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_default.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_ignoreEmpty.txt, src/test/resources/org/apache/commons/csv/ferc.gov/contract.txt, src/test/resources/org/apache/commons/csv/ferc.gov/transaction.txt, src/test/resources/**/*.bin, src/test/resources/org/apache/commons/csv/CSV-259/sample.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246_checkWithNoComment.txt, src/test/resources/org/apache/commons/csv/CSV-290/psql.csv, src/test/resources/org/apache/commons/csv/CSV-290/psql.tsv, site-content/**, .checkstyle, .fbprefs, .pmd, .asf.yaml, .gitattributes, src/site/resources/download_*.cgi, maven-eclipse.xml, .externalToolBuilders/**, .vscode/**, .project, .classpath, .settings/**, **/*.svg, **/*.xcf
+[INFO] Excluding MAVEN collection.
+[INFO] Excluding ECLIPSE collection.
+[INFO] Excluding IDEA collection.
+[INFO] Processing exclude file from STANDARD_SCMS.
+[INFO] Excluding STANDARD_SCMS collection.
+[INFO] Excluding MISC collection.
+[INFO] Excluding HIDDEN_DIR collection.
+[INFO] RAT summary:
+[INFO]   Approved:  79
+[INFO]   Archives:  1
+[INFO]   Binaries:  3
+[INFO]   Document types:  5
+[INFO]   Ignored:  32
+[INFO]   License categories:  1
+[INFO]   License names:  1
+[INFO]   Notices:  4
+[INFO]   Standards:  79
+[INFO]   Unapproved:  0
+[INFO]   Unknown:  0
+[INFO] 
+[INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-csv ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.1:parse-version (parse-version) @ commons-csv ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-csv ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-csv ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-csv ---
+[INFO] skip non existing resourceDirectory /home/sergi/code/mining/commons-csv/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ commons-csv ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 12 source files with javac [debug release 8] to target/classes
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-csv ---
+[INFO] Writing manifest: /home/sergi/code/mining/commons-csv/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-csv ---
+[INFO] Copying 25 resources from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ commons-csv ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 42 source files with javac [debug release 8] to target/test-classes
+[INFO] /home/sergi/code/mining/commons-csv/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Some input files use or override a deprecated API.
+[INFO] /home/sergi/code/mining/commons-csv/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- jacoco:0.8.14:prepare-agent (prepare-agent) @ commons-csv ---
+[INFO] argLine set to -javaagent:/home/sergi/.m2/repository/org/jacoco/org.jacoco.agent/0.8.14/org.jacoco.agent-0.8.14-runtime.jar=destfile=/home/sergi/code/mining/commons-csv/target/jacoco.exec
+[INFO] 
+[INFO] --- surefire:3.5.5:test (default-test) @ commons-csv ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.5.5/surefire-api-3.5.5.pom
+Progress (1): 833 BProgress (1): 2.9 kBProgress (1): 3.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.5.5/surefire-api-3.5.5.pom (3.7 kB at 100 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.5.5/surefire-logger-api-3.5.5.pom
+Progress (1): 826 BProgress (1): 2.5 kBProgress (1): 3.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.5.5/surefire-logger-api-3.5.5.pom (3.5 kB at 116 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.5.5/surefire-shared-utils-3.5.5.pom
+Progress (1): 1.1 kBProgress (1): 4.0 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.5.5/surefire-shared-utils-3.5.5.pom (4.0 kB at 120 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.5.5/surefire-extensions-api-3.5.5.pom
+Progress (1): 833 BProgress (1): 3.1 kBProgress (1): 3.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.5.5/surefire-extensions-api-3.5.5.pom (3.6 kB at 111 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.5.5/maven-surefire-common-3.5.5.pom
+Progress (1): 822 BProgress (1): 4.1 kBProgress (1): 7.2 kBProgress (1): 7.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.5.5/maven-surefire-common-3.5.5.pom (7.3 kB at 220 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.5.5/surefire-booter-3.5.5.pom
+Progress (1): 830 BProgress (1): 3.6 kBProgress (1): 5.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.5.5/surefire-booter-3.5.5.pom (5.1 kB at 131 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.5.5/surefire-extensions-spi-3.5.5.pom
+Progress (1): 872 BProgress (1): 1.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.5.5/surefire-extensions-spi-3.5.5.pom (1.7 kB at 49 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.5.5/surefire-api-3.5.5.jar
+Progress (1): 7.7/174 kBProgress (1): 11/174 kB Progress (1): 28/174 kBProgress (1): 44/174 kBProgress (1): 61/174 kBProgress (1): 77/174 kBProgress (1): 93/174 kBProgress (1): 110/174 kBProgress (1): 126/174 kBProgress (1): 142/174 kBProgress (1): 159/174 kBProgress (1): 174 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/3.5.5/surefire-api-3.5.5.jar (174 kB at 4.7 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.5.5/surefire-shared-utils-3.5.5.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.5.5/surefire-logger-api-3.5.5.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.5.5/surefire-extensions-api-3.5.5.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.5.5/maven-surefire-common-3.5.5.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.5.5/surefire-booter-3.5.5.jar
+Progress (1): 0/3.0 MBProgress (1): 0/3.0 MBProgress (1): 0/3.0 MBProgress (1): 0/3.0 MBProgress (1): 0.1/3.0 MBProgress (1): 0.1/3.0 MBProgress (1): 0.1/3.0 MBProgress (1): 0.1/3.0 MBProgress (1): 0.1/3.0 MBProgress (1): 0.1/3.0 MBProgress (1): 0.2/3.0 MBProgress (1): 0.2/3.0 MBProgress (1): 0.2/3.0 MBProgress (1): 0.2/3.0 MBProgress (1): 0.2/3.0 MBProgress (1): 0.2/3.0 MBProgress (1): 0.3/3.0 MBProgress (1): 0.3/3.0 MBProgress (1): 0.3/3.0 MBProgress (1): 0.3/3.0 MBProgress (1): 0.3/3.0 MBProgress (1): 0.3/3.0 MBProgress (1): 0.4/3.0 MBProgress (1): 0.4/3.0 MBProgress (1): 0.4/3.0 MBProgress (1): 0.4/3.0 MBProgress (1): 0.4/3.0 MBProgress (1): 0.4/3.0 MBProgress (1): 0.5/3.0 MBProgress (1): 0.5/3.0 MBProgress (1): 0.5/3.0 MBProgress (1): 0.5/3.0 MBProgress (1): 0.5/3.0 MBProgress (1): 0.5/3.0 MBProgress (1): 0.6/3.0 MBProgress (1): 0.6/3.0 MBProgress (1): 0.6/3.0 MBProgress (1): 0.6/3.0 MBProgress (1): 0.6/3.0 MBProgress (1): 0.6/3.0 MBProgress (1): 0.7/3.0 MBProgress (1): 0.7/3.0 MBProgress (1): 0.7/3.0 MBProgress (1): 0.7/3.0 MBProgress (1): 0.7/3.0 MBProgress (1): 0.7/3.0 MBProgress (1): 0.7/3.0 MBProgress (1): 0.7/3.0 MBProgress (1): 0.8/3.0 MBProgress (1): 0.8/3.0 MBProgress (1): 0.8/3.0 MBProgress (1): 0.8/3.0 MBProgress (1): 0.8/3.0 MBProgress (1): 0.8/3.0 MBProgress (1): 0.9/3.0 MBProgress (1): 0.9/3.0 MBProgress (1): 0.9/3.0 MBProgress (1): 0.9/3.0 MBProgress (1): 0.9/3.0 MBProgress (1): 0.9/3.0 MBProgress (1): 1.0/3.0 MBProgress (1): 1.0/3.0 MBProgress (1): 1.0/3.0 MBProgress (1): 1.0/3.0 MBProgress (1): 1.0/3.0 MBProgress (1): 1.0/3.0 MBProgress (1): 1.0/3.0 MBProgress (1): 1.1/3.0 MBProgress (1): 1.1/3.0 MBProgress (1): 1.1/3.0 MBProgress (1): 1.1/3.0 MBProgress (1): 1.1/3.0 MBProgress (1): 1.1/3.0 MBProgress (1): 1.2/3.0 MBProgress (1): 1.2/3.0 MBProgress (1): 1.2/3.0 MBProgress (1): 1.2/3.0 MBProgress (1): 1.2/3.0 MBProgress (1): 1.2/3.0 MBProgress (1): 1.3/3.0 MBProgress (1): 1.3/3.0 MBProgress (1): 1.3/3.0 MBProgress (1): 1.3/3.0 MBProgress (1): 1.3/3.0 MBProgress (1): 1.3/3.0 MBProgress (1): 1.4/3.0 MBProgress (1): 1.4/3.0 MBProgress (1): 1.4/3.0 MBProgress (1): 1.4/3.0 MBProgress (1): 1.4/3.0 MBProgress (1): 1.4/3.0 MBProgress (1): 1.5/3.0 MBProgress (1): 1.5/3.0 MBProgress (1): 1.5/3.0 MBProgress (1): 1.5/3.0 MBProgress (1): 1.5/3.0 MBProgress (1): 1.5/3.0 MBProgress (1): 1.6/3.0 MBProgress (1): 1.6/3.0 MBProgress (1): 1.6/3.0 MBProgress (1): 1.6/3.0 MBProgress (1): 1.6/3.0 MBProgress (1): 1.6/3.0 MBProgress (1): 1.6/3.0 MBProgress (1): 1.7/3.0 MBProgress (1): 1.7/3.0 MBProgress (1): 1.7/3.0 MBProgress (1): 1.7/3.0 MBProgress (1): 1.7/3.0 MBProgress (1): 1.7/3.0 MBProgress (1): 1.8/3.0 MBProgress (1): 1.8/3.0 MBProgress (1): 1.8/3.0 MBProgress (1): 1.8/3.0 MBProgress (1): 1.8/3.0 MBProgress (1): 1.8/3.0 MBProgress (1): 1.9/3.0 MBProgress (1): 1.9/3.0 MBProgress (1): 1.9/3.0 MBProgress (1): 1.9/3.0 MBProgress (1): 1.9/3.0 MBProgress (1): 1.9/3.0 MBProgress (1): 2.0/3.0 MBProgress (1): 2.0/3.0 MBProgress (1): 2.0/3.0 MBProgress (1): 2.0/3.0 MBProgress (1): 2.0/3.0 MBProgress (1): 2.0/3.0 MBProgress (1): 2.1/3.0 MBProgress (1): 2.1/3.0 MBProgress (1): 2.1/3.0 MBProgress (1): 2.1/3.0 MBProgress (1): 2.1/3.0 MBProgress (1): 2.1/3.0 MBProgress (1): 2.2/3.0 MBProgress (1): 2.2/3.0 MBProgress (1): 2.2/3.0 MBProgress (1): 2.2/3.0 MBProgress (1): 2.2/3.0 MBProgress (1): 2.2/3.0 MBProgress (1): 2.3/3.0 MBProgress (1): 2.3/3.0 MBProgress (1): 2.3/3.0 MBProgress (1): 2.3/3.0 MBProgress (1): 2.3/3.0 MBProgress (1): 2.3/3.0 MBProgress (1): 2.4/3.0 MBProgress (1): 2.4/3.0 MBProgress (1): 2.4/3.0 MBProgress (1): 2.4/3.0 MBProgress (1): 2.4/3.0 MBProgress (1): 2.4/3.0 MBProgress (1): 2.4/3.0 MBProgress (1): 2.5/3.0 MBProgress (2): 2.5/3.0 MB | 0.9/123 kBProgress (2): 2.5/3.0 MB | 0.9/123 kBProgress (2): 2.5/3.0 MB | 2.3/123 kBProgress (2): 2.5/3.0 MB | 3.6/123 kBProgress (2): 2.5/3.0 MB | 5.0/123 kBProgress (2): 2.5/3.0 MB | 5.0/123 kBProgress (2): 2.5/3.0 MB | 6.4/123 kBProgress (2): 2.5/3.0 MB | 7.7/123 kBProgress (2): 2.5/3.0 MB | 9.1/123 kBProgress (2): 2.5/3.0 MB | 9.1/123 kBProgress (2): 2.5/3.0 MB | 10/123 kB Progress (2): 2.5/3.0 MB | 11/123 kBProgress (2): 2.5/3.0 MB | 13/123 kBProgress (2): 2.5/3.0 MB | 14/123 kBProgress (2): 2.5/3.0 MB | 14/123 kBProgress (2): 2.5/3.0 MB | 15/123 kBProgress (2): 2.5/3.0 MB | 17/123 kBProgress (2): 2.5/3.0 MB | 18/123 kBProgress (2): 2.5/3.0 MB | 18/123 kBProgress (2): 2.5/3.0 MB | 20/123 kBProgress (2): 2.5/3.0 MB | 21/123 kBProgress (2): 2.5/3.0 MB | 22/123 kBProgress (2): 2.5/3.0 MB | 24/123 kBProgress (2): 2.5/3.0 MB | 25/123 kBProgress (2): 2.5/3.0 MB | 26/123 kBProgress (2): 2.5/3.0 MB | 28/123 kBProgress (2): 2.6/3.0 MB | 28/123 kBProgress (2): 2.6/3.0 MB | 29/123 kBProgress (2): 2.6/3.0 MB | 29/123 kBProgress (2): 2.6/3.0 MB | 31/123 kBProgress (2): 2.6/3.0 MB | 31/123 kBProgress (2): 2.6/3.0 MB | 32/123 kBProgress (2): 2.6/3.0 MB | 33/123 kBProgress (2): 2.6/3.0 MB | 35/123 kBProgress (2): 2.6/3.0 MB | 36/123 kBProgress (2): 2.6/3.0 MB | 37/123 kBProgress (2): 2.6/3.0 MB | 39/123 kBProgress (2): 2.6/3.0 MB | 39/123 kBProgress (2): 2.6/3.0 MB | 40/123 kBProgress (2): 2.6/3.0 MB | 41/123 kBProgress (2): 2.6/3.0 MB | 41/123 kBProgress (2): 2.6/3.0 MB | 43/123 kBProgress (2): 2.6/3.0 MB | 44/123 kBProgress (2): 2.6/3.0 MB | 46/123 kBProgress (2): 2.6/3.0 MB | 46/123 kBProgress (2): 2.6/3.0 MB | 47/123 kBProgress (2): 2.6/3.0 MB | 48/123 kBProgress (2): 2.7/3.0 MB | 48/123 kBProgress (2): 2.7/3.0 MB | 50/123 kBProgress (2): 2.7/3.0 MB | 51/123 kBProgress (2): 2.7/3.0 MB | 51/123 kBProgress (2): 2.7/3.0 MB | 52/123 kBProgress (2): 2.7/3.0 MB | 54/123 kBProgress (2): 2.7/3.0 MB | 55/123 kBProgress (2): 2.7/3.0 MB | 59/123 kBProgress (2): 2.7/3.0 MB | 59/123 kBProgress (2): 2.7/3.0 MB | 59/123 kBProgress (2): 2.7/3.0 MB | 59/123 kBProgress (3): 2.7/3.0 MB | 59/123 kB | 0.9/14 kBProgress (3): 2.7/3.0 MB | 59/123 kB | 2.3/14 kBProgress (3): 2.7/3.0 MB | 59/123 kB | 3.6/14 kBProgress (3): 2.7/3.0 MB | 59/123 kB | 3.6/14 kBProgress (3): 2.7/3.0 MB | 59/123 kB | 5.0/14 kBProgress (3): 2.7/3.0 MB | 59/123 kB | 6.4/14 kBProgress (3): 2.7/3.0 MB | 59/123 kB | 7.7/14 kBProgress (3): 2.7/3.0 MB | 59/123 kB | 9.1/14 kBProgress (3): 2.7/3.0 MB | 59/123 kB | 10/14 kB Progress (3): 2.7/3.0 MB | 59/123 kB | 12/14 kBProgress (3): 2.8/3.0 MB | 59/123 kB | 12/14 kBProgress (3): 2.8/3.0 MB | 59/123 kB | 12/14 kBProgress (3): 2.8/3.0 MB | 59/123 kB | 12/14 kBProgress (3): 2.8/3.0 MB | 59/123 kB | 13/14 kBProgress (3): 2.8/3.0 MB | 59/123 kB | 14 kB   Progress (3): 2.8/3.0 MB | 59/123 kB | 14 kBProgress (3): 2.8/3.0 MB | 59/123 kB | 14 kB                                            Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-logger-api/3.5.5/surefire-logger-api-3.5.5.jar (14 kB at 108 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.5.5/surefire-extensions-spi-3.5.5.jar
+Progress (2): 2.8/3.0 MB | 59/123 kBProgress (2): 2.9/3.0 MB | 59/123 kBProgress (2): 2.9/3.0 MB | 59/123 kBProgress (2): 2.9/3.0 MB | 59/123 kBProgress (2): 2.9/3.0 MB | 59/123 kBProgress (2): 2.9/3.0 MB | 59/123 kBProgress (2): 2.9/3.0 MB | 59/123 kBProgress (2): 3.0/3.0 MB | 59/123 kBProgress (2): 3.0/3.0 MB | 59/123 kBProgress (2): 3.0 MB | 59/123 kB                                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-shared-utils/3.5.5/surefire-shared-utils-3.5.5.jar (3.0 MB at 23 MB/s)
+Progress (1): 64/123 kBProgress (1): 68/123 kBProgress (1): 72/123 kBProgress (1): 76/123 kBProgress (2): 76/123 kB | 0.9/26 kBProgress (2): 76/123 kB | 2.3/26 kBProgress (2): 76/123 kB | 3.6/26 kBProgress (2): 76/123 kB | 5.0/26 kBProgress (2): 76/123 kB | 6.4/26 kBProgress (2): 76/123 kB | 7.7/26 kBProgress (2): 76/123 kB | 8.2/26 kBProgress (2): 76/123 kB | 9.6/26 kBProgress (2): 76/123 kB | 11/26 kB Progress (2): 76/123 kB | 12/26 kBProgress (2): 81/123 kB | 12/26 kBProgress (2): 81/123 kB | 14/26 kBProgress (2): 81/123 kB | 15/26 kBProgress (2): 81/123 kB | 16/26 kBProgress (2): 81/123 kB | 18/26 kBProgress (2): 81/123 kB | 19/26 kBProgress (2): 81/123 kB | 21/26 kBProgress (2): 81/123 kB | 22/26 kBProgress (2): 81/123 kB | 23/26 kBProgress (2): 81/123 kB | 25/26 kBProgress (2): 81/123 kB | 26 kB                                  Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-api/3.5.5/surefire-extensions-api-3.5.5.jar (26 kB at 193 kB/s)
+Progress (1): 85/123 kBProgress (1): 89/123 kBProgress (1): 93/123 kBProgress (1): 97/123 kBProgress (1): 102/123 kBProgress (1): 106/123 kBProgress (1): 110/123 kBProgress (1): 114/123 kBProgress (1): 119/123 kBProgress (1): 123/123 kBProgress (1): 123 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/3.5.5/surefire-booter-3.5.5.jar (123 kB at 905 kB/s)
+Progress (1): 0.9/316 kBProgress (1): 2.3/316 kBProgress (1): 3.6/316 kBProgress (1): 5.0/316 kBProgress (1): 6.4/316 kBProgress (1): 7.7/316 kBProgress (1): 9.1/316 kBProgress (1): 10/316 kB Progress (1): 12/316 kBProgress (1): 13/316 kBProgress (1): 15/316 kBProgress (1): 15/316 kBProgress (1): 17/316 kBProgress (1): 18/316 kBProgress (1): 20/316 kBProgress (1): 21/316 kBProgress (1): 22/316 kBProgress (1): 24/316 kBProgress (1): 25/316 kBProgress (1): 26/316 kBProgress (1): 28/316 kBProgress (1): 29/316 kBProgress (1): 31/316 kBProgress (1): 32/316 kBProgress (1): 33/316 kBProgress (1): 35/316 kBProgress (1): 36/316 kBProgress (1): 37/316 kBProgress (1): 39/316 kBProgress (1): 40/316 kBProgress (1): 41/316 kBProgress (1): 43/316 kBProgress (1): 44/316 kBProgress (1): 46/316 kBProgress (1): 47/316 kBProgress (1): 48/316 kBProgress (1): 50/316 kBProgress (1): 51/316 kBProgress (1): 52/316 kBProgress (1): 54/316 kBProgress (1): 55/316 kBProgress (1): 59/316 kBProgress (1): 64/316 kBProgress (1): 68/316 kBProgress (1): 72/316 kBProgress (1): 76/316 kBProgress (1): 81/316 kBProgress (2): 81/316 kB | 0.9/8.2 kBProgress (2): 81/316 kB | 2.3/8.2 kBProgress (2): 81/316 kB | 3.2/8.2 kBProgress (2): 81/316 kB | 4.5/8.2 kBProgress (2): 85/316 kB | 4.5/8.2 kBProgress (2): 85/316 kB | 5.9/8.2 kBProgress (2): 85/316 kB | 7.3/8.2 kBProgress (2): 85/316 kB | 8.2 kB                                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-extensions-spi/3.5.5/surefire-extensions-spi-3.5.5.jar (8.2 kB at 55 kB/s)
+Progress (1): 89/316 kBProgress (1): 93/316 kBProgress (1): 97/316 kBProgress (1): 102/316 kBProgress (1): 106/316 kBProgress (1): 110/316 kBProgress (1): 114/316 kBProgress (1): 119/316 kBProgress (1): 123/316 kBProgress (1): 127/316 kBProgress (1): 131/316 kBProgress (1): 136/316 kBProgress (1): 140/316 kBProgress (1): 144/316 kBProgress (1): 147/316 kBProgress (1): 151/316 kBProgress (1): 155/316 kBProgress (1): 159/316 kBProgress (1): 163/316 kBProgress (1): 168/316 kBProgress (1): 172/316 kBProgress (1): 176/316 kBProgress (1): 180/316 kBProgress (1): 185/316 kBProgress (1): 189/316 kBProgress (1): 193/316 kBProgress (1): 197/316 kBProgress (1): 202/316 kBProgress (1): 206/316 kBProgress (1): 210/316 kBProgress (1): 214/316 kBProgress (1): 218/316 kBProgress (1): 223/316 kBProgress (1): 239/316 kBProgress (1): 255/316 kBProgress (1): 272/316 kBProgress (1): 278/316 kBProgress (1): 288/316 kBProgress (1): 305/316 kBProgress (1): 316 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/3.5.5/maven-surefire-common-3.5.5.jar (316 kB at 1.7 MB/s)
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.5/surefire-junit-platform-3.5.5.pom
+Progress (1): 832 BProgress (1): 3.9 kBProgress (1): 5.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.5/surefire-junit-platform-3.5.5.pom (5.2 kB at 148 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.5.5/surefire-providers-3.5.5.pom
+Progress (1): 844 BProgress (1): 2.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/3.5.5/surefire-providers-3.5.5.pom (2.5 kB at 77 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.5/common-java5-3.5.5.pom
+Progress (1): 839 BProgress (1): 2.8 kBProgress (1): 3.1 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.5/common-java5-3.5.5.pom (3.1 kB at 102 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.5/surefire-junit-platform-3.5.5.jar
+Progress (1): 7.7/35 kBProgress (1): 8.2/35 kBProgress (1): 25/35 kB Progress (1): 35 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit-platform/3.5.5/surefire-junit-platform-3.5.5.jar (35 kB at 1.2 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.5/common-java5-3.5.5.jar
+Progress (1): 7.7/18 kBProgress (1): 7.7/18 kBProgress (1): 18 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/3.5.5/common-java5-3.5.5.jar (18 kB at 587 kB/s)
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.commons.csv.CSVFormatTest
+[ERROR] Tests run: 111, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.276 s <<< FAILURE! -- in org.apache.commons.csv.CSVFormatTest
+[ERROR] org.apache.commons.csv.CSVFormatTest.testQuotedNullStringTracksQuoteCharacter -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <'NULL'> but was: <"NULL">
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at org.apache.commons.csv.CSVFormatTest.testQuotedNullStringTracksQuoteCharacter(CSVFormatTest.java:1020)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   CSVFormatTest.testQuotedNullStringTracksQuoteCharacter:1020 expected: <'NULL'> but was: <"NULL">
+[INFO] 
+[ERROR] Tests run: 111, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.491 s
+[INFO] Finished at: 2026-09-29T16:09:55-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.5:test (default-test) on project commons-csv: There are test failures.
+[ERROR] 
+[ERROR] See /home/sergi/code/mining/commons-csv/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

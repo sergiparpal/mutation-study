@@ -1,0 +1,100 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.commons:commons-lang3 >------------------
+[INFO] Building Apache Commons Lang 3.21.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ commons-lang3 ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ commons-lang3 ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-lang3 ---
+[WARNING] Basedir is : /home/sergi/code/mining/commons-lang
+[INFO] Excluding patterns: site-content/**, src/site/resources/.htaccess, src/site/resources/download_lang.cgi, src/site/resources/release-notes/RELEASE-NOTES-*.txt, src/test/resources/lang-708-input.txt, **/*.svg, **/*.xcf, site-content/**, .checkstyle, .fbprefs, .pmd, .asf.yaml, .gitattributes, src/site/resources/download_*.cgi, maven-eclipse.xml, .externalToolBuilders/**, .vscode/**, .project, .classpath, .settings/**, **/*.svg, **/*.xcf
+[INFO] Excluding MAVEN collection.
+[INFO] Excluding ECLIPSE collection.
+[INFO] Excluding IDEA collection.
+[INFO] Processing exclude file from STANDARD_SCMS.
+[INFO] Excluding STANDARD_SCMS collection.
+[INFO] Excluding MISC collection.
+[INFO] Excluding HIDDEN_DIR collection.
+[INFO] RAT summary:
+[INFO]   Approved:  669
+[INFO]   Archives:  0
+[INFO]   Binaries:  6
+[INFO]   Document types:  4
+[INFO]   Ignored:  36
+[INFO]   License categories:  1
+[INFO]   License names:  1
+[INFO]   Notices:  3
+[INFO]   Standards:  669
+[INFO]   Unapproved:  0
+[INFO]   Unknown:  0
+[INFO] 
+[INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-lang3 ---
+[INFO] No known issue in 21 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.1:parse-version (parse-version) @ commons-lang3 ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-lang3 ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-lang3 ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-lang3 ---
+[INFO] skip non existing resourceDirectory /home/sergi/code/mining/commons-lang/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ commons-lang3 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 264 source files with javac [debug release 8] to target/classes
+[INFO] /home/sergi/code/mining/commons-lang/src/main/java/org/apache/commons/lang3/builder/ToStringStyle.java: Some input files use or override a deprecated API.
+[INFO] /home/sergi/code/mining/commons-lang/src/main/java/org/apache/commons/lang3/builder/ToStringStyle.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/sergi/code/mining/commons-lang/src/main/java/org/apache/commons/lang3/AppendableJoiner.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/sergi/code/mining/commons-lang/src/main/java/org/apache/commons/lang3/AppendableJoiner.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-lang3 ---
+[INFO] Writing manifest: /home/sergi/code/mining/commons-lang/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-lang3 ---
+[INFO] Copying 7 resources from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ commons-lang3 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 363 source files with javac [debug release 8] to target/test-classes
+[WARNING] /home/sergi/code/mining/commons-lang/src/test/java/org/apache/commons/lang3/CharSetTest.java:[394,55] non-varargs call of varargs method with inexact argument type for last parameter;
+  cast to java.lang.String for a varargs call
+  cast to java.lang.String[] for a non-varargs call and to suppress this warning
+[INFO] /home/sergi/code/mining/commons-lang/src/test/java/org/apache/commons/lang3/AppendableJoinerTest.java: Some input files use or override a deprecated API.
+[INFO] /home/sergi/code/mining/commons-lang/src/test/java/org/apache/commons/lang3/AppendableJoinerTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/sergi/code/mining/commons-lang/src/test/java/org/apache/commons/lang3/EnumUtilsTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/sergi/code/mining/commons-lang/src/test/java/org/apache/commons/lang3/EnumUtilsTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (prepare-agent) @ commons-lang3 ---
+[INFO] argLine set to -javaagent:/home/sergi/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/home/sergi/code/mining/commons-lang/target/jacoco.exec,exclclassloader=jdk.internal.loader.ClassLoaders$PlatformClassLoader -Xmx1G --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.time=ALL-UNNAMED --add-opens java.base/java.time.chrono=ALL-UNNAMED --add-opens java.base/java.util.concurrent.atomic=ALL-UNNAMED
+[INFO] 
+[INFO] --- surefire:3.6.0:test (default-test) @ commons-lang3 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.commons.lang3.reflect.ConstructorUtilsTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.165 s -- in org.apache.commons.lang3.reflect.ConstructorUtilsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.285 s
+[INFO] Finished at: 2026-09-29T16:04:18-07:00
+[INFO] ------------------------------------------------------------------------

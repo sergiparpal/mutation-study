@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index f9c6b3956..c2a1673a1 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -439,7 +439,7 @@ public static Number createNumber(final String str) {
+             switch (lastChar) {
+             case 'l':
+             case 'L':
+-                if (dec == null && exp == null && (!numeric.isEmpty() && numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
++                if (dec == null && exp == null && (!numeric.isEmpty() && isSign(numeric.charAt(0)) && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                     try {
+                         return createLong(numeric);
+                     } catch (final NumberFormatException ignored) {

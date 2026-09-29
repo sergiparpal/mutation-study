@@ -1,0 +1,37 @@
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+index 2ff5e4a3b..92dfff7da 100644
+--- a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+@@ -1229,22 +1229,25 @@ private static boolean isAssignable(final Type type, final WildcardType toWildca
+                 // if there are assignments for unresolved type variables,
+                 // now's the time to substitute them.
+                 toBound = substituteTypeVariables(toBound, typeVarAssigns);
+-                // each upper bound of the subject type has to be assignable to
+-                // each
+-                // upper bound of the target type
++                // at least one upper bound of the subject type has to be assignable to
++                // each upper bound of the target type
++                boolean satisfied = false;
+                 for (final Type bound : upperBounds) {
+-                    if (!isAssignable(bound, toBound, typeVarAssigns)) {
+-                        return false;
++                    if (isAssignable(bound, toBound, typeVarAssigns)) {
++                        satisfied = true;
++                        break;
+                     }
+                 }
++                if (!satisfied) {
++                    return false;
++                }
+             }
+             for (Type toBound : toLowerBounds) {
+                 // if there are assignments for unresolved type variables,
+                 // now's the time to substitute them.
+                 toBound = substituteTypeVariables(toBound, typeVarAssigns);
+                 // each lower bound of the target type has to be assignable to
+-                // each
+-                // lower bound of the subject type
++                // each lower bound of the subject type
+                 for (final Type bound : lowerBounds) {
+                     if (!isAssignable(toBound, bound, typeVarAssigns)) {
+                         return false;

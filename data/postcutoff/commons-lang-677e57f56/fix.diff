@@ -1,0 +1,14 @@
+diff --git a/src/main/java/org/apache/commons/lang3/time/StopWatch.java b/src/main/java/org/apache/commons/lang3/time/StopWatch.java
+index 4604a72c0..08d66b122 100644
+--- a/src/main/java/org/apache/commons/lang3/time/StopWatch.java
++++ b/src/main/java/org/apache/commons/lang3/time/StopWatch.java
+@@ -519,7 +519,8 @@ public Instant getStopInstant() {
+     @Deprecated
+     public long getStopTime() {
+         // stopTimeNanos stores System.nanoTime() for elapsed time
+-        return getStopInstant().toEpochMilli();
++        final Instant stop = getStopInstant();
++        return stop != null ? stop.toEpochMilli() : 0;
+     }
+ 
+     /**

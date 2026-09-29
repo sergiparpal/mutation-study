@@ -1,0 +1,5 @@
+project=commons-lang
+sha=e4380908b4675dda241247422d6c3dd021bf1253
+short=e4380908b
+date=2026-09-03
+subject=Fix DurationFormatUtils.formatPeriod() calculation when pattern omits M (#1780)

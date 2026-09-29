@@ -1,0 +1,5 @@
+project=gson
+sha=e4f54f78c93dae0507fcac5be81253974bc9042d
+short=e4f54f78
+date=2026-06-22
+subject=Throw JsonSyntaxException instead of NPE for a null AtomicLongArray element (#3038)

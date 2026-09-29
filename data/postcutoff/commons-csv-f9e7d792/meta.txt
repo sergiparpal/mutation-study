@@ -1,0 +1,5 @@
+project=commons-csv
+sha=f9e7d792dc6cb8a46f3e164e5cc50e38dc65264b
+short=f9e7d792
+date=2026-08-29
+subject=Keep an escaped value that equals the null string (#626).

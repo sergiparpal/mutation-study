@@ -1,0 +1,3 @@
+FastDateFormatTest.testTimeZoneArgumentIsCopied
+FastDateFormatTest.testTimeZoneGetterReturnsCopy
+FastDateParserTest.testTimeZoneIsCopied

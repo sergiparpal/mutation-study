@@ -1,0 +1,5 @@
+project=commons-lang
+sha=963c337d772ec4e27a4501a9dda1ffd860c59d7e
+short=963c337d7
+date=2026-09-21
+subject=Add equality and hash code support to ImmutableTimeZone

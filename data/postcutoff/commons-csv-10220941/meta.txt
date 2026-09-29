@@ -1,0 +1,5 @@
+project=commons-csv
+sha=1022094157af387b1db5738dd3f4e6a03f43950d
+short=10220941
+date=2026-07-28
+subject=quote null value that starts a record in minimal quote mode

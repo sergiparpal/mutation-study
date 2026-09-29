@@ -1,0 +1,5 @@
+project=commons-lang
+sha=0edbb4ae03fbe14a8204dbb866b0a17f22a4c6f1
+short=0edbb4ae0
+date=2026-09-02
+subject=fix int overflow in Conversion count and position bounds guards (#1779)

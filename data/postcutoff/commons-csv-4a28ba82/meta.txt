@@ -1,0 +1,5 @@
+project=commons-csv
+sha=4a28ba8254ce1af6985e3dcd95c753ef1c7165ea
+short=4a28ba82
+date=2026-05-20
+subject=[CSV-322] CSVFormat.Builder.setQuote() does not refresh quotedNullString

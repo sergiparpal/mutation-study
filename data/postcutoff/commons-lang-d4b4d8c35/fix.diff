@@ -1,0 +1,21 @@
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+index 21454f375..8966fc3f0 100644
+--- a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+@@ -305,7 +305,15 @@ boolean parse(final FastDateParser parser, final Calendar calendar, final String
+                 pos.setErrorIndex(idx);
+                 return false;
+             }
+-            final int value = Integer.parseInt(source.substring(pos.getIndex(), idx));
++            final int value;
++            try {
++                value = Integer.parseInt(source.substring(pos.getIndex(), idx));
++            } catch (final NumberFormatException nfe) {
++                // A run of digits that overflows int cannot be represented by this field; signal a parse failure
++                // rather than letting NumberFormatException escape the ParsePosition-based parse methods.
++                pos.setErrorIndex(pos.getIndex());
++                return false;
++            }
+             pos.setIndex(idx);
+             calendar.set(field, modify(parser, value));
+             return true;

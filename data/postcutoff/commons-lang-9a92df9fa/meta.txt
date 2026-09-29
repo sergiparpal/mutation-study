@@ -1,0 +1,5 @@
+project=commons-lang
+sha=9a92df9fa33d2f84a7c2037c52ca37e9cb647be1
+short=9a92df9fa
+date=2026-09-22
+subject=Fix NumberUtils.createNumber() and isCreatable() for positive Long literals with explicit '+' sign (#1796)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=82483775157159a8edcc9220498f034fa1621611
+short=824837751
+date=2026-09-19
+subject=Fix ConstructorUtils.getMatchingAccessibleConstructor on non-public classes (#1793)

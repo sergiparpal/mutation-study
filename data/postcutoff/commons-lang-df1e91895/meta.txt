@@ -1,0 +1,5 @@
+project=commons-lang
+sha=df1e91895d3d5380efa18a8e8e9d3d7b64ecceab
+short=df1e91895
+date=2026-09-08
+subject=Fix TypeUtils.isAssignable() for wildcards with multiple upper bounds (#1782)

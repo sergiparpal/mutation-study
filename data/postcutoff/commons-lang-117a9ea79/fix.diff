@@ -1,0 +1,59 @@
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java b/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java
+index e7c012938..b1bf48748 100644
+--- a/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java
+@@ -591,7 +591,7 @@ public String getPattern() {
+      * This zone is always used for {@link Date} formatting.
+      * </p>
+      *
+-     * @return The time zone.
++     * @return A copy of the time zone, changing it has no effect on this formatter.
+      */
+     @Override
+     public TimeZone getTimeZone() {
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+index 3f47d4cf9..7b632083e 100644
+--- a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+@@ -940,7 +940,8 @@ protected FastDateParser(final String pattern, final TimeZone timeZone, final Lo
+      */
+     protected FastDateParser(final String pattern, final TimeZone timeZone, final Locale locale, final Date centuryStart) {
+         this.pattern = Objects.requireNonNull(pattern, "pattern");
+-        this.timeZone = Objects.requireNonNull(timeZone, "timeZone");
++        // TimeZone is mutable and instances are shared through the FastDateFormat cache.
++        this.timeZone = (TimeZone) Objects.requireNonNull(timeZone, "timeZone").clone();
+         this.locale = LocaleUtils.toLocale(locale);
+         final Calendar definingCalendar = Calendar.getInstance(timeZone, this.locale);
+         final int centuryStartYear;
+@@ -1108,7 +1109,7 @@ private Strategy getStrategy(final char f, final int width, final Calendar defin
+      */
+     @Override
+     public TimeZone getTimeZone() {
+-        return timeZone;
++        return (TimeZone) timeZone.clone();
+     }
+ 
+     /**
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java b/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
+index 0beed585e..e67971fa2 100644
+--- a/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
+@@ -1067,7 +1067,8 @@ static String getTimeZoneDisplay(final TimeZone tz, final boolean daylight, fina
+      */
+     protected FastDatePrinter(final String pattern, final TimeZone timeZone, final Locale locale) {
+         this.pattern = pattern;
+-        this.timeZone = timeZone;
++        // TimeZone is mutable and instances are shared through the FastDateFormat cache.
++        this.timeZone = (TimeZone) timeZone.clone();
+         this.locale = LocaleUtils.toLocale(locale);
+         init();
+     }
+@@ -1304,7 +1305,7 @@ public String getPattern() {
+      */
+     @Override
+     public TimeZone getTimeZone() {
+-        return timeZone;
++        return (TimeZone) timeZone.clone();
+     }
+ 
+     /**

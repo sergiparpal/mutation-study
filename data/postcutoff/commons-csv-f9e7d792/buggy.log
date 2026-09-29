@@ -1,0 +1,303 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.apache.commons:commons-csv >-------------------
+[INFO] Building Apache Commons CSV 1.15.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.22.1/commons-codec-1.22.1.pom
+Progress (1): 742 BProgress (1): 1.6 kBProgress (1): 3.6 kBProgress (1): 5.3 kBProgress (1): 6.7 kBProgress (1): 9.1 kBProgress (1): 13 kB Progress (1): 15 kBProgress (1): 18 kBProgress (1): 19 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.22.1/commons-codec-1.22.1.pom (19 kB at 69 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.22.1/commons-codec-1.22.1.jar
+Progress (1): 0.9/423 kBProgress (1): 2.3/423 kBProgress (1): 3.6/423 kBProgress (1): 5.0/423 kBProgress (1): 6.4/423 kBProgress (1): 7.7/423 kBProgress (1): 9.1/423 kBProgress (1): 10/423 kB Progress (1): 11/423 kBProgress (1): 13/423 kBProgress (1): 14/423 kBProgress (1): 15/423 kBProgress (1): 17/423 kBProgress (1): 18/423 kBProgress (1): 20/423 kBProgress (1): 21/423 kBProgress (1): 22/423 kBProgress (1): 24/423 kBProgress (1): 25/423 kBProgress (1): 26/423 kBProgress (1): 28/423 kBProgress (1): 29/423 kBProgress (1): 31/423 kBProgress (1): 32/423 kBProgress (1): 33/423 kBProgress (1): 35/423 kBProgress (1): 36/423 kBProgress (1): 37/423 kBProgress (1): 39/423 kBProgress (1): 40/423 kBProgress (1): 41/423 kBProgress (1): 43/423 kBProgress (1): 44/423 kBProgress (1): 46/423 kBProgress (1): 47/423 kBProgress (1): 48/423 kBProgress (1): 53/423 kBProgress (1): 57/423 kBProgress (1): 61/423 kBProgress (1): 65/423 kBProgress (1): 69/423 kBProgress (1): 74/423 kBProgress (1): 78/423 kBProgress (1): 82/423 kBProgress (1): 86/423 kBProgress (1): 91/423 kBProgress (1): 95/423 kBProgress (1): 99/423 kBProgress (1): 103/423 kBProgress (1): 108/423 kBProgress (1): 112/423 kBProgress (1): 116/423 kBProgress (1): 120/423 kBProgress (1): 124/423 kBProgress (1): 129/423 kBProgress (1): 133/423 kBProgress (1): 137/423 kBProgress (1): 141/423 kBProgress (1): 142/423 kBProgress (1): 147/423 kBProgress (1): 151/423 kBProgress (1): 155/423 kBProgress (1): 159/423 kBProgress (1): 164/423 kBProgress (1): 168/423 kBProgress (1): 172/423 kBProgress (1): 176/423 kBProgress (1): 181/423 kBProgress (1): 185/423 kBProgress (1): 189/423 kBProgress (1): 193/423 kBProgress (1): 197/423 kBProgress (1): 202/423 kBProgress (1): 206/423 kBProgress (1): 210/423 kBProgress (1): 214/423 kBProgress (1): 231/423 kBProgress (1): 247/423 kBProgress (1): 263/423 kBProgress (1): 274/423 kBProgress (1): 290/423 kBProgress (1): 306/423 kBProgress (1): 323/423 kBProgress (1): 339/423 kBProgress (1): 339/423 kBProgress (1): 355/423 kBProgress (1): 372/423 kBProgress (1): 388/423 kBProgress (1): 405/423 kBProgress (1): 421/423 kBProgress (1): 423 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.22.1/commons-codec-1.22.1.jar (423 kB at 4.4 MB/s)
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-maven-version) @ commons-csv ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- enforcer:3.6.3:enforce (enforce-java-version) @ commons-csv ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-csv ---
+[WARNING] Basedir is : /home/sergi/code/mining/commons-csv
+[INFO] Excluding patterns: src/test/resources/org/apache/commons/csv/empty.txt, src/test/resources/org/apache/commons/csv/CSV-141/csv-141.csv, src/test/resources/org/apache/commons/csv/csv-167/sample1.csv, src/test/resources/org/apache/commons/csv/CSV-198/optd_por_public.csv, src/test/resources/org/apache/commons/csv/CSV-196/emoji.csv, src/test/resources/org/apache/commons/csv/CSV-196/japanese.csv, src/test/resources/org/apache/commons/csv/CSV-213/999751170.patch.csv, src/test/resources/org/apache/commons/csv/CSV-254/csv-254.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/bom.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/test.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/test_default.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_default_comment.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180_trim.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_default.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_ignoreEmpty.txt, src/test/resources/org/apache/commons/csv/ferc.gov/contract.txt, src/test/resources/org/apache/commons/csv/ferc.gov/transaction.txt, src/test/resources/**/*.bin, src/test/resources/org/apache/commons/csv/CSV-259/sample.txt, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246.csv, src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246_checkWithNoComment.txt, src/test/resources/org/apache/commons/csv/CSV-290/psql.csv, src/test/resources/org/apache/commons/csv/CSV-290/psql.tsv, site-content/**, .checkstyle, .fbprefs, .pmd, .asf.yaml, .gitattributes, src/site/resources/download_*.cgi, maven-eclipse.xml, .externalToolBuilders/**, .vscode/**, .project, .classpath, .settings/**, **/*.svg, **/*.xcf
+[INFO] Excluding MAVEN collection.
+[INFO] Excluding ECLIPSE collection.
+[INFO] Excluding IDEA collection.
+[INFO] Processing exclude file from STANDARD_SCMS.
+[INFO] Excluding STANDARD_SCMS collection.
+[INFO] Excluding MISC collection.
+[INFO] Excluding HIDDEN_DIR collection.
+[INFO] RAT summary:
+[INFO]   Approved:  80
+[INFO]   Archives:  1
+[INFO]   Binaries:  3
+[INFO]   Document types:  5
+[INFO]   Ignored:  32
+[INFO]   License categories:  1
+[INFO]   License names:  1
+[INFO]   Notices:  4
+[INFO]   Standards:  80
+[INFO]   Unapproved:  0
+[INFO]   Unknown:  0
+[INFO] 
+[INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-csv ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.1:parse-version (parse-version) @ commons-csv ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-csv ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-csv ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-csv ---
+[INFO] skip non existing resourceDirectory /home/sergi/code/mining/commons-csv/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ commons-csv ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 12 source files with javac [debug release 8] to target/classes
+[INFO] 
+[INFO] --- bundle:5.1.9:manifest (bundle-manifest) @ commons-csv ---
+[INFO] Writing manifest: /home/sergi/code/mining/commons-csv/target/osgi/MANIFEST.MF
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ commons-csv ---
+[INFO] Copying 25 resources from src/test/resources to target/test-classes
+[INFO] Copying 2 resources from . to target/test-classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ commons-csv ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 43 source files with javac [debug release 8] to target/test-classes
+[INFO] /home/sergi/code/mining/commons-csv/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Some input files use or override a deprecated API.
+[INFO] /home/sergi/code/mining/commons-csv/src/test/java/org/apache/commons/csv/CSVFileParserTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- jacoco:0.8.15:prepare-agent (prepare-agent) @ commons-csv ---
+[INFO] argLine set to -javaagent:/home/sergi/.m2/repository/org/jacoco/org.jacoco.agent/0.8.15/org.jacoco.agent-0.8.15-runtime.jar=destfile=/home/sergi/code/mining/commons-csv/target/jacoco.exec,exclclassloader=jdk.internal.loader.ClassLoaders$PlatformClassLoader
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ commons-csv ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.commons.csv.CSVPrinterTest
+[ERROR] Tests run: 155, Failures: 3, Errors: 0, Skipped: 7, Time elapsed: 3.796 s <<< FAILURE! -- in org.apache.commons.csv.CSVPrinterTest
+[ERROR] org.apache.commons.csv.CSVPrinterTest.testRandomMySql -- Time elapsed: 0.392 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Printer output :P\r(155)(9)'R(149)(257)\(9)(270)\\E(12)ci,(19);(10)\\N(9)'aD'~;(218),(206)(12)a(7)(140)(2)w(10) (entry 1) ==> array contents differ at index [0], expected: <\N> but was: <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:440)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayElementsEqual(AssertArrayEquals.java:389)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:346)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:159)
+	at org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1470)
+	at org.apache.commons.csv.Utils.compare(Utils.java:46)
+	at org.apache.commons.csv.CSVPrinterTest.doOneRandom(CSVPrinterTest.java:150)
+	at org.apache.commons.csv.CSVPrinterTest.doRandom(CSVPrinterTest.java:156)
+	at org.apache.commons.csv.CSVPrinterTest.testRandomMySql(CSVPrinterTest.java:2111)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.apache.commons.csv.CSVPrinterTest.testRandomPostgreSqlText -- Time elapsed: 0.518 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Printer output :\r,(32)(7)(159)\n(192)(9)Q(12)\(9)(10)\\N(9)\n\\&(32)(172)"\\](154)(10)f\n(170)\\(27)(234),\r(149)(299)\\(142)(0)(9)(295)(25)(165)(216)"(155),(142)(10)(9)(14)\r(150),3\\'\r(184)(149),(239)(12)'\n\rWl(10) (entry 1) ==> array contents differ at index [0], expected: <\N> but was: <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:440)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayElementsEqual(AssertArrayEquals.java:389)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:346)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:159)
+	at org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1470)
+	at org.apache.commons.csv.Utils.compare(Utils.java:46)
+	at org.apache.commons.csv.CSVPrinterTest.doOneRandom(CSVPrinterTest.java:150)
+	at org.apache.commons.csv.CSVPrinterTest.doRandom(CSVPrinterTest.java:156)
+	at org.apache.commons.csv.CSVPrinterTest.testRandomPostgreSqlText(CSVPrinterTest.java:2128)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.apache.commons.csv.CSVPrinterTest.testMySqlNullOutput -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: array contents differ at index [0], expected: <\N> but was: <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertArrayEquals.failArraysNotEqual(AssertArrayEquals.java:440)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayElementsEqual(AssertArrayEquals.java:389)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:346)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:159)
+	at org.junit.jupiter.api.AssertArrayEquals.assertArrayEquals(AssertArrayEquals.java:155)
+	at org.junit.jupiter.api.Assertions.assertArrayEquals(Assertions.java:1456)
+	at org.apache.commons.csv.CSVPrinterTest.testMySqlNullOutput(CSVPrinterTest.java:1209)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.apache.commons.csv.CSVParserTest
+[ERROR] Tests run: 175, Failures: 3, Errors: 0, Skipped: 4, Time elapsed: 0.315 s <<< FAILURE! -- in org.apache.commons.csv.CSVParserTest
+[ERROR] org.apache.commons.csv.CSVParserTest.testEscapedNullStringIsAValue(Predefined)[1] -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <\N> but was: <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at org.apache.commons.csv.CSVParserTest.testEscapedNullStringIsAValue(CSVParserTest.java:678)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.Optional.ifPresent(Optional.java:183)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.apache.commons.csv.CSVParserTest.testEscapedNullStringIsAValue(Predefined)[2] -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <\N> but was: <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at org.apache.commons.csv.CSVParserTest.testEscapedNullStringIsAValue(CSVParserTest.java:678)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.Optional.ifPresent(Optional.java:183)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.apache.commons.csv.CSVParserTest.testEscapedNullStringIsAValue(Predefined)[4] -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <\N> but was: <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at org.apache.commons.csv.CSVParserTest.testEscapedNullStringIsAValue(CSVParserTest.java:678)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.Optional.ifPresent(Optional.java:183)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   CSVParserTest.testEscapedNullStringIsAValue:678 expected: <\N> but was: <null>
+[ERROR]   CSVParserTest.testEscapedNullStringIsAValue:678 expected: <\N> but was: <null>
+[ERROR]   CSVParserTest.testEscapedNullStringIsAValue:678 expected: <\N> but was: <null>
+[ERROR]   CSVPrinterTest.testMySqlNullOutput:1209 array contents differ at index [0], expected: <\N> but was: <null>
+[ERROR]   CSVPrinterTest.testRandomMySql:2111->doRandom:156->doOneRandom:150 Printer output :P\r(155)(9)'R(149)(257)\(9)(270)\\E(12)ci,(19);(10)\\N(9)'aD'~;(218),(206)(12)a(7)(140)(2)w(10) (entry 1) ==> array contents differ at index [0], expected: <\N> but was: <null>
+[ERROR]   CSVPrinterTest.testRandomPostgreSqlText:2128->doRandom:156->doOneRandom:150 Printer output :\r,(32)(7)(159)\n(192)(9)Q(12)\(9)(10)\\N(9)\n\\&(32)(172)"\\](154)(10)f\n(170)\\(27)(234),\r(149)(299)\\(142)(0)(9)(295)(25)(165)(216)"(155),(142)(10)(9)(14)\r(150),3\\'\r(184)(149),(239)(12)'\n\rWl(10) (entry 1) ==> array contents differ at index [0], expected: <\N> but was: <null>
+[INFO] 
+[ERROR] Tests run: 330, Failures: 6, Errors: 0, Skipped: 11
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.972 s
+[INFO] Finished at: 2026-09-29T16:07:04-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.6:test (default-test) on project commons-csv: There are test failures.
+[ERROR] 
+[ERROR] See /home/sergi/code/mining/commons-csv/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

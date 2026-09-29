@@ -1,0 +1,5 @@
+project=commons-lang
+sha=623235ebca46bea1a6e8cc02b7d7084c1698ab80
+short=623235ebc
+date=2026-01-06
+subject=[LANG-1811] ArrayUtils.shuffle() throws NullPointerException for null array input.
