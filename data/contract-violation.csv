@@ -1,1 +1,13 @@
 bug_id,contract_violated,evidence
+Lang-65,no,"modify() is private and its javadoc says only 'Internal calculation method'; nothing documents the truncation of milliseconds/seconds/minutes"
+Lang-23,yes,"inherited Object.equals/hashCode contract: a class adding its own state must override both; no class javadoc statement, but the inherited contract applies per protocol"
+Lang-43,no,"the fault is a missing next(pos) in private appendQuotedString; public javadoc documents only 'in case of a bad pattern', nothing about escaped-quote handling"
+Lang-13,yes,"class javadoc promises deep clone via serialization for Serializable objects; cloning an object holding primitive Class references failed that contract"
+Lang-56,no,"serialization fault; class javadoc covers speed, thread-safety and patterns, never serialization behaviour"
+Lang-52,yes,"escapeJavaScript javadoc states the JavaScript escaping rules it follows; failing to escape '/' violates that stated rule"
+Lang-8,no,"the fault is which TimeZone wins when printer and calendar differ; javadoc covers threading, patterns and year handling, not that precedence"
+Lang-62,no,"missing range guards, break and catch in unescape; javadoc is one-line constants and {@inheritDoc}, nothing on out-of-range entity handling"
+Lang-63,no,"internal period arithmetic (days += 31, reduceAndCorrect); javadoc documents the pattern token table, not how day counts are derived"
+Lang-21,no,"isSameLocalTime used Calendar.HOUR instead of HOUR_OF_DAY; javadoc does not distinguish 12h from 24h in its notion of 'same local time'"
+Lang-34,no,"the fault is in the package-private registry used for cycle detection; javadoc documents formatting styles and public append methods, nothing about it"
+Lang-36,yes,"javadoc states the type-qualifier rule (f,F,d,D,l,L) and the decimal-point rule; the fault was conflating a trailing '.' with a type suffix"
