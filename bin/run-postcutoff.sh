@@ -285,14 +285,17 @@ print(('ok' if not err else ('dead' if (cost == 0 or limit) else 'error'))
         mkdir -p "$WB/src/test/java/$(dirname "$f")"
         cp "$WF/src/test/java/$f" "$WB/src/test/java/$f"
     done
-    (cd "$WB" && mvn test -Dtest="$RUN_ARG" -DfailIfNoTests=false) \
+    (cd "$WB" && mvn test -Dtest="$RUN_ARG" -DfailIfNoTests=false -Drat.skip=true -Dcheckstyle.skip=true -Dpmd.skip=true -Dspotbugs.skip=true) \
         > "$ROOT/$RUNS/${TAG}.${ARM}.buggy.log" 2>&1
     BUGGY_RC=$?
 
     if grep -q "COMPILATION ERROR" "$ROOT/$RUNS/${TAG}.${ARM}.buggy.log"; then
         VERDICT_DET="uncompilable_on_buggy"
-    elif [ "$BUGGY_RC" -ne 0 ]; then
+    elif grep -qP '^\[ERROR\]\s+\w+AgentTest\.\w+[:(]' \
+            "$ROOT/$RUNS/${TAG}.${ARM}.buggy.log"; then
         VERDICT_DET="Fail"
+    elif [ "$BUGGY_RC" -ne 0 ]; then
+        VERDICT_DET="build_failed_not_detection"
     else
         VERDICT_DET="Pass"
     fi
