@@ -1,0 +1,9 @@
+Code under bin/ is MIT licensed (see LICENSE).
+
+Data under data/ — measurements, classifications, generated test suites and
+run records — is licensed CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+
+Test suites under data/agent-suites/ are derived from Defects4J subjects
+(Apache Commons Lang, Commons CSV, Commons CLI, Google Gson), which carry
+the Apache License 2.0. Their original terms apply to that derivation.
