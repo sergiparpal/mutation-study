@@ -976,7 +976,9 @@ implementation, and compare — which we have measured but not built.
 
 ## Data availability
 
-All scripts, raw artifacts and per-bug measurements are in the repository.
+Everything is in **https://github.com/sergiparpal/mutation-study**, under MIT
+for the code and CC BY 4.0 for the data.
+
 Generation: `bin/run-agent-suites.sh` (implementation-visible arm),
 `bin/run-spec-suites.sh` (specification-only arm, including sandbox
 construction) and `bin/prune-failing-tests.py` (the per-method acceptance
@@ -990,3 +992,8 @@ specification-only sandboxes, retained as an audit trail; and the merged
 per-suite measurements in `data/agent-metrics-final.csv`. The full method
 record, including every deviation and tooling failure encountered, is in
 `data/README.md`.
+
+**Measurement needs no model access.** `bin/analyze-agent-suites.sh` runs over
+the packaged suites in `data/agent-suites/` with a Defects4J installation and
+nothing else, so every figure in §3 can be recomputed without generating
+anything.

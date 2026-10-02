@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: >-
+  Oracle Provenance Is Invisible to Mutation Score: Agent-Generated Test
+  Suites on Defects4J, With and Without the Implementation
+message: >-
+  If you use this data or these scripts, please cite the repository.
+type: dataset
+authors:
+  - family-names: Parpal
+    given-names: Sergi
+repository-code: https://github.com/sergiparpal/mutation-study
+abstract: >-
+  Two test suites were generated per Defects4J bug with the same agent, model
+  and instructions, varying only whether the agent could read the
+  implementation. Over 36 bugs measured in both arms, real-fault detection
+  falls from 72% to 14% while mutation score does not move (72% against 70%)
+  and line coverage falls only from 85% to 73%. With an EvoSuite baseline over
+  the same subjects, mutation score ranks the three suite populations in the
+  wrong order. The repository holds the generation and measurement scripts,
+  the per-suite measurements, a hand classification of the 40 faults, a probe
+  of what the model recalls about each fault with no code in context, and two
+  post-cutoff replication corpora.
+keywords:
+  - test generation
+  - mutation testing
+  - Defects4J
+  - large language models
+  - empirical software engineering
+license: MIT
+license-url: https://github.com/sergiparpal/mutation-study/blob/main/LICENSE
+date-released: 2026-10-01
