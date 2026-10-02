@@ -41,8 +41,8 @@ blind to the distinction.
 
 Three further observations. Writing tests from javadoc alone yields wrong
 expectations in only 3.3% of tests, so the specification-only arm is not
-guesswork: it catches a small, coherent class of faults, those where the
-implementation contradicts documented contract. The agent and EvoSuite are
+guesswork: it catches a small set of faults — five of thirty-six — that do not
+share a single property we could identify. The agent and EvoSuite are
 complementary rather than ordered — 17 faults are found only by the agent, 4
 only by EvoSuite, 6 by neither. And two contamination controls we have not seen
 reported elsewhere: Defects4J checkouts ship the fix commit in their git
@@ -104,8 +104,10 @@ Contributions:
    (85% against 73%) to account for a five-fold gap in detection. This bears
    directly on how agent-written suites are currently evaluated and on
    proposals to use mutation feedback to improve them.
-3. A characterisation of what specification-only generation does catch: faults
-   where the implementation contradicts a contract the documentation states.
+3. A characterisation of what specification-only generation does catch, which
+   is negative: the five faults it detects do not share a property that
+   predicts them, and two rather than four are documented-contract
+   violations.
    With an EvoSuite baseline over the same subjects, which shows the two
    approaches to be complementary rather than ordered — 17 faults are found
    only by the agent, 4 only by EvoSuite — and which shows mutation score
@@ -364,30 +366,49 @@ style and documentation density:
 ### 3.3 What the specification-only arm does detect
 
 The five faults detected by the S arm are Cli-32, Csv-4, Csv-6, Gson-15 and
-Lang-13. Four are cases where the implementation contradicts a contract the
-javadoc states:
+Lang-13. We read the javadoc of each modified method **at the buggy revision**
+to ask whether the documentation states the behaviour the fault violates —
+whether, in other words, a reader of the documentation alone could have written
+the failing assertion.
 
-- **Csv-4** — a documented accessor returns `null` in a documented case, and
-  the value is used without a guard.
-- **Csv-6** — an index derived from the header mapping reaches an array access
-  with no bound check.
-- **Gson-15** — `NaN` and infinities are rejected regardless of the documented
-  lenient mode.
-- **Lang-13** — primitive class objects fail a documented deserialization
-  contract.
+Two of the five are documented-contract violations:
 
-The fifth, **Cli-32**, is detected by a different route. Its faulty loop reads
-`text.charAt(pos)` under the condition `pos <= text.length()`, so a boundary
-input throws `StringIndexOutOfBoundsException`. No knowledge of the intended
-wrapping semantics is needed to expose it: any test that reaches that boundary
-does, and a crash needs no oracle at all. It is the only one of the five that
-the specification-only arm could have caught without the specification.
+- **Cli-32** — `findWrapPos` is documented as "the last position before
+  startPos+width having a whitespace character […] If there is no whitespace
+  character before startPos+width, it will return startPos+width." The faulty
+  loop scanned past the requested width instead of returning it.
+- **Lang-13** — the class javadoc promises deep cloning by serialization for
+  any `Serializable` object; cloning one holding primitive `Class` references
+  failed.
 
-The specification-only arm detects faults that are visible from the
-specification, and very little else. This is consistent with the mechanism the
-design isolates: without the implementation, the agent's only oracle is the
-documented contract, so it catches exactly the faults where code and contract
-disagree.
+Three are not:
+
+- **Csv-4** — `getHeaderMap` is documented only as "Returns a copy of the
+  header map that iterates in column order." Nothing covers the no-header case
+  or a null return.
+- **Csv-6** — `putIn` is documented as "Puts all values of this record into the
+  given Map." Nothing covers a record holding fewer values than the header map.
+- **Gson-15** — the javadoc of `value(double)` reads "@param value a finite
+  value. May not be NaNs or infinities." It documents *the faulty behaviour*.
+  The fix went the other way, permitting them under lenient mode. An agent
+  writing from this documentation would have asserted the fault was correct,
+  and the detection cannot have come from reading it.
+
+**There is no single mechanism.** An earlier draft of this section claimed four
+of the five were documented-contract violations; that claim was inferred from
+the fault descriptions without reading the documentation, and reading it does
+not support it. What the specification-only arm detects is heterogeneous: some
+contract violations, and some faults reached by probing boundaries, which both
+arms' prompts instruct the agent to do and which require no specification at
+all. Cli-32's faulty loop also reads `text.charAt(pos)` under `pos <=
+text.length()`, so a boundary input throws regardless of what the javadoc says.
+
+We report this as a negative characterisation. The five detections do not share
+a property that predicts them, and we have not identified what distinguishes
+them from the thirty-one the arm missed. A classification designed to test such
+a property would have to be committed before the arms are run; ours was not,
+and is reported as a limitation rather than a finding (see
+`data/contract-violation.md` in the repository).
 
 ### 3.4 Writing from documentation produces few wrong expectations
 
@@ -542,8 +563,8 @@ Both arms' prompts instruct the agent to "cover boundary and error cases, not
 just the happy path". A fault that manifests only at `Integer.MIN_VALUE`, or on
 arithmetic overflow, or at an index equal to a length, is reached by following
 that instruction. It requires no specification at all — a different mechanism
-from the one behind the five Defects4J detections, four of which were cases
-where the implementation contradicts a documented contract (§3.3).
+from the one behind the five Defects4J detections, of which two are
+documented-contract violations and the rest are not (§3.3).
 
 The selection criteria are the cause. Requiring small, ticket-tracked commits
 that fix and test in one change filters toward precisely this class of fault.
@@ -554,7 +575,7 @@ describe what is not there.
 **This replication therefore varies two things at once, date and fault
 composition, and composition dominates.** It does not bound contamination,
 which was its purpose. We report it because it establishes something else: the
-specification-only arm has a second competence beyond contract violations. Told
+specification-only arm reaches extreme-value faults readily. Told
 to probe boundaries, it finds extreme-value faults without needing a
 specification, and on a corpus made of them it matches the
 implementation-visible arm. Whether that generalises to a corpus sampled
@@ -644,13 +665,15 @@ code is measuring the protocol rather than the agent.
 The specification-only arm is not incompetent. Its suites compile, pass, cover
 73% of lines, and are wrong about behaviour in only 3.3% of tests — an agent
 writing from javadoc alone rarely misstates what the code does. It simply
-catches a different, much smaller class of faults: those where the
-implementation contradicts documentation. Four of its five detections are of
-exactly that shape.
+catches a much smaller set of faults, and we could not identify what they have
+in common: two of its five detections are documented-contract violations and
+three are not (§3.3).
 
-That is a coherent capability rather than a degraded one, and it suggests where
-specification-grounded generation is worth its cost: as a check on whether code
-and its documented contract agree, not as a general fault-detection method.
+We therefore cannot say where specification-grounded generation is worth its
+cost. The arm is not incompetent — its suites compile, pass, and are wrong
+about behaviour in only 3.3% of tests — but five detections out of thirty-six,
+with no property that distinguishes them from the rest, is not a capability we
+can characterise.
 
 ### 4.5 Separating the two, in practice
 
