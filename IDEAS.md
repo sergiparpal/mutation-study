@@ -25,6 +25,21 @@ this file needs a fresh set of bugs (another project, or GitBug-Java).
 
 ## The headline refutation: mutation score does not detect the mirror
 
+> **⚠ Refuted as stated (2026-11-17).** The mutation scores in this section
+> were read from Defects4J's `mutation` table, whose `mut_killed` column counts
+> mutants that no test executes as killed. Recomputed from Major's `kill.csv`
+> the two arms are at **58% and 44%**, not 72% and 71%, and the
+> implementation-visible suite scores higher in 35 of 36 bugs. Mutation score
+> does register the difference. It understates it: a factor of 1.3, against 5.2
+> in detection, and about half of that is coverage.
+>
+> So this section's claim joins the others in this file that were formed
+> quickly and did not survive measurement — except that this one *was* a
+> measurement, taken with an instrument nobody had checked. What survives is
+> weaker: mutation feedback is a loose proxy for the origin of the oracle, not
+> a blind one. The table and text below are kept for provenance only. See
+> `data/README.md`.
+
 **This is the result of Study B and it undercuts the premise most entries below
 are built on.** Two arms, same 40 bugs, same model, one variable — whether the
 agent could read the implementation:
@@ -188,6 +203,13 @@ input exists, but it exonerates the mutant and indicts the original.
 
 ### The five faults a spec-only suite does catch
 
+> **⚠ Corrected, twice.** "Four of the five" below was inferred from the fault
+> descriptions without reading any javadoc. Three are documented-contract
+> violations: Cli-32 (missing from the list below), Lang-13 and Gson-15. Csv-4
+> and Csv-6 are not — nothing documents a parser with no header or a record
+> shorter than its header. The classification was made knowing the outcome and
+> is a description, not a predictor. See `data/contract-violation.md`.
+
 Of 36 paired bugs, the spec arm detected Cli-32, Csv-4, Csv-6, Gson-15 and
 Lang-13. Four of the five are cases where the code contradicts a contract the
 javadoc states:
@@ -205,6 +227,10 @@ comment–code-divergence ideas below: those faults really are findable from
 documented intent alone, and an agent finds them without being told to look.
 
 ### Javadoc quality is enough, and measurably varies
+
+> **⚠ Corrected.** The denominator below double-counted six suites and missed a
+> seventh. The rate is 59 of 1638 (3.6%): Lang 0.7%, Csv 2.1%, Cli 5.9%, Gson
+> 8.5%.
 
 Prune rate — tests written blind that turned out to disagree with the
 implementation — was **59 of 1806 (3%)**, with a gradient:
@@ -325,7 +351,9 @@ objective: the comment is either there or it is not.
 
 Study B corroborates the mechanism from the other direction: the faults the
 spec-only arm detected are precisely the ones where the documented contract
-and the code disagree.
+and the code disagree. *(Three of the five, not all of them, and classified
+after the fact; see the corrected note under "The five faults a spec-only suite
+does catch".)*
 
 ### Comment–code divergence — from Csv-14, Cli-12
 

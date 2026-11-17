@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: >-
-  Oracle Provenance Is Invisible to Mutation Score: Agent-Generated Test
+  Mutation Score Understates Oracle Provenance: Agent-Generated Test
   Suites on Defects4J, With and Without the Implementation
 message: >-
   If you use this data or these scripts, please cite the repository.
@@ -10,16 +10,19 @@ authors:
     given-names: Sergi
 repository-code: https://github.com/sergiparpal/mutation-study
 abstract: >-
-  Two test suites were generated per Defects4J bug with the same agent, model
-  and instructions, varying only whether the agent could read the
-  implementation. Over 36 bugs measured in both arms, real-fault detection
-  falls from 72% to 14% while mutation score does not move (72% against 70%)
-  and line coverage falls only from 85% to 73%. With an EvoSuite baseline over
-  the same subjects, mutation score ranks the three suite populations in the
-  wrong order. The repository holds the generation and measurement scripts,
-  the per-suite measurements, a hand classification of the 40 faults, a probe
-  of what the model recalls about each fault with no code in context, and two
-  post-cutoff replication corpora.
+  Two test suites were generated per Defects4J bug with the same agent and
+  model, under two conditions: the agent either works inside the checked-out
+  project or sees only its javadoc. Over 36 bugs measured in both arms,
+  real-fault detection falls from 72% to 14%, while mutation score falls from
+  58% to 44% and line coverage from 85% to 73%. With an EvoSuite baseline over
+  the same subjects, EvoSuite and the specification-only suites are nearly
+  tied on mutation score and differ three-fold in detection. An earlier
+  release reported the two arms' mutation scores as 72% and 70%; those figures
+  counted uncovered mutants as killed and are withdrawn. The repository holds
+  the generation and measurement scripts, the per-suite measurements, a hand
+  classification of the 40 faults, a probe of what the model recalls about
+  each fault with no code in context, two post-cutoff replication corpora, and
+  an audit of what the benchmark's own files told the agent.
 keywords:
   - test generation
   - mutation testing
