@@ -125,3 +125,33 @@ rewrites are rare in routine maintenance, and four were identified across 227
 candidates. The corpus is therefore 19 subjects with OMISSION 10, ALGORITHM 3,
 SUBSTITUTION 3, STATE 2, MISSING_CLAUSE 1 — a composition still far closer to
 the Defects4J sample than the first post-cutoff corpus was.
+
+## Corrections (recorded 2026-11-17, after an audit of the write-up)
+
+Nothing above has been edited. Three things in it are wrong or have changed
+since, and are recorded here so that the pre-registered text stays as it was
+written.
+
+1. **The premise in "Why" does not hold.** The first post-cutoff corpus did not
+   show the specification-only arm catching extreme-value faults. Its 7/7 was a
+   harness error: all seven builds failed the Apache RAT licence audit on the
+   buggy revision before any test ran, and a failed build was recorded as a
+   detection (`bin/tally-postcutoff.py`, `data/README.md`). That arm has no
+   valid result on the first corpus. The design of this corpus — composition
+   fixed by quota to match the Defects4J sample — does not depend on the
+   premise and stands.
+2. **The target distribution was scaled from a wrong tally.** The Defects4J
+   column reads 21, 7, 5, 4, 3, 1, which sums to 41. `fault-taxonomy.csv` has
+   OMISSION 22, ALGORITHM 6, SUBSTITUTION 5, STATE 3, MISSING_CLAUSE 3, API 1.
+   Scaled to 20 that is 11, 3, 2.5, 1.5, 1.5 and 0.5 against quotas of 10, 4,
+   3, 2, 1 and 0. No quota is off by more than one subject, and the ALGORITHM
+   quota that could not be filled (3 of 4) is the one the correct tally would
+   have set at 3.
+3. **Result.** Over the 13 subjects with a valid verdict in both arms the
+   implementation-visible arm detects 8 and the specification-only arm 4. Four
+   are detected by the former alone and none by the latter alone; exact McNemar
+   *p* = 0.125. An earlier summary gave 14 pairs, 8 against 5 and *p* = 0.375.
+   It counted commons-lang-e4380908b as detected by the specification-only arm
+   alone, from a `.detection` file left by an attempt made under the old rule,
+   whose build had also died at the RAT audit; that subject's latest run has no
+   accepted suite.

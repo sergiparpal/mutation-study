@@ -2,11 +2,15 @@
 #
 # List post-cutoff fix-commit candidates for the matched corpus, newest first.
 #
-# Deliberately does NOT filter by commit size or by ticket reference. Those
-# were the criteria that skewed the first post-cutoff corpus toward
-# extreme-value faults (§3.8 of the paper). The only structural requirement is
-# that the commit changes both production and test code, since a subject needs
-# a trigger test.
+# Deliberately does NOT filter by commit size or by ticket reference, the
+# criteria used for the first post-cutoff corpus. Composition is fixed by quota
+# instead (data/matched-quotas.md). The only structural requirement is that the
+# commit changes both production and test code, since a subject needs a trigger
+# test.
+#
+# (This comment used to say those criteria had skewed the first corpus toward
+# extreme-value faults. The result that suggested it was a harness error; see
+# run-postcutoff.sh. Fixing composition by quota does not depend on it.)
 #
 # Output is one candidate per line:
 #   <repo> <sha> <date> <prod-file-count> <subject>

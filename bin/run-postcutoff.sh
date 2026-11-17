@@ -24,6 +24,33 @@
 # Subjects come from bin/mine-postcutoff.sh, which validated fail-to-pass for
 # each and recorded the metadata this script consumes.
 #
+# THE LICENCE-AUDIT ERROR
+# -----------------------
+# Until 2026-09-30 the buggy-revision run was a bare `mvn test`, and any
+# non-zero exit was recorded as `Fail`, a detection. The fixed-revision run
+# skipped RAT; the buggy-revision run did not. Commons builds audit licence
+# headers before running tests, a test file written in the specification-only
+# sandbox has no header, and so the build died at rat-check without executing a
+# single test. All seven specification-only "detections" of the first corpus
+# were that, and were published as 7/7.
+#
+# Both runs now skip RAT, and `Fail` requires a failing test of the generated
+# suite in the log; a build that fails for any other reason is recorded as
+# build_failed_not_detection. The verdicts in data/postcutoff*-runs/ have been
+# re-derived from the archived logs with this rule (bin/tally-postcutoff.py).
+# The first corpus's specification-only arm has no valid verdict left and
+# cannot be re-measured: the generated tests were not archived.
+#
+# KNOWN LIMITATIONS
+# -----------------
+# - The implementation-visible agent works in a `git worktree`, with the whole
+#   history reachable, the fix commit and its message included. The Defects4J
+#   runs delete .git; here the prompt forbids git and nothing enforces it.
+# - Only the logs are kept. The generated test sources are not archived, so no
+#   verdict can be recomputed from the suite itself.
+# - A subject whose latest run fails can keep a .detection file from an earlier
+#   attempt. Tally with bin/tally-postcutoff.py, which requires status `ok`.
+#
 # Usage:
 #   ARM=agent MODEL=sonnet ./bin/run-postcutoff.sh
 #   ARM=spec  MODEL=sonnet ./bin/run-postcutoff.sh
@@ -224,7 +251,7 @@ print(('ok' if not err else ('dead' if (cost == 0 or limit) else 'error'))
     # ---- acceptance: prune failing methods, keep the rest ------------------
     #
     # Rejecting a whole suite over one wrong expectation is not an option here.
-    # On the Defects4J corpus the specification-only arm needed 3.3% of tests
+    # On the Defects4J corpus the specification-only arm needed 3.6% of tests
     # disabled; applying an all-or-nothing filter to this corpus discarded half
     # the suites outright, and the survivors were a biased sample — only those
     # that happened to come out perfect. Both arms use the same filter, so the
@@ -234,11 +261,13 @@ print(('ok' if not err else ('dead' if (cost == 0 or limit) else 'error'))
     # a few bytes within the same second, and Maven's incremental compile can
     # skip the rebuild, leaving the previous bytecode in place and the loop
     # never converging.
-    METHODS_TOTAL=0
-    for f in $WRITTEN; do
-        C=$(grep -cE "@Test|public void test" "$WF/src/test/java/$f" 2>/dev/null || echo 0)
-        METHODS_TOTAL=$((METHODS_TOTAL + C))
-    done
+    # Counted by prune-failing-tests.py. The earlier `grep -cE "@Test|public
+    # void test"` counted a method twice when it had both the annotation and a
+    # test-prefixed public signature; nine of the recorded .pruned totals in
+    # the two post-cutoff corpora are doubled for that reason (data/README.md).
+    TEST_PATHS=""
+    for f in $WRITTEN; do TEST_PATHS="$TEST_PATHS $WF/src/test/java/$f"; done
+    METHODS_TOTAL=$("$ROOT/bin/prune-failing-tests.py" --count $TEST_PATHS)
     PRUNED_TOTAL=0
     ACCEPTED=no
 
@@ -309,11 +338,10 @@ done
 
 echo
 [ "$ABORTED" = yes ] && echo "*** aborted early — rerun to resume ***" && echo
-TOT=$(ls "$ROOT/$RUNS"/*.${ARM}.detection 2>/dev/null | wc -l)
-DET=$(grep -lx Fail "$ROOT/$RUNS"/*.${ARM}.detection 2>/dev/null | wc -l)
-echo "arm $ARM: $DET/$TOT detected"
-echo "pruned:  $(cd "$ROOT" && awk '{p+=$1; t+=$2} END{if(t) printf "%d of %d (%.1f%%)", p, t, 100*p/t}' "$RUNS"/*.$ARM.pruned 2>/dev/null)"
-echo "cost:    \$$(cd "$ROOT" && python3 - <<EOF
+# Tallied from the logs, over runs whose status is ok — never by counting
+# .detection files, which can outlive the run that wrote them.
+(cd "$ROOT" && python3 bin/tally-postcutoff.py "$RUNS")
+echo "cost ($ARM): \$$(cd "$ROOT" && python3 - <<EOF
 import json, glob
 t = 0.0
 for f in glob.glob('$RUNS/*.$ARM.json'):
