@@ -28,9 +28,9 @@ score falls from 58% to 44% and line coverage from 85% to 73%: a quarter and a
 seventh, against four fifths for detection. An EvoSuite baseline over the same
 subjects shows the same thing from another side. EvoSuite and the
 specification-only suites are within a few points of each other on mutation
-score, 48% and 44%, while EvoSuite detects three times as many faults, 41%
-against 14%; and EvoSuite matches the implementation-visible suites on
-coverage, 85% against 84%, while detecting 41% against 69%.
+score, 47% and 44%, while EvoSuite detects nearly three times as many faults,
+41% against 15%; and EvoSuite matches the implementation-visible suites on
+coverage, 85% in both, while detecting 41% against 71%.
 
 Mutation score and coverage measure how much of a program a suite exercises
 and how hard it checks what it exercises. Neither measures where the expected
@@ -91,9 +91,9 @@ McNemar test on the 21 discordant pairs gives *p* = 9.5 × 10⁻⁷.
 and line coverage from 85% to 73%, against a five-fold fall in detection. An
 EvoSuite baseline over the same subjects shows how loosely either metric tracks
 detection once the source of the expectations varies. EvoSuite and the
-specification-only suites have nearly the same mutation score (48% and 44%)
-and detection rates of 41% and 14%; EvoSuite and the implementation-visible
-suites have the same coverage (85% and 84%) and detection rates of 41% and 69%.
+specification-only suites have nearly the same mutation score (47% and 44%)
+and detection rates of 41% and 15%; EvoSuite and the implementation-visible
+suites have the same coverage (85%) and detection rates of 41% and 71%.
 The specification-only suites are weaker than the implementation-visible ones
 on every count, but not by anything like a factor of five. What differs most is
 where their expectations came from.
@@ -117,9 +117,9 @@ Contributions:
    which are reached by probing boundaries. The classification was not blind
    and is reported as a description, not as a predictor.
 4. An EvoSuite baseline over the same subjects, which shows the two approaches
-   to be complementary rather than ordered — 12 faults are found only by the
+   to be complementary rather than ordered — 14 faults are found only by the
    agent, 4 only by EvoSuite — and which sits next to the specification-only
-   suites on mutation score while detecting three times as many faults.
+   suites on mutation score while detecting nearly three times as many faults.
 5. An account of contamination channels in Defects4J checkouts that appear not
    to be routinely controlled. The checkout ships the fix commit in its git
    history, with a subject line naming the fault; we remove it. It also ships
@@ -278,9 +278,9 @@ runs found four things they leave behind in the M arm's working copy:
   commit subject quoted above, issue number included.
 - The rest of the developer test suite, by design.
 
-The agent used at least the first of these; §3.9 gives the evidence. None of
-these files exists in the S arm's sandbox, though the sandbox's directory name
-carries the bug identifier too.
+The agent used at least the first of these, and in one run the second; §3.9
+gives the evidence. None of these files exists in the S arm's sandbox, though
+the sandbox's directory name carries the bug identifier too.
 
 **Training-data contamination is measured rather than eliminated.** Defects4J
 has been public for years and may appear in the model's training data. The S
@@ -354,6 +354,17 @@ two-class bug that produced a suite. The invocation was not scripted or logged;
 the budget is reconstructed from the timestamps of the generated files, which
 for most single-class bugs are 66 to 80 seconds apart.
 
+Five of its suites, all on Commons Cli, could not be loaded by Defects4J's
+detection and coverage harness: `NoClassDefFoundError:
+org/hamcrest/SelfDescribing`, on both revisions. The fault is Defects4J's. Its
+build file for Cli points the harness at a JUnit jar the framework does not
+ship, so a generated JUnit 4 test has Hamcrest only where the project supplies
+it, and these revisions ship JUnit 3.8. Those five suites were measured with
+that one path corrected (`bin/remeasure-cli-evosuite.sh`). As a check, the
+sixteen other Cli suites, from all three generators, were measured with the
+correction too, and every one came out as it had without it. The mutation
+harness ran the five as they were.
+
 It is not a third arm of the manipulation: like the implementation-visible arm
 it generates against the fixed revision and works from the repaired code. What
 it lacks is any interpretation of that code — it asserts observed behaviour —
@@ -394,7 +405,7 @@ therefore read afterwards against all the sampled faults in its class (§3.7).
 
 ### 2.9 Exclusions
 
-Five bugs are excluded from some or all measurements, and eight further suites
+Five bugs are excluded from some or all measurements, and three further suites
 lack a detection verdict or a coverage figure. Cli-21 appears three times: it
 is affected by three independent problems.
 
@@ -403,7 +414,6 @@ is affected by three independent problems.
 | Cli-21, Csv-3 | M, all measurements | Suite extended a test helper from the project's test tree, so it compiles in the working copy but not as a standalone archive. The M prompt did not ask for self-contained classes; the S prompt did (§2.2) |
 | Gson-14, Gson-16 | all arms, all measurements | Major's mml compiler rejects the class name: `invalid scope: com.google.gson.internal.$Gson$Types`. EvoSuite's generated suite for the same class does not compile either — `illegal start of expression` on the `$` in the identifier. Two independent tools fail on this one class, which is why we treat it as a tooling limitation rather than a property of the bugs |
 | Cli-15, Cli-21 | EvoSuite, all measurements | `gen_tests` produced no output and no log; both are `cli2` subjects, whose declared classpath references jars that the checkout never materialises |
-| Cli-10, Cli-12, Cli-17, Cli-28, Cli-32 | EvoSuite, detection and coverage | `Broken`. The suite fails to load in Defects4J's detection harness on both revisions, with `NoClassDefFoundError: org/hamcrest/SelfDescribing`. Defects4J's build file for Cli points the harness at a JUnit jar the framework does not ship, so Hamcrest is on the classpath only where the project itself supplies it, and these revisions ship JUnit 3.8. The same suites run under the mutation harness |
 | Csv-16 | EvoSuite, detection | `Broken`. The suite references a class the fix introduces and does not compile against the buggy revision |
 | Cli-21 | S, detection | `Broken`. The suite calls an interface method the fix adds — the javadoc the agent wrote from is the fixed revision's — and does not compile against the buggy revision |
 | Lang-34 | EvoSuite, coverage | A test fails under the coverage harness |
@@ -411,8 +421,8 @@ is affected by three independent problems.
 This leaves 36 M-arm suites and 38 S-arm suites with a mutation score and a
 coverage figure, 37 of the latter with a detection verdict, and **36 bugs with
 all three measurements in both arms**. All paired figures use those 36.
-EvoSuite has 36 suites with a mutation score, 30 with a detection verdict and
-30 with a coverage figure; §3.5 compares the three generators on the 29 bugs
+EvoSuite has 36 suites with a mutation score, 35 with a detection verdict and
+35 with a coverage figure; §3.5 compares the three generators on the 34 bugs
 where each has a detection verdict.
 
 For Gson-14 and Gson-16 the specification-only suites did yield detection and
@@ -456,11 +466,11 @@ Reported per arm over every suite measured, including the unpaired ones:
 |---|---|---|---|---|
 | M arm, Sonnet | 36 | 26/36 (72%) | 58% | 85% |
 | S arm, Sonnet | 38 | 6/37 (16%) | 44% | 73% |
-| EvoSuite | 36 | 13/30 (43%) | 47% | 85% |
+| EvoSuite | 36 | 15/35 (43%) | 47% | 85% |
 | M arm, Opus † | 6 | 6/6 | 70% | 89% |
 
-Detection is over the suites with a valid verdict: one S-arm suite and six
-EvoSuite suites are `Broken` (§2.9). EvoSuite's coverage is over the 30 suites
+Detection is over the suites with a valid verdict: one S-arm suite and one
+EvoSuite suite are `Broken` (§2.9). EvoSuite's coverage is over the 35 suites
 that have a figure.
 
 † Six of the first seven bugs of the sample rather than a random subset: the
@@ -568,40 +578,39 @@ are the `cli2` subjects (§2.9). Like the implementation-visible arm, EvoSuite
 generates against the fixed revision and works from the repaired code.
 
 Thirty-five bugs have a suite from all three generators with a mutation score.
-Six of the EvoSuite suites are `Broken`, five of them because Defects4J's
-harness cannot load them (§2.9), so the three are compared on the 29 bugs where
-each has a valid detection verdict:
+One of the EvoSuite suites is `Broken` (§2.9), so the three are compared on the
+34 bugs where each has a valid detection verdict:
 
 | | detection | mutation | coverage |
 |---|---|---|---|
-| M arm (implementation-visible) | 20/29 (69%) | 57% | 84% |
-| EvoSuite | 12/29 (41%) | 48% | 85% |
-| S arm (specification-only) | 4/29 (14%) | 44% | 72% |
+| M arm (implementation-visible) | 24/34 (71%) | 58% | 85% |
+| EvoSuite | 14/34 (41%) | 47% | 85% |
+| S arm (specification-only) | 5/34 (15%) | 44% | 73% |
 
-EvoSuite's coverage is over 28 suites (§2.9). Over all 35 bugs the mutation
-scores are 58%, 47% and 44%.
+EvoSuite's coverage is over 33 suites (§2.9). Five of its 34 verdicts come
+from the corrected harness of §2.7.
 
 EvoSuite falls between the two arms on detection. It works from the same
 repaired implementation as the implementation-visible arm, though not from the
 tests, changelog and benchmark metadata that arm could also read (§3.9), so the
-gap from 69% to 41% mixes a difference in generator with a difference in
-information. The gap from 69% to 14% is between the same generator under the
+gap from 71% to 41% mixes a difference in generator with a difference in
+information. The gap from 71% to 15% is between the same generator under the
 two conditions.
 
-**The two approaches are complementary, not ordered.** Of the 29 bugs, 8 are
-detected by both, 12 by the agent alone, 4 by EvoSuite alone, and 5 by neither
-— a union of 24 (83%). A search-based generator that asserts observed behaviour
+**The two approaches are complementary, not ordered.** Of the 34 bugs, 10 are
+detected by both, 14 by the agent alone, 4 by EvoSuite alone, and 6 by neither
+— a union of 28 (82%). A search-based generator that asserts observed behaviour
 without interpreting it still reaches four faults that the agent misses.
 
 **Neither metric tracks detection across the three populations.** Mutation
 score puts the implementation-visible suites first and the other two close
-together: 48% for EvoSuite and 44% for the specification-only suites when
-pooled, 47% and 49% — the other way round — when averaged per suite. Their
-detection rates are 41% and 14%. Coverage does separate those two, 85% against
-72%, but then cannot tell EvoSuite from the implementation-visible suites, 85%
-against 84%, whose detection rates are 41% and 69%. On the mutants they
-execute, the specification-only suites kill more than EvoSuite's do, 59%
-against 54%, and detect a third as many faults.
+together: 47% for EvoSuite and 44% for the specification-only suites when
+pooled, 47% and 48% — the other way round — when averaged per suite. Their
+detection rates are 41% and 15%. Coverage does separate those two, 85% against
+73%, but then cannot tell EvoSuite from the implementation-visible suites, 85%
+for both, whose detection rates are 41% and 71%. On the mutants they execute,
+the specification-only suites kill more than EvoSuite's do, 59% against 54%,
+and detect about a third as many faults.
 
 ### 3.6 Cost
 
@@ -781,9 +790,10 @@ an effect in the same direction survives its removal.
 
 The controls of §2.4 were meant to give the M-arm agent the repaired code
 without telling it what had been repaired. They did not achieve that. No
-transcript of the runs was kept — only each run's closing message and the suite
-it wrote — so what the agent read cannot be observed. But those two artifacts
-show what it knew (`bin/audit-trigger-leaks.py`):
+transcript of the runs was kept, so what the agent read cannot be observed
+directly. Each run left its closing message and the suite it wrote, and three
+left notes in the agent's persistent memory. Those artifacts show what it knew
+(`bin/audit-trigger-leaks.py`, `data/agent-notes/`):
 
 | evidence | bugs |
 |---|---|
@@ -791,19 +801,31 @@ show what it knew (`bin/audit-trigger-leaks.py`):
 | The closing message names the trigger test | Csv-8, Lang-13, Lang-62 |
 | The closing message names its own Defects4J bug: "the Lang-13 regression", "the Lang-52 fix", "the Lang-63 trigger scenario", "the CSV-106 / Csv-5 regression point" | Csv-5, Lang-13, Lang-52, Lang-63; also Csv-14 (not detected) and Cli-21 (excluded) |
 | The suite carries the issue number that appears in the trigger test's name, and reproduces that test's input and expected output | Lang-43 |
+| The agent's own note gives the trigger test by name with its input and expected output, and the test that detects the fault reproduces them | Lang-63 |
 
 That is 13 of the 40 M-arm suites, and **11 of the arm's 26 detections**. One
 of the six Opus suites, Lang-43's, carries the same issue number. None of the
 40 S-arm suites or closing messages shows any of it.
 
-Once the trigger tests' files are deleted, their names survive in one place in
-the working copy: `defects4j.build.properties`. The bug identifier is in that
-file, in `.defects4j.config` and in the directory name. So for at least these
-eleven the agent was not only shown the repair. It was told, by the benchmark's
-own bookkeeping, which behaviour the benchmark would test — and "trigger" is
+Once the trigger tests' files are deleted, their names survive in
+`defects4j.build.properties` and, for the five bugs of §2.4, in Defects4J's
+backup of the test class. The bug identifier is in the properties file, in
+`.defects4j.config` and in the directory name. So for at least these eleven
+the agent was not only shown the repair. It was told, by the benchmark's own
+bookkeeping, which behaviour the benchmark would test — and "trigger" is
 Defects4J's word, not the projects'. Where the agent reproduced a deleted
 test's body as well (Lang-13, Lang-43), nothing left in the working copy
 contains it; the likeliest source is training data, cued by the name.
+
+Lang-63 is the one case with a first-hand record. The note that run left gives
+the trigger test as "`DurationFormatUtilsTest::testJiraLang281` (2005-12-31 ->
+2006-10-06, "MM" -> "09")", and says of the developer tests we removed that
+they are "sometimes kept as `.java.bak` — useful for known-good expected
+values". The one test of that suite that fails on the buggy revision has those
+dates, that pattern and that expected string. Their only copy in the working
+tree was Defects4J's backup of the trigger test's class. That detection is the
+developer's test, copied. The backups of the other four bugs were compared
+with their suites by hand, and none is reproduced.
 
 This does not change what was measured: 26 of 36 against 5 of 36 under two
 conditions. It changes what the first condition is. The M arm is not "the
@@ -869,8 +891,8 @@ happens to pin that behaviour down. The two can kill exactly the same mutants.
 The EvoSuite baseline (§3.5) shows the same looseness between populations that
 our manipulation did not create. EvoSuite and the specification-only suites
 cannot be told apart by mutation score — the order between them depends on how
-the scores are aggregated — and differ three-fold in detection. Coverage, which
-does separate those two, cannot separate EvoSuite from the
+the scores are aggregated — and differ nearly three-fold in detection.
+Coverage, which does separate those two, cannot separate EvoSuite from the
 implementation-visible suites.
 
 Stated as one sentence: **mutation score tracks the strength of a suite's
@@ -958,7 +980,9 @@ by design, the last two by oversight.
   implementation — but it is a second difference and must be declared. It is
   also unenforced: the sandbox contains the compiled classes and a shell, and
   only the prompt forbids running or disassembling them. No transcript was
-  kept against which compliance could be checked.
+  kept against which compliance could be checked. The notes one S-arm run left
+  (Csv-3) describe compiling without running and call bytecode inspection
+  disallowed, which is one run's own account.
 - *The rest of the checkout.* The M arm works in the project and can read its
   other tests, build files and changelog. The S arm has none of them.
 - *Acceptance.* A failing S-arm test is disabled; an M-arm suite must pass
@@ -983,6 +1007,15 @@ expectations to the code, which is precisely the behaviour under study. The
 asymmetry does not manufacture the effect; it is part of it. The metadata is a
 different matter: it could manufacture part of the effect, and we cannot say
 how much.
+
+**The runs were not isolated from one another.** The agent ran under the
+operator's ordinary profile, which gives it a persistent memory kept per
+working directory, and a bug has the same working directory whatever the
+model. The Opus pilot and the Sonnet arm therefore shared a memory, as any
+repeated run would. Notes survive from three runs (`data/agent-notes/`); each
+was written by the run reported here and carries nothing from another, and no
+notes were found for any other working directory. The design did not close the
+channel, all the same.
 
 **Training-data contamination is measured, not bounded.** Defects4J has been
 public for years. Structurally, if the M arm's detection rate reflected
@@ -1269,8 +1302,8 @@ remaining detections a strict subset of the original.
 The metrics around that number move in the same direction and nowhere near as
 far. Mutation score falls from 58% to 44%, coverage from 85% to 73%. With a
 search-based baseline added, mutation score cannot tell apart two populations
-whose detection rates differ three-fold, and coverage cannot tell apart two
-whose rates are 41% and 69%. A suite's assertions can be strong while its
+whose detection rates differ nearly three-fold, and coverage cannot tell apart
+two whose rates are 41% and 71%. A suite's assertions can be strong while its
 expectations were copied from the program they are meant to judge, and the
 scores reflect the difference only in part.
 
@@ -1301,14 +1334,18 @@ filter). The search-based baseline was produced with Defects4J's own
 `bin/analyze-agent-suites.sh`, which wraps `run_bug_detection.pl`,
 `run_coverage.pl` and `run_mutation.pl`, and `bin/merge-agent-metrics.py`,
 which merges their tables and recomputes the mutation columns from Major's
-per-mutant output. The post-cutoff corpora are mined by
+per-mutant output. `bin/remeasure-cli-evosuite.sh` repeats the measurement of
+the five EvoSuite suites of §2.7 with Defects4J's JUnit path corrected; its
+output is kept apart from Defects4J's own tables, and the merged file marks
+the rows taken from it. The post-cutoff corpora are mined by
 `bin/mine-postcutoff.sh`, run by `bin/run-postcutoff.sh` and tallied from their
 logs by `bin/tally-postcutoff.py`.
 
 Raw artifacts are under `data/`: one directory per arm holding, for each bug,
 the record of the run (its closing message, cost and turn count, not a
 transcript) and the intermediate logs; the packaged suites; and the merged
-per-suite measurements in `data/agent-metrics-final.csv`. The
+per-suite measurements in `data/agent-metrics-final.csv`. The notes three runs
+left in the agent's memory are in `data/agent-notes/`. The
 specification-only sandboxes were kept on the generating machine as an audit
 trail and are not in the repository. For the post-cutoff corpora the build logs
 are archived and the generated tests are not. The method record, including the
