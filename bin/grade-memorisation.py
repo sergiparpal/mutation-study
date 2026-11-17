@@ -14,10 +14,26 @@ Two stages, because neither alone is trustworthy:
    overlap means the model reproduced specifics of a fault it was not shown; a
    low one means it produced plausible-sounding but unspecific text.
 
-The second stage is a screen, not a verdict. Answers flagged as high overlap
-must be read by hand before being counted as recall: a model can name
-`createNumber` because that is the obvious method in a class called
-NumberUtils, without recalling anything about the fault.
+The second stage is a screen, not a verdict, and it fails in both directions.
+
+It over-flags: a model can name `createNumber` because that is the obvious
+method in a class called NumberUtils, without recalling anything about the
+fault. Answers flagged as high overlap must be read by hand before being
+counted as recall.
+
+It also under-flags, which was found later and cost a wrong published figure.
+Each answer is scored only against the diff of the bug the probe was issued
+for, but the location cue names a CLASS, and several sampled bugs share one.
+The probe for Gson-14 returned an exact description of the Gson-16 fault (both
+are in $Gson$Types) and scored `claims_low`; the probe for Lang-23 named
+LANG-477, the issue behind Lang-43. Neither was read, because only
+`claims_high` answers were. So: EVERY answer that does not disclaim must be
+read by hand, against every sampled fault in that class. The readings are
+recorded in data/memorisation-readings.csv.
+
+A probe that returns no answer at all is graded `no_answer`. One did: the model
+tried to call a tool, and with --max-turns 1 that ends the run. It was
+previously counted as an unspecific claim.
 
 Reads:  data/memorisation/<Bug>.{A,B}.json, data/raw/<Bug>/fix.diff
 Writes: data/memorisation-grades.csv
@@ -69,6 +85,8 @@ def fix_identifiers(diff_path):
 
 
 def read_answer(path):
+    """(answer, cost). answer is None if the file is missing or unreadable,
+    and "" if the run ended without producing one."""
     if not os.path.exists(path):
         return None, 0.0
     try:
@@ -94,6 +112,10 @@ def main():
             cost += c
             if ans is None:
                 row[f"{probe}_verdict"] = "missing"
+                row[f"{probe}_hits"] = ""
+                continue
+            if not ans:
+                row[f"{probe}_verdict"] = "no_answer"
                 row[f"{probe}_hits"] = ""
                 continue
             low = ans.lower()
@@ -126,18 +148,18 @@ def main():
         line = "  ".join(f"{k} {v}" for k, v in sorted(counts.items()))
         print(f"  probe {probe}: {line}   (n={total})")
 
-    flagged = [r for r in rows
-               if r.get("A_verdict") == "claims_high"
-               or r.get("B_verdict") == "claims_high"]
-    if flagged:
-        print(f"\nRead these by hand before counting them as recall "
-              f"({len(flagged)}):")
-        for r in flagged:
+    claims = [r for r in rows
+              if str(r.get("A_verdict", "")).startswith("claims")
+              or str(r.get("B_verdict", "")).startswith("claims")]
+    if claims:
+        print(f"\nRead ALL of these by hand, against every sampled fault in "
+              f"the same class ({len(claims)}):")
+        for r in claims:
             print(f"  {r['bug_id']:<10} A={r['A_verdict']:<12} "
                   f"B={r['B_verdict']:<12} hits: "
                   f"{r['A_hits'] or r['B_hits']}")
     else:
-        print("\nNo answer reproduced three or more identifiers from its fix.")
+        print("\nEvery answer disclaimed.")
 
 
 if __name__ == "__main__":

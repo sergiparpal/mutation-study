@@ -18,12 +18,27 @@
 #
 #   B — location cue:    "Was there a known bug in <Class> in <project>
 #                         around that era?"
-#       This is closer to what the M-arm agent actually had: project and
-#       class, never the bug id.
+#       This was meant to match what the M-arm agent had: project and class,
+#       not the bug id. It does not — see "Limits found afterwards" below.
 #
 # Interpretation. Recall on A or B is evidence the threat is real. Silence on
 # both rules out *spontaneous* recall, but not recall cued by the source code
 # itself — the design cannot separate those, as §5.1 of the paper states.
+#
+# What "no tools" means here. --allowedTools "" pre-approves nothing; it does
+# not remove the tools, and the probe still runs inside the Claude Code
+# harness with its system prompt. What keeps an answer tool-free is
+# --max-turns 1: a tool call needs a second turn, so a probe that tries one
+# ends in error_max_turns with no answer. One of the eighty did (Cli-28, probe
+# B, a `find /` for the Commons CLI sources) and is graded `no_answer`.
+#
+# Limits found afterwards. B names only the FIRST modified class, so for the
+# two multi-class bugs (Gson-4, Cli-21) the other classes were never asked
+# about. Several sampled bugs share a class and so received the identical
+# question; one probe per bug is a single sample of a variable answer (the
+# question about $Gson$Types drew an exact description of Gson-16 once and a
+# disclaimer once). And the agent in the M arm did have the bug identifier,
+# through the checkout's own files — see run-agent-suites.sh.
 #
 # Usage:
 #   MODEL=sonnet ./bin/probe-memorisation.sh
