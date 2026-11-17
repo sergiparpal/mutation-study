@@ -13,8 +13,10 @@ trigger tests in full, and the working directory name carries the bug id
 (see the header of run-agent-suites.sh for the other channels).
 
 There are no transcripts, only each run's final message and the suite it
-wrote, so what the agent read cannot be observed directly. This script reports
-what those two artifacts give away:
+wrote, so what the agent read cannot be observed directly. Three runs also left
+notes in the agent's persistent memory (data/agent-notes/); the lines of those
+that mention the benchmark's files are printed at the end. This script reports
+what the first two artifacts give away:
 
   name     a generated test method has exactly the name of a developer
            trigger test
@@ -49,6 +51,27 @@ ARMS = (("agent", "data/agent-runs", "M, Sonnet"),
 SUITE_DIRS = ("data/agent-suites", "data/agent-suites-broken")
 ISSUE_IN_NAME = re.compile(r"(lang|csv|cli|gson)[_-]?(\d{2,4})", re.I)
 HYPHENS = r"\-‐‑‒–"                # the agent sometimes types U+2011
+NOTES = "data/agent-notes"
+NOTE_LINE = re.compile(r"d4j trigger|tests\.trigger|\.java\.bak|"
+                       r"\.defects4j\.config|defects4j\.build\.properties|"
+                       r"is the \S+ fix|disallowed", re.I)
+
+
+def report_notes():
+    """Print what the archived memory notes say about the benchmark's files."""
+    files = sorted(glob.glob(os.path.join(NOTES, "*", "*.md")))
+    if not files:
+        return
+    runs = sorted({os.path.basename(os.path.dirname(f)) for f in files})
+    print()
+    print(f"Notes written to the agent's persistent memory: {len(runs)} runs "
+          f"({', '.join(runs)})")
+    for path in files:
+        run = os.path.basename(os.path.dirname(path))
+        with open(path, encoding="utf-8") as fh:
+            for line in fh:
+                if NOTE_LINE.search(line):
+                    print(f"  {run:<10} {' '.join(line.split())[:160]}")
 
 
 def suite_sources(project, bug, arm):
@@ -139,6 +162,7 @@ def main():
     print("An issue number alone is the weakest of these: a project's sources "
           "and remaining tests\ncan cite it. The other three have no source in "
           "the working copy but Defects4J's own files.")
+    report_notes()
 
 
 if __name__ == "__main__":

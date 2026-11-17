@@ -1,0 +1,12 @@
+[Cli-5] checkout (w-KI6ZnCDK)
+[Cli-5] leak scan: clean
+[Cli-5] invoking agent (claude-sonnet-5, s2)
+[Cli-5] agent done: $0.196 turns=8 state=ok
+[Cli-5] round 1: disabled 3 failing methods
+[Cli-5] pruned 3 of 18 tests
+[Cli-5] packaged: Cli-5f-s2.1.tar.bz2
+
+s2 suites packaged: 1
+failures:           0
+disabled tests:     3 of 18 (16.7%)
+cost, as reported:  $0.20

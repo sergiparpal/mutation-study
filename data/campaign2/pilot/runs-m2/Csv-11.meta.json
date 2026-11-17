@@ -1,0 +1,19 @@
+{
+  "bug": "Csv-11",
+  "arm": "m2",
+  "working_copy": "w-RNlH1D4i",
+  "model": "claude-sonnet-5",
+  "cli": "2.1.316 (Claude Code)",
+  "tools": "Bash,Read,Write,Edit,Glob,Grep",
+  "max_turns": 50,
+  "max_budget_usd": 5,
+  "flags": "--restricted --strict-mcp-config --disable-slash-commands --no-session-persistence --permission-mode acceptEdits --permission-prompts none",
+  "environment": "env -i HOME PATH TZ=America/Los_Angeles LANG=C.UTF-8 CLAUDE_CODE_DISABLE_AUTO_MEMORY=1 CLAUDE_CODE_DISABLE_LEGACY_MODEL_REMAP=1",
+  "junit": 4,
+  "source_level": "8",
+  "stubbed": "no",
+  "issue": "CSV-122",
+  "started": "2026-11-17T16:17:43Z",
+  "finished": "2026-11-17T16:19:22Z",
+  "dry_run": ""
+}

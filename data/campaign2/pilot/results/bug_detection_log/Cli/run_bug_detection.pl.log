@@ -1,0 +1,4 @@
+######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-11-17 08:20:10  ######
+ - Executing test suite: Cli-5f-s2.1.tar.bz2
+ - Found 1 failing tests on buggy version: Cli-5f-s2.1.tar.bz2
+######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-11-17 08:20:21  ######

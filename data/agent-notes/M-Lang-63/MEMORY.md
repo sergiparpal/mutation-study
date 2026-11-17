@@ -1,0 +1,1 @@
+- [D4J agent test generation](d4j-agent-test-generation.md) — conventions for writing `<ClassName>AgentTest` classes for Defects4J bugs (JUnit 3 style, verification cmd, TZ gotcha)

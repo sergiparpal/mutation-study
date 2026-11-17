@@ -29,22 +29,31 @@
 # for. Such a suite was never validly run against the buggy revision. It is
 # not a non-detection and must not be counted as one.
 #
-# This script DELETES data/agent-results before it starts: the Defects4J
-# scripts append to their tables. To rebuild only the merged CSV from results
-# that already exist, run merge-agent-metrics.py on its own.
+# This script DELETES the tables and logs under the results directory before
+# it starts: the Defects4J scripts append to their tables. It leaves
+# remeasured/ alone (see remeasure-cli-evosuite.sh). To rebuild only the merged
+# CSV from results that already exist, run merge-agent-metrics.py on its own.
 #
 # Usage:
 #   ./bin/analyze-agent-suites.sh                    # data/agent-suites
 #   ./bin/analyze-agent-suites.sh /tmp/other/suites
 #   D4J_BIN=/path/to/defects4j/framework/bin ./bin/analyze-agent-suites.sh
+#   OUT=data/campaign2/results ./bin/analyze-agent-suites.sh data/campaign2/suites
+#   NO_MUTATION="Gson-14 Gson-16" ./bin/analyze-agent-suites.sh ...
+#       the suites of those bugs are measured for detection and coverage but
+#       kept out of the mutation step. Major's mml compiler rejects the class
+#       both bugs modify (com.google.gson.internal.$Gson$Types), and
+#       run_mutation.pl stops at the first failure, which costs every later
+#       suite of the project its figures.
 
 set -uo pipefail
 
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 
 SUITES=${1:-data/agent-suites}
-OUT=data/agent-results
+OUT=${OUT:-data/agent-results}
 D4J_BIN=${D4J_BIN:-$HOME/defects4j/framework/bin}
+NO_MUTATION=${NO_MUTATION:-}
 
 [ -x "$D4J_BIN/run_bug_detection.pl" ] || { echo "no Defects4J scripts under $D4J_BIN (set D4J_BIN)"; exit 1; }
 
@@ -52,11 +61,26 @@ D4J_BIN=${D4J_BIN:-$HOME/defects4j/framework/bin}
 ls "$SUITES"/*.tar.bz2 >/dev/null 2>&1 || { echo "no archives in $SUITES"; exit 1; }
 
 # the analysis scripts append; start clean so reruns are not double-counted
-rm -rf "$OUT"
 mkdir -p "$OUT"
+for item in bug_detection coverage mutation bug_detection_log coverage_log \
+            mutation_log agent-metrics.csv; do
+    rm -rf "${OUT:?}/$item"
+done
+rm -f "$OUT"/run_*.log
 
 SUITES_ABS=$(cd "$SUITES" && pwd)
 OUT_ABS=$(cd "$OUT" && pwd)
+
+# the same archives without those NO_MUTATION names, for the mutation step
+MUT_DIR=$SUITES_ABS
+if [ -n "$NO_MUTATION" ]; then
+    MUT_DIR=$(mktemp -d)
+    trap 'rm -rf "$MUT_DIR"' EXIT
+    for a in "$SUITES_ABS"/*.tar.bz2; do
+        tag=$(basename "$a" | sed -E 's/^([A-Za-z]+-[0-9]+)f-.*/\1/')
+        case " $NO_MUTATION " in *" $tag "*) echo "not mutation-analysed: $(basename "$a")" ;; *) ln -s "$a" "$MUT_DIR/" ;; esac
+    done
+fi
 
 PROJECTS=$(ls "$SUITES"/*.tar.bz2 | xargs -n1 basename | cut -d- -f1 | sort -u)
 echo "projects: $(echo $PROJECTS | tr '\n' ' ')"
@@ -66,7 +90,9 @@ for P in $PROJECTS; do
     echo "=== $P ==="
     for STEP in run_bug_detection run_coverage run_mutation; do
         echo "--- $STEP"
-        "$D4J_BIN/$STEP.pl" -p "$P" -d "$SUITES_ABS" -o "$OUT_ABS" \
+        if [ "$STEP" = run_mutation ]; then DIR=$MUT_DIR; else DIR=$SUITES_ABS; fi
+        ls "$DIR"/"$P"-*.tar.bz2 >/dev/null 2>&1 || { echo "    no $P archive for this step"; continue; }
+        "$D4J_BIN/$STEP.pl" -p "$P" -d "$DIR" -o "$OUT_ABS" \
             > "$OUT_ABS/${STEP}_${P}.log" 2>&1 \
             || echo "    $STEP failed for $P — see $OUT/${STEP}_${P}.log"
     done

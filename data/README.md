@@ -261,10 +261,12 @@ Per arm, over every suite measured:
 | `agent` (Sonnet, M) | 36 | **26/36 — 72%** | 58% | 85% |
 | `agentopus` (Opus, M) | 6 | 6/6 | 70% | 89% |
 | `spec` (Sonnet, S) | 38 | 6/37 — 16% | 44% | 73% |
-| `evosuite` | 36 | 13/30 — 43% | 47% | 85% |
+| `evosuite` | 36 | 15/35 — 43% | 47% | 85% |
 
-Detection is over suites classified `Pass` or `Fail`; one `spec` suite and six
-`evosuite` suites are `Broken`. EvoSuite's coverage is over 30 suites.
+Detection is over suites classified `Pass` or `Fail`; one `spec` suite and one
+`evosuite` suite are `Broken`. EvoSuite's coverage is over 35 suites. Five of
+the `evosuite` rows were measured a second time under a corrected harness
+(below).
 
 Paired over the 36 bugs present in both Sonnet arms:
 
@@ -318,6 +320,7 @@ under `agent-results/mutation_log/`. In `agent-metrics-final.csv` and
 | `mut_covered` | mutants with a status other than `UNCOV` |
 | `mut_killed` | `FAIL` + `TIME` + `EXC` |
 | `mut_killed_d4j` | what the Defects4J table calls `mut_killed`, kept so the earlier figures can be traced |
+| `harness` | `stock` when the row's detection and coverage figures are Defects4J's as first measured; otherwise the name of the directory under `agent-results/remeasured/` they come from |
 
 `agent-results/mutation` is Defects4J's table, left as it was written. Study A
 was never affected: `bin/analyze-mutation.py` has always read `kill.csv`
@@ -330,35 +333,68 @@ suites of an arm). Averaged per suite the arms are at 67.6% and 48.5%.
 
 `run_bug_detection.pl` classifies a suite as `Broken` when it does not compile
 on one of the two revisions or has a failing test on the revision it was
-generated for. Seven suites are `Broken`, and were counted as failures to
-detect until November 2026:
+generated for. Seven suites came out `Broken`, and were counted as failures to
+detect until November 2026. Two still are:
 
-- `evosuite` Cli-10, Cli-12, Cli-17, Cli-28, Cli-32 — the suite fails to load
-  on both revisions with `NoClassDefFoundError: org/hamcrest/SelfDescribing`.
-  The cause is one line of Defects4J (v3.0.1). Its build file for the project,
-  `framework/projects/Cli/Cli.build.xml`, redefines `junit.jar` as
-  `file://${d4j.home}/framework/projects/lib/junit-4.12.jar`, a file the
-  framework does not ship (it ships `junit-4.12-hamcrest-1.3.jar`). The harness
-  therefore has Hamcrest only where the project supplies it, and these
-  revisions ship JUnit 3.8. Cli-38, a later revision, is unaffected. The same
-  suites run under the mutation harness.
-
-  *Not part of the data:* on 2026-11-17 the six Cli EvoSuite suites were re-run
-  through `run_bug_detection.pl` in a temporary copy of the framework with that
-  line pointed at the jar that exists, headless. Cli-38 came out `Fail` as
-  before; Cli-10, Cli-12 and Cli-28 `Pass`; Cli-17 `Fail`; Cli-32 still
-  `Broken`, with one environment-dependent test failing on the fixed revision.
-  That would make EvoSuite 14/34 rather than 13/30. The tables have not been
-  changed: the run was made in a sandbox, not in the environment of the
-  original measurements, and should be repeated there before it is used.
 - `evosuite` Csv-16 — references `CSVParser.CSVRecordIterator`, a class the fix
   introduces, and does not compile against the buggy revision.
 - `spec` Cli-21 — calls `WriteableCommandLine.setCurrentOption`, an interface
   method the fix adds, and does not compile against the buggy revision. The
   javadoc the agent wrote from is the fixed revision's.
 
-The five Cli EvoSuite suites and Lang-34 (a test fails under the coverage
-harness) have no coverage figure either.
+The other five were never broken. `evosuite` Cli-10, Cli-12, Cli-17, Cli-28 and
+Cli-32 failed to load on both revisions with `NoClassDefFoundError:
+org/hamcrest/SelfDescribing`. The cause is one line of Defects4J (v3.0.1). Its
+build file for the project, `framework/projects/Cli/Cli.build.xml`, redefines
+`junit.jar` as `file://${d4j.home}/framework/projects/lib/junit-4.12.jar`, a
+file the framework does not ship (it ships `junit-4.12-hamcrest-1.3.jar`). The
+harness therefore has Hamcrest only where the project supplies it, and these
+revisions ship JUnit 3.8. Cli-38, a later revision, is unaffected. The same
+suites ran under the mutation harness as they were.
+
+### The five Cli EvoSuite suites, measured again (`agent-results/remeasured/cli-junit-fix/`)
+
+`bin/remeasure-cli-evosuite.sh` runs `run_bug_detection.pl` and
+`run_coverage.pl` with that one path pointed at the jar that exists. It does
+not touch the Defects4J installation: Defects4J reads its per-project files
+from `$PROJECTS_DIR` when that is set, so the script builds a directory of
+links to the installation's `projects/` in which `Cli.build.xml` alone is a
+corrected copy. `Cli.build.xml.patch` in the output directory is the
+difference, one line.
+
+Run on 17 November 2026, in the environment of the original measurements
+(Defects4J `v3.0.1-7-g8c16da82`, Java 11):
+
+| suite | stock harness | junit path corrected | coverage, lines |
+|---|---|---|---|
+| Cli-10 | `Broken` | `Pass` | 95/106 |
+| Cli-12 | `Broken` | `Pass` | 26/28 |
+| Cli-17 | `Broken` | `Fail`, 1 test | 63/68 |
+| Cli-28 | `Broken` | `Pass` | 89/101 |
+| Cli-32 | `Broken` | `Fail`, 6 tests | 200/201 |
+| Cli-38 | `Fail`, 1 test | `Fail`, 1 test | 159/193, as before |
+
+Cli-32's six failing tests all end in `StringIndexOutOfBoundsException`, the
+exception of the developer's own trigger test. The run was made three times
+(twice by hand, once by the script) with identical tables.
+
+**Control.** The script also measures every Cli suite of every generator with
+the correction, 21 in all, into `control/`. The sixteen that are not among the
+five came out exactly as in the stock tables, detection and coverage: the
+correction changes nothing for a suite that could already load.
+
+**How it enters the figures.** `agent-results/bug_detection` and
+`agent-results/coverage` are Defects4J's tables as first written, and still say
+`Broken` for the five. `bin/merge-agent-metrics.py` replaces a stock row with
+the re-measured one where they differ and writes `cli-junit-fix` in the
+`harness` column of the merged file. EvoSuite is therefore at 15/35, not 13/30,
+and its coverage is over 35 suites, not 30. Lang-34, where a test fails under
+the coverage harness, still has no coverage figure.
+
+A first attempt, made earlier the same day inside a command sandbox, left
+Cli-32 `Broken`: one test that depends on the environment failed on the fixed
+revision there. It passes outside the sandbox, which is where every other
+measurement in this directory was made.
 
 ### Which faults the spec arm does catch
 
@@ -580,7 +616,8 @@ and the trigger test's `.java` file gone, still hands the M-arm agent:
   LANG-788 sentence quoted above, so the pilot's "LANG-788" need not have come
   from git at all.
 
-The agent used at least the first. `bin/audit-trigger-leaks.py` reports, for 13
+The agent used at least the first, and in one run the second (see the notes
+below). `bin/audit-trigger-leaks.py` reports, for 13
 of the 40 M-arm suites and 11 of the arm's 26 detections, one or more of: a
 generated test with exactly the developer trigger test's name (Cli-12, Cli-17,
 Csv-4, Csv-6, Lang-13 — in each case the test that detects the fault); a
@@ -597,6 +634,63 @@ has a Defects4J checkout". How much of its 72% the metadata accounts for cannot
 be told from this data. The script is left as it ran; its header says what a
 rerun should change.
 
+### Notes three of the agents left behind (`agent-notes/`)
+
+The runs used the operator's ordinary Claude Code profile, with its persistent
+memory switched on. Memory is kept per working directory, outside it, under
+`~/.claude/projects/`. Three runs wrote notes there. The notes were still on the
+generating machine on 17 November 2026 and are archived here as they were, but
+for one redaction: the generating machine's own time zone, in the Lang-63 note,
+is replaced by `[redacted]`.
+
+| run | directory | what the notes are about |
+|---|---|---|
+| M arm, Lang-52 | `agent-notes/M-Lang-52/` | conventions for the task; the behaviour of `StringEscapeUtils` in the fixed tree |
+| M arm, Lang-63 | `agent-notes/M-Lang-63/` | conventions for the task; the bug and its trigger test |
+| S arm, Csv-3 | `agent-notes/S-Csv-3/` | the API of the jar, found by trial compilation |
+
+Each note's `originSessionId` is the `session_id` of the run recorded in
+`agent-runs/` or `spec-runs/`, so each was written by the run whose suite is
+published. No notes of any other run were found. They are the only first-hand
+record of what an agent read.
+
+- **Lang-63.** The note names the trigger test and gives its input and
+  expected output: "d4j trigger `DurationFormatUtilsTest::testJiraLang281`
+  (2005-12-31 -> 2006-10-06, "MM" -> "09")". It cites `.defects4j.config`. Of
+  the developer tests the script removed it says: "sometimes kept as
+  `.java.bak` — useful for known-good expected values". The one test of the
+  suite that fails on the buggy revision,
+  `testFormatPeriodMonthsAcrossYearBoundary`, has those dates, that pattern and
+  that expected string. Their only copy in the working tree was
+  `DurationFormatUtilsTest.java.bak`: the live file had been replaced by a
+  stub. So this detection is the developer's trigger test, copied from
+  Defects4J's backup of it. The agent used the second leak above as well as the
+  first.
+- **Lang-52.** The note identifies the repair: "`escapeJava` AND
+  `escapeJavaScript` both escape the forward slash … (this is the Lang-52
+  fix …)".
+- **Csv-3, S arm.** The note describes the task as the prompt set it, "against
+  `api/` javadoc only, compile with `./compile.sh` (never run)", and says the
+  API of the jar was "discovered by trial compilation (bytecode inspection was
+  disallowed)". That is the agent's own account of complying, for one run. It
+  also shows how little that sandbox documented: "Only
+  `api/org/apache/commons/csv/Lexer.html` + package docs exist as spec; nothing
+  for `CSVFormat`".
+
+The other four bugs whose trigger class has a `.bak` were checked against the
+backup by hand. None of their suites reproduces the trigger test: Lang-34
+shares only the literal `<null>` with it; Lang-56 shares the date pattern
+`yyyy/MM/dd`, which other developer tests left in the tree use too, and its
+closing message derives the serialization test from the repaired `readObject`;
+Csv-7 and Csv-16 share nothing.
+
+**The runs were not isolated from one another.** A bug gets the same working
+directory whatever the model (`/tmp/agentB_<Project>_<bid>_f`, unchanged since
+the pilot), so the Opus pilot and the Sonnet arm shared a memory directory, as
+would any repeated run. Nothing in the three notes comes from another run: all
+were created by the recorded Sonnet sessions. The channel was open all the
+same. A rerun should give each run an empty profile and keep its transcript.
+
 ## Baseline: EvoSuite
 
 Generated with Defects4J's `gen_tests.pl` (EvoSuite 1.1.0, branch criterion,
@@ -611,22 +705,22 @@ EvoSuite's own branch-coverage report from those runs.
 Suites were produced for 38 of the 40 bugs. `gen_tests` produced nothing for
 Cli-15 and Cli-21, the `cli2` subjects. The Gson-14 and Gson-16 suites do not
 compile (`illegal start of expression` on `$Gson$Types`) and were moved to
-`agent-suites-broken/`. Of the 36 analysed, six are `Broken` for detection
-(above).
+`agent-suites-broken/`. Of the 36 analysed, one is `Broken` for detection, and
+five have their verdict from the corrected harness (above).
 
-On the 29 bugs where M, S and EvoSuite all have a detection verdict:
+On the 34 bugs where M, S and EvoSuite all have a detection verdict:
 
 ```
             detection      mutation   coverage
-M           20/29 (69%)    57%        84%
-EvoSuite    12/29 (41%)    48%        85%   (28 suites)
-S            4/29 (14%)    44%        72%
+M           24/34 (71%)    58%        85%
+EvoSuite    14/34 (41%)    47%        85%   (33 suites)
+S            5/34 (15%)    44%        73%
 
-M and EvoSuite: both 8, M only 12, EvoSuite only 4, neither 5
+M and EvoSuite: both 10, M only 14, EvoSuite only 4, neither 6
 ```
 
-EvoSuite and the S arm are nearly tied on mutation score — 48% and 44% pooled,
-47% and 49% averaged per suite — and differ three-fold in detection.
+EvoSuite and the S arm are nearly tied on mutation score — 47% and 44% pooled,
+47% and 48% averaged per suite — and differ nearly three-fold in detection.
 
 ## Memorisation probe
 
@@ -707,6 +801,70 @@ In these runs the M-arm agent works in a `git worktree`, with the repository's
 history reachable. The Defects4J runs delete `.git`; here only the prompt
 forbids git.
 
+## Second campaign: prepared, not yet run on the sample
+
+`bin/generate-suites.sh` is the rerun that "What those controls do not close"
+asks for, for both arms. Its header is the specification. The campaign's
+protocol is `campaign2/PROTOCOL.md`: the design, the two hypotheses and their
+tests, the exclusions and what follows from each outcome, fixed before any run
+on the sample. `bin/run-campaign2.sh` makes the runs in the order it fixes and
+`bin/analyze-campaign2.py` is the analysis it fixes. What changes:
+
+| | first campaign | second |
+|---|---|---|
+| M working copy | the Defects4J checkout without `.git` and the trigger test files | also without `defects4j.build.properties`, `.defects4j.config`, every `.bak`, changelogs, release notes and upgrade guides, and Defects4J's marker comments and paths; in a directory with a random name |
+| Compiling and running, M | the `defects4j` command | `_tools/test.sh`, with the jars it needs copied in |
+| What Bash can reach | whatever the operator can | the working copy; no network; its own process namespace |
+| File tools | unrestricted | confined to the working copy |
+| Operator's profile | in force: settings, memory, plugins | ignored; memory off |
+| S arm, running or unpacking `lib/` | forbidden by the prompt | forbidden by the prompt, and of the JDK's launchers only `javac` can be read; `unzip`, `python` and `perl` are hidden |
+| Model | the alias `sonnet`, which resolved to `claude-sonnet-5` | `claude-sonnet-5`, by id |
+| Record of a run | the closing message | every message |
+| Prompts | share two instructions | differ only in what the arm requires |
+| Acceptance | an M suite must pass whole; S tests are disabled one by one | tests are disabled one by one in both |
+| Turn cap | 25 to 50 (M), 50 (S) | 50 |
+
+The source under test and the developer tests that stay are not edited, apart
+from Defects4J's own marks.
+
+Checks made on 17 November 2026, before any run on the sample:
+
+- **Self-tests**, four single calls to the model (list price $0.18 in all).
+  `claude-sonnet-5` is still served and is what answered. From the sandbox,
+  listing the Defects4J installation finds nothing, `curl` fails at the proxy,
+  `ps -e` shows four processes where the host has 107, and the Read tool
+  refuses a path outside the working copy. In the S sandbox `./compile.sh`
+  works and `java`, `javap`, `jar` and `unzip` do not. `python3` could still
+  open the jar in that test; it has been hidden since.
+- **Dry run, no model.** For each of the 40 bugs and each arm the working copy
+  was built and the first campaign's packaged suite put where the agent's
+  would be. All 36 M stand-ins compiled and passed under `_tools/test.sh`, all
+  38 S stand-ins compiled under `compile.sh`, and acceptance in the real
+  checkout disabled none of their 1518 and 1533 tests. Four M bugs and two S
+  bugs have no packaged suite to stand in; their working copies built.
+- **What a search of the 40 M working copies still finds.** Nothing that names
+  Defects4J. No trigger test's name, except in two other test classes that
+  happen to have a method of the same name (Csv-10, Lang-34). One real residue:
+  in Lang-65 the repaired source delimits its own repair, `// Fix for LANG-59
+  … START` and `END`. That is the implementation, and it is left as it is. Each
+  run's `.leakscan` records what its search found.
+- **Pilot, three runs with the model** (`campaign2/pilot/`), on Defects4J bugs
+  outside the sample, so that no result on the sample is seen before the
+  protocol is fixed: Lang-61 and Csv-11 in the M arm, Cli-5 in the S arm. All
+  three ended normally on `claude-sonnet-5`, in 19, 19 and 8 turns, for $1.19
+  at list prices. Each agent created its test class and nothing else. The M
+  agents compiled and ran their tests with `_tools/test.sh`; each had one
+  failing test on its first run and none on its second. Acceptance disabled
+  none of the 174 M tests and 3 of the 18 S tests.
+  `bin/audit-transcripts.py` flags no network or version-control command and
+  no sign that an agent knew its bug. It flags one M run for a path outside
+  the working copy: the agent unpacked a JUnit class into `/tmp` to read its
+  signatures. Inside the sandbox `/tmp` is private to each command, and the
+  file never reached the host. The three suites then went through the
+  measurement scripts unchanged (`campaign2/pilot/results/`). Their verdicts,
+  Cli-5 detected and the other two not, check the pipeline and nothing else:
+  three bugs, chosen to exercise the harness.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -749,10 +907,12 @@ mistake for results:
 - [x] Study B, M arm: 40/40 suites (Sonnet), 6 extra (Opus)
 - [x] Study B, S arm: 40/40 suites
 - [x] Study B analysed: 72% vs 14% detection; mutation score 58% vs 44%
-- [x] EvoSuite baseline: 36 suites analysed, 30 with a detection verdict
+- [x] EvoSuite baseline: 36 suites analysed, 35 with a detection verdict
 - [x] Memorisation probe, with hand readings of every non-disclaiming answer
 - [x] Post-cutoff corpora: first (S arm void), matched (13 pairs)
 - [x] Write-up, revised after the November 2026 audit
-- [ ] Rerun the M arm without Defects4J's metadata in the working copy
-- [ ] Re-measure the five Cli EvoSuite suites with Hamcrest on the classpath
+- [x] The five Cli EvoSuite suites re-measured with Defects4J's JUnit path corrected
+- [x] Generator for the rerun (`bin/generate-suites.sh`): written, dry-run on the 40 bugs, piloted on three bugs outside the sample
+- [x] Protocol of the second campaign fixed (`campaign2/PROTOCOL.md`), with its analysis script
+- [ ] Second campaign: both arms regenerated, without Defects4J's metadata in the working copy, under that protocol
 - [ ] A matched post-cutoff corpus large enough to test the effect size

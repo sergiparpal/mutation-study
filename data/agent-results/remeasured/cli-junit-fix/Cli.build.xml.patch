@@ -1,0 +1,11 @@
+--- a/framework/projects/Cli/Cli.build.xml
++++ b/framework/projects/Cli/Cli.build.xml
+@@ -29,7 +29,7 @@
+ 
+     <!-- CLI requires that local dependencies use the file:// prefix -->
+     <var name="junit.jar" unset="true"/>
+-    <property name="junit.jar" value="file://${d4j.home}/framework/projects/lib/junit-4.12.jar"/>
++    <property name="junit.jar" value="file://${d4j.home}/framework/projects/lib/junit-4.12-hamcrest-1.3.jar"/>
+ 
+     <!-- Create target directory -->
+     <mkdir dir="${d4j.workdir}/target"/>

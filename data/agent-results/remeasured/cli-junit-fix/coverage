@@ -1,0 +1,7 @@
+project_id,version_id,test_suite_source,test_id,lines_total,lines_covered,branches_total,branches_covered
+Cli,10f,evosuite,1,106,95,70,57
+Cli,12f,evosuite,1,28,26,20,19
+Cli,38f,evosuite,1,193,159,164,126
+Cli,32f,evosuite,1,201,200,114,107
+Cli,17f,evosuite,1,68,63,42,37
+Cli,28f,evosuite,1,101,89,68,53

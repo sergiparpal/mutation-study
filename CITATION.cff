@@ -16,11 +16,12 @@ abstract: >-
   real-fault detection falls from 72% to 14%, while mutation score falls from
   58% to 44% and line coverage from 85% to 73%. With an EvoSuite baseline over
   the same subjects, EvoSuite and the specification-only suites are nearly
-  tied on mutation score and differ three-fold in detection. The repository
-  holds the generation and measurement scripts, the per-suite measurements, a
-  hand classification of the 40 faults, a probe of what the model recalls
-  about each fault with no code in context, two post-cutoff replication
-  corpora, and an audit of what the benchmark's own files told the agent.
+  tied on mutation score and differ nearly three-fold in detection. The
+  repository holds the generation and measurement scripts, the per-suite
+  measurements, a hand classification of the 40 faults, a probe of what the
+  model recalls about each fault with no code in context, two post-cutoff
+  replication corpora, and an audit of what the benchmark's own files told
+  the agent.
 keywords:
   - test generation
   - mutation testing

@@ -1,0 +1,7 @@
+project_id,version_id,test_suite_source,test_id,test_classification,num_trigger
+Cli,28f,evosuite,1,Pass,0
+Cli,32f,evosuite,1,Fail,6
+Cli,38f,evosuite,1,Fail,1
+Cli,12f,evosuite,1,Pass,0
+Cli,17f,evosuite,1,Fail,1
+Cli,10f,evosuite,1,Pass,0

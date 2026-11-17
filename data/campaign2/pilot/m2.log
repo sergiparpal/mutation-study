@@ -1,0 +1,18 @@
+[Lang-61] checkout (w-P8a9eg9h)
+[Lang-61] compile broke after deletion, writing stubs
+[Lang-61] leak scan: clean
+[Lang-61] invoking agent (claude-sonnet-5, m2)
+[Lang-61] agent done: $0.655 turns=19 state=ok
+[Lang-61] pruned 0 of 141 tests
+[Lang-61] packaged: Lang-61f-m2.1.tar.bz2
+[Csv-11] checkout (w-RNlH1D4i)
+[Csv-11] leak scan: clean
+[Csv-11] invoking agent (claude-sonnet-5, m2)
+[Csv-11] agent done: $0.335 turns=19 state=ok
+[Csv-11] pruned 0 of 33 tests
+[Csv-11] packaged: Csv-11f-m2.1.tar.bz2
+
+m2 suites packaged: 2
+failures:           0
+disabled tests:     0 of 174 (0.0%)
+cost, as reported:  $0.99

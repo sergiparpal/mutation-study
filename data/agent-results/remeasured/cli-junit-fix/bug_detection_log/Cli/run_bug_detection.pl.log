@@ -1,0 +1,11 @@
+######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-11-17 07:34:07  ######
+ - Executing test suite: Cli-28f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-32f-evosuite.1.tar.bz2
+ - Found 6 failing tests on buggy version: Cli-32f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-38f-evosuite.1.tar.bz2
+ - Found 1 failing tests on buggy version: Cli-38f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-12f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-17f-evosuite.1.tar.bz2
+ - Found 1 failing tests on buggy version: Cli-17f-evosuite.1.tar.bz2
+ - Executing test suite: Cli-10f-evosuite.1.tar.bz2
+######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-11-17 07:35:23  ######
