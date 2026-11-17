@@ -152,6 +152,11 @@ def main():
         broken = sorted("-".join(k) for k, r in arm.items()
                         if r["test_classification"] == "Broken")
         print(f"  {name} suites classified Broken: {', '.join(broken)}")
+        again = sorted("-".join(k) for k, r in arm.items()
+                       if r.get("harness", "stock") not in ("", "stock"))
+        if again:
+            print(f"  {name} suites measured a second time under a corrected "
+                  f"harness: {', '.join(again)}")
 
     # ---- §3.2 ------------------------------------------------------------
     section("§3.2  Per project (paired bugs)")

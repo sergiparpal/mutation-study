@@ -29,21 +29,23 @@
 # for. Such a suite was never validly run against the buggy revision. It is
 # not a non-detection and must not be counted as one.
 #
-# This script DELETES data/agent-results before it starts: the Defects4J
-# scripts append to their tables. To rebuild only the merged CSV from results
-# that already exist, run merge-agent-metrics.py on its own.
+# This script DELETES the tables and logs under the results directory before
+# it starts: the Defects4J scripts append to their tables. It leaves
+# remeasured/ alone (see remeasure-cli-evosuite.sh). To rebuild only the merged
+# CSV from results that already exist, run merge-agent-metrics.py on its own.
 #
 # Usage:
 #   ./bin/analyze-agent-suites.sh                    # data/agent-suites
 #   ./bin/analyze-agent-suites.sh /tmp/other/suites
 #   D4J_BIN=/path/to/defects4j/framework/bin ./bin/analyze-agent-suites.sh
+#   OUT=data/campaign2/results ./bin/analyze-agent-suites.sh data/campaign2/suites
 
 set -uo pipefail
 
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 
 SUITES=${1:-data/agent-suites}
-OUT=data/agent-results
+OUT=${OUT:-data/agent-results}
 D4J_BIN=${D4J_BIN:-$HOME/defects4j/framework/bin}
 
 [ -x "$D4J_BIN/run_bug_detection.pl" ] || { echo "no Defects4J scripts under $D4J_BIN (set D4J_BIN)"; exit 1; }
@@ -52,8 +54,12 @@ D4J_BIN=${D4J_BIN:-$HOME/defects4j/framework/bin}
 ls "$SUITES"/*.tar.bz2 >/dev/null 2>&1 || { echo "no archives in $SUITES"; exit 1; }
 
 # the analysis scripts append; start clean so reruns are not double-counted
-rm -rf "$OUT"
 mkdir -p "$OUT"
+for item in bug_detection coverage mutation bug_detection_log coverage_log \
+            mutation_log agent-metrics.csv; do
+    rm -rf "${OUT:?}/$item"
+done
+rm -f "$OUT"/run_*.log
 
 SUITES_ABS=$(cd "$SUITES" && pwd)
 OUT_ABS=$(cd "$OUT" && pwd)

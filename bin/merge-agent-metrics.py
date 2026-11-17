@@ -37,6 +37,16 @@ table and writes:
     mut_killed_d4j  what the Defects4J table calls mut_killed, kept so the
                     earlier figures can be traced
 
+RE-MEASURED ROWS
+----------------
+Defects4J's tables are read as Defects4J wrote them. Where a suite was
+measured again under a corrected harness, the second measurement lives in
+<results_dir>/remeasured/<name>/ with the same two tables (bug_detection,
+coverage). A row there that differs from the stock one replaces it, and the
+`harness` column of the merged file says so: `stock` for every other row,
+<name> for those. The one case so far is remeasured/cli-junit-fix, the five
+EvoSuite suites on Cli that could not load (bin/remeasure-cli-evosuite.sh).
+
 It needs no Defects4J installation: it only re-reads files already produced.
 
 Usage:
@@ -55,7 +65,10 @@ KILLED = ("FAIL", "TIME", "EXC")        # Major's kill statuses
 COLS = ["project_id", "version_id", "test_suite_source",
         "test_classification", "num_trigger",
         "lines_total", "lines_covered", "branches_total", "branches_covered",
-        "mut_generated", "mut_covered", "mut_killed", "mut_killed_d4j"]
+        "mut_generated", "mut_covered", "mut_killed", "mut_killed_d4j",
+        "harness"]
+DETECTION = ("test_classification", "num_trigger")
+COVERAGE = ("lines_total", "lines_covered", "branches_total", "branches_covered")
 
 
 def read_table(path):
@@ -97,14 +110,31 @@ def main():
 
     def row(r):
         key = (r["project_id"], r["version_id"], r["test_suite_source"])
-        return rows.setdefault(key, {"_test_id": r.get("test_id", "1")})
+        return rows.setdefault(key, {"_test_id": r.get("test_id", "1"),
+                                     "harness": "stock"})
 
     for r in read_table(os.path.join(results, "bug_detection")):
-        row(r).update(test_classification=r["test_classification"],
-                      num_trigger=r["num_trigger"])
+        row(r).update({k: r[k] for k in DETECTION})
     for r in read_table(os.path.join(results, "coverage")):
-        row(r).update({k: r[k] for k in ("lines_total", "lines_covered",
-                                         "branches_total", "branches_covered")})
+        row(r).update({k: r[k] for k in COVERAGE})
+
+    # second measurements under a corrected harness replace the stock rows
+    # they differ from; a suite that came out the same stays `stock`
+    replaced = []
+    again = os.path.join(results, "remeasured")
+    for name in sorted(os.listdir(again)) if os.path.isdir(again) else []:
+        for table, cols in (("bug_detection", DETECTION), ("coverage", COVERAGE)):
+            for r in read_table(os.path.join(again, name, table)):
+                dest = row(r)
+                new = {k: r[k] for k in cols}
+                if any(dest.get(k) != v for k, v in new.items()):
+                    was = ",".join(dest.get(k, "-") for k in cols)
+                    dest.update(new)
+                    dest["harness"] = name
+                    replaced.append(
+                        f"{r['project_id']}-{r['version_id']} "
+                        f"{r['test_suite_source']} {table}: {was} -> "
+                        f"{','.join(new.values())}  [{name}]")
 
     warnings = []
     for r in read_table(os.path.join(results, "mutation")):
@@ -142,6 +172,10 @@ def main():
     print(f"{len(rows)} suites merged -> {out_path}")
     for msg in warnings:
         print(f"  WARNING {msg}")
+    if replaced:
+        print(f"\n{len(replaced)} stock rows replaced by a second measurement:")
+        for msg in replaced:
+            print(f"  {msg}")
 
     by_source = {}
     for (_, _, s), vals in rows.items():
