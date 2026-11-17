@@ -13,15 +13,40 @@
 # nested layout gen_tests writes to (Project/generator/id/) is silently ignored
 # and yields header-only CSVs.
 #
+# MUTATION SCORE
+# --------------
+# run_mutation.pl's table is not used as it stands. Its mut_killed column is
+# every mutant that is not LIVE, which includes the UNCOV ones no test ever
+# executes, and its mut_covered column is simply every mutant. The final merge
+# step (merge-agent-metrics.py) recomputes both from the kill.csv that
+# Defects4J copies into mutation_log/, and keeps the table's own figure as
+# mut_killed_d4j.
+#
+# BROKEN SUITES
+# -------------
+# run_bug_detection.pl classifies a suite as Broken when it does not compile
+# on either revision or has a failing test on the revision it was generated
+# for. Such a suite was never validly run against the buggy revision. It is
+# not a non-detection and must not be counted as one.
+#
+# This script DELETES data/agent-results before it starts: the Defects4J
+# scripts append to their tables. To rebuild only the merged CSV from results
+# that already exist, run merge-agent-metrics.py on its own.
+#
 # Usage:
 #   ./bin/analyze-agent-suites.sh                    # data/agent-suites
 #   ./bin/analyze-agent-suites.sh /tmp/other/suites
+#   D4J_BIN=/path/to/defects4j/framework/bin ./bin/analyze-agent-suites.sh
 
 set -uo pipefail
 
+ROOT=$(cd "$(dirname "$0")/.." && pwd)
+
 SUITES=${1:-data/agent-suites}
 OUT=data/agent-results
-D4J_BIN=~/defects4j/framework/bin
+D4J_BIN=${D4J_BIN:-$HOME/defects4j/framework/bin}
+
+[ -x "$D4J_BIN/run_bug_detection.pl" ] || { echo "no Defects4J scripts under $D4J_BIN (set D4J_BIN)"; exit 1; }
 
 [ -d "$SUITES" ] || { echo "no suite directory: $SUITES"; exit 1; }
 ls "$SUITES"/*.tar.bz2 >/dev/null 2>&1 || { echo "no archives in $SUITES"; exit 1; }
@@ -49,57 +74,7 @@ done
 
 echo
 echo "--- merged ---"
-python3 - "$OUT_ABS" <<'EOF'
-import csv, os, sys
-out = sys.argv[1]
-rows = {}
-for name, keep in [("bug_detection", ["test_classification", "num_trigger"]),
-                   ("coverage", ["lines_total", "lines_covered",
-                                 "branches_total", "branches_covered"]),
-                   ("mutation", ["mut_generated", "mut_excluded",
-                                 "mut_covered", "mut_killed"])]:
-    path = os.path.join(out, name)
-    if not os.path.exists(path):
-        continue
-    with open(path) as fh:
-        for r in csv.DictReader(fh):
-            key = (r["project_id"], r["version_id"], r["test_suite_source"])
-            rows.setdefault(key, {})
-            for k in keep:
-                rows[key][k] = r.get(k, "")
-
-cols = ["project_id", "version_id", "test_suite_source", "test_classification",
-        "num_trigger", "lines_total", "lines_covered", "branches_total",
-        "branches_covered", "mut_generated", "mut_covered", "mut_killed"]
-dest = os.path.join(out, "agent-metrics.csv")
-with open(dest, "w", newline="") as fh:
-    w = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore")
-    w.writeheader()
-    for (p, v, s), vals in sorted(rows.items()):
-        w.writerow({"project_id": p, "version_id": v,
-                    "test_suite_source": s, **vals})
-
-n = len(rows)
-det = sum(1 for v in rows.values() if v.get("test_classification") == "Fail")
-print(f"{n} suites measured -> {dest}")
-if n:
-    print(f"real fault detected: {det}/{n} ({100*det/n:.0f}%)")
-    ms = [(int(v["mut_killed"]), int(v["mut_generated"]))
-          for v in rows.values()
-          if v.get("mut_generated", "").isdigit() and int(v["mut_generated"]) > 0]
-    if ms:
-        k = sum(a for a, _ in ms)
-        g = sum(b for _, b in ms)
-        print(f"mutation score (pooled): {k}/{g} ({100*k/g:.0f}%)")
-    cov = [(int(v["lines_covered"]), int(v["lines_total"]))
-           for v in rows.values()
-           if v.get("lines_total", "").isdigit() and int(v["lines_total"]) > 0]
-    if cov:
-        c = sum(a for a, _ in cov)
-        t = sum(b for _, b in cov)
-        print(f"line coverage (pooled):  {c}/{t} ({100*c/t:.0f}%)")
-    print("\nNote: 'Fail' means at least one test fails on the buggy version. "
-          "In the\nimplementation-visible arm this is a ceiling, not a "
-          "capability measure — the\nagent read the fixed code, which already "
-          "contains the repair.")
-EOF
+# Defects4J's mutation table counts uncovered mutants as killed, so the merge
+# recomputes the mutation columns from Major's kill.csv. See the header of
+# merge-agent-metrics.py for the detail.
+python3 "$ROOT/bin/merge-agent-metrics.py" "$OUT_ABS"
