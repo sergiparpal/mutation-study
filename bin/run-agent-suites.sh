@@ -32,6 +32,35 @@
 # the agent can already read the fixed implementation. It matters more for a
 # future spec-only arm, where the code is withheld.
 #
+# WHAT THIS CONTROL DOES NOT CLOSE
+# --------------------------------
+# Found after the runs, by auditing the suites and the agents' final messages.
+# Removing .git and the trigger test's .java file still leaves, in the working
+# copy the agent is given:
+#   - defects4j.build.properties and .defects4j.config, written by the
+#     checkout. The first names the bug (d4j.bug.id, d4j.project.id) and its
+#     trigger tests in full (d4j.tests.trigger=<Class>::<method>). The working
+#     directory name carries the bug id too.
+#   - <Test>.java.bak, Defects4J's backup of every test class it removed a
+#     flaky method from. Where that class is the trigger test's, the backup is
+#     the complete developer test, trigger included: Lang-34, Lang-56, Lang-63,
+#     Csv-7 and Csv-16.
+#   - the project's changelog (RELEASE-NOTES.txt, changes.xml, CHANGELOG.md),
+#     which at the fixed revision can describe the fix. For Lang-13,
+#     src/site/changes/changes.xml carries the LANG-788 line quoted above.
+#   - the defects4j command itself, which the prompt tells the agent to use and
+#     which answers `export -p tests.trigger`.
+# The agent used at least the first. In Cli-12, Cli-17, Csv-4, Csv-6 and
+# Lang-13 the test that detects the fault has exactly the developer trigger
+# test's name, a name that survives nowhere else in the tree, and several final
+# messages name the bug outright: "the Lang-13 regression", "the Lang-63
+# trigger scenario", "the CSV-106 / Csv-5 regression point".
+#
+# The script is left as it ran, because it is the record of how the published
+# suites were produced. A rerun should not give the agent the defects4j command
+# or the checkout's metadata at all: export the classpath beforehand, delete
+# both files, every *.bak and the changelogs, and use a neutral directory name.
+#
 # STUB FALLBACK
 # -------------
 # Deleting the whole developer test file breaks compilation in the JUnit 3-era
@@ -60,7 +89,15 @@
 # is why it was not caught earlier.
 #
 # Verification now falls back to junit.textui.TestRunner, one class at a time
-# (it accepts a single argument), and the prompt no longer names a runner.
+# (it accepts a single argument), and the prompt names both runners instead of
+# JUnitCore alone, with a warning that some projects ship JUnit 3.8 only. That
+# change was made on the last day of the Sonnet arm: the seven Cli suites
+# generated after it (all but Cli-38, the ones with a .runner file) got the
+# wording below; the other 33 were told to verify with JUnitCore.
+#
+# The prompt does not ask for self-contained test classes, unlike the spec
+# arm's. Two suites (Cli-21, Csv-3) extended a helper from the project's test
+# tree and were lost at analysis for that reason.
 #
 # CIRCUIT BREAKER
 # ---------------
