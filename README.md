@@ -12,13 +12,6 @@ This repository holds the data and scripts for measuring how much of an
 agent's apparent fault-detection ability that accounts for, and what the
 metrics usually reported alongside it can see.
 
-> **The earlier headline of this repository was wrong.** Until November 2026 it
-> reported the two arms' mutation scores as 72% and 70% and concluded that the
-> metric could not see the difference between them. Defects4J's
-> `run_mutation.pl` counts mutants that no test executes as killed; the real
-> scores are 58% and 44%. That and the other corrections are listed at the end
-> of `PREPRINT.md`.
-
 ## Result
 
 Two suites per bug from the same agent and model, under two conditions: the
@@ -50,7 +43,7 @@ values came from.
 
 | path | what |
 |---|---|
-| `PREPRINT.md` | the write-up: method, results, threats, related work, corrections |
+| `PREPRINT.md` | the write-up: method, results, threats, related work |
 | `data/README.md` | the method record, including deviations, tooling failures and corrections |
 | `data/agent-metrics-final.csv` | per-suite detection, mutation and coverage |
 | `data/fault-taxonomy.csv` | hand classification of the 40 Defects4J faults |

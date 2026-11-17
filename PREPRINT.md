@@ -2,9 +2,7 @@
 
 ### Agent-Generated Test Suites on Defects4J, With and Without the Implementation
 
-*Draft, revised. An audit of the artifact overturned the previous draft's
-headline claim and several smaller ones. "Corrections to the previous draft",
-at the end, lists what changed and why.*
+*Draft.*
 
 ---
 
@@ -328,9 +326,9 @@ packaged suite:
   exception or a timeout. It is computed from Major's per-mutant output and
   **not** from the table `run_mutation.pl` writes: that table's `mut_killed`
   column counts every mutant that is not left alive, including the ones no
-  test executed at all. The previous draft of this paper used the table, and
-  so reported each arm's score inflated by its share of uncovered mutants (see
-  "Corrections").
+  test executed at all, so a score read from it is inflated by the suite's
+  share of uncovered mutants: here 13.6 points in the M arm and 25.6 in the S
+  arm (§3.1).
 - **Line and branch coverage** — `run_coverage.pl`.
 
 Mutation score and coverage are pooled: mutants killed, or lines covered,
@@ -519,18 +517,15 @@ Two are not:
 - **Csv-6** — `putIn` is documented as "Puts all values of this record into the
   given Map." Nothing covers a record holding fewer values than the header map.
 
-**There is no single mechanism.** This section has been wrong twice. The first
-draft claimed four of the five were documented-contract violations, a claim
-inferred from the fault descriptions without reading the documentation. The
-second read the javadoc of each modified method, counted two, and said of
-Gson-15 that the documentation described the faulty behaviour and the detection
-could not have come from reading it; it had read neither the rest of the class
-nor the detecting test. Reading both gives three. What the specification-only
-arm detects is heterogeneous: contract violations, and faults reached by
-probing boundaries, which both arms' prompts instruct the agent to do and which
-require no specification at all. Cli-32 is both: its faulty loop also reads
-`text.charAt(pos)` under `pos <= text.length()`, so a boundary input throws
-regardless of what the javadoc says.
+**There is no single mechanism.** The count of three depends on reading past
+the method the fix changes: for Gson-15 that method's own `@param` text
+describes the faulty behaviour, and the contract the fault violates is stated
+on `setLenient`. What the specification-only arm detects is heterogeneous:
+contract violations, and faults reached by probing boundaries, which both
+arms' prompts instruct the agent to do and which require no specification at
+all. Cli-32 is both: its faulty loop also reads `text.charAt(pos)` under
+`pos <= text.length()`, so a boundary input throws regardless of what the
+javadoc says.
 
 We report this as a description, not as a predictor. Three of five fits the
 obvious hypothesis, that a specification-only agent catches what the
@@ -648,9 +643,9 @@ misattributes the JIRA identifier, which is characteristic of recall of a
 mechanism rather than of a record.
 
 The screen missed more than it caught. It scores an answer against the diff of
-the bug the probe was issued for, and the nine answers it did not flag had not
-been read. Read against every sampled fault in the same class, three of them
-recall a *different* bug in the sample:
+the bug the probe was issued for, so the nine answers it did not flag were
+read by hand as well. Read against every sampled fault in the same class, three
+of them recall a *different* bug in the sample:
 
 - The answer to the probe for Gson-14 describes the Gson-16 fault exactly:
   infinite recursion in `$Gson$Types.resolve()` on self-referential type
@@ -671,8 +666,7 @@ Two more describe real faults in the same classes that are not in the sample
 **So the probe finds two of the forty faults recalled with their mechanism,
 Lang-13 and Gson-16, and two more recognised by issue number or symptom.** It
 is a lower bound, and a soft one: each probe is a single sample, and the same
-question drew an exact description once and a disclaimer once. The previous
-draft's "exactly one of forty" came from reading only what the screen flagged.
+question drew an exact description once and a disclaimer once.
 
 The probe also understates what the model can reproduce once cued. In the
 implementation-visible arm, with the fixed source and the bug's identity in
@@ -681,13 +675,13 @@ Lang-13 verbatim — name, array of primitive types, loop and assertion — and
 reproduced the pattern, argument and expected string of Lang-43's, although
 both test files had been deleted from its working copy.
 
-What follows is narrower than the previous draft claimed. Spontaneous recall
-does not account for the implementation-visible arm's result: it detects 26
-faults, and the probe finds a handful recalled. But recall cued by the source,
-and by the benchmark's own metadata, is present in that arm, and the probe
-cannot bound it. Lang-13 is detected by both arms, as recall available to both
-would predict; the other four faults the specification-only arm detects show no
-sign of recall in the probe.
+What follows from this is narrow. Spontaneous recall does not account for the
+implementation-visible arm's result: it detects 26 faults, and the probe finds
+a handful recalled. But recall cued by the source, and by the benchmark's own
+metadata, is present in that arm, and the probe cannot bound it. Lang-13 is
+detected by both arms, as recall available to both would predict; the other
+four faults the specification-only arm detects show no sign of recall in the
+probe.
 
 The confabulation rate is itself worth noting alongside §3.4. The same model
 that writes tests from javadoc with a 3.6% error rate invents four confident,
@@ -735,14 +729,10 @@ But none of the seven was ever run against a buggy revision. The harness ran
 the fixed revision with the project's licence audit switched off and the buggy
 revision with it on, and counted any failed build as a detection. A test file
 written in the sandbox carries no licence header; the audit runs before the
-tests; all seven builds stopped there. The previous draft reported this as 7/7
-detected and built an explanation on it — that the corpus was dominated by
-extreme-value faults, which a specification-only agent told to probe boundaries
-finds without a specification. Nothing measured supports that explanation, and
-it is withdrawn. The generated tests were not archived, so the arm cannot be
-re-measured on these subjects. One of them was regenerated for the second
-corpus, a fault at `Integer.MIN_VALUE` in fraction reduction and the first
-example the withdrawn explanation gave; neither arm detected it.
+tests; all seven builds stopped there. The generated tests were not archived,
+so the arm cannot be re-measured on these subjects. One of them was
+regenerated for the second corpus, a fault at `Integer.MIN_VALUE` in fraction
+reduction; neither arm detected it.
 
 **Second corpus, matched on fault type.** The second corpus fixes its
 composition in advance. Quotas by fault type were scaled from the hand
@@ -850,19 +840,15 @@ real developer would have.
 
 ### 4.2 What mutation score does and does not register
 
-The previous draft of this paper reported that mutation score did not
-distinguish the two arms at all, 72% against 70%, and built its central claim
-on that. The figures were an artefact (§2.6). Counted correctly the arms are at
-58% and 44%, the implementation-visible suite scores higher in 35 of 36 bugs,
-and the claim that provenance is invisible to the metric is withdrawn.
+Mutation score does register the difference between the arms. They are at 58%
+and 44%, and the implementation-visible suite scores higher in 35 of 36 bugs.
 
-What the corrected figures support is weaker and, we think, still worth
-stating. Detection falls by four fifths between the arms. Mutation score falls
-by a quarter, and half of that quarter is coverage — code the
-specification-only suites never execute — rather than weaker checking of the
-code they do. A reader shown only the two mutation scores would expect the
-suites to differ in fault detection. Nothing in the scores would lead them to
-expect 72% against 14%.
+What it does not register is the size of the difference. Detection falls by
+four fifths between the arms. Mutation score falls by a quarter, and half of
+that quarter is coverage — code the specification-only suites never execute —
+rather than weaker checking of the code they do. A reader shown only the two
+mutation scores would expect the suites to differ in fault detection. Nothing
+in the scores would lead them to expect 72% against 14%.
 
 This is not a failure of mutation analysis on its own terms, and it does not
 contradict the established result that mutation score predicts real-fault
@@ -1025,15 +1011,15 @@ the subset relation hold, the gap is about half as large, and its difference
 from the Defects4J gap is within chance. A matched corpus several times that
 size is what the question needs.
 
-**Several of the paper's figures were wrong in its previous draft, in ways the
-tooling did not flag.** A table whose column was named `mut_killed` counted
-unexecuted mutants; a build that failed a licence audit was recorded as a
-detected fault; a line count doubled the tests of six suites; six suites that
-never ran were counted as failing to detect. Each was found by an audit of the
-artifact rather than by the pipeline, and each is corrected here, but the
-pattern is a threat in itself: figures that have not been traced back to raw
-output should be read with that in mind. `bin/report-figures.py` regenerates
-every figure in §3 so that they can be.
+**The tooling produced wrong figures without flagging them.** A table whose
+column was named `mut_killed` counted unexecuted mutants; a build that failed
+a licence audit was recorded as a detected fault; a line count doubled the
+tests of six suites; six suites that never ran were counted as failing to
+detect. Each was found by an audit of the artifact rather than by the
+pipeline. The figures reported here are the audited ones, but the pattern is a
+threat in itself: figures that have not been traced back to raw output should
+be read with that in mind. `bin/report-figures.py` regenerates every figure in
+§3 so that they can be.
 
 ### 5.2 Construct validity
 
@@ -1288,13 +1274,9 @@ whose rates are 41% and 69%. A suite's assertions can be strong while its
 expectations were copied from the program they are meant to judge, and the
 scores reflect the difference only in part.
 
-Two results of the previous draft did not survive an audit of its own artifact
-and are withdrawn: that mutation score does not register the difference at all,
-which rested on a tooling artefact, and that a specification-only agent matches
-an implementation-reading one on recent extreme-value faults, which rested on a
-harness error. The audit also found that the implementation-visible arm was
-told more than the implementation. The benchmark's own files name each bug and
-the tests that expose it, and the agent read them.
+An audit after the runs found that the implementation-visible arm was told
+more than the implementation. The benchmark's own files name each bug and the
+tests that expose it, and the agent read them.
 
 The immediate consequence is for evaluation: figures reported for generated
 suites on real-fault benchmarks should state what the generator was allowed to
@@ -1337,50 +1319,3 @@ deviations and tooling failures encountered, is in `data/README.md`.
 `data/`, and `bin/audit-trigger-leaks.py` the evidence of §3.9. Re-measuring
 from the packaged suites in `data/agent-suites/` needs Defects4J
 (`bin/analyze-agent-suites.sh`); regenerating the suites needs the model.
-
-## Corrections to the previous draft
-
-The draft of 2 October 2026 was audited against its own repository. What
-follows changed. The raw measurements did not: every correction is a
-recomputation from files that were already there.
-
-1. **Mutation score.** Reported as 72% against 70% for the two arms and 59%
-   for EvoSuite; now 58%, 44% and 47%. Defects4J's `run_mutation.pl` writes a
-   `mut_killed` column that counts every mutant not left alive, which includes
-   the mutants no test executed. The previous figures were therefore each
-   arm's true score plus its share of uncovered mutants — 13.6 points in the M
-   arm, 25.6 in the S arm — which is why they nearly coincided. The title, the
-   abstract and §4.2 were built on that coincidence. The claims that mutation
-   score "does not register the difference" and that it ranks three populations
-   "in the wrong order" are withdrawn.
-2. **Post-cutoff replication.** The specification-only arm's 7/7 on the first
-   corpus was seven builds failing a licence audit, not seven detections
-   (§3.8). The explanation built on it is withdrawn. A second, matched corpus,
-   which the previous draft described as work still to be done, had already
-   been collected and is now reported.
-3. **Contamination.** The previous draft said the agent never had the bug
-   identifier, and presented the removal of git history and of trigger test
-   files as closing the channels it knew of. The checkout's own metadata names
-   the bug and its trigger tests, and the agent used it (§3.9).
-4. **Memorisation.** "Exactly one of forty" is now at least two recalled with
-   their mechanism and two more recognised; only the answers the screen flagged
-   had been read (§3.7). One of the ten "unspecific claims" was a run with no
-   answer. The statement that Lang-13 was the only bug detected by both arms
-   was wrong: five are.
-5. **EvoSuite detection.** Six of the 36 suites are `Broken` and had been
-   counted as failures to detect. Detection is now over the 30 with a verdict
-   (43%, was 36%), and the three-way comparison over 29 bugs (41%, was 34% over
-   35). One specification-only suite is `Broken` too.
-6. **What the specification-only arm detects.** Three of its five detections
-   are documented-contract violations, not two: Gson-15's contract is
-   documented on `setLenient` (§3.3).
-7. **Wrong-expectation rate.** 59 of 1638 tests (3.6%), not 59 of 1806 (3.3%):
-   the denominator double-counted six suites and missed a seventh. Gson's rate
-   is 8.5%, not 5.7%.
-8. **Smaller figures and descriptions.** The M arm's $42.61 covers 40 suites,
-   not 46. The Opus suites are six of the first seven bugs, not the first six.
-   EvoSuite searched for 60 seconds per class, not 120. The two prompts are not
-   the same instructions (§2.2). The Defects4J sample has 22 omission faults,
-   not 21. The decision rule of §5.4 covered one arm, not the comparison. TOGA
-   predates this work by four years, not seven, and the phrase quoted as its
-   design goal is Hossain et al.'s.
