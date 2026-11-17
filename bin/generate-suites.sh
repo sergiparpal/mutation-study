@@ -80,7 +80,9 @@
 # (bin/prune-failing-tests.py). In the first campaign an M-arm suite had to
 # pass whole.
 #
-# The model is named by its full id. An alias moves.
+# The model is named by its full id. An alias moves. For the same reason the
+# CLI is run from its versioned binary and told not to update itself, and each
+# run records the commit of this repository it was made from.
 #
 # USAGE LIMITS
 # ------------
@@ -89,6 +91,9 @@
 # the script stops before starting another run, and picks up where it left off
 # when run again. A run that a limit cuts short all the same leaves no .status
 # and is made again; its record moves to cut-short/ and its tests are not used.
+#
+# The campaign's protocol is data/campaign2/PROTOCOL.md, and run-campaign2.sh
+# calls this script in the order it fixes.
 #
 # Usage:
 #   ARM=m2 ./bin/generate-suites.sh                     # whole sample
@@ -142,7 +147,19 @@ case "$MODEL" in
 esac
 
 JDK_BIN=$(dirname "$(readlink -f "$(command -v javac)")")
-CLI_VERSION=$( [ -n "$DRY" ] && echo "dry run" || claude --version 2>/dev/null | head -1)
+
+# The binary itself, not the `claude` link: an update moves the link.
+CLAUDE_BIN=${CLAUDE_BIN:-$( [ -n "$DRY" ] || readlink -f "$(command -v claude)")}
+CLI_VERSION=$( [ -n "$DRY" ] && echo "dry run" || "$CLAUDE_BIN" --version 2>/dev/null | head -1)
+
+# A run is tied to the commit of the scripts that made it. Outside a dry run,
+# refuse to start if they differ from that commit.
+COMMIT=$(git -C "$ROOT" rev-parse HEAD 2>/dev/null || echo unknown)
+if [ -z "$DRY" ] && [ -z "${ALLOW_DIRTY:-}" ] \
+   && [ -n "$(git -C "$ROOT" status --porcelain -- bin data/sample.txt 2>/dev/null)" ]; then
+    echo "bin/ or data/sample.txt differs from the last commit: commit first, or set ALLOW_DIRTY=1"
+    exit 1
+fi
 
 mkdir -p "$SUITES" "$RUNDIR" "$STAGE_ROOT"
 
@@ -577,7 +594,8 @@ EOF
         echo "[$TAG] invoking agent ($MODEL, $ARM)"
         (cd "$W" && env -i HOME="$HOME" PATH="$AGENT_PATH" TZ=America/Los_Angeles LANG=C.UTF-8 \
                 CLAUDE_CODE_DISABLE_AUTO_MEMORY=1 CLAUDE_CODE_DISABLE_LEGACY_MODEL_REMAP=1 \
-            claude -p "$PROMPT" \
+                DISABLE_AUTOUPDATER=1 \
+            "$CLAUDE_BIN" -p "$PROMPT" \
                 --model "$MODEL" \
                 --restricted --strict-mcp-config --disable-slash-commands \
                 --tools "$TOOLS" \
@@ -618,10 +636,23 @@ if usage is not None:
         fh.write(f"{usage[0]} {usage[1]}\n")
 print(json.dumps(last if last is not None else {"is_error": True, "result": "no result message"}))
 EOF
+        REPORTED=$(python3 - "$R.stream.jsonl" <<'EOF'
+import json, sys
+for line in open(sys.argv[1], errors="replace"):
+    try:
+        o = json.loads(line)
+    except ValueError:
+        continue
+    if isinstance(o, dict) and o.get("type") == "system" and o.get("subtype") == "init":
+        print(f"{o.get('model', '')} {o.get('claude_code_version', '')}")
+        break
+EOF
+)
         xz -9 -f "$R.stream.jsonl"
     fi
     FINISHED=$(date -u +%FT%TZ)
     rm -f "$SETTINGS"
+    REPORTED=${REPORTED:-}
 
     (cd "$W" && find . -type f -newer .start ! -path './_tools/out/*' ! -name '.start' \
         ! -name '.sources' ! -path './out/*' | sort) > "$R.touched"
@@ -631,9 +662,11 @@ import json, sys
 json.dump({
     "bug": "$TAG", "arm": "$ARM", "working_copy": "$ID",
     "model": "$MODEL", "cli": "$CLI_VERSION", "tools": "$TOOLS",
+    "model_reported_by_run": "${REPORTED%% *}", "cli_reported_by_run": "${REPORTED##* }",
+    "commit": "$COMMIT",
     "max_turns": $MAX_TURNS, "max_budget_usd": $MAX_BUDGET,
     "flags": "--restricted --strict-mcp-config --disable-slash-commands --no-session-persistence --permission-mode acceptEdits --permission-prompts none",
-    "environment": "env -i HOME PATH TZ=America/Los_Angeles LANG=C.UTF-8 CLAUDE_CODE_DISABLE_AUTO_MEMORY=1 CLAUDE_CODE_DISABLE_LEGACY_MODEL_REMAP=1",
+    "environment": "env -i HOME PATH TZ=America/Los_Angeles LANG=C.UTF-8 CLAUDE_CODE_DISABLE_AUTO_MEMORY=1 CLAUDE_CODE_DISABLE_LEGACY_MODEL_REMAP=1 DISABLE_AUTOUPDATER=1",
     "junit": $JUNIT, "source_level": "$SRC_LEVEL", "stubbed": "$STUBBED",
     "issue": "$ISSUE", "started": "$STARTED", "finished": "$FINISHED",
     "dry_run": "$DRY",
@@ -798,3 +831,7 @@ if [ -n "$FAILED" ]; then
     echo; echo "failed bugs:"
     echo "$FAILED" | while read -r s; do echo "  $(basename "$s" .status): $(cat "$s")"; done
 fi
+
+# 3: stopped early, on a usage limit or at the usage threshold
+[ "$ABORTED" = "yes" ] && exit 3
+exit 0

@@ -804,7 +804,11 @@ forbids git.
 ## Second campaign: prepared, not yet run on the sample
 
 `bin/generate-suites.sh` is the rerun that "What those controls do not close"
-asks for, for both arms. Its header is the specification. What changes:
+asks for, for both arms. Its header is the specification. The campaign's
+protocol is `campaign2/PROTOCOL.md`: the design, the two hypotheses and their
+tests, the exclusions and what follows from each outcome, fixed before any run
+on the sample. `bin/run-campaign2.sh` makes the runs in the order it fixes and
+`bin/analyze-campaign2.py` is the analysis it fixes. What changes:
 
 | | first campaign | second |
 |---|---|---|
@@ -909,5 +913,6 @@ mistake for results:
 - [x] Write-up, revised after the November 2026 audit
 - [x] The five Cli EvoSuite suites re-measured with Defects4J's JUnit path corrected
 - [x] Generator for the rerun (`bin/generate-suites.sh`): written, dry-run on the 40 bugs, piloted on three bugs outside the sample
-- [ ] Second campaign: both arms regenerated, without Defects4J's metadata in the working copy, under a protocol fixed in advance
+- [x] Protocol of the second campaign fixed (`campaign2/PROTOCOL.md`), with its analysis script
+- [ ] Second campaign: both arms regenerated, without Defects4J's metadata in the working copy, under that protocol
 - [ ] A matched post-cutoff corpus large enough to test the effect size

@@ -51,8 +51,10 @@ values came from.
 | `data/agent-notes/` | the notes three generation runs wrote to the agent's persistent memory, the only first-hand record of what an agent read |
 | `bin/run-agent-suites.sh` | generation, implementation-visible arm |
 | `bin/run-spec-suites.sh` | generation, specification-only arm (sandbox construction included) |
-| `bin/generate-suites.sh` | generation for a second campaign, both arms, with the agent isolated from the benchmark, the network and the operator's profile; not yet run on the sample |
+| `data/campaign2/PROTOCOL.md` | the protocol of a second campaign, fixed before any run on the sample: design, hypotheses, tests, exclusions |
+| `bin/generate-suites.sh`, `bin/run-campaign2.sh` | generation for that campaign, both arms, with the agent isolated from the benchmark, the network and the operator's profile; not yet run on the sample |
 | `bin/audit-transcripts.py` | reads that campaign's transcripts for anything the protocol forbids |
+| `bin/analyze-campaign2.py` | the analysis the protocol fixes |
 | `bin/analyze-agent-suites.sh` | measurement, wrapping Defects4J's own scripts |
 | `bin/merge-agent-metrics.py` | merges Defects4J's tables and recomputes the mutation columns from Major's output |
 | `bin/remeasure-cli-evosuite.sh` | measures five EvoSuite suites again with one path in Defects4J corrected |
