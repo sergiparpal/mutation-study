@@ -801,6 +801,66 @@ In these runs the M-arm agent works in a `git worktree`, with the repository's
 history reachable. The Defects4J runs delete `.git`; here only the prompt
 forbids git.
 
+## Second campaign: prepared, not yet run on the sample
+
+`bin/generate-suites.sh` is the rerun that "What those controls do not close"
+asks for, for both arms. Its header is the specification. What changes:
+
+| | first campaign | second |
+|---|---|---|
+| M working copy | the Defects4J checkout without `.git` and the trigger test files | also without `defects4j.build.properties`, `.defects4j.config`, every `.bak`, changelogs, release notes and upgrade guides, and Defects4J's marker comments and paths; in a directory with a random name |
+| Compiling and running, M | the `defects4j` command | `_tools/test.sh`, with the jars it needs copied in |
+| What Bash can reach | whatever the operator can | the working copy; no network; its own process namespace |
+| File tools | unrestricted | confined to the working copy |
+| Operator's profile | in force: settings, memory, plugins | ignored; memory off |
+| S arm, running or unpacking `lib/` | forbidden by the prompt | forbidden by the prompt, and of the JDK's launchers only `javac` can be read; `unzip`, `python` and `perl` are hidden |
+| Model | the alias `sonnet`, which resolved to `claude-sonnet-5` | `claude-sonnet-5`, by id |
+| Record of a run | the closing message | every message |
+| Prompts | share two instructions | differ only in what the arm requires |
+| Acceptance | an M suite must pass whole; S tests are disabled one by one | tests are disabled one by one in both |
+| Turn cap | 25 to 50 (M), 50 (S) | 50 |
+
+The source under test and the developer tests that stay are not edited, apart
+from Defects4J's own marks.
+
+Checks made on 17 November 2026, before any run on the sample:
+
+- **Self-tests**, four single calls to the model (list price $0.18 in all).
+  `claude-sonnet-5` is still served and is what answered. From the sandbox,
+  listing the Defects4J installation finds nothing, `curl` fails at the proxy,
+  `ps -e` shows four processes where the host has 107, and the Read tool
+  refuses a path outside the working copy. In the S sandbox `./compile.sh`
+  works and `java`, `javap`, `jar` and `unzip` do not. `python3` could still
+  open the jar in that test; it has been hidden since.
+- **Dry run, no model.** For each of the 40 bugs and each arm the working copy
+  was built and the first campaign's packaged suite put where the agent's
+  would be. All 36 M stand-ins compiled and passed under `_tools/test.sh`, all
+  38 S stand-ins compiled under `compile.sh`, and acceptance in the real
+  checkout disabled none of their 1518 and 1533 tests. Four M bugs and two S
+  bugs have no packaged suite to stand in; their working copies built.
+- **What a search of the 40 M working copies still finds.** Nothing that names
+  Defects4J. No trigger test's name, except in two other test classes that
+  happen to have a method of the same name (Csv-10, Lang-34). One real residue:
+  in Lang-65 the repaired source delimits its own repair, `// Fix for LANG-59
+  … START` and `END`. That is the implementation, and it is left as it is. Each
+  run's `.leakscan` records what its search found.
+- **Pilot, three runs with the model** (`campaign2/pilot/`), on Defects4J bugs
+  outside the sample, so that no result on the sample is seen before the
+  protocol is fixed: Lang-61 and Csv-11 in the M arm, Cli-5 in the S arm. All
+  three ended normally on `claude-sonnet-5`, in 19, 19 and 8 turns, for $1.19
+  at list prices. Each agent created its test class and nothing else. The M
+  agents compiled and ran their tests with `_tools/test.sh`; each had one
+  failing test on its first run and none on its second. Acceptance disabled
+  none of the 174 M tests and 3 of the 18 S tests.
+  `bin/audit-transcripts.py` flags no network or version-control command and
+  no sign that an agent knew its bug. It flags one M run for a path outside
+  the working copy: the agent unpacked a JUnit class into `/tmp` to read its
+  signatures. Inside the sandbox `/tmp` is private to each command, and the
+  file never reached the host. The three suites then went through the
+  measurement scripts unchanged (`campaign2/pilot/results/`). Their verdicts,
+  Cli-5 detected and the other two not, check the pipeline and nothing else:
+  three bugs, chosen to exercise the harness.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -847,6 +907,7 @@ mistake for results:
 - [x] Memorisation probe, with hand readings of every non-disclaiming answer
 - [x] Post-cutoff corpora: first (S arm void), matched (13 pairs)
 - [x] Write-up, revised after the November 2026 audit
-- [ ] Rerun the M arm without Defects4J's metadata in the working copy
 - [x] The five Cli EvoSuite suites re-measured with Defects4J's JUnit path corrected
+- [x] Generator for the rerun (`bin/generate-suites.sh`): written, dry-run on the 40 bugs, piloted on three bugs outside the sample
+- [ ] Second campaign: both arms regenerated, without Defects4J's metadata in the working copy, under a protocol fixed in advance
 - [ ] A matched post-cutoff corpus large enough to test the effect size

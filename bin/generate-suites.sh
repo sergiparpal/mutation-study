@@ -46,7 +46,9 @@
 # - Bash runs in Claude Code's sandbox: no network, its own process namespace,
 #   and of /home, /tmp, /mnt, /opt and the like it can read only its working
 #   copy. Defects4J, this repository, other working copies, earlier transcripts
-#   and the processes of this script are out of reach.
+#   and the processes of this script are out of reach. /tmp is, to each
+#   command, an empty directory of its own: what a command writes there is gone
+#   when it ends.
 # - The file tools are confined to the working copy (--restricted).
 # - No web tools, no subagents, no skills, no MCP servers, no plugins; user,
 #   project and local settings are ignored; persistent memory is off.
@@ -58,6 +60,8 @@
 # WHAT IS RECORDED, PER RUN (data/campaign2/runs-<arm>/<bug>.*)
 # -------------------------------------------------------------
 #   .stream.jsonl.xz  every message of the run: text, tool calls and results
+#                     (the CLI also interleaves events about the account's
+#                     usage limits; those are not messages and are dropped)
 #   .json             the closing result message (cost, turns, final text)
 #   .prompt           the prompt as sent
 #   .settings.json    the sandbox and permission settings as sent
@@ -77,6 +81,14 @@
 # pass whole.
 #
 # The model is named by its full id. An alias moves.
+#
+# USAGE LIMITS
+# ------------
+# On a subscription the runs draw on the plan's usage limits. Each run reports
+# how much of the limit is used; when that reaches USAGE_STOP (default 0.95)
+# the script stops before starting another run, and picks up where it left off
+# when run again. A run that a limit cuts short all the same leaves no .status
+# and is made again; its record moves to cut-short/ and its tests are not used.
 #
 # Usage:
 #   ARM=m2 ./bin/generate-suites.sh                     # whole sample
@@ -109,6 +121,8 @@ OUT=${OUT:-data/campaign2}
 DRY=${DRY:-}
 D4J_HOME=${D4J_HOME:-$HOME/defects4j}
 STAGE_ROOT=${STAGE_ROOT:-$HOME/.cache/gen-stage}    # under /home: the agent cannot read it
+USAGE_STOP=${USAGE_STOP:-0.95}      # share of the plan's usage limit at which to stop
+USAGE_FILE=$STAGE_ROOT/usage        # last reported usage; never in the repository
 TOOLS="Bash,Read,Write,Edit,Glob,Grep"
 AGENT_PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin"
 
@@ -194,6 +208,22 @@ while IFS=, read -r P B _rest; do
     if [ -f "$STATUS" ]; then
         echo "[$TAG] already attempted ($(cat "$STATUS")) — skipping"
         continue
+    fi
+
+    # Do not start a run the plan's usage limit would cut short: a run that
+    # dies half-way has to be made again, and a second attempt is what the
+    # protocol wants least. The last run reported how much of the limit is
+    # used and when it resets.
+    if [ -z "$DRY" ] && [ -f "$USAGE_FILE" ] && python3 - "$USAGE_FILE" "$USAGE_STOP" <<'EOF'
+import sys, time
+used, resets = (float(x) for x in open(sys.argv[1]).read().split()[:2])
+sys.exit(0 if used >= float(sys.argv[2]) and time.time() < resets else 1)
+EOF
+    then
+        echo
+        echo "STOPPING before $TAG: the plan's usage is at or above the threshold"
+        echo "(USAGE_STOP=$USAGE_STOP). Rerun this script after the limit resets."
+        ABORTED=yes; break
     fi
 
     # one random id names both directories, so no path says which bug this is
@@ -557,16 +587,35 @@ EOF
                 --max-turns "$MAX_TURNS" --max-budget-usd "$MAX_BUDGET" \
                 --output-format stream-json --verbose < /dev/null) \
             > "$R.stream.jsonl" 2> "$R.stderr"
-        python3 - "$R.stream.jsonl" > "$R.json" <<'EOF'
-import json, sys
-last = None
-for line in open(sys.argv[1], errors="replace"):
+        # Keep every message of the run. Drop what is not one: the events in
+        # which the CLI reports the state of the account's usage limits. The
+        # latest of those goes to a file outside the repository, for the check
+        # at the top of the loop.
+        python3 - "$R.stream.jsonl" "$USAGE_FILE" > "$R.json" <<'EOF'
+import json, os, sys
+path, usage_file = sys.argv[1:3]
+last, kept, usage = None, [], None
+for line in open(path, errors="replace"):
     try:
         o = json.loads(line)
     except ValueError:
+        kept.append(line)
         continue
+    if isinstance(o, dict) and o.get("type") == "rate_limit_event":
+        info = o.get("rate_limit_info") or {}
+        windows = list((info.get("unifiedWindows") or {}).values()) or [info]
+        worst = max(windows, key=lambda w: w.get("utilization") or 0)
+        usage = (worst.get("utilization") or 0, worst.get("resetsAt") or 0)
+        continue
+    kept.append(line)
     if isinstance(o, dict) and o.get("type") == "result":
         last = o
+with open(path + ".tmp", "w") as fh:
+    fh.writelines(kept)
+os.replace(path + ".tmp", path)
+if usage is not None:
+    with open(usage_file, "w") as fh:
+        fh.write(f"{usage[0]} {usage[1]}\n")
 print(json.dumps(last if last is not None else {"is_error": True, "result": "no result message"}))
 EOF
         xz -9 -f "$R.stream.jsonl"
@@ -612,6 +661,12 @@ print(f'{state}|{res}|{cost:.3f}|{turns}')" 2>/dev/null)
     if [ "$STATE" = "dead" ]; then
         DEAD=$((DEAD + 1))
         echo "[$TAG] no usable API call: $MSG"
+        # the attempt is recorded, apart from the run that will replace it
+        mkdir -p "$RUNDIR/cut-short"
+        STAMP=$(date -u +%Y%m%dT%H%M%SZ)
+        for x in stream.jsonl.xz json meta.json touched stderr; do
+            [ -f "$R.$x" ] && mv "$R.$x" "$RUNDIR/cut-short/$TAG.$STAMP.$x"
+        done
         rm -rf "$W" "$S"
         if [ "$DEAD" -ge "$MAX_DEAD" ]; then
             echo; echo "ABORTING: $DEAD consecutive runs hit a usage limit."

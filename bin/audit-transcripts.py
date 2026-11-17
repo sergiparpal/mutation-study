@@ -31,6 +31,12 @@ tool result printed next to it: the sandbox blocks the network and hides
 everything outside the working copy, and in s2 it hides every JDK launcher but
 javac. `knew` is evidence of knowledge, not of its source.
 
+`outside` includes /tmp, which needs reading with care. Inside the sandbox
+/tmp is an empty directory private to each command: a file written there is
+gone when the command ends and never reaches the host (seen in the pilot, where
+an agent unpacked a JUnit class into /tmp to read its signatures). Such a
+command is flagged all the same; what matters is what it read.
+
 Usage:
     ./bin/audit-transcripts.py                         # data/campaign2
     ./bin/audit-transcripts.py data/campaign2 -v       # every flagged command
