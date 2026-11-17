@@ -3,11 +3,14 @@
 # Show the production diff of a mined post-cutoff subject, for hand
 # classification under the Study A fault taxonomy.
 #
-# The post-cutoff corpus was selected with criteria — small, ticket-tracked,
-# fix-plus-test in one commit — that plausibly bias it toward well-specified
-# boundary faults, which is exactly the class the specification-only arm
-# catches. Classifying it under the same taxonomy as the Defects4J sample is
-# what makes the two corpora comparable, or shows that they are not.
+# The first post-cutoff corpus was selected with criteria — small, fix-plus-test
+# in one commit — that may bias its fault composition. Classifying it under the
+# same taxonomy as the Defects4J sample is what makes the two corpora
+# comparable, or shows that they are not.
+#
+# (This comment used to add that the bias was toward the class of fault "the
+# specification-only arm catches". That rested on the first corpus's 7/7, which
+# was a harness error, not seven detections; see run-postcutoff.sh.)
 #
 # Usage: ./bin/show-postcutoff.sh              list all subjects
 #        ./bin/show-postcutoff.sh <TAG>        show one subject's diff

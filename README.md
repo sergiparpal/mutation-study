@@ -1,4 +1,4 @@
-# Oracle Provenance Is Invisible to Mutation Score
+# Mutation Score Understates Oracle Provenance
 
 Agent-generated test suites on Defects4J, with and without the implementation.
 
@@ -12,46 +12,59 @@ This repository holds the data and scripts for measuring how much of an
 agent's apparent fault-detection ability that accounts for, and what the
 metrics usually reported alongside it can see.
 
+> **The earlier headline of this repository was wrong.** Until November 2026 it
+> reported the two arms' mutation scores as 72% and 70% and concluded that the
+> metric could not see the difference between them. Defects4J's
+> `run_mutation.pl` counts mutants that no test executes as killed; the real
+> scores are 58% and 44%. That and the other corrections are listed at the end
+> of `PREPRINT.md`.
+
 ## Result
 
-Two suites per bug from the same agent, model and instructions, varying only
-whether the agent could read the implementation. Over the 36 Defects4J bugs
-measured in both arms:
+Two suites per bug from the same agent and model, under two conditions: the
+agent either works inside the checked-out project or sees only its javadoc.
+Over the 36 Defects4J bugs measured in both arms:
 
 | arm | real fault detected | mutation score | line coverage |
 |---|---|---|---|
-| implementation-visible | **26/36 — 72%** | 72% | 85% |
-| specification-only | **5/36 — 14%** | 70% | 73% |
-| EvoSuite (baseline) | 12/35 — 34% | 59% | 85% |
+| implementation-visible | **26/36 — 72%** | 58% | 85% |
+| specification-only | **5/36 — 14%** | 44% | 73% |
+| EvoSuite (baseline) | 13/30 — 43% | 47% | 85% |
 
-Detection differs five-fold. **Mutation score does not register it.** The S
-arm's detections are a strict subset of the M arm's — 21 discordant pairs in
-one direction, none in the other (exact McNemar, *p* = 9.5 × 10⁻⁷).
+Detection differs five-fold. The S arm's detections are a strict subset of the
+M arm's — 21 discordant pairs in one direction, none in the other (exact
+McNemar, *p* = 9.5 × 10⁻⁷). **Mutation score and coverage move the same way,
+but by factors of 1.3 and 1.2.**
 
-Ranked by mutation score the three populations are 72%, 70%, 59%; ranked by
-fault detection they are 72%, 14%, 34%. The middle two swap, and the
-population with the higher mutation score detects less than half as many
-faults.
+EvoSuite's row is over the suites that have each measurement: 36 for mutation,
+30 for detection and coverage. On the 29 bugs where all three generators have a
+detection verdict the rates are 69%, 14% and 41%, and the mutation scores 57%,
+44% and 48%. EvoSuite and the specification-only suites are nearly tied on
+mutation score and differ three-fold in detection.
 
-Mutation score measures the strength of a suite's assertions. It does not
-measure where those assertions' expected values came from, and provenance
-leaves no trace in execution.
+Mutation score and coverage measure how much of a program a suite exercises
+and how hard it checks what it exercises. Neither measures where the expected
+values came from.
 
 ## What is here
 
 | path | what |
 |---|---|
-| `PREPRINT.md` | the write-up: method, results, threats, related work |
-| `data/README.md` | the full method record, including every deviation and tooling failure |
+| `PREPRINT.md` | the write-up: method, results, threats, related work, corrections |
+| `data/README.md` | the method record, including deviations, tooling failures and corrections |
 | `data/agent-metrics-final.csv` | per-suite detection, mutation and coverage |
 | `data/fault-taxonomy.csv` | hand classification of the 40 Defects4J faults |
-| `data/memorisation-grades.csv` | what the model recalls about each fault with no code in context |
+| `data/memorisation-grades.csv`, `data/memorisation-readings.csv` | what the model recalls about each fault with no code in context: the mechanical screen and the hand readings |
 | `bin/run-agent-suites.sh` | generation, implementation-visible arm |
 | `bin/run-spec-suites.sh` | generation, specification-only arm (sandbox construction included) |
 | `bin/analyze-agent-suites.sh` | measurement, wrapping Defects4J's own scripts |
+| `bin/merge-agent-metrics.py` | merges Defects4J's tables and recomputes the mutation columns from Major's output |
+| `bin/report-figures.py` | recomputes every figure in §3 of the write-up from `data/` |
+| `bin/audit-trigger-leaks.py` | what the generated suites and run records give away about what the agent knew |
 
 Post-cutoff replication corpora, their mining scripts and their results are
-under `data/postcutoff*`, `data/matched-*` and `bin/mine-postcutoff.sh`.
+under `data/postcutoff*`, `data/matched-*`, `bin/mine-postcutoff.sh`,
+`bin/run-postcutoff.sh` and `bin/tally-postcutoff.py`.
 
 ## What this does not show
 
@@ -62,23 +75,33 @@ table above:
   code, so a test written for current behaviour catches the fault by
   construction. That the regression evaluation setting flatters generated
   suites is not a new observation — Dinella et al. state it in 2022; what is
-  measured here is the magnitude, and that the usual metrics are blind to it.
-- **Contamination is bounded, not eliminated.** A direct probe finds one of the
-  forty faults genuinely recalled, and benchmark identifiers not memorised at
-  all. But recall may be cued by the source rather than spontaneous, and the
-  probe withholds the source.
+  measured here is the magnitude, and how little of it the usual metrics show.
+- **The implementation-visible arm was told more than the implementation.** A
+  Defects4J checkout carries Defects4J's own metadata, which names the bug and
+  its trigger tests, and that was not removed. In 11 of the arm's 26 detections
+  the suite or the agent's closing message shows it knew one or the other. How
+  much of the 72% that accounts for cannot be said.
+- **Contamination is measured, not bounded.** A direct probe finds two of the
+  forty faults recalled with their mechanism and two more recognised, and
+  benchmark identifiers not memorised. But recall may be cued by the source
+  rather than spontaneous, the probe withholds the source, and in the
+  implementation-visible arm the cue was stronger than the source alone.
 - **The replication did not settle it.** Two post-cutoff corpora were mined.
-  The first was dominated by extreme-value faults, an artefact of the selection
-  criteria. The second, matched on fault type, narrowed the gap to 21 points
-  and lost significance (*p* = 0.375) on 14 pairs — too few to distinguish a
-  smaller effect from no power.
-- **What the specification-only arm detects is uncharacterised.** Its five
-  detections do not share a property we could identify; two are
-  documented-contract violations and three are not.
+  The first has no valid specification-only result: a harness error recorded
+  seven failed licence audits as seven detections. The second, matched on fault
+  type, gives 8/13 against 4/13 — the same direction and the same subset
+  relation, a gap of 31 points rather than 58, and *p* = 0.125 on 13 pairs: too
+  few to distinguish a smaller effect from no power.
+- **What the specification-only arm detects is only described.** Of its five
+  detections, three are documented-contract violations and two are not. The
+  classification was made knowing the outcome.
 
 ## Reproducing
 
-Defects4J v3.0.1 under Java 11, `TZ=America/Los_Angeles`, Maven 3.9+ for the
-post-cutoff corpora. Generation costs roughly $0.90 per suite. Measurement
-needs no model access: `bin/analyze-agent-suites.sh` runs over the packaged
-suites in `data/agent-suites/`.
+`./bin/report-figures.py` recomputes every figure in the write-up from `data/`
+and needs neither Defects4J nor model access.
+
+Re-measuring from the packaged suites in `data/agent-suites/` needs Defects4J
+v3.0.1 under Java 11 with `TZ=America/Los_Angeles`
+(`bin/analyze-agent-suites.sh`); the post-cutoff corpora need Maven 3.9+.
+Regenerating the suites needs the model and costs roughly $1 per suite.

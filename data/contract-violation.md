@@ -150,3 +150,25 @@ revision, at least two of the four do not support it:
 
 Section 3.3 must be corrected regardless of what happens with this
 classification.
+
+## Corrections (recorded 2026-11-17, after an audit of the write-up)
+
+Nothing above has been edited.
+
+1. **The opening figure.** "Narrowed the arms' gap from 58 to 21 percentage
+   points" counted a void specification-only detection in the matched corpus
+   (commons-lang-e4380908b; see `matched-quotas.md`). On the 13 valid pairs the
+   gap is 31 points, 62% against 31%. The OMISSION table above is unaffected:
+   that subject is an ALGORITHM fault.
+2. **The correction made above was itself wrong.** §3.3 went from four of five
+   to two of five, on the javadoc of the modified *methods*. Reading the whole
+   class, and the tests that detect the faults, gives three: Cli-32, Lang-13
+   and Gson-15. For Gson-15 the contract is on `JsonWriter.setLenient`
+   ("Numbers may be NaNs or infinities"), the detecting test
+   `testValueDoubleNaNAllowedWhenLenient` quotes it, and `value(double)`'s own
+   `@param` text says the opposite. The guidance above already said that a
+   class-level statement counts.
+3. **The classification was never finished.** `contract-violation.csv` holds
+   the twelve Commons Lang subjects only. Four are marked yes (Lang-13,
+   Lang-23, Lang-36, Lang-52), of which the specification-only arm detected
+   one.

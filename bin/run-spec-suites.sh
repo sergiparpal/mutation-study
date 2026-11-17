@@ -15,17 +15,23 @@
 # tests it writes — executing would let it observe behaviour and become a
 # mirror through the back door, which is the very thing being measured.
 #
-# Measured on the first nine bugs: 1/9 real-fault detection against 8/9 for the
-# same bugs in the M arm, at a slightly HIGHER mutation score. Writing from the
-# javadoc produces suites that discriminate behaviour just as well and catch
-# almost no real faults.
+# Measured over the 36 bugs with both arms: 5/36 real-fault detection against
+# 26/36 in the M arm, with a mutation score of 44% against 58% and line
+# coverage of 73% against 85%. Writing from the javadoc produces suites that are
+# somewhat weaker by the usual metrics and catch far fewer real faults.
+#
+# (This comment used to say the spec arm had a slightly HIGHER mutation score.
+# That came from Defects4J's mutation table, which counts mutants no test
+# executes as killed, so a suite that covers less scores more. See
+# merge-agent-metrics.py.)
 #
 # PER-METHOD FILTER
 # -----------------
 # Failing methods are disabled individually (bin/prune-failing-tests.py) rather
-# than discarding the whole suite. Measured prune rate: 2 of 365 methods (1%).
-# Writing from the javadoc alone turns out to produce almost no wrong
-# expectations, which retires the hypothesis that the spec arm would guess.
+# than discarding the whole suite. Measured prune rate over the forty bugs:
+# 59 of 1638 tests (3.6%). Writing from the javadoc alone turns out to produce
+# few wrong expectations, which retires the hypothesis that the spec arm would
+# guess.
 #
 # Declared bias: that filter uses the implementation as an oracle, so what
 # survives is precisely the subset agreeing with the code. It only removes,
@@ -130,13 +136,16 @@ EOF
     fi
 }
 
+# Counted by prune-failing-tests.py, not by grep. This used to be
+#   grep -cE "@Test|public void test"
+# which counts matching LINES, so a JUnit 4 method written as "@Test" over
+# "public void testFoo()" was counted twice. Six of the forty suites had their
+# totals doubled that way (Cli-38, Gson-6, -7, -10, -14, -16), and Lang-43,
+# run before any counting existed, was recorded as "0 0". The .pruned files of
+# those seven were corrected afterwards from the packaged suites and the JUnit
+# logs; see data/README.md.
 count_tests() {   # count_tests <file...>
-    local total=0 f c
-    for f in "$@"; do
-        c=$(grep -cE "@Test|public void test" "$f" 2>/dev/null || echo 0)
-        total=$((total + c))
-    done
-    echo "$total"
+    "$ROOT/bin/prune-failing-tests.py" --count "$@"
 }
 
 n=0
