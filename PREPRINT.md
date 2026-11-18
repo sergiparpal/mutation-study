@@ -1676,18 +1676,21 @@ is what the question needs.
 
 **The sandbox enforced less than its settings were meant to.** The third
 campaign's audit found that the directory the harness gives commands for
-temporary files is the host's own, shared by every run, and that the
-operating system carries old released jars of two of that campaign's three
-projects where an agent could read them (§3.11). The second campaign ran
-under the same settings on the same machine. During the third campaign the
-shared directory also held the
-developers' tests for each fix, left there by the preparation of the
-campaign. The transcripts record every command and every result, and in
-neither campaign does one show an agent listing that directory, reading a
-file there that it had not just written, or opening one of those jars. That
-is evidence about what the agents did, from a complete record. It is not the
+temporary files is the host's own, shared by every run, and that the operating
+system carries old released jars of two of that campaign's three projects where
+an agent could read them (§3.11). The second campaign ran under the same
+settings on the same machine. During the third campaign the shared directory
+also held the developers' tests for each fix, left there by the preparation of
+the campaign. The transcripts record every command and every result, and in
+neither campaign does one show an agent listing that directory, reading a file
+there that it had not just written, or opening one of those jars. That is
+evidence about what the agents did, from a complete record. It is not the
 isolation the design intended, and a run of ours that had used either would
-have been caught by the audit and not prevented by the sandbox.
+have been caught by the audit and not prevented by the sandbox. A check made
+after the third campaign, with its settings and no model in the loop, confirmed
+both: a sandboxed command lists and reads that directory, and reads those jars.
+Settings under which it does neither are in the repository with that check
+(`bin/agent-sandbox.py`), for any later run. No run reported here used them.
 
 **The tooling produced wrong figures without flagging them.** A table whose
 column was named `mut_killed` counted unexecuted mutants; a build that failed
@@ -2120,7 +2123,11 @@ The third campaign's scripts were committed with its protocol
 `bin/analyze-campaign3.py`, `bin/campaign3-lib.sh` and
 `bin/AgentTestRunner.java`, the runner used in the agent's script, at
 acceptance and at measurement. `bin/describe-campaign3.py`, written after the
-runs, prints the descriptive figures of §3.11.
+runs, prints the descriptive figures of §3.11. `bin/agent-sandbox.py`, also
+written after them, holds sandbox settings that give each run a temporary
+directory of its own and hide the operating system's jars, and a check of
+what a sandboxed command can reach that calls no model; what it prints under
+those settings and under the campaigns' own is in `data/sandbox/`.
 
 Raw artifacts are under `data/`. For the first campaign: one directory per arm
 holding, for each bug, the record of the run (its closing message, cost and

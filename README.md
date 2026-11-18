@@ -116,6 +116,12 @@ and the analysis as printed. Its scripts are `bin/generate-postcutoff.sh`,
 `bin/AgentTestRunner.java`, all committed before its runs, and
 `bin/describe-campaign3.py`, written after them.
 
+`bin/agent-sandbox.py`, written after the third campaign, holds sandbox
+settings for any later run, which give each run a temporary directory of its
+own and hide the operating system's jars, and a check of them that calls no
+model. Its output under those settings and under the two campaigns' is in
+`data/sandbox/`.
+
 ## What this does not show
 
 Several things, recorded here because they are easy to over-read from the
@@ -157,9 +163,12 @@ table above:
   developers' tests for each fix. The transcripts, which record every command
   and result, show no agent in either campaign listing that directory or
   reading anything there that it had not just written. Five runs of the third
-  campaign did read back their own files there, or the harness's saved copy
-  of their own output; the exclusion rule as written leaves them out, and the
-  result is the same with them in (9/27 against 6/27, *p* = 0.25).
+  campaign did read back their own files there, or the harness's saved copy of
+  their own output; the exclusion rule as written leaves them out, and the
+  result is the same with them in (9/27 against 6/27, *p* = 0.25). A check made
+  after the campaign, with its settings and no model, confirmed that a command
+  could list and read that directory. Settings that close it are in
+  `bin/agent-sandbox.py`; no run reported here used them.
 - **Contamination is measured, not bounded.** A direct probe finds two of the
   forty faults recalled with their mechanism and two more recognised, and
   benchmark identifiers not memorised. But recall may be cued by the source
