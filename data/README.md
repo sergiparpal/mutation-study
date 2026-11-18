@@ -1383,12 +1383,14 @@ project, and the counts in "The runs" and "The audit" above.
 
 ### Deviations from the protocol
 
-None in the procedure. One entry is recorded in the protocol, dated 18
-November 2026, before the measurement: what the audit found the sandbox not to
-enforce, and that the violation rule was applied to it as written. One thing
-was done that the protocol does not provide for and that changes no script it
-fixes and no figure of its analysis: `bin/describe-campaign3.py`, written
-after the runs.
+None in the procedure. Two entries are recorded in the protocol, both dated 18
+November 2026. The first, before the measurement: what the audit found the
+sandbox not to enforce, and that the violation rule was applied to it as
+written. The second, after the analysis: that what the first assumes about the
+shared temporary directory was tried and holds ("The sandbox after the third
+campaign", below). One thing was done that the protocol does not provide for
+and that changes no script it fixes and no figure of its analysis:
+`bin/describe-campaign3.py`, written after the runs.
 
 ## The sandbox after the third campaign
 
