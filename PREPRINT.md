@@ -2062,6 +2062,70 @@ is quoted there. They measure test accuracy and line coverage besides
 detection, and not mutation score, so the comparison this paper tests cannot
 be made on their data.
 
+Konstantinou, Degiovanni and Papadakis, *"Can we find bugs using LLM-generated
+oracles?"* (arXiv:2410.21136v2, October 2026; first posted in October 2024 as
+*"Do LLMs generate test oracles that capture the actual or the expected
+program behaviour?"*) put the question to a single assertion. The paper shares
+two authors with the workflow study above, which is the one we mean by
+"Konstantinou et al." elsewhere. A model is given a method, a test prefix and
+an assertion, and is asked to say in one word whether the assertion is
+correct. The prefixes and the correct assertions are EvoSuite's, from 24 of
+the 25 systems of the 2023 evaluation of TOGA cited above; the wrong
+assertions are ones that fail on those systems; and the method is either the
+original or a mutant of it made with μBERT. Four models are tried under three
+prompts: the method and the prefix, the same with the method's docstring, and
+the same again with the whole class. Shown the original method, they accept
+the correct assertion in 39% to 81% of the cases. Shown the mutant, they
+accept the same assertion in 31% to 72%, and every model under every prompt
+accepts it less often, by 6.20 to 16.15 points (our subtractions from their
+Table 1). A fifth model, GPT-5-mini, added as a reasoning model, starts
+higher, at 80.83% to 92.45%, and falls further, by 18.65 to 27.06 points.
+Telling the model that the code might be buggy, tried on one model and
+reported without figures, "did not alter the fundamental reasoning pattern of
+the model".
+
+Generation is tried on the original code only. Asked for one assertion, the
+models write one that compiles and passes in 48.66% to 76.98% of the cases;
+asked for five, at least one that passes in 84.05% to 97.34%. Passing on the
+code the model was shown is the criterion there, so these figures count
+agreement with the implementation. The strength of the passing assertions is
+then measured as mutation score, with PIT, against EvoSuite's own assertions
+on the same prefixes: 18.01% to 20.62% for the models and 17.11% to 19.84% for
+EvoSuite, the models ahead in eleven comparisons of twelve.
+
+Two things in the paper bear on ours. The first is the mechanism of §4.1 seen
+one assertion at a time. In the authors' words, "although multiple studies use
+LLMs as if they would extract the expected oracle, our empirical results
+suggest that the LLM follows the actual code execution to find the test
+oracle". Documentation placed beside the code does not offset it: with the
+docstring in the prompt the fall is 7.1 to 8.9 points, against 6.2 to 8.5
+without it (again our subtractions). The source our implementation-visible
+agent reads carries its Javadoc as well. The second is what mutation score is
+made to stand for. The paper reports the result of its last experiment as
+"higher fault detection capabilities" for assertions that, by its first
+result, take their expectations from the code, and that is the reading §4.2
+argues a mutation score cannot carry. The authors grant part of this. They
+know of "no established metric for directly quantifying oracle relevance", use
+mutation score as an approximation of it, and note that "in theory a model can
+generate more assertions that will increase its mutation score".
+
+The paper has no real fault, no condition without the code, and no agent. Its
+faults are mutants: μBERT's, of the method under test, in the first
+experiment, and PIT's in the last. The expected behaviour is by construction
+that of the original implementation, "assumed to be free of faults", and the
+correct assertion is the one EvoSuite derived from it, so the design cannot
+tell an expectation that is right from one that agrees with that
+implementation. The method is in every prompt, and the docstring is added to
+it and never takes its place. The generated assertions meet no fault but PIT's
+mutants, so the detection the title asks about is measured as mutation score
+alone, and there is no rate to put in the table below. Tests written by
+developers enter once, in 1,000 prefixes from GitBug-Java, to show that
+descriptive names help: accuracy falls by up to 15.4 points when test and
+variable names are replaced by `test0` and `var0`. GitBug-Java is taken there
+as code the models have not seen. The paper gives the ground for that, commits
+of 2023, for GPT-3.5-turbo alone; to the three newer models the argument of
+§2.8 applies.
+
 ### Tests written before the fix exists
 
 Ahmed, Hirzel, Pan, Shinnar and Sinha, *"TDD-Bench Verified: Can LLMs Generate
