@@ -1933,6 +1933,76 @@ where the prompt without it had been right, 55.6% come with Javadoc they class
 as vague or incomplete. Documentation supports an oracle where it states the
 contract, in their models as in our agent.
 
+That is a finding about what a method returns. For what it throws, the same
+group has since found that the stated contract makes no measurable difference
+to models of this kind. Hossain, Dwyer and Tasnim, *"Documentation vs. Code
+Patterns: What Drives LLM-Based Exception Oracle Generation?"* (ASE 2026;
+arXiv:2608.00884) run three released systems, TOGA, TOGLL and Doc2OracLL with
+its 7-billion-parameter model, on a test prefix, the method under test and its
+Javadoc, and measure one decision: over the instances whose oracle in the
+dataset is an expected exception, the share for which the system predicts an
+exception and not an assertion. On OE25, which they cite to the 2023
+evaluation above (25 systems, 223,557 samples, EvoSuite's prefixes), TOGLL is
+at 99.98%, Doc2OracLL at 99.7% and TOGA at 18.66%. On OE25dev, which the paper
+contributes, they are at 100%, 91.55% and 36.36%. It is drawn from the tests
+that the developers of the same 25 systems wrote: 77,299 instances, of which
+2,899 must throw.
+
+Removing every `@throws` and `@exception` clause from the Javadoc, and nothing
+else, lowers accuracy by at most 0.16 points, for any system on any benchmark,
+SF110 included. Such a clause was present in 17% to 59% of the exception
+samples, according to system and benchmark, and among those alone the largest
+fall is 0.54 points. (The falls are computed from baselines that differ in the
+second decimal from the ones in the paper's first table, quoted above: 99.75%
+where that table has 99.7%, in the case of the largest fall. The paper does
+not say why.) The earlier paper's ablation had found the same of the `@throws`
+tag on its own measure, a cost of less than one point on average, and
+concluded that the tag could be omitted. This one draws the other conclusion:
+"High exception-oracle accuracy is insufficient when models remain accurate
+after removing `@throws`/`@exception` clauses, the documentation signal that
+states when and why an exception should be thrown."
+
+The rest of the paper asks what the predictions do rest on. The tokens of an
+input are ranked by gradient-times-input attribution and replaced by a
+placeholder, one at a time, until the prediction is no longer an exception.
+For TOGLL on OE25, with attribution taken at a middle layer, 96.89% of 19,805
+correct predictions change within thirty replacements, and half of those
+within four. The token whose replacement changes the prediction is a line
+break in 82.42% of the cases, and in 97.81% it is of the kind the paper
+classes as structural: layout, punctuation, braces and comment markers. In
+0.13% it is a token the paper classes as exception-related. On the developers'
+tests the structural share is 93.61%. Doc2OracLL differs. About nine in ten of
+its predictions change as well, within a budget of 500 replacements, but only
+once about 90% of the replaceable tokens are gone, and three quarters of the
+tokens that change them are not structural. The authors do not claim those as
+evidence of an exception: "many non-structural tokens are uncategorized
+lexical cues rather than clearly exception-triggering evidence".
+
+None of this measures what our arms measure. No test is run and no fault is
+involved: the authors list what the measure leaves out as "semantic
+equivalence, compilability, oracle style, exact exception type, or bug-finding
+usefulness". It is taken on the instances labelled as exceptions alone, so an
+exception predicted where the dataset has an assertion does not count against
+a system. TOGLL and Doc2OracLL are run on "the test prefix, method under test
+(MUT), and documentation", so the experiment has no documentation-only
+condition: it shows a clause going unused where the method, which the paper
+also calls the focal code, and the prefix are present, not what a generator
+does with the documentation alone. And the systems are fine-tuned models of
+110 million to 7 billion parameters, run as released. The authors note that
+they do not evaluate "proprietary API models or larger instruction-tuned
+models, which may rely on different signals"; our agent is built on one of
+those.
+
+We cite the paper for two reasons. It qualifies the reading of the result
+above: that these models complete an oracle about as accurately from the
+Javadoc as from the code does not show, for the oracles that expect an
+exception, that they used what the Javadoc says. And it makes for a model's
+prediction the argument that §4.2 makes for a suite's scores, that a figure
+can be high and stable without registering where the expectation came from.
+Their remedy is to verify of a prediction whether it "follows from meaningful
+exception evidence rather than shortcut cues"; ours, in §4.5, is to generate
+with and without the implementation and compare.
+
 ### Error propagation in code-then-test workflows
 
 Konstantinou, Tambon and Papadakis, *"On the risk of coding before testing: An
