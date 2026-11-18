@@ -1,0 +1,7 @@
+org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapWhitespaceExactlyAtTextLength()
+org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapDoesNotTreatTabAsWhitespace()
+org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapNoWhitespaceReturnsStartPosPlusWidth()
+org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapFindsWhitespaceBeyondWidthWhenTextIsShort()
+org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendTableWithNullIsNoopEvenWhenOutputWouldFail()
+org.apache.commons.cli.help.TextHelpAppendableAgentTest#testPrintWrappedProducesMultipleLinesWhenTextExceedsMaxWidth()
+org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendTableWithNullIsNoop()

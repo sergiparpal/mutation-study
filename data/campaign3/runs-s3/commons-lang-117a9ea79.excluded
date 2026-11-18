@@ -1,0 +1,5 @@
+org.apache.commons.lang3.time.FastDateFormatAgentTest#constructor_nullLocale_throwsNullPointerException()
+org.apache.commons.lang3.time.FastDateFormatAgentTest#getInstance_nullPattern_throwsIllegalArgumentException()
+org.apache.commons.lang3.time.FastDateParserAgentTest#parseStringPositionCalendar_nonLenientCalendarWithInvalidField_throwsIllegalArgumentException()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#constructor_nullLocale_throwsNullPointerException()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#parsePattern_invalidPattern_throwsIllegalArgumentException()

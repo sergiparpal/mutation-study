@@ -1,0 +1,67 @@
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.apache.commons:commons-csv >-------------------
+[INFO] Building Apache Commons CSV 1.15.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven-version) @ commons-csv ---
+[INFO] Skipping Rule Enforcement.
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-java-version) @ commons-csv ---
+[INFO] Skipping Rule Enforcement.
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-csv ---
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-csv ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.1:parse-version (parse-version) @ commons-csv ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-csv ---
+[INFO] Executing tasks
+[INFO]      [copy] Copying 2 files to /home/sergi/.cache/gen-stage/w-UFFgxbuW/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-csv ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-csv ---
+[INFO] skip non existing resourceDirectory /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/resources
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ commons-csv ---
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/CSVRecord.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/DuplicateHeaderMode.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/Token.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/package-info.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/CSVParser.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/CSVException.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/Constants.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/QuoteMode.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/CSVPrinter.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/CSVFormat.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/Lexer.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/CSVException.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/CSVFormat.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/CSVParser.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/CSVPrinter.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/CSVRecord.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/Constants.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/DuplicateHeaderMode.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/Lexer.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/QuoteMode.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/Token.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/w-UFFgxbuW/src/main/java/org/apache/commons/csv/package-info.java
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 12 source files with javac [debug release 8] to target/classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.957 s
+[INFO] Finished at: 2026-11-18T05:43:51-08:00
+[INFO] ------------------------------------------------------------------------

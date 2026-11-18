@@ -1,0 +1,39 @@
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapRawReturnsUnderlyingMapInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParsePathNullPathThrowsNullPointerException()	1	0	
+FAILED	method	org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullFormatThrowsIllegalArgumentException()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapIsACopyNotLinkedToSubsequentCalls()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseFileNullFileThrowsNullPointerException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testLineAndRecordNumbersBeforeAndAfterParsing()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testNoTrailerCommentWhenNoneProvided()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testTrailerCommentAvailableAfterFullyProcessingStream()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapReflectsConfiguredHeader()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseStringNullFormatMapsToDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testStreamProducesAllRecords()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testBuilderSetRecordNumberAffectsGetRecordNumber()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testStreamProducesNoRecordsAfterClose()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseReaderBasic()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseFileBasic()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetRecordsOnEmptyInputIsEmptyNotNull()	1	0	
+FAILED	method	org.apache.commons.csv.CSVParserAgentTest#testIteratorWrapsIoExceptionAsIllegalStateException()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalStateException> but was: <java.io.UncheckedIOException>
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testNoHeaderCommentWhenNoneProvided()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testBuilderReturnsNewInstanceEachTime()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetFirstEndOfLineLf()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParsePathBasic()	1	0	
+FAILED	method	org.apache.commons.csv.CSVParserAgentTest#testParseReaderNullReaderThrowsIllegalArgumentException()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorWithOffsetAndRecordNumber()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testIteratorProducesAllRecordsInOrder()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testHeaderCommentDetectedBeforeHeaderRecord()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseUrlBasic()	1	0	
+FAILED	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapWithNoHeaderIsEmpty()	1	1	org.opentest4j.AssertionFailedError: expected: not <null>
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseUrlNullUrlThrowsNullPointerException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testNextRecordReturnsRecordsThenNullAtEndOfStream()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testIsClosedLifecycle()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testIteratorYieldsNothingAfterParserIsClosed()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderNamesIteratesInColumnOrderAndIsReadOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetFirstEndOfLineCrLf()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testBuilderSettersReturnSameInstanceForFluentChaining()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderNamesWithNoHeaderIsEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseStringNullStringThrowsNullPointerException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseStringProducesExpectedRecords()	1	0	
+FAILED	method	org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullReaderThrowsIllegalArgumentException()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testBuilderGetProducesWorkingParser()	1	0	

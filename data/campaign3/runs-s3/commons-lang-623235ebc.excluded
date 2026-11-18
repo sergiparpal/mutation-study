@@ -1,0 +1,2 @@
+org.apache.commons.lang3.ArrayUtilsAgentTest#testToStringArrayWithNullElementThrowsWithoutDefault()
+org.apache.commons.lang3.ArrayUtilsAgentTest#testHashCodeNullIsZero()

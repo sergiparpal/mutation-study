@@ -1,0 +1,25 @@
+1) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testParsePatternRejectsUnterminatedQuote()
+org.opentest4j.AssertionFailedError: Expected IllegalArgumentException for an invalid (unterminated quote) pattern
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testParsePatternRejectsUnterminatedQuote(FastDatePrinterAgentTest.java:441)
+
+2) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testSelectNumberRuleReturnsNonNullRuleForVariousPadding()
+java.lang.IllegalArgumentException
+    at org.apache.commons.lang3.time.FastDatePrinter$PaddedNumberField.<init>(FastDatePrinter.java:275)
+    at org.apache.commons.lang3.time.FastDatePrinter.selectNumberRule(FastDatePrinter.java:1562)
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testSelectNumberRuleReturnsNonNullRuleForVariousPadding(FastDatePrinterAgentTest.java:454)
+
+3) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorRejectsNullLocale()
+org.opentest4j.AssertionFailedError: Expected NullPointerException for null locale
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testConstructorRejectsNullLocale(FastDatePrinterAgentTest.java:70)
+
+4) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorRejectsNullTimeZone()
+org.opentest4j.AssertionFailedError: Expected NullPointerException for null timeZone
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testConstructorRejectsNullTimeZone(FastDatePrinterAgentTest.java:60)
+
+5) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatIso8601ExtendedTimeZoneAtZeroOffset()
+org.opentest4j.AssertionFailedError: expected: <+00:00> but was: <Z>
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testFormatIso8601ExtendedTimeZoneAtZeroOffset(FastDatePrinterAgentTest.java:182)
+
+Tests run: 42, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 42, failed: 5
+FAILURES!!!

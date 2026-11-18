@@ -1,0 +1,2 @@
+CSVParserTest.testGetBytePositionMultiCharacterDelimiterWithSupplementaryCharacter
+ExtendedBufferedReaderTest.testReadingSupplementaryCharacterTracksBytes

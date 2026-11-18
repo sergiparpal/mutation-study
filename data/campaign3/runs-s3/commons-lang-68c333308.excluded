@@ -1,0 +1,5 @@
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testParsePatternRejectsUnterminatedQuote()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testSelectNumberRuleReturnsNonNullRuleForVariousPadding()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorRejectsNullLocale()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorRejectsNullTimeZone()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatIso8601ExtendedTimeZoneAtZeroOffset()

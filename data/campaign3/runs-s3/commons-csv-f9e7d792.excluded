@@ -1,0 +1,6 @@
+org.apache.commons.csv.CSVParserAgentTest#testHeaderCommentDetectedWhenPresent()
+org.apache.commons.csv.CSVParserAgentTest#testConstructorNullReaderThrowsIllegalArgumentException()
+org.apache.commons.csv.CSVParserAgentTest#testConstructorNullFormatThrowsIllegalArgumentException()
+org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapEmptyWhenNoHeaderConfigured()
+org.apache.commons.csv.CSVParserAgentTest#testParseReaderNullThrowsIllegalArgumentException()
+org.apache.commons.csv.LexerAgentTest#testReadEscapeReturnsCharacterFollowingEscape()

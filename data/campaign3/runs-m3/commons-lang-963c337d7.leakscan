@@ -1,0 +1,49 @@
+trigger name	src/test/java/org/apache/commons/lang3/LongRangeTest.java:188	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/StringUtilsEqualsIndexOfTest.java:198	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/IntegerRangeTest.java:173	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/AnnotationUtilsTest.java:462	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/AnnotationUtilsTest.java:464	final Test test = getClass().getDeclaredMethod("testHashCode").getAnnotation(Test.class);
+trigger name	src/test/java/org/apache/commons/lang3/ObjectUtilsTest.java:443	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/ObjectUtilsTest.java:531	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/CharSetTest.java:412	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/ArrayUtilsTest.java:553	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/CharRangeTest.java:366	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/DoubleRangeTest.java:174	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/RangeTest.java:218	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/time/FastDatePrinterTest.java:160	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/time/FastDateParserTest.java:363	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/math/FractionTest.java:400	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/math/FractionTest.java:742	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableIntTest.java:122	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableIntTest.java:123	this.testEquals(new MutableInt(0), new MutableInt(0), new MutableInt(1));
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableIntTest.java:125	//this.testEquals(mutNumA, Integer.valueOf(0), mutNumC);
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableIntTest.java:133	void testEquals(final Number numA, final Number numB, final Number numC) {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableIntTest.java:208	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableObjectTest.java:46	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableObjectTest.java:86	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableDoubleTest.java:121	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableDoubleTest.java:200	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableShortTest.java:111	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableShortTest.java:191	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableBooleanTest.java:71	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableBooleanTest.java:121	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableByteTest.java:120	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableByteTest.java:199	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableFloatTest.java:121	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableFloatTest.java:200	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableLongTest.java:122	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/mutable/MutableLongTest.java:201	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/builder/IDKeyTest.java:32	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/builder/HashCodeBuilderTest.java:413	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/tuple/MutablePairTest.java:83	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/tuple/MutablePairTest.java:94	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/tuple/MutableTripleTest.java:67	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/tuple/MutableTripleTest.java:79	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/tuple/ImmutableTripleTest.java:73	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/tuple/ImmutableTripleTest.java:84	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/tuple/ImmutablePairTest.java:107	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/tuple/ImmutablePairTest.java:118	void testHashCode() {
+trigger name	src/test/java/org/apache/commons/lang3/reflect/TypeLiteralTest.java:43	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/reflect/TypeUtilsTest.java:681	void testEquals() throws NoSuchFieldException {
+trigger name	src/test/java/org/apache/commons/lang3/text/StrBuilderTest.java:656	void testEquals() {
+trigger name	src/test/java/org/apache/commons/lang3/text/StrBuilderTest.java:794	void testHashCode() {

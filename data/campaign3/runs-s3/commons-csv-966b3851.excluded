@@ -1,0 +1,5 @@
+org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullFormatThrowsIllegalArgumentException()
+org.apache.commons.csv.CSVParserAgentTest#testIteratorWrapsIoExceptionAsIllegalStateException()
+org.apache.commons.csv.CSVParserAgentTest#testParseReaderNullReaderThrowsIllegalArgumentException()
+org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapWithNoHeaderIsEmpty()
+org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullReaderThrowsIllegalArgumentException()

@@ -1,0 +1,3 @@
+org.apache.commons.csv.CSVFormatAgentTest#deprecatedWithRecordSeparatorVariants()
+org.apache.commons.csv.CSVFormatAgentTest#parseReaderThrowsOnMalformedInput()
+org.apache.commons.csv.CSVFormatAgentTest#informixUnloadFormatHasDocumentedSettings()

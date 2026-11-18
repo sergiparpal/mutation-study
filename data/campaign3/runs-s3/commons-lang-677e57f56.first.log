@@ -1,0 +1,19 @@
+1) org.apache.commons.lang3.time.StopWatchAgentTest#testSplitTwiceThrows()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalStateException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.time.StopWatchAgentTest.testSplitTwiceThrows(StopWatchAgentTest.java:204)
+
+2) org.apache.commons.lang3.time.StopWatchAgentTest#testGetSplitsRecordsLabeledSplits()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <0>
+    at org.apache.commons.lang3.time.StopWatchAgentTest.testGetSplitsRecordsLabeledSplits(StopWatchAgentTest.java:509)
+
+3) org.apache.commons.lang3.time.StopWatchAgentTest#testGetSupplierDelegatesAndRecordsTime()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.time.StopWatchAgentTest.testGetSupplierDelegatesAndRecordsTime(StopWatchAgentTest.java:567)
+
+4) org.apache.commons.lang3.time.StopWatchAgentTest#testRunRunnableDelegatesAndRecordsTime()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.time.StopWatchAgentTest.testRunRunnableDelegatesAndRecordsTime(StopWatchAgentTest.java:583)
+
+Tests run: 44, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 44, failed: 4
+FAILURES!!!

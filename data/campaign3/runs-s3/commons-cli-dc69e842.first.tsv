@@ -1,0 +1,39 @@
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapRecognizesNewlineAsWhitespace()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testConstructorWithNullOutputDoesNotThrow()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testSetAndGetLeftPad()	1	0	
+FAILED	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapWhitespaceExactlyAtTextLength()	1	1	org.opentest4j.AssertionFailedError: expected: <1> but was: <4>
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testGetTextStyleBuilderNotNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testDefaultWidthConstant()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapWithStartPosOffset()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapPicksLastWhitespaceBeforeLimit()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapRecognizesCarriageReturnAsWhitespace()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendTitleWritesText()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testConstructorWithAppendableUsesDefaults()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendHeaderWithNullTextIsNoop()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendParagraphWritesText()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testDefaultLeftPadConstant()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendListPropagatesIOException()	1	0	
+FAILED	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapDoesNotTreatTabAsWhitespace()	1	1	org.opentest4j.AssertionFailedError: expected: <3> but was: <2>
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testResizeReturnsSameBuilderInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendHeaderPropagatesIOException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testDefaultIndentConstant()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendParagraphPropagatesIOException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testDefaultListIndentConstant()	1	0	
+FAILED	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapNoWhitespaceReturnsStartPosPlusWidth()	1	1	org.opentest4j.AssertionFailedError: expected: <5> but was: <4>
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testSetAndGetMaxWidth()	1	0	
+FAILED	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapFindsWhitespaceBeyondWidthWhenTextIsShort()	1	1	org.opentest4j.AssertionFailedError: expected: <3> but was: <7>
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendTitleWithNullIsNoop()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendHeaderWritesText()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testPrintWrappedWritesContent()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapNoWhitespaceWithinShortTextReturnsTextLength()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testSystemOutReturnsNewNonNullInstanceWithDefaults()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendListWritesItems()	1	0	
+FAILED	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendTableWithNullIsNoopEvenWhenOutputWouldFail()	1	1	java.lang.NullPointerException
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendParagraphWithNullIsNoop()	1	0	
+FAILED	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testPrintWrappedProducesMultipleLinesWhenTextExceedsMaxWidth()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testPrintWrappedPropagatesIOException()	1	0	
+FAILED	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendTableWithNullIsNoop()	1	1	java.lang.NullPointerException
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testSetAndGetIndent()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testPrintWrappedWithEmptyStringDoesNotThrow()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendTitlePropagatesIOException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendListWithNullIsNoop()	1	0	

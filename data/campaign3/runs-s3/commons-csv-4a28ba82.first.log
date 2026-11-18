@@ -1,0 +1,15 @@
+1) org.apache.commons.csv.CSVFormatAgentTest#deprecatedWithRecordSeparatorVariants()
+org.opentest4j.AssertionFailedError: Expected IllegalArgumentException
+    at org.apache.commons.csv.CSVFormatAgentTest.deprecatedWithRecordSeparatorVariants(CSVFormatAgentTest.java:792)
+
+2) org.apache.commons.csv.CSVFormatAgentTest#parseReaderThrowsOnMalformedInput()
+org.opentest4j.AssertionFailedError: Expected an IOException for malformed quoted CSV input
+    at org.apache.commons.csv.CSVFormatAgentTest.parseReaderThrowsOnMalformedInput(CSVFormatAgentTest.java:427)
+
+3) org.apache.commons.csv.CSVFormatAgentTest#informixUnloadFormatHasDocumentedSettings()
+org.opentest4j.AssertionFailedError: expected: <,> but was: <|>
+    at org.apache.commons.csv.CSVFormatAgentTest.informixUnloadFormatHasDocumentedSettings(CSVFormatAgentTest.java:140)
+
+Tests run: 63, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 63, failed: 3
+FAILURES!!!

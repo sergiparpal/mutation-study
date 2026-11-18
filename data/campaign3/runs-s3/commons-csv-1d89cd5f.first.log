@@ -1,0 +1,11 @@
+1) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testThreeArgConstructor_withEmptyReaderAndTracking_bytesReadStaysZero()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <3>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testThreeArgConstructor_withEmptyReaderAndTracking_bytesReadStaysZero(ExtendedBufferedReaderAgentTest.java:264)
+
+2) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLine_onEmptyInput_returnsNullAndSetsLastCharToEof()
+org.opentest4j.AssertionFailedError: expected: <-1> but was: <-2>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testReadLine_onEmptyInput_returnsNullAndSetsLastCharToEof(ExtendedBufferedReaderAgentTest.java:149)
+
+Tests run: 26, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 26, failed: 2
+FAILURES!!!

@@ -1,0 +1,6 @@
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISO()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationPatternMultipleOptionalBlocks()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodISOSameInstant()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatOptionalLiteralFollowsPrecedingNonLiteral()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatWithLiteralToken()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodISOMonthDayBorrowAlgorithm()

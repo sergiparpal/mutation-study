@@ -1,0 +1,27 @@
+1) org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullFormatThrowsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.csv.CSVParserAgentTest.testDeprecatedConstructorNullFormatThrowsIllegalArgumentException(CSVParserAgentTest.java:198)
+Caused by: java.lang.NullPointerException: format
+
+2) org.apache.commons.csv.CSVParserAgentTest#testIteratorWrapsIoExceptionAsIllegalStateException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalStateException> but was: <java.io.UncheckedIOException>
+    at org.apache.commons.csv.CSVParserAgentTest.testIteratorWrapsIoExceptionAsIllegalStateException(CSVParserAgentTest.java:494)
+Caused by: java.io.UncheckedIOException: java.io.IOException: simulated read failure
+
+3) org.apache.commons.csv.CSVParserAgentTest#testParseReaderNullReaderThrowsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.csv.CSVParserAgentTest.testParseReaderNullReaderThrowsIllegalArgumentException(CSVParserAgentTest.java:105)
+Caused by: java.lang.NullPointerException: origin
+
+4) org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapWithNoHeaderIsEmpty()
+org.opentest4j.AssertionFailedError: expected: not <null>
+    at org.apache.commons.csv.CSVParserAgentTest.testGetHeaderMapWithNoHeaderIsEmpty(CSVParserAgentTest.java:343)
+
+5) org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullReaderThrowsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.csv.CSVParserAgentTest.testDeprecatedConstructorNullReaderThrowsIllegalArgumentException(CSVParserAgentTest.java:188)
+Caused by: java.lang.NullPointerException: origin
+
+Tests run: 39, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 39, failed: 5
+FAILURES!!!

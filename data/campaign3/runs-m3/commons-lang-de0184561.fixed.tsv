@@ -1,0 +1,16 @@
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneNegativeHoursAndMinutes()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetTimeZoneDelegatesToGmtFirst()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetTimeZoneUnknownOlsonIdFallsBackToGmt()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneMinutesOutOfRange()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneInvalidPattern()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneSingleDigitHour()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneMinutesOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneGmtCaseInsensitivePrefix()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneHoursOutOfRange()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneHoursOnlyNoColon()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZonePositiveHoursAndMinutes()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneHoursBoundaryInRange()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneEmptyAndBareSigns()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneNoArg()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetTimeZoneFallsBackToOlsonId()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZoneZAndUtc()	1	0	
