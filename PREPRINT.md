@@ -2251,6 +2251,53 @@ score exists on both sides of the change in where the expectations come from.
 Their buggy-input condition could not provide that, and it is the comparison
 this paper tests.
 
+Molinelli, Di Grazia, Martin-Lopez, Ernst and Pezzè, *"Do LLMs Generate Useful
+Test Oracles? An Empirical Study with an Unbiased Dataset"* (ASE 2025) take
+mutation score as the measure of what a generated oracle is worth, "a proxy
+for error detection", on data chosen so that the models cannot have seen it.
+From 135 Java projects that build with Maven they take 13,866 assertions in
+tests that developers wrote after 1 September 2024, the latest training cutoff
+among the ten open models they try, remove each assertion and ask a model to
+write it. Every prompt holds the test up to that point and the source of the
+methods it calls, bodies included. Three of the four prompts add the test
+class, the class under test or both, which changes accuracy by "less than one
+percent". Accuracy is agreement in text with the developer's assertion: for
+29% of the oracles the best models write one that contains it or is contained
+in it, which the authors call a pessimistic under-approximation.
+
+The mutation analysis is much smaller than the dataset. It is run with PIT on
+four projects, with one model and one prompt: 79 generated assertions, of
+which 32 do not compile, 8 fail and 39 pass. Only the 39 are scored, because
+"PIT requires a green test suite". As means over the four projects, the tests
+reach a mutation score of 19% with no assertion, 43% with the generated ones,
+45% with the developers' and 50% with both. Project by project the generated
+assertions run from 15% against the developers' 25% to 79% against 61%. The
+43% and the 45% are what the abstract reports as similar.
+
+This is the comparison of §4.2 made inside one test. Two sets of expectations
+for the same inputs are set side by side by mutation score: one written by the
+project's developers, the other by a model that was shown the bodies of the
+methods called and whose assertion is kept only where it passes on them. The
+scores are close. By the argument of §4.2, closeness of that kind says that
+the model's assertions are about as strong as the developers'. It does not say
+where their expected values came from. The authors see where the measure
+stops: the failing tests that PIT leaves out "may still be useful to uncover
+real bugs (for instance, failures due to correct oracles in a faulty
+program)". Zhao et al. say the same of their buggy-input condition.
+
+Their control for contamination and ours answer one worry and fix different
+things. They state the worry of Defects4J itself, which "is likely to have
+been included in LLM training data", and take tests written after the cutoff
+from projects selected for having a history, of at least 100 commits: the
+assertion to be predicted is new, and the code it concerns need not be. Our
+third campaign takes fixes made after the cutoff in libraries that have long
+been public (§2.11): the fault and its repair are new, and the documentation
+and most of the code are not. Neither makes a subject unseen as a whole.
+Beyond that the paper has no fault other than PIT's mutants, no condition
+without the code and no agent. Its models are open ones of 1.5 to 70 billion
+parameters, and the authors note that proprietary models "may perform better".
+It measures no detection rate, so it has no row in the table above.
+
 ## 7. Conclusion
 
 An agent asked to write tests for existing code will encode that code's
