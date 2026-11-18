@@ -1,0 +1,18 @@
+######  Start code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-11-17 18:55:52  ######
+ - Executing test suite: Cli-32f-s2.1.tar.bz2
+ - Executing test suite: Cli-32f-m2.1.tar.bz2
+ - Executing test suite: Cli-21f-m2.1.tar.bz2
+ - Executing test suite: Cli-21f-s2.1.tar.bz2
+ - Executing test suite: Cli-17f-s2.1.tar.bz2
+ - Executing test suite: Cli-17f-m2.1.tar.bz2
+ - Executing test suite: Cli-10f-m2.1.tar.bz2
+ - Executing test suite: Cli-10f-s2.1.tar.bz2
+ - Executing test suite: Cli-38f-s2.1.tar.bz2
+ - Executing test suite: Cli-38f-m2.1.tar.bz2
+ - Executing test suite: Cli-28f-s2.1.tar.bz2
+ - Executing test suite: Cli-28f-m2.1.tar.bz2
+ - Executing test suite: Cli-12f-s2.1.tar.bz2
+ - Executing test suite: Cli-12f-m2.1.tar.bz2
+ - Executing test suite: Cli-15f-m2.1.tar.bz2
+ - Executing test suite: Cli-15f-s2.1.tar.bz2
+######  End code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-11-17 18:57:37  ######

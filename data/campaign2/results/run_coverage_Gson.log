@@ -1,0 +1,283 @@
+Extract test suite......................................................... Executing test suite: Gson-7f-m2.1.tar.bz2
+OK
+Checking out 2b08c88c to /tmp/run_coverage.pl_2029423_1794971371/7f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 2b08c88c:a02f5757..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-7f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-7f-s2.1.tar.bz2
+OK
+Check out program version: Gson-7f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-15f-s2.1.tar.bz2
+OK
+Checking out ada597e6 to /tmp/run_coverage.pl_2029423_1794971371/15f....... OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff ada597e6:0aaef0fd..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-15f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-15f-m2.1.tar.bz2
+OK
+Check out program version: Gson-15f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-10f-m2.1.tar.bz2
+OK
+Checking out bb451eac to /tmp/run_coverage.pl_2029423_1794971371/10f....... OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff bb451eac:ecda3582..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-10f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-10f-s2.1.tar.bz2
+OK
+Check out program version: Gson-10f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-16f-m2.1.tar.bz2
+OK
+Checking out 03a72e75 to /tmp/run_coverage.pl_2029423_1794971371/16f....... OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 03a72e75:ee691fba..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-16f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-16f-s2.1.tar.bz2
+OK
+Check out program version: Gson-16f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-4f-s2.1.tar.bz2
+OK
+Checking out af68d70c to /tmp/run_coverage.pl_2029423_1794971371/4f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Backing up build file: /tmp/run_coverage.pl_2029423_1794971371/4f/pom.xml.. OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff af68d70c:2ab776b5..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-4f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-4f-m2.1.tar.bz2
+OK
+Check out program version: Gson-4f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-5f-s2.1.tar.bz2
+OK
+Checking out 8383f5c7 to /tmp/run_coverage.pl_2029423_1794971371/5f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Backing up build file: /tmp/run_coverage.pl_2029423_1794971371/5f/pom.xml.. OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 8383f5c7:af68d70c..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-5f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-5f-m2.1.tar.bz2
+OK
+Check out program version: Gson-5f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-8f-s2.1.tar.bz2
+OK
+Checking out 0f66f4fa to /tmp/run_coverage.pl_2029423_1794971371/8f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 0f66f4fa:6f6af805..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-8f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-8f-m2.1.tar.bz2
+OK
+Check out program version: Gson-8f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-14f-m2.1.tar.bz2
+OK
+Checking out a3001480 to /tmp/run_coverage.pl_2029423_1794971371/14f....... OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff a3001480:5848096f..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-14f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-14f-s2.1.tar.bz2
+OK
+Check out program version: Gson-14f........................................ OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-6f-m2.1.tar.bz2
+OK
+Checking out dea30550 to /tmp/run_coverage.pl_2029423_1794971371/6f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff dea30550:67bd3a2c..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-6f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-6f-s2.1.tar.bz2
+OK
+Check out program version: Gson-6f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-3f-s2.1.tar.bz2
+OK
+Checking out 64107353 to /tmp/run_coverage.pl_2029423_1794971371/3f........ OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Backing up build file: /tmp/run_coverage.pl_2029423_1794971371/3f/pom.xml.. OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 64107353:9e5f86d1..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-3f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK
+Extract test suite......................................................... Executing test suite: Gson-3f-m2.1.tar.bz2
+OK
+Check out program version: Gson-3f......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK

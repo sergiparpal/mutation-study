@@ -1,0 +1,15 @@
+1:LVR:TRUE:FALSE:com.google.gson.internal.UnsafeAllocator@create():42:1348:true |==> false
+2:STD:<CALL>:<NO-OP>:com.google.gson.internal.UnsafeAllocator@create():42:1332:f.setAccessible(true); |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:com.google.gson.internal.UnsafeAllocator$1@newInstance(java.lang.Class<T>):49:1658:assertInstantiable(c); |==> <NO-OP>
+4:LVR:TRUE:FALSE:com.google.gson.internal.UnsafeAllocator@create():64:2210:true |==> false
+5:STD:<CALL>:<NO-OP>:com.google.gson.internal.UnsafeAllocator@create():64:2179:getConstructorId.setAccessible(true); |==> <NO-OP>
+6:LVR:TRUE:FALSE:com.google.gson.internal.UnsafeAllocator@create():68:2462:true |==> false
+7:STD:<CALL>:<NO-OP>:com.google.gson.internal.UnsafeAllocator@create():68:2436:newInstance.setAccessible(true); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:com.google.gson.internal.UnsafeAllocator$2@newInstance(java.lang.Class<T>):73:2637:assertInstantiable(c); |==> <NO-OP>
+9:LVR:TRUE:FALSE:com.google.gson.internal.UnsafeAllocator@create():88:3160:true |==> false
+10:STD:<CALL>:<NO-OP>:com.google.gson.internal.UnsafeAllocator@create():88:3134:newInstance.setAccessible(true); |==> <NO-OP>
+11:STD:<CALL>:<NO-OP>:com.google.gson.internal.UnsafeAllocator$3@newInstance(java.lang.Class<T>):93:3335:assertInstantiable(c); |==> <NO-OP>
+12:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.gson.internal.UnsafeAllocator@assertInstantiable(java.lang.Class<?>):116:4048:Modifier.isInterface(modifiers) |==> false
+13:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.gson.internal.UnsafeAllocator@assertInstantiable(java.lang.Class<?>):116:4048:Modifier.isInterface(modifiers) |==> true
+14:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.gson.internal.UnsafeAllocator@assertInstantiable(java.lang.Class<?>):119:4210:Modifier.isAbstract(modifiers) |==> false
+15:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.gson.internal.UnsafeAllocator@assertInstantiable(java.lang.Class<?>):119:4210:Modifier.isAbstract(modifiers) |==> true

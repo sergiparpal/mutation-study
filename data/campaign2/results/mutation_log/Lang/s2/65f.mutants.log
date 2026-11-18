@@ -1,0 +1,464 @@
+1:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Date,java.util.Date):141:4476:date1 == null |==> false
+2:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Date,java.util.Date):141:4493:date2 == null |==> false
+3:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Date,java.util.Date):141:4470:date1 == null || date2 == null |==> date1 == null != (date2 == null)
+4:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Date,java.util.Date):141:4470:date1 == null || date2 == null |==> date1 == null
+5:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Date,java.util.Date):141:4487:date1 == null || date2 == null |==> date2 == null
+6:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Date,java.util.Date):141:4484:date1 == null || date2 == null |==> true
+7:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Date,java.util.Date):145:4647:cal1.setTime(date1); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Date,java.util.Date):147:4724:cal2.setTime(date2); |==> <NO-OP>
+9:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):165:5408:cal1 == null |==> false
+10:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):165:5424:cal2 == null |==> false
+11:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):165:5403:cal1 == null || cal2 == null |==> cal1 == null != (cal2 == null)
+12:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):165:5403:cal1 == null || cal2 == null |==> cal1 == null
+13:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):165:5419:cal1 == null || cal2 == null |==> cal2 == null
+14:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):165:5416:cal1 == null || cal2 == null |==> true
+15:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):168:5538:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) |==> cal1.get(Calendar.ERA) <= cal2.get(Calendar.ERA)
+16:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):168:5538:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) |==> cal1.get(Calendar.ERA) >= cal2.get(Calendar.ERA)
+17:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):168:5561:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) |==> false
+18:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):169:5606:cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> cal1.get(Calendar.YEAR) <= cal2.get(Calendar.YEAR)
+19:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):169:5606:cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> cal1.get(Calendar.YEAR) >= cal2.get(Calendar.YEAR)
+20:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):169:5630:cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> false
+21:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):168:5538:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) == (cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR))
+22:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):168:5587:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> false
+23:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):168:5538:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA)
+24:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):169:5606:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR)
+25:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):170:5676:cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> cal1.get(Calendar.DAY_OF_YEAR) <= cal2.get(Calendar.DAY_OF_YEAR)
+26:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):170:5676:cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> cal1.get(Calendar.DAY_OF_YEAR) >= cal2.get(Calendar.DAY_OF_YEAR)
+27:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):170:5707:cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> false
+28:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):168:5538:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> (cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR)) == (cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR))
+29:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):169:5657:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> false
+30:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):168:5538:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR)
+31:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameDay(java.util.Calendar,java.util.Calendar):170:5676:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR)
+32:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Date,java.util.Date):186:6381:date1 == null |==> false
+33:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Date,java.util.Date):186:6398:date2 == null |==> false
+34:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Date,java.util.Date):186:6375:date1 == null || date2 == null |==> date1 == null != (date2 == null)
+35:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Date,java.util.Date):186:6375:date1 == null || date2 == null |==> date1 == null
+36:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Date,java.util.Date):186:6392:date1 == null || date2 == null |==> date2 == null
+37:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Date,java.util.Date):186:6389:date1 == null || date2 == null |==> true
+38:ROR:==(long,long):<=(long,long):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Date,java.util.Date):189:6511:date1.getTime() == date2.getTime() |==> date1.getTime() <= date2.getTime()
+39:ROR:==(long,long):>=(long,long):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Date,java.util.Date):189:6511:date1.getTime() == date2.getTime() |==> date1.getTime() >= date2.getTime()
+40:ROR:==(long,long):FALSE(long,long):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Date,java.util.Date):189:6527:date1.getTime() == date2.getTime() |==> false
+41:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Calendar,java.util.Calendar):204:7122:cal1 == null |==> false
+42:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Calendar,java.util.Calendar):204:7138:cal2 == null |==> false
+43:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Calendar,java.util.Calendar):204:7117:cal1 == null || cal2 == null |==> cal1 == null != (cal2 == null)
+44:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Calendar,java.util.Calendar):204:7117:cal1 == null || cal2 == null |==> cal1 == null
+45:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Calendar,java.util.Calendar):204:7133:cal1 == null || cal2 == null |==> cal2 == null
+46:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Calendar,java.util.Calendar):204:7130:cal1 == null || cal2 == null |==> true
+47:ROR:==(long,long):<=(long,long):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Calendar,java.util.Calendar):207:7251:cal1.getTime().getTime() == cal2.getTime().getTime() |==> cal1.getTime().getTime() <= cal2.getTime().getTime()
+48:ROR:==(long,long):>=(long,long):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Calendar,java.util.Calendar):207:7251:cal1.getTime().getTime() == cal2.getTime().getTime() |==> cal1.getTime().getTime() >= cal2.getTime().getTime()
+49:ROR:==(long,long):FALSE(long,long):org.apache.commons.lang.time.DateUtils@isSameInstant(java.util.Calendar,java.util.Calendar):207:7276:cal1.getTime().getTime() == cal2.getTime().getTime() |==> false
+50:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):224:8024:cal1 == null |==> false
+51:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):224:8040:cal2 == null |==> false
+52:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):224:8019:cal1 == null || cal2 == null |==> cal1 == null != (cal2 == null)
+53:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):224:8019:cal1 == null || cal2 == null |==> cal1 == null
+54:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):224:8035:cal1 == null || cal2 == null |==> cal2 == null
+55:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):224:8032:cal1 == null || cal2 == null |==> true
+56:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) |==> cal1.get(Calendar.MILLISECOND) <= cal2.get(Calendar.MILLISECOND)
+57:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) |==> cal1.get(Calendar.MILLISECOND) >= cal2.get(Calendar.MILLISECOND)
+58:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8185:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) |==> false
+59:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):228:8238:cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) |==> cal1.get(Calendar.SECOND) <= cal2.get(Calendar.SECOND)
+60:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):228:8238:cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) |==> cal1.get(Calendar.SECOND) >= cal2.get(Calendar.SECOND)
+61:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):228:8264:cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) |==> false
+62:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) |==> cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) == (cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND))
+63:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8219:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) |==> false
+64:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) |==> cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND)
+65:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):228:8238:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) |==> cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND)
+66:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):229:8312:cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) |==> cal1.get(Calendar.MINUTE) <= cal2.get(Calendar.MINUTE)
+67:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):229:8312:cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) |==> cal1.get(Calendar.MINUTE) >= cal2.get(Calendar.MINUTE)
+68:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):229:8338:cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) |==> false
+69:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) |==> (cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND)) == (cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE))
+70:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):228:8293:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) |==> false
+71:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) |==> cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND)
+72:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):229:8312:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) |==> cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE)
+73:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):230:8386:cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) |==> cal1.get(Calendar.HOUR) <= cal2.get(Calendar.HOUR)
+74:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):230:8386:cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) |==> cal1.get(Calendar.HOUR) >= cal2.get(Calendar.HOUR)
+75:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):230:8410:cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) |==> false
+76:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) |==> (cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE)) == (cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR))
+77:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):229:8367:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) |==> false
+78:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) |==> cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE)
+79:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):230:8386:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) |==> cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR)
+80:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):231:8456:cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> cal1.get(Calendar.DAY_OF_YEAR) <= cal2.get(Calendar.DAY_OF_YEAR)
+81:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):231:8456:cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> cal1.get(Calendar.DAY_OF_YEAR) >= cal2.get(Calendar.DAY_OF_YEAR)
+82:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):231:8487:cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> false
+83:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> (cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR)) == (cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR))
+84:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):230:8437:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> false
+85:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR)
+86:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):231:8456:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) |==> cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR)
+87:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):232:8540:cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> cal1.get(Calendar.YEAR) <= cal2.get(Calendar.YEAR)
+88:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):232:8540:cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> cal1.get(Calendar.YEAR) >= cal2.get(Calendar.YEAR)
+89:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):232:8564:cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> false
+90:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> (cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR)) == (cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR))
+91:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):231:8521:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> false
+92:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR)
+93:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):232:8540:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) |==> cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR)
+94:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):233:8610:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) |==> cal1.get(Calendar.ERA) <= cal2.get(Calendar.ERA)
+95:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):233:8610:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) |==> cal1.get(Calendar.ERA) >= cal2.get(Calendar.ERA)
+96:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):233:8633:cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) |==> false
+97:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) |==> (cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR)) == (cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA))
+98:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):232:8591:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) |==> false
+99:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) |==> cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR)
+100:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):233:8610:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) |==> cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA)
+101:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):234:8694:cal1.getClass() == cal2.getClass() |==> false
+102:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.getClass() == cal2.getClass() |==> (cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA)) == (cal1.getClass() == cal2.getClass())
+103:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):233:8659:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.getClass() == cal2.getClass() |==> false
+104:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):227:8154:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.getClass() == cal2.getClass() |==> cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA)
+105:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@isSameLocalTime(java.util.Calendar,java.util.Calendar):234:8678:cal1.get(Calendar.MILLISECOND) == cal2.get(Calendar.MILLISECOND) && cal1.get(Calendar.SECOND) == cal2.get(Calendar.SECOND) && cal1.get(Calendar.MINUTE) == cal2.get(Calendar.MINUTE) && cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) && cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR) && cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) && cal1.get(Calendar.ERA) == cal2.get(Calendar.ERA) && cal1.getClass() == cal2.getClass() |==> cal1.getClass() == cal2.getClass()
+106:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):252:9569:str == null |==> false
+107:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):252:9594:parsePatterns == null |==> false
+108:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):252:9565:str == null || parsePatterns == null |==> str == null != (parsePatterns == null)
+109:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):252:9565:str == null || parsePatterns == null |==> str == null
+110:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):252:9580:str == null || parsePatterns == null |==> parsePatterns == null
+111:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):252:9577:str == null || parsePatterns == null |==> true
+112:LVR:0:POS:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):257:9796:0 |==> 1
+113:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):257:9796:0 |==> -1
+114:LVR:0:POS:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):258:9821:0 |==> 1
+115:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):258:9821:0 |==> -1
+116:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):258:9824:i < parsePatterns.length |==> i <= parsePatterns.length
+117:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):258:9826:i < parsePatterns.length |==> false
+118:LVR:0:POS:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):259:9878:0 |==> 1
+119:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):259:9878:0 |==> -1
+120:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):259:9873:i == 0 |==> i <= 0
+121:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):259:9873:i == 0 |==> i >= 0
+122:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):259:9875:i == 0 |==> false
+123:LVR:0:POS:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):260:9943:0 |==> 1
+124:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):260:9943:0 |==> -1
+125:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):260:9899:parser = new SimpleDateFormat(parsePatterns[0]); |==> <NO-OP>
+126:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):262:9985:parser.applyPattern(parsePatterns[i]); |==> <NO-OP>
+127:LVR:0:POS:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):264:10063:0 |==> 1
+128:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):264:10063:0 |==> -1
+129:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):264:10050:pos.setIndex(0); |==> <NO-OP>
+130:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):266:10136:date != null |==> true
+131:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):266:10147:pos.getIndex() == str.length() |==> pos.getIndex() <= str.length()
+132:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):266:10147:pos.getIndex() == str.length() |==> pos.getIndex() >= str.length()
+133:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):266:10162:pos.getIndex() == str.length() |==> false
+134:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):266:10131:date != null && pos.getIndex() == str.length() |==> date != null == (pos.getIndex() == str.length())
+135:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):266:10144:date != null && pos.getIndex() == str.length() |==> false
+136:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):266:10131:date != null && pos.getIndex() == str.length() |==> date != null
+137:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):266:10147:date != null && pos.getIndex() == str.length() |==> pos.getIndex() == str.length()
+138:LVR:NEG:0:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):270:10303:-1 |==> 0
+139:LVR:NEG:POS:org.apache.commons.lang.time.DateUtils@parseDate(java.lang.String,java.lang.String[]):270:10303:-1 |==> 1
+140:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@add(java.util.Date,int,int):397:15220:date == null |==> false
+141:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@add(java.util.Date,int,int):401:15371:c.setTime(date); |==> <NO-OP>
+142:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@add(java.util.Date,int,int):402:15396:c.add(calendarField, amount); |==> <NO-OP>
+143:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@round(java.util.Date,int):436:16903:date == null |==> false
+144:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@round(java.util.Date,int):440:17057:gval.setTime(date); |==> <NO-OP>
+145:LVR:TRUE:FALSE:org.apache.commons.lang.time.DateUtils@round(java.util.Date,int):441:17105:true |==> false
+146:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@round(java.util.Date,int):441:17085:modify(gval, field, true); |==> <NO-OP>
+147:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@round(java.util.Calendar,int):474:18543:date == null |==> false
+148:LVR:TRUE:FALSE:org.apache.commons.lang.time.DateUtils@round(java.util.Calendar,int):478:18724:true |==> false
+149:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@round(java.util.Calendar,int):478:18701:modify(rounded, field, true); |==> <NO-OP>
+150:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@round(java.lang.Object,int):513:20266:date == null |==> false
+151:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@truncate(java.util.Date,int):543:21485:date == null |==> false
+152:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@truncate(java.util.Date,int):547:21639:gval.setTime(date); |==> <NO-OP>
+153:LVR:FALSE:TRUE:org.apache.commons.lang.time.DateUtils@truncate(java.util.Date,int):548:21687:false |==> true
+154:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@truncate(java.util.Date,int):548:21667:modify(gval, field, false); |==> <NO-OP>
+155:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@truncate(java.util.Calendar,int):569:22513:date == null |==> false
+156:LVR:FALSE:TRUE:org.apache.commons.lang.time.DateUtils@truncate(java.util.Calendar,int):573:22698:false |==> true
+157:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@truncate(java.util.Calendar,int):573:22673:modify(truncated, field, false); |==> <NO-OP>
+158:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@truncate(java.lang.Object,int):598:23672:date == null |==> false
+159:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):620:24519:280000000 |==> 0
+160:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):620:24519:280000000 |==> -280000000
+161:ROR:>(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):620:24494:val.get(Calendar.YEAR) > 280000000 |==> val.get(Calendar.YEAR) != 280000000
+162:ROR:>(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):620:24494:val.get(Calendar.YEAR) > 280000000 |==> val.get(Calendar.YEAR) >= 280000000
+163:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):620:24517:val.get(Calendar.YEAR) > 280000000 |==> false
+164:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):624:24660:field == Calendar.MILLISECOND |==> field <= Calendar.MILLISECOND
+165:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):624:24660:field == Calendar.MILLISECOND |==> field >= Calendar.MILLISECOND
+166:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):624:24666:field == Calendar.MILLISECOND |==> false
+167:LVR:FALSE:TRUE:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):636:25091:false |==> true
+168:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):640:25221:500 |==> 0
+169:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):640:25221:500 |==> -500
+170:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):640:25209:millisecs < 500 |==> millisecs != 500
+171:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):640:25209:millisecs < 500 |==> millisecs <= 500
+172:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):640:25219:millisecs < 500 |==> false
+173:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):640:25199:!round || millisecs < 500 |==> !round != millisecs < 500
+174:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):640:25199:!round || millisecs < 500 |==> !round
+175:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):640:25209:!round || millisecs < 500 |==> millisecs < 500
+176:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):640:25206:!round || millisecs < 500 |==> true
+177:AOR:-(long,long):%(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):641:25247:time - millisecs |==> time % millisecs
+178:AOR:-(long,long):*(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):641:25247:time - millisecs |==> time * millisecs
+179:AOR:-(long,long):+(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):641:25247:time - millisecs |==> time + millisecs
+180:AOR:-(long,long):/(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):641:25247:time - millisecs |==> time / millisecs
+181:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):641:25240:time = time - millisecs; |==> <NO-OP>
+182:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):642:25281:field == Calendar.SECOND |==> field <= Calendar.SECOND
+183:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):642:25281:field == Calendar.SECOND |==> field >= Calendar.SECOND
+184:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):642:25287:field == Calendar.SECOND |==> false
+185:LVR:TRUE:FALSE:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):643:25332:true |==> false
+186:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):643:25325:done = true; |==> <NO-OP>
+187:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25481:30 |==> 0
+188:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25481:30 |==> -30
+189:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25471:seconds < 30 |==> seconds != 30
+190:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25471:seconds < 30 |==> seconds <= 30
+191:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25479:seconds < 30 |==> false
+192:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25461:!round || seconds < 30 |==> !round != seconds < 30
+193:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25461:!round || seconds < 30 |==> !round
+194:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25471:!round || seconds < 30 |==> seconds < 30
+195:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25468:!round || seconds < 30 |==> true
+196:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25451:!done && (!round || seconds < 30) |==> !done == (!round || seconds < 30)
+197:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25457:!done && (!round || seconds < 30) |==> false
+198:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25451:!done && (!round || seconds < 30) |==> !done
+199:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):649:25460:!done && (!round || seconds < 30) |==> (!round || seconds < 30)
+200:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):650:25525:1000L |==> 0L
+201:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):650:25525:1000L |==> -1000L
+202:AOR:*(long,long):%(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):650:25515:seconds * 1000L |==> seconds % 1000L
+203:AOR:*(long,long):+(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):650:25515:seconds * 1000L |==> seconds + 1000L
+204:AOR:*(long,long):-(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):650:25515:seconds * 1000L |==> seconds - 1000L
+205:AOR:*(long,long):/(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):650:25515:seconds * 1000L |==> seconds / 1000L
+206:AOR:-(long,long):%(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):650:25507:time - (seconds * 1000L) |==> time % (seconds * 1000L)
+207:AOR:-(long,long):*(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):650:25507:time - (seconds * 1000L) |==> time * (seconds * 1000L)
+208:AOR:-(long,long):+(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):650:25507:time - (seconds * 1000L) |==> time + (seconds * 1000L)
+209:AOR:-(long,long):/(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):650:25507:time - (seconds * 1000L) |==> time / (seconds * 1000L)
+210:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):650:25500:time = time - (seconds * 1000L); |==> <NO-OP>
+211:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):651:25549:field == Calendar.MINUTE |==> field <= Calendar.MINUTE
+212:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):651:25549:field == Calendar.MINUTE |==> field >= Calendar.MINUTE
+213:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):651:25555:field == Calendar.MINUTE |==> false
+214:LVR:TRUE:FALSE:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):652:25600:true |==> false
+215:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):652:25593:done = true; |==> <NO-OP>
+216:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25749:30 |==> 0
+217:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25749:30 |==> -30
+218:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25739:minutes < 30 |==> minutes != 30
+219:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25739:minutes < 30 |==> minutes <= 30
+220:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25747:minutes < 30 |==> false
+221:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25729:!round || minutes < 30 |==> !round != minutes < 30
+222:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25729:!round || minutes < 30 |==> !round
+223:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25739:!round || minutes < 30 |==> minutes < 30
+224:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25736:!round || minutes < 30 |==> true
+225:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25719:!done && (!round || minutes < 30) |==> !done == (!round || minutes < 30)
+226:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25725:!done && (!round || minutes < 30) |==> false
+227:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25719:!done && (!round || minutes < 30) |==> !done
+228:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):658:25728:!done && (!round || minutes < 30) |==> (!round || minutes < 30)
+229:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):659:25793:60000L |==> 0L
+230:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):659:25793:60000L |==> -60000L
+231:AOR:*(long,long):%(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):659:25783:minutes * 60000L |==> minutes % 60000L
+232:AOR:*(long,long):+(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):659:25783:minutes * 60000L |==> minutes + 60000L
+233:AOR:*(long,long):-(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):659:25783:minutes * 60000L |==> minutes - 60000L
+234:AOR:*(long,long):/(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):659:25783:minutes * 60000L |==> minutes / 60000L
+235:AOR:-(long,long):%(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):659:25775:time - (minutes * 60000L) |==> time % (minutes * 60000L)
+236:AOR:-(long,long):*(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):659:25775:time - (minutes * 60000L) |==> time * (minutes * 60000L)
+237:AOR:-(long,long):+(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):659:25775:time - (minutes * 60000L) |==> time + (minutes * 60000L)
+238:AOR:-(long,long):/(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):659:25775:time - (minutes * 60000L) |==> time / (minutes * 60000L)
+239:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):659:25768:time = time - (minutes * 60000L); |==> <NO-OP>
+240:ROR:!=(long,long):<(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):663:25847:date.getTime() != time |==> date.getTime() < time
+241:ROR:!=(long,long):>(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):663:25847:date.getTime() != time |==> date.getTime() > time
+242:ROR:!=(long,long):TRUE(long,long):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):663:25862:date.getTime() != time |==> true
+243:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):664:25885:date.setTime(time); |==> <NO-OP>
+244:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):665:25917:val.setTime(date); |==> <NO-OP>
+245:LVR:FALSE:TRUE:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):669:26063:false |==> true
+246:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):670:26091:0 |==> 1
+247:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):670:26091:0 |==> -1
+248:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):670:26094:i < fields.length |==> i <= fields.length
+249:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):670:26096:i < fields.length |==> false
+250:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):671:26145:0 |==> 1
+251:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):671:26145:0 |==> -1
+252:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):671:26148:j < fields[i].length |==> j != fields[i].length
+253:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):671:26148:j < fields[i].length |==> j <= fields[i].length
+254:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):671:26150:j < fields[i].length |==> false
+255:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):672:26197:fields[i][j] == field |==> fields[i][j] <= field
+256:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):672:26197:fields[i][j] == field |==> fields[i][j] >= field
+257:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):672:26210:fields[i][j] == field |==> false
+258:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):674:26305:round && roundUp |==> round == roundUp
+259:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):674:26311:round && roundUp |==> false
+260:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):674:26305:round && roundUp |==> round
+261:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):674:26314:round && roundUp |==> roundUp
+262:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):675:26353:field == DateUtils.SEMI_MONTH |==> field <= DateUtils.SEMI_MONTH
+263:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):675:26353:field == DateUtils.SEMI_MONTH |==> field >= DateUtils.SEMI_MONTH
+264:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):675:26359:field == DateUtils.SEMI_MONTH |==> false
+265:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):679:26668:1 |==> 0
+266:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):679:26668:1 |==> -1
+267:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):679:26642:val.get(Calendar.DATE) == 1 |==> val.get(Calendar.DATE) <= 1
+268:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):679:26642:val.get(Calendar.DATE) == 1 |==> val.get(Calendar.DATE) >= 1
+269:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):679:26665:val.get(Calendar.DATE) == 1 |==> false
+270:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):680:26728:15 |==> 0
+271:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):680:26728:15 |==> -15
+272:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):680:26705:val.add(Calendar.DATE, 15); |==> <NO-OP>
+273:LVR:NEG:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):682:26825:-15 |==> 0
+274:LVR:NEG:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):682:26825:-15 |==> 15
+275:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):682:26802:val.add(Calendar.DATE, -15); |==> <NO-OP>
+276:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):683:26887:1 |==> 0
+277:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):683:26887:1 |==> -1
+278:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):683:26863:val.add(Calendar.MONTH, 1); |==> <NO-OP>
+279:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):688:27139:0 |==> 1
+280:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):688:27139:0 |==> -1
+281:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):688:27143:1 |==> 0
+282:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):688:27143:1 |==> -1
+283:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):688:27121:val.add(fields[i][0], 1); |==> <NO-OP>
+284:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):695:27345:0 |==> 1
+285:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):695:27345:0 |==> -1
+286:LVR:FALSE:TRUE:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):696:27380:false |==> true
+287:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):700:27579:0 |==> 1
+288:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):700:27579:0 |==> -1
+289:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):700:27569:fields[i][0] == Calendar.DATE |==> fields[i][0] <= Calendar.DATE
+290:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):700:27569:fields[i][0] == Calendar.DATE |==> fields[i][0] >= Calendar.DATE
+291:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):700:27582:fields[i][0] == Calendar.DATE |==> false
+292:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):704:27875:1 |==> 0
+293:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):704:27875:1 |==> -1
+294:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):704:27850:val.get(Calendar.DATE) - 1 |==> val.get(Calendar.DATE) % 1
+295:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):704:27850:val.get(Calendar.DATE) - 1 |==> val.get(Calendar.DATE) * 1
+296:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):704:27850:val.get(Calendar.DATE) - 1 |==> val.get(Calendar.DATE) + 1
+297:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):704:27850:val.get(Calendar.DATE) - 1 |==> val.get(Calendar.DATE) / 1
+298:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):704:27841:offset = val.get(Calendar.DATE) - 1; |==> <NO-OP>
+299:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):707:28083:15 |==> 0
+300:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):707:28083:15 |==> -15
+301:ROR:>=(int,int):==(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):707:28073:offset >= 15 |==> offset == 15
+302:ROR:>=(int,int):>(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):707:28073:offset >= 15 |==> offset > 15
+303:ROR:>=(int,int):TRUE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):707:28080:offset >= 15 |==> true
+304:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):708:28127:15 |==> 0
+305:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):708:28127:15 |==> -15
+306:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):708:28117:offset -= 15; |==> <NO-OP>
+307:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):711:28287:7 |==> 0
+308:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):711:28287:7 |==> -7
+309:ROR:>(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):711:28278:offset > 7 |==> offset != 7
+310:ROR:>(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):711:28278:offset > 7 |==> offset >= 7
+311:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):711:28285:offset > 7 |==> false
+312:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):711:28268:roundUp = offset > 7; |==> <NO-OP>
+313:LVR:TRUE:FALSE:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):712:28326:true |==> false
+314:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):712:28314:offsetSet = true; |==> <NO-OP>
+315:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):716:28452:0 |==> 1
+316:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):716:28452:0 |==> -1
+317:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):716:28442:fields[i][0] == Calendar.HOUR_OF_DAY |==> fields[i][0] <= Calendar.HOUR_OF_DAY
+318:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):716:28442:fields[i][0] == Calendar.HOUR_OF_DAY |==> fields[i][0] >= Calendar.HOUR_OF_DAY
+319:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):716:28455:fields[i][0] == Calendar.HOUR_OF_DAY |==> false
+320:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):719:28639:offset = val.get(Calendar.HOUR_OF_DAY); |==> <NO-OP>
+321:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):720:28717:12 |==> 0
+322:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):720:28717:12 |==> -12
+323:ROR:>=(int,int):==(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):720:28707:offset >= 12 |==> offset == 12
+324:ROR:>=(int,int):>(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):720:28707:offset >= 12 |==> offset > 12
+325:ROR:>=(int,int):TRUE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):720:28714:offset >= 12 |==> true
+326:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):721:28761:12 |==> 0
+327:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):721:28761:12 |==> -12
+328:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):721:28751:offset -= 12; |==> <NO-OP>
+329:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):723:28834:6 |==> 0
+330:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):723:28834:6 |==> -6
+331:ROR:>(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):723:28825:offset > 6 |==> offset != 6
+332:ROR:>(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):723:28825:offset > 6 |==> offset >= 6
+333:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):723:28832:offset > 6 |==> false
+334:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):723:28815:roundUp = offset > 6; |==> <NO-OP>
+335:LVR:TRUE:FALSE:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):724:28873:true |==> false
+336:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):724:28861:offsetSet = true; |==> <NO-OP>
+337:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):728:28959:offsetSet |==> false
+338:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):728:28959:offsetSet |==> true
+339:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):729:29029:0 |==> 1
+340:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):729:29029:0 |==> -1
+341:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):730:29091:0 |==> 1
+342:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):730:29091:0 |==> -1
+343:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):732:29209:0 |==> 1
+344:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):732:29209:0 |==> -1
+345:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):732:29191:val.get(fields[i][0]) - min |==> val.get(fields[i][0]) % min
+346:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):732:29191:val.get(fields[i][0]) - min |==> val.get(fields[i][0]) * min
+347:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):732:29191:val.get(fields[i][0]) - min |==> val.get(fields[i][0]) + min
+348:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):732:29191:val.get(fields[i][0]) - min |==> val.get(fields[i][0]) / min
+349:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):732:29182:offset = val.get(fields[i][0]) - min; |==> <NO-OP>
+350:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29349:max - min |==> max % min
+351:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29349:max - min |==> max * min
+352:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29349:max - min |==> max + min
+353:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29349:max - min |==> max / min
+354:LVR:POS:0:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29362:2 |==> 0
+355:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29362:2 |==> -2
+356:AOR:/(int,int):%(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29348:(max - min) / 2 |==> (max - min) % 2
+357:AOR:/(int,int):*(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29348:(max - min) / 2 |==> (max - min) * 2
+358:AOR:/(int,int):+(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29348:(max - min) / 2 |==> (max - min) + 2
+359:AOR:/(int,int):-(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29348:(max - min) / 2 |==> (max - min) - 2
+360:ROR:>(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29338:offset > ((max - min) / 2) |==> offset != ((max - min) / 2)
+361:ROR:>(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29338:offset > ((max - min) / 2) |==> offset >= ((max - min) / 2)
+362:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29345:offset > ((max - min) / 2) |==> false
+363:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):734:29328:roundUp = offset > ((max - min) / 2); |==> <NO-OP>
+364:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):737:29449:0 |==> 1
+365:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):737:29449:0 |==> -1
+366:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):737:29439:offset != 0 |==> offset < 0
+367:ROR:!=(int,int):>(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):737:29439:offset != 0 |==> offset > 0
+368:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):737:29446:offset != 0 |==> true
+369:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):738:29488:0 |==> 1
+370:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):738:29488:0 |==> -1
+371:LVR:0:POS:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):738:29510:0 |==> 1
+372:LVR:0:NEG:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):738:29510:0 |==> -1
+373:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):738:29492:val.get(fields[i][0]) - offset |==> val.get(fields[i][0]) % offset
+374:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):738:29492:val.get(fields[i][0]) - offset |==> val.get(fields[i][0]) * offset
+375:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):738:29492:val.get(fields[i][0]) - offset |==> val.get(fields[i][0]) + offset
+376:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):738:29492:val.get(fields[i][0]) - offset |==> val.get(fields[i][0]) / offset
+377:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@modify(java.util.Calendar,int,boolean):738:29470:val.set(fields[i][0], val.get(fields[i][0]) - offset); |==> <NO-OP>
+378:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@iterator(java.util.Date,int):771:31020:focus == null |==> false
+379:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Date,int):775:31174:gval.setTime(focus); |==> <NO-OP>
+380:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):804:32495:focus == null |==> false
+381:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):815:32913:start = truncate(focus, Calendar.MONTH); |==> <NO-OP>
+382:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):817:33021:end = (Calendar)start.clone(); |==> <NO-OP>
+383:LVR:POS:0:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):818:33093:1 |==> 0
+384:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):818:33093:1 |==> -1
+385:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):818:33069:end.add(Calendar.MONTH, 1); |==> <NO-OP>
+386:LVR:NEG:0:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):819:33136:-1 |==> 0
+387:LVR:NEG:POS:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):819:33136:-1 |==> 1
+388:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):819:33113:end.add(Calendar.DATE, -1); |==> <NO-OP>
+389:ROR:==(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):821:33228:rangeStyle == RANGE_MONTH_MONDAY |==> rangeStyle <= RANGE_MONTH_MONDAY
+390:ROR:==(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):821:33228:rangeStyle == RANGE_MONTH_MONDAY |==> rangeStyle >= RANGE_MONTH_MONDAY
+391:ROR:==(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):821:33239:rangeStyle == RANGE_MONTH_MONDAY |==> false
+392:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):822:33284:startCutoff = Calendar.MONDAY; |==> <NO-OP>
+393:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):823:33335:endCutoff = Calendar.SUNDAY; |==> <NO-OP>
+394:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):831:33623:start = truncate(focus, Calendar.DATE); |==> <NO-OP>
+395:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):832:33679:end = truncate(focus, Calendar.DATE); |==> <NO-OP>
+396:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):838:33947:startCutoff = Calendar.MONDAY; |==> <NO-OP>
+397:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):839:34002:endCutoff = Calendar.SUNDAY; |==> <NO-OP>
+398:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):842:34132:startCutoff = focus.get(Calendar.DAY_OF_WEEK); |==> <NO-OP>
+399:LVR:POS:0:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):843:34229:1 |==> 0
+400:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):843:34229:1 |==> -1
+401:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):843:34215:startCutoff - 1 |==> startCutoff % 1
+402:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):843:34215:startCutoff - 1 |==> startCutoff * 1
+403:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):843:34215:startCutoff - 1 |==> startCutoff + 1
+404:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):843:34215:startCutoff - 1 |==> startCutoff / 1
+405:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):843:34203:endCutoff = startCutoff - 1; |==> <NO-OP>
+406:LVR:POS:0:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):846:34379:3 |==> 0
+407:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):846:34379:3 |==> -3
+408:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):846:34345:focus.get(Calendar.DAY_OF_WEEK) - 3 |==> focus.get(Calendar.DAY_OF_WEEK) % 3
+409:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):846:34345:focus.get(Calendar.DAY_OF_WEEK) - 3 |==> focus.get(Calendar.DAY_OF_WEEK) * 3
+410:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):846:34345:focus.get(Calendar.DAY_OF_WEEK) - 3 |==> focus.get(Calendar.DAY_OF_WEEK) + 3
+411:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):846:34345:focus.get(Calendar.DAY_OF_WEEK) - 3 |==> focus.get(Calendar.DAY_OF_WEEK) / 3
+412:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):846:34331:startCutoff = focus.get(Calendar.DAY_OF_WEEK) - 3; |==> <NO-OP>
+413:LVR:POS:0:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):847:34452:3 |==> 0
+414:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):847:34452:3 |==> -3
+415:AOR:+(int,int):%(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):847:34418:focus.get(Calendar.DAY_OF_WEEK) + 3 |==> focus.get(Calendar.DAY_OF_WEEK) % 3
+416:AOR:+(int,int):*(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):847:34418:focus.get(Calendar.DAY_OF_WEEK) + 3 |==> focus.get(Calendar.DAY_OF_WEEK) * 3
+417:AOR:+(int,int):-(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):847:34418:focus.get(Calendar.DAY_OF_WEEK) + 3 |==> focus.get(Calendar.DAY_OF_WEEK) - 3
+418:AOR:+(int,int):/(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):847:34418:focus.get(Calendar.DAY_OF_WEEK) + 3 |==> focus.get(Calendar.DAY_OF_WEEK) / 3
+419:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):847:34406:endCutoff = focus.get(Calendar.DAY_OF_WEEK) + 3; |==> <NO-OP>
+420:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):854:34674:startCutoff < Calendar.SUNDAY |==> startCutoff != Calendar.SUNDAY
+421:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):854:34674:startCutoff < Calendar.SUNDAY |==> startCutoff <= Calendar.SUNDAY
+422:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):854:34686:startCutoff < Calendar.SUNDAY |==> false
+423:LVR:POS:0:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):855:34734:7 |==> 0
+424:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):855:34734:7 |==> -7
+425:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):855:34719:startCutoff += 7; |==> <NO-OP>
+426:ROR:>(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):857:34759:startCutoff > Calendar.SATURDAY |==> startCutoff != Calendar.SATURDAY
+427:ROR:>(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):857:34759:startCutoff > Calendar.SATURDAY |==> startCutoff >= Calendar.SATURDAY
+428:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):857:34771:startCutoff > Calendar.SATURDAY |==> false
+429:LVR:POS:0:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):858:34821:7 |==> 0
+430:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):858:34821:7 |==> -7
+431:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):858:34806:startCutoff -= 7; |==> <NO-OP>
+432:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):860:34846:endCutoff < Calendar.SUNDAY |==> endCutoff != Calendar.SUNDAY
+433:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):860:34846:endCutoff < Calendar.SUNDAY |==> endCutoff <= Calendar.SUNDAY
+434:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):860:34856:endCutoff < Calendar.SUNDAY |==> false
+435:LVR:POS:0:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):861:34902:7 |==> 0
+436:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):861:34902:7 |==> -7
+437:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):861:34889:endCutoff += 7; |==> <NO-OP>
+438:ROR:>(int,int):!=(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):863:34927:endCutoff > Calendar.SATURDAY |==> endCutoff != Calendar.SATURDAY
+439:ROR:>(int,int):>=(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):863:34927:endCutoff > Calendar.SATURDAY |==> endCutoff >= Calendar.SATURDAY
+440:ROR:>(int,int):FALSE(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):863:34937:endCutoff > Calendar.SATURDAY |==> false
+441:LVR:POS:0:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):864:34985:7 |==> 0
+442:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):864:34985:7 |==> -7
+443:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):864:34972:endCutoff -= 7; |==> <NO-OP>
+444:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):866:35013:start.get(Calendar.DAY_OF_WEEK) != startCutoff |==> start.get(Calendar.DAY_OF_WEEK) < startCutoff
+445:ROR:!=(int,int):>(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):866:35013:start.get(Calendar.DAY_OF_WEEK) != startCutoff |==> start.get(Calendar.DAY_OF_WEEK) > startCutoff
+446:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):866:35045:start.get(Calendar.DAY_OF_WEEK) != startCutoff |==> true
+447:LVR:NEG:0:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):867:35100:-1 |==> 0
+448:LVR:NEG:POS:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):867:35100:-1 |==> 1
+449:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):867:35075:start.add(Calendar.DATE, -1); |==> <NO-OP>
+450:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):869:35130:end.get(Calendar.DAY_OF_WEEK) != endCutoff |==> end.get(Calendar.DAY_OF_WEEK) < endCutoff
+451:ROR:!=(int,int):>(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):869:35130:end.get(Calendar.DAY_OF_WEEK) != endCutoff |==> end.get(Calendar.DAY_OF_WEEK) > endCutoff
+452:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):869:35160:end.get(Calendar.DAY_OF_WEEK) != endCutoff |==> true
+453:LVR:POS:0:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):870:35211:1 |==> 0
+454:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):870:35211:1 |==> -1
+455:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils@iterator(java.util.Calendar,int):870:35188:end.add(Calendar.DATE, 1); |==> <NO-OP>
+456:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DateUtils@iterator(java.lang.Object,int):895:36294:focus == null |==> false
+457:LVR:NEG:0:org.apache.commons.lang.time.DateUtils$DateIterator@<init>(java.util.Calendar,java.util.Calendar):924:37294:-1 |==> 0
+458:LVR:NEG:POS:org.apache.commons.lang.time.DateUtils$DateIterator@<init>(java.util.Calendar,java.util.Calendar):924:37294:-1 |==> 1
+459:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils$DateIterator@<init>(java.util.Calendar,java.util.Calendar):924:37270:spot.add(Calendar.DATE, -1); |==> <NO-OP>
+460:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DateUtils$DateIterator@next():942:37773:spot.equals(endFinal) |==> false
+461:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DateUtils$DateIterator@next():942:37773:spot.equals(endFinal) |==> true
+462:LVR:POS:0:org.apache.commons.lang.time.DateUtils$DateIterator@next():945:37889:1 |==> 0
+463:LVR:POS:NEG:org.apache.commons.lang.time.DateUtils$DateIterator@next():945:37889:1 |==> -1
+464:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DateUtils$DateIterator@next():945:37865:spot.add(Calendar.DATE, 1); |==> <NO-OP>

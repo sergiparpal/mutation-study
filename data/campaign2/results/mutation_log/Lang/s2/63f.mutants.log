@@ -1,0 +1,455 @@
+1:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatDurationISO(long):95:3497:false |==> true
+2:LVR:TRUE:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String):110:4104:true |==> false
+3:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):130:4877:0 |==> 1
+4:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):130:4877:0 |==> -1
+5:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):131:4907:0 |==> 1
+6:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):131:4907:0 |==> -1
+7:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):132:4937:0 |==> 1
+8:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):132:4937:0 |==> -1
+9:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):133:4967:0 |==> 1
+10:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):133:4967:0 |==> -1
+11:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):134:4997:0 |==> 1
+12:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):134:4997:0 |==> -1
+13:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):136:5049:Token.containsTokenWithValue(tokens, d) |==> false
+14:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):136:5049:Token.containsTokenWithValue(tokens, d) |==> true
+15:AOR:/(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):137:5091:durationMillis / DateUtils.MILLIS_PER_DAY |==> durationMillis % DateUtils.MILLIS_PER_DAY
+16:AOR:/(long,long):*(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):137:5091:durationMillis / DateUtils.MILLIS_PER_DAY |==> durationMillis * DateUtils.MILLIS_PER_DAY
+17:AOR:/(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):137:5091:durationMillis / DateUtils.MILLIS_PER_DAY |==> durationMillis + DateUtils.MILLIS_PER_DAY
+18:AOR:/(long,long):-(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):137:5091:durationMillis / DateUtils.MILLIS_PER_DAY |==> durationMillis - DateUtils.MILLIS_PER_DAY
+19:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):137:5077:days = (int)(durationMillis / DateUtils.MILLIS_PER_DAY); |==> <NO-OP>
+20:AOR:*(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):138:5182:days * DateUtils.MILLIS_PER_DAY |==> days % DateUtils.MILLIS_PER_DAY
+21:AOR:*(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):138:5182:days * DateUtils.MILLIS_PER_DAY |==> days + DateUtils.MILLIS_PER_DAY
+22:AOR:*(long,long):-(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):138:5182:days * DateUtils.MILLIS_PER_DAY |==> days - DateUtils.MILLIS_PER_DAY
+23:AOR:*(long,long):/(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):138:5182:days * DateUtils.MILLIS_PER_DAY |==> days / DateUtils.MILLIS_PER_DAY
+24:AOR:-(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):138:5164:durationMillis - (days * DateUtils.MILLIS_PER_DAY) |==> durationMillis % (days * DateUtils.MILLIS_PER_DAY)
+25:AOR:-(long,long):*(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):138:5164:durationMillis - (days * DateUtils.MILLIS_PER_DAY) |==> durationMillis * (days * DateUtils.MILLIS_PER_DAY)
+26:AOR:-(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):138:5164:durationMillis - (days * DateUtils.MILLIS_PER_DAY) |==> durationMillis + (days * DateUtils.MILLIS_PER_DAY)
+27:AOR:-(long,long):/(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):138:5164:durationMillis - (days * DateUtils.MILLIS_PER_DAY) |==> durationMillis / (days * DateUtils.MILLIS_PER_DAY)
+28:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):138:5147:durationMillis = durationMillis - (days * DateUtils.MILLIS_PER_DAY); |==> <NO-OP>
+29:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):140:5266:Token.containsTokenWithValue(tokens, H) |==> false
+30:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):140:5266:Token.containsTokenWithValue(tokens, H) |==> true
+31:AOR:/(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):141:5309:durationMillis / DateUtils.MILLIS_PER_HOUR |==> durationMillis % DateUtils.MILLIS_PER_HOUR
+32:AOR:/(long,long):*(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):141:5309:durationMillis / DateUtils.MILLIS_PER_HOUR |==> durationMillis * DateUtils.MILLIS_PER_HOUR
+33:AOR:/(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):141:5309:durationMillis / DateUtils.MILLIS_PER_HOUR |==> durationMillis + DateUtils.MILLIS_PER_HOUR
+34:AOR:/(long,long):-(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):141:5309:durationMillis / DateUtils.MILLIS_PER_HOUR |==> durationMillis - DateUtils.MILLIS_PER_HOUR
+35:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):141:5294:hours = (int)(durationMillis / DateUtils.MILLIS_PER_HOUR); |==> <NO-OP>
+36:AOR:*(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):142:5401:hours * DateUtils.MILLIS_PER_HOUR |==> hours % DateUtils.MILLIS_PER_HOUR
+37:AOR:*(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):142:5401:hours * DateUtils.MILLIS_PER_HOUR |==> hours + DateUtils.MILLIS_PER_HOUR
+38:AOR:*(long,long):-(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):142:5401:hours * DateUtils.MILLIS_PER_HOUR |==> hours - DateUtils.MILLIS_PER_HOUR
+39:AOR:*(long,long):/(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):142:5401:hours * DateUtils.MILLIS_PER_HOUR |==> hours / DateUtils.MILLIS_PER_HOUR
+40:AOR:-(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):142:5383:durationMillis - (hours * DateUtils.MILLIS_PER_HOUR) |==> durationMillis % (hours * DateUtils.MILLIS_PER_HOUR)
+41:AOR:-(long,long):*(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):142:5383:durationMillis - (hours * DateUtils.MILLIS_PER_HOUR) |==> durationMillis * (hours * DateUtils.MILLIS_PER_HOUR)
+42:AOR:-(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):142:5383:durationMillis - (hours * DateUtils.MILLIS_PER_HOUR) |==> durationMillis + (hours * DateUtils.MILLIS_PER_HOUR)
+43:AOR:-(long,long):/(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):142:5383:durationMillis - (hours * DateUtils.MILLIS_PER_HOUR) |==> durationMillis / (hours * DateUtils.MILLIS_PER_HOUR)
+44:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):142:5366:durationMillis = durationMillis - (hours * DateUtils.MILLIS_PER_HOUR); |==> <NO-OP>
+45:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):144:5487:Token.containsTokenWithValue(tokens, m) |==> false
+46:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):144:5487:Token.containsTokenWithValue(tokens, m) |==> true
+47:AOR:/(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):145:5532:durationMillis / DateUtils.MILLIS_PER_MINUTE |==> durationMillis % DateUtils.MILLIS_PER_MINUTE
+48:AOR:/(long,long):*(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):145:5532:durationMillis / DateUtils.MILLIS_PER_MINUTE |==> durationMillis * DateUtils.MILLIS_PER_MINUTE
+49:AOR:/(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):145:5532:durationMillis / DateUtils.MILLIS_PER_MINUTE |==> durationMillis + DateUtils.MILLIS_PER_MINUTE
+50:AOR:/(long,long):-(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):145:5532:durationMillis / DateUtils.MILLIS_PER_MINUTE |==> durationMillis - DateUtils.MILLIS_PER_MINUTE
+51:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):145:5515:minutes = (int)(durationMillis / DateUtils.MILLIS_PER_MINUTE); |==> <NO-OP>
+52:AOR:*(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):146:5626:minutes * DateUtils.MILLIS_PER_MINUTE |==> minutes % DateUtils.MILLIS_PER_MINUTE
+53:AOR:*(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):146:5626:minutes * DateUtils.MILLIS_PER_MINUTE |==> minutes + DateUtils.MILLIS_PER_MINUTE
+54:AOR:*(long,long):-(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):146:5626:minutes * DateUtils.MILLIS_PER_MINUTE |==> minutes - DateUtils.MILLIS_PER_MINUTE
+55:AOR:*(long,long):/(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):146:5626:minutes * DateUtils.MILLIS_PER_MINUTE |==> minutes / DateUtils.MILLIS_PER_MINUTE
+56:AOR:-(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):146:5608:durationMillis - (minutes * DateUtils.MILLIS_PER_MINUTE) |==> durationMillis % (minutes * DateUtils.MILLIS_PER_MINUTE)
+57:AOR:-(long,long):*(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):146:5608:durationMillis - (minutes * DateUtils.MILLIS_PER_MINUTE) |==> durationMillis * (minutes * DateUtils.MILLIS_PER_MINUTE)
+58:AOR:-(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):146:5608:durationMillis - (minutes * DateUtils.MILLIS_PER_MINUTE) |==> durationMillis + (minutes * DateUtils.MILLIS_PER_MINUTE)
+59:AOR:-(long,long):/(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):146:5608:durationMillis - (minutes * DateUtils.MILLIS_PER_MINUTE) |==> durationMillis / (minutes * DateUtils.MILLIS_PER_MINUTE)
+60:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):146:5591:durationMillis = durationMillis - (minutes * DateUtils.MILLIS_PER_MINUTE); |==> <NO-OP>
+61:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):148:5716:Token.containsTokenWithValue(tokens, s) |==> false
+62:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):148:5716:Token.containsTokenWithValue(tokens, s) |==> true
+63:AOR:/(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):149:5761:durationMillis / DateUtils.MILLIS_PER_SECOND |==> durationMillis % DateUtils.MILLIS_PER_SECOND
+64:AOR:/(long,long):*(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):149:5761:durationMillis / DateUtils.MILLIS_PER_SECOND |==> durationMillis * DateUtils.MILLIS_PER_SECOND
+65:AOR:/(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):149:5761:durationMillis / DateUtils.MILLIS_PER_SECOND |==> durationMillis + DateUtils.MILLIS_PER_SECOND
+66:AOR:/(long,long):-(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):149:5761:durationMillis / DateUtils.MILLIS_PER_SECOND |==> durationMillis - DateUtils.MILLIS_PER_SECOND
+67:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):149:5744:seconds = (int)(durationMillis / DateUtils.MILLIS_PER_SECOND); |==> <NO-OP>
+68:AOR:*(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):150:5855:seconds * DateUtils.MILLIS_PER_SECOND |==> seconds % DateUtils.MILLIS_PER_SECOND
+69:AOR:*(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):150:5855:seconds * DateUtils.MILLIS_PER_SECOND |==> seconds + DateUtils.MILLIS_PER_SECOND
+70:AOR:*(long,long):-(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):150:5855:seconds * DateUtils.MILLIS_PER_SECOND |==> seconds - DateUtils.MILLIS_PER_SECOND
+71:AOR:*(long,long):/(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):150:5855:seconds * DateUtils.MILLIS_PER_SECOND |==> seconds / DateUtils.MILLIS_PER_SECOND
+72:AOR:-(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):150:5837:durationMillis - (seconds * DateUtils.MILLIS_PER_SECOND) |==> durationMillis % (seconds * DateUtils.MILLIS_PER_SECOND)
+73:AOR:-(long,long):*(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):150:5837:durationMillis - (seconds * DateUtils.MILLIS_PER_SECOND) |==> durationMillis * (seconds * DateUtils.MILLIS_PER_SECOND)
+74:AOR:-(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):150:5837:durationMillis - (seconds * DateUtils.MILLIS_PER_SECOND) |==> durationMillis + (seconds * DateUtils.MILLIS_PER_SECOND)
+75:AOR:-(long,long):/(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):150:5837:durationMillis - (seconds * DateUtils.MILLIS_PER_SECOND) |==> durationMillis / (seconds * DateUtils.MILLIS_PER_SECOND)
+76:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):150:5820:durationMillis = durationMillis - (seconds * DateUtils.MILLIS_PER_SECOND); |==> <NO-OP>
+77:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):152:5945:Token.containsTokenWithValue(tokens, S) |==> false
+78:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):152:5945:Token.containsTokenWithValue(tokens, S) |==> true
+79:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):153:5973:milliseconds = (int)durationMillis; |==> <NO-OP>
+80:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):156:6051:0 |==> 1
+81:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):156:6051:0 |==> -1
+82:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):156:6054:0 |==> 1
+83:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatDuration(long,java.lang.String,boolean):156:6054:0 |==> -1
+84:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):179:7120:suppressLeadingZeroElements |==> false
+85:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):179:7120:suppressLeadingZeroElements |==> true
+86:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):181:7237:duration = " " + duration; |==> <NO-OP>
+87:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):183:7355:tmp.length() != duration.length() |==> tmp.length() < duration.length()
+88:ROR:!=(int,int):>(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):183:7355:tmp.length() != duration.length() |==> tmp.length() > duration.length()
+89:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):183:7368:tmp.length() != duration.length() |==> true
+90:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):184:7408:duration = tmp; |==> <NO-OP>
+91:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):185:7440:tmp = StringUtils.replaceOnce(duration, " 0 hours", ""); |==> <NO-OP>
+92:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):186:7517:tmp.length() != duration.length() |==> tmp.length() < duration.length()
+93:ROR:!=(int,int):>(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):186:7517:tmp.length() != duration.length() |==> tmp.length() > duration.length()
+94:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):186:7530:tmp.length() != duration.length() |==> true
+95:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):187:7574:duration = tmp; |==> <NO-OP>
+96:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):188:7610:tmp = StringUtils.replaceOnce(duration, " 0 minutes", ""); |==> <NO-OP>
+97:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):189:7689:duration = tmp; |==> <NO-OP>
+98:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):190:7729:tmp.length() != duration.length() |==> tmp.length() < duration.length()
+99:ROR:!=(int,int):>(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):190:7729:tmp.length() != duration.length() |==> tmp.length() > duration.length()
+100:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):190:7742:tmp.length() != duration.length() |==> true
+101:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):191:7790:duration = StringUtils.replaceOnce(tmp, " 0 seconds", ""); |==> <NO-OP>
+102:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):195:7940:0 |==> 1
+103:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):195:7940:0 |==> -1
+104:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):195:7919:duration.length() != 0 |==> duration.length() < 0
+105:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):195:7937:duration.length() != 0 |==> true
+106:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):197:8036:1 |==> 0
+107:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):197:8036:1 |==> -1
+108:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):197:8006:duration = duration.substring(1); |==> <NO-OP>
+109:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):200:8076:suppressTrailingZeroElements |==> false
+110:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):200:8076:suppressTrailingZeroElements |==> true
+111:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):202:8202:tmp.length() != duration.length() |==> tmp.length() < duration.length()
+112:ROR:!=(int,int):>(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):202:8202:tmp.length() != duration.length() |==> tmp.length() > duration.length()
+113:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):202:8215:tmp.length() != duration.length() |==> true
+114:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):203:8255:duration = tmp; |==> <NO-OP>
+115:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):204:8287:tmp = StringUtils.replaceOnce(duration, " 0 minutes", ""); |==> <NO-OP>
+116:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):205:8366:tmp.length() != duration.length() |==> tmp.length() < duration.length()
+117:ROR:!=(int,int):>(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):205:8366:tmp.length() != duration.length() |==> tmp.length() > duration.length()
+118:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):205:8379:tmp.length() != duration.length() |==> true
+119:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):206:8423:duration = tmp; |==> <NO-OP>
+120:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):207:8459:tmp = StringUtils.replaceOnce(duration, " 0 hours", ""); |==> <NO-OP>
+121:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):208:8540:tmp.length() != duration.length() |==> tmp.length() < duration.length()
+122:ROR:!=(int,int):>(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):208:8540:tmp.length() != duration.length() |==> tmp.length() > duration.length()
+123:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):208:8553:tmp.length() != duration.length() |==> true
+124:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):209:8601:duration = StringUtils.replaceOnce(tmp, " 0 days", ""); |==> <NO-OP>
+125:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):215:8755:duration = " " + duration; |==> <NO-OP>
+126:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):216:8790:duration = StringUtils.replaceOnce(duration, " 1 seconds", " 1 second"); |==> <NO-OP>
+127:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):217:8871:duration = StringUtils.replaceOnce(duration, " 1 minutes", " 1 minute"); |==> <NO-OP>
+128:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):218:8952:duration = StringUtils.replaceOnce(duration, " 1 hours", " 1 hour"); |==> <NO-OP>
+129:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatDurationWords(long,boolean,boolean):219:9029:duration = StringUtils.replaceOnce(duration, " 1 days", " 1 day"); |==> <NO-OP>
+130:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriodISO(long,long):234:9669:false |==> true
+131:LVR:TRUE:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String):247:10222:true |==> false
+132:AOR:-(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):265:10964:endMillis - startMillis |==> endMillis % startMillis
+133:AOR:-(long,long):*(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):265:10964:endMillis - startMillis |==> endMillis * startMillis
+134:AOR:-(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):265:10964:endMillis - startMillis |==> endMillis + startMillis
+135:AOR:-(long,long):/(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):265:10964:endMillis - startMillis |==> endMillis / startMillis
+136:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):266:11010:28 |==> 0
+137:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):266:11010:28 |==> -28
+138:AOR:*(long,long):%(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):266:11010:28 * DateUtils.MILLIS_PER_DAY |==> 28 % DateUtils.MILLIS_PER_DAY
+139:AOR:*(long,long):+(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):266:11010:28 * DateUtils.MILLIS_PER_DAY |==> 28 + DateUtils.MILLIS_PER_DAY
+140:AOR:*(long,long):-(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):266:11010:28 * DateUtils.MILLIS_PER_DAY |==> 28 - DateUtils.MILLIS_PER_DAY
+141:AOR:*(long,long):/(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):266:11010:28 * DateUtils.MILLIS_PER_DAY |==> 28 / DateUtils.MILLIS_PER_DAY
+142:ROR:<(long,long):!=(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):266:11001:millis < 28 * DateUtils.MILLIS_PER_DAY |==> millis != 28 * DateUtils.MILLIS_PER_DAY
+143:ROR:<(long,long):<=(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):266:11001:millis < 28 * DateUtils.MILLIS_PER_DAY |==> millis <= 28 * DateUtils.MILLIS_PER_DAY
+144:ROR:<(long,long):FALSE(long,long):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):266:11008:millis < 28 * DateUtils.MILLIS_PER_DAY |==> false
+145:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):275:11336:start.setTime(new Date(startMillis)); |==> <NO-OP>
+146:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):277:11437:end.setTime(new Date(endMillis)); |==> <NO-OP>
+147:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):280:11528:end.get(Calendar.MILLISECOND) - start.get(Calendar.MILLISECOND) |==> end.get(Calendar.MILLISECOND) % start.get(Calendar.MILLISECOND)
+148:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):280:11528:end.get(Calendar.MILLISECOND) - start.get(Calendar.MILLISECOND) |==> end.get(Calendar.MILLISECOND) * start.get(Calendar.MILLISECOND)
+149:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):280:11528:end.get(Calendar.MILLISECOND) - start.get(Calendar.MILLISECOND) |==> end.get(Calendar.MILLISECOND) + start.get(Calendar.MILLISECOND)
+150:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):280:11528:end.get(Calendar.MILLISECOND) - start.get(Calendar.MILLISECOND) |==> end.get(Calendar.MILLISECOND) / start.get(Calendar.MILLISECOND)
+151:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):281:11615:end.get(Calendar.SECOND) - start.get(Calendar.SECOND) |==> end.get(Calendar.SECOND) % start.get(Calendar.SECOND)
+152:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):281:11615:end.get(Calendar.SECOND) - start.get(Calendar.SECOND) |==> end.get(Calendar.SECOND) * start.get(Calendar.SECOND)
+153:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):281:11615:end.get(Calendar.SECOND) - start.get(Calendar.SECOND) |==> end.get(Calendar.SECOND) + start.get(Calendar.SECOND)
+154:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):281:11615:end.get(Calendar.SECOND) - start.get(Calendar.SECOND) |==> end.get(Calendar.SECOND) / start.get(Calendar.SECOND)
+155:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):282:11692:end.get(Calendar.MINUTE) - start.get(Calendar.MINUTE) |==> end.get(Calendar.MINUTE) % start.get(Calendar.MINUTE)
+156:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):282:11692:end.get(Calendar.MINUTE) - start.get(Calendar.MINUTE) |==> end.get(Calendar.MINUTE) * start.get(Calendar.MINUTE)
+157:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):282:11692:end.get(Calendar.MINUTE) - start.get(Calendar.MINUTE) |==> end.get(Calendar.MINUTE) + start.get(Calendar.MINUTE)
+158:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):282:11692:end.get(Calendar.MINUTE) - start.get(Calendar.MINUTE) |==> end.get(Calendar.MINUTE) / start.get(Calendar.MINUTE)
+159:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):283:11767:end.get(Calendar.HOUR_OF_DAY) - start.get(Calendar.HOUR_OF_DAY) |==> end.get(Calendar.HOUR_OF_DAY) % start.get(Calendar.HOUR_OF_DAY)
+160:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):283:11767:end.get(Calendar.HOUR_OF_DAY) - start.get(Calendar.HOUR_OF_DAY) |==> end.get(Calendar.HOUR_OF_DAY) * start.get(Calendar.HOUR_OF_DAY)
+161:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):283:11767:end.get(Calendar.HOUR_OF_DAY) - start.get(Calendar.HOUR_OF_DAY) |==> end.get(Calendar.HOUR_OF_DAY) + start.get(Calendar.HOUR_OF_DAY)
+162:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):283:11767:end.get(Calendar.HOUR_OF_DAY) - start.get(Calendar.HOUR_OF_DAY) |==> end.get(Calendar.HOUR_OF_DAY) / start.get(Calendar.HOUR_OF_DAY)
+163:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):284:11851:end.get(Calendar.DAY_OF_MONTH) - start.get(Calendar.DAY_OF_MONTH) |==> end.get(Calendar.DAY_OF_MONTH) % start.get(Calendar.DAY_OF_MONTH)
+164:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):284:11851:end.get(Calendar.DAY_OF_MONTH) - start.get(Calendar.DAY_OF_MONTH) |==> end.get(Calendar.DAY_OF_MONTH) * start.get(Calendar.DAY_OF_MONTH)
+165:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):284:11851:end.get(Calendar.DAY_OF_MONTH) - start.get(Calendar.DAY_OF_MONTH) |==> end.get(Calendar.DAY_OF_MONTH) + start.get(Calendar.DAY_OF_MONTH)
+166:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):284:11851:end.get(Calendar.DAY_OF_MONTH) - start.get(Calendar.DAY_OF_MONTH) |==> end.get(Calendar.DAY_OF_MONTH) / start.get(Calendar.DAY_OF_MONTH)
+167:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):285:11939:end.get(Calendar.MONTH) - start.get(Calendar.MONTH) |==> end.get(Calendar.MONTH) % start.get(Calendar.MONTH)
+168:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):285:11939:end.get(Calendar.MONTH) - start.get(Calendar.MONTH) |==> end.get(Calendar.MONTH) * start.get(Calendar.MONTH)
+169:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):285:11939:end.get(Calendar.MONTH) - start.get(Calendar.MONTH) |==> end.get(Calendar.MONTH) + start.get(Calendar.MONTH)
+170:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):285:11939:end.get(Calendar.MONTH) - start.get(Calendar.MONTH) |==> end.get(Calendar.MONTH) / start.get(Calendar.MONTH)
+171:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):286:12012:end.get(Calendar.YEAR) - start.get(Calendar.YEAR) |==> end.get(Calendar.YEAR) % start.get(Calendar.YEAR)
+172:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):286:12012:end.get(Calendar.YEAR) - start.get(Calendar.YEAR) |==> end.get(Calendar.YEAR) * start.get(Calendar.YEAR)
+173:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):286:12012:end.get(Calendar.YEAR) - start.get(Calendar.YEAR) |==> end.get(Calendar.YEAR) + start.get(Calendar.YEAR)
+174:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):286:12012:end.get(Calendar.YEAR) - start.get(Calendar.YEAR) |==> end.get(Calendar.YEAR) / start.get(Calendar.YEAR)
+175:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):289:12161:0 |==> 1
+176:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):289:12161:0 |==> -1
+177:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):289:12146:milliseconds < 0 |==> milliseconds != 0
+178:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):289:12146:milliseconds < 0 |==> milliseconds <= 0
+179:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):289:12159:milliseconds < 0 |==> false
+180:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):290:12194:1000 |==> 0
+181:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):290:12194:1000 |==> -1000
+182:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):290:12178:milliseconds += 1000; |==> <NO-OP>
+183:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):291:12223:1 |==> 0
+184:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):291:12223:1 |==> -1
+185:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):291:12212:seconds -= 1; |==> <NO-OP>
+186:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):293:12261:0 |==> 1
+187:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):293:12261:0 |==> -1
+188:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):293:12251:seconds < 0 |==> seconds != 0
+189:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):293:12251:seconds < 0 |==> seconds <= 0
+190:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):293:12259:seconds < 0 |==> false
+191:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):294:12289:60 |==> 0
+192:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):294:12289:60 |==> -60
+193:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):294:12278:seconds += 60; |==> <NO-OP>
+194:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):295:12316:1 |==> 0
+195:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):295:12316:1 |==> -1
+196:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):295:12305:minutes -= 1; |==> <NO-OP>
+197:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):297:12354:0 |==> 1
+198:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):297:12354:0 |==> -1
+199:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):297:12344:minutes < 0 |==> minutes != 0
+200:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):297:12344:minutes < 0 |==> minutes <= 0
+201:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):297:12352:minutes < 0 |==> false
+202:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):298:12382:60 |==> 0
+203:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):298:12382:60 |==> -60
+204:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):298:12371:minutes += 60; |==> <NO-OP>
+205:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):299:12407:1 |==> 0
+206:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):299:12407:1 |==> -1
+207:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):299:12398:hours -= 1; |==> <NO-OP>
+208:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):301:12443:0 |==> 1
+209:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):301:12443:0 |==> -1
+210:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):301:12435:hours < 0 |==> hours != 0
+211:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):301:12435:hours < 0 |==> hours <= 0
+212:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):301:12441:hours < 0 |==> false
+213:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):302:12469:24 |==> 0
+214:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):302:12469:24 |==> -24
+215:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):302:12460:hours += 24; |==> <NO-OP>
+216:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):303:12493:1 |==> 0
+217:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):303:12493:1 |==> -1
+218:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):303:12485:days -= 1; |==> <NO-OP>
+219:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):305:12528:0 |==> 1
+220:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):305:12528:0 |==> -1
+221:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):305:12521:days < 0 |==> days != 0
+222:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):305:12521:days < 0 |==> days <= 0
+223:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):305:12526:days < 0 |==> false
+224:LVR:NEG:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):306:12569:-1 |==> 0
+225:LVR:NEG:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):306:12569:-1 |==> 1
+226:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):306:12545:end.add(Calendar.MONTH, -1); |==> <NO-OP>
+227:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):307:12586:days += end.getActualMaximum(Calendar.DAY_OF_MONTH); |==> <NO-OP>
+228:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):313:13023:1 |==> 0
+229:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):313:13023:1 |==> -1
+230:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):313:13013:months -= 1; |==> <NO-OP>
+231:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):314:13062:1 |==> 0
+232:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):314:13062:1 |==> -1
+233:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):314:13038:end.add(Calendar.MONTH, 1); |==> <NO-OP>
+234:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):316:13100:0 |==> 1
+235:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):316:13100:0 |==> -1
+236:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):316:13091:months < 0 |==> months != 0
+237:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):316:13091:months < 0 |==> months <= 0
+238:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):316:13098:months < 0 |==> false
+239:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):317:13127:12 |==> 0
+240:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):317:13127:12 |==> -12
+241:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):317:13117:months += 12; |==> <NO-OP>
+242:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):318:13152:1 |==> 0
+243:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):318:13152:1 |==> -1
+244:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):318:13143:years -= 1; |==> <NO-OP>
+245:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):324:13400:Token.containsTokenWithValue(tokens, y) |==> false
+246:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):324:13400:Token.containsTokenWithValue(tokens, y) |==> true
+247:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):325:13459:Token.containsTokenWithValue(tokens, M) |==> false
+248:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):325:13459:Token.containsTokenWithValue(tokens, M) |==> true
+249:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):326:13500:12 |==> 0
+250:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):326:13500:12 |==> -12
+251:AOR:*(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):326:13500:12 * years |==> 12 % years
+252:AOR:*(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):326:13500:12 * years |==> 12 + years
+253:AOR:*(int,int):-(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):326:13500:12 * years |==> 12 - years
+254:AOR:*(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):326:13500:12 * years |==> 12 / years
+255:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):326:13490:months += 12 * years; |==> <NO-OP>
+256:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):327:13536:0 |==> 1
+257:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):327:13536:0 |==> -1
+258:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):327:13528:years = 0; |==> <NO-OP>
+259:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):330:13665:365 |==> 0
+260:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):330:13665:365 |==> -365
+261:AOR:*(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):330:13665:365 * years |==> 365 % years
+262:AOR:*(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):330:13665:365 * years |==> 365 + years
+263:AOR:*(int,int):-(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):330:13665:365 * years |==> 365 - years
+264:AOR:*(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):330:13665:365 * years |==> 365 / years
+265:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):330:13657:days += 365 * years; |==> <NO-OP>
+266:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):331:13702:0 |==> 1
+267:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):331:13702:0 |==> -1
+268:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):331:13694:years = 0; |==> <NO-OP>
+269:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):334:13770:Token.containsTokenWithValue(tokens, M) |==> false
+270:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):334:13770:Token.containsTokenWithValue(tokens, M) |==> true
+271:AOR:-(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):335:13805:end.get(Calendar.DAY_OF_YEAR) - start.get(Calendar.DAY_OF_YEAR) |==> end.get(Calendar.DAY_OF_YEAR) % start.get(Calendar.DAY_OF_YEAR)
+272:AOR:-(int,int):*(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):335:13805:end.get(Calendar.DAY_OF_YEAR) - start.get(Calendar.DAY_OF_YEAR) |==> end.get(Calendar.DAY_OF_YEAR) * start.get(Calendar.DAY_OF_YEAR)
+273:AOR:-(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):335:13805:end.get(Calendar.DAY_OF_YEAR) - start.get(Calendar.DAY_OF_YEAR) |==> end.get(Calendar.DAY_OF_YEAR) + start.get(Calendar.DAY_OF_YEAR)
+274:AOR:-(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):335:13805:end.get(Calendar.DAY_OF_YEAR) - start.get(Calendar.DAY_OF_YEAR) |==> end.get(Calendar.DAY_OF_YEAR) / start.get(Calendar.DAY_OF_YEAR)
+275:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):335:13797:days += end.get(Calendar.DAY_OF_YEAR) - start.get(Calendar.DAY_OF_YEAR); |==> <NO-OP>
+276:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):336:13891:0 |==> 1
+277:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):336:13891:0 |==> -1
+278:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):336:13882:months = 0; |==> <NO-OP>
+279:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):338:13945:Token.containsTokenWithValue(tokens, d) |==> false
+280:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):338:13945:Token.containsTokenWithValue(tokens, d) |==> true
+281:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):339:13981:24 |==> 0
+282:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):339:13981:24 |==> -24
+283:AOR:*(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):339:13981:24 * days |==> 24 % days
+284:AOR:*(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):339:13981:24 * days |==> 24 + days
+285:AOR:*(int,int):-(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):339:13981:24 * days |==> 24 - days
+286:AOR:*(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):339:13981:24 * days |==> 24 / days
+287:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):339:13972:hours += 24 * days; |==> <NO-OP>
+288:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):340:14011:0 |==> 1
+289:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):340:14011:0 |==> -1
+290:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):340:14004:days = 0; |==> <NO-OP>
+291:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):342:14065:Token.containsTokenWithValue(tokens, H) |==> false
+292:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):342:14065:Token.containsTokenWithValue(tokens, H) |==> true
+293:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):343:14103:60 |==> 0
+294:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):343:14103:60 |==> -60
+295:AOR:*(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):343:14103:60 * hours |==> 60 % hours
+296:AOR:*(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):343:14103:60 * hours |==> 60 + hours
+297:AOR:*(int,int):-(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):343:14103:60 * hours |==> 60 - hours
+298:AOR:*(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):343:14103:60 * hours |==> 60 / hours
+299:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):343:14092:minutes += 60 * hours; |==> <NO-OP>
+300:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):344:14135:0 |==> 1
+301:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):344:14135:0 |==> -1
+302:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):344:14127:hours = 0; |==> <NO-OP>
+303:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):346:14189:Token.containsTokenWithValue(tokens, m) |==> false
+304:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):346:14189:Token.containsTokenWithValue(tokens, m) |==> true
+305:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):347:14227:60 |==> 0
+306:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):347:14227:60 |==> -60
+307:AOR:*(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):347:14227:60 * minutes |==> 60 % minutes
+308:AOR:*(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):347:14227:60 * minutes |==> 60 + minutes
+309:AOR:*(int,int):-(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):347:14227:60 * minutes |==> 60 - minutes
+310:AOR:*(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):347:14227:60 * minutes |==> 60 / minutes
+311:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):347:14216:seconds += 60 * minutes; |==> <NO-OP>
+312:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):348:14263:0 |==> 1
+313:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):348:14263:0 |==> -1
+314:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):348:14253:minutes = 0; |==> <NO-OP>
+315:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):350:14317:Token.containsTokenWithValue(tokens, s) |==> false
+316:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):350:14317:Token.containsTokenWithValue(tokens, s) |==> true
+317:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):351:14360:1000 |==> 0
+318:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):351:14360:1000 |==> -1000
+319:AOR:*(int,int):%(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):351:14360:1000 * seconds |==> 1000 % seconds
+320:AOR:*(int,int):+(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):351:14360:1000 * seconds |==> 1000 + seconds
+321:AOR:*(int,int):-(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):351:14360:1000 * seconds |==> 1000 - seconds
+322:AOR:*(int,int):/(int,int):org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):351:14360:1000 * seconds |==> 1000 / seconds
+323:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):351:14344:milliseconds += 1000 * seconds; |==> <NO-OP>
+324:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):352:14398:0 |==> 1
+325:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):352:14398:0 |==> -1
+326:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@formatPeriod(long,long,java.lang.String,boolean,java.util.TimeZone):352:14388:seconds = 0; |==> <NO-OP>
+327:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):376:15348:false |==> true
+328:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):378:15408:0 |==> 1
+329:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):378:15408:0 |==> -1
+330:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):378:15411:i < sz |==> i != sz
+331:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):378:15411:i < sz |==> i <= sz
+332:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):378:15413:i < sz |==> false
+333:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):383:15615:buffer.append(value.toString()); |==> <NO-OP>
+334:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):385:15695:value == y |==> false
+335:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):386:15737:padWithZeros |==> false
+336:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):386:15737:padWithZeros |==> true
+337:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):386:15723:buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(years), count, '0') : Integer.toString(years)); |==> <NO-OP>
+338:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):388:15906:false |==> true
+339:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):388:15886:lastOutputSeconds = false; |==> <NO-OP>
+340:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):389:15946:value == M |==> false
+341:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):390:15988:padWithZeros |==> false
+342:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):390:15988:padWithZeros |==> true
+343:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):390:15974:buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(months), count, '0') : Integer.toString(months)); |==> <NO-OP>
+344:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):392:16159:false |==> true
+345:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):392:16139:lastOutputSeconds = false; |==> <NO-OP>
+346:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):393:16199:value == d |==> false
+347:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):394:16241:padWithZeros |==> false
+348:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):394:16241:padWithZeros |==> true
+349:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):394:16227:buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(days), count, '0') : Integer.toString(days)); |==> <NO-OP>
+350:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):396:16408:false |==> true
+351:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):396:16388:lastOutputSeconds = false; |==> <NO-OP>
+352:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):397:16448:value == H |==> false
+353:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):398:16490:padWithZeros |==> false
+354:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):398:16490:padWithZeros |==> true
+355:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):398:16476:buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(hours), count, '0') : Integer.toString(hours)); |==> <NO-OP>
+356:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):400:16659:false |==> true
+357:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):400:16639:lastOutputSeconds = false; |==> <NO-OP>
+358:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):401:16699:value == m |==> false
+359:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):402:16741:padWithZeros |==> false
+360:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):402:16741:padWithZeros |==> true
+361:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):402:16727:buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(minutes), count, '0') : Integer.toString(minutes)); |==> <NO-OP>
+362:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):404:16914:false |==> true
+363:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):404:16894:lastOutputSeconds = false; |==> <NO-OP>
+364:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):405:16954:value == s |==> false
+365:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):406:16996:padWithZeros |==> false
+366:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):406:16996:padWithZeros |==> true
+367:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):406:16982:buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(seconds), count, '0') : Integer.toString(seconds)); |==> <NO-OP>
+368:LVR:TRUE:FALSE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):408:17169:true |==> false
+369:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):408:17149:lastOutputSeconds = true; |==> <NO-OP>
+370:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):409:17208:value == S |==> false
+371:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):410:17240:lastOutputSeconds |==> false
+372:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):410:17240:lastOutputSeconds |==> true
+373:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):411:17301:1000 |==> 0
+374:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):411:17301:1000 |==> -1000
+375:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):411:17285:milliseconds += 1000; |==> <NO-OP>
+376:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):412:17344:padWithZeros |==> false
+377:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):412:17344:padWithZeros |==> true
+378:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):415:17573:1 |==> 0
+379:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):415:17573:1 |==> -1
+380:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):415:17545:buffer.append(str.substring(1)); |==> <NO-OP>
+381:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):417:17645:padWithZeros |==> false
+382:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):417:17645:padWithZeros |==> true
+383:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):417:17631:buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(milliseconds), count, '0') : Integer.toString(milliseconds)); |==> <NO-OP>
+384:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):421:17885:false |==> true
+385:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@format(org.apache.commons.lang.time.DurationFormatUtils.Token[],int,int,int,int,int,int,int,boolean):421:17865:lastOutputSeconds = false; |==> <NO-OP>
+386:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):446:18541:false |==> true
+387:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):450:18664:0 |==> 1
+388:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):450:18664:0 |==> -1
+389:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):450:18667:i < sz |==> i != sz
+390:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):450:18667:i < sz |==> i <= sz
+391:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):450:18668:i < sz |==> false
+392:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):452:18740:ch != '\'' |==> ch < '\''
+393:ROR:!=(int,int):>(int,int):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):452:18740:ch != '\'' |==> ch > '\''
+394:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):452:18743:ch != '\'' |==> true
+395:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):452:18727:inLiteral && ch != '\'' |==> inLiteral == (ch != '\'')
+396:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):452:18737:inLiteral && ch != '\'' |==> false
+397:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):452:18727:inLiteral && ch != '\'' |==> inLiteral
+398:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):452:18740:inLiteral && ch != '\'' |==> ch != '\''
+399:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):453:18770:buffer.append(ch); |==> <NO-OP>
+400:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):460:18991:inLiteral |==> false
+401:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):460:18991:inLiteral |==> true
+402:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):461:19026:buffer = null; |==> <NO-OP>
+403:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):462:19075:false |==> true
+404:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):462:19063:inLiteral = false; |==> <NO-OP>
+405:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):464:19131:buffer = new StringBuffer(); |==> <NO-OP>
+406:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):465:19182:list.add(new Token(buffer)); |==> <NO-OP>
+407:LVR:TRUE:FALSE:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):466:19245:true |==> false
+408:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):466:19233:inLiteral = true; |==> <NO-OP>
+409:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):469:19324:value = y; |==> <NO-OP>
+410:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):470:19370:value = M; |==> <NO-OP>
+411:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):471:19416:value = d; |==> <NO-OP>
+412:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):472:19462:value = H; |==> <NO-OP>
+413:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):473:19508:value = m; |==> <NO-OP>
+414:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):474:19554:value = s; |==> <NO-OP>
+415:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):475:19600:value = S; |==> <NO-OP>
+416:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):477:19675:buffer == null |==> false
+417:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):478:19708:buffer = new StringBuffer(); |==> <NO-OP>
+418:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):479:19759:list.add(new Token(buffer)); |==> <NO-OP>
+419:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):481:19826:buffer.append(ch); |==> <NO-OP>
+420:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):484:19881:value != null |==> true
+421:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):485:19920:previous != null |==> true
+422:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):485:19951:previous.getValue() == value |==> false
+423:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):485:19911:previous != null && previous.getValue() == value |==> previous != null == (previous.getValue() == value)
+424:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):485:19928:previous != null && previous.getValue() == value |==> false
+425:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):485:19911:previous != null && previous.getValue() == value |==> previous != null
+426:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):485:19931:previous != null && previous.getValue() == value |==> previous.getValue() == value
+427:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):486:19983:previous.increment(); |==> <NO-OP>
+428:STD:<CALL>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):489:20102:list.add(token); |==> <NO-OP>
+429:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):490:20140:previous = token; |==> <NO-OP>
+430:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):492:20192:buffer = null; |==> <NO-OP>
+431:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):495:20281:0 |==> 1
+432:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils@lexx(java.lang.String):495:20281:0 |==> -1
+433:LVR:0:POS:org.apache.commons.lang.time.DurationFormatUtils$Token@containsTokenWithValue(org.apache.commons.lang.time.DurationFormatUtils.Token[],java.lang.Object):512:20772:0 |==> 1
+434:LVR:0:NEG:org.apache.commons.lang.time.DurationFormatUtils$Token@containsTokenWithValue(org.apache.commons.lang.time.DurationFormatUtils.Token[],java.lang.Object):512:20772:0 |==> -1
+435:ROR:<(int,int):!=(int,int):org.apache.commons.lang.time.DurationFormatUtils$Token@containsTokenWithValue(org.apache.commons.lang.time.DurationFormatUtils.Token[],java.lang.Object):512:20775:i < sz |==> i != sz
+436:ROR:<(int,int):<=(int,int):org.apache.commons.lang.time.DurationFormatUtils$Token@containsTokenWithValue(org.apache.commons.lang.time.DurationFormatUtils.Token[],java.lang.Object):512:20775:i < sz |==> i <= sz
+437:ROR:<(int,int):FALSE(int,int):org.apache.commons.lang.time.DurationFormatUtils$Token@containsTokenWithValue(org.apache.commons.lang.time.DurationFormatUtils.Token[],java.lang.Object):512:20777:i < sz |==> false
+438:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils$Token@containsTokenWithValue(org.apache.commons.lang.time.DurationFormatUtils.Token[],java.lang.Object):513:20831:tokens[i].getValue() == value |==> false
+439:LVR:TRUE:FALSE:org.apache.commons.lang.time.DurationFormatUtils$Token@containsTokenWithValue(org.apache.commons.lang.time.DurationFormatUtils.Token[],java.lang.Object):514:20870:true |==> false
+440:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils$Token@containsTokenWithValue(org.apache.commons.lang.time.DurationFormatUtils.Token[],java.lang.Object):517:20927:false |==> true
+441:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils$Token@<init>(java.lang.Object):529:21192:this.value = value; |==> <NO-OP>
+442:LVR:POS:0:org.apache.commons.lang.time.DurationFormatUtils$Token@<init>(java.lang.Object):530:21237:1 |==> 0
+443:LVR:POS:NEG:org.apache.commons.lang.time.DurationFormatUtils$Token@<init>(java.lang.Object):530:21237:1 |==> -1
+444:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils$Token@<init>(java.lang.Object):530:21224:this.count = 1; |==> <NO-OP>
+445:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils$Token@<init>(java.lang.Object,int):541:21546:this.value = value; |==> <NO-OP>
+446:STD:<ASSIGN>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils$Token@<init>(java.lang.Object,int):542:21578:this.count = count; |==> <NO-OP>
+447:STD:<INC>:<NO-OP>:org.apache.commons.lang.time.DurationFormatUtils$Token@increment():549:21714:count++; |==> <NO-OP>
+448:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils$Token@equals(java.lang.Object):579:22508:this.value.getClass() != tok2.value.getClass() |==> true
+449:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils$Token@equals(java.lang.Object):580:22563:false |==> true
+450:ROR:!=(int,int):<(int,int):org.apache.commons.lang.time.DurationFormatUtils$Token@equals(java.lang.Object):582:22608:this.count != tok2.count |==> this.count < tok2.count
+451:ROR:!=(int,int):>(int,int):org.apache.commons.lang.time.DurationFormatUtils$Token@equals(java.lang.Object):582:22608:this.count != tok2.count |==> this.count > tok2.count
+452:ROR:!=(int,int):TRUE(int,int):org.apache.commons.lang.time.DurationFormatUtils$Token@equals(java.lang.Object):582:22619:this.count != tok2.count |==> true
+453:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils$Token@equals(java.lang.Object):583:22663:false |==> true
+454:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.lang.time.DurationFormatUtils$Token@equals(java.lang.Object):590:23006:this.value == tok2.value |==> false
+455:LVR:FALSE:TRUE:org.apache.commons.lang.time.DurationFormatUtils$Token@equals(java.lang.Object):593:23083:false |==> true
