@@ -1,0 +1,3 @@
+./tests/org/apache/commons/cli2/WriteableCommandLineAgentTest.java
+./tests/org/apache/commons/cli2/commandline/WriteableCommandLineImplAgentTest.java
+./tests/org/apache/commons/cli2/option/GroupImplAgentTest.java

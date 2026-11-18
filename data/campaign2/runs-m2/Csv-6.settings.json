@@ -1,0 +1,30 @@
+{
+  "autoMemoryEnabled": false,
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "filesystem": {
+      "denyRead": [
+        "/home",
+        "/mnt",
+        "/tmp",
+        "/var/tmp",
+        "/opt",
+        "/root",
+        "/srv",
+        "/media"
+      ],
+      "allowRead": [
+        "/tmp/w-EnMYltYz"
+      ],
+      "allowWrite": [
+        "/tmp/w-EnMYltYz"
+      ]
+    },
+    "network": {
+      "allowedDomains": [],
+      "strictAllowlist": true
+    }
+  }
+}

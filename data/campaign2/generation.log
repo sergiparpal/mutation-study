@@ -1,0 +1,920 @@
+[Lang-43] checkout (w-MQdp8xkP)
+[Lang-43] compile broke after deletion, writing stubs
+[Lang-43] leak scan: clean
+[Lang-43] invoking agent (claude-sonnet-5, m2)
+[Lang-43] agent done: $0.750 turns=32 state=ok
+[Lang-43] pruned 0 of 21 tests
+[Lang-43] packaged: Lang-43f-m2.1.tar.bz2
+
+m2 suites packaged: 1
+failures:           0
+disabled tests:     0 of 21 (0.0%)
+cost, as reported:  $0.75
+[Lang-43] checkout (w-7W8pyBEx)
+[Lang-43] compile broke after deletion, writing stubs
+[Lang-43] leak scan: clean
+[Lang-43] invoking agent (claude-sonnet-5, s2)
+[Lang-43] agent done: $0.255 turns=10 state=ok
+[Lang-43] pruned 0 of 19 tests
+[Lang-43] packaged: Lang-43f-s2.1.tar.bz2
+
+s2 suites packaged: 1
+failures:           0
+disabled tests:     0 of 19 (0.0%)
+cost, as reported:  $0.25
+[Lang-13] checkout (w-GR3kyEob)
+[Lang-13] leak scan: clean
+[Lang-13] invoking agent (claude-sonnet-5, s2)
+[Lang-13] agent done: $0.289 turns=13 state=ok
+[Lang-13] pruned 0 of 17 tests
+[Lang-13] packaged: Lang-13f-s2.1.tar.bz2
+
+s2 suites packaged: 2
+failures:           0
+disabled tests:     0 of 36 (0.0%)
+cost, as reported:  $0.54
+[Lang-13] checkout (w-M4SR4AJw)
+[Lang-13] leak scan:  1 bug id;
+[Lang-13] invoking agent (claude-sonnet-5, m2)
+[Lang-13] agent done: $0.325 turns=22 state=ok
+[Lang-13] pruned 0 of 17 tests
+[Lang-13] packaged: Lang-13f-m2.1.tar.bz2
+
+m2 suites packaged: 2
+failures:           0
+disabled tests:     0 of 38 (0.0%)
+cost, as reported:  $1.08
+[Lang-56] checkout (w-7q6FEoFl)
+[Lang-56] compile broke after deletion, writing stubs
+[Lang-56] leak scan: clean
+[Lang-56] invoking agent (claude-sonnet-5, m2)
+[Lang-56] agent done: $0.624 turns=16 state=ok
+[Lang-56] pruned 0 of 49 tests
+[Lang-56] packaged: Lang-56f-m2.1.tar.bz2
+
+m2 suites packaged: 3
+failures:           0
+disabled tests:     0 of 87 (0.0%)
+cost, as reported:  $1.70
+[Lang-56] checkout (w-eYbPXC2j)
+[Lang-56] compile broke after deletion, writing stubs
+[Lang-56] leak scan: clean
+[Lang-56] invoking agent (claude-sonnet-5, s2)
+[Lang-56] agent done: $0.916 turns=25 state=ok
+[Lang-56] round 1: disabled 6 failing methods
+[Lang-56] pruned 6 of 51 tests
+[Lang-56] packaged: Lang-56f-s2.1.tar.bz2
+
+s2 suites packaged: 3
+failures:           0
+disabled tests:     6 of 87 (6.9%)
+cost, as reported:  $1.46
+[Lang-23] checkout (w-kmKDIpT2)
+[Lang-23] leak scan: clean
+[Lang-23] invoking agent (claude-sonnet-5, s2)
+[Lang-23] agent done: $0.354 turns=11 state=ok
+[Lang-23] pruned 0 of 28 tests
+[Lang-23] packaged: Lang-23f-s2.1.tar.bz2
+
+s2 suites packaged: 4
+failures:           0
+disabled tests:     6 of 115 (5.2%)
+cost, as reported:  $1.81
+[Lang-23] checkout (w-1TTmm4yV)
+[Lang-23] leak scan: clean
+[Lang-23] invoking agent (claude-sonnet-5, m2)
+[Lang-23] agent done: $0.514 turns=28 state=ok
+[Lang-23] pruned 0 of 23 tests
+[Lang-23] packaged: Lang-23f-m2.1.tar.bz2
+
+m2 suites packaged: 4
+failures:           0
+disabled tests:     0 of 110 (0.0%)
+cost, as reported:  $2.21
+[Lang-52] checkout (w-2uXWuT8i)
+[Lang-52] compile broke after deletion, writing stubs
+[Lang-52] leak scan: clean
+[Lang-52] invoking agent (claude-sonnet-5, m2)
+[Lang-52] agent done: $0.212 turns=10 state=ok
+[Lang-52] pruned 0 of 58 tests
+[Lang-52] packaged: Lang-52f-m2.1.tar.bz2
+
+m2 suites packaged: 5
+failures:           0
+disabled tests:     0 of 168 (0.0%)
+cost, as reported:  $2.42
+[Lang-52] checkout (w-BjgLdgIN)
+[Lang-52] compile broke after deletion, writing stubs
+[Lang-52] leak scan: clean
+[Lang-52] invoking agent (claude-sonnet-5, s2)
+[Lang-52] agent done: $0.383 turns=11 state=ok
+[Lang-52] pruned 0 of 63 tests
+[Lang-52] packaged: Lang-52f-s2.1.tar.bz2
+
+s2 suites packaged: 5
+failures:           0
+disabled tests:     6 of 178 (3.4%)
+cost, as reported:  $2.20
+[Lang-8] checkout (w-PTA5kv61)
+[Lang-8] leak scan: clean
+[Lang-8] invoking agent (claude-sonnet-5, s2)
+[Lang-8] agent done: $0.689 turns=13 state=ok
+[Lang-8] round 1: disabled 2 failing methods
+[Lang-8] pruned 2 of 47 tests
+[Lang-8] packaged: Lang-8f-s2.1.tar.bz2
+
+s2 suites packaged: 6
+failures:           0
+disabled tests:     8 of 225 (3.6%)
+cost, as reported:  $2.88
+[Lang-8] checkout (w-TFjVM30Z)
+[Lang-8] leak scan: clean
+[Lang-8] invoking agent (claude-sonnet-5, m2)
+[Lang-8] agent done: $0.500 turns=19 state=ok
+[Lang-8] pruned 0 of 26 tests
+[Lang-8] packaged: Lang-8f-m2.1.tar.bz2
+
+m2 suites packaged: 6
+failures:           0
+disabled tests:     0 of 194 (0.0%)
+cost, as reported:  $2.93
+[Lang-62] checkout (w-AlMFB7Ve)
+[Lang-62] compile broke after deletion, writing stubs
+[Lang-62] leak scan: clean
+[Lang-62] invoking agent (claude-sonnet-5, m2)
+[Lang-62] agent done: $0.475 turns=16 state=ok
+[Lang-62] pruned 0 of 42 tests
+[Lang-62] packaged: Lang-62f-m2.1.tar.bz2
+
+m2 suites packaged: 7
+failures:           0
+disabled tests:     0 of 236 (0.0%)
+cost, as reported:  $3.40
+[Lang-62] checkout (w-VOyDGaax)
+[Lang-62] compile broke after deletion, writing stubs
+[Lang-62] leak scan: clean
+[Lang-62] invoking agent (claude-sonnet-5, s2)
+[Lang-62] agent done: $0.336 turns=7 state=ok
+[Lang-62] pruned 0 of 23 tests
+[Lang-62] packaged: Lang-62f-s2.1.tar.bz2
+
+s2 suites packaged: 7
+failures:           0
+disabled tests:     8 of 248 (3.2%)
+cost, as reported:  $3.22
+[Lang-65] checkout (w-TnisV6YL)
+[Lang-65] compile broke after deletion, writing stubs
+[Lang-65] leak scan: clean
+[Lang-65] invoking agent (claude-sonnet-5, s2)
+[Lang-65] agent done: $0.694 turns=15 state=ok
+[Lang-65] round 1: disabled 7 failing methods
+[Lang-65] pruned 7 of 81 tests
+[Lang-65] packaged: Lang-65f-s2.1.tar.bz2
+
+s2 suites packaged: 8
+failures:           0
+disabled tests:     15 of 329 (4.6%)
+cost, as reported:  $3.92
+[Lang-65] checkout (w-FKbU6yOh)
+[Lang-65] compile broke after deletion, writing stubs
+[Lang-65] leak scan:  3 issue id;
+[Lang-65] invoking agent (claude-sonnet-5, m2)
+[Lang-65] agent done: $0.314 turns=9 state=ok
+[Lang-65] pruned 0 of 66 tests
+[Lang-65] packaged: Lang-65f-m2.1.tar.bz2
+
+m2 suites packaged: 8
+failures:           0
+disabled tests:     0 of 302 (0.0%)
+cost, as reported:  $3.71
+[Lang-63] checkout (w-BMyO87si)
+[Lang-63] compile broke after deletion, writing stubs
+[Lang-63] leak scan: clean
+[Lang-63] invoking agent (claude-sonnet-5, m2)
+[Lang-63] agent done: $0.312 turns=18 state=ok
+[Lang-63] pruned 0 of 24 tests
+[Lang-63] packaged: Lang-63f-m2.1.tar.bz2
+
+m2 suites packaged: 9
+failures:           0
+disabled tests:     0 of 326 (0.0%)
+cost, as reported:  $4.03
+[Lang-63] checkout (w-h4bmOtWk)
+[Lang-63] compile broke after deletion, writing stubs
+[Lang-63] leak scan: clean
+[Lang-63] invoking agent (claude-sonnet-5, s2)
+[Lang-63] agent done: $0.765 turns=11 state=ok
+[Lang-63] round 1: disabled 5 failing methods
+[Lang-63] pruned 5 of 32 tests
+[Lang-63] packaged: Lang-63f-s2.1.tar.bz2
+
+s2 suites packaged: 9
+failures:           0
+disabled tests:     20 of 361 (5.5%)
+cost, as reported:  $4.68
+[Lang-21] checkout (w-lFwkfi7t)
+[Lang-21] leak scan: clean
+[Lang-21] invoking agent (claude-sonnet-5, s2)
+[Lang-21] agent done: $0.830 turns=16 state=ok
+[Lang-21] round 1: disabled 18 failing methods
+[Lang-21] pruned 18 of 131 tests
+[Lang-21] packaged: Lang-21f-s2.1.tar.bz2
+
+s2 suites packaged: 10
+failures:           0
+disabled tests:     38 of 492 (7.7%)
+cost, as reported:  $5.51
+[Lang-21] checkout (w-6TrZJK2i)
+[Lang-21] leak scan: clean
+[Lang-21] invoking agent (claude-sonnet-5, m2)
+[Lang-21] agent done: $0.819 turns=26 state=ok
+[Lang-21] pruned 0 of 73 tests
+[Lang-21] packaged: Lang-21f-m2.1.tar.bz2
+
+m2 suites packaged: 10
+failures:           0
+disabled tests:     0 of 399 (0.0%)
+cost, as reported:  $4.85
+[Lang-34] checkout (w-nurzWVdo)
+[Lang-34] leak scan:  2 trigger name;
+[Lang-34] invoking agent (claude-sonnet-5, m2)
+[Lang-34] agent done: $0.617 turns=18 state=ok
+[Lang-34] pruned 0 of 57 tests
+[Lang-34] packaged: Lang-34f-m2.1.tar.bz2
+
+m2 suites packaged: 11
+failures:           0
+disabled tests:     0 of 456 (0.0%)
+cost, as reported:  $5.46
+[Lang-34] checkout (w-d3vweghZ)
+[Lang-34] leak scan: clean
+[Lang-34] invoking agent (claude-sonnet-5, s2)
+[Lang-34] agent done: $0.933 turns=18 state=ok
+[Lang-34] round 1: disabled 3 failing methods
+[Lang-34] pruned 3 of 29 tests
+[Lang-34] packaged: Lang-34f-s2.1.tar.bz2
+
+s2 suites packaged: 11
+failures:           0
+disabled tests:     41 of 521 (7.9%)
+cost, as reported:  $6.44
+[Lang-36] checkout (w-gzeo3yo4)
+[Lang-36] leak scan: clean
+[Lang-36] invoking agent (claude-sonnet-5, s2)
+[Lang-36] agent done: $0.584 turns=19 state=ok
+[Lang-36] round 1: disabled 2 failing methods
+[Lang-36] pruned 2 of 79 tests
+[Lang-36] packaged: Lang-36f-s2.1.tar.bz2
+
+s2 suites packaged: 12
+failures:           0
+disabled tests:     43 of 600 (7.2%)
+cost, as reported:  $7.03
+[Lang-36] checkout (w-fTIYBQFy)
+[Lang-36] leak scan: clean
+[Lang-36] invoking agent (claude-sonnet-5, m2)
+[Lang-36] agent done: $0.425 turns=13 state=ok
+[Lang-36] pruned 0 of 61 tests
+[Lang-36] packaged: Lang-36f-m2.1.tar.bz2
+
+m2 suites packaged: 12
+failures:           0
+disabled tests:     0 of 517 (0.0%)
+cost, as reported:  $5.89
+[Csv-14] checkout (w-ytwyVmmv)
+[Csv-14] leak scan: clean
+[Csv-14] invoking agent (claude-sonnet-5, m2)
+[Csv-14] agent done: $0.325 turns=8 state=ok
+[Csv-14] pruned 0 of 70 tests
+[Csv-14] packaged: Csv-14f-m2.1.tar.bz2
+
+m2 suites packaged: 13
+failures:           0
+disabled tests:     0 of 587 (0.0%)
+cost, as reported:  $6.21
+[Csv-14] checkout (w-QJ49oFl9)
+[Csv-14] leak scan: clean
+[Csv-14] invoking agent (claude-sonnet-5, s2)
+[Csv-14] agent done: $0.791 turns=13 state=ok
+[Csv-14] round 1: disabled 2 failing methods
+[Csv-14] pruned 2 of 61 tests
+[Csv-14] packaged: Csv-14f-s2.1.tar.bz2
+
+s2 suites packaged: 13
+failures:           0
+disabled tests:     45 of 661 (6.8%)
+cost, as reported:  $7.82
+[Csv-6] checkout (w-8WfBTUZ2)
+[Csv-6] leak scan: clean
+[Csv-6] invoking agent (claude-sonnet-5, s2)
+[Csv-6] agent done: $0.334 turns=11 state=ok
+[Csv-6] round 1: disabled 3 failing methods
+[Csv-6] pruned 3 of 33 tests
+[Csv-6] packaged: Csv-6f-s2.1.tar.bz2
+
+s2 suites packaged: 14
+failures:           0
+disabled tests:     48 of 694 (6.9%)
+cost, as reported:  $8.15
+[Csv-6] checkout (w-EnMYltYz)
+[Csv-6] leak scan: clean
+[Csv-6] invoking agent (claude-sonnet-5, m2)
+[Csv-6] agent done: $0.141 turns=9 state=ok
+[Csv-6] pruned 0 of 29 tests
+[Csv-6] packaged: Csv-6f-m2.1.tar.bz2
+
+m2 suites packaged: 14
+failures:           0
+disabled tests:     0 of 616 (0.0%)
+cost, as reported:  $6.35
+[Csv-8] checkout (w-qRR6EXFn)
+[Csv-8] leak scan: clean
+[Csv-8] invoking agent (claude-sonnet-5, m2)
+[Csv-8] agent done: $0.224 turns=10 state=ok
+[Csv-8] pruned 0 of 34 tests
+[Csv-8] packaged: Csv-8f-m2.1.tar.bz2
+
+m2 suites packaged: 15
+failures:           0
+disabled tests:     0 of 650 (0.0%)
+cost, as reported:  $6.58
+[Csv-8] checkout (w-vsA4JEBR)
+[Csv-8] leak scan: clean
+[Csv-8] invoking agent (claude-sonnet-5, s2)
+[Csv-8] agent done: $0.570 turns=11 state=ok
+[Csv-8] pruned 0 of 40 tests
+[Csv-8] packaged: Csv-8f-s2.1.tar.bz2
+
+s2 suites packaged: 15
+failures:           0
+disabled tests:     48 of 734 (6.5%)
+cost, as reported:  $8.72
+[Csv-4] checkout (w-6xn2Wvb0)
+[Csv-4] leak scan: clean
+[Csv-4] invoking agent (claude-sonnet-5, s2)
+[Csv-4] agent done: $0.574 turns=14 state=ok
+[Csv-4] pruned 0 of 27 tests
+[Csv-4] packaged: Csv-4f-s2.1.tar.bz2
+
+s2 suites packaged: 16
+failures:           0
+disabled tests:     48 of 761 (6.3%)
+cost, as reported:  $9.30
+[Csv-4] checkout (w-nqTHTtX6)
+[Csv-4] leak scan: clean
+[Csv-4] invoking agent (claude-sonnet-5, m2)
+[Csv-4] agent done: $0.339 turns=20 state=ok
+[Csv-4] pruned 0 of 30 tests
+[Csv-4] packaged: Csv-4f-m2.1.tar.bz2
+
+m2 suites packaged: 16
+failures:           0
+disabled tests:     0 of 680 (0.0%)
+cost, as reported:  $6.92
+[Csv-7] checkout (w-wssmABrs)
+[Csv-7] leak scan: clean
+[Csv-7] invoking agent (claude-sonnet-5, m2)
+[Csv-7] agent done: $0.290 turns=16 state=ok
+[Csv-7] pruned 0 of 31 tests
+[Csv-7] packaged: Csv-7f-m2.1.tar.bz2
+
+m2 suites packaged: 17
+failures:           0
+disabled tests:     0 of 711 (0.0%)
+cost, as reported:  $7.21
+[Csv-7] checkout (w-osiHF3S5)
+[Csv-7] leak scan: clean
+[Csv-7] invoking agent (claude-sonnet-5, s2)
+[Csv-7] agent done: $0.435 turns=18 state=ok
+[Csv-7] round 1: disabled 1 failing methods
+[Csv-7] pruned 1 of 26 tests
+[Csv-7] packaged: Csv-7f-s2.1.tar.bz2
+
+s2 suites packaged: 17
+failures:           0
+disabled tests:     49 of 787 (6.2%)
+cost, as reported:  $9.73
+[Csv-5] checkout (w-DU32AGFU)
+[Csv-5] leak scan: clean
+[Csv-5] invoking agent (claude-sonnet-5, s2)
+[Csv-5] agent done: $0.784 turns=25 state=ok
+[Csv-5] round 1: disabled 2 failing methods
+[Csv-5] pruned 2 of 29 tests
+[Csv-5] packaged: Csv-5f-s2.1.tar.bz2
+
+s2 suites packaged: 18
+failures:           0
+disabled tests:     51 of 816 (6.2%)
+cost, as reported:  $10.52
+[Csv-5] checkout (w-ORE0dhLC)
+[Csv-5] leak scan: clean
+[Csv-5] invoking agent (claude-sonnet-5, m2)
+[Csv-5] agent done: $0.332 turns=20 state=ok
+[Csv-5] pruned 0 of 32 tests
+[Csv-5] packaged: Csv-5f-m2.1.tar.bz2
+
+m2 suites packaged: 18
+failures:           0
+disabled tests:     0 of 743 (0.0%)
+cost, as reported:  $7.54
+[Csv-3] checkout (w-wMEvXgpK)
+[Csv-3] leak scan: clean
+[Csv-3] invoking agent (claude-sonnet-5, m2)
+[Csv-3] agent done: $0.371 turns=19 state=ok
+[Csv-3] pruned 0 of 25 tests
+[Csv-3] packaged: Csv-3f-m2.1.tar.bz2
+
+m2 suites packaged: 19
+failures:           0
+disabled tests:     0 of 768 (0.0%)
+cost, as reported:  $7.91
+[Csv-3] checkout (w-4yeyFxIn)
+[Csv-3] leak scan: clean
+[Csv-3] invoking agent (claude-sonnet-5, s2)
+[Csv-3] agent done: $1.437 turns=51 state=error
+[Csv-3] pruned 0 of 29 tests
+[Csv-3] packaged: Csv-3f-s2.1.tar.bz2
+
+s2 suites packaged: 19
+failures:           0
+disabled tests:     51 of 845 (6.0%)
+cost, as reported:  $11.95
+[Csv-16] checkout (w-E2NN8Vli)
+[Csv-16] leak scan: clean
+[Csv-16] invoking agent (claude-sonnet-5, s2)
+[Csv-16] agent done: $0.573 turns=15 state=ok
+[Csv-16] round 1: disabled 1 failing methods
+[Csv-16] pruned 1 of 38 tests
+[Csv-16] packaged: Csv-16f-s2.1.tar.bz2
+
+s2 suites packaged: 20
+failures:           0
+disabled tests:     52 of 883 (5.9%)
+cost, as reported:  $12.53
+[Csv-16] checkout (w-DSPMbuEI)
+[Csv-16] leak scan: clean
+[Csv-16] invoking agent (claude-sonnet-5, m2)
+[Csv-16] agent done: $0.371 turns=20 state=ok
+[Csv-16] pruned 0 of 32 tests
+[Csv-16] packaged: Csv-16f-m2.1.tar.bz2
+
+m2 suites packaged: 20
+failures:           0
+disabled tests:     0 of 800 (0.0%)
+cost, as reported:  $8.28
+[Csv-10] checkout (w-34lvsRAb)
+[Csv-10] leak scan:  2 trigger name;
+[Csv-10] invoking agent (claude-sonnet-5, m2)
+[Csv-10] agent done: $0.383 turns=15 state=ok
+[Csv-10] pruned 0 of 37 tests
+[Csv-10] packaged: Csv-10f-m2.1.tar.bz2
+
+m2 suites packaged: 21
+failures:           0
+disabled tests:     0 of 837 (0.0%)
+cost, as reported:  $8.66
+[Csv-10] checkout (w-px2EvhYT)
+[Csv-10] leak scan: clean
+[Csv-10] invoking agent (claude-sonnet-5, s2)
+[Csv-10] agent done: $0.854 turns=30 state=ok
+[Csv-10] round 1: disabled 1 failing methods
+[Csv-10] pruned 1 of 24 tests
+[Csv-10] packaged: Csv-10f-s2.1.tar.bz2
+
+s2 suites packaged: 21
+failures:           0
+disabled tests:     53 of 907 (5.8%)
+cost, as reported:  $13.38
+[Csv-15] checkout (w-bU22zSMW)
+[Csv-15] leak scan: clean
+[Csv-15] invoking agent (claude-sonnet-5, s2)
+[Csv-15] agent done: $0.822 turns=14 state=ok
+[Csv-15] round 1: disabled 4 failing methods
+[Csv-15] pruned 4 of 67 tests
+[Csv-15] packaged: Csv-15f-s2.1.tar.bz2
+
+s2 suites packaged: 22
+failures:           0
+disabled tests:     57 of 974 (5.9%)
+cost, as reported:  $14.20
+[Csv-15] checkout (w-ryoX8WlG)
+[Csv-15] leak scan: clean
+[Csv-15] invoking agent (claude-sonnet-5, m2)
+[Csv-15] agent done: $0.338 turns=9 state=ok
+[Csv-15] pruned 0 of 65 tests
+[Csv-15] packaged: Csv-15f-m2.1.tar.bz2
+
+m2 suites packaged: 22
+failures:           0
+disabled tests:     0 of 902 (0.0%)
+cost, as reported:  $9.00
+[Gson-14] checkout (w-1GYfOfBp)
+[Gson-14] leak scan: clean
+[Gson-14] invoking agent (claude-sonnet-5, m2)
+[Gson-14] agent done: $0.530 turns=19 state=ok
+[Gson-14] pruned 0 of 50 tests
+[Gson-14] packaged: Gson-14f-m2.1.tar.bz2
+
+m2 suites packaged: 23
+failures:           0
+disabled tests:     0 of 952 (0.0%)
+cost, as reported:  $9.53
+[Gson-14] checkout (w-htCy0cwN)
+[Gson-14] leak scan: clean
+[Gson-14] invoking agent (claude-sonnet-5, s2)
+[Gson-14] agent done: $0.510 turns=11 state=ok
+[Gson-14] round 1: disabled 3 failing methods
+[Gson-14] pruned 3 of 37 tests
+[Gson-14] packaged: Gson-14f-s2.1.tar.bz2
+
+s2 suites packaged: 23
+failures:           0
+disabled tests:     60 of 1011 (5.9%)
+cost, as reported:  $14.71
+[Gson-3] checkout (w-dIRc7uWy)
+[Gson-3] leak scan: clean
+[Gson-3] invoking agent (claude-sonnet-5, s2)
+[Gson-3] agent done: $0.296 turns=11 state=ok
+[Gson-3] pruned 0 of 15 tests
+[Gson-3] packaged: Gson-3f-s2.1.tar.bz2
+
+s2 suites packaged: 24
+failures:           0
+disabled tests:     60 of 1026 (5.8%)
+cost, as reported:  $15.01
+[Gson-3] checkout (w-DewkUWAd)
+[Gson-3] leak scan: clean
+[Gson-3] invoking agent (claude-sonnet-5, m2)
+[Gson-3] agent done: $0.457 turns=27 state=ok
+[Gson-3] pruned 0 of 30 tests
+[Gson-3] packaged: Gson-3f-m2.1.tar.bz2
+
+m2 suites packaged: 24
+failures:           0
+disabled tests:     0 of 982 (0.0%)
+cost, as reported:  $9.99
+[Gson-4] checkout (w-tRAFuj0g)
+[Gson-4] leak scan: clean
+[Gson-4] invoking agent (claude-sonnet-5, m2)
+[Gson-4] agent done: $0.398 turns=13 state=ok
+[Gson-4] pruned 0 of 53 tests
+[Gson-4] packaged: Gson-4f-m2.1.tar.bz2
+
+m2 suites packaged: 25
+failures:           0
+disabled tests:     0 of 1035 (0.0%)
+cost, as reported:  $10.39
+[Gson-4] checkout (w-XyVPhlqT)
+[Gson-4] leak scan: clean
+[Gson-4] invoking agent (claude-sonnet-5, s2)
+[Gson-4] agent done: $0.783 turns=10 state=ok
+[Gson-4] round 1: disabled 9 failing methods
+[Gson-4] pruned 9 of 62 tests
+[Gson-4] packaged: Gson-4f-s2.1.tar.bz2
+
+s2 suites packaged: 25
+failures:           0
+disabled tests:     69 of 1088 (6.3%)
+cost, as reported:  $15.79
+[Gson-6] checkout (w-MWz65lFa)
+[Gson-6] leak scan: clean
+[Gson-6] invoking agent (claude-sonnet-5, s2)
+[Gson-6] agent done: $0.702 turns=14 state=ok
+[Gson-6] round 1: disabled 3 failing methods
+[Gson-6] pruned 3 of 12 tests
+[Gson-6] packaged: Gson-6f-s2.1.tar.bz2
+
+s2 suites packaged: 26
+failures:           0
+disabled tests:     72 of 1100 (6.5%)
+cost, as reported:  $16.49
+[Gson-6] checkout (w-pU84CBO4)
+[Gson-6] leak scan: clean
+[Gson-6] invoking agent (claude-sonnet-5, m2)
+[Gson-6] agent done: $0.229 turns=14 state=ok
+[Gson-6] pruned 0 of 6 tests
+[Gson-6] packaged: Gson-6f-m2.1.tar.bz2
+
+m2 suites packaged: 26
+failures:           0
+disabled tests:     0 of 1041 (0.0%)
+cost, as reported:  $10.62
+[Gson-10] checkout (w-6kPpJS2p)
+[Gson-10] leak scan: clean
+[Gson-10] invoking agent (claude-sonnet-5, m2)
+[Gson-10] agent done: $0.245 turns=16 state=ok
+[Gson-10] pruned 0 of 15 tests
+[Gson-10] packaged: Gson-10f-m2.1.tar.bz2
+
+m2 suites packaged: 27
+failures:           0
+disabled tests:     0 of 1056 (0.0%)
+cost, as reported:  $10.86
+[Gson-10] checkout (w-6btBQtZA)
+[Gson-10] leak scan: clean
+[Gson-10] invoking agent (claude-sonnet-5, s2)
+[Gson-10] agent done: $0.538 turns=12 state=ok
+[Gson-10] pruned 0 of 18 tests
+[Gson-10] packaged: Gson-10f-s2.1.tar.bz2
+
+s2 suites packaged: 27
+failures:           0
+disabled tests:     72 of 1118 (6.4%)
+cost, as reported:  $17.03
+[Gson-8] checkout (w-uhTNZJjr)
+[Gson-8] leak scan: clean
+[Gson-8] invoking agent (claude-sonnet-5, s2)
+[Gson-8] agent done: $0.160 turns=9 state=ok
+[Gson-8] pruned 0 of 14 tests
+[Gson-8] packaged: Gson-8f-s2.1.tar.bz2
+
+s2 suites packaged: 28
+failures:           0
+disabled tests:     72 of 1132 (6.4%)
+cost, as reported:  $17.19
+[Gson-8] checkout (w-eL9WLeTT)
+[Gson-8] leak scan: clean
+[Gson-8] invoking agent (claude-sonnet-5, m2)
+[Gson-8] agent done: $0.091 turns=8 state=ok
+[Gson-8] pruned 0 of 9 tests
+[Gson-8] packaged: Gson-8f-m2.1.tar.bz2
+
+m2 suites packaged: 28
+failures:           0
+disabled tests:     0 of 1065 (0.0%)
+cost, as reported:  $10.95
+[Gson-16] checkout (w-7yTI36Q8)
+[Gson-16] leak scan: clean
+[Gson-16] invoking agent (claude-sonnet-5, m2)
+[Gson-16] agent done: $0.481 turns=17 state=ok
+[Gson-16] pruned 0 of 52 tests
+[Gson-16] packaged: Gson-16f-m2.1.tar.bz2
+
+m2 suites packaged: 29
+failures:           0
+disabled tests:     0 of 1117 (0.0%)
+cost, as reported:  $11.43
+[Gson-16] checkout (w-J6JZipE2)
+[Gson-16] leak scan: clean
+[Gson-16] invoking agent (claude-sonnet-5, s2)
+[Gson-16] agent done: $0.429 turns=9 state=ok
+[Gson-16] round 1: disabled 1 failing methods
+[Gson-16] pruned 1 of 44 tests
+[Gson-16] packaged: Gson-16f-s2.1.tar.bz2
+
+s2 suites packaged: 29
+failures:           0
+disabled tests:     73 of 1176 (6.2%)
+cost, as reported:  $17.62
+[Gson-5] checkout (w-Ld3eAhFR)
+[Gson-5] leak scan: clean
+[Gson-5] invoking agent (claude-sonnet-5, s2)
+[Gson-5] agent done: $0.316 turns=8 state=ok
+[Gson-5] round 1: disabled 3 failing methods
+[Gson-5] pruned 3 of 28 tests
+[Gson-5] packaged: Gson-5f-s2.1.tar.bz2
+
+s2 suites packaged: 30
+failures:           0
+disabled tests:     76 of 1204 (6.3%)
+cost, as reported:  $17.93
+[Gson-5] checkout (w-YmDO444H)
+[Gson-5] leak scan: clean
+[Gson-5] invoking agent (claude-sonnet-5, m2)
+[Gson-5] agent done: $0.225 turns=10 state=ok
+[Gson-5] pruned 0 of 25 tests
+[Gson-5] packaged: Gson-5f-m2.1.tar.bz2
+
+m2 suites packaged: 30
+failures:           0
+disabled tests:     0 of 1142 (0.0%)
+cost, as reported:  $11.66
+[Gson-7] checkout (w-rQBXqARV)
+[Gson-7] leak scan: clean
+[Gson-7] invoking agent (claude-sonnet-5, m2)
+[Gson-7] agent done: $0.454 turns=22 state=ok
+[Gson-7] pruned 0 of 46 tests
+[Gson-7] packaged: Gson-7f-m2.1.tar.bz2
+
+m2 suites packaged: 31
+failures:           0
+disabled tests:     0 of 1188 (0.0%)
+cost, as reported:  $12.11
+[Gson-7] checkout (w-MJyC0Lhe)
+[Gson-7] leak scan: clean
+[Gson-7] invoking agent (claude-sonnet-5, s2)
+[Gson-7] agent done: $0.416 turns=9 state=ok
+[Gson-7] round 1: disabled 3 failing methods
+[Gson-7] pruned 3 of 38 tests
+[Gson-7] packaged: Gson-7f-s2.1.tar.bz2
+
+s2 suites packaged: 31
+failures:           0
+disabled tests:     79 of 1242 (6.4%)
+cost, as reported:  $18.35
+[Gson-15] checkout (w-5NtYXR6M)
+[Gson-15] leak scan: clean
+[Gson-15] invoking agent (claude-sonnet-5, s2)
+[Gson-15] agent done: $0.457 turns=9 state=ok
+[Gson-15] round 1: disabled 3 failing methods
+[Gson-15] pruned 3 of 48 tests
+[Gson-15] packaged: Gson-15f-s2.1.tar.bz2
+
+s2 suites packaged: 32
+failures:           0
+disabled tests:     82 of 1290 (6.4%)
+cost, as reported:  $18.81
+[Gson-15] checkout (w-g5K7qFja)
+[Gson-15] leak scan: clean
+[Gson-15] invoking agent (claude-sonnet-5, m2)
+[Gson-15] agent done: $0.267 turns=11 state=ok
+[Gson-15] pruned 0 of 37 tests
+[Gson-15] packaged: Gson-15f-m2.1.tar.bz2
+
+m2 suites packaged: 32
+failures:           0
+disabled tests:     0 of 1225 (0.0%)
+cost, as reported:  $12.38
+[Cli-12] checkout (w-Lp10mkqj)
+[Cli-12] leak scan: clean
+[Cli-12] invoking agent (claude-sonnet-5, m2)
+[Cli-12] agent done: $0.480 turns=25 state=ok
+[Cli-12] pruned 0 of 20 tests
+[Cli-12] packaged: Cli-12f-m2.1.tar.bz2
+
+m2 suites packaged: 33
+failures:           0
+disabled tests:     0 of 1245 (0.0%)
+cost, as reported:  $12.86
+[Cli-12] checkout (w-S3dbVMTZ)
+[Cli-12] leak scan: clean
+[Cli-12] invoking agent (claude-sonnet-5, s2)
+[Cli-12] agent done: $0.256 turns=10 state=ok
+[Cli-12] round 1: disabled 1 failing methods
+[Cli-12] pruned 1 of 15 tests
+[Cli-12] packaged: Cli-12f-s2.1.tar.bz2
+
+s2 suites packaged: 33
+failures:           0
+disabled tests:     83 of 1305 (6.4%)
+cost, as reported:  $19.06
+[Cli-28] checkout (w-aeV9chR3)
+[Cli-28] leak scan: clean
+[Cli-28] invoking agent (claude-sonnet-5, s2)
+[Cli-28] agent done: $0.435 turns=8 state=ok
+[Cli-28] round 1: disabled 3 failing methods
+[Cli-28] pruned 3 of 21 tests
+[Cli-28] packaged: Cli-28f-s2.1.tar.bz2
+
+s2 suites packaged: 34
+failures:           0
+disabled tests:     86 of 1326 (6.5%)
+cost, as reported:  $19.50
+[Cli-28] checkout (w-YTF4Q27W)
+[Cli-28] leak scan: clean
+[Cli-28] invoking agent (claude-sonnet-5, m2)
+[Cli-28] agent done: $0.282 turns=16 state=ok
+[Cli-28] pruned 0 of 26 tests
+[Cli-28] packaged: Cli-28f-m2.1.tar.bz2
+
+m2 suites packaged: 34
+failures:           0
+disabled tests:     0 of 1271 (0.0%)
+cost, as reported:  $13.14
+[Cli-38] checkout (w-acwcGCWg)
+[Cli-38] leak scan: clean
+[Cli-38] invoking agent (claude-sonnet-5, m2)
+[Cli-38] agent done: $0.334 turns=22 state=ok
+[Cli-38] pruned 0 of 28 tests
+[Cli-38] packaged: Cli-38f-m2.1.tar.bz2
+
+m2 suites packaged: 35
+failures:           0
+disabled tests:     0 of 1299 (0.0%)
+cost, as reported:  $13.48
+[Cli-38] checkout (w-qbPHAB9j)
+[Cli-38] leak scan: clean
+[Cli-38] invoking agent (claude-sonnet-5, s2)
+[Cli-38] agent done: $0.458 turns=13 state=ok
+[Cli-38] pruned 0 of 19 tests
+[Cli-38] packaged: Cli-38f-s2.1.tar.bz2
+
+s2 suites packaged: 35
+failures:           0
+disabled tests:     86 of 1345 (6.4%)
+cost, as reported:  $19.96
+[Cli-10] checkout (w-Wf6prhy8)
+[Cli-10] leak scan: clean
+[Cli-10] invoking agent (claude-sonnet-5, s2)
+[Cli-10] agent done: $0.513 turns=14 state=ok
+[Cli-10] round 1: disabled 1 failing methods
+[Cli-10] pruned 1 of 22 tests
+[Cli-10] packaged: Cli-10f-s2.1.tar.bz2
+
+s2 suites packaged: 36
+failures:           0
+disabled tests:     87 of 1367 (6.4%)
+cost, as reported:  $20.47
+[Cli-10] checkout (w-bmn5u8bK)
+[Cli-10] leak scan: clean
+[Cli-10] invoking agent (claude-sonnet-5, m2)
+[Cli-10] agent done: $0.423 turns=33 state=ok
+[Cli-10] pruned 0 of 23 tests
+[Cli-10] packaged: Cli-10f-m2.1.tar.bz2
+
+m2 suites packaged: 36
+failures:           0
+disabled tests:     0 of 1322 (0.0%)
+cost, as reported:  $13.90
+[Cli-17] checkout (w-Px0kOcwO)
+[Cli-17] leak scan: clean
+[Cli-17] invoking agent (claude-sonnet-5, m2)
+[Cli-17] agent done: $0.392 turns=18 state=ok
+[Cli-17] pruned 0 of 20 tests
+[Cli-17] packaged: Cli-17f-m2.1.tar.bz2
+
+m2 suites packaged: 37
+failures:           0
+disabled tests:     0 of 1342 (0.0%)
+cost, as reported:  $14.29
+[Cli-17] checkout (w-oyChX7kf)
+[Cli-17] leak scan: clean
+[Cli-17] invoking agent (claude-sonnet-5, s2)
+[Cli-17] agent done: $0.375 turns=10 state=ok
+[Cli-17] round 1: disabled 3 failing methods
+[Cli-17] pruned 3 of 15 tests
+[Cli-17] packaged: Cli-17f-s2.1.tar.bz2
+
+s2 suites packaged: 37
+failures:           0
+disabled tests:     90 of 1382 (6.5%)
+cost, as reported:  $20.84
+[Cli-32] checkout (w-cEklAWrA)
+[Cli-32] leak scan: clean
+[Cli-32] invoking agent (claude-sonnet-5, s2)
+[Cli-32] agent done: $0.508 turns=13 state=ok
+[Cli-32] round 1: disabled 2 failing methods
+[Cli-32] pruned 2 of 47 tests
+[Cli-32] packaged: Cli-32f-s2.1.tar.bz2
+
+s2 suites packaged: 38
+failures:           0
+disabled tests:     92 of 1429 (6.4%)
+cost, as reported:  $21.35
+[Cli-32] checkout (w-YcqQKPSE)
+[Cli-32] leak scan: clean
+[Cli-32] invoking agent (claude-sonnet-5, m2)
+[Cli-32] agent done: $0.260 turns=15 state=ok
+[Cli-32] pruned 0 of 29 tests
+[Cli-32] packaged: Cli-32f-m2.1.tar.bz2
+
+m2 suites packaged: 38
+failures:           0
+disabled tests:     0 of 1371 (0.0%)
+cost, as reported:  $14.55
+[Cli-15] checkout (w-SGmpFd58)
+[Cli-15] leak scan: clean
+[Cli-15] invoking agent (claude-sonnet-5, m2)
+[Cli-15] agent done: $0.247 turns=19 state=ok
+[Cli-15] pruned 0 of 27 tests
+[Cli-15] packaged: Cli-15f-m2.1.tar.bz2
+
+m2 suites packaged: 39
+failures:           0
+disabled tests:     0 of 1398 (0.0%)
+cost, as reported:  $14.80
+[Cli-15] checkout (w-VCjJ3Aky)
+[Cli-15] leak scan: clean
+[Cli-15] invoking agent (claude-sonnet-5, s2)
+[Cli-15] agent done: $0.599 turns=12 state=ok
+[Cli-15] round 1: disabled 5 failing methods
+[Cli-15] pruned 5 of 20 tests
+[Cli-15] packaged: Cli-15f-s2.1.tar.bz2
+
+s2 suites packaged: 39
+failures:           0
+disabled tests:     97 of 1449 (6.7%)
+cost, as reported:  $21.95
+[Cli-21] checkout (w-PxqAK618)
+[Cli-21] leak scan: clean
+[Cli-21] invoking agent (claude-sonnet-5, s2)
+[Cli-21] agent done: $1.123 turns=20 state=ok
+[Cli-21] round 1: disabled 4 failing methods
+[Cli-21] pruned 4 of 51 tests
+[Cli-21] packaged: Cli-21f-s2.1.tar.bz2
+
+s2 suites packaged: 40
+failures:           0
+disabled tests:     101 of 1500 (6.7%)
+cost, as reported:  $23.07
+[Cli-21] checkout (w-qKAImV4B)
+[Cli-21] leak scan: clean
+[Cli-21] invoking agent (claude-sonnet-5, m2)
+[Cli-21] agent done: $1.381 turns=47 state=ok
+[Cli-21] pruned 0 of 55 tests
+[Cli-21] packaged: Cli-21f-m2.1.tar.bz2
+
+m2 suites packaged: 40
+failures:           0
+disabled tests:     0 of 1453 (0.0%)
+cost, as reported:  $16.18

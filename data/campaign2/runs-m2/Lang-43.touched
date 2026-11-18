@@ -1,0 +1,10 @@
+./src/test/org/apache/commons/lang/text/ExtendedMessageFormatAgentTest.java
+./target/classes/org/apache/commons/lang/Validate.class
+./target/classes/org/apache/commons/lang/text/ExtendedMessageFormat.class
+./target/classes/org/apache/commons/lang/text/FormatFactory.class
+./target/classes/org/apache/commons/lang/text/StrMatcher$CharMatcher.class
+./target/classes/org/apache/commons/lang/text/StrMatcher$CharSetMatcher.class
+./target/classes/org/apache/commons/lang/text/StrMatcher$NoMatcher.class
+./target/classes/org/apache/commons/lang/text/StrMatcher$StringMatcher.class
+./target/classes/org/apache/commons/lang/text/StrMatcher$TrimMatcher.class
+./target/classes/org/apache/commons/lang/text/StrMatcher.class
