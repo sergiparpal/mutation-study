@@ -16,7 +16,8 @@ metrics usually reported alongside it can see.
 
 Two suites per bug from the same agent and model, under two conditions: the
 agent either works in the project's source tree or sees only its javadoc. The
-comparison was run twice on the same 40 Defects4J bugs.
+comparison was run twice on the same 40 Defects4J bugs, and a third time on
+28 faults fixed after the model's training data ends.
 
 **The second campaign is the controlled one.** Its working copies hold nothing
 of the benchmark's own, a sandbox enforces the conditions, every run's
@@ -55,6 +56,23 @@ EvoSuite's row is over the suites that have each measurement: 36 for mutation,
 the 35 bugs where all three have a detection verdict, the rates are 57%, 43%
 and 20% and the mutation scores 54%, 47% and 39%.
 
+**The third campaign is on faults the model cannot have seen.** The second
+campaign's conditions, on 28 fix commits of Commons Lang, Commons CSV and
+Commons CLI from January to September 2026, with its test and exclusions also
+fixed before the first run (`data/campaign3/PROTOCOL.md`). Detection only.
+
+| arm | real fault detected |
+|---|---|
+| implementation-visible | 8/23 — 35% |
+| specification-only | 5/23 — 22% |
+
+Over the 23 subjects with a verdict in both arms and no excluded run, three
+faults are detected by the first arm alone and none by the second alone
+(exact McNemar, *p* = 0.25). **The pre-specified test does not reject.** The
+difference is 13 points, with a 95% bootstrap interval of 0 to 26. So the
+effect is established on Defects4J and not on post-cutoff faults: the
+direction is the same there, and the corpus is too small to show more.
+
 Mutation score and coverage measure how much of a program a suite exercises
 and how hard it checks what it exercises. Neither measures where the expected
 values came from.
@@ -87,13 +105,16 @@ Post-cutoff replication corpora, their mining scripts and their results are
 under `data/postcutoff*`, `data/matched-*`, `bin/mine-postcutoff.sh`,
 `bin/run-postcutoff.sh` and `bin/tally-postcutoff.py`.
 
-A third campaign, which will make the comparison on those post-cutoff
-subjects under the second campaign's conditions, is prepared and has not been
-run: its protocol is `data/campaign3/PROTOCOL.md`, its pilot is under
-`data/campaign3/pilot/`, and its scripts are `bin/generate-postcutoff.sh`,
+The third campaign, which makes the comparison on those post-cutoff subjects
+under the second campaign's conditions, is under `data/campaign3/`: its
+protocol (`PROTOCOL.md`), its pilot (`pilot/`), every run's transcript,
+prompt and settings, the suites as written, the audit with the lists of
+violations and of direct compiler calls, the measurement's logs and verdicts,
+and the analysis as printed. Its scripts are `bin/generate-postcutoff.sh`,
 `bin/run-campaign3.sh`, `bin/audit-campaign3.py`, `bin/measure-campaign3.sh`,
 `bin/analyze-campaign3.py`, `bin/campaign3-lib.sh` and
-`bin/AgentTestRunner.java`.
+`bin/AgentTestRunner.java`, all committed before its runs, and
+`bin/describe-campaign3.py`, written after them.
 
 ## What this does not show
 
@@ -119,18 +140,40 @@ table above:
   before its runs, with the first campaign's results already known. It shows
   that the effect survives control on new runs. It does not show that it holds
   on new faults. There is one run per bug and arm in each campaign.
+- **On new faults the effect is not shown.** The third campaign's test does
+  not reject: 8/23 against 5/23, *p* = 0.25. That is not evidence of no
+  effect. The test needed six discordant pairs against none and the corpus
+  produced three, all in the direction of the earlier campaigns. The gap is
+  25 points narrower than in the second campaign, with an interval that
+  excludes zero, between corpora that differ in project, kind of fault and
+  build as well as in date; every detection in the third is in Commons Lang.
+  So the narrower gap cannot be put down to recall, and recall cannot be
+  excluded as a part of the Defects4J figure. Mutation score was not
+  measured there, so the claim in the title is tested on Defects4J alone.
+- **The sandbox was less tight than its settings were meant to make it.** The
+  third campaign's audit found that the directory the harness gives commands
+  for temporary files is the host's own and shared by every run, in that
+  campaign and in the second, and that during the third it also held the
+  developers' tests for each fix. The transcripts, which record every command
+  and result, show no agent in either campaign listing that directory or
+  reading anything there that it had not just written. Five runs of the third
+  campaign did read back their own files there, or the harness's saved copy
+  of their own output; the exclusion rule as written leaves them out, and the
+  result is the same with them in (9/27 against 6/27, *p* = 0.25).
 - **Contamination is measured, not bounded.** A direct probe finds two of the
   forty faults recalled with their mechanism and two more recognised, and
   benchmark identifiers not memorised. But recall may be cued by the source
   rather than spontaneous, and the probe withholds the source. The second
   campaign's transcripts show no agent naming a bug, which is not the same as
   no agent recalling one.
-- **The replication did not settle it.** Two post-cutoff corpora were mined.
-  The first has no valid specification-only result: a harness error recorded
-  seven failed licence audits as seven detections. The second, matched on fault
-  type, gives 8/13 against 4/13 — the same direction, a gap of 31 points
-  against 38 in the second campaign and 58 in the first, and *p* = 0.125 on 13
-  pairs: too few to distinguish a smaller effect from no power.
+- **The earlier runs on the post-cutoff corpora were not controlled.** Two
+  corpora were mined. In their first runs the first has no valid
+  specification-only result: a harness error recorded seven failed licence
+  audits as seven detections. The second, matched on fault type, gave 8/13
+  against 4/13, *p* = 0.125. Those runs had the fix commit within the agent's
+  reach and kept no transcript. On the 19 subjects where both have a verdict,
+  their implementation-visible arm detected 13 and the third campaign's
+  detects 7.
 - **What the specification-only arm detects is only described.** Of its five
   detections in the first campaign, three are documented-contract violations
   and two are not, a classification made knowing the outcome. In the second
@@ -140,10 +183,13 @@ table above:
 
 `./bin/report-figures.py` recomputes every figure in the write-up from `data/`
 and needs neither Defects4J nor model access. `./bin/analyze-campaign2.py`
-prints the second campaign's analysis on its own.
+and `./bin/analyze-campaign3.py` print the second and the third campaign's
+analyses on their own.
 
 Re-measuring from the packaged suites in `data/agent-suites/` and
 `data/campaign2/suites/` needs Defects4J v3.0.1 under Java 11 with
-`TZ=America/Los_Angeles` (`bin/analyze-agent-suites.sh`); the post-cutoff
-corpora need Maven 3.9+. Regenerating the suites needs the model and costs
-between $0.40 and $1 per suite at list prices.
+`TZ=America/Los_Angeles` (`bin/analyze-agent-suites.sh`). The post-cutoff
+corpora and the third campaign's suites (`bin/measure-campaign3.sh`) need
+clones of the upstream repositories, Java 11 and Maven 3.9+. Regenerating the
+suites needs the model and costs between $0.40 and $1 per suite at list
+prices.

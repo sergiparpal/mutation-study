@@ -1089,9 +1089,14 @@ redaction in a log; and `bin/describe-campaign2.py`, written after the runs.
 
 The comparison of the two arms on the post-cutoff subjects, under the second
 campaign's conditions and a protocol fixed before any run on them
-(`campaign3/PROTOCOL.md`). **It has not been run.** What exists is the
-protocol, the scripts it fixes, the checks made without the model and a pilot
-on two commits outside the sample.
+(`campaign3/PROTOCOL.md`). It was run on 18 November 2026: 56 runs, audited,
+measured and analysed in that order, each step committed before the next.
+**Its hypothesis is not rejected**: over the 23 subjects of the paired set
+`m3` detects 8 and `s3` 5, three faults by `m3` alone and none by `s3` alone,
+*p* = 0.25. The record is under `campaign3/`: every run's transcript, prompt
+and settings (`runs-m3/`, `runs-s3/`), the suites as written (`suites/`),
+`audit.txt`, `violations.txt`, `direct-javac.txt`, the logs and verdicts of
+the measurement (`results/`) and `analysis.txt`.
 
 The runs of "Post-cutoff corpora" above stay as they are. They had the fix
 commit within the agent's reach, enforced nothing, kept no transcript and no
@@ -1179,6 +1184,210 @@ One redaction: Maven's banner in the pilot's eight build logs named the
 generating machine's kernel, and that version is replaced by `[redacted]`.
 The scripts no longer keep the banner.
 
+### The runs
+
+`bin/run-campaign3.sh` made the 56 runs in one session on 18 November 2026,
+from 13:29 to 16:55 UTC, from commit `41d1ffc`: the subjects in the order of
+`subjects.txt`, both arms of a subject before the next, the first arm
+alternating, one agent at a time. Every run reports `claude-sonnet-5` and
+Claude Code 2.1.316, and every revision was built with Java 11.0.33 and Maven
+3.9.16 at `--release 8`. No run was cut short by a usage limit, none was made
+twice, and every run ended by the agent's own decision.
+
+| | `m3` | `s3` |
+|---|---|---|
+| runs that left an accepted suite | 28 | 28 |
+| tests written | 1217 | 1558 |
+| tests left out at acceptance | 0 | 63 (4.0%), in 20 suites |
+| turns a run, mean and most | 18.2, 36 | 16.2, 42 |
+| list price | $13.75, $0.49 a suite | $21.34, $0.76 a suite |
+
+The `s3` tests left out, per project: Lang 29 of 993 (2.9%), CSV 27 of 526
+(5.1%), CLI 7 of 39. Every `m3` agent ran its tests with `_tools/test.sh` and
+in every run the last execution passed. Every `s3` agent compiled with
+`compile.sh` and in every run the last compilation succeeded.
+
+The search of the working copies found nothing in 55 of the 56. In the `m3`
+copy of `commons-lang-963c337d7` it found what the dry run had: `testEquals`
+and `testHashCode`, the names of that subject's trigger tests, 49 times in the
+other test classes of Commons Lang.
+
+### The audit
+
+`campaign3/audit.txt` is the output of `bin/audit-campaign3.py -v` on the 56
+transcripts. `campaign3/violations.txt` and `campaign3/direct-javac.txt` are
+the lists the protocol asks for, committed before anything was measured, with
+the reasons for each decision. In short:
+
+- **What was read.** Every command the script flags, in 9 `m3` runs and 21
+  `s3` runs, whole and with its whole result. Also what the script does not
+  look at: the paths given to the file tools, every absolute path in any
+  command (its pattern leaves out `/usr`), every program name in either arm,
+  every `s3` command that names `lib/`, a jar, a class file or `javac`, and
+  the code the agents wrote, for anything that opens a file or a connection
+  outside the working copy.
+- **Network.** No command in either arm reaches for it.
+- **The sandbox did less than the protocol says**, in four ways.
+  1. The CLI gives sandboxed commands a temporary directory, `$TMPDIR`,
+     `/tmp/claude-1000` on this machine. `/tmp` itself is, to each command, an
+     empty directory of its own, as the generator's header says. That
+     directory inside it is not: it is the host's, readable and writable from
+     inside and shared by every command of every run. Files that four runs
+     wrote there were on the host when the campaign ended. During the campaign
+     it also held the working files of the session that prepared the
+     campaign, among them the generator's dry run: the developers' test
+     classes for each fix, renamed, in archives, and each subject's trigger
+     tests by name. Whether an agent could list those subdirectories was not
+     tried; nothing in the settings hides them, so it is assumed they were
+     within reach of every agent in both arms. **No agent reached for them.**
+     No command in the 56 transcripts lists that directory or names a path in
+     it other than the files the same run had just put there. Five commands
+     searched the whole file system by name. One of them, by the `m3` agent of
+     `commons-lang-824837751`, was for `ConstructorUtilsTest.java`, the
+     developers' test class that had been removed from its tree; it printed
+     nothing.
+  2. The operating system's packages include released jars of Commons Lang
+     (3.14.0) and Commons CLI (1.6.0) under `/usr/share/java`, older than
+     every fix, and the sandbox does not hide `/usr`. One `m3` agent
+     (`commons-lang-de0184561`) saw their names in a search and did nothing
+     with them. No agent opened one.
+  3. The Read tool, confined to the working copy by `--restricted`, also
+     reads the files in which the CLI saves a command's output when it is
+     longer than the CLI passes on. They are under the user's home.
+  4. `mvn` is on the agents' `PATH`, where the generator's header says Maven
+     is not available. One `m3` agent ran `mvn -q -o compile`, which stopped
+     at the parent POM: offline, no local repository, no network.
+- **Five runs are listed as violations, by the wording of the rule and by
+  nothing else.** The rule leaves out a run when a command read a file outside
+  the working copy that is not part of the operating system or the JDK, and
+  excepts a command's own private `/tmp`. Four runs read back a file they had
+  themselves written in the shared temporary directory: a class unpacked from
+  the run's own `_tools/lib` (`m3`, `commons-csv-1d89cd5f`), scratch classes
+  compiled from sources in the working copy (`m3`, `commons-lang-df1e91895`),
+  and the text of pages of the run's own `api/` (`s3`, `commons-csv-f9e7d792`
+  and `commons-lang-623235ebc`). The fifth read the CLI's saved copy of the
+  output of its own `cat` of an `api/` page (`s3`, `commons-lang-824837751`).
+  None obtained anything that did not come from its own working copy. The
+  rule has no exception for that and none was made after the fact; the
+  protocol's first sensitivity analysis has the five runs included.
+- **`lib/` in `s3`.** Five of the 28 agents tried to list a jar, two the
+  project's and three JUnit's alone, with `unzip` or `jar`. None succeeded.
+  Seventeen called `python`, sixteen of them on a page of their `api/` to
+  strip its tags; it is hidden and never ran.
+- **Direct calls to `javac` in `s3`.** One run, `commons-csv-4a28ba82`,
+  compiled two scratch classes of its own with the options of `compile.sh`, to
+  see whether the methods it meant to call exist. Under the protocol that is
+  not a violation; the run is listed in `direct-javac.txt` and left out in the
+  fifth sensitivity analysis.
+- **Knowledge of the fix.** The script's rule marks three runs, each for a
+  test the agent named after the method it tests, which is also the name of a
+  trigger test: `testEquals` and `testHashCode` (`m3`,
+  `commons-lang-963c337d7`), `testIsCreatable` (`m3`,
+  `commons-lang-9a92df9fa`) and `testWithHeaderComments` (`s3`,
+  `commons-csv-10220941`). Nothing an agent said or wrote names an issue, a
+  pull request or a fix commit.
+- **Refused calls.** The harness refused 9 calls in `m3` and 8 in `s3`, and
+  the sandbox denied 16 `s3` commands a hidden program. The script's counts
+  agree with the transcripts.
+
+**What this means for the second campaign's record.** Its runs used the same
+sandbox settings, on the same machine, so the first, second and fourth points
+hold for it too, whatever its protocol and the header of
+`bin/generate-suites.sh` say about `/tmp`. Its 80 transcripts were searched
+again on 18 November 2026 for the temporary directory, for `/usr/share`, for
+the CLI's saved outputs and for searches of the whole file system. Three `m2`
+agents named the temporary directory (Gson-3, Lang-21, Lang-43); every command
+or file-tool call that would have written there was refused, and none read a
+file there. No command names `/usr/share`. Two commands searched the file
+system by name, both already in that campaign's `violations.txt`, and printed
+nothing. Its audit's conclusion stands: nothing outside a working copy was
+read but the operating system and the JDK.
+
+### Measurement
+
+`./bin/measure-campaign3.sh`, run once, on 18 November 2026, after the audit
+was committed. Each suite is compiled on its own against the fix commit and
+against its parent and run on both, the tests left out at acceptance left out
+again.
+
+| arm | suites | `Fail` | `Pass` | `Broken` |
+|---|---|---|---|---|
+| `m3` | 28 | 9 | 18 | 1 |
+| `s3` | 28 | 6 | 21 | 1 |
+
+- **`commons-csv-f9e7d792` has no verdict in either arm.** Both suites read
+  `Token.isEscaped`, a field the fix adds, and do not compile against the
+  parent commit.
+- Every suite passes on the fix commit when run again, and no verdict is a
+  timeout. Nothing was measured a second time.
+
+### Analysis
+
+`./bin/analyze-campaign3.py > data/campaign3/analysis.txt`, run once with the
+script as it was fixed. The paired set has 23 subjects: the 28, less the five
+with a run listed as a violation, one of which is also the subject without a
+verdict.
+
+- **H1, the arms differ in detection: not rejected.** 8/23 (34.8%) against
+  5/23 (21.7%). Five faults are detected by both arms, three by `m3` alone,
+  none by `s3` alone. Exact McNemar, two-sided, *p* = 0.25. The difference is
+  +13.0 points, with a 95% bootstrap interval of [+0.0, +26.1]. By the rule
+  fixed in the protocol, this corpus does not show the difference; that is
+  read neither as the absence of an effect nor as evidence that recall
+  produced the effect on Defects4J.
+- **Sensitivity.** With the five runs included: 9/27 against 6/27, six faults
+  by both, the same three by `m3` alone, *p* = 0.25, +11.1 points [+0.0,
+  +22.2]. Intention to treat: 9/28 against 6/28, +10.7 points [+0.0, +21.4].
+  Without the three runs that name a trigger test: 7/20 against 5/20, *p* =
+  0.5. Without the `s3` run that called `javac`: 8/22 against 5/22, *p* =
+  0.25.
+- **The three faults `m3` alone detects**: `commons-lang-1d6ef29ce`
+  (`CharRange.contains` for negated ranges), `commons-lang-d4b4d8c35`
+  (`FastDateParser` on a number that overflows an `int`) and
+  `commons-lang-963c337d7` (`equals` and `hashCode` of `ImmutableTimeZone`).
+
+Descriptive, and no test of the protocol. The analysis script prints the
+comparisons below. `bin/describe-campaign3.py`, written after the runs,
+prints what it does not: the faults each arm detects, the tests left out per
+project, and the counts in "The runs" and "The audit" above.
+
+- **By project**, on the paired set: Commons Lang 8 and 5 of 16; Commons CSV 0
+  and 0 of 6; Commons CLI 0 and 0 of 1. Every detection in either arm is in
+  Commons Lang.
+- **By corpus**: the subjects mined for the matched corpus, 4 and 2 of 15;
+  those mined for the first, 4 and 3 of 10.
+- **By fault type**, for the subjects of the matched corpus: omissions 3 and 1
+  of 8, state faults 1 and 1 of 2, substitutions 0 of 3, algorithm faults 0 of
+  2.
+- **The second campaign beside this one.** Its difference is +38.5 points
+  (22/39 against 7/39) and this one's +13.0. The difference between the two
+  differences is −25.4 points, with a bootstrap interval of [−46.9, −2.3],
+  each campaign's subjects resampled on their own. The campaigns differ in
+  more than the date of the faults: the projects, the fault types, the test
+  framework, how the working copy is built and how a suite is run. It is not
+  a measurement of what recall contributes.
+- **The earlier runs on these subjects beside this campaign.** On the 19
+  subjects with a valid verdict from both, the earlier implementation-visible
+  runs detected 13 and `m3` detects 7, all 7 among the 13. The six lost are
+  `commons-lang-0edbb4ae0`, `commons-lang-677e57f56`,
+  `commons-lang-623235ebc`, `commons-lang-284be5d6a`, `commons-cli-dc69e842`
+  and `commons-csv-10220941`. On the 11 subjects with a valid verdict from
+  both specification-only arms, the earlier runs detected 2 and `s3` detects
+  1, `commons-lang-963c337d7` being the one lost. The earlier
+  implementation-visible agent worked in a git worktree with the fix commit
+  within reach and nothing enforced, and the runs differ in other ways too,
+  prompts and tools among them, so six is an upper bound on what the reach of
+  the fix commit added, not a measurement of it.
+
+### Deviations from the protocol
+
+None in the procedure. One entry is recorded in the protocol, dated 18
+November 2026, before the measurement: what the audit found the sandbox not to
+enforce, and that the violation rule was applied to it as written. One thing
+was done that the protocol does not provide for and that changes no script it
+fixes and no figure of its analysis: `bin/describe-campaign3.py`, written
+after the runs.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -1230,5 +1439,6 @@ mistake for results:
 - [x] Protocol of the second campaign fixed (`campaign2/PROTOCOL.md`), with its analysis script
 - [x] Second campaign: both arms regenerated, without Defects4J's metadata in the working copy, under that protocol: 80 runs, audited, measured and analysed (56% vs 18% detection; both hypotheses hold)
 - [x] Third campaign prepared: protocol, scripts, checks without the model and a pilot (`campaign3/`)
-- [ ] Third campaign run: the 28 post-cutoff subjects in both arms, under the second campaign's conditions
+- [x] Third campaign run: the 28 post-cutoff subjects in both arms, under the second campaign's conditions: 56 runs, audited, measured and analysed (35% vs 22% detection over 23 pairs; its hypothesis is not rejected)
+- [ ] The sandbox's shared temporary directory closed off, and the operating system's jars of the projects hidden, before any further run
 - [ ] A matched post-cutoff corpus large enough to test the effect size
