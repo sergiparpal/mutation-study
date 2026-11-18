@@ -1,0 +1,381 @@
+Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)
+Maven home: /opt/apache-maven-3.9.16
+Java version: 11.0.33, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "[redacted]", arch: "amd64", family: "unix"
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.apache.commons:commons-csv >-------------------
+[INFO] Building Apache Commons CSV 1.15.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+<configuration>
+  <commandLineRules>${rules}</commandLineRules>
+  <fail default-value="true">${enforcer.fail}</fail>
+  <failFast default-value="false">${enforcer.failFast}</failFast>
+  <failIfNoRules default-value="true">${enforcer.failIfNoRules}</failIfNoRules>
+  <ignoreCache default-value="false">${enforcer.ignoreCache}</ignoreCache>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <project default-value="${project}"/>
+  <rules>
+    <requireMavenVersion>
+      <version>3.9</version>
+    </requireMavenVersion>
+  </rules>
+  <rulesToExecute>${enforcer.rules}</rulesToExecute>
+  <rulesToSkip>${enforcer.skipRules}</rulesToSkip>
+  <session default-value="${session}"/>
+  <skip default-value="false">${enforcer.skip}</skip>
+</configuration>
+<configuration>
+  <commandLineRules>${rules}</commandLineRules>
+  <fail default-value="true">${enforcer.fail}</fail>
+  <failFast default-value="false">${enforcer.failFast}</failFast>
+  <failIfNoRules default-value="true">${enforcer.failIfNoRules}</failIfNoRules>
+  <ignoreCache default-value="false">${enforcer.ignoreCache}</ignoreCache>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <project default-value="${project}"/>
+  <rules>
+    <requireJavaVersion>
+      <version>8</version>
+    </requireJavaVersion>
+  </rules>
+  <rulesToExecute>${enforcer.rules}</rulesToExecute>
+  <rulesToSkip>${enforcer.skipRules}</rulesToSkip>
+  <session default-value="${session}"/>
+  <skip default-value="false">${enforcer.skip}</skip>
+</configuration>
+<configuration>
+  <addDefaultLicenseMatchers>${rat.addDefaultLicenseMatchers}</addDefaultLicenseMatchers>
+  <addDefaultLicenses>${rat.addDefaultLicenses}</addDefaultLicenses>
+  <addLicense>${rat.AddLicense}</addLicense>
+  <addLicenseHeaders>${rat.addLicenseHeaders}</addLicenseHeaders>
+  <approvedLicenseFile>${rat.approvedFile}</approvedLicenseFile>
+  <basedir default-value="${basedir}">${rat.basedir}</basedir>
+  <configurationNoDefaults>${rat.ConfigurationNoDefaults}</configurationNoDefaults>
+  <consoleOutput default-value="true">${rat.consoleOutput}</consoleOutput>
+  <copyright>${rat.Copyright}</copyright>
+  <copyrightMessage>${rat.copyrightMessage}</copyrightMessage>
+  <defaultReportFile default-value="${project.build.directory}/rat.txt"/>
+  <dryRun>${rat.DryRun}</dryRun>
+  <editCopyright>${rat.EditCopyright}</editCopyright>
+  <editLicense>${rat.EditLicense}</editLicense>
+  <editOverwrite>${rat.EditOverwrite}</editOverwrite>
+  <excludeFile>${rat.ExcludeFile}</excludeFile>
+  <excludeSubProjects default-value="true">${rat.excludeSubprojects}</excludeSubProjects>
+  <excludesFileCharset default-value="${project.build.sourceEncoding}">${rat.excludesFileCharset}</excludesFileCharset>
+  <force>${rat.Force}</force>
+  <helpLicenses>${rat.HelpLicenses}</helpLicenses>
+  <ignoreErrors default-value="false">${rat.ignoreErrors}</ignoreErrors>
+  <includesFile>${rat.IncludesFile}</includesFile>
+  <includesFileCharset default-value="${project.build.sourceEncoding}">${rat.includesFileCharset}</includesFileCharset>
+  <inputExcludeFile>${rat.InputExcludeFile}</inputExcludeFile>
+  <inputExcludeSize>${rat.InputExcludeSize}</inputExcludeSize>
+  <inputExcludes combine.children="append">
+    <inputExclude>src/test/resources/org/apache/commons/csv/empty.txt</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSV-141/csv-141.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/csv-167/sample1.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSV-198/optd_por_public.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSV-196/emoji.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSV-196/japanese.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSV-213/999751170.patch.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSV-254/csv-254.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSVFileParser/bom.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSVFileParser/test.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSVFileParser/test_default.txt</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSVFileParser/test_default_comment.txt</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180.txt</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSVFileParser/test_rfc4180_trim.txt</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_default.txt</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV85_ignoreEmpty.txt</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/ferc.gov/contract.txt</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/ferc.gov/transaction.txt</inputExclude>
+    <inputExclude>src/test/resources/**/*.bin</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSV-259/sample.txt</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSVFileParser/testCSV246_checkWithNoComment.txt</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSV-290/psql.csv</inputExclude>
+    <inputExclude>src/test/resources/org/apache/commons/csv/CSV-290/psql.tsv</inputExclude>
+    <inputExclude>site-content/**</inputExclude>
+    <inputExclude>.checkstyle</inputExclude>
+    <inputExclude>.fbprefs</inputExclude>
+    <inputExclude>.pmd</inputExclude>
+    <inputExclude>.asf.yaml</inputExclude>
+    <inputExclude>.gitattributes</inputExclude>
+    <inputExclude>src/site/resources/download_*.cgi</inputExclude>
+    <inputExclude>maven-eclipse.xml</inputExclude>
+    <inputExclude>.externalToolBuilders/**</inputExclude>
+    <inputExclude>.vscode/**</inputExclude>
+    <inputExclude>.project</inputExclude>
+    <inputExclude>.classpath</inputExclude>
+    <inputExclude>.settings/**</inputExclude>
+    <inputExclude>**/*.svg</inputExclude>
+    <inputExclude>**/*.xcf</inputExclude>
+  </inputExcludes>
+  <inputIncludeFile>${rat.InputIncludeFile}</inputIncludeFile>
+  <licenseFamiliesApproved>${rat.LicenseFamiliesApproved}</licenseFamiliesApproved>
+  <licenseFamiliesApprovedFile>${rat.LicenseFamiliesApprovedFile}</licenseFamiliesApprovedFile>
+  <licenseFamiliesDenied>${rat.LicenseFamiliesDenied}</licenseFamiliesDenied>
+  <licenseFamiliesDeniedFile>${rat.LicenseFamiliesDeniedFile}</licenseFamiliesDeniedFile>
+  <licensesApproved>${rat.LicensesApproved}</licensesApproved>
+  <licensesApprovedFile>${rat.LicensesApprovedFile}</licensesApprovedFile>
+  <licensesDenied>${rat.LicensesDenied}</licensesDenied>
+  <licensesDeniedFile>${rat.LicensesDeniedFile}</licensesDeniedFile>
+  <listFamilies>${rat.ListFamilies}</listFamilies>
+  <listLicenses>${rat.ListLicenses}</listLicenses>
+  <noDefaultLicenses>${rat.NoDefaultLicenses}</noDefaultLicenses>
+  <numUnapprovedLicenses default-value="0">${rat.numUnapprovedLicenses}</numUnapprovedLicenses>
+  <out>${rat.Out}</out>
+  <outputArchive default-value="NOTIFICATION">${rat.OutputArchive}</outputArchive>
+  <outputFamilies default-value="NONE">${rat.OutputFamilies}</outputFamilies>
+  <outputFile default-value="${project.build.directory}/rat.txt">${rat.OutputFile}</outputFile>
+  <outputLicenses default-value="NONE">${rat.OutputLicenses}</outputLicenses>
+  <outputStandard default-value="ABSENCE">${rat.OutputStandard}</outputStandard>
+  <outputStyle>${rat.OutputStyle}</outputStyle>
+  <parseSCMIgnoresAsExcludes default-value="true">${rat.parseSCMIgnoresAsExcludes}</parseSCMIgnoresAsExcludes>
+  <project default-value="${project}"/>
+  <reportStyle>${rat.outputStyle}</reportStyle>
+  <scanHiddenDirectories>${rat.ScanHiddenDirectories}</scanHiddenDirectories>
+  <skip default-value="false">${rat.skip}</skip>
+  <stylesheet>${rat.Stylesheet}</stylesheet>
+  <useDefaultExcludes default-value="true">${rat.useDefaultExcludes}</useDefaultExcludes>
+  <useEclipseDefaultExcludes default-value="true">${rat.useEclipseDefaultExcludes}</useEclipseDefaultExcludes>
+  <useIdeaDefaultExcludes default-value="true">${rat.useIdeaDefaultExcludes}</useIdeaDefaultExcludes>
+  <useMavenDefaultExcludes default-value="true">${rat.useMavenDefaultExcludes}</useMavenDefaultExcludes>
+  <xml>${rat.Xml}</xml>
+</configuration>
+<configuration>
+  <diagnose default-value="false">${diagnose}</diagnose>
+  <failOnNonReproducible default-value="true">${check.failOnNonReproducible}</failOnNonReproducible>
+  <outputTimestamp default-value="${project.build.outputTimestamp}"/>
+  <pluginIssues>${check.plugin-issues}</pluginIssues>
+  <tasks default-value="deploy">${check.buildplan.tasks}</tasks>
+</configuration>
+<configuration>
+  <formatBuildNumber default-value="%02d"/>
+  <formatIncremental default-value="%02d"/>
+  <formatMajor default-value="%02d"/>
+  <formatMinor default-value="%02d"/>
+  <formattedPropertyPrefix default-value="formattedVersion"/>
+  <project default-value="${project}"/>
+  <propertyPrefix default-value="parsedVersion">javaTarget</propertyPrefix>
+  <qualifierPrefix default-value="-"/>
+  <versionString default-value="${project.version}">1.8</versionString>
+</configuration>
+<configuration>
+  <exportAntProperties default-value="false"/>
+  <failOnError default-value="true"/>
+  <localRepository>${localRepository}</localRepository>
+  <mavenProject default-value="${project}"/>
+  <pluginArtifacts>${plugin.artifacts}</pluginArtifacts>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.antrun.skip}</skip>
+  <sourceRoot>${sourceRoot}</sourceRoot>
+  <target>
+    <copy todir="/home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/target/apidocs/META-INF">
+      <fileset dir="/home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy">
+        <include name="LICENSE.txt"/>
+        <include name="NOTICE.txt"/>
+        <include name="LICENSE"/>
+        <include name="NOTICE"/>
+      </fileset>
+    </copy>
+  </target>
+  <testSourceRoot>${testSourceRoot}</testSourceRoot>
+  <versionsPropertyName default-value="maven.project.dependencies.versions"/>
+</configuration>
+<configuration>
+  <appendedResourcesDirectory default-value="${basedir}/src/main/appended-resources"/>
+  <attachToMain default-value="true">${attachToMain}</attachToMain>
+  <attachToTest default-value="true">${attachToTest}</attachToTest>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <excludeArtifactIds default-value="">${excludeArtifactIds}</excludeArtifactIds>
+  <excludeGroupIds default-value="">${excludeGroupIds}</excludeGroupIds>
+  <excludeScope default-value="">${excludeScope}</excludeScope>
+  <excludeTransitive default-value="false">${excludeTransitive}</excludeTransitive>
+  <includeArtifactIds default-value="">${includeArtifactIds}</includeArtifactIds>
+  <includeGroupIds default-value="">${includeGroupIds}</includeGroupIds>
+  <includeProjectProperties default-value="false"/>
+  <includeScope default-value="runtime">${includeScope}</includeScope>
+  <mavenSession default-value="${session}"/>
+  <outputDirectory default-value="${project.build.directory}/maven-shared-archive-resources">${outputDirectory}</outputDirectory>
+  <outputTimestamp default-value="${project.build.outputTimestamp}"/>
+  <project default-value="${project}"/>
+  <resourceBundles>
+    <resourceBundle>org.apache.apache.resources:apache-jar-resource-bundle:1.8</resourceBundle>${resourceBundles}</resourceBundles>
+  <skip default-value="false">true</skip>
+  <useDefaultFilterDelimiters default-value="true"/>
+  <useProjectFiles default-value="false"/>
+  <velocityFilterInMemoryThreshold default-value="5242880"/>
+</configuration>
+<configuration>
+  <addDefaultExcludes default-value="true"/>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}"/>
+  <escapeWindowsPaths default-value="true"/>
+  <fileNameFiltering default-value="false"/>
+  <includeEmptyDirs default-value="false"/>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false"/>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <skip default-value="false">${maven.resources.skip}</skip>
+  <supportMultiLineFiltering default-value="false"/>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+<configuration>
+  <annotationProcessorPathsUseDepMgmt default-value="false"/>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <compilePath default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerArgs>
+    <arg>-proc:none</arg>
+  </compilerArgs>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <createMissingPackageInfoClass default-value="true">${maven.compiler.createMissingPackageInfoClass}</createMissingPackageInfoClass>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debugFileName default-value="javac"/>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <enablePreview default-value="false">${maven.compiler.enablePreview}</enablePreview>
+  <encoding default-value="${project.build.sourceEncoding}">UTF-8</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <failOnWarning default-value="false">${maven.compiler.failOnWarning}</failOnWarning>
+  <fileExtensions default-value="class,jar"/>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <forceLegacyJavacApi default-value="false">${maven.compiler.forceLegacyJavacApi}</forceLegacyJavacApi>
+  <fork default-value="false">false</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <implicit>${maven.compiler.implicit}</implicit>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <moduleVersion default-value="${project.version}">${maven.compiler.moduleVersion}</moduleVersion>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}">${maven.compiler.outputDirectory}</outputDirectory>
+  <outputTimestamp default-value="${project.build.outputTimestamp}"/>
+  <parameters default-value="false">${maven.compiler.parameters}</parameters>
+  <proc>${maven.compiler.proc}</proc>
+  <project default-value="${project}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <release>${maven.compiler.release}</release>
+  <session default-value="${session}"/>
+  <showCompilationChanges default-value="false">${maven.compiler.showCompilationChanges}</showCompilationChanges>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="true">${maven.compiler.showWarnings}</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.8">1.8</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.8">1.8</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <useModuleVersion default-value="true">${maven.compiler.useModuleVersion}</useModuleVersion>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven-version) @ commons-csv ---
+</requireMavenVersion>
+</rules>
+[INFO] Skipping Rule Enforcement.
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-java-version) @ commons-csv ---
+</requireJavaVersion>
+</rules>
+[INFO] Skipping Rule Enforcement.
+[INFO] 
+[INFO] --- apache-rat:0.17:check (rat-check) @ commons-csv ---
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- artifact:3.6.1:check-buildplan (check-buildplan) @ commons-csv ---
+[INFO] No known issue in 20 plugins
+[INFO] 
+[INFO] --- build-helper:3.6.1:parse-version (parse-version) @ commons-csv ---
+[INFO] 
+[INFO] --- antrun:3.2.0:run (javadoc.resources) @ commons-csv ---
+      url: file:///home/sergi/.m2/repository/
+   layout: default
+snapshots: [enabled => true, update => always]
+ releases: [enabled => true, update => always]
+   blocked: false
+<include name="NOTICE.txt"/>
+<include name="LICENSE"/>
+<include name="NOTICE"/>
+</fileset>
+</copy>
+</target>
+    org.apache.commons.io;version="2.22.0",
+    org.apache.commons.io.build;version="2.22.0",
+    org.apache.commons.io.function;version="2.22.0",
+    org.apache.commons.io.input;version="2.22.0",
+    org.apache.commons.io.output;version="2.22.0",
+    *
+      url: file:///home/sergi/.m2/repository/
+   layout: default
+snapshots: [enabled => true, update => always]
+ releases: [enabled => true, update => always]
+   blocked: false
+[INFO] Executing tasks
+main:
+[INFO]      [copy] Copying 2 files to /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- remote-resources:3.3.0:process (process-resource-bundles) @ commons-csv ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ commons-csv ---
+    org.apache.commons.io;version="2.22.0",
+    org.apache.commons.io.build;version="2.22.0",
+    org.apache.commons.io.function;version="2.22.0",
+    org.apache.commons.io.input;version="2.22.0",
+    org.apache.commons.io.output;version="2.22.0",
+    *
+directory /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/resources
+excludes []
+includes []
+[INFO] skip non existing resourceDirectory /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/resources
+directory /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy
+excludes []
+includes [NOTICE.txt, LICENSE.txt, NOTICE, LICENSE]
+[INFO] Copying 2 resources from . to target/classes/META-INF
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ commons-csv ---
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/CSVFormat.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/CSVException.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/Lexer.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/Constants.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/package-info.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/QuoteMode.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/CSVPrinter.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/DuplicateHeaderMode.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/CSVRecord.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/Token.java
+[INFO] 	Stale source detected: /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/CSVParser.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/CSVException.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/CSVFormat.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/CSVParser.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/CSVPrinter.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/CSVRecord.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/Constants.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/DuplicateHeaderMode.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/Lexer.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/QuoteMode.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/Token.java
+[INFO] 	Input tree files (+): /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java/org/apache/commons/csv/package-info.java
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 12 source files with javac [debug release 8] to target/classes
+  /home/sergi/.cache/gen-stage/measure-gXxmC9G3/buggy/src/main/java
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.568 s
+[INFO] Finished at: 2026-11-18T04:04:39-08:00
+[INFO] ------------------------------------------------------------------------

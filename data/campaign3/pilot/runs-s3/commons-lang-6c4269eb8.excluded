@@ -1,0 +1,4 @@
+org.apache.commons.lang3.text.WordUtilsAgentTest#testUncapitalizeDelimNullArrayLeavesUnchanged()
+org.apache.commons.lang3.text.WordUtilsAgentTest#testCapitalizeFullyDelimNullArrayLeavesUnchanged()
+org.apache.commons.lang3.text.WordUtilsAgentTest#testWrapFiveArgDefaultSpaceDelimiterMatchesFourArgBehavior()
+org.apache.commons.lang3.text.WordUtilsAgentTest#testWrapFourArgLongWordWrappedWhenFlagTrue()

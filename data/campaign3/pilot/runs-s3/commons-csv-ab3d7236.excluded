@@ -1,0 +1,3 @@
+org.apache.commons.csv.CSVPrinterAgentTest#constructorWritesHeaderImmediately()
+org.apache.commons.csv.CSVPrinterAgentTest#constructorRejectsHybridEncapsulationAndEscaping()
+org.apache.commons.csv.CSVPrinterAgentTest#printRecordsObjectArrayOfSimpleValuesIsSingleRecord()
