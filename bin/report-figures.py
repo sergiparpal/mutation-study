@@ -7,6 +7,10 @@ per-suite measurements, the run records and the probe grades already in the
 repository. Rebuilding those from the packaged suites is a separate, slower
 step (bin/analyze-agent-suites.sh).
 
+§3.1 to §3.8 are the first campaign and are computed here. §3.10 is the second
+campaign: this script runs bin/analyze-campaign2.py and
+bin/describe-campaign2.py and prints what they print.
+
 Conventions, all of them stated in the write-up:
 
 - Mutation score and coverage are POOLED: mutants killed over mutants
@@ -247,6 +251,16 @@ def main():
     section("§3.8  Post-cutoff corpora")
     sys.stdout.flush()
     subprocess.run([sys.executable, "bin/tally-postcutoff.py"], check=False)
+
+    # ---- §3.10 -----------------------------------------------------------
+    # The second campaign has its own two scripts: the analysis its protocol
+    # fixed before the runs, and the descriptive figures written after them.
+    section("§3.10  Second campaign: the analysis fixed by its protocol")
+    sys.stdout.flush()
+    subprocess.run([sys.executable, "-B", "bin/analyze-campaign2.py"], check=False)
+    section("§3.10  Second campaign: descriptive figures")
+    sys.stdout.flush()
+    subprocess.run([sys.executable, "-B", "bin/describe-campaign2.py"], check=False)
 
 
 if __name__ == "__main__":

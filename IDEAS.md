@@ -39,6 +39,13 @@ this file needs a fresh set of bugs (another project, or GitBug-Java).
 > weaker: mutation feedback is a loose proxy for the origin of the oracle, not
 > a blind one. The table and text below are kept for provenance only. See
 > `data/README.md`.
+>
+> **Tested (2026-11-18).** That weaker claim was fixed as a hypothesis before
+> a second campaign on the same 40 bugs, and it held. On the 36 bugs with
+> every measurement in both arms, detection loses 65% of its value between the
+> arms and mutation score 28%: a difference of 37 points, 95% interval 12 to
+> 59 (`data/campaign2/analysis.txt`). The arms themselves are at 56% and 18%
+> detection there, not 72% and 14%.
 
 **This is the result of Study B and it undercuts the premise most entries below
 are built on.** Two arms, same 40 bugs, same model, one variable — whether the

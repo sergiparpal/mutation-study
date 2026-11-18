@@ -238,7 +238,12 @@ Both figures contradict hypotheses formed earlier from two or three bugs. See
 # Study B — what does an agent-written suite owe to reading the code?
 
 Complete. Two arms over the same 40 bugs, designed to differ in one variable:
-whether the agent can read the implementation.
+whether the agent can read the implementation. The comparison was made twice.
+The first campaign, on standard Defects4J checkouts, is what the sections
+before "Second campaign" describe. An audit found that its
+implementation-visible arm was told more than the implementation ("What those
+controls do not close"). The second campaign closes that and is the controlled
+comparison. Its section holds its results.
 
 - **M arm (implementation-visible)** — `bin/run-agent-suites.sh`. The agent
   works inside the checked-out project and reads the fixed source. This is
@@ -254,7 +259,7 @@ below, and every figure in the write-up, from the files in this directory.
 
 ## Results
 
-Per arm, over every suite measured:
+Of the first campaign. Per arm, over every suite measured:
 
 | arm | suites | real fault detected | mutation score | line coverage |
 |---|---|---|---|---|
@@ -801,7 +806,27 @@ In these runs the M-arm agent works in a `git worktree`, with the repository's
 history reachable. The Defects4J runs delete `.git`; here only the prompt
 forbids git.
 
-## Second campaign: prepared, not yet run on the sample
+## Second campaign
+
+The comparison of the two arms, made again on the same 40 bugs with the leaks
+of the first campaign closed, under a protocol fixed before any run on the
+sample. It is the controlled comparison and the study's primary result. The
+first campaign's arms are separate conditions and are never pooled with it.
+
+```
+detection, 39 bugs with a verdict in both arms    m2 22/39 (56.4%)   s2 7/39 (17.9%)
+exact McNemar, two-sided                           p = 0.000275  (16 bugs m2 only, 1 s2 only)
+on the 36 bugs with every measurement in both:
+  detection         55.6% -> 19.4%    falls by 65.0%
+  mutation score    54.0% -> 39.1%    falls by 27.7%
+  line coverage     83.7% -> 70.3%    falls by 16.1%
+  fall(detection) - fall(mutation score)    +37.3 points, 95% interval [+12.0, +59.0]
+```
+
+Both hypotheses of the protocol hold: the arms differ in detection, and
+detection falls further than mutation score does. `campaign2/analysis.txt` is
+the analysis as the script printed it; the sections below record how the runs,
+the audit and the measurement went.
 
 `bin/generate-suites.sh` is the rerun that "What those controls do not close"
 asks for, for both arms. Its header is the specification. The campaign's
@@ -846,8 +871,12 @@ Checks made on 17 November 2026, before any run on the sample:
   Defects4J. No trigger test's name, except in two other test classes that
   happen to have a method of the same name (Csv-10, Lang-34). One real residue:
   in Lang-65 the repaired source delimits its own repair, `// Fix for LANG-59
-  … START` and `END`. That is the implementation, and it is left as it is. Each
-  run's `.leakscan` records what its search found.
+  … START` and `END`. That is the implementation, and it is left as it is. One
+  coincidence of numbering, which this list left out until 18 November 2026
+  although the scan had reported it: in the Lang-13 working copy a developer
+  test of another class, `DateUtilsTest`, cites JIRA issue LANG-13, which is
+  not the issue behind Defects4J's Lang-13 (LANG-788). Each run's `.leakscan`
+  records what its search found.
 - **Pilot, three runs with the model** (`campaign2/pilot/`), on Defects4J bugs
   outside the sample, so that no result on the sample is seen before the
   protocol is fixed: Lang-61 and Csv-11 in the M arm, Cli-5 in the S arm. All
@@ -864,6 +893,193 @@ Checks made on 17 November 2026, before any run on the sample:
   measurement scripts unchanged (`campaign2/pilot/results/`). Their verdicts,
   Cli-5 detected and the other two not, check the pipeline and nothing else:
   three bugs, chosen to exercise the harness.
+
+### The runs
+
+`bin/run-campaign2.sh` made the 80 runs in one session, from 22:13 UTC on 17
+November 2026 to 02:41 on the 18th, from commit `2f56801`: the bugs in the
+order of the sample, both arms of a bug before the next, the first arm
+alternating, one agent at a time. Every run reports `claude-sonnet-5` and
+Claude Code 2.1.316. No run was cut short by a usage limit and none was made
+twice.
+
+| | `m2` | `s2` |
+|---|---|---|
+| runs that left an accepted suite | 40 | 40 |
+| tests written | 1453 | 1500 |
+| tests disabled at acceptance | 0 | 101 (6.7%), in 28 suites |
+| turns a run, mean and most | 18.1, 47 | 14.3, 51 |
+| list price | $16.18, $0.40 a suite | $23.07, $0.58 a suite |
+
+The `s2` tests disabled, per project: Lang 43 of 600 (7.2%), Csv 14 of 374
+(3.7%), Gson 25 of 316 (7.9%), Cli 19 of 210 (9.0%). The first campaign's S
+arm had 59 of 1638 (3.6%), and 4 of 579 in Lang. The campaigns differ in
+several ways (table above). One of them is that only the second enforces the
+ban on running the tests.
+
+One run did not end by itself: Csv-3 in `s2` reached its turn limit, at 51
+turns. Under the protocol a run that completes is final. Its test class
+compiled and was packaged as it stood, 29 tests and none disabled.
+
+Every `m2` agent ran its tests with `_tools/test.sh`, 103 executions in all,
+and in every run the last one passed. Every `s2` agent compiled with
+`compile.sh`, 67 times in all, and in every run the last compilation
+succeeded.
+
+The search of the 40 `m2` working copies found what the dry run had found
+(above): the two methods that share a trigger test's name, Lang-65's comments
+and the LANG-13 coincidence. The transcript of the Lang-13 run never shows
+that line.
+
+### The audit
+
+`campaign2/audit.txt` is the output of `bin/audit-transcripts.py -v` on the 80
+transcripts. `campaign2/violations.txt` is the list the protocol asks for,
+committed before anything was measured. It lists no run, and its notes give
+each decision. In short:
+
+- **What was read.** Every command the script flags, in 6 `m2` runs and 32
+  `s2` runs, whole and with its whole result. Also what the script does not
+  look at: the paths given to the file tools, every direct call to `javac`,
+  every `s2` command that names `lib/`, a jar or a class file, and every
+  program name in either arm.
+- **Network.** No command in either arm reaches for it.
+- **Outside the working copy.** Nothing was read there but the operating
+  system and the JDK. One `m2` run (Gson-7) unpacked a JUnit class from its
+  own `_tools/lib` into `/tmp`, which inside the sandbox is private to the
+  command. The file tools refused four writes addressed to `/tmp`, and the
+  permission layer refused seven shell commands that would have written a
+  scratch program there.
+- **`lib/` in `s2`.** The prompt forbids inspecting it, and 22 of the 40
+  agents tried to list or unpack a jar: 15 the project's or every jar, 7 only
+  JUnit's.
+  None succeeded. The sandbox hides `unzip`, `jar`, `java` and `python`, and
+  the rest was refused before it ran. Under the first campaign's conditions,
+  where only the prompt stood in the way and no transcript was kept, the same
+  commands would have worked and left no trace.
+- **One case decided on the protocol's wording.** The `s2` run of Csv-10
+  compiled a scratch file of its own with `javac`, seven times, to find out
+  which methods `CSVFormat` has; its `api/` documents only the class under
+  test. That breaks the prompt and is not a violation as the protocol defines
+  one: nothing in `lib/` was run, printed, unpacked or disassembled, and the
+  compiler was given no option that executes code. `violations.txt` declared,
+  before measurement, that the analysis would also be reported without that
+  run (`campaign2/analysis-without-s2-Csv-10.txt`).
+- **Knowledge of the bug.** The script's rule marks Lang-36 in both arms:
+  each agent named a test of `NumberUtils.isNumber` `testIsNumber`, which is
+  also the name of a trigger test. Nothing else an agent said or wrote names
+  the benchmark, the issue behind a bug or a trigger test. Two `m2` agents
+  cite CLI-71. They read it in a comment of the source under test, and it is
+  the issue behind neither bug.
+
+Two things the script gets wrong, found by this reading and left as they are
+because the script is fixed. Its pattern for programs that inspect compiled
+code misses one called by its full path (`s2`, Gson-14; the call failed). And
+its count of refused calls, 32 and 46, counts each refusal by the harness
+twice and adds the sandbox's denials. The transcripts have 16 calls refused by
+the harness in `m2` and 8 in `s2` (`bin/describe-campaign2.py`).
+
+### Measurement
+
+Run once, on 18 November 2026, after the audit was committed:
+
+```
+OUT=data/campaign2/results NO_MUTATION="Gson-14 Gson-16" \
+    ./bin/analyze-agent-suites.sh data/campaign2/suites
+```
+
+Defects4J `v3.0.1-7-g8c16da82`, Java 11.0.33. Per arm, over every suite:
+
+| arm | suites | real fault detected | mutation score | line coverage |
+|---|---|---|---|---|
+| `m2` | 40 | **22/39 — 56%** | 54% | 83% |
+| `s2` | 40 | **7/39 — 18%** | 39% | 69% |
+
+- **Cli-21 has no verdict in either arm.** Both suites are `Broken`. Each
+  calls a method the fix adds to `WriteableCommandLine` (`setCurrentOption` in
+  `m2`, `getCurrentOption` in `s2`) and does not compile on the buggy
+  revision. The first campaign's S suite failed the same way.
+- **The `s2` suite of Gson-8 has no mutation score.** Under one of
+  `UnsafeAllocator`'s mutants the JVM that runs the analysis dies with
+  `SIGSEGV`, and Major writes no `kill.csv`. A second attempt, in a scratch
+  directory, ended the same way. The suite has its verdict (`Pass`) and its
+  coverage figure, so Gson-8 is in the paired set and not in the complete one.
+- Gson-14 and Gson-16 are kept out of the mutation step, as the protocol
+  fixes. Their four suites have a verdict and a coverage figure.
+- The failure the protocol provides for, a Cli suite that cannot load for
+  want of Hamcrest, did not occur. Nothing was measured a second time.
+- One edit to the logs: in `results/run_mutation_Gson.log` the JVM's crash
+  message names the machine's core-dump handler, and that name is replaced by
+  `[redacted]`.
+
+### Analysis
+
+`./bin/analyze-campaign2.py > data/campaign2/analysis.txt`, run once with the
+script as it was fixed. The paired set has 39 bugs and the complete set 36.
+
+- **H1, the arms differ in detection: rejected.** 22/39 against 7/39. Six
+  bugs are detected by both arms, 16 by `m2` alone and one, Cli-17, by `s2`
+  alone. Exact McNemar, two-sided, *p* = 0.000275.
+- **H2, detection falls further than mutation score: supported.** On the
+  complete set detection falls from 55.6% to 19.4%, by 65.0% of its value;
+  pooled mutation score from 54.0% to 39.1%, by 27.7%; line coverage from
+  83.7% to 70.3%, by 16.1%. The difference between the falls in detection and
+  in mutation score is +37.3 points, with a 95% bootstrap interval of [+12.0,
+  +59.0]. Against coverage it is +48.9 points, [+24.0, +69.8].
+- **Sensitivity.** No run has a violation, so the first sensitivity analysis
+  is the primary one. Intention to treat: 22/40 against 7/40, *p* = 0.000275.
+  Without the two Lang-36 runs: 22/38 against 7/38, and the interval of H2 is
+  [+11.7, +58.4]. Mutation score as the mean over suites: 64.3% and 45.3%.
+- **The check declared at the audit**, without the `s2` run of Csv-10: 21/38
+  against 6/38, *p* = 0.000275, and an interval of [+15.2, +62.3].
+
+Per project, on the paired set, `m2` and `s2` detect 5 and 0 of 12 in Lang, 7
+and 3 of 10 in Csv, 7 and 2 of 10 in Gson, 3 and 2 of 7 in Cli.
+
+`bin/describe-campaign2.py` was written after the runs and prints what the
+analysis script does not. None of it is a test.
+
+- The gap in mutation score is there in 34 of the 36 bugs. The two others are
+  Lang-13, where `s2` is three points higher, and Gson-6, where both suites
+  kill every mutant. A little more than half of the gap is code the `s2`
+  suites never execute, 29.2% of mutants against 15.1%. The rest is what they
+  kill of what they execute, 55.2% against 63.7%. Defects4J's own table would
+  have put the arms at 69.1% and 68.3%.
+- Sixteen of the 22 `m2` detections and six of the seven `s2` detections rest
+  on a single failing test.
+
+### Beside the first campaign
+
+Descriptive, as the protocol says: the campaigns differ in more than the
+benchmark's metadata, so the difference between the M arms is an upper bound
+on what the metadata accounts for.
+
+- **M arms**, on the 36 bugs with a verdict in both. The first campaign's
+  detected 26 and `m2` detects 20, all 20 among the 26. The six lost are
+  Lang-13, Lang-21, Lang-63, Csv-16, Cli-10 and Cli-17. Of the eleven
+  first-campaign detections that show a trace of the metadata, `m2` keeps
+  eight; of the fifteen that show none, twelve. Lang-63, whose first-campaign
+  detection was the developer's test copied from Defects4J's backup, is not
+  detected. Csv-3 and Gson-14, which had no M verdict in the first campaign,
+  are detected by `m2`.
+- **S arms**, on 37 bugs. Six and seven detections, four in common (Csv-3,
+  Csv-4, Gson-15, Cli-32). The first campaign's also had Lang-13 and Csv-6;
+  `s2` has Csv-10, Gson-6 and Cli-17.
+- **Lang-13** is the fault the memorisation probe found recalled with its
+  mechanism. Both arms of the first campaign detected it, in working
+  directories whose names carried the bug's identifier. Neither arm of the
+  second campaign detects it.
+- **EvoSuite**, on the 35 bugs with a verdict from all three. `m2` detects 20,
+  EvoSuite 15, `s2` 7. Mutation score 53.7%, 47.1% and 39.1%; line coverage
+  83.3%, 85.5% and 69.9%. `m2` and EvoSuite detect ten faults in common, ten
+  and five alone, 25 between them.
+
+### Deviations from the protocol
+
+None. Three things were done that the protocol does not provide for. None
+changes a script it fixes or a figure of the primary analysis: the check
+without the `s2` run of Csv-10, declared before measurement; the one
+redaction in a log; and `bin/describe-campaign2.py`, written after the runs.
 
 ## Infrastructure failures and exclusions
 
@@ -914,5 +1130,5 @@ mistake for results:
 - [x] The five Cli EvoSuite suites re-measured with Defects4J's JUnit path corrected
 - [x] Generator for the rerun (`bin/generate-suites.sh`): written, dry-run on the 40 bugs, piloted on three bugs outside the sample
 - [x] Protocol of the second campaign fixed (`campaign2/PROTOCOL.md`), with its analysis script
-- [ ] Second campaign: both arms regenerated, without Defects4J's metadata in the working copy, under that protocol
+- [x] Second campaign: both arms regenerated, without Defects4J's metadata in the working copy, under that protocol: 80 runs, audited, measured and analysed (56% vs 18% detection; both hypotheses hold)
 - [ ] A matched post-cutoff corpus large enough to test the effect size
