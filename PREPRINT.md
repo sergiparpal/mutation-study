@@ -1858,6 +1858,81 @@ leverage natural language specifications (docstrings)" — the same source of
 truth as our specification-only arm, four years earlier and with a far smaller
 model. TOGA's own paper treats the docstring as optional context.
 
+### Documentation in place of the method's code
+
+Hossain, Taylor and Dwyer, *"Doc2OracLL: Investigating the Impact of
+Documentation on LLM-based Test Oracle Generation"* (FSE 2025;
+arXiv:2412.09360) put to oracle generation the question nearest to ours: what
+a method's Javadoc is worth as the source of an oracle, alone and beside the
+method's code. Their reason for asking is the mechanism of §4.1. When the
+implementation is in the model's input, "if the implementation contains a bug,
+the model may encode that buggy behavior into the oracle, resulting in an
+inappropriately passing test case", and more generally "this approach tends to
+generate oracles that are primarily useful in a regression context". Their
+opening example is a Joda-Time method that returns `null` for a time-zone id
+it does not recognise, where its Javadoc promises an
+`IllegalArgumentException`: the oracle generated from the code expects what
+the code does, and the one generated from the Javadoc expects the exception.
+
+Ten code models of 110 million to 7 billion parameters are fine-tuned to
+complete a given test prefix with one oracle, an assertion or an expected
+exception. Six prompts form three pairs that differ only in whether the
+Javadoc is present: the prefix alone, the prefix with the method's signature,
+and the prefix with the method's code. The data are the 55,575 samples, of the
+140,514 they draw from the SF110 benchmark, whose method has Javadoc. Accuracy
+is exact match with the dataset's oracle. Averaged over the ten models it is
+58.0% from the prefix alone, 78.1% with the Javadoc added, 79.9% with the
+method's code and no Javadoc, and 80.8% with both. An ablation puts most of
+the Javadoc's value in its description and its `@return` tag: with both
+removed, accuracy on the prompt with the prefix and the Javadoc falls from
+78.4% to 54.1% (their Table 2).
+
+For detection the fine-tuned models are run on Defects4J: 374 input samples,
+as in the earlier work they compare with, each a test prefix, a method and its
+Javadoc, with one oracle generated per sample and the resulting test run on
+the buggy and the fixed version. For the 86 samples whose method has no
+Javadoc, GPT-3.5 wrote one from the method's implementation. Three models are
+taken through four prompts. From the prefix alone they detect 58 to 62 bugs;
+with the Javadoc added, 63 to 68; with the method's code in its place, 62 to
+68; with both, 63 to 73. The authors' conclusion is that "Javadoc comments
+alone can encode sufficient contextual information to potentially replace the
+MUT code".
+
+In our data the documentation does not replace the code: the
+specification-only agent detects a third of what the implementation-visible
+agent does. The two results are not in conflict, because the code is put to
+different uses in the two designs. In theirs a model reads the text of one
+method and predicts an assertion. It runs nothing. Read in that way the code
+adds little to detection, and so does the documentation: the prefix alone
+accounts for 58 to 62 of the bugs, the method's code adds between none and ten
+to that, and the Javadoc between five and eight. In ours the
+implementation-visible agent runs its tests on the repaired code and is told
+to finish when they pass, so its expectations are observed and not predicted.
+That is the regression oracle in the strict sense, and it is what our 56%
+measures. Their inputs are also fixed, every prompt completing the same
+prefix, so that their conditions differ in one assertion. Our agents choose
+the inputs as well, for a whole class, and the specification-only agent has to
+find from the documentation the input that reaches the fault.
+
+Three things limit how far their comparison can be set beside ours. The paper
+does not state which revision the code in its own prompts is taken from; it
+says of TOGA that it uses the fixed one, and that its own best figure is
+obtained "when the same input information is used". For 86 of the 374 samples
+the Javadoc was itself written from the implementation, which is the
+dependence §5.2 declares for our javadoc, in a stronger form. And detection is
+reported as a count of bugs, without the number of bugs the 374 samples can
+reach, so it gives no rate to put in the table below. Nor are coverage and
+mutation score measured, so the comparison this paper tests cannot be made on
+their data.
+
+What they find about the documentation itself is in line with what our
+specification-only arm detects (§3.3, §4.4). Of the 900 cases they read in
+which adding the Javadoc produced the dataset's oracle, 65.6% are ones where
+it states what the method returns. Of the 144 incorrect oracles it produced
+where the prompt without it had been right, 55.6% come with Javadoc they class
+as vague or incomplete. Documentation supports an oracle where it states the
+contract, in their models as in our agent.
+
 ### Error propagation in code-then-test workflows
 
 Konstantinou, Tambon and Papadakis, *"On the risk of coding before testing: An
