@@ -1,0 +1,15 @@
+1) org.apache.commons.lang3.CharRangeAgentTest#testContainsCharRangeNonNegatedContainsEmptyNegatedSet()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.CharRangeAgentTest.testContainsCharRangeNonNegatedContainsEmptyNegatedSet(CharRangeAgentTest.java:174)
+
+2) org.apache.commons.lang3.CharRangeAgentTest#testContainsCharRangeLowEmptyBoundary()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.CharRangeAgentTest.testContainsCharRangeLowEmptyBoundary(CharRangeAgentTest.java:182)
+
+3) org.apache.commons.lang3.CharRangeAgentTest#testContainsCharRangeHighEmptyBoundary()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.CharRangeAgentTest.testContainsCharRangeHighEmptyBoundary(CharRangeAgentTest.java:193)
+
+Tests run: 31, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 31, failed: 3
+FAILURES!!!

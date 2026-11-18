@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorVarargsNonPublicClassThrowsNoSuchMethodException()
+org.opentest4j.AssertionFailedError: Expected java.lang.NoSuchMethodException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest.testInvokeConstructorVarargsNonPublicClassThrowsNoSuchMethodException(ConstructorUtilsAgentTest.java:223)
+
+2) org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetMatchingAccessibleConstructorNonPublicClassReturnsNull()
+org.opentest4j.AssertionFailedError: expected: <null> but was: <public org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest$NonPublicTarget()>
+    at org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest.testGetMatchingAccessibleConstructorNonPublicClassReturnsNull(ConstructorUtilsAgentTest.java:171)
+
+Tests run: 34, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 34, failed: 2
+FAILURES!!!

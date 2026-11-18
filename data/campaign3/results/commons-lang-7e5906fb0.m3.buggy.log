@@ -1,0 +1,12 @@
+1) org.apache.commons.lang3.builder.AbstractReflectionAgentTest#testSetAccessibleStaticWithNullAccessibleObjectReturnsFalse()
+java.lang.NullPointerException
+    at org.apache.commons.lang3.builder.AbstractReflection.setAccessible(AbstractReflection.java:138)
+    at org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testSetAccessibleStaticWithNullAccessibleObjectReturnsFalse(AbstractReflectionAgentTest.java:112)
+
+2) org.apache.commons.lang3.builder.AbstractReflectionAgentTest#testSetAccessibleStaticShortCircuitsWhenAlreadyAccessible()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testSetAccessibleStaticShortCircuitsWhenAlreadyAccessible(AbstractReflectionAgentTest.java:141)
+
+Tests run: 39, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 39, failed: 2
+FAILURES!!!

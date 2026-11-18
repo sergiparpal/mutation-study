@@ -1,0 +1,22 @@
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testClearShort()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testSetByteAndClearByte()	1	0	
+FAILED	method	org.apache.commons.lang3.BitFieldAgentTest#testHighBitMaskShiftCount()	1	1	org.opentest4j.AssertionFailedError: expected: <1> but was: <-1>
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testGetShortValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testSetShortBoolean()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testSetShortValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testSetValueInt()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testGetValueInt()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testLongMaskConstructor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testIsAllSetInt()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testGetRawValueInt()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testFullIntMask()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testIsSetInt()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testLongHolderOperations()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testSetByteBoolean()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testZeroMask()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testClearInt()	1	0	
+FAILED	method	org.apache.commons.lang3.BitFieldAgentTest#testNegativeMaskConstructorEquivalence()	1	1	org.opentest4j.AssertionFailedError: expected: <255> but was: <-1>
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testSetInt()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testSetBooleanInt()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testGetShortRawValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.BitFieldAgentTest#testSetShort()	1	0	

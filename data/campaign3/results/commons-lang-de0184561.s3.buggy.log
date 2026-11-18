@@ -1,0 +1,22 @@
+1) org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetTimeZoneOutOfRangeOffsetNeverNull()
+java.lang.IllegalArgumentException: 24 hours out of range
+    at org.apache.commons.lang3.time.GmtTimeZone.<init>(GmtTimeZone.java:46)
+    at org.apache.commons.lang3.time.FastTimeZone.getGmtTimeZone(FastTimeZone.java:70)
+    at org.apache.commons.lang3.time.FastTimeZone.getTimeZone(FastTimeZone.java:83)
+    at org.apache.commons.lang3.time.FastTimeZoneAgentTest.testGetTimeZoneOutOfRangeOffsetNeverNull(FastTimeZoneAgentTest.java:217)
+
+2) org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZonePatternOutOfRangeMinutes()
+java.lang.IllegalArgumentException: 60 minutes out of range
+    at org.apache.commons.lang3.time.GmtTimeZone.<init>(GmtTimeZone.java:49)
+    at org.apache.commons.lang3.time.FastTimeZone.getGmtTimeZone(FastTimeZone.java:70)
+    at org.apache.commons.lang3.time.FastTimeZoneAgentTest.testGetGmtTimeZonePatternOutOfRangeMinutes(FastTimeZoneAgentTest.java:129)
+
+3) org.apache.commons.lang3.time.FastTimeZoneAgentTest#testGetGmtTimeZonePatternOutOfRangeHours()
+java.lang.IllegalArgumentException: 24 hours out of range
+    at org.apache.commons.lang3.time.GmtTimeZone.<init>(GmtTimeZone.java:46)
+    at org.apache.commons.lang3.time.FastTimeZone.getGmtTimeZone(FastTimeZone.java:70)
+    at org.apache.commons.lang3.time.FastTimeZoneAgentTest.testGetGmtTimeZonePatternOutOfRangeHours(FastTimeZoneAgentTest.java:124)
+
+Tests run: 28, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 28, failed: 3
+FAILURES!!!

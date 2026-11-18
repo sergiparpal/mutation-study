@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.BitFieldAgentTest#testSignBitMaskInt()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <-1>
+    at org.apache.commons.lang3.BitFieldAgentTest.testSignBitMaskInt(BitFieldAgentTest.java:117)
+
+2) org.apache.commons.lang3.BitFieldAgentTest#testSignBitMaskLong()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <-1>
+    at org.apache.commons.lang3.BitFieldAgentTest.testSignBitMaskLong(BitFieldAgentTest.java:197)
+
+Tests run: 21, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 21, failed: 2
+FAILURES!!!

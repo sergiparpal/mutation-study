@@ -1,0 +1,13 @@
+1) org.apache.commons.lang3.time.FastDateParserAgentTest#testLargeNumericOverflowFailsGracefullyInsteadOfThrowing()
+java.lang.NumberFormatException: For input string: "99999999999999999999"
+    at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+    at java.base/java.lang.Integer.parseInt(Integer.java:652)
+    at java.base/java.lang.Integer.parseInt(Integer.java:770)
+    at org.apache.commons.lang3.time.FastDateParser$NumberStrategy.parse(FastDateParser.java:308)
+    at org.apache.commons.lang3.time.FastDateParser.parse(FastDateParser.java:1065)
+    at org.apache.commons.lang3.time.FastDateParser.parse(FastDateParser.java:1045)
+    at org.apache.commons.lang3.time.FastDateParserAgentTest.testLargeNumericOverflowFailsGracefullyInsteadOfThrowing(FastDateParserAgentTest.java:258)
+
+Tests run: 26, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 26, failed: 1
+FAILURES!!!

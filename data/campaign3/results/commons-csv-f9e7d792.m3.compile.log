@@ -1,0 +1,21 @@
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+---- buggy revision ----
+/home/sergi/.cache/gen-stage/measure-w6l3lqC9/suite-m3/org/apache/commons/csv/TokenAgentTest.java:41: error: cannot find symbol
+        assertFalse(token.isEscaped);
+                         ^
+  symbol:   variable isEscaped
+  location: variable token of type Token
+/home/sergi/.cache/gen-stage/measure-w6l3lqC9/suite-m3/org/apache/commons/csv/TokenAgentTest.java:51: error: cannot find symbol
+        token.isEscaped = true;
+             ^
+  symbol:   variable isEscaped
+  location: variable token of type Token
+/home/sergi/.cache/gen-stage/measure-w6l3lqC9/suite-m3/org/apache/commons/csv/TokenAgentTest.java:59: error: cannot find symbol
+        assertFalse(token.isEscaped);
+                         ^
+  symbol:   variable isEscaped
+  location: variable token of type Token
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+3 errors
