@@ -1,0 +1,1409 @@
+1:LVR:FALSE:TRUE:com.google.gson.stream.JsonReader:230:9082:false |==> true
+2:LVR:POS:0:com.google.gson.stream.JsonReader:238:9437:1024 |==> 0
+3:LVR:POS:NEG:com.google.gson.stream.JsonReader:238:9437:1024 |==> -1024
+4:LVR:0:POS:com.google.gson.stream.JsonReader:239:9464:0 |==> 1
+5:LVR:0:NEG:com.google.gson.stream.JsonReader:239:9464:0 |==> -1
+6:LVR:0:POS:com.google.gson.stream.JsonReader:240:9489:0 |==> 1
+7:LVR:0:NEG:com.google.gson.stream.JsonReader:240:9489:0 |==> -1
+8:LVR:0:POS:com.google.gson.stream.JsonReader:242:9520:0 |==> 1
+9:LVR:0:NEG:com.google.gson.stream.JsonReader:242:9520:0 |==> -1
+10:LVR:0:POS:com.google.gson.stream.JsonReader:243:9549:0 |==> 1
+11:LVR:0:NEG:com.google.gson.stream.JsonReader:243:9549:0 |==> -1
+12:LVR:POS:0:com.google.gson.stream.JsonReader:269:10255:32 |==> 0
+13:LVR:POS:NEG:com.google.gson.stream.JsonReader:269:10255:32 |==> -32
+14:LVR:0:POS:com.google.gson.stream.JsonReader:270:10286:0 |==> 1
+15:LVR:0:NEG:com.google.gson.stream.JsonReader:270:10286:0 |==> -1
+16:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader:272:10297:stack[stackSize++] = JsonScope.EMPTY_DOCUMENT; |==> <NO-OP>
+17:LVR:POS:0:com.google.gson.stream.JsonReader:283:10854:32 |==> 0
+18:LVR:POS:NEG:com.google.gson.stream.JsonReader:283:10854:32 |==> -32
+19:LVR:POS:0:com.google.gson.stream.JsonReader:284:10897:32 |==> 0
+20:LVR:POS:NEG:com.google.gson.stream.JsonReader:284:10897:32 |==> -32
+21:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonReader@<init>(java.io.Reader):290:11037:in == null |==> false
+22:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@setLenient(boolean):326:12739:this.lenient = lenient; |==> <NO-OP>
+23:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@beginArray():342:13102:p == PEEKED_NONE |==> p <= PEEKED_NONE
+24:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@beginArray():342:13102:p == PEEKED_NONE |==> p >= PEEKED_NONE
+25:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@beginArray():342:13104:p == PEEKED_NONE |==> false
+26:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@beginArray():343:13128:p = doPeek(); |==> <NO-OP>
+27:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@beginArray():345:13156:p == PEEKED_BEGIN_ARRAY |==> p <= PEEKED_BEGIN_ARRAY
+28:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@beginArray():345:13156:p == PEEKED_BEGIN_ARRAY |==> p >= PEEKED_BEGIN_ARRAY
+29:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@beginArray():345:13158:p == PEEKED_BEGIN_ARRAY |==> false
+30:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@beginArray():346:13189:push(JsonScope.EMPTY_ARRAY); |==> <NO-OP>
+31:LVR:POS:0:com.google.gson.stream.JsonReader@beginArray():347:13248:1 |==> 0
+32:LVR:POS:NEG:com.google.gson.stream.JsonReader@beginArray():347:13248:1 |==> -1
+33:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@beginArray():347:13236:stackSize - 1 |==> stackSize % 1
+34:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@beginArray():347:13236:stackSize - 1 |==> stackSize * 1
+35:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@beginArray():347:13236:stackSize - 1 |==> stackSize + 1
+36:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@beginArray():347:13236:stackSize - 1 |==> stackSize / 1
+37:LVR:0:POS:com.google.gson.stream.JsonReader@beginArray():347:13253:0 |==> 1
+38:LVR:0:NEG:com.google.gson.stream.JsonReader@beginArray():347:13253:0 |==> -1
+39:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@beginArray():347:13224:pathIndices[stackSize - 1] = 0; |==> <NO-OP>
+40:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@beginArray():348:13262:peeked = PEEKED_NONE; |==> <NO-OP>
+41:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@endArray():361:13681:p == PEEKED_NONE |==> p <= PEEKED_NONE
+42:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@endArray():361:13681:p == PEEKED_NONE |==> p >= PEEKED_NONE
+43:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@endArray():361:13683:p == PEEKED_NONE |==> false
+44:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@endArray():362:13707:p = doPeek(); |==> <NO-OP>
+45:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@endArray():364:13735:p == PEEKED_END_ARRAY |==> p <= PEEKED_END_ARRAY
+46:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@endArray():364:13735:p == PEEKED_END_ARRAY |==> p >= PEEKED_END_ARRAY
+47:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@endArray():364:13737:p == PEEKED_END_ARRAY |==> false
+48:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@endArray():365:13766:stackSize--; |==> <NO-OP>
+49:LVR:POS:0:com.google.gson.stream.JsonReader@endArray():366:13809:1 |==> 0
+50:LVR:POS:NEG:com.google.gson.stream.JsonReader@endArray():366:13809:1 |==> -1
+51:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@endArray():366:13797:stackSize - 1 |==> stackSize % 1
+52:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@endArray():366:13797:stackSize - 1 |==> stackSize * 1
+53:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@endArray():366:13797:stackSize - 1 |==> stackSize + 1
+54:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@endArray():366:13797:stackSize - 1 |==> stackSize / 1
+55:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@endArray():366:13785:pathIndices[stackSize - 1]++; |==> <NO-OP>
+56:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@endArray():367:13821:peeked = PEEKED_NONE; |==> <NO-OP>
+57:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@beginObject():380:14242:p == PEEKED_NONE |==> p <= PEEKED_NONE
+58:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@beginObject():380:14242:p == PEEKED_NONE |==> p >= PEEKED_NONE
+59:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@beginObject():380:14244:p == PEEKED_NONE |==> false
+60:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@beginObject():381:14268:p = doPeek(); |==> <NO-OP>
+61:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@beginObject():383:14296:p == PEEKED_BEGIN_OBJECT |==> p <= PEEKED_BEGIN_OBJECT
+62:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@beginObject():383:14296:p == PEEKED_BEGIN_OBJECT |==> p >= PEEKED_BEGIN_OBJECT
+63:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@beginObject():383:14298:p == PEEKED_BEGIN_OBJECT |==> false
+64:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@beginObject():384:14330:push(JsonScope.EMPTY_OBJECT); |==> <NO-OP>
+65:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@beginObject():385:14366:peeked = PEEKED_NONE; |==> <NO-OP>
+66:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@endObject():398:14788:p == PEEKED_NONE |==> p <= PEEKED_NONE
+67:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@endObject():398:14788:p == PEEKED_NONE |==> p >= PEEKED_NONE
+68:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@endObject():398:14790:p == PEEKED_NONE |==> false
+69:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@endObject():399:14814:p = doPeek(); |==> <NO-OP>
+70:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@endObject():401:14842:p == PEEKED_END_OBJECT |==> p <= PEEKED_END_OBJECT
+71:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@endObject():401:14842:p == PEEKED_END_OBJECT |==> p >= PEEKED_END_OBJECT
+72:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@endObject():401:14844:p == PEEKED_END_OBJECT |==> false
+73:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@endObject():402:14874:stackSize--; |==> <NO-OP>
+74:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@endObject():403:14893:pathNames[stackSize] = null; |==> <NO-OP>
+75:LVR:POS:0:com.google.gson.stream.JsonReader@endObject():404:15016:1 |==> 0
+76:LVR:POS:NEG:com.google.gson.stream.JsonReader@endObject():404:15016:1 |==> -1
+77:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@endObject():404:15004:stackSize - 1 |==> stackSize % 1
+78:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@endObject():404:15004:stackSize - 1 |==> stackSize * 1
+79:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@endObject():404:15004:stackSize - 1 |==> stackSize + 1
+80:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@endObject():404:15004:stackSize - 1 |==> stackSize / 1
+81:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@endObject():404:14992:pathIndices[stackSize - 1]++; |==> <NO-OP>
+82:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@endObject():405:15028:peeked = PEEKED_NONE; |==> <NO-OP>
+83:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@hasNext():417:15410:p == PEEKED_NONE |==> p <= PEEKED_NONE
+84:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@hasNext():417:15410:p == PEEKED_NONE |==> p >= PEEKED_NONE
+85:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@hasNext():417:15412:p == PEEKED_NONE |==> false
+86:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@hasNext():418:15436:p = doPeek(); |==> <NO-OP>
+87:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@hasNext():420:15467:p != PEEKED_END_OBJECT |==> p < PEEKED_END_OBJECT
+88:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@hasNext():420:15467:p != PEEKED_END_OBJECT |==> p > PEEKED_END_OBJECT
+89:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@hasNext():420:15469:p != PEEKED_END_OBJECT |==> true
+90:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@hasNext():420:15493:p != PEEKED_END_ARRAY |==> p < PEEKED_END_ARRAY
+91:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@hasNext():420:15493:p != PEEKED_END_ARRAY |==> p > PEEKED_END_ARRAY
+92:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@hasNext():420:15495:p != PEEKED_END_ARRAY |==> true
+93:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@hasNext():420:15490:p != PEEKED_END_OBJECT && p != PEEKED_END_ARRAY |==> false
+94:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@hasNext():420:15467:p != PEEKED_END_OBJECT && p != PEEKED_END_ARRAY |==> p != PEEKED_END_OBJECT
+95:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@hasNext():420:15493:p != PEEKED_END_OBJECT && p != PEEKED_END_ARRAY |==> p != PEEKED_END_ARRAY
+96:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peek():428:15670:p == PEEKED_NONE |==> p <= PEEKED_NONE
+97:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peek():428:15670:p == PEEKED_NONE |==> p >= PEEKED_NONE
+98:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peek():428:15672:p == PEEKED_NONE |==> false
+99:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peek():429:15696:p = doPeek(); |==> <NO-OP>
+100:LVR:POS:0:com.google.gson.stream.JsonReader@doPeek():466:16662:1 |==> 0
+101:LVR:POS:NEG:com.google.gson.stream.JsonReader@doPeek():466:16662:1 |==> -1
+102:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@doPeek():466:16650:stackSize - 1 |==> stackSize % 1
+103:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@doPeek():466:16650:stackSize - 1 |==> stackSize * 1
+104:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@doPeek():466:16650:stackSize - 1 |==> stackSize + 1
+105:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@doPeek():466:16650:stackSize - 1 |==> stackSize / 1
+106:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():467:16674:peekStack == JsonScope.EMPTY_ARRAY |==> peekStack <= JsonScope.EMPTY_ARRAY
+107:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():467:16674:peekStack == JsonScope.EMPTY_ARRAY |==> peekStack >= JsonScope.EMPTY_ARRAY
+108:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():467:16684:peekStack == JsonScope.EMPTY_ARRAY |==> false
+109:LVR:POS:0:com.google.gson.stream.JsonReader@doPeek():468:16736:1 |==> 0
+110:LVR:POS:NEG:com.google.gson.stream.JsonReader@doPeek():468:16736:1 |==> -1
+111:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@doPeek():468:16724:stackSize - 1 |==> stackSize % 1
+112:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@doPeek():468:16724:stackSize - 1 |==> stackSize * 1
+113:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@doPeek():468:16724:stackSize - 1 |==> stackSize + 1
+114:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@doPeek():468:16724:stackSize - 1 |==> stackSize / 1
+115:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():468:16718:stack[stackSize - 1] = JsonScope.NONEMPTY_ARRAY; |==> <NO-OP>
+116:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():469:16782:peekStack == JsonScope.NONEMPTY_ARRAY |==> peekStack <= JsonScope.NONEMPTY_ARRAY
+117:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():469:16782:peekStack == JsonScope.NONEMPTY_ARRAY |==> peekStack >= JsonScope.NONEMPTY_ARRAY
+118:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():469:16792:peekStack == JsonScope.NONEMPTY_ARRAY |==> false
+119:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@doPeek():471:16906:true |==> false
+120:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():476:17014:checkLenient(); |==> <NO-OP>
+121:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():482:17164:peekStack == JsonScope.EMPTY_OBJECT |==> peekStack <= JsonScope.EMPTY_OBJECT
+122:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():482:17164:peekStack == JsonScope.EMPTY_OBJECT |==> peekStack >= JsonScope.EMPTY_OBJECT
+123:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():482:17174:peekStack == JsonScope.EMPTY_OBJECT |==> false
+124:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():482:17203:peekStack == JsonScope.NONEMPTY_OBJECT |==> peekStack <= JsonScope.NONEMPTY_OBJECT
+125:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():482:17203:peekStack == JsonScope.NONEMPTY_OBJECT |==> peekStack >= JsonScope.NONEMPTY_OBJECT
+126:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():482:17213:peekStack == JsonScope.NONEMPTY_OBJECT |==> false
+127:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():482:17164:peekStack == JsonScope.EMPTY_OBJECT || peekStack == JsonScope.NONEMPTY_OBJECT |==> peekStack == JsonScope.EMPTY_OBJECT
+128:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():482:17203:peekStack == JsonScope.EMPTY_OBJECT || peekStack == JsonScope.NONEMPTY_OBJECT |==> peekStack == JsonScope.NONEMPTY_OBJECT
+129:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():482:17200:peekStack == JsonScope.EMPTY_OBJECT || peekStack == JsonScope.NONEMPTY_OBJECT |==> true
+130:LVR:POS:0:com.google.gson.stream.JsonReader@doPeek():483:17269:1 |==> 0
+131:LVR:POS:NEG:com.google.gson.stream.JsonReader@doPeek():483:17269:1 |==> -1
+132:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@doPeek():483:17257:stackSize - 1 |==> stackSize % 1
+133:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@doPeek():483:17257:stackSize - 1 |==> stackSize * 1
+134:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@doPeek():483:17257:stackSize - 1 |==> stackSize + 1
+135:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@doPeek():483:17257:stackSize - 1 |==> stackSize / 1
+136:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():483:17251:stack[stackSize - 1] = JsonScope.DANGLING_NAME; |==> <NO-OP>
+137:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():485:17360:peekStack == JsonScope.NONEMPTY_OBJECT |==> peekStack <= JsonScope.NONEMPTY_OBJECT
+138:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():485:17360:peekStack == JsonScope.NONEMPTY_OBJECT |==> peekStack >= JsonScope.NONEMPTY_OBJECT
+139:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():485:17370:peekStack == JsonScope.NONEMPTY_OBJECT |==> false
+140:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@doPeek():486:17436:true |==> false
+141:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():491:17555:checkLenient(); |==> <NO-OP>
+142:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@doPeek():498:17741:true |==> false
+143:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():503:17859:checkLenient(); |==> <NO-OP>
+144:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@doPeek():506:17954:peekStack != JsonScope.NONEMPTY_OBJECT |==> peekStack < JsonScope.NONEMPTY_OBJECT
+145:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@doPeek():506:17954:peekStack != JsonScope.NONEMPTY_OBJECT |==> peekStack > JsonScope.NONEMPTY_OBJECT
+146:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@doPeek():506:17964:peekStack != JsonScope.NONEMPTY_OBJECT |==> true
+147:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():512:18137:checkLenient(); |==> <NO-OP>
+148:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():513:18161:pos--; |==> <NO-OP>
+149:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.gson.stream.JsonReader@doPeek():514:18249:isLiteral((char)c) |==> false
+150:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.gson.stream.JsonReader@doPeek():514:18249:isLiteral((char)c) |==> true
+151:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():520:18407:peekStack == JsonScope.DANGLING_NAME |==> peekStack <= JsonScope.DANGLING_NAME
+152:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():520:18407:peekStack == JsonScope.DANGLING_NAME |==> peekStack >= JsonScope.DANGLING_NAME
+153:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():520:18417:peekStack == JsonScope.DANGLING_NAME |==> false
+154:LVR:POS:0:com.google.gson.stream.JsonReader@doPeek():521:18471:1 |==> 0
+155:LVR:POS:NEG:com.google.gson.stream.JsonReader@doPeek():521:18471:1 |==> -1
+156:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@doPeek():521:18459:stackSize - 1 |==> stackSize % 1
+157:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@doPeek():521:18459:stackSize - 1 |==> stackSize * 1
+158:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@doPeek():521:18459:stackSize - 1 |==> stackSize + 1
+159:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@doPeek():521:18459:stackSize - 1 |==> stackSize / 1
+160:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():521:18453:stack[stackSize - 1] = JsonScope.NONEMPTY_OBJECT; |==> <NO-OP>
+161:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@doPeek():523:18579:true |==> false
+162:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():528:18660:checkLenient(); |==> <NO-OP>
+163:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@doPeek():529:18689:pos < limit |==> pos != limit
+164:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():529:18689:pos < limit |==> pos <= limit
+165:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():529:18693:pos < limit |==> false
+166:LVR:POS:0:com.google.gson.stream.JsonReader@doPeek():529:18715:1 |==> 0
+167:LVR:POS:NEG:com.google.gson.stream.JsonReader@doPeek():529:18715:1 |==> -1
+168:COR:||(boolean,boolean):!=(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():529:18689:pos < limit || fillBuffer(1) |==> pos < limit != fillBuffer(1)
+169:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():529:18689:pos < limit || fillBuffer(1) |==> pos < limit
+170:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():529:18704:pos < limit || fillBuffer(1) |==> fillBuffer(1)
+171:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():529:18701:pos < limit || fillBuffer(1) |==> true
+172:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():529:18722:buffer[pos] == '>' |==> buffer[pos] <= '>'
+173:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():529:18722:buffer[pos] == '>' |==> buffer[pos] >= '>'
+174:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():529:18734:buffer[pos] == '>' |==> false
+175:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():529:18688:(pos < limit || fillBuffer(1)) && buffer[pos] == '>' |==> (pos < limit || fillBuffer(1)) == (buffer[pos] == '>')
+176:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():529:18719:(pos < limit || fillBuffer(1)) && buffer[pos] == '>' |==> false
+177:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():529:18688:(pos < limit || fillBuffer(1)) && buffer[pos] == '>' |==> (pos < limit || fillBuffer(1))
+178:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():529:18722:(pos < limit || fillBuffer(1)) && buffer[pos] == '>' |==> buffer[pos] == '>'
+179:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():530:18754:pos++; |==> <NO-OP>
+180:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():536:18867:peekStack == JsonScope.EMPTY_DOCUMENT |==> peekStack <= JsonScope.EMPTY_DOCUMENT
+181:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():536:18867:peekStack == JsonScope.EMPTY_DOCUMENT |==> peekStack >= JsonScope.EMPTY_DOCUMENT
+182:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():536:18877:peekStack == JsonScope.EMPTY_DOCUMENT |==> false
+183:COR:<IDENTIFIER(boolean)>:FALSE:com.google.gson.stream.JsonReader@doPeek():537:18918:lenient |==> false
+184:COR:<IDENTIFIER(boolean)>:TRUE:com.google.gson.stream.JsonReader@doPeek():537:18918:lenient |==> true
+185:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():538:18937:consumeNonExecutePrefix(); |==> <NO-OP>
+186:LVR:POS:0:com.google.gson.stream.JsonReader@doPeek():540:18996:1 |==> 0
+187:LVR:POS:NEG:com.google.gson.stream.JsonReader@doPeek():540:18996:1 |==> -1
+188:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@doPeek():540:18984:stackSize - 1 |==> stackSize % 1
+189:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@doPeek():540:18984:stackSize - 1 |==> stackSize * 1
+190:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@doPeek():540:18984:stackSize - 1 |==> stackSize + 1
+191:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@doPeek():540:18984:stackSize - 1 |==> stackSize / 1
+192:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():540:18978:stack[stackSize - 1] = JsonScope.NONEMPTY_DOCUMENT; |==> <NO-OP>
+193:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():541:19045:peekStack == JsonScope.NONEMPTY_DOCUMENT |==> peekStack <= JsonScope.NONEMPTY_DOCUMENT
+194:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():541:19045:peekStack == JsonScope.NONEMPTY_DOCUMENT |==> peekStack >= JsonScope.NONEMPTY_DOCUMENT
+195:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():541:19055:peekStack == JsonScope.NONEMPTY_DOCUMENT |==> false
+196:LVR:FALSE:TRUE:com.google.gson.stream.JsonReader@doPeek():542:19121:false |==> true
+197:LVR:NEG:0:com.google.gson.stream.JsonReader@doPeek():543:19144:-1 |==> 0
+198:LVR:NEG:POS:com.google.gson.stream.JsonReader@doPeek():543:19144:-1 |==> 1
+199:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():543:19139:c == -1 |==> c <= -1
+200:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():543:19139:c == -1 |==> c >= -1
+201:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():543:19141:c == -1 |==> false
+202:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():546:19209:checkLenient(); |==> <NO-OP>
+203:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():547:19233:pos--; |==> <NO-OP>
+204:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():549:19263:peekStack == JsonScope.CLOSED |==> peekStack <= JsonScope.CLOSED
+205:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():549:19263:peekStack == JsonScope.CLOSED |==> peekStack >= JsonScope.CLOSED
+206:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():549:19273:peekStack == JsonScope.CLOSED |==> false
+207:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@doPeek():553:19396:true |==> false
+208:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():556:19444:peekStack == JsonScope.EMPTY_ARRAY |==> peekStack <= JsonScope.EMPTY_ARRAY
+209:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():556:19444:peekStack == JsonScope.EMPTY_ARRAY |==> peekStack >= JsonScope.EMPTY_ARRAY
+210:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():556:19454:peekStack == JsonScope.EMPTY_ARRAY |==> false
+211:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():563:19678:peekStack == JsonScope.EMPTY_ARRAY |==> peekStack <= JsonScope.EMPTY_ARRAY
+212:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():563:19678:peekStack == JsonScope.EMPTY_ARRAY |==> peekStack >= JsonScope.EMPTY_ARRAY
+213:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():563:19688:peekStack == JsonScope.EMPTY_ARRAY |==> false
+214:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@doPeek():563:19716:peekStack == JsonScope.NONEMPTY_ARRAY |==> peekStack <= JsonScope.NONEMPTY_ARRAY
+215:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@doPeek():563:19716:peekStack == JsonScope.NONEMPTY_ARRAY |==> peekStack >= JsonScope.NONEMPTY_ARRAY
+216:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@doPeek():563:19726:peekStack == JsonScope.NONEMPTY_ARRAY |==> false
+217:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():563:19678:peekStack == JsonScope.EMPTY_ARRAY || peekStack == JsonScope.NONEMPTY_ARRAY |==> peekStack == JsonScope.EMPTY_ARRAY
+218:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():563:19716:peekStack == JsonScope.EMPTY_ARRAY || peekStack == JsonScope.NONEMPTY_ARRAY |==> peekStack == JsonScope.NONEMPTY_ARRAY
+219:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@doPeek():563:19713:peekStack == JsonScope.EMPTY_ARRAY || peekStack == JsonScope.NONEMPTY_ARRAY |==> true
+220:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():564:19765:checkLenient(); |==> <NO-OP>
+221:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():565:19789:pos--; |==> <NO-OP>
+222:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():571:19924:checkLenient(); |==> <NO-OP>
+223:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():580:20174:pos--; |==> <NO-OP>
+224:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@doPeek():584:20285:result != PEEKED_NONE |==> result < PEEKED_NONE
+225:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@doPeek():584:20285:result != PEEKED_NONE |==> result > PEEKED_NONE
+226:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@doPeek():584:20292:result != PEEKED_NONE |==> true
+227:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():588:20342:result = peekNumber(); |==> <NO-OP>
+228:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@doPeek():589:20373:result != PEEKED_NONE |==> result < PEEKED_NONE
+229:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@doPeek():589:20373:result != PEEKED_NONE |==> result > PEEKED_NONE
+230:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@doPeek():589:20380:result != PEEKED_NONE |==> true
+231:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.gson.stream.JsonReader@doPeek():593:20444:isLiteral(buffer[pos]) |==> false
+232:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.gson.stream.JsonReader@doPeek():593:20444:isLiteral(buffer[pos]) |==> true
+233:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@doPeek():597:20515:checkLenient(); |==> <NO-OP>
+234:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekKeyword():607:20797:c == 't' |==> c <= 't'
+235:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekKeyword():607:20797:c == 't' |==> c >= 't'
+236:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekKeyword():607:20799:c == 't' |==> false
+237:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekKeyword():607:20809:c == 'T' |==> c <= 'T'
+238:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekKeyword():607:20809:c == 'T' |==> c >= 'T'
+239:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekKeyword():607:20811:c == 'T' |==> false
+240:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():607:20797:c == 't' || c == 'T' |==> c == 't'
+241:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():607:20809:c == 't' || c == 'T' |==> c == 'T'
+242:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():607:20806:c == 't' || c == 'T' |==> true
+243:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekKeyword():611:20918:c == 'f' |==> c <= 'f'
+244:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekKeyword():611:20918:c == 'f' |==> c >= 'f'
+245:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekKeyword():611:20920:c == 'f' |==> false
+246:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekKeyword():611:20930:c == 'F' |==> c <= 'F'
+247:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekKeyword():611:20930:c == 'F' |==> c >= 'F'
+248:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekKeyword():611:20932:c == 'F' |==> false
+249:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():611:20918:c == 'f' || c == 'F' |==> c == 'f'
+250:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():611:20930:c == 'f' || c == 'F' |==> c == 'F'
+251:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():611:20927:c == 'f' || c == 'F' |==> true
+252:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekKeyword():615:21042:c == 'n' |==> c <= 'n'
+253:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekKeyword():615:21042:c == 'n' |==> c >= 'n'
+254:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekKeyword():615:21044:c == 'n' |==> false
+255:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekKeyword():615:21054:c == 'N' |==> c <= 'N'
+256:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekKeyword():615:21054:c == 'N' |==> c >= 'N'
+257:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekKeyword():615:21056:c == 'N' |==> false
+258:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():615:21042:c == 'n' || c == 'N' |==> c == 'n'
+259:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():615:21054:c == 'n' || c == 'N' |==> c == 'N'
+260:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():615:21051:c == 'n' || c == 'N' |==> true
+261:LVR:POS:0:com.google.gson.stream.JsonReader@peekKeyword():625:21303:1 |==> 0
+262:LVR:POS:NEG:com.google.gson.stream.JsonReader@peekKeyword():625:21303:1 |==> -1
+263:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@peekKeyword():625:21306:i < length |==> i != length
+264:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekKeyword():625:21306:i < length |==> i <= length
+265:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekKeyword():625:21308:i < length |==> false
+266:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@peekKeyword():626:21335:pos + i |==> pos % i
+267:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@peekKeyword():626:21335:pos + i |==> pos * i
+268:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@peekKeyword():626:21335:pos + i |==> pos - i
+269:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@peekKeyword():626:21335:pos + i |==> pos / i
+270:ROR:>=(int,int):==(int,int):com.google.gson.stream.JsonReader@peekKeyword():626:21335:pos + i >= limit |==> pos + i == limit
+271:ROR:>=(int,int):>(int,int):com.google.gson.stream.JsonReader@peekKeyword():626:21335:pos + i >= limit |==> pos + i > limit
+272:ROR:>=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@peekKeyword():626:21343:pos + i >= limit |==> true
+273:LVR:POS:0:com.google.gson.stream.JsonReader@peekKeyword():626:21371:1 |==> 0
+274:LVR:POS:NEG:com.google.gson.stream.JsonReader@peekKeyword():626:21371:1 |==> -1
+275:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@peekKeyword():626:21367:i + 1 |==> i % 1
+276:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@peekKeyword():626:21367:i + 1 |==> i * 1
+277:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@peekKeyword():626:21367:i + 1 |==> i - 1
+278:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@peekKeyword():626:21367:i + 1 |==> i / 1
+279:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():626:21335:pos + i >= limit && !fillBuffer(i + 1) |==> pos + i >= limit == !fillBuffer(i + 1)
+280:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():626:21352:pos + i >= limit && !fillBuffer(i + 1) |==> false
+281:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():626:21335:pos + i >= limit && !fillBuffer(i + 1) |==> pos + i >= limit
+282:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():626:21355:pos + i >= limit && !fillBuffer(i + 1) |==> !fillBuffer(i + 1)
+283:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@peekKeyword():629:21430:pos + i |==> pos % i
+284:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@peekKeyword():629:21430:pos + i |==> pos * i
+285:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@peekKeyword():629:21430:pos + i |==> pos - i
+286:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@peekKeyword():629:21430:pos + i |==> pos / i
+287:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekKeyword():629:21419:c = buffer[pos + i]; |==> <NO-OP>
+288:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@peekKeyword():630:21450:c != keyword.charAt(i) |==> c < keyword.charAt(i)
+289:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@peekKeyword():630:21450:c != keyword.charAt(i) |==> c > keyword.charAt(i)
+290:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@peekKeyword():630:21452:c != keyword.charAt(i) |==> true
+291:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@peekKeyword():630:21476:c != keywordUpper.charAt(i) |==> c < keywordUpper.charAt(i)
+292:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@peekKeyword():630:21476:c != keywordUpper.charAt(i) |==> c > keywordUpper.charAt(i)
+293:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@peekKeyword():630:21478:c != keywordUpper.charAt(i) |==> true
+294:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():630:21450:c != keyword.charAt(i) && c != keywordUpper.charAt(i) |==> c != keyword.charAt(i) == (c != keywordUpper.charAt(i))
+295:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():630:21473:c != keyword.charAt(i) && c != keywordUpper.charAt(i) |==> false
+296:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():630:21450:c != keyword.charAt(i) && c != keywordUpper.charAt(i) |==> c != keyword.charAt(i)
+297:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():630:21476:c != keyword.charAt(i) && c != keywordUpper.charAt(i) |==> c != keywordUpper.charAt(i)
+298:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@peekKeyword():635:21559:pos + length |==> pos % length
+299:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@peekKeyword():635:21559:pos + length |==> pos * length
+300:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@peekKeyword():635:21559:pos + length |==> pos - length
+301:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@peekKeyword():635:21559:pos + length |==> pos / length
+302:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@peekKeyword():635:21559:pos + length < limit |==> pos + length != limit
+303:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekKeyword():635:21559:pos + length < limit |==> pos + length <= limit
+304:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekKeyword():635:21572:pos + length < limit |==> false
+305:LVR:POS:0:com.google.gson.stream.JsonReader@peekKeyword():635:21603:1 |==> 0
+306:LVR:POS:NEG:com.google.gson.stream.JsonReader@peekKeyword():635:21603:1 |==> -1
+307:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@peekKeyword():635:21594:length + 1 |==> length % 1
+308:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@peekKeyword():635:21594:length + 1 |==> length * 1
+309:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@peekKeyword():635:21594:length + 1 |==> length - 1
+310:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@peekKeyword():635:21594:length + 1 |==> length / 1
+311:COR:||(boolean,boolean):!=(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():635:21559:pos + length < limit || fillBuffer(length + 1) |==> pos + length < limit != fillBuffer(length + 1)
+312:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():635:21559:pos + length < limit || fillBuffer(length + 1) |==> pos + length < limit
+313:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():635:21583:pos + length < limit || fillBuffer(length + 1) |==> fillBuffer(length + 1)
+314:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():635:21580:pos + length < limit || fillBuffer(length + 1) |==> true
+315:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@peekKeyword():636:21635:pos + length |==> pos % length
+316:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@peekKeyword():636:21635:pos + length |==> pos * length
+317:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@peekKeyword():636:21635:pos + length |==> pos - length
+318:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@peekKeyword():636:21635:pos + length |==> pos / length
+319:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():635:21558:(pos + length < limit || fillBuffer(length + 1)) && isLiteral(buffer[pos + length]) |==> (pos + length < limit || fillBuffer(length + 1)) == isLiteral(buffer[pos + length])
+320:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():636:21615:(pos + length < limit || fillBuffer(length + 1)) && isLiteral(buffer[pos + length]) |==> false
+321:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():635:21558:(pos + length < limit || fillBuffer(length + 1)) && isLiteral(buffer[pos + length]) |==> (pos + length < limit || fillBuffer(length + 1))
+322:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekKeyword():636:21618:(pos + length < limit || fillBuffer(length + 1)) && isLiteral(buffer[pos + length]) |==> isLiteral(buffer[pos + length])
+323:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekKeyword():641:21817:pos += length; |==> <NO-OP>
+324:LVR:0:POS:com.google.gson.stream.JsonReader@peekNumber():651:22094:0 |==> 1
+325:LVR:0:NEG:com.google.gson.stream.JsonReader@peekNumber():651:22094:0 |==> -1
+326:LVR:FALSE:TRUE:com.google.gson.stream.JsonReader@peekNumber():652:22175:false |==> true
+327:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@peekNumber():653:22207:true |==> false
+328:LVR:0:POS:com.google.gson.stream.JsonReader@peekNumber():656:22259:0 |==> 1
+329:LVR:0:NEG:com.google.gson.stream.JsonReader@peekNumber():656:22259:0 |==> -1
+330:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@peekNumber():660:22321:p + i |==> p % i
+331:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@peekNumber():660:22321:p + i |==> p * i
+332:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@peekNumber():660:22321:p + i |==> p - i
+333:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@peekNumber():660:22321:p + i |==> p / i
+334:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():660:22321:p + i == l |==> p + i <= l
+335:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():660:22321:p + i == l |==> p + i >= l
+336:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():660:22327:p + i == l |==> false
+337:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():661:22347:i == buffer.length |==> i <= buffer.length
+338:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():661:22347:i == buffer.length |==> i >= buffer.length
+339:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():661:22349:i == buffer.length |==> false
+340:LVR:POS:0:com.google.gson.stream.JsonReader@peekNumber():666:22611:1 |==> 0
+341:LVR:POS:NEG:com.google.gson.stream.JsonReader@peekNumber():666:22611:1 |==> -1
+342:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@peekNumber():666:22607:i + 1 |==> i % 1
+343:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@peekNumber():666:22607:i + 1 |==> i * 1
+344:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@peekNumber():666:22607:i + 1 |==> i - 1
+345:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@peekNumber():666:22607:i + 1 |==> i / 1
+346:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.gson.stream.JsonReader@peekNumber():666:22606:fillBuffer(i + 1) |==> false
+347:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.gson.stream.JsonReader@peekNumber():666:22606:fillBuffer(i + 1) |==> true
+348:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():669:22652:p = pos; |==> <NO-OP>
+349:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():670:22669:l = limit; |==> <NO-OP>
+350:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@peekNumber():673:22711:p + i |==> p % i
+351:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@peekNumber():673:22711:p + i |==> p * i
+352:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@peekNumber():673:22711:p + i |==> p - i
+353:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@peekNumber():673:22711:p + i |==> p / i
+354:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():676:22766:last == NUMBER_CHAR_NONE |==> last <= NUMBER_CHAR_NONE
+355:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():676:22766:last == NUMBER_CHAR_NONE |==> last >= NUMBER_CHAR_NONE
+356:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():676:22771:last == NUMBER_CHAR_NONE |==> false
+357:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@peekNumber():677:22815:true |==> false
+358:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():677:22804:negative = true; |==> <NO-OP>
+359:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():678:22831:last = NUMBER_CHAR_SIGN; |==> <NO-OP>
+360:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():680:22895:last == NUMBER_CHAR_EXP_E |==> last <= NUMBER_CHAR_EXP_E
+361:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():680:22895:last == NUMBER_CHAR_EXP_E |==> last >= NUMBER_CHAR_EXP_E
+362:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():680:22900:last == NUMBER_CHAR_EXP_E |==> false
+363:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():681:22934:last = NUMBER_CHAR_EXP_SIGN; |==> <NO-OP>
+364:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():687:23050:last == NUMBER_CHAR_EXP_E |==> last <= NUMBER_CHAR_EXP_E
+365:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():687:23050:last == NUMBER_CHAR_EXP_E |==> last >= NUMBER_CHAR_EXP_E
+366:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():687:23055:last == NUMBER_CHAR_EXP_E |==> false
+367:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():688:23089:last = NUMBER_CHAR_EXP_SIGN; |==> <NO-OP>
+368:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():695:23221:last == NUMBER_CHAR_DIGIT |==> last <= NUMBER_CHAR_DIGIT
+369:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():695:23221:last == NUMBER_CHAR_DIGIT |==> last >= NUMBER_CHAR_DIGIT
+370:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():695:23226:last == NUMBER_CHAR_DIGIT |==> false
+371:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():695:23250:last == NUMBER_CHAR_FRACTION_DIGIT |==> last <= NUMBER_CHAR_FRACTION_DIGIT
+372:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():695:23250:last == NUMBER_CHAR_FRACTION_DIGIT |==> last >= NUMBER_CHAR_FRACTION_DIGIT
+373:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():695:23255:last == NUMBER_CHAR_FRACTION_DIGIT |==> false
+374:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():695:23221:last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT |==> last == NUMBER_CHAR_DIGIT
+375:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():695:23250:last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT |==> last == NUMBER_CHAR_FRACTION_DIGIT
+376:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():695:23247:last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT |==> true
+377:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():696:23298:last = NUMBER_CHAR_EXP_E; |==> <NO-OP>
+378:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():702:23411:last == NUMBER_CHAR_DIGIT |==> last <= NUMBER_CHAR_DIGIT
+379:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():702:23411:last == NUMBER_CHAR_DIGIT |==> last >= NUMBER_CHAR_DIGIT
+380:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():702:23416:last == NUMBER_CHAR_DIGIT |==> false
+381:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():703:23450:last = NUMBER_CHAR_DECIMAL; |==> <NO-OP>
+382:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@peekNumber():709:23564:c < '0' |==> c != '0'
+383:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():709:23564:c < '0' |==> c <= '0'
+384:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():709:23566:c < '0' |==> false
+385:ROR:>(int,int):!=(int,int):com.google.gson.stream.JsonReader@peekNumber():709:23575:c > '9' |==> c != '9'
+386:ROR:>(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():709:23575:c > '9' |==> c >= '9'
+387:ROR:>(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():709:23577:c > '9' |==> false
+388:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():709:23564:c < '0' || c > '9' |==> c < '0'
+389:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():709:23575:c < '0' || c > '9' |==> c > '9'
+390:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():709:23572:c < '0' || c > '9' |==> true
+391:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.gson.stream.JsonReader@peekNumber():710:23610:isLiteral(c) |==> false
+392:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.gson.stream.JsonReader@peekNumber():710:23610:isLiteral(c) |==> true
+393:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():715:23719:last == NUMBER_CHAR_SIGN |==> last <= NUMBER_CHAR_SIGN
+394:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():715:23719:last == NUMBER_CHAR_SIGN |==> last >= NUMBER_CHAR_SIGN
+395:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():715:23724:last == NUMBER_CHAR_SIGN |==> false
+396:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():715:23747:last == NUMBER_CHAR_NONE |==> last <= NUMBER_CHAR_NONE
+397:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():715:23747:last == NUMBER_CHAR_NONE |==> last >= NUMBER_CHAR_NONE
+398:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():715:23752:last == NUMBER_CHAR_NONE |==> false
+399:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():715:23719:last == NUMBER_CHAR_SIGN || last == NUMBER_CHAR_NONE |==> last == NUMBER_CHAR_SIGN
+400:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():715:23747:last == NUMBER_CHAR_SIGN || last == NUMBER_CHAR_NONE |==> last == NUMBER_CHAR_NONE
+401:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():715:23744:last == NUMBER_CHAR_SIGN || last == NUMBER_CHAR_NONE |==> true
+402:ORU:-(int):+(int):com.google.gson.stream.JsonReader@peekNumber():716:23793:-(c - '0') |==> +(c - '0')
+403:ORU:-(int):~(int):com.google.gson.stream.JsonReader@peekNumber():716:23793:-(c - '0') |==> ~(c - '0')
+404:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@peekNumber():716:23795:c - '0' |==> c % '0'
+405:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@peekNumber():716:23795:c - '0' |==> c * '0'
+406:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@peekNumber():716:23795:c - '0' |==> c + '0'
+407:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@peekNumber():716:23795:c - '0' |==> c / '0'
+408:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():716:23785:value = -(c - '0'); |==> <NO-OP>
+409:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():717:23815:last = NUMBER_CHAR_DIGIT; |==> <NO-OP>
+410:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():718:23860:last == NUMBER_CHAR_DIGIT |==> last <= NUMBER_CHAR_DIGIT
+411:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():718:23860:last == NUMBER_CHAR_DIGIT |==> last >= NUMBER_CHAR_DIGIT
+412:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():718:23865:last == NUMBER_CHAR_DIGIT |==> false
+413:LVR:0:POS:com.google.gson.stream.JsonReader@peekNumber():719:23912:0 |==> 1
+414:LVR:0:NEG:com.google.gson.stream.JsonReader@peekNumber():719:23912:0 |==> -1
+415:ROR:==(long,long):<=(long,long):com.google.gson.stream.JsonReader@peekNumber():719:23903:value == 0 |==> value <= 0
+416:ROR:==(long,long):>=(long,long):com.google.gson.stream.JsonReader@peekNumber():719:23903:value == 0 |==> value >= 0
+417:ROR:==(long,long):FALSE(long,long):com.google.gson.stream.JsonReader@peekNumber():719:23909:value == 0 |==> false
+418:LVR:POS:0:com.google.gson.stream.JsonReader@peekNumber():722:24059:10 |==> 0
+419:LVR:POS:NEG:com.google.gson.stream.JsonReader@peekNumber():722:24059:10 |==> -10
+420:AOR:*(long,long):%(long,long):com.google.gson.stream.JsonReader@peekNumber():722:24051:value * 10 |==> value % 10
+421:AOR:*(long,long):+(long,long):com.google.gson.stream.JsonReader@peekNumber():722:24051:value * 10 |==> value + 10
+422:AOR:*(long,long):-(long,long):com.google.gson.stream.JsonReader@peekNumber():722:24051:value * 10 |==> value - 10
+423:AOR:*(long,long):/(long,long):com.google.gson.stream.JsonReader@peekNumber():722:24051:value * 10 |==> value / 10
+424:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@peekNumber():722:24065:c - '0' |==> c % '0'
+425:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@peekNumber():722:24065:c - '0' |==> c * '0'
+426:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@peekNumber():722:24065:c - '0' |==> c + '0'
+427:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@peekNumber():722:24065:c - '0' |==> c / '0'
+428:AOR:-(long,long):%(long,long):com.google.gson.stream.JsonReader@peekNumber():722:24051:value * 10 - (c - '0') |==> value * 10 % (c - '0')
+429:AOR:-(long,long):*(long,long):com.google.gson.stream.JsonReader@peekNumber():722:24051:value * 10 - (c - '0') |==> value * 10 * (c - '0')
+430:AOR:-(long,long):+(long,long):com.google.gson.stream.JsonReader@peekNumber():722:24051:value * 10 - (c - '0') |==> value * 10 + (c - '0')
+431:AOR:-(long,long):/(long,long):com.google.gson.stream.JsonReader@peekNumber():722:24051:value * 10 - (c - '0') |==> value * 10 / (c - '0')
+432:ROR:>(long,long):!=(long,long):com.google.gson.stream.JsonReader@peekNumber():723:24099:value > MIN_INCOMPLETE_INTEGER |==> value != MIN_INCOMPLETE_INTEGER
+433:ROR:>(long,long):>=(long,long):com.google.gson.stream.JsonReader@peekNumber():723:24099:value > MIN_INCOMPLETE_INTEGER |==> value >= MIN_INCOMPLETE_INTEGER
+434:ROR:>(long,long):FALSE(long,long):com.google.gson.stream.JsonReader@peekNumber():723:24105:value > MIN_INCOMPLETE_INTEGER |==> false
+435:ROR:==(long,long):<=(long,long):com.google.gson.stream.JsonReader@peekNumber():724:24148:value == MIN_INCOMPLETE_INTEGER |==> value <= MIN_INCOMPLETE_INTEGER
+436:ROR:==(long,long):>=(long,long):com.google.gson.stream.JsonReader@peekNumber():724:24148:value == MIN_INCOMPLETE_INTEGER |==> value >= MIN_INCOMPLETE_INTEGER
+437:ROR:==(long,long):FALSE(long,long):com.google.gson.stream.JsonReader@peekNumber():724:24154:value == MIN_INCOMPLETE_INTEGER |==> false
+438:ROR:<(long,long):!=(long,long):com.google.gson.stream.JsonReader@peekNumber():724:24183:newValue < value |==> newValue != value
+439:ROR:<(long,long):<=(long,long):com.google.gson.stream.JsonReader@peekNumber():724:24183:newValue < value |==> newValue <= value
+440:ROR:<(long,long):FALSE(long,long):com.google.gson.stream.JsonReader@peekNumber():724:24192:newValue < value |==> false
+441:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():724:24148:value == MIN_INCOMPLETE_INTEGER && newValue < value |==> value == MIN_INCOMPLETE_INTEGER == newValue < value
+442:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():724:24180:value == MIN_INCOMPLETE_INTEGER && newValue < value |==> false
+443:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():724:24148:value == MIN_INCOMPLETE_INTEGER && newValue < value |==> value == MIN_INCOMPLETE_INTEGER
+444:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():724:24183:value == MIN_INCOMPLETE_INTEGER && newValue < value |==> newValue < value
+445:COR:||(boolean,boolean):!=(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():723:24099:value > MIN_INCOMPLETE_INTEGER || (value == MIN_INCOMPLETE_INTEGER && newValue < value) |==> value > MIN_INCOMPLETE_INTEGER != (value == MIN_INCOMPLETE_INTEGER && newValue < value)
+446:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():723:24099:value > MIN_INCOMPLETE_INTEGER || (value == MIN_INCOMPLETE_INTEGER && newValue < value) |==> value > MIN_INCOMPLETE_INTEGER
+447:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():724:24147:value > MIN_INCOMPLETE_INTEGER || (value == MIN_INCOMPLETE_INTEGER && newValue < value) |==> (value == MIN_INCOMPLETE_INTEGER && newValue < value)
+448:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():724:24144:value > MIN_INCOMPLETE_INTEGER || (value == MIN_INCOMPLETE_INTEGER && newValue < value) |==> true
+449:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():723:24085:fitsInLong &= value > MIN_INCOMPLETE_INTEGER || (value == MIN_INCOMPLETE_INTEGER && newValue < value); |==> <NO-OP>
+450:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():725:24212:value = newValue; |==> <NO-OP>
+451:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():726:24249:last == NUMBER_CHAR_DECIMAL |==> last <= NUMBER_CHAR_DECIMAL
+452:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():726:24249:last == NUMBER_CHAR_DECIMAL |==> last >= NUMBER_CHAR_DECIMAL
+453:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():726:24254:last == NUMBER_CHAR_DECIMAL |==> false
+454:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():727:24290:last = NUMBER_CHAR_FRACTION_DIGIT; |==> <NO-OP>
+455:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():728:24344:last == NUMBER_CHAR_EXP_E |==> last <= NUMBER_CHAR_EXP_E
+456:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():728:24344:last == NUMBER_CHAR_EXP_E |==> last >= NUMBER_CHAR_EXP_E
+457:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():728:24349:last == NUMBER_CHAR_EXP_E |==> false
+458:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():728:24373:last == NUMBER_CHAR_EXP_SIGN |==> last <= NUMBER_CHAR_EXP_SIGN
+459:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():728:24373:last == NUMBER_CHAR_EXP_SIGN |==> last >= NUMBER_CHAR_EXP_SIGN
+460:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():728:24378:last == NUMBER_CHAR_EXP_SIGN |==> false
+461:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():728:24344:last == NUMBER_CHAR_EXP_E || last == NUMBER_CHAR_EXP_SIGN |==> last == NUMBER_CHAR_EXP_E
+462:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():728:24373:last == NUMBER_CHAR_EXP_E || last == NUMBER_CHAR_EXP_SIGN |==> last == NUMBER_CHAR_EXP_SIGN
+463:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():728:24370:last == NUMBER_CHAR_EXP_E || last == NUMBER_CHAR_EXP_SIGN |==> true
+464:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():729:24415:last = NUMBER_CHAR_EXP_DIGIT; |==> <NO-OP>
+465:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():735:24564:last == NUMBER_CHAR_DIGIT |==> last <= NUMBER_CHAR_DIGIT
+466:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():735:24564:last == NUMBER_CHAR_DIGIT |==> last >= NUMBER_CHAR_DIGIT
+467:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():735:24569:last == NUMBER_CHAR_DIGIT |==> false
+468:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24564:last == NUMBER_CHAR_DIGIT && fitsInLong |==> last == NUMBER_CHAR_DIGIT == fitsInLong
+469:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24590:last == NUMBER_CHAR_DIGIT && fitsInLong |==> false
+470:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24564:last == NUMBER_CHAR_DIGIT && fitsInLong |==> last == NUMBER_CHAR_DIGIT
+471:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24593:last == NUMBER_CHAR_DIGIT && fitsInLong |==> fitsInLong
+472:ROR:!=(long,long):<(long,long):com.google.gson.stream.JsonReader@peekNumber():735:24608:value != Long.MIN_VALUE |==> value < Long.MIN_VALUE
+473:ROR:!=(long,long):>(long,long):com.google.gson.stream.JsonReader@peekNumber():735:24608:value != Long.MIN_VALUE |==> value > Long.MIN_VALUE
+474:ROR:!=(long,long):TRUE(long,long):com.google.gson.stream.JsonReader@peekNumber():735:24614:value != Long.MIN_VALUE |==> true
+475:COR:||(boolean,boolean):!=(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24608:value != Long.MIN_VALUE || negative |==> value != Long.MIN_VALUE != negative
+476:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24608:value != Long.MIN_VALUE || negative |==> value != Long.MIN_VALUE
+477:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24635:value != Long.MIN_VALUE || negative |==> negative
+478:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24632:value != Long.MIN_VALUE || negative |==> true
+479:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24564:last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) |==> (last == NUMBER_CHAR_DIGIT && fitsInLong) == (value != Long.MIN_VALUE || negative)
+480:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24604:last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) |==> false
+481:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24564:last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) |==> last == NUMBER_CHAR_DIGIT && fitsInLong
+482:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():735:24607:last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) |==> (value != Long.MIN_VALUE || negative)
+483:COR:<IDENTIFIER(boolean)>:FALSE:com.google.gson.stream.JsonReader@peekNumber():736:24667:negative |==> false
+484:COR:<IDENTIFIER(boolean)>:TRUE:com.google.gson.stream.JsonReader@peekNumber():736:24667:negative |==> true
+485:ORU:-(long):+(long):com.google.gson.stream.JsonReader@peekNumber():736:24686:-value |==> +value
+486:ORU:-(long):~(long):com.google.gson.stream.JsonReader@peekNumber():736:24686:-value |==> ~value
+487:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():736:24654:peekedLong = negative ? value : -value; |==> <NO-OP>
+488:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():737:24700:pos += i; |==> <NO-OP>
+489:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():739:24760:last == NUMBER_CHAR_DIGIT |==> last <= NUMBER_CHAR_DIGIT
+490:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():739:24760:last == NUMBER_CHAR_DIGIT |==> last >= NUMBER_CHAR_DIGIT
+491:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():739:24765:last == NUMBER_CHAR_DIGIT |==> false
+492:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():739:24789:last == NUMBER_CHAR_FRACTION_DIGIT |==> last <= NUMBER_CHAR_FRACTION_DIGIT
+493:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():739:24789:last == NUMBER_CHAR_FRACTION_DIGIT |==> last >= NUMBER_CHAR_FRACTION_DIGIT
+494:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():739:24794:last == NUMBER_CHAR_FRACTION_DIGIT |==> false
+495:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():739:24760:last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT |==> last == NUMBER_CHAR_DIGIT
+496:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():739:24789:last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT |==> last == NUMBER_CHAR_FRACTION_DIGIT
+497:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():739:24786:last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT |==> true
+498:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@peekNumber():740:24835:last == NUMBER_CHAR_EXP_DIGIT |==> last <= NUMBER_CHAR_EXP_DIGIT
+499:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@peekNumber():740:24835:last == NUMBER_CHAR_EXP_DIGIT |==> last >= NUMBER_CHAR_EXP_DIGIT
+500:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@peekNumber():740:24840:last == NUMBER_CHAR_EXP_DIGIT |==> false
+501:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():739:24760:last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT || last == NUMBER_CHAR_EXP_DIGIT |==> last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT
+502:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():740:24835:last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT || last == NUMBER_CHAR_EXP_DIGIT |==> last == NUMBER_CHAR_EXP_DIGIT
+503:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@peekNumber():740:24832:last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT || last == NUMBER_CHAR_EXP_DIGIT |==> true
+504:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@peekNumber():741:24874:peekedNumberLength = i; |==> <NO-OP>
+505:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@isLiteral(char):755:25136:checkLenient(); |==> <NO-OP>
+506:LVR:FALSE:TRUE:com.google.gson.stream.JsonReader@isLiteral(char):767:25339:false |==> true
+507:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@isLiteral(char):769:25372:true |==> false
+508:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextName():782:25694:p == PEEKED_NONE |==> p <= PEEKED_NONE
+509:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextName():782:25694:p == PEEKED_NONE |==> p >= PEEKED_NONE
+510:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextName():782:25696:p == PEEKED_NONE |==> false
+511:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextName():783:25720:p = doPeek(); |==> <NO-OP>
+512:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextName():786:25767:p == PEEKED_UNQUOTED_NAME |==> p <= PEEKED_UNQUOTED_NAME
+513:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextName():786:25767:p == PEEKED_UNQUOTED_NAME |==> p >= PEEKED_UNQUOTED_NAME
+514:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextName():786:25769:p == PEEKED_UNQUOTED_NAME |==> false
+515:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextName():788:25847:p == PEEKED_SINGLE_QUOTED_NAME |==> p <= PEEKED_SINGLE_QUOTED_NAME
+516:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextName():788:25847:p == PEEKED_SINGLE_QUOTED_NAME |==> p >= PEEKED_SINGLE_QUOTED_NAME
+517:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextName():788:25849:p == PEEKED_SINGLE_QUOTED_NAME |==> false
+518:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextName():790:25934:p == PEEKED_DOUBLE_QUOTED_NAME |==> p <= PEEKED_DOUBLE_QUOTED_NAME
+519:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextName():790:25934:p == PEEKED_DOUBLE_QUOTED_NAME |==> p >= PEEKED_DOUBLE_QUOTED_NAME
+520:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextName():790:25936:p == PEEKED_DOUBLE_QUOTED_NAME |==> false
+521:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextName():796:26202:peeked = PEEKED_NONE; |==> <NO-OP>
+522:LVR:POS:0:com.google.gson.stream.JsonReader@nextName():797:26250:1 |==> 0
+523:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextName():797:26250:1 |==> -1
+524:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextName():797:26238:stackSize - 1 |==> stackSize % 1
+525:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextName():797:26238:stackSize - 1 |==> stackSize * 1
+526:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextName():797:26238:stackSize - 1 |==> stackSize + 1
+527:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextName():797:26238:stackSize - 1 |==> stackSize / 1
+528:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextName():797:26228:pathNames[stackSize - 1] = result; |==> <NO-OP>
+529:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextString():811:26682:p == PEEKED_NONE |==> p <= PEEKED_NONE
+530:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextString():811:26682:p == PEEKED_NONE |==> p >= PEEKED_NONE
+531:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextString():811:26684:p == PEEKED_NONE |==> false
+532:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextString():812:26708:p = doPeek(); |==> <NO-OP>
+533:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextString():815:26755:p == PEEKED_UNQUOTED |==> p <= PEEKED_UNQUOTED
+534:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextString():815:26755:p == PEEKED_UNQUOTED |==> p >= PEEKED_UNQUOTED
+535:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextString():815:26757:p == PEEKED_UNQUOTED |==> false
+536:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextString():817:26830:p == PEEKED_SINGLE_QUOTED |==> p <= PEEKED_SINGLE_QUOTED
+537:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextString():817:26830:p == PEEKED_SINGLE_QUOTED |==> p >= PEEKED_SINGLE_QUOTED
+538:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextString():817:26832:p == PEEKED_SINGLE_QUOTED |==> false
+539:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextString():819:26912:p == PEEKED_DOUBLE_QUOTED |==> p <= PEEKED_DOUBLE_QUOTED
+540:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextString():819:26912:p == PEEKED_DOUBLE_QUOTED |==> p >= PEEKED_DOUBLE_QUOTED
+541:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextString():819:26914:p == PEEKED_DOUBLE_QUOTED |==> false
+542:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextString():821:26993:p == PEEKED_BUFFERED |==> p <= PEEKED_BUFFERED
+543:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextString():821:26993:p == PEEKED_BUFFERED |==> p >= PEEKED_BUFFERED
+544:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextString():821:26995:p == PEEKED_BUFFERED |==> false
+545:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextString():823:27052:peekedString = null; |==> <NO-OP>
+546:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextString():824:27088:p == PEEKED_LONG |==> p <= PEEKED_LONG
+547:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextString():824:27088:p == PEEKED_LONG |==> p >= PEEKED_LONG
+548:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextString():824:27090:p == PEEKED_LONG |==> false
+549:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextString():826:27165:p == PEEKED_NUMBER |==> p <= PEEKED_NUMBER
+550:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextString():826:27165:p == PEEKED_NUMBER |==> p >= PEEKED_NUMBER
+551:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextString():826:27167:p == PEEKED_NUMBER |==> false
+552:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextString():828:27253:pos += peekedNumberLength; |==> <NO-OP>
+553:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextString():833:27479:peeked = PEEKED_NONE; |==> <NO-OP>
+554:LVR:POS:0:com.google.gson.stream.JsonReader@nextString():834:27529:1 |==> 0
+555:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextString():834:27529:1 |==> -1
+556:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextString():834:27517:stackSize - 1 |==> stackSize % 1
+557:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextString():834:27517:stackSize - 1 |==> stackSize * 1
+558:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextString():834:27517:stackSize - 1 |==> stackSize + 1
+559:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextString():834:27517:stackSize - 1 |==> stackSize / 1
+560:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextString():834:27505:pathIndices[stackSize - 1]++; |==> <NO-OP>
+561:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextBoolean():847:27882:p == PEEKED_NONE |==> p <= PEEKED_NONE
+562:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextBoolean():847:27882:p == PEEKED_NONE |==> p >= PEEKED_NONE
+563:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextBoolean():847:27884:p == PEEKED_NONE |==> false
+564:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextBoolean():848:27908:p = doPeek(); |==> <NO-OP>
+565:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextBoolean():850:27936:p == PEEKED_TRUE |==> p <= PEEKED_TRUE
+566:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextBoolean():850:27936:p == PEEKED_TRUE |==> p >= PEEKED_TRUE
+567:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextBoolean():850:27938:p == PEEKED_TRUE |==> false
+568:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextBoolean():851:27962:peeked = PEEKED_NONE; |==> <NO-OP>
+569:LVR:POS:0:com.google.gson.stream.JsonReader@nextBoolean():852:28014:1 |==> 0
+570:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextBoolean():852:28014:1 |==> -1
+571:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextBoolean():852:28002:stackSize - 1 |==> stackSize % 1
+572:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextBoolean():852:28002:stackSize - 1 |==> stackSize * 1
+573:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextBoolean():852:28002:stackSize - 1 |==> stackSize + 1
+574:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextBoolean():852:28002:stackSize - 1 |==> stackSize / 1
+575:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextBoolean():852:27990:pathIndices[stackSize - 1]++; |==> <NO-OP>
+576:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@nextBoolean():853:28033:true |==> false
+577:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextBoolean():854:28054:p == PEEKED_FALSE |==> p <= PEEKED_FALSE
+578:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextBoolean():854:28054:p == PEEKED_FALSE |==> p >= PEEKED_FALSE
+579:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextBoolean():854:28056:p == PEEKED_FALSE |==> false
+580:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextBoolean():855:28081:peeked = PEEKED_NONE; |==> <NO-OP>
+581:LVR:POS:0:com.google.gson.stream.JsonReader@nextBoolean():856:28133:1 |==> 0
+582:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextBoolean():856:28133:1 |==> -1
+583:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextBoolean():856:28121:stackSize - 1 |==> stackSize % 1
+584:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextBoolean():856:28121:stackSize - 1 |==> stackSize * 1
+585:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextBoolean():856:28121:stackSize - 1 |==> stackSize + 1
+586:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextBoolean():856:28121:stackSize - 1 |==> stackSize / 1
+587:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextBoolean():856:28109:pathIndices[stackSize - 1]++; |==> <NO-OP>
+588:LVR:FALSE:TRUE:com.google.gson.stream.JsonReader@nextBoolean():857:28152:false |==> true
+589:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextNull():872:28631:p == PEEKED_NONE |==> p <= PEEKED_NONE
+590:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextNull():872:28631:p == PEEKED_NONE |==> p >= PEEKED_NONE
+591:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextNull():872:28633:p == PEEKED_NONE |==> false
+592:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNull():873:28657:p = doPeek(); |==> <NO-OP>
+593:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextNull():875:28685:p == PEEKED_NULL |==> p <= PEEKED_NULL
+594:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextNull():875:28685:p == PEEKED_NULL |==> p >= PEEKED_NULL
+595:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextNull():875:28687:p == PEEKED_NULL |==> false
+596:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNull():876:28711:peeked = PEEKED_NONE; |==> <NO-OP>
+597:LVR:POS:0:com.google.gson.stream.JsonReader@nextNull():877:28763:1 |==> 0
+598:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextNull():877:28763:1 |==> -1
+599:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextNull():877:28751:stackSize - 1 |==> stackSize % 1
+600:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextNull():877:28751:stackSize - 1 |==> stackSize * 1
+601:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextNull():877:28751:stackSize - 1 |==> stackSize + 1
+602:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextNull():877:28751:stackSize - 1 |==> stackSize / 1
+603:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextNull():877:28739:pathIndices[stackSize - 1]++; |==> <NO-OP>
+604:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextDouble():895:29498:p == PEEKED_NONE |==> p <= PEEKED_NONE
+605:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextDouble():895:29498:p == PEEKED_NONE |==> p >= PEEKED_NONE
+606:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextDouble():895:29500:p == PEEKED_NONE |==> false
+607:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextDouble():896:29524:p = doPeek(); |==> <NO-OP>
+608:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextDouble():899:29553:p == PEEKED_LONG |==> p <= PEEKED_LONG
+609:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextDouble():899:29553:p == PEEKED_LONG |==> p >= PEEKED_LONG
+610:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextDouble():899:29555:p == PEEKED_LONG |==> false
+611:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextDouble():900:29579:peeked = PEEKED_NONE; |==> <NO-OP>
+612:LVR:POS:0:com.google.gson.stream.JsonReader@nextDouble():901:29631:1 |==> 0
+613:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextDouble():901:29631:1 |==> -1
+614:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextDouble():901:29619:stackSize - 1 |==> stackSize % 1
+615:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextDouble():901:29619:stackSize - 1 |==> stackSize * 1
+616:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextDouble():901:29619:stackSize - 1 |==> stackSize + 1
+617:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextDouble():901:29619:stackSize - 1 |==> stackSize / 1
+618:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextDouble():901:29607:pathIndices[stackSize - 1]++; |==> <NO-OP>
+619:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextDouble():905:29686:p == PEEKED_NUMBER |==> p <= PEEKED_NUMBER
+620:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextDouble():905:29686:p == PEEKED_NUMBER |==> p >= PEEKED_NUMBER
+621:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextDouble():905:29688:p == PEEKED_NUMBER |==> false
+622:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextDouble():906:29714:peekedString = new String(buffer, pos, peekedNumberLength); |==> <NO-OP>
+623:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextDouble():907:29780:pos += peekedNumberLength; |==> <NO-OP>
+624:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextDouble():908:29822:p == PEEKED_SINGLE_QUOTED |==> p <= PEEKED_SINGLE_QUOTED
+625:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextDouble():908:29822:p == PEEKED_SINGLE_QUOTED |==> p >= PEEKED_SINGLE_QUOTED
+626:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextDouble():908:29824:p == PEEKED_SINGLE_QUOTED |==> false
+627:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextDouble():908:29851:p == PEEKED_DOUBLE_QUOTED |==> p <= PEEKED_DOUBLE_QUOTED
+628:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextDouble():908:29851:p == PEEKED_DOUBLE_QUOTED |==> p >= PEEKED_DOUBLE_QUOTED
+629:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextDouble():908:29853:p == PEEKED_DOUBLE_QUOTED |==> false
+630:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@nextDouble():908:29822:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED |==> p == PEEKED_SINGLE_QUOTED
+631:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@nextDouble():908:29851:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED |==> p == PEEKED_DOUBLE_QUOTED
+632:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@nextDouble():908:29848:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED |==> true
+633:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextDouble():909:29917:p == PEEKED_SINGLE_QUOTED |==> p <= PEEKED_SINGLE_QUOTED
+634:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextDouble():909:29917:p == PEEKED_SINGLE_QUOTED |==> p >= PEEKED_SINGLE_QUOTED
+635:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextDouble():909:29919:p == PEEKED_SINGLE_QUOTED |==> false
+636:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextDouble():909:29886:peekedString = nextQuotedValue(p == PEEKED_SINGLE_QUOTED ? '\'' : '\"'); |==> <NO-OP>
+637:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextDouble():910:29973:p == PEEKED_UNQUOTED |==> p <= PEEKED_UNQUOTED
+638:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextDouble():910:29973:p == PEEKED_UNQUOTED |==> p >= PEEKED_UNQUOTED
+639:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextDouble():910:29975:p == PEEKED_UNQUOTED |==> false
+640:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextDouble():911:30003:peekedString = nextUnquotedValue(); |==> <NO-OP>
+641:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@nextDouble():912:30054:p != PEEKED_BUFFERED |==> p < PEEKED_BUFFERED
+642:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@nextDouble():912:30054:p != PEEKED_BUFFERED |==> p > PEEKED_BUFFERED
+643:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@nextDouble():912:30056:p != PEEKED_BUFFERED |==> true
+644:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextDouble():917:30265:peeked = PEEKED_BUFFERED; |==> <NO-OP>
+645:COR:||(boolean,boolean):!=(boolean,boolean):com.google.gson.stream.JsonReader@nextDouble():919:30409:Double.isNaN(result) || Double.isInfinite(result) |==> Double.isNaN(result) != Double.isInfinite(result)
+646:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@nextDouble():919:30409:Double.isNaN(result) || Double.isInfinite(result) |==> Double.isNaN(result)
+647:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@nextDouble():919:30433:Double.isNaN(result) || Double.isInfinite(result) |==> Double.isInfinite(result)
+648:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@nextDouble():919:30430:Double.isNaN(result) || Double.isInfinite(result) |==> true
+649:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@nextDouble():919:30396:!lenient && (Double.isNaN(result) || Double.isInfinite(result)) |==> !lenient == (Double.isNaN(result) || Double.isInfinite(result))
+650:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@nextDouble():919:30405:!lenient && (Double.isNaN(result) || Double.isInfinite(result)) |==> false
+651:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@nextDouble():919:30396:!lenient && (Double.isNaN(result) || Double.isInfinite(result)) |==> !lenient
+652:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@nextDouble():919:30408:!lenient && (Double.isNaN(result) || Double.isInfinite(result)) |==> (Double.isNaN(result) || Double.isInfinite(result))
+653:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextDouble():923:30657:peekedString = null; |==> <NO-OP>
+654:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextDouble():924:30682:peeked = PEEKED_NONE; |==> <NO-OP>
+655:LVR:POS:0:com.google.gson.stream.JsonReader@nextDouble():925:30732:1 |==> 0
+656:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextDouble():925:30732:1 |==> -1
+657:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextDouble():925:30720:stackSize - 1 |==> stackSize % 1
+658:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextDouble():925:30720:stackSize - 1 |==> stackSize * 1
+659:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextDouble():925:30720:stackSize - 1 |==> stackSize + 1
+660:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextDouble():925:30720:stackSize - 1 |==> stackSize / 1
+661:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextDouble():925:30708:pathIndices[stackSize - 1]++; |==> <NO-OP>
+662:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextLong():941:31375:p == PEEKED_NONE |==> p <= PEEKED_NONE
+663:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextLong():941:31375:p == PEEKED_NONE |==> p >= PEEKED_NONE
+664:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextLong():941:31377:p == PEEKED_NONE |==> false
+665:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():942:31401:p = doPeek(); |==> <NO-OP>
+666:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextLong():945:31430:p == PEEKED_LONG |==> p <= PEEKED_LONG
+667:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextLong():945:31430:p == PEEKED_LONG |==> p >= PEEKED_LONG
+668:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextLong():945:31432:p == PEEKED_LONG |==> false
+669:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():946:31456:peeked = PEEKED_NONE; |==> <NO-OP>
+670:LVR:POS:0:com.google.gson.stream.JsonReader@nextLong():947:31508:1 |==> 0
+671:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextLong():947:31508:1 |==> -1
+672:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextLong():947:31496:stackSize - 1 |==> stackSize % 1
+673:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextLong():947:31496:stackSize - 1 |==> stackSize * 1
+674:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextLong():947:31496:stackSize - 1 |==> stackSize + 1
+675:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextLong():947:31496:stackSize - 1 |==> stackSize / 1
+676:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():947:31484:pathIndices[stackSize - 1]++; |==> <NO-OP>
+677:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextLong():951:31554:p == PEEKED_NUMBER |==> p <= PEEKED_NUMBER
+678:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextLong():951:31554:p == PEEKED_NUMBER |==> p >= PEEKED_NUMBER
+679:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextLong():951:31556:p == PEEKED_NUMBER |==> false
+680:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():952:31582:peekedString = new String(buffer, pos, peekedNumberLength); |==> <NO-OP>
+681:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():953:31648:pos += peekedNumberLength; |==> <NO-OP>
+682:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextLong():954:31690:p == PEEKED_SINGLE_QUOTED |==> p <= PEEKED_SINGLE_QUOTED
+683:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextLong():954:31690:p == PEEKED_SINGLE_QUOTED |==> p >= PEEKED_SINGLE_QUOTED
+684:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextLong():954:31692:p == PEEKED_SINGLE_QUOTED |==> false
+685:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextLong():954:31719:p == PEEKED_DOUBLE_QUOTED |==> p <= PEEKED_DOUBLE_QUOTED
+686:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextLong():954:31719:p == PEEKED_DOUBLE_QUOTED |==> p >= PEEKED_DOUBLE_QUOTED
+687:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextLong():954:31721:p == PEEKED_DOUBLE_QUOTED |==> false
+688:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@nextLong():954:31690:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED |==> p == PEEKED_SINGLE_QUOTED
+689:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@nextLong():954:31719:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED |==> p == PEEKED_DOUBLE_QUOTED
+690:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@nextLong():954:31716:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED |==> true
+691:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextLong():954:31748:p == PEEKED_UNQUOTED |==> p <= PEEKED_UNQUOTED
+692:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextLong():954:31748:p == PEEKED_UNQUOTED |==> p >= PEEKED_UNQUOTED
+693:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextLong():954:31750:p == PEEKED_UNQUOTED |==> false
+694:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@nextLong():954:31690:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED || p == PEEKED_UNQUOTED |==> p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED
+695:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@nextLong():954:31748:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED || p == PEEKED_UNQUOTED |==> p == PEEKED_UNQUOTED
+696:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@nextLong():954:31745:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED || p == PEEKED_UNQUOTED |==> true
+697:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextLong():955:31782:p == PEEKED_UNQUOTED |==> p <= PEEKED_UNQUOTED
+698:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextLong():955:31782:p == PEEKED_UNQUOTED |==> p >= PEEKED_UNQUOTED
+699:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextLong():955:31784:p == PEEKED_UNQUOTED |==> false
+700:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():956:31814:peekedString = nextUnquotedValue(); |==> <NO-OP>
+701:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextLong():958:31904:p == PEEKED_SINGLE_QUOTED |==> p <= PEEKED_SINGLE_QUOTED
+702:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextLong():958:31904:p == PEEKED_SINGLE_QUOTED |==> p >= PEEKED_SINGLE_QUOTED
+703:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextLong():958:31906:p == PEEKED_SINGLE_QUOTED |==> false
+704:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():958:31873:peekedString = nextQuotedValue(p == PEEKED_SINGLE_QUOTED ? '\'' : '\"'); |==> <NO-OP>
+705:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():962:32025:peeked = PEEKED_NONE; |==> <NO-OP>
+706:LVR:POS:0:com.google.gson.stream.JsonReader@nextLong():963:32079:1 |==> 0
+707:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextLong():963:32079:1 |==> -1
+708:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextLong():963:32067:stackSize - 1 |==> stackSize % 1
+709:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextLong():963:32067:stackSize - 1 |==> stackSize * 1
+710:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextLong():963:32067:stackSize - 1 |==> stackSize + 1
+711:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextLong():963:32067:stackSize - 1 |==> stackSize / 1
+712:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():963:32055:pathIndices[stackSize - 1]++; |==> <NO-OP>
+713:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():973:32411:peeked = PEEKED_BUFFERED; |==> <NO-OP>
+714:ROR:!=(double,double):<(double,double):com.google.gson.stream.JsonReader@nextLong():976:32579:result != asDouble |==> result < asDouble
+715:ROR:!=(double,double):>(double,double):com.google.gson.stream.JsonReader@nextLong():976:32579:result != asDouble |==> result > asDouble
+716:ROR:!=(double,double):TRUE(double,double):com.google.gson.stream.JsonReader@nextLong():976:32586:result != asDouble |==> true
+717:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():980:32845:peekedString = null; |==> <NO-OP>
+718:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():981:32870:peeked = PEEKED_NONE; |==> <NO-OP>
+719:LVR:POS:0:com.google.gson.stream.JsonReader@nextLong():982:32920:1 |==> 0
+720:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextLong():982:32920:1 |==> -1
+721:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextLong():982:32908:stackSize - 1 |==> stackSize % 1
+722:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextLong():982:32908:stackSize - 1 |==> stackSize * 1
+723:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextLong():982:32908:stackSize - 1 |==> stackSize + 1
+724:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextLong():982:32908:stackSize - 1 |==> stackSize / 1
+725:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextLong():982:32896:pathIndices[stackSize - 1]++; |==> <NO-OP>
+726:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1005:33780:p < l |==> p != l
+727:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1005:33780:p < l |==> p <= l
+728:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1005:33782:p < l |==> false
+729:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1008:33831:c == quote |==> c <= quote
+730:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1008:33831:c == quote |==> c >= quote
+731:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1008:33833:c == quote |==> false
+732:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1009:33855:pos = p; |==> <NO-OP>
+733:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1010:33904:p - start |==> p % start
+734:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1010:33904:p - start |==> p * start
+735:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1010:33904:p - start |==> p + start
+736:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1010:33904:p - start |==> p / start
+737:LVR:POS:0:com.google.gson.stream.JsonReader@nextQuotedValue(char):1010:33916:1 |==> 0
+738:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextQuotedValue(char):1010:33916:1 |==> -1
+739:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1010:33904:p - start - 1 |==> (p - start) % 1
+740:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1010:33904:p - start - 1 |==> (p - start) * 1
+741:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1010:33904:p - start - 1 |==> p - start + 1
+742:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1010:33904:p - start - 1 |==> (p - start) / 1
+743:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1010:33874:builder.append(buffer, start, p - start - 1); |==> <NO-OP>
+744:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1012:33976:c == '\\' |==> c <= '\\'
+745:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1012:33976:c == '\\' |==> c >= '\\'
+746:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1012:33978:c == '\\' |==> false
+747:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1013:33999:pos = p; |==> <NO-OP>
+748:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1014:34048:p - start |==> p % start
+749:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1014:34048:p - start |==> p * start
+750:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1014:34048:p - start |==> p + start
+751:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1014:34048:p - start |==> p / start
+752:LVR:POS:0:com.google.gson.stream.JsonReader@nextQuotedValue(char):1014:34060:1 |==> 0
+753:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextQuotedValue(char):1014:34060:1 |==> -1
+754:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1014:34048:p - start - 1 |==> (p - start) % 1
+755:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1014:34048:p - start - 1 |==> (p - start) * 1
+756:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1014:34048:p - start - 1 |==> p - start + 1
+757:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1014:34048:p - start - 1 |==> (p - start) / 1
+758:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1014:34018:builder.append(buffer, start, p - start - 1); |==> <NO-OP>
+759:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1015:34074:builder.append(readEscapeCharacter()); |==> <NO-OP>
+760:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1016:34123:p = pos; |==> <NO-OP>
+761:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1017:34142:l = limit; |==> <NO-OP>
+762:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1018:34163:start = p; |==> <NO-OP>
+763:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1019:34193:c == '\n' |==> c <= '\n'
+764:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1019:34193:c == '\n' |==> c >= '\n'
+765:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1019:34195:c == '\n' |==> false
+766:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1020:34216:lineNumber++; |==> <NO-OP>
+767:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1021:34240:lineStart = p; |==> <NO-OP>
+768:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1025:34310:p - start |==> p % start
+769:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1025:34310:p - start |==> p * start
+770:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1025:34310:p - start |==> p + start
+771:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextQuotedValue(char):1025:34310:p - start |==> p / start
+772:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1025:34280:builder.append(buffer, start, p - start); |==> <NO-OP>
+773:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextQuotedValue(char):1026:34328:pos = p; |==> <NO-OP>
+774:LVR:POS:0:com.google.gson.stream.JsonReader@nextQuotedValue(char):1027:34359:1 |==> 0
+775:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextQuotedValue(char):1027:34359:1 |==> -1
+776:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.gson.stream.JsonReader@nextQuotedValue(char):1027:34358:fillBuffer(1) |==> false
+777:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.gson.stream.JsonReader@nextQuotedValue(char):1027:34358:fillBuffer(1) |==> true
+778:LVR:0:POS:com.google.gson.stream.JsonReader@nextUnquotedValue():1039:34629:0 |==> 1
+779:LVR:0:NEG:com.google.gson.stream.JsonReader@nextUnquotedValue():1039:34629:0 |==> -1
+780:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1043:34694:pos + i |==> pos % i
+781:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1043:34694:pos + i |==> pos * i
+782:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1043:34694:pos + i |==> pos - i
+783:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1043:34694:pos + i |==> pos / i
+784:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1043:34694:pos + i < limit |==> pos + i != limit
+785:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1043:34694:pos + i < limit |==> pos + i <= limit
+786:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1043:34702:pos + i < limit |==> false
+787:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1044:34741:pos + i |==> pos % i
+788:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1044:34741:pos + i |==> pos * i
+789:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1044:34741:pos + i |==> pos - i
+790:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1044:34741:pos + i |==> pos / i
+791:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@nextUnquotedValue():1050:34854:checkLenient(); |==> <NO-OP>
+792:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1067:35227:i < buffer.length |==> i != buffer.length
+793:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1067:35227:i < buffer.length |==> i <= buffer.length
+794:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1067:35229:i < buffer.length |==> false
+795:LVR:POS:0:com.google.gson.stream.JsonReader@nextUnquotedValue():1068:35275:1 |==> 0
+796:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextUnquotedValue():1068:35275:1 |==> -1
+797:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1068:35271:i + 1 |==> i % 1
+798:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1068:35271:i + 1 |==> i * 1
+799:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1068:35271:i + 1 |==> i - 1
+800:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@nextUnquotedValue():1068:35271:i + 1 |==> i / 1
+801:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.gson.stream.JsonReader@nextUnquotedValue():1068:35270:fillBuffer(i + 1) |==> false
+802:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.gson.stream.JsonReader@nextUnquotedValue():1068:35270:fillBuffer(i + 1) |==> true
+803:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonReader@nextUnquotedValue():1076:35462:builder == null |==> false
+804:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextUnquotedValue():1077:35481:builder = new StringBuilder(); |==> <NO-OP>
+805:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@nextUnquotedValue():1079:35526:builder.append(buffer, pos, i); |==> <NO-OP>
+806:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextUnquotedValue():1080:35564:pos += i; |==> <NO-OP>
+807:LVR:0:POS:com.google.gson.stream.JsonReader@nextUnquotedValue():1081:35584:0 |==> 1
+808:LVR:0:NEG:com.google.gson.stream.JsonReader@nextUnquotedValue():1081:35584:0 |==> -1
+809:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextUnquotedValue():1081:35580:i = 0; |==> <NO-OP>
+810:LVR:POS:0:com.google.gson.stream.JsonReader@nextUnquotedValue():1082:35609:1 |==> 0
+811:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextUnquotedValue():1082:35609:1 |==> -1
+812:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.gson.stream.JsonReader@nextUnquotedValue():1082:35608:fillBuffer(1) |==> false
+813:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.gson.stream.JsonReader@nextUnquotedValue():1082:35608:fillBuffer(1) |==> true
+814:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonReader@nextUnquotedValue():1088:35680:builder == null |==> false
+815:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@nextUnquotedValue():1091:35753:builder.append(buffer, pos, i); |==> <NO-OP>
+816:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextUnquotedValue():1094:35830:pos += i; |==> <NO-OP>
+817:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1105:36194:p < l |==> p != l
+818:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1105:36194:p < l |==> p <= l
+819:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1105:36196:p < l |==> false
+820:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1107:36244:c == quote |==> c <= quote
+821:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1107:36244:c == quote |==> c >= quote
+822:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1107:36246:c == quote |==> false
+823:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipQuotedValue(char):1108:36268:pos = p; |==> <NO-OP>
+824:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1110:36314:c == '\\' |==> c <= '\\'
+825:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1110:36314:c == '\\' |==> c >= '\\'
+826:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1110:36316:c == '\\' |==> false
+827:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipQuotedValue(char):1111:36337:pos = p; |==> <NO-OP>
+828:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@skipQuotedValue(char):1112:36356:readEscapeCharacter(); |==> <NO-OP>
+829:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipQuotedValue(char):1113:36389:p = pos; |==> <NO-OP>
+830:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipQuotedValue(char):1114:36408:l = limit; |==> <NO-OP>
+831:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1115:36438:c == '\n' |==> c <= '\n'
+832:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1115:36438:c == '\n' |==> c >= '\n'
+833:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipQuotedValue(char):1115:36440:c == '\n' |==> false
+834:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@skipQuotedValue(char):1116:36461:lineNumber++; |==> <NO-OP>
+835:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipQuotedValue(char):1117:36485:lineStart = p; |==> <NO-OP>
+836:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipQuotedValue(char):1120:36524:pos = p; |==> <NO-OP>
+837:LVR:POS:0:com.google.gson.stream.JsonReader@skipQuotedValue(char):1121:36557:1 |==> 0
+838:LVR:POS:NEG:com.google.gson.stream.JsonReader@skipQuotedValue(char):1121:36557:1 |==> -1
+839:LVR:0:POS:com.google.gson.stream.JsonReader@skipUnquotedValue():1127:36692:0 |==> 1
+840:LVR:0:NEG:com.google.gson.stream.JsonReader@skipUnquotedValue():1127:36692:0 |==> -1
+841:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@skipUnquotedValue():1128:36708:pos + i |==> pos % i
+842:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@skipUnquotedValue():1128:36708:pos + i |==> pos * i
+843:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@skipUnquotedValue():1128:36708:pos + i |==> pos - i
+844:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@skipUnquotedValue():1128:36708:pos + i |==> pos / i
+845:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@skipUnquotedValue():1128:36708:pos + i < limit |==> pos + i != limit
+846:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipUnquotedValue():1128:36708:pos + i < limit |==> pos + i <= limit
+847:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipUnquotedValue():1128:36716:pos + i < limit |==> false
+848:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@skipUnquotedValue():1129:36755:pos + i |==> pos % i
+849:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@skipUnquotedValue():1129:36755:pos + i |==> pos * i
+850:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@skipUnquotedValue():1129:36755:pos + i |==> pos - i
+851:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@skipUnquotedValue():1129:36755:pos + i |==> pos / i
+852:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@skipUnquotedValue():1135:36868:checkLenient(); |==> <NO-OP>
+853:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipUnquotedValue():1147:37112:pos += i; |==> <NO-OP>
+854:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipUnquotedValue():1151:37164:pos += i; |==> <NO-OP>
+855:LVR:POS:0:com.google.gson.stream.JsonReader@skipUnquotedValue():1152:37198:1 |==> 0
+856:LVR:POS:NEG:com.google.gson.stream.JsonReader@skipUnquotedValue():1152:37198:1 |==> -1
+857:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextInt():1167:37817:p == PEEKED_NONE |==> p <= PEEKED_NONE
+858:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextInt():1167:37817:p == PEEKED_NONE |==> p >= PEEKED_NONE
+859:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextInt():1167:37819:p == PEEKED_NONE |==> false
+860:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1168:37843:p = doPeek(); |==> <NO-OP>
+861:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextInt():1172:37888:p == PEEKED_LONG |==> p <= PEEKED_LONG
+862:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextInt():1172:37888:p == PEEKED_LONG |==> p >= PEEKED_LONG
+863:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextInt():1172:37890:p == PEEKED_LONG |==> false
+864:ROR:!=(long,long):<(long,long):com.google.gson.stream.JsonReader@nextInt():1174:37951:peekedLong != result |==> peekedLong < result
+865:ROR:!=(long,long):>(long,long):com.google.gson.stream.JsonReader@nextInt():1174:37951:peekedLong != result |==> peekedLong > result
+866:ROR:!=(long,long):TRUE(long,long):com.google.gson.stream.JsonReader@nextInt():1174:37962:peekedLong != result |==> true
+867:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1178:38224:peeked = PEEKED_NONE; |==> <NO-OP>
+868:LVR:POS:0:com.google.gson.stream.JsonReader@nextInt():1179:38276:1 |==> 0
+869:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextInt():1179:38276:1 |==> -1
+870:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextInt():1179:38264:stackSize - 1 |==> stackSize % 1
+871:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextInt():1179:38264:stackSize - 1 |==> stackSize * 1
+872:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextInt():1179:38264:stackSize - 1 |==> stackSize + 1
+873:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextInt():1179:38264:stackSize - 1 |==> stackSize / 1
+874:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1179:38252:pathIndices[stackSize - 1]++; |==> <NO-OP>
+875:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextInt():1183:38318:p == PEEKED_NUMBER |==> p <= PEEKED_NUMBER
+876:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextInt():1183:38318:p == PEEKED_NUMBER |==> p >= PEEKED_NUMBER
+877:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextInt():1183:38320:p == PEEKED_NUMBER |==> false
+878:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1184:38346:peekedString = new String(buffer, pos, peekedNumberLength); |==> <NO-OP>
+879:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1185:38412:pos += peekedNumberLength; |==> <NO-OP>
+880:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextInt():1186:38454:p == PEEKED_SINGLE_QUOTED |==> p <= PEEKED_SINGLE_QUOTED
+881:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextInt():1186:38454:p == PEEKED_SINGLE_QUOTED |==> p >= PEEKED_SINGLE_QUOTED
+882:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextInt():1186:38456:p == PEEKED_SINGLE_QUOTED |==> false
+883:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextInt():1186:38483:p == PEEKED_DOUBLE_QUOTED |==> p <= PEEKED_DOUBLE_QUOTED
+884:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextInt():1186:38483:p == PEEKED_DOUBLE_QUOTED |==> p >= PEEKED_DOUBLE_QUOTED
+885:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextInt():1186:38485:p == PEEKED_DOUBLE_QUOTED |==> false
+886:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@nextInt():1186:38454:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED |==> p == PEEKED_SINGLE_QUOTED
+887:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@nextInt():1186:38483:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED |==> p == PEEKED_DOUBLE_QUOTED
+888:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@nextInt():1186:38480:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED |==> true
+889:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextInt():1186:38512:p == PEEKED_UNQUOTED |==> p <= PEEKED_UNQUOTED
+890:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextInt():1186:38512:p == PEEKED_UNQUOTED |==> p >= PEEKED_UNQUOTED
+891:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextInt():1186:38514:p == PEEKED_UNQUOTED |==> false
+892:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@nextInt():1186:38454:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED || p == PEEKED_UNQUOTED |==> p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED
+893:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@nextInt():1186:38512:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED || p == PEEKED_UNQUOTED |==> p == PEEKED_UNQUOTED
+894:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@nextInt():1186:38509:p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED || p == PEEKED_UNQUOTED |==> true
+895:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextInt():1187:38546:p == PEEKED_UNQUOTED |==> p <= PEEKED_UNQUOTED
+896:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextInt():1187:38546:p == PEEKED_UNQUOTED |==> p >= PEEKED_UNQUOTED
+897:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextInt():1187:38548:p == PEEKED_UNQUOTED |==> false
+898:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1188:38578:peekedString = nextUnquotedValue(); |==> <NO-OP>
+899:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextInt():1190:38668:p == PEEKED_SINGLE_QUOTED |==> p <= PEEKED_SINGLE_QUOTED
+900:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextInt():1190:38668:p == PEEKED_SINGLE_QUOTED |==> p >= PEEKED_SINGLE_QUOTED
+901:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextInt():1190:38670:p == PEEKED_SINGLE_QUOTED |==> false
+902:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1190:38637:peekedString = nextQuotedValue(p == PEEKED_SINGLE_QUOTED ? '\'' : '\"'); |==> <NO-OP>
+903:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1194:38786:peeked = PEEKED_NONE; |==> <NO-OP>
+904:LVR:POS:0:com.google.gson.stream.JsonReader@nextInt():1195:38840:1 |==> 0
+905:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextInt():1195:38840:1 |==> -1
+906:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextInt():1195:38828:stackSize - 1 |==> stackSize % 1
+907:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextInt():1195:38828:stackSize - 1 |==> stackSize * 1
+908:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextInt():1195:38828:stackSize - 1 |==> stackSize + 1
+909:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextInt():1195:38828:stackSize - 1 |==> stackSize / 1
+910:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1195:38816:pathIndices[stackSize - 1]++; |==> <NO-OP>
+911:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1205:39172:peeked = PEEKED_BUFFERED; |==> <NO-OP>
+912:ROR:!=(double,double):<(double,double):com.google.gson.stream.JsonReader@nextInt():1208:39334:result != asDouble |==> result < asDouble
+913:ROR:!=(double,double):>(double,double):com.google.gson.stream.JsonReader@nextInt():1208:39334:result != asDouble |==> result > asDouble
+914:ROR:!=(double,double):TRUE(double,double):com.google.gson.stream.JsonReader@nextInt():1208:39341:result != asDouble |==> true
+915:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1212:39599:peekedString = null; |==> <NO-OP>
+916:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1213:39624:peeked = PEEKED_NONE; |==> <NO-OP>
+917:LVR:POS:0:com.google.gson.stream.JsonReader@nextInt():1214:39674:1 |==> 0
+918:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextInt():1214:39674:1 |==> -1
+919:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@nextInt():1214:39662:stackSize - 1 |==> stackSize % 1
+920:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@nextInt():1214:39662:stackSize - 1 |==> stackSize * 1
+921:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@nextInt():1214:39662:stackSize - 1 |==> stackSize + 1
+922:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@nextInt():1214:39662:stackSize - 1 |==> stackSize / 1
+923:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextInt():1214:39650:pathIndices[stackSize - 1]++; |==> <NO-OP>
+924:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@close():1222:39835:peeked = PEEKED_NONE; |==> <NO-OP>
+925:LVR:0:POS:com.google.gson.stream.JsonReader@close():1223:39867:0 |==> 1
+926:LVR:0:NEG:com.google.gson.stream.JsonReader@close():1223:39867:0 |==> -1
+927:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@close():1223:39861:stack[0] = JsonScope.CLOSED; |==> <NO-OP>
+928:LVR:POS:0:com.google.gson.stream.JsonReader@close():1224:39906:1 |==> 0
+929:LVR:POS:NEG:com.google.gson.stream.JsonReader@close():1224:39906:1 |==> -1
+930:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@close():1224:39894:stackSize = 1; |==> <NO-OP>
+931:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@close():1225:39913:in.close(); |==> <NO-OP>
+932:LVR:0:POS:com.google.gson.stream.JsonReader@skipValue():1234:40218:0 |==> 1
+933:LVR:0:NEG:com.google.gson.stream.JsonReader@skipValue():1234:40218:0 |==> -1
+934:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1237:40262:p == PEEKED_NONE |==> p <= PEEKED_NONE
+935:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1237:40262:p == PEEKED_NONE |==> p >= PEEKED_NONE
+936:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1237:40264:p == PEEKED_NONE |==> false
+937:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1238:40290:p = doPeek(); |==> <NO-OP>
+938:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1241:40323:p == PEEKED_BEGIN_ARRAY |==> p <= PEEKED_BEGIN_ARRAY
+939:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1241:40323:p == PEEKED_BEGIN_ARRAY |==> p >= PEEKED_BEGIN_ARRAY
+940:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1241:40325:p == PEEKED_BEGIN_ARRAY |==> false
+941:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1242:40358:push(JsonScope.EMPTY_ARRAY); |==> <NO-OP>
+942:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1243:40395:count++; |==> <NO-OP>
+943:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1244:40421:p == PEEKED_BEGIN_OBJECT |==> p <= PEEKED_BEGIN_OBJECT
+944:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1244:40421:p == PEEKED_BEGIN_OBJECT |==> p >= PEEKED_BEGIN_OBJECT
+945:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1244:40423:p == PEEKED_BEGIN_OBJECT |==> false
+946:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1245:40457:push(JsonScope.EMPTY_OBJECT); |==> <NO-OP>
+947:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1246:40495:count++; |==> <NO-OP>
+948:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1247:40521:p == PEEKED_END_ARRAY |==> p <= PEEKED_END_ARRAY
+949:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1247:40521:p == PEEKED_END_ARRAY |==> p >= PEEKED_END_ARRAY
+950:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1247:40523:p == PEEKED_END_ARRAY |==> false
+951:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1248:40554:stackSize--; |==> <NO-OP>
+952:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1249:40575:count--; |==> <NO-OP>
+953:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1250:40601:p == PEEKED_END_OBJECT |==> p <= PEEKED_END_OBJECT
+954:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1250:40601:p == PEEKED_END_OBJECT |==> p >= PEEKED_END_OBJECT
+955:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1250:40603:p == PEEKED_END_OBJECT |==> false
+956:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1251:40635:stackSize--; |==> <NO-OP>
+957:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1252:40656:count--; |==> <NO-OP>
+958:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1253:40682:p == PEEKED_UNQUOTED_NAME |==> p <= PEEKED_UNQUOTED_NAME
+959:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1253:40682:p == PEEKED_UNQUOTED_NAME |==> p >= PEEKED_UNQUOTED_NAME
+960:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1253:40684:p == PEEKED_UNQUOTED_NAME |==> false
+961:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1253:40711:p == PEEKED_UNQUOTED |==> p <= PEEKED_UNQUOTED
+962:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1253:40711:p == PEEKED_UNQUOTED |==> p >= PEEKED_UNQUOTED
+963:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1253:40713:p == PEEKED_UNQUOTED |==> false
+964:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@skipValue():1253:40682:p == PEEKED_UNQUOTED_NAME || p == PEEKED_UNQUOTED |==> p == PEEKED_UNQUOTED_NAME
+965:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@skipValue():1253:40711:p == PEEKED_UNQUOTED_NAME || p == PEEKED_UNQUOTED |==> p == PEEKED_UNQUOTED
+966:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@skipValue():1253:40708:p == PEEKED_UNQUOTED_NAME || p == PEEKED_UNQUOTED |==> true
+967:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1254:40743:skipUnquotedValue(); |==> <NO-OP>
+968:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1255:40781:p == PEEKED_SINGLE_QUOTED |==> p <= PEEKED_SINGLE_QUOTED
+969:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1255:40781:p == PEEKED_SINGLE_QUOTED |==> p >= PEEKED_SINGLE_QUOTED
+970:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1255:40783:p == PEEKED_SINGLE_QUOTED |==> false
+971:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1255:40810:p == PEEKED_SINGLE_QUOTED_NAME |==> p <= PEEKED_SINGLE_QUOTED_NAME
+972:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1255:40810:p == PEEKED_SINGLE_QUOTED_NAME |==> p >= PEEKED_SINGLE_QUOTED_NAME
+973:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1255:40812:p == PEEKED_SINGLE_QUOTED_NAME |==> false
+974:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@skipValue():1255:40781:p == PEEKED_SINGLE_QUOTED || p == PEEKED_SINGLE_QUOTED_NAME |==> p == PEEKED_SINGLE_QUOTED
+975:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@skipValue():1255:40810:p == PEEKED_SINGLE_QUOTED || p == PEEKED_SINGLE_QUOTED_NAME |==> p == PEEKED_SINGLE_QUOTED_NAME
+976:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@skipValue():1255:40807:p == PEEKED_SINGLE_QUOTED || p == PEEKED_SINGLE_QUOTED_NAME |==> true
+977:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1256:40852:skipQuotedValue('\''); |==> <NO-OP>
+978:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1257:40892:p == PEEKED_DOUBLE_QUOTED |==> p <= PEEKED_DOUBLE_QUOTED
+979:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1257:40892:p == PEEKED_DOUBLE_QUOTED |==> p >= PEEKED_DOUBLE_QUOTED
+980:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1257:40894:p == PEEKED_DOUBLE_QUOTED |==> false
+981:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1257:40921:p == PEEKED_DOUBLE_QUOTED_NAME |==> p <= PEEKED_DOUBLE_QUOTED_NAME
+982:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1257:40921:p == PEEKED_DOUBLE_QUOTED_NAME |==> p >= PEEKED_DOUBLE_QUOTED_NAME
+983:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1257:40923:p == PEEKED_DOUBLE_QUOTED_NAME |==> false
+984:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@skipValue():1257:40892:p == PEEKED_DOUBLE_QUOTED || p == PEEKED_DOUBLE_QUOTED_NAME |==> p == PEEKED_DOUBLE_QUOTED
+985:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@skipValue():1257:40921:p == PEEKED_DOUBLE_QUOTED || p == PEEKED_DOUBLE_QUOTED_NAME |==> p == PEEKED_DOUBLE_QUOTED_NAME
+986:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@skipValue():1257:40918:p == PEEKED_DOUBLE_QUOTED || p == PEEKED_DOUBLE_QUOTED_NAME |==> true
+987:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1258:40963:skipQuotedValue('\"'); |==> <NO-OP>
+988:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipValue():1259:41002:p == PEEKED_NUMBER |==> p <= PEEKED_NUMBER
+989:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipValue():1259:41002:p == PEEKED_NUMBER |==> p >= PEEKED_NUMBER
+990:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipValue():1259:41004:p == PEEKED_NUMBER |==> false
+991:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1260:41032:pos += peekedNumberLength; |==> <NO-OP>
+992:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1262:41073:peeked = PEEKED_NONE; |==> <NO-OP>
+993:LVR:0:POS:com.google.gson.stream.JsonReader@skipValue():1263:41117:0 |==> 1
+994:LVR:0:NEG:com.google.gson.stream.JsonReader@skipValue():1263:41117:0 |==> -1
+995:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@skipValue():1263:41108:count != 0 |==> count < 0
+996:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@skipValue():1263:41108:count != 0 |==> count > 0
+997:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@skipValue():1263:41114:count != 0 |==> true
+998:LVR:POS:0:com.google.gson.stream.JsonReader@skipValue():1265:41150:1 |==> 0
+999:LVR:POS:NEG:com.google.gson.stream.JsonReader@skipValue():1265:41150:1 |==> -1
+1000:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@skipValue():1265:41138:stackSize - 1 |==> stackSize % 1
+1001:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@skipValue():1265:41138:stackSize - 1 |==> stackSize * 1
+1002:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@skipValue():1265:41138:stackSize - 1 |==> stackSize + 1
+1003:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@skipValue():1265:41138:stackSize - 1 |==> stackSize / 1
+1004:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1265:41126:pathIndices[stackSize - 1]++; |==> <NO-OP>
+1005:LVR:POS:0:com.google.gson.stream.JsonReader@skipValue():1266:41182:1 |==> 0
+1006:LVR:POS:NEG:com.google.gson.stream.JsonReader@skipValue():1266:41182:1 |==> -1
+1007:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@skipValue():1266:41170:stackSize - 1 |==> stackSize % 1
+1008:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@skipValue():1266:41170:stackSize - 1 |==> stackSize * 1
+1009:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@skipValue():1266:41170:stackSize - 1 |==> stackSize + 1
+1010:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@skipValue():1266:41170:stackSize - 1 |==> stackSize / 1
+1011:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipValue():1266:41160:pathNames[stackSize - 1] = "null"; |==> <NO-OP>
+1012:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@push(int):1270:41242:stackSize == stack.length |==> stackSize <= stack.length
+1013:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@push(int):1270:41242:stackSize == stack.length |==> stackSize >= stack.length
+1014:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@push(int):1270:41252:stackSize == stack.length |==> false
+1015:LVR:POS:0:com.google.gson.stream.JsonReader@push(int):1271:41314:2 |==> 0
+1016:LVR:POS:NEG:com.google.gson.stream.JsonReader@push(int):1271:41314:2 |==> -2
+1017:AOR:*(int,int):%(int,int):com.google.gson.stream.JsonReader@push(int):1271:41302:stackSize * 2 |==> stackSize % 2
+1018:AOR:*(int,int):+(int,int):com.google.gson.stream.JsonReader@push(int):1271:41302:stackSize * 2 |==> stackSize + 2
+1019:AOR:*(int,int):-(int,int):com.google.gson.stream.JsonReader@push(int):1271:41302:stackSize * 2 |==> stackSize - 2
+1020:AOR:*(int,int):/(int,int):com.google.gson.stream.JsonReader@push(int):1271:41302:stackSize * 2 |==> stackSize / 2
+1021:LVR:POS:0:com.google.gson.stream.JsonReader@push(int):1272:41367:2 |==> 0
+1022:LVR:POS:NEG:com.google.gson.stream.JsonReader@push(int):1272:41367:2 |==> -2
+1023:AOR:*(int,int):%(int,int):com.google.gson.stream.JsonReader@push(int):1272:41355:stackSize * 2 |==> stackSize % 2
+1024:AOR:*(int,int):+(int,int):com.google.gson.stream.JsonReader@push(int):1272:41355:stackSize * 2 |==> stackSize + 2
+1025:AOR:*(int,int):-(int,int):com.google.gson.stream.JsonReader@push(int):1272:41355:stackSize * 2 |==> stackSize - 2
+1026:AOR:*(int,int):/(int,int):com.google.gson.stream.JsonReader@push(int):1272:41355:stackSize * 2 |==> stackSize / 2
+1027:LVR:POS:0:com.google.gson.stream.JsonReader@push(int):1273:41424:2 |==> 0
+1028:LVR:POS:NEG:com.google.gson.stream.JsonReader@push(int):1273:41424:2 |==> -2
+1029:AOR:*(int,int):%(int,int):com.google.gson.stream.JsonReader@push(int):1273:41412:stackSize * 2 |==> stackSize % 2
+1030:AOR:*(int,int):+(int,int):com.google.gson.stream.JsonReader@push(int):1273:41412:stackSize * 2 |==> stackSize + 2
+1031:AOR:*(int,int):-(int,int):com.google.gson.stream.JsonReader@push(int):1273:41412:stackSize * 2 |==> stackSize - 2
+1032:AOR:*(int,int):/(int,int):com.google.gson.stream.JsonReader@push(int):1273:41412:stackSize * 2 |==> stackSize / 2
+1033:LVR:0:POS:com.google.gson.stream.JsonReader@push(int):1274:41458:0 |==> 1
+1034:LVR:0:NEG:com.google.gson.stream.JsonReader@push(int):1274:41458:0 |==> -1
+1035:LVR:0:POS:com.google.gson.stream.JsonReader@push(int):1274:41471:0 |==> 1
+1036:LVR:0:NEG:com.google.gson.stream.JsonReader@push(int):1274:41471:0 |==> -1
+1037:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@push(int):1274:41434:System.arraycopy(stack, 0, newStack, 0, stackSize); |==> <NO-OP>
+1038:LVR:0:POS:com.google.gson.stream.JsonReader@push(int):1275:41522:0 |==> 1
+1039:LVR:0:NEG:com.google.gson.stream.JsonReader@push(int):1275:41522:0 |==> -1
+1040:LVR:0:POS:com.google.gson.stream.JsonReader@push(int):1275:41541:0 |==> 1
+1041:LVR:0:NEG:com.google.gson.stream.JsonReader@push(int):1275:41541:0 |==> -1
+1042:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@push(int):1275:41492:System.arraycopy(pathIndices, 0, newPathIndices, 0, stackSize); |==> <NO-OP>
+1043:LVR:0:POS:com.google.gson.stream.JsonReader@push(int):1276:41590:0 |==> 1
+1044:LVR:0:NEG:com.google.gson.stream.JsonReader@push(int):1276:41590:0 |==> -1
+1045:LVR:0:POS:com.google.gson.stream.JsonReader@push(int):1276:41607:0 |==> 1
+1046:LVR:0:NEG:com.google.gson.stream.JsonReader@push(int):1276:41607:0 |==> -1
+1047:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@push(int):1276:41562:System.arraycopy(pathNames, 0, newPathNames, 0, stackSize); |==> <NO-OP>
+1048:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@push(int):1277:41628:stack = newStack; |==> <NO-OP>
+1049:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@push(int):1278:41652:pathIndices = newPathIndices; |==> <NO-OP>
+1050:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@push(int):1279:41688:pathNames = newPathNames; |==> <NO-OP>
+1051:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@push(int):1281:41724:stack[stackSize++] = newTop; |==> <NO-OP>
+1052:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@fillBuffer(int):1291:42023:lineStart -= pos; |==> <NO-OP>
+1053:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1292:42049:limit != pos |==> limit < pos
+1054:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1292:42049:limit != pos |==> limit > pos
+1055:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1292:42055:limit != pos |==> true
+1056:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@fillBuffer(int):1293:42071:limit -= pos; |==> <NO-OP>
+1057:LVR:0:POS:com.google.gson.stream.JsonReader@fillBuffer(int):1294:42129:0 |==> 1
+1058:LVR:0:NEG:com.google.gson.stream.JsonReader@fillBuffer(int):1294:42129:0 |==> -1
+1059:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@fillBuffer(int):1294:42091:System.arraycopy(buffer, pos, buffer, 0, limit); |==> <NO-OP>
+1060:LVR:0:POS:com.google.gson.stream.JsonReader@fillBuffer(int):1296:42167:0 |==> 1
+1061:LVR:0:NEG:com.google.gson.stream.JsonReader@fillBuffer(int):1296:42167:0 |==> -1
+1062:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@fillBuffer(int):1296:42159:limit = 0; |==> <NO-OP>
+1063:LVR:0:POS:com.google.gson.stream.JsonReader@fillBuffer(int):1299:42187:0 |==> 1
+1064:LVR:0:NEG:com.google.gson.stream.JsonReader@fillBuffer(int):1299:42187:0 |==> -1
+1065:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@fillBuffer(int):1299:42181:pos = 0; |==> <NO-OP>
+1066:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1301:42248:buffer.length - limit |==> buffer.length % limit
+1067:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1301:42248:buffer.length - limit |==> buffer.length * limit
+1068:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1301:42248:buffer.length - limit |==> buffer.length + limit
+1069:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1301:42248:buffer.length - limit |==> buffer.length / limit
+1070:LVR:NEG:0:com.google.gson.stream.JsonReader@fillBuffer(int):1301:42275:-1 |==> 0
+1071:LVR:NEG:POS:com.google.gson.stream.JsonReader@fillBuffer(int):1301:42275:-1 |==> 1
+1072:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1301:42216:(total = in.read(buffer, limit, buffer.length - limit)) != -1 |==> (total = in.read(buffer, limit, buffer.length - limit)) < -1
+1073:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1301:42216:(total = in.read(buffer, limit, buffer.length - limit)) != -1 |==> (total = in.read(buffer, limit, buffer.length - limit)) > -1
+1074:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@fillBuffer(int):1302:42287:limit += total; |==> <NO-OP>
+1075:LVR:0:POS:com.google.gson.stream.JsonReader@fillBuffer(int):1305:42419:0 |==> 1
+1076:LVR:0:NEG:com.google.gson.stream.JsonReader@fillBuffer(int):1305:42419:0 |==> -1
+1077:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42405:lineNumber == 0 |==> lineNumber <= 0
+1078:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42405:lineNumber == 0 |==> lineNumber >= 0
+1079:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42416:lineNumber == 0 |==> false
+1080:LVR:0:POS:com.google.gson.stream.JsonReader@fillBuffer(int):1305:42437:0 |==> 1
+1081:LVR:0:NEG:com.google.gson.stream.JsonReader@fillBuffer(int):1305:42437:0 |==> -1
+1082:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42424:lineStart == 0 |==> lineStart <= 0
+1083:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42424:lineStart == 0 |==> lineStart >= 0
+1084:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42434:lineStart == 0 |==> false
+1085:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42405:lineNumber == 0 && lineStart == 0 |==> lineNumber == 0 == (lineStart == 0)
+1086:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42421:lineNumber == 0 && lineStart == 0 |==> false
+1087:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42405:lineNumber == 0 && lineStart == 0 |==> lineNumber == 0
+1088:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42424:lineNumber == 0 && lineStart == 0 |==> lineStart == 0
+1089:LVR:0:POS:com.google.gson.stream.JsonReader@fillBuffer(int):1305:42450:0 |==> 1
+1090:LVR:0:NEG:com.google.gson.stream.JsonReader@fillBuffer(int):1305:42450:0 |==> -1
+1091:ROR:>(int,int):!=(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42442:limit > 0 |==> limit != 0
+1092:ROR:>(int,int):>=(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42442:limit > 0 |==> limit >= 0
+1093:ROR:>(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42448:limit > 0 |==> false
+1094:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42405:lineNumber == 0 && lineStart == 0 && limit > 0 |==> (lineNumber == 0 && lineStart == 0) == limit > 0
+1095:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42439:lineNumber == 0 && lineStart == 0 && limit > 0 |==> false
+1096:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42405:lineNumber == 0 && lineStart == 0 && limit > 0 |==> lineNumber == 0 && lineStart == 0
+1097:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42442:lineNumber == 0 && lineStart == 0 && limit > 0 |==> limit > 0
+1098:LVR:0:POS:com.google.gson.stream.JsonReader@fillBuffer(int):1305:42462:0 |==> 1
+1099:LVR:0:NEG:com.google.gson.stream.JsonReader@fillBuffer(int):1305:42462:0 |==> -1
+1100:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42455:buffer[0] == '\ufeff' |==> buffer[0] <= '\ufeff'
+1101:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42455:buffer[0] == '\ufeff' |==> buffer[0] >= '\ufeff'
+1102:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42465:buffer[0] == '\ufeff' |==> false
+1103:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42405:lineNumber == 0 && lineStart == 0 && limit > 0 && buffer[0] == '\ufeff' |==> (lineNumber == 0 && lineStart == 0 && limit > 0) == (buffer[0] == '\ufeff')
+1104:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42452:lineNumber == 0 && lineStart == 0 && limit > 0 && buffer[0] == '\ufeff' |==> false
+1105:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42405:lineNumber == 0 && lineStart == 0 && limit > 0 && buffer[0] == '\ufeff' |==> lineNumber == 0 && lineStart == 0 && limit > 0
+1106:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@fillBuffer(int):1305:42455:lineNumber == 0 && lineStart == 0 && limit > 0 && buffer[0] == '\ufeff' |==> buffer[0] == '\ufeff'
+1107:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@fillBuffer(int):1306:42488:pos++; |==> <NO-OP>
+1108:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@fillBuffer(int):1307:42503:lineStart++; |==> <NO-OP>
+1109:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@fillBuffer(int):1308:42524:minimum++; |==> <NO-OP>
+1110:ROR:>=(int,int):==(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1311:42554:limit >= minimum |==> limit == minimum
+1111:ROR:>=(int,int):>(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1311:42554:limit >= minimum |==> limit > minimum
+1112:ROR:>=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@fillBuffer(int):1311:42560:limit >= minimum |==> true
+1113:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@fillBuffer(int):1312:42589:true |==> false
+1114:LVR:FALSE:TRUE:com.google.gson.stream.JsonReader@fillBuffer(int):1315:42620:false |==> true
+1115:LVR:POS:0:com.google.gson.stream.JsonReader@getLineNumber():1319:42680:1 |==> 0
+1116:LVR:POS:NEG:com.google.gson.stream.JsonReader@getLineNumber():1319:42680:1 |==> -1
+1117:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@getLineNumber():1319:42667:lineNumber + 1 |==> lineNumber % 1
+1118:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@getLineNumber():1319:42667:lineNumber + 1 |==> lineNumber * 1
+1119:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@getLineNumber():1319:42667:lineNumber + 1 |==> lineNumber - 1
+1120:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@getLineNumber():1319:42667:lineNumber + 1 |==> lineNumber / 1
+1121:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@getColumnNumber():1323:42725:pos - lineStart |==> pos % lineStart
+1122:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@getColumnNumber():1323:42725:pos - lineStart |==> pos * lineStart
+1123:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@getColumnNumber():1323:42725:pos - lineStart |==> pos + lineStart
+1124:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@getColumnNumber():1323:42725:pos - lineStart |==> pos / lineStart
+1125:LVR:POS:0:com.google.gson.stream.JsonReader@getColumnNumber():1323:42743:1 |==> 0
+1126:LVR:POS:NEG:com.google.gson.stream.JsonReader@getColumnNumber():1323:42743:1 |==> -1
+1127:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@getColumnNumber():1323:42725:pos - lineStart + 1 |==> (pos - lineStart) % 1
+1128:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@getColumnNumber():1323:42725:pos - lineStart + 1 |==> (pos - lineStart) * 1
+1129:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@getColumnNumber():1323:42725:pos - lineStart + 1 |==> pos - lineStart - 1
+1130:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@getColumnNumber():1323:42725:pos - lineStart + 1 |==> (pos - lineStart) / 1
+1131:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1345:43699:p == l |==> p <= l
+1132:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1345:43699:p == l |==> p >= l
+1133:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1345:43701:p == l |==> false
+1134:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1346:43717:pos = p; |==> <NO-OP>
+1135:LVR:POS:0:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1347:43750:1 |==> 0
+1136:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1347:43750:1 |==> -1
+1137:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1347:43749:fillBuffer(1) |==> false
+1138:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1347:43749:fillBuffer(1) |==> true
+1139:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1350:43791:p = pos; |==> <NO-OP>
+1140:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1351:43808:l = limit; |==> <NO-OP>
+1141:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1355:43865:c == '\n' |==> c <= '\n'
+1142:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1355:43865:c == '\n' |==> c >= '\n'
+1143:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1355:43867:c == '\n' |==> false
+1144:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1356:43886:lineNumber++; |==> <NO-OP>
+1145:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1357:43908:lineStart = p; |==> <NO-OP>
+1146:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43958:c == ' ' |==> c <= ' '
+1147:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43958:c == ' ' |==> c >= ' '
+1148:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43960:c == ' ' |==> false
+1149:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43970:c == '\r' |==> c <= '\r'
+1150:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43970:c == '\r' |==> c >= '\r'
+1151:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43972:c == '\r' |==> false
+1152:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43958:c == ' ' || c == '\r' |==> c == ' '
+1153:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43970:c == ' ' || c == '\r' |==> c == '\r'
+1154:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43967:c == ' ' || c == '\r' |==> true
+1155:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43983:c == '\t' |==> c <= '\t'
+1156:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43983:c == '\t' |==> c >= '\t'
+1157:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43985:c == '\t' |==> false
+1158:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43958:c == ' ' || c == '\r' || c == '\t' |==> c == ' ' || c == '\r'
+1159:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43983:c == ' ' || c == '\r' || c == '\t' |==> c == '\t'
+1160:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1359:43980:c == ' ' || c == '\r' || c == '\t' |==> true
+1161:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1363:44033:c == '/' |==> c <= '/'
+1162:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1363:44033:c == '/' |==> c >= '/'
+1163:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1363:44035:c == '/' |==> false
+1164:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1364:44053:pos = p; |==> <NO-OP>
+1165:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1365:44074:p == l |==> p <= l
+1166:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1365:44074:p == l |==> p >= l
+1167:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1365:44076:p == l |==> false
+1168:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1366:44094:pos--; |==> <NO-OP>
+1169:LVR:POS:0:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1367:44214:2 |==> 0
+1170:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1367:44214:2 |==> -2
+1171:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1368:44228:pos++; |==> <NO-OP>
+1172:COR:<IDENTIFIER(boolean)>:FALSE:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1369:44275:charsLoaded |==> false
+1173:COR:<IDENTIFIER(boolean)>:TRUE:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1369:44275:charsLoaded |==> true
+1174:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1374:44343:checkLenient(); |==> <NO-OP>
+1175:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1379:44486:pos++; |==> <NO-OP>
+1176:COR:<METHOD_INVOCATION(boolean)>:FALSE:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1380:44514:skipTo("*/") |==> false
+1177:COR:<METHOD_INVOCATION(boolean)>:TRUE:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1380:44514:skipTo("*/") |==> true
+1178:LVR:POS:0:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1383:44611:2 |==> 0
+1179:LVR:POS:NEG:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1383:44611:2 |==> -2
+1180:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1383:44605:pos + 2 |==> pos % 2
+1181:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1383:44605:pos + 2 |==> pos * 2
+1182:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1383:44605:pos + 2 |==> pos - 2
+1183:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1383:44605:pos + 2 |==> pos / 2
+1184:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1383:44601:p = pos + 2; |==> <NO-OP>
+1185:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1384:44624:l = limit; |==> <NO-OP>
+1186:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1389:44727:pos++; |==> <NO-OP>
+1187:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1390:44744:skipToEndOfLine(); |==> <NO-OP>
+1188:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1391:44773:p = pos; |==> <NO-OP>
+1189:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1392:44792:l = limit; |==> <NO-OP>
+1190:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1398:44888:c == '#' |==> c <= '#'
+1191:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1398:44888:c == '#' |==> c >= '#'
+1192:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1398:44890:c == '#' |==> false
+1193:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1399:44908:pos = p; |==> <NO-OP>
+1194:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1405:45130:checkLenient(); |==> <NO-OP>
+1195:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1406:45154:skipToEndOfLine(); |==> <NO-OP>
+1196:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1407:45181:p = pos; |==> <NO-OP>
+1197:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1408:45198:l = limit; |==> <NO-OP>
+1198:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1410:45232:pos = p; |==> <NO-OP>
+1199:COR:<IDENTIFIER(boolean)>:FALSE:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1414:45281:throwOnEof |==> false
+1200:COR:<IDENTIFIER(boolean)>:TRUE:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1414:45281:throwOnEof |==> true
+1201:LVR:NEG:0:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1418:45442:-1 |==> 0
+1202:LVR:NEG:POS:com.google.gson.stream.JsonReader@nextNonWhitespace(boolean):1418:45442:-1 |==> 1
+1203:COR:<IDENTIFIER(boolean)>:FALSE:com.google.gson.stream.JsonReader@checkLenient():1423:45517:lenient |==> false
+1204:COR:<IDENTIFIER(boolean)>:TRUE:com.google.gson.stream.JsonReader@checkLenient():1423:45517:lenient |==> true
+1205:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@skipToEndOfLine():1434:45870:pos < limit |==> pos != limit
+1206:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipToEndOfLine():1434:45870:pos < limit |==> pos <= limit
+1207:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipToEndOfLine():1434:45874:pos < limit |==> false
+1208:LVR:POS:0:com.google.gson.stream.JsonReader@skipToEndOfLine():1434:45896:1 |==> 0
+1209:LVR:POS:NEG:com.google.gson.stream.JsonReader@skipToEndOfLine():1434:45896:1 |==> -1
+1210:COR:||(boolean,boolean):!=(boolean,boolean):com.google.gson.stream.JsonReader@skipToEndOfLine():1434:45870:pos < limit || fillBuffer(1) |==> pos < limit != fillBuffer(1)
+1211:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@skipToEndOfLine():1434:45870:pos < limit || fillBuffer(1) |==> pos < limit
+1212:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@skipToEndOfLine():1434:45885:pos < limit || fillBuffer(1) |==> fillBuffer(1)
+1213:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@skipToEndOfLine():1434:45882:pos < limit || fillBuffer(1) |==> true
+1214:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipToEndOfLine():1436:45942:c == '\n' |==> c <= '\n'
+1215:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipToEndOfLine():1436:45942:c == '\n' |==> c >= '\n'
+1216:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipToEndOfLine():1436:45944:c == '\n' |==> false
+1217:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@skipToEndOfLine():1437:45963:lineNumber++; |==> <NO-OP>
+1218:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipToEndOfLine():1438:45985:lineStart = pos; |==> <NO-OP>
+1219:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipToEndOfLine():1440:46034:c == '\r' |==> c <= '\r'
+1220:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipToEndOfLine():1440:46034:c == '\r' |==> c >= '\r'
+1221:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipToEndOfLine():1440:46036:c == '\r' |==> false
+1222:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1451:46247:pos + toFind.length() |==> pos % toFind.length()
+1223:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1451:46247:pos + toFind.length() |==> pos * toFind.length()
+1224:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1451:46247:pos + toFind.length() |==> pos - toFind.length()
+1225:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1451:46247:pos + toFind.length() |==> pos / toFind.length()
+1226:ROR:<=(int,int):<(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1451:46247:pos + toFind.length() <= limit |==> pos + toFind.length() < limit
+1227:ROR:<=(int,int):==(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1451:46247:pos + toFind.length() <= limit |==> pos + toFind.length() == limit
+1228:ROR:<=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1451:46269:pos + toFind.length() <= limit |==> true
+1229:COR:||(boolean,boolean):!=(boolean,boolean):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1451:46247:pos + toFind.length() <= limit || fillBuffer(toFind.length()) |==> pos + toFind.length() <= limit != fillBuffer(toFind.length())
+1230:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1451:46247:pos + toFind.length() <= limit || fillBuffer(toFind.length()) |==> pos + toFind.length() <= limit
+1231:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1451:46281:pos + toFind.length() <= limit || fillBuffer(toFind.length()) |==> fillBuffer(toFind.length())
+1232:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1451:46278:pos + toFind.length() <= limit || fillBuffer(toFind.length()) |==> true
+1233:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1452:46329:buffer[pos] == '\n' |==> buffer[pos] <= '\n'
+1234:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1452:46329:buffer[pos] == '\n' |==> buffer[pos] >= '\n'
+1235:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1452:46341:buffer[pos] == '\n' |==> false
+1236:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@skipTo(java.lang.String):1453:46360:lineNumber++; |==> <NO-OP>
+1237:LVR:POS:0:com.google.gson.stream.JsonReader@skipTo(java.lang.String):1454:46400:1 |==> 0
+1238:LVR:POS:NEG:com.google.gson.stream.JsonReader@skipTo(java.lang.String):1454:46400:1 |==> -1
+1239:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1454:46394:pos + 1 |==> pos % 1
+1240:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1454:46394:pos + 1 |==> pos * 1
+1241:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1454:46394:pos + 1 |==> pos - 1
+1242:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1454:46394:pos + 1 |==> pos / 1
+1243:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@skipTo(java.lang.String):1454:46382:lineStart = pos + 1; |==> <NO-OP>
+1244:LVR:0:POS:com.google.gson.stream.JsonReader@skipTo(java.lang.String):1457:46448:0 |==> 1
+1245:LVR:0:NEG:com.google.gson.stream.JsonReader@skipTo(java.lang.String):1457:46448:0 |==> -1
+1246:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1457:46451:c < toFind.length() |==> c != toFind.length()
+1247:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1457:46451:c < toFind.length() |==> c <= toFind.length()
+1248:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1457:46453:c < toFind.length() |==> false
+1249:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1458:46498:pos + c |==> pos % c
+1250:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1458:46498:pos + c |==> pos * c
+1251:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1458:46498:pos + c |==> pos - c
+1252:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1458:46498:pos + c |==> pos / c
+1253:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1458:46491:buffer[pos + c] != toFind.charAt(c) |==> buffer[pos + c] < toFind.charAt(c)
+1254:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1458:46491:buffer[pos + c] != toFind.charAt(c) |==> buffer[pos + c] > toFind.charAt(c)
+1255:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@skipTo(java.lang.String):1458:46507:buffer[pos + c] != toFind.charAt(c) |==> true
+1256:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@skipTo(java.lang.String):1462:46587:true |==> false
+1257:LVR:FALSE:TRUE:com.google.gson.stream.JsonReader@skipTo(java.lang.String):1464:46610:false |==> true
+1258:LVR:0:POS:com.google.gson.stream.JsonReader@getPath():1478:47020:0 |==> 1
+1259:LVR:0:NEG:com.google.gson.stream.JsonReader@getPath():1478:47020:0 |==> -1
+1260:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@getPath():1478:47041:i < size |==> i != size
+1261:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@getPath():1478:47041:i < size |==> i <= size
+1262:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@getPath():1478:47043:i < size |==> false
+1263:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@getPath():1482:47169:result.append('[').append(pathIndices[i]).append(']'); |==> <NO-OP>
+1264:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@getPath():1488:47367:result.append('.'); |==> <NO-OP>
+1265:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonReader@getPath():1489:47414:pathNames[i] != null |==> true
+1266:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@getPath():1490:47437:result.append(pathNames[i]); |==> <NO-OP>
+1267:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1513:48095:pos == limit |==> pos <= limit
+1268:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1513:48095:pos == limit |==> pos >= limit
+1269:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1513:48099:pos == limit |==> false
+1270:LVR:POS:0:com.google.gson.stream.JsonReader@readEscapeCharacter():1513:48123:1 |==> 0
+1271:LVR:POS:NEG:com.google.gson.stream.JsonReader@readEscapeCharacter():1513:48123:1 |==> -1
+1272:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1513:48095:pos == limit && !fillBuffer(1) |==> pos == limit == !fillBuffer(1)
+1273:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1513:48108:pos == limit && !fillBuffer(1) |==> false
+1274:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1513:48095:pos == limit && !fillBuffer(1) |==> pos == limit
+1275:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1513:48111:pos == limit && !fillBuffer(1) |==> !fillBuffer(1)
+1276:LVR:POS:0:com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48280:4 |==> 0
+1277:LVR:POS:NEG:com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48280:4 |==> -4
+1278:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48274:pos + 4 |==> pos % 4
+1279:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48274:pos + 4 |==> pos * 4
+1280:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48274:pos + 4 |==> pos - 4
+1281:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48274:pos + 4 |==> pos / 4
+1282:ROR:>(int,int):!=(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48274:pos + 4 > limit |==> pos + 4 != limit
+1283:ROR:>(int,int):>=(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48274:pos + 4 > limit |==> pos + 4 >= limit
+1284:ROR:>(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48282:pos + 4 > limit |==> false
+1285:LVR:POS:0:com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48305:4 |==> 0
+1286:LVR:POS:NEG:com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48305:4 |==> -4
+1287:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48274:pos + 4 > limit && !fillBuffer(4) |==> pos + 4 > limit == !fillBuffer(4)
+1288:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48290:pos + 4 > limit && !fillBuffer(4) |==> false
+1289:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48274:pos + 4 > limit && !fillBuffer(4) |==> pos + 4 > limit
+1290:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1520:48293:pos + 4 > limit && !fillBuffer(4) |==> !fillBuffer(4)
+1291:LVR:0:POS:com.google.gson.stream.JsonReader@readEscapeCharacter():1524:48475:0 |==> 1
+1292:LVR:0:NEG:com.google.gson.stream.JsonReader@readEscapeCharacter():1524:48475:0 |==> -1
+1293:LVR:POS:0:com.google.gson.stream.JsonReader@readEscapeCharacter():1525:48512:4 |==> 0
+1294:LVR:POS:NEG:com.google.gson.stream.JsonReader@readEscapeCharacter():1525:48512:4 |==> -4
+1295:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1525:48508:i + 4 |==> i % 4
+1296:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1525:48508:i + 4 |==> i * 4
+1297:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1525:48508:i + 4 |==> i - 4
+1298:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1525:48508:i + 4 |==> i / 4
+1299:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1525:48515:i < end |==> i != end
+1300:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1525:48515:i < end |==> i <= end
+1301:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1525:48517:i < end |==> false
+1302:LVR:POS:0:com.google.gson.stream.JsonReader@readEscapeCharacter():1527:48578:4 |==> 0
+1303:LVR:POS:NEG:com.google.gson.stream.JsonReader@readEscapeCharacter():1527:48578:4 |==> -4
+1304:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@readEscapeCharacter():1527:48567:result <<= 4; |==> <NO-OP>
+1305:ROR:>=(int,int):==(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1528:48593:c >= '0' |==> c == '0'
+1306:ROR:>=(int,int):>(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1528:48593:c >= '0' |==> c > '0'
+1307:ROR:>=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1528:48595:c >= '0' |==> true
+1308:ROR:<=(int,int):<(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1528:48605:c <= '9' |==> c < '9'
+1309:ROR:<=(int,int):==(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1528:48605:c <= '9' |==> c == '9'
+1310:ROR:<=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1528:48607:c <= '9' |==> true
+1311:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1528:48602:c >= '0' && c <= '9' |==> false
+1312:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1528:48593:c >= '0' && c <= '9' |==> c >= '0'
+1313:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1528:48605:c >= '0' && c <= '9' |==> c <= '9'
+1314:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1529:48638:c - '0' |==> c % '0'
+1315:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1529:48638:c - '0' |==> c * '0'
+1316:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1529:48638:c - '0' |==> c + '0'
+1317:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1529:48638:c - '0' |==> c / '0'
+1318:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@readEscapeCharacter():1529:48627:result += (c - '0'); |==> <NO-OP>
+1319:ROR:>=(int,int):==(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1530:48667:c >= 'a' |==> c == 'a'
+1320:ROR:>=(int,int):>(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1530:48667:c >= 'a' |==> c > 'a'
+1321:ROR:>=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1530:48669:c >= 'a' |==> true
+1322:ROR:<=(int,int):<(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1530:48679:c <= 'f' |==> c < 'f'
+1323:ROR:<=(int,int):==(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1530:48679:c <= 'f' |==> c == 'f'
+1324:ROR:<=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1530:48681:c <= 'f' |==> true
+1325:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1530:48676:c >= 'a' && c <= 'f' |==> false
+1326:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1530:48667:c >= 'a' && c <= 'f' |==> c >= 'a'
+1327:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1530:48679:c >= 'a' && c <= 'f' |==> c <= 'f'
+1328:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1531:48712:c - 'a' |==> c % 'a'
+1329:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1531:48712:c - 'a' |==> c * 'a'
+1330:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1531:48712:c - 'a' |==> c + 'a'
+1331:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1531:48712:c - 'a' |==> c / 'a'
+1332:LVR:POS:0:com.google.gson.stream.JsonReader@readEscapeCharacter():1531:48722:10 |==> 0
+1333:LVR:POS:NEG:com.google.gson.stream.JsonReader@readEscapeCharacter():1531:48722:10 |==> -10
+1334:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1531:48712:c - 'a' + 10 |==> (c - 'a') % 10
+1335:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1531:48712:c - 'a' + 10 |==> (c - 'a') * 10
+1336:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1531:48712:c - 'a' + 10 |==> c - 'a' - 10
+1337:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1531:48712:c - 'a' + 10 |==> (c - 'a') / 10
+1338:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@readEscapeCharacter():1531:48701:result += (c - 'a' + 10); |==> <NO-OP>
+1339:ROR:>=(int,int):==(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1532:48746:c >= 'A' |==> c == 'A'
+1340:ROR:>=(int,int):>(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1532:48746:c >= 'A' |==> c > 'A'
+1341:ROR:>=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1532:48748:c >= 'A' |==> true
+1342:ROR:<=(int,int):<(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1532:48758:c <= 'F' |==> c < 'F'
+1343:ROR:<=(int,int):==(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1532:48758:c <= 'F' |==> c == 'F'
+1344:ROR:<=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1532:48760:c <= 'F' |==> true
+1345:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1532:48755:c >= 'A' && c <= 'F' |==> false
+1346:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1532:48746:c >= 'A' && c <= 'F' |==> c >= 'A'
+1347:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@readEscapeCharacter():1532:48758:c >= 'A' && c <= 'F' |==> c <= 'F'
+1348:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1533:48791:c - 'A' |==> c % 'A'
+1349:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1533:48791:c - 'A' |==> c * 'A'
+1350:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1533:48791:c - 'A' |==> c + 'A'
+1351:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1533:48791:c - 'A' |==> c / 'A'
+1352:LVR:POS:0:com.google.gson.stream.JsonReader@readEscapeCharacter():1533:48801:10 |==> 0
+1353:LVR:POS:NEG:com.google.gson.stream.JsonReader@readEscapeCharacter():1533:48801:10 |==> -10
+1354:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1533:48791:c - 'A' + 10 |==> (c - 'A') % 10
+1355:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1533:48791:c - 'A' + 10 |==> (c - 'A') * 10
+1356:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1533:48791:c - 'A' + 10 |==> c - 'A' - 10
+1357:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@readEscapeCharacter():1533:48791:c - 'A' + 10 |==> (c - 'A') / 10
+1358:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@readEscapeCharacter():1533:48780:result += (c - 'A' + 10); |==> <NO-OP>
+1359:LVR:POS:0:com.google.gson.stream.JsonReader@readEscapeCharacter():1535:48897:4 |==> 0
+1360:LVR:POS:NEG:com.google.gson.stream.JsonReader@readEscapeCharacter():1535:48897:4 |==> -4
+1361:LVR:POS:0:com.google.gson.stream.JsonReader@readEscapeCharacter():1538:48933:4 |==> 0
+1362:LVR:POS:NEG:com.google.gson.stream.JsonReader@readEscapeCharacter():1538:48933:4 |==> -4
+1363:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@readEscapeCharacter():1538:48926:pos += 4; |==> <NO-OP>
+1364:STD:<INC>:<NO-OP>:com.google.gson.stream.JsonReader@readEscapeCharacter():1557:49149:lineNumber++; |==> <NO-OP>
+1365:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@readEscapeCharacter():1558:49169:lineStart = pos; |==> <NO-OP>
+1366:LVR:TRUE:FALSE:com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1583:49837:true |==> false
+1367:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1583:49819:nextNonWhitespace(true); |==> <NO-OP>
+1368:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1584:49848:pos--; |==> <NO-OP>
+1369:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1586:49864:pos + NON_EXECUTE_PREFIX.length |==> pos % NON_EXECUTE_PREFIX.length
+1370:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1586:49864:pos + NON_EXECUTE_PREFIX.length |==> pos * NON_EXECUTE_PREFIX.length
+1371:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1586:49864:pos + NON_EXECUTE_PREFIX.length |==> pos - NON_EXECUTE_PREFIX.length
+1372:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1586:49864:pos + NON_EXECUTE_PREFIX.length |==> pos / NON_EXECUTE_PREFIX.length
+1373:ROR:>(int,int):!=(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1586:49864:pos + NON_EXECUTE_PREFIX.length > limit |==> pos + NON_EXECUTE_PREFIX.length != limit
+1374:ROR:>(int,int):>=(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1586:49864:pos + NON_EXECUTE_PREFIX.length > limit |==> pos + NON_EXECUTE_PREFIX.length >= limit
+1375:ROR:>(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1586:49896:pos + NON_EXECUTE_PREFIX.length > limit |==> false
+1376:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1586:49864:pos + NON_EXECUTE_PREFIX.length > limit && !fillBuffer(NON_EXECUTE_PREFIX.length) |==> pos + NON_EXECUTE_PREFIX.length > limit == !fillBuffer(NON_EXECUTE_PREFIX.length)
+1377:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1586:49904:pos + NON_EXECUTE_PREFIX.length > limit && !fillBuffer(NON_EXECUTE_PREFIX.length) |==> false
+1378:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1586:49864:pos + NON_EXECUTE_PREFIX.length > limit && !fillBuffer(NON_EXECUTE_PREFIX.length) |==> pos + NON_EXECUTE_PREFIX.length > limit
+1379:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1586:49907:pos + NON_EXECUTE_PREFIX.length > limit && !fillBuffer(NON_EXECUTE_PREFIX.length) |==> !fillBuffer(NON_EXECUTE_PREFIX.length)
+1380:LVR:0:POS:com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1590:49987:0 |==> 1
+1381:LVR:0:NEG:com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1590:49987:0 |==> -1
+1382:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1590:49990:i < NON_EXECUTE_PREFIX.length |==> i <= NON_EXECUTE_PREFIX.length
+1383:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1590:49992:i < NON_EXECUTE_PREFIX.length |==> false
+1384:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1591:50045:pos + i |==> pos % i
+1385:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1591:50045:pos + i |==> pos * i
+1386:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1591:50045:pos + i |==> pos - i
+1387:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1591:50045:pos + i |==> pos / i
+1388:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1591:50038:buffer[pos + i] != NON_EXECUTE_PREFIX[i] |==> buffer[pos + i] < NON_EXECUTE_PREFIX[i]
+1389:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1591:50038:buffer[pos + i] != NON_EXECUTE_PREFIX[i] |==> buffer[pos + i] > NON_EXECUTE_PREFIX[i]
+1390:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1591:50054:buffer[pos + i] != NON_EXECUTE_PREFIX[i] |==> true
+1391:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader@consumeNonExecutePrefix():1597:50179:pos += NON_EXECUTE_PREFIX.length; |==> <NO-OP>
+1392:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1604:50447:((JsonTreeReader)reader).promoteNameToValue(); |==> <NO-OP>
+1393:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1608:50565:p == PEEKED_NONE |==> p <= PEEKED_NONE
+1394:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1608:50565:p == PEEKED_NONE |==> p >= PEEKED_NONE
+1395:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1608:50567:p == PEEKED_NONE |==> false
+1396:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1609:50595:p = reader.doPeek(); |==> <NO-OP>
+1397:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1611:50638:p == PEEKED_DOUBLE_QUOTED_NAME |==> p <= PEEKED_DOUBLE_QUOTED_NAME
+1398:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1611:50638:p == PEEKED_DOUBLE_QUOTED_NAME |==> p >= PEEKED_DOUBLE_QUOTED_NAME
+1399:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1611:50640:p == PEEKED_DOUBLE_QUOTED_NAME |==> false
+1400:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1612:50682:reader.peeked = PEEKED_DOUBLE_QUOTED; |==> <NO-OP>
+1401:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1613:50739:p == PEEKED_SINGLE_QUOTED_NAME |==> p <= PEEKED_SINGLE_QUOTED_NAME
+1402:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1613:50739:p == PEEKED_SINGLE_QUOTED_NAME |==> p >= PEEKED_SINGLE_QUOTED_NAME
+1403:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1613:50741:p == PEEKED_SINGLE_QUOTED_NAME |==> false
+1404:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1614:50783:reader.peeked = PEEKED_SINGLE_QUOTED; |==> <NO-OP>
+1405:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1615:50840:p == PEEKED_UNQUOTED_NAME |==> p <= PEEKED_UNQUOTED_NAME
+1406:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1615:50840:p == PEEKED_UNQUOTED_NAME |==> p >= PEEKED_UNQUOTED_NAME
+1407:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1615:50842:p == PEEKED_UNQUOTED_NAME |==> false
+1408:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader$1@promoteNameToValue(com.google.gson.stream.JsonReader):1616:50879:reader.peeked = PEEKED_UNQUOTED; |==> <NO-OP>
+1409:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonReader:1601:50233:JsonReaderInternalAccess.INSTANCE = new JsonReaderInternalAccess(){...) |==> <NO-OP>

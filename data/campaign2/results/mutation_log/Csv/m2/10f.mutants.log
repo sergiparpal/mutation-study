@@ -1,0 +1,279 @@
+1:LVR:TRUE:FALSE:org.apache.commons.csv.CSVPrinter:43:1512:true |==> false
+2:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@<init>(java.lang.Appendable,org.apache.commons.csv.CSVFormat):62:2328:Assertions.notNull(out, "out"); |==> <NO-OP>
+3:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@<init>(java.lang.Appendable,org.apache.commons.csv.CSVFormat):63:2368:Assertions.notNull(format, "format"); |==> <NO-OP>
+4:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@<init>(java.lang.Appendable,org.apache.commons.csv.CSVFormat):67:2469:this.format.validate(); |==> <NO-OP>
+5:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.csv.CSVPrinter@<init>(java.lang.Appendable,org.apache.commons.csv.CSVFormat):70:2719:format.getHeader() != null |==> true
+6:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@<init>(java.lang.Appendable,org.apache.commons.csv.CSVFormat):71:2742:this.printRecord((Object[])format.getHeader()); |==> <NO-OP>
+7:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@close():81:3061:((Closeable)out).close(); |==> <NO-OP>
+8:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@flush():93:3332:((Flushable)out).flush(); |==> <NO-OP>
+9:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.csv.CSVPrinter@print(java.lang.Object):108:3785:value == null |==> false
+10:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.csv.CSVPrinter@print(java.lang.Object):110:3892:nullString == null |==> false
+11:LVR:0:POS:org.apache.commons.csv.CSVPrinter@print(java.lang.Object):114:4036:0 |==> 1
+12:LVR:0:NEG:org.apache.commons.csv.CSVPrinter@print(java.lang.Object):114:4036:0 |==> -1
+13:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@print(java.lang.Object):114:4008:this.print(value, strValue, 0, strValue.length()); |==> <NO-OP>
+14:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):119:4215:newRecord |==> false
+15:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):119:4215:newRecord |==> true
+16:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):120:4240:out.append(format.getDelimiter()); |==> <NO-OP>
+17:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):122:4313:format.isQuoting() |==> false
+18:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):122:4313:format.isQuoting() |==> true
+19:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):124:4400:printAndQuote(object, value, offset, len); |==> <NO-OP>
+20:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):125:4479:format.isEscaping() |==> false
+21:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):125:4479:format.isEscaping() |==> true
+22:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):126:4497:printAndEscape(value, offset, len); |==> <NO-OP>
+23:AOR:+(int,int):%(int,int):org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):128:4588:offset + len |==> offset % len
+24:AOR:+(int,int):*(int,int):org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):128:4588:offset + len |==> offset * len
+25:AOR:+(int,int):-(int,int):org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):128:4588:offset + len |==> offset - len
+26:AOR:+(int,int):/(int,int):org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):128:4588:offset + len |==> offset / len
+27:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):128:4562:out.append(value, offset, offset + len); |==> <NO-OP>
+28:LVR:FALSE:TRUE:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):130:4633:false |==> true
+29:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@print(java.lang.Object,java.lang.CharSequence,int,int):130:4621:newRecord = false; |==> <NO-OP>
+30:AOR:+(int,int):%(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):139:4937:offset + len |==> offset % len
+31:AOR:+(int,int):*(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):139:4937:offset + len |==> offset * len
+32:AOR:+(int,int):-(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):139:4937:offset + len |==> offset - len
+33:AOR:+(int,int):/(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):139:4937:offset + len |==> offset / len
+34:ROR:<(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):144:5078:pos < end |==> pos != end
+35:ROR:<(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):144:5078:pos < end |==> pos <= end
+36:ROR:<(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):144:5082:pos < end |==> false
+37:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5147:c == CR |==> c <= CR
+38:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5147:c == CR |==> c >= CR
+39:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5149:c == CR |==> false
+40:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5158:c == LF |==> c <= LF
+41:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5158:c == LF |==> c >= LF
+42:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5160:c == LF |==> false
+43:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5147:c == CR || c == LF |==> c == CR
+44:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5158:c == CR || c == LF |==> c == LF
+45:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5155:c == CR || c == LF |==> true
+46:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5169:c == delim |==> c <= delim
+47:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5169:c == delim |==> c >= delim
+48:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5171:c == delim |==> false
+49:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5147:c == CR || c == LF || c == delim |==> (c == CR || c == LF) != (c == delim)
+50:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5147:c == CR || c == LF || c == delim |==> c == CR || c == LF
+51:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5169:c == CR || c == LF || c == delim |==> c == delim
+52:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5166:c == CR || c == LF || c == delim |==> true
+53:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5183:c == escape |==> c <= escape
+54:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5183:c == escape |==> c >= escape
+55:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5185:c == escape |==> false
+56:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5147:c == CR || c == LF || c == delim || c == escape |==> (c == CR || c == LF || c == delim) != (c == escape)
+57:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5147:c == CR || c == LF || c == delim || c == escape |==> c == CR || c == LF || c == delim
+58:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5183:c == CR || c == LF || c == delim || c == escape |==> c == escape
+59:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):146:5180:c == CR || c == LF || c == delim || c == escape |==> true
+60:ROR:>(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):148:5274:pos > start |==> pos != start
+61:ROR:>(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):148:5274:pos > start |==> pos >= start
+62:ROR:>(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):148:5278:pos > start |==> false
+63:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):149:5309:out.append(value, start, pos); |==> <NO-OP>
+64:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):151:5378:c == LF |==> c <= LF
+65:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):151:5378:c == LF |==> c >= LF
+66:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):151:5380:c == LF |==> false
+67:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):152:5409:c = 'n'; |==> <NO-OP>
+68:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):153:5445:c == CR |==> c <= CR
+69:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):153:5445:c == CR |==> c >= CR
+70:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):153:5447:c == CR |==> false
+71:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):154:5476:c = 'r'; |==> <NO-OP>
+72:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):157:5520:out.append(escape); |==> <NO-OP>
+73:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):158:5556:out.append(c); |==> <NO-OP>
+74:LVR:POS:0:org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):160:5602:1 |==> 0
+75:LVR:POS:NEG:org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):160:5602:1 |==> -1
+76:AOR:+(int,int):%(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):160:5596:pos + 1 |==> pos % 1
+77:AOR:+(int,int):*(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):160:5596:pos + 1 |==> pos * 1
+78:AOR:+(int,int):-(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):160:5596:pos + 1 |==> pos - 1
+79:AOR:+(int,int):/(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):160:5596:pos + 1 |==> pos / 1
+80:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):160:5588:start = pos + 1; |==> <NO-OP>
+81:STD:<INC>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):163:5676:pos++; |==> <NO-OP>
+82:ROR:>(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):167:5736:pos > start |==> pos != start
+83:ROR:>(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):167:5736:pos > start |==> pos >= start
+84:ROR:>(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):167:5740:pos > start |==> false
+85:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndEscape(java.lang.CharSequence,int,int):168:5763:out.append(value, start, pos); |==> <NO-OP>
+86:LVR:FALSE:TRUE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):178:6139:false |==> true
+87:AOR:+(int,int):%(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):181:6224:offset + len |==> offset % len
+88:AOR:+(int,int):*(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):181:6224:offset + len |==> offset * len
+89:AOR:+(int,int):-(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):181:6224:offset + len |==> offset - len
+90:AOR:+(int,int):/(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):181:6224:offset + len |==> offset / len
+91:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):187:6437:quotePolicy == null |==> false
+92:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):188:6460:quotePolicy = Quote.MINIMAL; |==> <NO-OP>
+93:LVR:TRUE:FALSE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):192:6568:true |==> false
+94:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):192:6560:quote = true; |==> <NO-OP>
+95:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):195:6631:quote = !(object instanceof Number); |==> <NO-OP>
+96:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):199:6764:printAndEscape(value, offset, len); |==> <NO-OP>
+97:LVR:0:POS:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):202:6865:0 |==> 1
+98:LVR:0:NEG:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):202:6865:0 |==> -1
+99:ROR:<=(int,int):<(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):202:6858:len <= 0 |==> len < 0
+100:ROR:<=(int,int):==(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):202:6858:len <= 0 |==> len == 0
+101:ROR:<=(int,int):TRUE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):202:6862:len <= 0 |==> true
+102:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):207:7131:newRecord |==> false
+103:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):207:7131:newRecord |==> true
+104:LVR:TRUE:FALSE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):208:7172:true |==> false
+105:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):208:7164:quote = true; |==> <NO-OP>
+106:ROR:<(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7352:c < '0' |==> c != '0'
+107:ROR:<(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7352:c < '0' |==> c <= '0'
+108:ROR:<(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7354:c < '0' |==> false
+109:ROR:>(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7364:c > '9' |==> c != '9'
+110:ROR:>(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7364:c > '9' |==> c >= '9'
+111:ROR:>(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7366:c > '9' |==> false
+112:ROR:<(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7375:c < 'A' |==> c != 'A'
+113:ROR:<(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7375:c < 'A' |==> c <= 'A'
+114:ROR:<(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7377:c < 'A' |==> false
+115:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7372:c > '9' && c < 'A' |==> false
+116:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7364:c > '9' && c < 'A' |==> c > '9'
+117:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7375:c > '9' && c < 'A' |==> c < 'A'
+118:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7352:c < '0' || (c > '9' && c < 'A') |==> c < '0'
+119:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7363:c < '0' || (c > '9' && c < 'A') |==> (c > '9' && c < 'A')
+120:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7360:c < '0' || (c > '9' && c < 'A') |==> true
+121:ROR:>(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7388:c > 'Z' |==> c != 'Z'
+122:ROR:>(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7388:c > 'Z' |==> c >= 'Z'
+123:ROR:>(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7390:c > 'Z' |==> false
+124:ROR:<(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7399:c < 'a' |==> c != 'a'
+125:ROR:<(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7399:c < 'a' |==> c <= 'a'
+126:ROR:<(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7401:c < 'a' |==> false
+127:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7396:c > 'Z' && c < 'a' |==> false
+128:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7388:c > 'Z' && c < 'a' |==> c > 'Z'
+129:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7399:c > 'Z' && c < 'a' |==> c < 'a'
+130:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7352:c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') |==> c < '0' || (c > '9' && c < 'A')
+131:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7387:c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') |==> (c > 'Z' && c < 'a')
+132:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7384:c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') |==> true
+133:ROR:>(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7412:c > 'z' |==> c != 'z'
+134:ROR:>(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7412:c > 'z' |==> c >= 'z'
+135:ROR:>(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7414:c > 'z' |==> false
+136:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7352:c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') || (c > 'z') |==> c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a')
+137:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7411:c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') || (c > 'z') |==> (c > 'z')
+138:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7408:c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') || (c > 'z') |==> true
+139:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7338:newRecord && (c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') || (c > 'z')) |==> newRecord == (c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') || (c > 'z'))
+140:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7348:newRecord && (c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') || (c > 'z')) |==> false
+141:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7338:newRecord && (c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') || (c > 'z')) |==> newRecord
+142:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):214:7351:newRecord && (c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') || (c > 'z')) |==> (c < '0' || (c > '9' && c < 'A') || (c > 'Z' && c < 'a') || (c > 'z'))
+143:LVR:TRUE:FALSE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):215:7453:true |==> false
+144:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):215:7445:quote = true; |==> <NO-OP>
+145:ROR:<=(int,int):<(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):217:7558:c <= COMMENT |==> c < COMMENT
+146:ROR:<=(int,int):==(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):217:7558:c <= COMMENT |==> c == COMMENT
+147:ROR:<=(int,int):TRUE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):217:7560:c <= COMMENT |==> true
+148:LVR:TRUE:FALSE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):221:7870:true |==> false
+149:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):221:7862:quote = true; |==> <NO-OP>
+150:ROR:<(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):223:7928:pos < end |==> pos != end
+151:ROR:<(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):223:7928:pos < end |==> pos <= end
+152:ROR:<(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):223:7932:pos < end |==> false
+153:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):224:7965:c = value.charAt(pos); |==> <NO-OP>
+154:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8016:c == LF |==> c <= LF
+155:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8016:c == LF |==> c >= LF
+156:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8018:c == LF |==> false
+157:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8027:c == CR |==> c <= CR
+158:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8027:c == CR |==> c >= CR
+159:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8029:c == CR |==> false
+160:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8016:c == LF || c == CR |==> c == LF
+161:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8027:c == LF || c == CR |==> c == CR
+162:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8024:c == LF || c == CR |==> true
+163:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8038:c == quoteChar |==> c <= quoteChar
+164:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8038:c == quoteChar |==> c >= quoteChar
+165:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8040:c == quoteChar |==> false
+166:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8016:c == LF || c == CR || c == quoteChar |==> (c == LF || c == CR) != (c == quoteChar)
+167:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8016:c == LF || c == CR || c == quoteChar |==> c == LF || c == CR
+168:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8038:c == LF || c == CR || c == quoteChar |==> c == quoteChar
+169:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8035:c == LF || c == CR || c == quoteChar |==> true
+170:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8056:c == delimChar |==> c <= delimChar
+171:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8056:c == delimChar |==> c >= delimChar
+172:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8058:c == delimChar |==> false
+173:COR:||(boolean,boolean):!=(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8016:c == LF || c == CR || c == quoteChar || c == delimChar |==> (c == LF || c == CR || c == quoteChar) != (c == delimChar)
+174:COR:||(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8016:c == LF || c == CR || c == quoteChar || c == delimChar |==> c == LF || c == CR || c == quoteChar
+175:COR:||(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8056:c == LF || c == CR || c == quoteChar || c == delimChar |==> c == delimChar
+176:COR:||(boolean,boolean):TRUE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):225:8053:c == LF || c == CR || c == quoteChar || c == delimChar |==> true
+177:LVR:TRUE:FALSE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):226:8110:true |==> false
+178:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):226:8102:quote = true; |==> <NO-OP>
+179:STD:<INC>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):229:8201:pos++; |==> <NO-OP>
+180:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):232:8256:quote |==> false
+181:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):232:8256:quote |==> true
+182:LVR:POS:0:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):233:8301:1 |==> 0
+183:LVR:POS:NEG:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):233:8301:1 |==> -1
+184:AOR:-(int,int):%(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):233:8295:end - 1 |==> end % 1
+185:AOR:-(int,int):*(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):233:8295:end - 1 |==> end * 1
+186:AOR:-(int,int):+(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):233:8295:end - 1 |==> end + 1
+187:AOR:-(int,int):/(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):233:8295:end - 1 |==> end / 1
+188:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):233:8289:pos = end - 1; |==> <NO-OP>
+189:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):234:8328:c = value.charAt(pos); |==> <NO-OP>
+190:ROR:<=(int,int):<(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):238:8616:c <= SP |==> c < SP
+191:ROR:<=(int,int):==(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):238:8616:c <= SP |==> c == SP
+192:ROR:<=(int,int):TRUE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):238:8618:c <= SP |==> true
+193:LVR:TRUE:FALSE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):239:8663:true |==> false
+194:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):239:8655:quote = true; |==> <NO-OP>
+195:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):245:8767:quote |==> false
+196:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):245:8767:quote |==> true
+197:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):247:8866:out.append(value, start, end); |==> <NO-OP>
+198:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):255:9082:quote |==> false
+199:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):255:9082:quote |==> true
+200:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):257:9173:out.append(value, start, end); |==> <NO-OP>
+201:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):262:9297:out.append(quoteChar); |==> <NO-OP>
+202:ROR:<(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):266:9473:pos < end |==> pos != end
+203:ROR:<(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):266:9473:pos < end |==> pos <= end
+204:ROR:<(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):266:9477:pos < end |==> false
+205:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):268:9548:c == quoteChar |==> c <= quoteChar
+206:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):268:9548:c == quoteChar |==> c >= quoteChar
+207:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):268:9550:c == quoteChar |==> false
+208:LVR:POS:0:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):272:9747:1 |==> 0
+209:LVR:POS:NEG:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):272:9747:1 |==> -1
+210:AOR:+(int,int):%(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):272:9741:pos + 1 |==> pos % 1
+211:AOR:+(int,int):*(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):272:9741:pos + 1 |==> pos * 1
+212:AOR:+(int,int):-(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):272:9741:pos + 1 |==> pos - 1
+213:AOR:+(int,int):/(int,int):org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):272:9741:pos + 1 |==> pos / 1
+214:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):272:9716:out.append(value, start, pos + 1); |==> <NO-OP>
+215:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):275:9933:start = pos; |==> <NO-OP>
+216:STD:<INC>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):277:9972:pos++; |==> <NO-OP>
+217:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):281:10032:out.append(value, start, pos); |==> <NO-OP>
+218:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printAndQuote(java.lang.Object,java.lang.CharSequence,int,int):282:10071:out.append(quoteChar); |==> <NO-OP>
+219:COR:<METHOD_INVOCATION(boolean)>:FALSE:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):301:10773:format.isCommentingEnabled() |==> false
+220:COR:<METHOD_INVOCATION(boolean)>:TRUE:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):301:10773:format.isCommentingEnabled() |==> true
+221:COR:<IDENTIFIER(boolean)>:FALSE:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):304:10822:newRecord |==> false
+222:COR:<IDENTIFIER(boolean)>:TRUE:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):304:10822:newRecord |==> true
+223:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):305:10847:println(); |==> <NO-OP>
+224:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):307:10876:out.append(format.getCommentStart().charValue()); |==> <NO-OP>
+225:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):308:10934:out.append(SP); |==> <NO-OP>
+226:LVR:0:POS:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):309:10971:0 |==> 1
+227:LVR:0:NEG:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):309:10971:0 |==> -1
+228:ROR:<(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):309:10974:i < comment.length() |==> i != comment.length()
+229:ROR:<(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):309:10974:i < comment.length() |==> i <= comment.length()
+230:ROR:<(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):309:10976:i < comment.length() |==> false
+231:LVR:POS:0:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11119:1 |==> 0
+232:LVR:POS:NEG:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11119:1 |==> -1
+233:AOR:+(int,int):%(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11115:i + 1 |==> i % 1
+234:AOR:+(int,int):*(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11115:i + 1 |==> i * 1
+235:AOR:+(int,int):-(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11115:i + 1 |==> i - 1
+236:AOR:+(int,int):/(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11115:i + 1 |==> i / 1
+237:ROR:<(int,int):!=(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11115:i + 1 < comment.length() |==> i + 1 != comment.length()
+238:ROR:<(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11115:i + 1 < comment.length() |==> i + 1 <= comment.length()
+239:ROR:<(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11121:i + 1 < comment.length() |==> false
+240:LVR:POS:0:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11162:1 |==> 0
+241:LVR:POS:NEG:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11162:1 |==> -1
+242:AOR:+(int,int):%(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11158:i + 1 |==> i % 1
+243:AOR:+(int,int):*(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11158:i + 1 |==> i * 1
+244:AOR:+(int,int):-(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11158:i + 1 |==> i - 1
+245:AOR:+(int,int):/(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11158:i + 1 |==> i / 1
+246:ROR:==(int,int):<=(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11143:comment.charAt(i + 1) == LF |==> comment.charAt(i + 1) <= LF
+247:ROR:==(int,int):>=(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11143:comment.charAt(i + 1) == LF |==> comment.charAt(i + 1) >= LF
+248:ROR:==(int,int):FALSE(int,int):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11165:comment.charAt(i + 1) == LF |==> false
+249:COR:&&(boolean,boolean):==(boolean,boolean):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11115:i + 1 < comment.length() && comment.charAt(i + 1) == LF |==> i + 1 < comment.length() == (comment.charAt(i + 1) == LF)
+250:COR:&&(boolean,boolean):FALSE(boolean,boolean):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11140:i + 1 < comment.length() && comment.charAt(i + 1) == LF |==> false
+251:COR:&&(boolean,boolean):LHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11115:i + 1 < comment.length() && comment.charAt(i + 1) == LF |==> i + 1 < comment.length()
+252:COR:&&(boolean,boolean):RHS(boolean,boolean):org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):313:11143:i + 1 < comment.length() && comment.charAt(i + 1) == LF |==> comment.charAt(i + 1) == LF
+253:STD:<INC>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):314:11194:i++; |==> <NO-OP>
+254:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):318:11317:println(); |==> <NO-OP>
+255:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):319:11344:out.append(format.getCommentStart().charValue()); |==> <NO-OP>
+256:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):320:11410:out.append(SP); |==> <NO-OP>
+257:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):323:11486:out.append(c); |==> <NO-OP>
+258:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printComment(java.lang.String):327:11556:println(); |==> <NO-OP>
+259:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):org.apache.commons.csv.CSVPrinter@println():338:11846:recordSeparator != null |==> true
+260:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@println():339:11869:out.append(recordSeparator); |==> <NO-OP>
+261:LVR:TRUE:FALSE:org.apache.commons.csv.CSVPrinter@println():341:11928:true |==> false
+262:STD:<ASSIGN>:<NO-OP>:org.apache.commons.csv.CSVPrinter@println():341:11916:newRecord = true; |==> <NO-OP>
+263:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecord(java.lang.Iterable<?>):355:12371:print(value); |==> <NO-OP>
+264:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecord(java.lang.Iterable<?>):357:12403:println(); |==> <NO-OP>
+265:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecord(java.lang.Object[]):371:12849:print(value); |==> <NO-OP>
+266:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecord(java.lang.Object[]):373:12881:println(); |==> <NO-OP>
+267:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecords(java.lang.Iterable<?>):387:13287:this.printRecord((Object[])value); |==> <NO-OP>
+268:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecords(java.lang.Iterable<?>):389:13391:this.printRecord((Iterable<?>)value); |==> <NO-OP>
+269:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecords(java.lang.Iterable<?>):391:13467:this.printRecord(value); |==> <NO-OP>
+270:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecords(java.lang.Object[]):407:13903:this.printRecord((Object[])value); |==> <NO-OP>
+271:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecords(java.lang.Object[]):409:14007:this.printRecord((Iterable<?>)value); |==> <NO-OP>
+272:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecords(java.lang.Object[]):411:14083:this.printRecord(value); |==> <NO-OP>
+273:LVR:POS:0:org.apache.commons.csv.CSVPrinter@printRecords(java.sql.ResultSet):428:14652:1 |==> 0
+274:LVR:POS:NEG:org.apache.commons.csv.CSVPrinter@printRecords(java.sql.ResultSet):428:14652:1 |==> -1
+275:ROR:<=(int,int):<(int,int):org.apache.commons.csv.CSVPrinter@printRecords(java.sql.ResultSet):428:14655:i <= columnCount |==> i < columnCount
+276:ROR:<=(int,int):==(int,int):org.apache.commons.csv.CSVPrinter@printRecords(java.sql.ResultSet):428:14655:i <= columnCount |==> i == columnCount
+277:ROR:<=(int,int):TRUE(int,int):org.apache.commons.csv.CSVPrinter@printRecords(java.sql.ResultSet):428:14657:i <= columnCount |==> true
+278:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecords(java.sql.ResultSet):429:14696:print(resultSet.getString(i)); |==> <NO-OP>
+279:STD:<CALL>:<NO-OP>:org.apache.commons.csv.CSVPrinter@printRecords(java.sql.ResultSet):431:14753:println(); |==> <NO-OP>

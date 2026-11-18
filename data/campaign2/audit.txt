@@ -1,0 +1,266 @@
+m2: 40 transcripts
+  Cli-10    commands=15  denied=0  network=0 vcs=0 outside=0
+  Cli-12    commands=16  denied=2  network=0 vcs=1 outside=1
+      [outside] mkdir -p /tmp/scratch && cat > /tmp/scratch/Scratch.java <<'EOF' import org.apache.commons.cli.*; import java.util.*; public class Scratch { public st
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [vcs] ./_tools/test.sh && git status --short 2>/dev/null; find . -newer _tools/test.sh -name "*.java" -not -path "./target/*" 2>/dev/null
+          -> compiled OK JUnit version 3.8.1 .................... Time: 0.008 OK (20 tests) ./src/test/org/apache/commons/cli/GnuParserAgentTest.java
+  Cli-15    commands=10  denied=0  network=0 vcs=0 outside=0
+  Cli-17    commands=11  denied=0  network=0 vcs=0 outside=0
+  Cli-21    commands=22  denied=0  network=0 vcs=1 outside=0
+      [vcs] git status --porcelain 2>/dev/null || echo "not a git repo"; find src/test -name "*AgentTest.java"
+          -> not a git repo src/test/org/apache/commons/cli2/commandline/WriteableCommandLineImplAgentTest.java src/test/org/apache/commons/cli2/option/GroupImplAg
+  Cli-28    commands=10  denied=0  network=0 vcs=0 outside=0
+  Cli-32    commands=8   denied=0  network=0 vcs=0 outside=0
+  Cli-38    commands=7   denied=2  network=0 vcs=0 outside=0
+  Csv-10    commands=8   denied=0  network=0 vcs=0 outside=0
+  Csv-14    commands=5   denied=0  network=0 vcs=0 outside=0
+  Csv-15    commands=5   denied=0  network=0 vcs=0 outside=0
+  Csv-16    commands=14  denied=2  network=0 vcs=0 outside=0
+  Csv-3     commands=9   denied=0  network=0 vcs=0 outside=0
+  Csv-4     commands=9   denied=0  network=0 vcs=0 outside=0
+  Csv-5     commands=11  denied=0  network=0 vcs=0 outside=0
+  Csv-6     commands=5   denied=0  network=0 vcs=0 outside=0
+  Csv-7     commands=10  denied=0  network=0 vcs=0 outside=0
+  Csv-8     commands=6   denied=0  network=0 vcs=0 outside=0
+  Gson-10   commands=12  denied=0  network=0 vcs=0 outside=0
+  Gson-14   commands=9   denied=0  network=0 vcs=0 outside=0
+  Gson-15   commands=7   denied=0  network=0 vcs=0 outside=0
+  Gson-16   commands=10  denied=0  network=0 vcs=0 outside=0
+  Gson-3    commands=16  denied=2  network=0 vcs=0 outside=0
+  Gson-4    commands=5   denied=0  network=0 vcs=0 outside=0
+  Gson-5    commands=8   denied=0  network=0 vcs=0 outside=0
+  Gson-6    commands=10  denied=0  network=0 vcs=0 outside=0
+  Gson-7    commands=15  denied=2  network=0 vcs=0 outside=2
+      [outside] mkdir -p /tmp/jtmp && cd /tmp/jtmp && unzip -o /tmp/w-rQBXqARV/_tools/lib/01-junit-3.8.2.jar junit/framework/Assert.class >/dev/null && javap -p junit
+          -> public static void assertEquals(java.lang.String, java.lang.Object, java.lang.Object); public static void assertEquals(java.lang.Object, java.lang.Obj
+      [outside] cat > /tmp/Check.java << 'EOF' import com.google.gson.stream.JsonReader; import java.io.StringReader; public class Check { public static void main(Str
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+  Gson-8    commands=5   denied=0  network=0 vcs=0 outside=0
+  Lang-13   commands=9   denied=0  network=0 vcs=0 outside=0
+  Lang-21   commands=16  denied=6  network=0 vcs=1 outside=1
+      [outside] mkdir -p /tmp/probe && cat > /tmp/probe/Probe.java << 'EOF' import java.util.Calendar; import java.util.Date; import java.text.SimpleDateFormat; impor
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [vcs] git status 2>&1 || find . -newer _tools/test.sh -not -path "./target/*" -not -path "./.git/*" -type f
+          -> fatal: not a git repository (or any parent up to mount point /tmp) Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). ./.vscod
+  Lang-23   commands=13  denied=2  network=0 vcs=0 outside=0
+  Lang-34   commands=9   denied=0  network=0 vcs=0 outside=0
+  Lang-36   commands=7   denied=0  network=0 vcs=0 outside=0  knew: names the trigger test testIsNumber
+  Lang-43   commands=23  denied=12 network=0 vcs=0 outside=1
+      [outside] cat > /tmp/Check.java << 'EOF' import java.text.MessageFormat; import java.util.Locale; public class Check { public static void main(String[] a) { Mes
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+  Lang-52   commands=7   denied=0  network=0 vcs=0 outside=0
+  Lang-56   commands=6   denied=0  network=0 vcs=0 outside=0
+  Lang-62   commands=7   denied=0  network=0 vcs=0 outside=0
+  Lang-63   commands=11  denied=0  network=0 vcs=0 outside=0
+  Lang-65   commands=5   denied=0  network=0 vcs=0 outside=0
+  Lang-8    commands=11  denied=2  network=0 vcs=0 outside=2
+      [outside] cat > /tmp/ComputeDate.java << 'EOF' import java.util.*; import java.text.*; public class ComputeDate { public static void main(String[] a) throws Exc
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [outside] rm -f _tools/out/ComputeDate.java _tools/out/ComputeTz.java _tools/out/ComputeTzName.java /tmp/ComputeDate.java && ./_tools/test.sh 2>&1 | tail -20
+          -> compiled OK JUnit version 4.12 .......................... Time: 0.025 OK (26 tests)
+  runs with a flagged command: 6 of 40; refused tool calls: 32; runs showing knowledge of the bug: 1
+
+s2: 40 transcripts
+  Cli-10    commands=10  denied=1  network=0 vcs=0 outside=0 inspect=2
+      [inspect] ls api/org/apache/commons/cli && echo --- && jar tf lib/project.jar | grep -i cli
+          -> Parser.html package-summary.html package-tree.html --- /bin/bash: line 1: jar: command not found
+      [inspect] which python3 2>/dev/null; python3 -I -c " import re,html with open('api/org/apache/commons/cli/Parser.html') as f: data = f.read() text = re.sub(r'<[
+          -> /bin/bash: line 8: /usr/bin/python3: Permission denied
+  Cli-12    commands=6   denied=1  network=0 vcs=0 outside=0 inspect=2
+      [inspect] ls lib && echo --- && lynx -dump api/org/apache/commons/cli/GnuParser.html 2>/dev/null || python3 -c "print('no lynx')"
+          -> Exit code 126 junit-3.8.1.jar junit-3.8.2.jar junit-4.11.jar junit-4.12.jar junit-4.8.2.jar junit-addons-1.4.jar project.jar --- /bin/bash: line 1: /u
+      [inspect] find tests -type f; jar tf lib/project.jar | grep -i cli
+          -> /bin/bash: line 1: jar: command not found
+  Cli-15    commands=8   denied=1  network=0 vcs=0 outside=0 inspect=1
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/cli2/commandline/WriteableCommandLineImpl.html') as f: content = f.read() print(len(cont
+          -> Exit code 126 /bin/bash: line 7: /usr/bin/python3: Permission denied
+  Cli-17    commands=8   denied=0  network=0 vcs=0 outside=0 inspect=0
+  Cli-21    commands=9   denied=3  network=0 vcs=0 outside=0 inspect=2
+      [inspect] unzip -l lib/project.jar | head -30 && echo --- && unzip -p lib/project.jar META-INF/MANIFEST.MF 2>/dev/null
+          -> Exit code 126 /bin/bash: line 1: /usr/bin/unzip: Permission denied ---
+      [inspect] python3 -c " import re content = open('api/org/apache/commons/cli2/package-summary.html').read() for m in re.findall(r'<a href=\"([^\"]+\.html)\"[^>]*
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+  Cli-28    commands=5   denied=0  network=0 vcs=0 outside=0 inspect=0
+  Cli-32    commands=9   denied=0  network=0 vcs=0 outside=0 inspect=0
+  Cli-38    commands=9   denied=1  network=0 vcs=0 outside=0 inspect=4
+      [inspect] unzip -l lib/project.jar | grep -i cli | head -50
+          -> /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/project.jar | grep -i cli | head -80
+          -> /bin/bash: line 1: jar: command not found
+      [inspect] which java javac; ls /usr/lib/jvm; java -version 2>&1
+          -> Exit code 127 /usr/bin/javac java-1.11.0-openjdk-amd64 java-11-openjdk-amd64 openjdk-11 /bin/bash: line 1: java: command not found
+      [inspect] ls /usr/lib/jvm/java-11-openjdk-amd64/bin/ 2>&1; which javap 2>&1
+          -> Exit code 1 javac
+  Csv-10    commands=18  denied=2  network=0 vcs=0 outside=0 inspect=0
+  Csv-14    commands=8   denied=0  network=0 vcs=0 outside=0 inspect=1
+      [inspect] python3 -c " import html2text " 2>/dev/null; wc -l api/org/apache/commons/csv/CSVFormat.html
+          -> 2332 api/org/apache/commons/csv/CSVFormat.html
+  Csv-15    commands=7   denied=0  network=0 vcs=0 outside=0 inspect=1
+      [inspect] unzip -p lib/project.jar org/apache/commons/csv/CSVFormat.class > /tmp/w-bU22zSMW/.cc-writes/x 2>/dev/null; echo done; jar tf lib/project.jar 2>/dev/n
+          -> /bin/bash: line 1: /tmp/w-bU22zSMW/.cc-writes/x: No such file or directory done
+  Csv-16    commands=12  denied=2  network=0 vcs=0 outside=0 inspect=4
+      [inspect] ls lib/ && echo --- && ls tests/ 2>/dev/null && echo --- && python3 -c "print('ok')" 2>&1 | head -1
+          -> junit-3.8.1.jar junit-4.10.jar junit-4.11.jar junit-4.12-hamcrest-1.3.jar junit-4.12.jar project.jar --- --- /bin/bash: line 1: /usr/bin/python3: Perm
+      [inspect] unzip -l lib/project.jar | grep -i csv | head -50
+          -> /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/project.jar 2>&1 | grep -i csv
+          -> (Bash completed with no output)
+      [inspect] which jar; jar tf lib/project.jar 2>&1 | head -50
+          -> /bin/bash: line 1: jar: command not found
+  Csv-3     commands=29  denied=5  network=0 vcs=0 outside=0 inspect=5
+      [inspect] for j in lib/*.jar; do echo "== $j =="; unzip -l "$j" | grep -E 'org/junit/Test.class|junit/framework/TestCase.class' ; done
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [inspect] which jar; for j in lib/junit-3.8.1.jar lib/junit-4.12.jar; do echo "== $j =="; jar tf "$j" 2>/dev/null | grep -E 'org/junit/Test.class|junit/framewor
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [inspect] jar tf lib/junit-3.8.1.jar | grep -E 'org/junit/Test.class|junit/framework/TestCase.class'
+          -> /bin/bash: line 1: jar: command not found
+      [inspect] ls /usr/lib/jvm/java-11-openjdk-amd64/bin/ 2>&1; which java javac python3 2>&1
+          -> Exit code 1 javac /usr/bin/javac
+      [inspect] python3 -c " import re,html data = open('api/org/apache/commons/csv/Lexer.html', encoding='utf-8', errors='replace').read() # strip tags crudely for r
+          -> Exit code 126 /bin/bash: line 7: /usr/bin/python3: Permission denied
+  Csv-4     commands=10  denied=1  network=0 vcs=0 outside=0 inspect=3
+      [inspect] find tests -type f && echo --- && unzip -l lib/junit-3.8.1.jar | head -30
+          -> --- /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/junit-3.8.1.jar | grep -E 'Assert|TestCase' | head -20
+          -> /bin/bash: line 1: jar: command not found
+      [inspect] which javap java javac 2>&1; ls /usr/lib/jvm/java-11-openjdk-amd64/bin/ 2>&1
+          -> /usr/bin/javac javac
+  Csv-5     commands=13  denied=0  network=0 vcs=0 outside=0 inspect=0
+  Csv-6     commands=8   denied=5  network=0 vcs=0 outside=0 inspect=4
+      [inspect] python3 -c " import re with open('api/org/apache/commons/csv/CSVRecord.html') as f: html = f.read() text = re.sub(r'<[^>]+>', '', html) import html as
+          -> /bin/bash: line 10: /usr/bin/python3: Permission denied
+      [inspect] cd /tmp/w-8WfBTUZ2/lib && for j in junit-3.8.1.jar junit-4.12.jar junit-4.11.jar junit-4.10.jar junit-4.12-hamcrest-1.3.jar; do echo "== $j =="; unzip
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [inspect] cd /tmp/w-8WfBTUZ2/lib && JAR=$(ls /usr/lib/jvm/java-11-openjdk-amd64/bin/ 2>/dev/null); echo "$JAR"; which jar 2>&1
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [inspect] cd /tmp/w-8WfBTUZ2/lib && jar tf junit-3.8.1.jar | grep -i "junit/framework/TestCase"
+          -> /bin/bash: line 1: jar: command not found
+  Csv-7     commands=15  denied=3  network=0 vcs=0 outside=0 inspect=3
+      [inspect] unzip -l lib/project.jar | grep -i test | head -30; echo ---; unzip -l lib/project.jar | grep -i csv | head -30
+          -> /bin/bash: line 1: /usr/bin/unzip: Permission denied --- /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/project.jar | grep -i csv
+          -> /bin/bash: line 1: jar: command not found
+      [inspect] which java javac; ls /usr/lib/jvm/ 2>/dev/null; find / -maxdepth 4 -iname 'jar' -type f 2>/dev/null
+          -> /usr/bin/javac java-1.11.0-openjdk-amd64 java-11-openjdk-amd64 openjdk-11
+  Csv-8     commands=7   denied=1  network=0 vcs=0 outside=0 inspect=1
+      [inspect] python3 -I -c " import re,html with open('api/org/apache/commons/csv/CSVFormat.html') as f: content = f.read() text = re.sub(r'<[^>]+>', ' ', content)
+          -> /bin/bash: line 28: /usr/bin/python3: Permission denied
+  Gson-10   commands=7   denied=0  network=0 vcs=0 outside=0 inspect=0
+  Gson-14   commands=8   denied=2  network=0 vcs=0 outside=0 inspect=3
+      [inspect] unzip -l lib/project.jar | grep -i gson | head -50
+          -> /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/project.jar 2>/dev/null | grep -i '\$Gson\$Types' ; which jar; java -version 2>&1
+          -> Exit code 127 /bin/bash: line 1: java: command not found
+      [inspect] ls api/com/google/gson/internal/ && python3 -c "print('ok')" 2>&1 | head -1
+          -> $Gson$Types.html package-summary.html package-tree.html /bin/bash: line 1: /usr/bin/python3: Permission denied
+  Gson-15   commands=6   denied=1  network=0 vcs=0 outside=0 inspect=3
+      [inspect] ls lib/ && echo --- && lynx -dump api/com/google/gson/stream/JsonWriter.html 2>/dev/null | head -400 || python3 -c "print('no lynx')"
+          -> junit-3.8.2.jar junit-4.12-hamcrest-1.3.jar junit-4.12.jar project.jar ---
+      [inspect] find tests -maxdepth 5 && echo --- && unzip -l lib/junit-3.8.2.jar | head -30
+          -> tests --- /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/junit-3.8.2.jar | grep -i TestCase
+          -> /bin/bash: line 1: jar: command not found
+  Gson-16   commands=6   denied=0  network=0 vcs=0 outside=0 inspect=2
+      [inspect] python3 -c " import re,html data=open('api/com/google/gson/internal/\$Gson\$Types.html').read() text=re.sub('<[^>]+>',' ',data) text=html.unescape(tex
+          -> (Bash completed with no output)
+      [inspect] find /tmp/w-J6JZipE2/tests -type f 2>/dev/null; echo "---"; ls -la /tmp/w-J6JZipE2/tests 2>/dev/null; echo "---lib jar contents check for package---";
+          -> --- total 8 drwxr-xr-x 2 sergi sergi 4096 Dec 31 2019 . drwx------ 6 sergi sergi 4096 Nov 17 17:29 .. ---lib jar contents check for package---
+  Gson-3    commands=7   denied=1  network=0 vcs=0 outside=0 inspect=1
+      [inspect] python3 -c " import re with open('api/com/google/gson/internal/ConstructorConstructor.html') as f: html = f.read() text = re.sub('<[^>]+>', '', html) 
+          -> /bin/bash: line 12: /usr/bin/python3: Permission denied
+  Gson-4    commands=5   denied=0  network=0 vcs=0 outside=0 inspect=1
+      [inspect] unzip -l api/member-search-index.zip 2>/dev/null | head -5; echo "---"; python3 -I -c "print('ok')" 2>/dev/null || echo "no python3 direct"; which lyn
+          -> Exit code 1 --- no python3 direct
+  Gson-5    commands=5   denied=1  network=0 vcs=0 outside=0 inspect=1
+      [inspect] python3 -c " import re,html with open('api/com/google/gson/internal/bind/util/ISO8601Utils.html') as f: content = f.read() content = re.sub(r'<[^>]+>'
+          -> Exit code 126 /bin/bash: line 8: /usr/bin/python3: Permission denied
+  Gson-6    commands=10  denied=1  network=0 vcs=0 outside=0 inspect=3
+      [inspect] python3 -c " import html2text " 2>/dev/null; cat api/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.html | python3 -I -c " impo
+          -> Exit code 126 /bin/bash: line 13: /usr/bin/python3: Permission denied
+      [inspect] ls lib/ && echo --- && jar tf lib/*.jar 2>/dev/null | grep -i gson | grep -v '\$' | sort | head -80
+          -> junit-3.8.2.jar junit-4.12-hamcrest-1.3.jar junit-4.12.jar project.jar ---
+      [inspect] which jar; jar tf lib/project.jar | head -20
+          -> /bin/bash: line 1: jar: command not found
+  Gson-7    commands=6   denied=0  network=0 vcs=0 outside=0 inspect=0
+  Gson-8    commands=7   denied=0  network=0 vcs=0 outside=0 inspect=1
+      [inspect] unzip -p /tmp/w-uhTNZJjr/lib/junit-4.12.jar META-INF/MANIFEST.MF 2>/dev/null | head -20; echo ---; java -version 2>&1
+          -> Exit code 127 --- /bin/bash: line 1: java: command not found
+  Lang-13   commands=10  denied=0  network=0 vcs=0 outside=0 inspect=4
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/lang3/SerializationUtils.html') as f: content = f.read() text = re.sub('<[^>]+>', ' ', c
+          -> (Bash completed with no output)
+      [inspect] unzip -l lib/project.jar 2>/dev/null | grep -i serializ
+          -> (Bash completed with no output)
+      [inspect] jar tf lib/project.jar 2>/dev/null | grep -i serializ
+          -> (Bash completed with no output)
+      [inspect] which jar; jar tf lib/project.jar 2>&1 | head -20
+          -> /bin/bash: line 1: jar: command not found
+  Lang-21   commands=8   denied=2  network=0 vcs=0 outside=0 inspect=2
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/lang3/time/DateUtils.html') as f: content = f.read() print(len(content)) "
+          -> Exit code 126 /bin/bash: line 7: /usr/bin/python3: Permission denied
+      [inspect] find tests -type f; echo "---"; unzip -l lib/project.jar | grep -i DateUtils
+          -> --- /bin/bash: line 1: /usr/bin/unzip: Permission denied
+  Lang-23   commands=7   denied=0  network=0 vcs=0 outside=0 inspect=1
+      [inspect] python3 -c " import re,html data=open('api/org/apache/commons/lang3/text/ExtendedMessageFormat.html').read() text=re.sub(r'<[^>]+>', '', data) text=ht
+          -> (Bash completed with no output)
+  Lang-34   commands=9   denied=2  network=0 vcs=0 outside=1 inspect=4
+      [inspect] unzip -l lib/junit-4.12-hamcrest-1.3.jar | grep -i "org/junit/Test.class"
+          -> /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/junit-4.12-hamcrest-1.3.jar | grep -i "org/junit/Test.class"
+          -> /bin/bash: line 1: jar: command not found
+      [inspect] which java javac 2>&1; ls /usr/lib/jvm/*/bin/ 2>&1
+          -> /usr/bin/javac /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/: javac /usr/lib/jvm/java-11-openjdk-amd64/bin/: javac
+      [outside] python3 -I -c " import re,html with open('api/org/apache/commons/lang3/builder/ToStringStyle.html') as f: content = f.read() # strip tags text = re.su
+          -> Exit code 1 /bin/bash: line 14: /usr/bin/python3: Permission denied wc: /tmp/tss_plain.txt: No such file or directory
+      [inspect] python3 -I -c " import re,html with open('api/org/apache/commons/lang3/builder/ToStringStyle.html') as f: content = f.read() # strip tags text = re.su
+          -> Exit code 1 /bin/bash: line 14: /usr/bin/python3: Permission denied wc: /tmp/tss_plain.txt: No such file or directory
+  Lang-36   commands=12  denied=4  network=0 vcs=0 outside=2 inspect=6  knew: names the trigger test testIsNumber
+      [inspect] ls lib/ && ls tests/ -R 2>/dev/null; echo ---; unzip -l lib/junit*.jar | grep -i 'junit/Test\|junit/Assert\|junit/framework' | head -30
+          -> junit-4.12-hamcrest-1.3.jar junit-4.7.jar project.jar tests/: --- /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/junit-4.12-hamcrest-1.3.jar | grep -i 'junit/Test\.class\|junit/Assert\.class'
+          -> /bin/bash: line 1: jar: command not found
+      [inspect] which javac java; ls /usr/lib/jvm/java-11-openjdk-amd64/bin/ 2>/dev/null
+          -> /usr/bin/javac javac
+      [inspect] ls /usr/bin/java* 2>&1; echo ---; python3 -c " import zipfile z = zipfile.ZipFile('/tmp/w-gzeo3yo4/lib/junit-4.12-hamcrest-1.3.jar') names = [n for n 
+          -> /usr/bin/java /usr/bin/javac /usr/bin/javadoc /usr/bin/javap --- /bin/bash: line 6: /usr/bin/python3: Permission denied
+      [outside] java -version 2>&1; echo ---; cat > /tmp/ListJar.java <<'EOF' import java.util.zip.*; import java.io.*; import java.util.*; public class ListJar { pub
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [inspect] java -version 2>&1; echo ---; cat > /tmp/ListJar.java <<'EOF' import java.util.zip.*; import java.io.*; import java.util.*; public class ListJar { pub
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [inspect] javac -d /tmp ListJar.java && java -cp /tmp ListJar lib/junit-4.12-hamcrest-1.3.jar
+          -> Exit code 127 /bin/bash: line 1: java: command not found
+      [outside] rm -f ListJar.java /tmp/ListJar.java /tmp/ListJar.class && ls lib/
+          -> junit-4.12-hamcrest-1.3.jar junit-4.7.jar project.jar
+  Lang-43   commands=6   denied=0  network=0 vcs=0 outside=0 inspect=0
+  Lang-52   commands=7   denied=2  network=0 vcs=0 outside=0 inspect=4
+      [inspect] python3 -c " import re,html data = open('api/org/apache/commons/lang/StringEscapeUtils.html', encoding='utf-8', errors='ignore').read() print(len(data
+          -> Exit code 126 /bin/bash: line 6: /usr/bin/python3: Permission denied
+      [inspect] find tests -type f && find tests -type d && unzip -l lib/junit-4.12-hamcrest-1.3.jar | head -20 && echo --- && unzip -l lib/project.jar | grep -i Stri
+          -> tests /bin/bash: line 1: /usr/bin/unzip: Permission denied --- /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/project.jar | grep -i StringEscape; echo ---; jar tf lib/junit-4.12-hamcrest-1.3.jar | grep -E "junit/framework/TestCase.class|org/junit/Te
+          -> /bin/bash: line 1: jar: command not found --- /bin/bash: line 1: jar: command not found
+      [inspect] which java javac; ls /usr/lib/jvm/java-11-openjdk-amd64/bin/ 2>/dev/null
+          -> /usr/bin/javac javac
+  Lang-56   commands=9   denied=1  network=0 vcs=0 outside=0 inspect=3
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/lang/time/FastDateFormat.html') as f: content = f.read() # strip tags crudely for readab
+          -> 1600 api/org/apache/commons/lang/time/FastDateFormat.html
+      [inspect] find tests -type f; echo ---; unzip -l lib/junit-4.12-hamcrest-1.3.jar 2>/dev/null | head -5 || true
+          -> ---
+      [inspect] python3 - <<'EOF' import re path = "tests/org/apache/commons/lang/time/FastDateFormatAgentTest.java" with open(path) as f: content = f.read() def fix(
+          -> /bin/bash: line 15: /usr/bin/python3: Permission denied 165: Date date = new Date(1_000_000_000_000L); 179: Date date = new Date(1_500_000_000_000L); 
+  Lang-62   commands=4   denied=0  network=0 vcs=0 outside=0 inspect=1
+      [inspect] ls lib/ && cat .ripgreprc 2>/dev/null; python3 -c "print('ok')" 2>/dev/null || which python3
+          -> Exit code 1 junit-4.12-hamcrest-1.3.jar junit-4.7.jar project.jar
+  Lang-63   commands=7   denied=0  network=0 vcs=0 outside=0 inspect=1
+      [inspect] python3 -I -c " import re,html with open('api/org/apache/commons/lang/time/DurationFormatUtils.html') as f: content = f.read() text = re.sub('<[^>]+>'
+          -> (Bash completed with no output)
+  Lang-65   commands=9   denied=2  network=0 vcs=0 outside=0 inspect=2
+      [inspect] find tests -type f && echo --- && ls lib && echo --- && python3 -c " import re with open('api/org/apache/commons/lang/time/DateUtils.html') as f: prin
+          -> Exit code 126 --- junit-4.12-hamcrest-1.3.jar junit-4.7.jar project.jar --- /bin/bash: line 5: /usr/bin/python3: Permission denied
+      [inspect] java -version 2>&1; cat lib/*.jar >/dev/null 2>&1; unzip -l lib/project.jar 2>&1 | head -30 || true
+          -> /bin/bash: line 1: java: command not found /bin/bash: line 1: /usr/bin/unzip: Permission denied
+  Lang-8    commands=10  denied=1  network=0 vcs=0 outside=0 inspect=1
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/lang3/time/FastDatePrinter.html') as f: content = f.read() # strip tags crudely for read
+          -> Exit code 126 /bin/bash: line 8: /usr/bin/python3: Permission denied
+  runs with a flagged command: 32 of 40; refused tool calls: 46; runs showing knowledge of the bug: 1
+

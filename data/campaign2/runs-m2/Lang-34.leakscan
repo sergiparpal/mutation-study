@@ -1,0 +1,2 @@
+trigger name	target/test-classes/org/apache/commons/lang3/builder/HashCodeBuilderTest.class:47	Exceptions??????testReflectionObjectCycle???a??KLorg/apache/commons/lang3/builder/HashCodeBuilderTest$ReflectionTestCycleA;???b??KLorg/apach
+trigger name	src/test/java/org/apache/commons/lang3/builder/HashCodeBuilderTest.java:500	public void testReflectionObjectCycle() {

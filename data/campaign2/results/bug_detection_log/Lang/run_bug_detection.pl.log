@@ -1,0 +1,31 @@
+######  Start executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-11-17 19:14:35  ######
+ - Executing test suite: Lang-34f-s2.1.tar.bz2
+ - Executing test suite: Lang-34f-m2.1.tar.bz2
+ - Executing test suite: Lang-65f-s2.1.tar.bz2
+ - Executing test suite: Lang-65f-m2.1.tar.bz2
+ - Executing test suite: Lang-8f-m2.1.tar.bz2
+ - Executing test suite: Lang-8f-s2.1.tar.bz2
+ - Executing test suite: Lang-52f-m2.1.tar.bz2
+ - Found 1 failing tests on buggy version: Lang-52f-m2.1.tar.bz2
+ - Executing test suite: Lang-52f-s2.1.tar.bz2
+ - Executing test suite: Lang-56f-m2.1.tar.bz2
+ - Found 1 failing tests on buggy version: Lang-56f-m2.1.tar.bz2
+ - Executing test suite: Lang-56f-s2.1.tar.bz2
+ - Executing test suite: Lang-63f-m2.1.tar.bz2
+ - Executing test suite: Lang-63f-s2.1.tar.bz2
+ - Executing test suite: Lang-23f-s2.1.tar.bz2
+ - Executing test suite: Lang-23f-m2.1.tar.bz2
+ - Found 1 failing tests on buggy version: Lang-23f-m2.1.tar.bz2
+ - Executing test suite: Lang-21f-m2.1.tar.bz2
+ - Executing test suite: Lang-21f-s2.1.tar.bz2
+ - Executing test suite: Lang-43f-m2.1.tar.bz2
+ - Found 3 failing tests on buggy version: Lang-43f-m2.1.tar.bz2
+ - Executing test suite: Lang-43f-s2.1.tar.bz2
+ - Executing test suite: Lang-13f-m2.1.tar.bz2
+ - Executing test suite: Lang-13f-s2.1.tar.bz2
+ - Executing test suite: Lang-62f-s2.1.tar.bz2
+ - Executing test suite: Lang-62f-m2.1.tar.bz2
+ - Found 1 failing tests on buggy version: Lang-62f-m2.1.tar.bz2
+ - Executing test suite: Lang-36f-m2.1.tar.bz2
+ - Executing test suite: Lang-36f-s2.1.tar.bz2
+######  End executing test suites  /home/sergi/defects4j/framework/bin/run_bug_detection.pl: 2026-11-17 19:19:34  ######

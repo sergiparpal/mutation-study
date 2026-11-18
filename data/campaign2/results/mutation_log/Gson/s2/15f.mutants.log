@@ -1,0 +1,272 @@
+1:LVR:POS:0:com.google.gson.stream.JsonWriter:145:5515:128 |==> 0
+2:LVR:POS:NEG:com.google.gson.stream.JsonWriter:145:5515:128 |==> -128
+3:LVR:0:POS:com.google.gson.stream.JsonWriter:146:5538:0 |==> 1
+4:LVR:0:NEG:com.google.gson.stream.JsonWriter:146:5538:0 |==> -1
+5:LVR:POS:0:com.google.gson.stream.JsonWriter:146:5546:31 |==> 0
+6:LVR:POS:NEG:com.google.gson.stream.JsonWriter:146:5546:31 |==> -31
+7:ROR:<=(int,int):<(int,int):com.google.gson.stream.JsonWriter:146:5541:i <= 31 |==> i < 31
+8:ROR:<=(int,int):==(int,int):com.google.gson.stream.JsonWriter:146:5541:i <= 31 |==> i == 31
+9:ROR:<=(int,int):TRUE(int,int):com.google.gson.stream.JsonWriter:146:5543:i <= 31 |==> true
+10:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:147:5565:REPLACEMENT_CHARS[i] = String.format("\\u%04x", (int)i); |==> <NO-OP>
+11:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:149:5633:REPLACEMENT_CHARS['\"'] = "\\\""; |==> <NO-OP>
+12:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:150:5670:REPLACEMENT_CHARS['\\'] = "\\\\"; |==> <NO-OP>
+13:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:151:5708:REPLACEMENT_CHARS['\t'] = "\\t"; |==> <NO-OP>
+14:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:152:5745:REPLACEMENT_CHARS['\b'] = "\\b"; |==> <NO-OP>
+15:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:153:5782:REPLACEMENT_CHARS['\n'] = "\\n"; |==> <NO-OP>
+16:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:154:5819:REPLACEMENT_CHARS['\r'] = "\\r"; |==> <NO-OP>
+17:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:155:5856:REPLACEMENT_CHARS['\f'] = "\\f"; |==> <NO-OP>
+18:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:157:5954:HTML_SAFE_REPLACEMENT_CHARS['<'] = "\\u003c"; |==> <NO-OP>
+19:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:158:6004:HTML_SAFE_REPLACEMENT_CHARS['>'] = "\\u003e"; |==> <NO-OP>
+20:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:159:6054:HTML_SAFE_REPLACEMENT_CHARS['&'] = "\\u0026"; |==> <NO-OP>
+21:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:160:6104:HTML_SAFE_REPLACEMENT_CHARS['='] = "\\u003d"; |==> <NO-OP>
+22:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter:161:6154:HTML_SAFE_REPLACEMENT_CHARS['\''] = "\\u0027"; |==> <NO-OP>
+23:LVR:POS:0:com.google.gson.stream.JsonWriter:167:6343:32 |==> 0
+24:LVR:POS:NEG:com.google.gson.stream.JsonWriter:167:6343:32 |==> -32
+25:LVR:0:POS:com.google.gson.stream.JsonWriter:168:6374:0 |==> 1
+26:LVR:0:NEG:com.google.gson.stream.JsonWriter:168:6374:0 |==> -1
+27:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter:170:6385:push(EMPTY_DOCUMENT); |==> <NO-OP>
+28:LVR:TRUE:FALSE:com.google.gson.stream.JsonWriter:190:6790:true |==> false
+29:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@<init>(java.io.Writer):198:7072:out == null |==> false
+30:LVR:0:POS:com.google.gson.stream.JsonWriter@setIndent(java.lang.String):213:7558:0 |==> 1
+31:LVR:0:NEG:com.google.gson.stream.JsonWriter@setIndent(java.lang.String):213:7558:0 |==> -1
+32:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonWriter@setIndent(java.lang.String):213:7539:indent.length() == 0 |==> indent.length() >= 0
+33:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@setIndent(java.lang.String):213:7555:indent.length() == 0 |==> false
+34:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@setIndent(java.lang.String):214:7569:this.indent = null; |==> <NO-OP>
+35:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@setIndent(java.lang.String):215:7595:this.separator = ":"; |==> <NO-OP>
+36:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@setIndent(java.lang.String):217:7636:this.indent = indent; |==> <NO-OP>
+37:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@setIndent(java.lang.String):218:7664:this.separator = ": "; |==> <NO-OP>
+38:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@setLenient(boolean):235:8267:this.lenient = lenient; |==> <NO-OP>
+39:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@setHtmlSafe(boolean):253:8842:this.htmlSafe = htmlSafe; |==> <NO-OP>
+40:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@setSerializeNulls(boolean):269:9270:this.serializeNulls = serializeNulls; |==> <NO-OP>
+41:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beginArray():287:9757:writeDeferredName(); |==> <NO-OP>
+42:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beginObject():307:10225:writeDeferredName(); |==> <NO-OP>
+43:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@open(int,java.lang.String):325:10665:beforeValue(); |==> <NO-OP>
+44:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@open(int,java.lang.String):326:10684:push(empty); |==> <NO-OP>
+45:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@open(int,java.lang.String):327:10701:out.write(openBracket); |==> <NO-OP>
+46:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):338:10989:context != nonempty |==> context < nonempty
+47:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):338:10989:context != nonempty |==> context > nonempty
+48:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):338:10997:context != nonempty |==> true
+49:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):338:11012:context != empty |==> context < empty
+50:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):338:11012:context != empty |==> context > empty
+51:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):338:11020:context != empty |==> true
+52:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):338:10989:context != nonempty && context != empty |==> context != nonempty == (context != empty)
+53:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):338:11009:context != nonempty && context != empty |==> false
+54:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):338:10989:context != nonempty && context != empty |==> context != nonempty
+55:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):338:11012:context != nonempty && context != empty |==> context != empty
+56:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):341:11118:deferredName != null |==> true
+57:STD:<DEC>:<NO-OP>:com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):345:11213:stackSize--; |==> <NO-OP>
+58:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):346:11234:context == nonempty |==> context <= nonempty
+59:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):346:11234:context == nonempty |==> context >= nonempty
+60:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):346:11242:context == nonempty |==> false
+61:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):347:11263:newline(); |==> <NO-OP>
+62:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@close(int,int,java.lang.String):349:11284:out.write(closeBracket); |==> <NO-OP>
+63:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonWriter@push(int):354:11373:stackSize == stack.length |==> stackSize <= stack.length
+64:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonWriter@push(int):354:11373:stackSize == stack.length |==> stackSize >= stack.length
+65:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@push(int):354:11383:stackSize == stack.length |==> false
+66:LVR:POS:0:com.google.gson.stream.JsonWriter@push(int):355:11445:2 |==> 0
+67:LVR:POS:NEG:com.google.gson.stream.JsonWriter@push(int):355:11445:2 |==> -2
+68:AOR:*(int,int):%(int,int):com.google.gson.stream.JsonWriter@push(int):355:11433:stackSize * 2 |==> stackSize % 2
+69:AOR:*(int,int):+(int,int):com.google.gson.stream.JsonWriter@push(int):355:11433:stackSize * 2 |==> stackSize + 2
+70:AOR:*(int,int):-(int,int):com.google.gson.stream.JsonWriter@push(int):355:11433:stackSize * 2 |==> stackSize - 2
+71:AOR:*(int,int):/(int,int):com.google.gson.stream.JsonWriter@push(int):355:11433:stackSize * 2 |==> stackSize / 2
+72:LVR:0:POS:com.google.gson.stream.JsonWriter@push(int):356:11479:0 |==> 1
+73:LVR:0:NEG:com.google.gson.stream.JsonWriter@push(int):356:11479:0 |==> -1
+74:LVR:0:POS:com.google.gson.stream.JsonWriter@push(int):356:11492:0 |==> 1
+75:LVR:0:NEG:com.google.gson.stream.JsonWriter@push(int):356:11492:0 |==> -1
+76:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@push(int):356:11455:System.arraycopy(stack, 0, newStack, 0, stackSize); |==> <NO-OP>
+77:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@push(int):357:11513:stack = newStack; |==> <NO-OP>
+78:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@push(int):359:11541:stack[stackSize++] = newTop; |==> <NO-OP>
+79:LVR:0:POS:com.google.gson.stream.JsonWriter@peek():366:11679:0 |==> 1
+80:LVR:0:NEG:com.google.gson.stream.JsonWriter@peek():366:11679:0 |==> -1
+81:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonWriter@peek():366:11666:stackSize == 0 |==> stackSize <= 0
+82:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonWriter@peek():366:11666:stackSize == 0 |==> stackSize >= 0
+83:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@peek():366:11676:stackSize == 0 |==> false
+84:LVR:POS:0:com.google.gson.stream.JsonWriter@peek():369:11783:1 |==> 0
+85:LVR:POS:NEG:com.google.gson.stream.JsonWriter@peek():369:11783:1 |==> -1
+86:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonWriter@peek():369:11771:stackSize - 1 |==> stackSize % 1
+87:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonWriter@peek():369:11771:stackSize - 1 |==> stackSize * 1
+88:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonWriter@peek():369:11771:stackSize - 1 |==> stackSize + 1
+89:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonWriter@peek():369:11771:stackSize - 1 |==> stackSize / 1
+90:LVR:POS:0:com.google.gson.stream.JsonWriter@replaceTop(int):376:11939:1 |==> 0
+91:LVR:POS:NEG:com.google.gson.stream.JsonWriter@replaceTop(int):376:11939:1 |==> -1
+92:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonWriter@replaceTop(int):376:11927:stackSize - 1 |==> stackSize % 1
+93:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonWriter@replaceTop(int):376:11927:stackSize - 1 |==> stackSize * 1
+94:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonWriter@replaceTop(int):376:11927:stackSize - 1 |==> stackSize + 1
+95:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonWriter@replaceTop(int):376:11927:stackSize - 1 |==> stackSize / 1
+96:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@replaceTop(int):376:11921:stack[stackSize - 1] = topOfStack; |==> <NO-OP>
+97:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@name(java.lang.String):386:12177:name == null |==> false
+98:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@name(java.lang.String):389:12269:deferredName != null |==> true
+99:LVR:0:POS:com.google.gson.stream.JsonWriter@name(java.lang.String):392:12348:0 |==> 1
+100:LVR:0:NEG:com.google.gson.stream.JsonWriter@name(java.lang.String):392:12348:0 |==> -1
+101:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonWriter@name(java.lang.String):392:12335:stackSize == 0 |==> stackSize <= 0
+102:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonWriter@name(java.lang.String):392:12335:stackSize == 0 |==> stackSize >= 0
+103:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@name(java.lang.String):392:12345:stackSize == 0 |==> false
+104:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@name(java.lang.String):395:12427:deferredName = name; |==> <NO-OP>
+105:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@writeDeferredName():400:12547:deferredName != null |==> true
+106:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@writeDeferredName():401:12564:beforeName(); |==> <NO-OP>
+107:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@writeDeferredName():402:12584:string(deferredName); |==> <NO-OP>
+108:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@writeDeferredName():403:12612:deferredName = null; |==> <NO-OP>
+109:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@value(java.lang.String):414:12868:value == null |==> false
+110:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(java.lang.String):417:12915:writeDeferredName(); |==> <NO-OP>
+111:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(java.lang.String):418:12940:beforeValue(); |==> <NO-OP>
+112:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(java.lang.String):419:12959:string(value); |==> <NO-OP>
+113:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@jsonValue(java.lang.String):431:13279:value == null |==> false
+114:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@jsonValue(java.lang.String):434:13326:writeDeferredName(); |==> <NO-OP>
+115:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@jsonValue(java.lang.String):435:13351:beforeValue(); |==> <NO-OP>
+116:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@jsonValue(java.lang.String):436:13370:out.append(value); |==> <NO-OP>
+117:ROR:!=(java.lang.Object,java.lang.Object):TRUE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@nullValue():446:13555:deferredName != null |==> true
+118:COR:<IDENTIFIER(boolean)>:FALSE:com.google.gson.stream.JsonWriter@nullValue():447:13576:serializeNulls |==> false
+119:COR:<IDENTIFIER(boolean)>:TRUE:com.google.gson.stream.JsonWriter@nullValue():447:13576:serializeNulls |==> true
+120:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@nullValue():448:13602:writeDeferredName(); |==> <NO-OP>
+121:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@nullValue():450:13646:deferredName = null; |==> <NO-OP>
+122:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@nullValue():454:13737:beforeValue(); |==> <NO-OP>
+123:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@nullValue():455:13756:out.write("null"); |==> <NO-OP>
+124:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(boolean):465:13934:writeDeferredName(); |==> <NO-OP>
+125:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(boolean):466:13959:beforeValue(); |==> <NO-OP>
+126:COR:<IDENTIFIER(boolean)>:FALSE:com.google.gson.stream.JsonWriter@value(boolean):467:13988:value |==> false
+127:COR:<IDENTIFIER(boolean)>:TRUE:com.google.gson.stream.JsonWriter@value(boolean):467:13988:value |==> true
+128:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(boolean):467:13978:out.write(value ? "true" : "false"); |==> <NO-OP>
+129:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@value(java.lang.Boolean):477:14184:value == null |==> false
+130:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(java.lang.Boolean):480:14231:writeDeferredName(); |==> <NO-OP>
+131:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(java.lang.Boolean):481:14256:beforeValue(); |==> <NO-OP>
+132:COR:<IDENTIFIER(java.lang.Boolean)>:FALSE:com.google.gson.stream.JsonWriter@value(java.lang.Boolean):482:14285:value |==> false
+133:COR:<IDENTIFIER(java.lang.Boolean)>:TRUE:com.google.gson.stream.JsonWriter@value(java.lang.Boolean):482:14285:value |==> true
+134:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(java.lang.Boolean):482:14275:out.write(value ? "true" : "false"); |==> <NO-OP>
+135:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(double):494:14595:writeDeferredName(); |==> <NO-OP>
+136:COR:||(boolean,boolean):!=(boolean,boolean):com.google.gson.stream.JsonWriter@value(double):495:14637:Double.isNaN(value) || Double.isInfinite(value) |==> Double.isNaN(value) != Double.isInfinite(value)
+137:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonWriter@value(double):495:14637:Double.isNaN(value) || Double.isInfinite(value) |==> Double.isNaN(value)
+138:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonWriter@value(double):495:14660:Double.isNaN(value) || Double.isInfinite(value) |==> Double.isInfinite(value)
+139:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonWriter@value(double):495:14657:Double.isNaN(value) || Double.isInfinite(value) |==> true
+140:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonWriter@value(double):495:14624:!lenient && (Double.isNaN(value) || Double.isInfinite(value)) |==> !lenient == (Double.isNaN(value) || Double.isInfinite(value))
+141:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonWriter@value(double):495:14633:!lenient && (Double.isNaN(value) || Double.isInfinite(value)) |==> false
+142:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonWriter@value(double):495:14624:!lenient && (Double.isNaN(value) || Double.isInfinite(value)) |==> !lenient
+143:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonWriter@value(double):495:14636:!lenient && (Double.isNaN(value) || Double.isInfinite(value)) |==> (Double.isNaN(value) || Double.isInfinite(value))
+144:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(double):498:14792:beforeValue(); |==> <NO-OP>
+145:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(double):499:14811:out.append(Double.toString(value)); |==> <NO-OP>
+146:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(long):509:15003:writeDeferredName(); |==> <NO-OP>
+147:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(long):510:15028:beforeValue(); |==> <NO-OP>
+148:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(long):511:15047:out.write(Long.toString(value)); |==> <NO-OP>
+149:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@value(java.lang.Number):523:15373:value == null |==> false
+150:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(java.lang.Number):527:15421:writeDeferredName(); |==> <NO-OP>
+151:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonWriter@value(java.lang.Number):530:15509:string.equals("-Infinity") || string.equals("Infinity") |==> string.equals("-Infinity")
+152:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonWriter@value(java.lang.Number):530:15539:string.equals("-Infinity") || string.equals("Infinity") |==> string.equals("Infinity")
+153:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonWriter@value(java.lang.Number):530:15536:string.equals("-Infinity") || string.equals("Infinity") |==> true
+154:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonWriter@value(java.lang.Number):530:15509:string.equals("-Infinity") || string.equals("Infinity") || string.equals("NaN") |==> string.equals("-Infinity") || string.equals("Infinity")
+155:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonWriter@value(java.lang.Number):530:15568:string.equals("-Infinity") || string.equals("Infinity") || string.equals("NaN") |==> string.equals("NaN")
+156:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonWriter@value(java.lang.Number):530:15565:string.equals("-Infinity") || string.equals("Infinity") || string.equals("NaN") |==> true
+157:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonWriter@value(java.lang.Number):529:15488:!lenient && (string.equals("-Infinity") || string.equals("Infinity") || string.equals("NaN")) |==> !lenient == (string.equals("-Infinity") || string.equals("Infinity") || string.equals("NaN"))
+158:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonWriter@value(java.lang.Number):530:15505:!lenient && (string.equals("-Infinity") || string.equals("Infinity") || string.equals("NaN")) |==> false
+159:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonWriter@value(java.lang.Number):529:15488:!lenient && (string.equals("-Infinity") || string.equals("Infinity") || string.equals("NaN")) |==> !lenient
+160:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonWriter@value(java.lang.Number):530:15508:!lenient && (string.equals("-Infinity") || string.equals("Infinity") || string.equals("NaN")) |==> (string.equals("-Infinity") || string.equals("Infinity") || string.equals("NaN"))
+161:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(java.lang.Number):533:15696:beforeValue(); |==> <NO-OP>
+162:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@value(java.lang.Number):534:15715:out.append(string); |==> <NO-OP>
+163:LVR:0:POS:com.google.gson.stream.JsonWriter@flush():543:15938:0 |==> 1
+164:LVR:0:NEG:com.google.gson.stream.JsonWriter@flush():543:15938:0 |==> -1
+165:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonWriter@flush():543:15925:stackSize == 0 |==> stackSize <= 0
+166:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonWriter@flush():543:15925:stackSize == 0 |==> stackSize >= 0
+167:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@flush():543:15935:stackSize == 0 |==> false
+168:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@flush():546:16017:out.flush(); |==> <NO-OP>
+169:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@close():555:16231:out.close(); |==> <NO-OP>
+170:LVR:POS:0:com.google.gson.stream.JsonWriter@close():558:16286:1 |==> 0
+171:LVR:POS:NEG:com.google.gson.stream.JsonWriter@close():558:16286:1 |==> -1
+172:ROR:>(int,int):!=(int,int):com.google.gson.stream.JsonWriter@close():558:16279:size > 1 |==> size != 1
+173:ROR:>(int,int):>=(int,int):com.google.gson.stream.JsonWriter@close():558:16279:size > 1 |==> size >= 1
+174:ROR:>(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@close():558:16284:size > 1 |==> false
+175:LVR:POS:0:com.google.gson.stream.JsonWriter@close():558:16299:1 |==> 0
+176:LVR:POS:NEG:com.google.gson.stream.JsonWriter@close():558:16299:1 |==> -1
+177:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonWriter@close():558:16291:size == 1 |==> size <= 1
+178:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonWriter@close():558:16291:size == 1 |==> size >= 1
+179:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@close():558:16296:size == 1 |==> false
+180:LVR:POS:0:com.google.gson.stream.JsonWriter@close():558:16317:1 |==> 0
+181:LVR:POS:NEG:com.google.gson.stream.JsonWriter@close():558:16317:1 |==> -1
+182:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonWriter@close():558:16310:size - 1 |==> size % 1
+183:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonWriter@close():558:16310:size - 1 |==> size * 1
+184:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonWriter@close():558:16310:size - 1 |==> size + 1
+185:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonWriter@close():558:16310:size - 1 |==> size / 1
+186:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonWriter@close():558:16304:stack[size - 1] != NONEMPTY_DOCUMENT |==> stack[size - 1] < NONEMPTY_DOCUMENT
+187:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonWriter@close():558:16304:stack[size - 1] != NONEMPTY_DOCUMENT |==> stack[size - 1] > NONEMPTY_DOCUMENT
+188:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonWriter@close():558:16320:stack[size - 1] != NONEMPTY_DOCUMENT |==> true
+189:COR:&&(boolean,boolean):==(boolean,boolean):com.google.gson.stream.JsonWriter@close():558:16291:size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT |==> size == 1 == (stack[size - 1] != NONEMPTY_DOCUMENT)
+190:COR:&&(boolean,boolean):FALSE(boolean,boolean):com.google.gson.stream.JsonWriter@close():558:16301:size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT |==> false
+191:COR:&&(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonWriter@close():558:16291:size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT |==> size == 1
+192:COR:&&(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonWriter@close():558:16304:size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT |==> stack[size - 1] != NONEMPTY_DOCUMENT
+193:COR:||(boolean,boolean):!=(boolean,boolean):com.google.gson.stream.JsonWriter@close():558:16279:size > 1 || size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT |==> size > 1 != (size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT)
+194:COR:||(boolean,boolean):LHS(boolean,boolean):com.google.gson.stream.JsonWriter@close():558:16279:size > 1 || size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT |==> size > 1
+195:COR:||(boolean,boolean):RHS(boolean,boolean):com.google.gson.stream.JsonWriter@close():558:16291:size > 1 || size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT |==> size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT
+196:COR:||(boolean,boolean):TRUE(boolean,boolean):com.google.gson.stream.JsonWriter@close():558:16288:size > 1 || size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT |==> true
+197:LVR:0:POS:com.google.gson.stream.JsonWriter@close():561:16418:0 |==> 1
+198:LVR:0:NEG:com.google.gson.stream.JsonWriter@close():561:16418:0 |==> -1
+199:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@close():561:16406:stackSize = 0; |==> <NO-OP>
+200:COR:<IDENTIFIER(boolean)>:FALSE:com.google.gson.stream.JsonWriter@string(java.lang.String):565:16511:htmlSafe |==> false
+201:COR:<IDENTIFIER(boolean)>:TRUE:com.google.gson.stream.JsonWriter@string(java.lang.String):565:16511:htmlSafe |==> true
+202:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@string(java.lang.String):566:16575:out.write("\""); |==> <NO-OP>
+203:LVR:0:POS:com.google.gson.stream.JsonWriter@string(java.lang.String):567:16607:0 |==> 1
+204:LVR:0:NEG:com.google.gson.stream.JsonWriter@string(java.lang.String):567:16607:0 |==> -1
+205:LVR:0:POS:com.google.gson.stream.JsonWriter@string(java.lang.String):569:16660:0 |==> 1
+206:LVR:0:NEG:com.google.gson.stream.JsonWriter@string(java.lang.String):569:16660:0 |==> -1
+207:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):569:16663:i < length |==> i != length
+208:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):569:16663:i < length |==> i <= length
+209:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):569:16665:i < length |==> false
+210:LVR:POS:0:com.google.gson.stream.JsonWriter@string(java.lang.String):572:16754:128 |==> 0
+211:LVR:POS:NEG:com.google.gson.stream.JsonWriter@string(java.lang.String):572:16754:128 |==> -128
+212:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):572:16750:c < 128 |==> c != 128
+213:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):572:16750:c < 128 |==> c <= 128
+214:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):572:16752:c < 128 |==> false
+215:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@string(java.lang.String):574:16824:replacement == null |==> false
+216:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):577:16882:c == '\u2028' |==> c <= '\u2028'
+217:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):577:16882:c == '\u2028' |==> c >= '\u2028'
+218:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):577:16884:c == '\u2028' |==> false
+219:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):579:16949:c == '\u2029' |==> c <= '\u2029'
+220:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):579:16949:c == '\u2029' |==> c >= '\u2029'
+221:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):579:16951:c == '\u2029' |==> false
+222:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):584:17050:last < i |==> last != i
+223:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):584:17050:last < i |==> last <= i
+224:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):584:17055:last < i |==> false
+225:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):585:17093:i - last |==> i % last
+226:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):585:17093:i - last |==> i * last
+227:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):585:17093:i - last |==> i + last
+228:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):585:17093:i - last |==> i / last
+229:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@string(java.lang.String):585:17070:out.write(value, last, i - last); |==> <NO-OP>
+230:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@string(java.lang.String):587:17118:out.write(replacement); |==> <NO-OP>
+231:LVR:POS:0:com.google.gson.stream.JsonWriter@string(java.lang.String):588:17159:1 |==> 0
+232:LVR:POS:NEG:com.google.gson.stream.JsonWriter@string(java.lang.String):588:17159:1 |==> -1
+233:AOR:+(int,int):%(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):588:17155:i + 1 |==> i % 1
+234:AOR:+(int,int):*(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):588:17155:i + 1 |==> i * 1
+235:AOR:+(int,int):-(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):588:17155:i + 1 |==> i - 1
+236:AOR:+(int,int):/(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):588:17155:i + 1 |==> i / 1
+237:STD:<ASSIGN>:<NO-OP>:com.google.gson.stream.JsonWriter@string(java.lang.String):588:17148:last = i + 1; |==> <NO-OP>
+238:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):590:17176:last < length |==> last != length
+239:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):590:17176:last < length |==> last <= length
+240:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):590:17181:last < length |==> false
+241:AOR:-(int,int):%(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):591:17222:length - last |==> length % last
+242:AOR:-(int,int):*(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):591:17222:length - last |==> length * last
+243:AOR:-(int,int):+(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):591:17222:length - last |==> length + last
+244:AOR:-(int,int):/(int,int):com.google.gson.stream.JsonWriter@string(java.lang.String):591:17222:length - last |==> length / last
+245:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@string(java.lang.String):591:17199:out.write(value, last, length - last); |==> <NO-OP>
+246:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@string(java.lang.String):593:17248:out.write("\""); |==> <NO-OP>
+247:ROR:==(java.lang.Object,java.lang.Object):FALSE(java.lang.Object,java.lang.Object):com.google.gson.stream.JsonWriter@newline():597:17331:indent == null |==> false
+248:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@newline():601:17367:out.write("\n"); |==> <NO-OP>
+249:LVR:POS:0:com.google.gson.stream.JsonWriter@newline():602:17401:1 |==> 0
+250:LVR:POS:NEG:com.google.gson.stream.JsonWriter@newline():602:17401:1 |==> -1
+251:ROR:<(int,int):!=(int,int):com.google.gson.stream.JsonWriter@newline():602:17422:i < size |==> i != size
+252:ROR:<(int,int):<=(int,int):com.google.gson.stream.JsonWriter@newline():602:17422:i < size |==> i <= size
+253:ROR:<(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@newline():602:17424:i < size |==> false
+254:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@newline():603:17445:out.write(indent); |==> <NO-OP>
+255:ROR:==(int,int):<=(int,int):com.google.gson.stream.JsonWriter@beforeName():613:17694:context == NONEMPTY_OBJECT |==> context <= NONEMPTY_OBJECT
+256:ROR:==(int,int):>=(int,int):com.google.gson.stream.JsonWriter@beforeName():613:17694:context == NONEMPTY_OBJECT |==> context >= NONEMPTY_OBJECT
+257:ROR:==(int,int):FALSE(int,int):com.google.gson.stream.JsonWriter@beforeName():613:17702:context == NONEMPTY_OBJECT |==> false
+258:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beforeName():614:17749:out.write(','); |==> <NO-OP>
+259:ROR:!=(int,int):<(int,int):com.google.gson.stream.JsonWriter@beforeName():615:17780:context != EMPTY_OBJECT |==> context < EMPTY_OBJECT
+260:ROR:!=(int,int):>(int,int):com.google.gson.stream.JsonWriter@beforeName():615:17780:context != EMPTY_OBJECT |==> context > EMPTY_OBJECT
+261:ROR:!=(int,int):TRUE(int,int):com.google.gson.stream.JsonWriter@beforeName():615:17788:context != EMPTY_OBJECT |==> true
+262:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beforeName():618:17897:newline(); |==> <NO-OP>
+263:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beforeName():619:17912:replaceTop(DANGLING_NAME); |==> <NO-OP>
+264:COR:<IDENTIFIER(boolean)>:FALSE:com.google.gson.stream.JsonWriter@beforeValue():631:18299:lenient |==> false
+265:COR:<IDENTIFIER(boolean)>:TRUE:com.google.gson.stream.JsonWriter@beforeValue():631:18299:lenient |==> true
+266:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beforeValue():637:18490:replaceTop(NONEMPTY_DOCUMENT); |==> <NO-OP>
+267:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beforeValue():641:18581:replaceTop(NONEMPTY_ARRAY); |==> <NO-OP>
+268:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beforeValue():642:18615:newline(); |==> <NO-OP>
+269:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beforeValue():646:18691:out.append(','); |==> <NO-OP>
+270:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beforeValue():647:18714:newline(); |==> <NO-OP>
+271:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beforeValue():651:18787:out.append(separator); |==> <NO-OP>
+272:STD:<CALL>:<NO-OP>:com.google.gson.stream.JsonWriter@beforeValue():652:18816:replaceTop(NONEMPTY_OBJECT); |==> <NO-OP>

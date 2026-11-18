@@ -1,0 +1,89 @@
+CLI:    2.1.316 (Claude Code)  (/home/sergi/.local/share/claude/versions/2.1.316)
+model:  claude-sonnet-5
+commit: 2f56801181ab59a136a750a7c983b85b06e5f8f9
+start:  2026-11-17T22:13:07Z
+
+ 1  Lang-43  m2  ok
+ 1  Lang-43  s2  ok
+ 2  Lang-13  s2  ok
+ 2  Lang-13  m2  ok
+ 3  Lang-56  m2  ok
+ 3  Lang-56  s2  ok
+ 4  Lang-23  s2  ok
+ 4  Lang-23  m2  ok
+ 5  Lang-52  m2  ok
+ 5  Lang-52  s2  ok
+ 6  Lang-8   s2  ok
+ 6  Lang-8   m2  ok
+ 7  Lang-62  m2  ok
+ 7  Lang-62  s2  ok
+ 8  Lang-65  s2  ok
+ 8  Lang-65  m2  ok
+ 9  Lang-63  m2  ok
+ 9  Lang-63  s2  ok
+10  Lang-21  s2  ok
+10  Lang-21  m2  ok
+11  Lang-34  m2  ok
+11  Lang-34  s2  ok
+12  Lang-36  s2  ok
+12  Lang-36  m2  ok
+13  Csv-14   m2  ok
+13  Csv-14   s2  ok
+14  Csv-6    s2  ok
+14  Csv-6    m2  ok
+15  Csv-8    m2  ok
+15  Csv-8    s2  ok
+16  Csv-4    s2  ok
+16  Csv-4    m2  ok
+17  Csv-7    m2  ok
+17  Csv-7    s2  ok
+18  Csv-5    s2  ok
+18  Csv-5    m2  ok
+19  Csv-3    m2  ok
+19  Csv-3    s2  ok
+20  Csv-16   s2  ok
+20  Csv-16   m2  ok
+21  Csv-10   m2  ok
+21  Csv-10   s2  ok
+22  Csv-15   s2  ok
+22  Csv-15   m2  ok
+23  Gson-14  m2  ok
+23  Gson-14  s2  ok
+24  Gson-3   s2  ok
+24  Gson-3   m2  ok
+25  Gson-4   m2  ok
+25  Gson-4   s2  ok
+26  Gson-6   s2  ok
+26  Gson-6   m2  ok
+27  Gson-10  m2  ok
+27  Gson-10  s2  ok
+28  Gson-8   s2  ok
+28  Gson-8   m2  ok
+29  Gson-16  m2  ok
+29  Gson-16  s2  ok
+30  Gson-5   s2  ok
+30  Gson-5   m2  ok
+31  Gson-7   m2  ok
+31  Gson-7   s2  ok
+32  Gson-15  s2  ok
+32  Gson-15  m2  ok
+33  Cli-12   m2  ok
+33  Cli-12   s2  ok
+34  Cli-28   s2  ok
+34  Cli-28   m2  ok
+35  Cli-38   m2  ok
+35  Cli-38   s2  ok
+36  Cli-10   s2  ok
+36  Cli-10   m2  ok
+37  Cli-17   m2  ok
+37  Cli-17   s2  ok
+38  Cli-32   s2  ok
+38  Cli-32   m2  ok
+39  Cli-15   m2  ok
+39  Cli-15   s2  ok
+40  Cli-21   s2  ok
+40  Cli-21   m2  ok
+
+m2: 40 runs with a status, 40 packaged
+s2: 40 runs with a status, 40 packaged
+end:    2026-11-18T02:41:25Z

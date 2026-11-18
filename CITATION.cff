@@ -11,17 +11,19 @@ authors:
 repository-code: https://github.com/sergiparpal/mutation-study
 abstract: >-
   Two test suites were generated per Defects4J bug with the same agent and
-  model, under two conditions: the agent either works inside the checked-out
-  project or sees only its javadoc. Over 36 bugs measured in both arms,
-  real-fault detection falls from 72% to 14%, while mutation score falls from
-  58% to 44% and line coverage from 85% to 73%. With an EvoSuite baseline over
-  the same subjects, EvoSuite and the specification-only suites are nearly
-  tied on mutation score and differ nearly three-fold in detection. The
-  repository holds the generation and measurement scripts, the per-suite
-  measurements, a hand classification of the 40 faults, a probe of what the
-  model recalls about each fault with no code in context, two post-cutoff
-  replication corpora, and an audit of what the benchmark's own files told
-  the agent.
+  model, under two conditions: the agent either works in the project's source
+  tree or sees only its javadoc. The comparison was run twice on the same 40
+  bugs. In the second campaign, with the benchmark's metadata removed from
+  the working copy, the conditions enforced by a sandbox, every transcript
+  kept and the analysis fixed in advance, real-fault detection falls from 56%
+  to 18% over 39 bugs, while mutation score falls from 54% to 39% and line
+  coverage from 84% to 70%. The first campaign, on standard Defects4J
+  checkouts, gave 72% against 14%. The repository holds the generation and
+  measurement scripts, the protocol and full record of the second campaign,
+  the per-suite measurements, an EvoSuite baseline, a hand classification of
+  the 40 faults, a probe of what the model recalls about each fault with no
+  code in context, two post-cutoff replication corpora, and an audit of what
+  the benchmark's own files told the agent.
 keywords:
   - test generation
   - mutation testing

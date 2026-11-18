@@ -1,0 +1,76 @@
+# Second campaign: runs with a violation, as PROTOCOL.md defines one.
+# One per line: arm, bug, reason. Lines that begin with # are notes.
+#
+# None.
+#
+# Decided on 18 November 2026 from the transcripts of the 80 runs, before any
+# suite was measured. audit.txt is what bin/audit-transcripts.py prints, with
+# each command cut at 150 characters. Every command it flags was read whole,
+# with its whole result. So was what the script does not look at: the paths
+# given to the file tools, every direct call to javac, every s2 command that
+# names lib/, a jar or a class file, and every program name in either arm.
+#
+# NETWORK. No command in either arm reaches for it.
+#
+# OUTSIDE THE WORKING COPY. Nothing was read there but the operating system
+# and the JDK.
+# - m2 Gson-7 unpacked junit/framework/Assert.class from the working copy's
+#   own _tools/lib into /tmp and listed its methods with javap. Inside the
+#   sandbox /tmp is private to the command, which the protocol does not count.
+# - m2 Cli-28 searched the whole filesystem by name for a JUnit jar, and s2
+#   Csv-7 for a program called jar. Both searches printed nothing.
+# - Thirteen s2 commands listed the JDK's directories or its launchers in
+#   /usr/bin. s2 Lang-36 printed $PATH, an environment variable.
+# - The file tools refused four writes addressed to /tmp (m2 Lang-21 and
+#   Lang-43, two each). The permission layer refused seven shell commands
+#   that would have written a scratch program to /tmp or $TMPDIR (m2 Cli-12,
+#   Gson-3, Gson-7, Lang-21, Lang-43, Lang-8; s2 Lang-36). None ran.
+# - Three m2 commands ran `git status` (Cli-12, Cli-21, Lang-21). The working
+#   copy is not a repository and git said so.
+#
+# INSPECTING lib/ IN s2. The prompt forbids it and 22 of the 40 agents tried:
+# 15 on the project's jar or on every jar (Cli-10, Cli-12, Cli-21, Cli-38,
+# Csv-3, Csv-7, Csv-15, Csv-16, Gson-6, Gson-14, Gson-16, Lang-13, Lang-21,
+# Lang-52, Lang-65) and 7 on JUnit's jars alone (Csv-4, Csv-6, Gson-8,
+# Gson-15, Lang-34, Lang-36, Lang-56), with unzip, jar, or python's zipfile.
+# Every attempt failed: the sandbox hides those programs, and the permission
+# layer refused the rest before they ran. No listing, class file or
+# disassembly was obtained in any run. Three of these need saying, because
+# the script does not flag them or shows them without their outcome:
+# - Gson-14 called jar by its full path in the JDK. The script's pattern
+#   misses a program named by path. The file is hidden; nothing was printed.
+# - Csv-15 redirected `unzip -p lib/project.jar ...CSVFormat.class` to a file
+#   in a directory that does not exist. The shell stopped before unzip ran.
+# - Lang-36 wrote a Java program to list a jar and compiled it. It could not
+#   run it: java is hidden.
+# Listing the names and sizes of the files in lib/ (ls, find) is not counted:
+# the prompt names them.
+#
+# ONE CASE DECIDED ON THE WORDING. s2 Csv-10 compiled a scratch file of its
+# own, .probe/Probe.java, seven times with javac directly, with the options
+# of compile.sh (-nowarn -source 8 -target 8 -cp "lib/*"). Six compilations
+# failed with "cannot find symbol" and one succeeded: the agent was finding
+# out which methods CSVFormat has, a class its api/ does not document. This
+# breaks the prompt ("compile them with ./compile.sh, nothing else") and is
+# not a violation as the protocol defines one: no code from lib/ was run,
+# nothing in it was printed, unpacked or disassembled, and the compiler was
+# given no option that executes code. What the agent learned, it would have
+# learned from the same error messages by compiling its test class with
+# compile.sh. The run stays in the primary analysis.
+# Declared here, before measurement: the analysis is also run with s2 Csv-10
+# left out. That is a check outside the protocol. It is reported next to the
+# primary analysis and decides nothing.
+#
+# KNOWLEDGE OF THE BUG is not a violation and is counted by the analysis
+# script. Its rule marks Lang-36 in both arms: each agent named a test of
+# NumberUtils.isNumber `testIsNumber`, which is also the name of one of the
+# bug's trigger tests. Nothing else an agent said or wrote names the
+# benchmark, a bug's issue or a trigger test. Two m2 agents cite CLI-71
+# (Cli-10, Cli-28). They read it in a comment of the source under test; it is
+# not the issue behind either bug.
+#
+# REFUSED CALLS, counted from the transcripts. The harness refused 16 calls
+# in m2 (12 shell commands and the four writes above) and 8 shell commands in
+# s2. audit.txt says 32 and 46: the script counts each refusal twice, once as
+# the harness's event and once as the tool's result, and in s2 adds 30
+# results in which the sandbox denied a hidden program.

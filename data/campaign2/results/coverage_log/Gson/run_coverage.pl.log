@@ -1,0 +1,22 @@
+######  Start code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-11-17 19:09:31  ######
+ - Executing test suite: Gson-7f-m2.1.tar.bz2
+ - Executing test suite: Gson-7f-s2.1.tar.bz2
+ - Executing test suite: Gson-15f-s2.1.tar.bz2
+ - Executing test suite: Gson-15f-m2.1.tar.bz2
+ - Executing test suite: Gson-10f-m2.1.tar.bz2
+ - Executing test suite: Gson-10f-s2.1.tar.bz2
+ - Executing test suite: Gson-16f-m2.1.tar.bz2
+ - Executing test suite: Gson-16f-s2.1.tar.bz2
+ - Executing test suite: Gson-4f-s2.1.tar.bz2
+ - Executing test suite: Gson-4f-m2.1.tar.bz2
+ - Executing test suite: Gson-5f-s2.1.tar.bz2
+ - Executing test suite: Gson-5f-m2.1.tar.bz2
+ - Executing test suite: Gson-8f-s2.1.tar.bz2
+ - Executing test suite: Gson-8f-m2.1.tar.bz2
+ - Executing test suite: Gson-14f-m2.1.tar.bz2
+ - Executing test suite: Gson-14f-s2.1.tar.bz2
+ - Executing test suite: Gson-6f-m2.1.tar.bz2
+ - Executing test suite: Gson-6f-s2.1.tar.bz2
+ - Executing test suite: Gson-3f-s2.1.tar.bz2
+ - Executing test suite: Gson-3f-m2.1.tar.bz2
+######  End code coverage analysis  /home/sergi/defects4j/framework/bin/run_coverage.pl: 2026-11-17 19:11:44  ######

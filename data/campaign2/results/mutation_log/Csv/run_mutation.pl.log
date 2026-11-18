@@ -1,0 +1,22 @@
+######  Start mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-11-17 19:04:13  ######
+ - Executing test suite: Csv-6f-m2.1.tar.bz2
+ - Executing test suite: Csv-6f-s2.1.tar.bz2
+ - Executing test suite: Csv-5f-s2.1.tar.bz2
+ - Executing test suite: Csv-5f-m2.1.tar.bz2
+ - Executing test suite: Csv-14f-s2.1.tar.bz2
+ - Executing test suite: Csv-14f-m2.1.tar.bz2
+ - Executing test suite: Csv-10f-s2.1.tar.bz2
+ - Executing test suite: Csv-10f-m2.1.tar.bz2
+ - Executing test suite: Csv-7f-m2.1.tar.bz2
+ - Executing test suite: Csv-7f-s2.1.tar.bz2
+ - Executing test suite: Csv-16f-s2.1.tar.bz2
+ - Executing test suite: Csv-16f-m2.1.tar.bz2
+ - Executing test suite: Csv-3f-s2.1.tar.bz2
+ - Executing test suite: Csv-3f-m2.1.tar.bz2
+ - Executing test suite: Csv-15f-m2.1.tar.bz2
+ - Executing test suite: Csv-15f-s2.1.tar.bz2
+ - Executing test suite: Csv-8f-m2.1.tar.bz2
+ - Executing test suite: Csv-8f-s2.1.tar.bz2
+ - Executing test suite: Csv-4f-s2.1.tar.bz2
+ - Executing test suite: Csv-4f-m2.1.tar.bz2
+######  End mutation analysis  /home/sergi/defects4j/framework/bin/run_mutation.pl: 2026-11-17 19:07:03  ######

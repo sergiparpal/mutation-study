@@ -1,0 +1,40 @@
+{
+  "autoMemoryEnabled": false,
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "filesystem": {
+      "denyRead": [
+        "/home",
+        "/mnt",
+        "/tmp",
+        "/var/tmp",
+        "/opt",
+        "/root",
+        "/srv",
+        "/media",
+        "/usr/lib/jvm/java-11-openjdk-amd64/bin",
+        "/usr/bin/unzip",
+        "/usr/bin/zipinfo",
+        "/usr/bin/funzip",
+        "/usr/bin/zipgrep",
+        "/usr/bin/bsdtar",
+        "/usr/bin/python3",
+        "/usr/bin/python3.12",
+        "/usr/bin/perl"
+      ],
+      "allowRead": [
+        "/tmp/w-osiHF3S5",
+        "/usr/lib/jvm/java-11-openjdk-amd64/bin/javac"
+      ],
+      "allowWrite": [
+        "/tmp/w-osiHF3S5"
+      ]
+    },
+    "network": {
+      "allowedDomains": [],
+      "strictAllowlist": true
+    }
+  }
+}

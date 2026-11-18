@@ -1,0 +1,61 @@
+Runs
+  m2: 40 runs, 40 with an accepted suite; $16.18 at list prices, 18.1 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['2f56801']
+      tests disabled at acceptance: 0 of 1453 (0.0%)
+  s2: 40 runs, 40 with an accepted suite; $23.07 at list prices, 14.3 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['2f56801']
+      tests disabled at acceptance: 101 of 1500 (6.7%)
+
+Violations listed in violations.txt: 0
+
+========================================================================
+PRIMARY ANALYSIS (runs with a violation left out)
+  paired set 39 bugs, complete set 36 bugs
+  H1  detection  m2 22/39 (56.4%)   s2 7/39 (17.9%)
+      both 6, m2 only 16, s2 only 1, neither 16
+      exact McNemar, two-sided: p = 0.000275
+      difference +38.5 points, 95% bootstrap interval [+20.5, +56.4]
+  H2  on the complete set:
+      detection       m2 55.6%  s2 19.4%  fall 65.0%
+      mutation score  m2 54.0%  s2 39.1%  fall 27.7%   (per-suite means 64.3%, 45.3%)
+      line coverage   m2 83.7%  s2 70.3%  fall 16.1%
+      fall(detection) - fall(mutation score) = +37.3 points, 95% bootstrap interval [+12.0, +59.0]
+      fall(detection) - fall(line coverage) = +48.9 points, 95% bootstrap interval [+24.0, +69.8]
+========================================================================
+
+Decision, by the rule fixed in the protocol:
+  H1 rejected, and the interval of H2 lies above 0: detection falls further than mutation score.
+
+Per project (paired set)
+  Lang  n=12  m2 detected 5  s2 detected 0
+  Csv   n=10  m2 detected 7  s2 detected 3
+  Gson  n=10  m2 detected 7  s2 detected 2
+  Cli   n= 7  m2 detected 3  s2 detected 2
+
+Suites without a verdict
+  m2: Cli-21 (Broken)
+  s2: Cli-21 (Broken)
+
+SENSITIVITY ANALYSES (none confirmatory)
+1. Runs with a violation included: there are none, same as the primary analysis
+2. Intention to treat (40 bugs attempted in both arms; no suite or no verdict counts as not detected; runs with a violation as measured)
+      m2 22/40 (55.0%)   s2 7/40 (17.5%)   m2 only 16, s2 only 1; exact McNemar p = 0.000275
+3. Runs whose transcript shows the agent knew its bug: 2 (m2 Lang-36, s2 Lang-36)
+   with those runs left out
+  paired set 38 bugs, complete set 35 bugs
+  H1  detection  m2 22/38 (57.9%)   s2 7/38 (18.4%)
+      both 6, m2 only 16, s2 only 1, neither 15
+      exact McNemar, two-sided: p = 0.000275
+      difference +39.5 points, 95% bootstrap interval [+21.1, +55.3]
+  H2  on the complete set:
+      detection       m2 57.1%  s2 20.0%  fall 65.0%
+      mutation score  m2 54.2%  s2 39.1%  fall 28.0%   (per-suite means 64.6%, 45.4%)
+      line coverage   m2 83.3%  s2 69.8%  fall 16.3%
+      fall(detection) - fall(mutation score) = +37.0 points, 95% bootstrap interval [+11.7, +58.4]
+      fall(detection) - fall(line coverage) = +48.7 points, 95% bootstrap interval [+24.0, +69.3]
+
+THE FIRST CAMPAIGN BESIDE THE SECOND (descriptive: the campaigns differ in
+more than one respect, see the protocol)
+  first M 26/36 (72.2%)   m2 20/36 (55.6%)   both 20, first M only 6, m2 only 0, neither 10; exact McNemar p = 0.0312
+  first S 6/37 (16.2%)   s2 7/37 (18.9%)   both 4, first S only 2, s2 only 3, neither 28; exact McNemar p = 1
+  three generators, 35 bugs with a verdict from each: m2 20, EvoSuite 15, s2 7 detected
