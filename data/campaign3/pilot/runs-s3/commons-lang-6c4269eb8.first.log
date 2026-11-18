@@ -1,0 +1,35 @@
+1) org.apache.commons.lang3.text.WordUtilsAgentTest#testUncapitalizeDelimNullArrayLeavesUnchanged()
+org.opentest4j.AssertionFailedError: expected: <I AM.FINE> but was: <i aM.FINE>
+    at org.apache.commons.lang3.text.WordUtilsAgentTest.testUncapitalizeDelimNullArrayLeavesUnchanged(WordUtilsAgentTest.java:276)
+
+2) org.apache.commons.lang3.text.WordUtilsAgentTest#testCapitalizeFullyDelimNullArrayLeavesUnchanged()
+org.opentest4j.AssertionFailedError: expected: <i aM.fine> but was: <I Am.fine>
+    at org.apache.commons.lang3.text.WordUtilsAgentTest.testCapitalizeFullyDelimNullArrayLeavesUnchanged(WordUtilsAgentTest.java:114)
+
+3) org.apache.commons.lang3.text.WordUtilsAgentTest#testWrapFiveArgDefaultSpaceDelimiterMatchesFourArgBehavior()
+org.opentest4j.AssertionFailedError: expected: <Click here to jump
+to the commons
+website -
+https://commons.apach
+e.org> but was: <Click here to jump
+to the commons
+website -
+https://commons.apac
+he.org>
+    at org.apache.commons.lang3.text.WordUtilsAgentTest.testWrapFiveArgDefaultSpaceDelimiterMatchesFourArgBehavior(WordUtilsAgentTest.java:387)
+
+4) org.apache.commons.lang3.text.WordUtilsAgentTest#testWrapFourArgLongWordWrappedWhenFlagTrue()
+org.opentest4j.AssertionFailedError: expected: <Click here to jump
+to the commons
+website -
+https://commons.apach
+e.org> but was: <Click here to jump
+to the commons
+website -
+https://commons.apac
+he.org>
+    at org.apache.commons.lang3.text.WordUtilsAgentTest.testWrapFourArgLongWordWrappedWhenFlagTrue(WordUtilsAgentTest.java:367)
+
+Tests run: 66, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 66, failed: 4
+FAILURES!!!

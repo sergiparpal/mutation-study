@@ -1,0 +1,19 @@
+1) org.apache.commons.csv.CSVPrinterAgentTest#constructorWritesHeaderImmediately()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+    at org.apache.commons.csv.CSVPrinterAgentTest.constructorWritesHeaderImmediately(CSVPrinterAgentTest.java:246)
+
+2) org.apache.commons.csv.CSVPrinterAgentTest#constructorRejectsHybridEncapsulationAndEscaping()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.csv.CSVPrinterAgentTest.constructorRejectsHybridEncapsulationAndEscaping(CSVPrinterAgentTest.java:220)
+
+3) org.apache.commons.csv.CSVPrinterAgentTest#printRecordsObjectArrayOfSimpleValuesIsSingleRecord()
+org.opentest4j.AssertionFailedError: expected: <A,B,C
+> but was: <A
+B
+C
+>
+    at org.apache.commons.csv.CSVPrinterAgentTest.printRecordsObjectArrayOfSimpleValuesIsSingleRecord(CSVPrinterAgentTest.java:384)
+
+Tests run: 33, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 33, failed: 3
+FAILURES!!!
