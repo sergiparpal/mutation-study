@@ -1,0 +1,16 @@
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToInstantTwoArgsBothNullReturnsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToInstantTwoArgsNullInstantReturnsDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToInstantTwoArgsNonNullInstantWithNullDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToMillisSinceNullTreatedAsEpoch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToInstantTwoArgsNonNullInstantIgnoresDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisClampsToMaxValueForInstantMax()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisEpoch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToInstantSingleArgNonNullReturnsSameInstant()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisClampsToMinValueForInstantMin()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToInstantSingleArgNullReturnsEpoch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToMillisSinceClampsToMaxValueForInstantMin()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisNullTreatedAsEpoch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisOrdinaryValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToMillisSinceRecentInstantIsCloseToZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToMillisSinceClampsToMinValueForInstantMax()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisNegativeValue()	1	0	

@@ -1,0 +1,15 @@
+1) org.apache.commons.csv.CSVFormatAgentTest#testWithRecordSeparatorStringRejectsInvalidValue()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.csv.CSVFormatAgentTest.testWithRecordSeparatorStringRejectsInvalidValue(CSVFormatAgentTest.java:627)
+
+2) org.apache.commons.csv.CSVFormatAgentTest#testInformixUnloadFormat()
+org.opentest4j.AssertionFailedError: expected: <,> but was: <|>
+    at org.apache.commons.csv.CSVFormatAgentTest.testInformixUnloadFormat(CSVFormatAgentTest.java:166)
+
+3) org.apache.commons.csv.CSVFormatAgentTest#testPrintDoesNotTrimByDefault()
+org.opentest4j.AssertionFailedError: expected: < a > but was: <" a ">
+    at org.apache.commons.csv.CSVFormatAgentTest.testPrintDoesNotTrimByDefault(CSVFormatAgentTest.java:763)
+
+Tests run: 91, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 91, failed: 3
+FAILURES!!!

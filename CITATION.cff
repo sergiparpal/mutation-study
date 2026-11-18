@@ -18,12 +18,16 @@ abstract: >-
   kept and the analysis fixed in advance, real-fault detection falls from 56%
   to 18% over 39 bugs, while mutation score falls from 54% to 39% and line
   coverage from 84% to 70%. The first campaign, on standard Defects4J
-  checkouts, gave 72% against 14%. The repository holds the generation and
-  measurement scripts, the protocol and full record of the second campaign,
-  the per-suite measurements, an EvoSuite baseline, a hand classification of
-  the 40 faults, a probe of what the model recalls about each fault with no
-  code in context, two post-cutoff replication corpora, and an audit of what
-  the benchmark's own files told the agent.
+  checkouts, gave 72% against 14%. A third campaign, under the second's
+  conditions and a protocol also fixed in advance, on 28 faults that postdate
+  the model's training data, gives 35% against 22% over 23 subjects, a
+  difference its test does not reject (p = 0.25). The repository holds the
+  generation and measurement scripts, the protocols and full records of the
+  second and third campaigns, the per-suite measurements, an EvoSuite
+  baseline, a hand classification of the 40 faults, a probe of what the model
+  recalls about each fault with no code in context, two post-cutoff
+  replication corpora, and an audit of what the benchmark's own files told
+  the agent.
 keywords:
   - test generation
   - mutation testing

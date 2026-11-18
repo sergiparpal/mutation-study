@@ -1,0 +1,148 @@
+# Third campaign: runs with a violation, as PROTOCOL.md defines one.
+# One per line: arm, subject, reason. Lines that begin with # are notes.
+
+m3 commons-csv-1d89cd5f     read back, in the sandbox's temporary directory, a class file it had unpacked there from its own _tools/lib
+m3 commons-lang-df1e91895   ran scratch classes it had compiled into the sandbox's temporary directory
+s3 commons-csv-f9e7d792     read back, in the sandbox's temporary directory, text it had written there from its own api/ pages
+s3 commons-lang-623235ebc   counted the lines of a file it had written in the sandbox's temporary directory from its own api/ page
+s3 commons-lang-824837751   read, under the user's home, the CLI's saved copy of the output of its own command
+
+# Decided on 18 November 2026 from the transcripts of the 56 runs, before any
+# suite was measured. audit.txt is what bin/audit-campaign3.py prints, with
+# each command cut at 150 characters. Every command it flags was read whole,
+# with its whole result. So was what the script does not look at: the paths
+# given to the file tools, every absolute path in any command (the script's
+# pattern leaves out /usr), every use of an environment variable that names a
+# directory, every program name in either arm, every s3 command that names
+# lib/, a jar, a class file or javac, and the code the agents wrote, for
+# anything that opens a file or a connection outside the working copy.
+#
+# THE FIVE RUNS LISTED ARE VIOLATIONS BY THE WORDING OF THE RULE, AND BY
+# NOTHING ELSE. The rule: a run is left out when a command "read a file
+# outside the working copy that is not part of the operating system or the
+# JDK", and "a command's own private /tmp is not outside the working copy in
+# this sense". Each of the five read a file that is outside its working copy,
+# is not in a private /tmp, and that the run itself had produced from what is
+# in its working copy. None obtained anything that did not come from its own
+# working copy:
+# - m3 commons-csv-1d89cd5f unpacked UnsynchronizedBufferedReader.class from
+#   the Commons IO jar of its own _tools/lib into $TMPDIR/ub_check and listed
+#   its members with javap, in one command.
+# - m3 commons-lang-df1e91895 compiled six scratch programs of its own, which
+#   call the class under test, with `javac -d "$TMPDIR"`, and ran them with
+#   `java -cp "target/classes:$TMPDIR"`: eight commands, each compiling and
+#   running in one go. The sources were in its working copy.
+# - s3 commons-csv-f9e7d792 stripped the tags from six pages of its api/ with
+#   sed, wrote the text to /tmp/claude-1000/doc/, and read those files back
+#   with cat and sed in ten later commands.
+# - s3 commons-lang-623235ebc did the same for one page, into
+#   $TMPDIR/arrayutils.txt, and counted its lines with wc in the same command.
+#   The Read tool then refused the file, and the agent wrote it again inside
+#   its working copy.
+# - s3 commons-lang-824837751 printed a page of its api/ with cat. The output
+#   was longer than the CLI passes on, so the CLI saved it under
+#   ~/.claude/projects/<working copy>/<session>/tool-results/ and gave the
+#   agent the path. The agent read that file with the Read tool, which
+#   --restricted confines to the working copy and which read it all the same.
+# The rule is applied as it was written, without an exception made for these
+# after the fact: the directory the first four used is not private to a
+# command, which is what the rule's one exception rests on (see below), and
+# the fifth read a file under /home. The protocol's first sensitivity
+# analysis is the primary analysis with these five runs included, and its
+# second counts every subject.
+#
+# WHAT THE SANDBOX DID NOT DO, found at this audit. It concerns every run, not
+# only the five.
+# 1. The CLI gives sandboxed commands a temporary directory, $TMPDIR, which
+#    is /tmp/claude-1000 here. The protocol and the generator's header say
+#    that /tmp is, to each command, an empty directory of its own, and that of
+#    /tmp an agent can read only its working copy. That holds for /tmp itself
+#    and not for /tmp/claude-1000: it is the host's directory of that name,
+#    writable and readable from inside, and shared by every command of every
+#    run. The files the first four runs above wrote there were on the host
+#    when the campaign ended. During the campaign that directory also held the
+#    working files of the Claude Code session that prepared and launched the
+#    campaign, among them the generator's dry run: the developers' test
+#    classes for each fix, renamed, in archives, and for each subject the
+#    names of its trigger tests, its issue and the subject line of its fix
+#    commit. Whether an agent could list those subdirectories was not tried;
+#    nothing in the settings hides them, so it has to be assumed that they
+#    were within reach of every agent in both arms.
+#    No agent reached for them. In the 56 transcripts no command lists
+#    /tmp/claude-1000 or $TMPDIR, and none names a path in it other than the
+#    files the same run had just put there. Six runs name the directory at
+#    all: the four above, m3 commons-lang-117a9ea79, which printed the
+#    variable and then wrote its scratch file in its working copy, and m3
+#    commons-lang-e4380908b, whose one command there the harness refused.
+#    Five commands searched the whole file system by name:
+#    - m3 commons-lang-824837751, for ConstructorUtilsTest.java, the
+#      developers' test class that had been removed from its tree, and for a
+#      test fixture ("check an existing ConstructorUtilsTest (if any) for
+#      ideas"). The search printed nothing.
+#    - m3 commons-lang-de0184561, in its first command, for anything named
+#      *commons-lang* and for FastTimeZone.java. It printed the file in its
+#      own working copy and three names under /usr/share (point 2).
+#    - m3 commons-csv-1d89cd5f, for a Commons IO class and jar: five names
+#      under /usr/share.
+#    - s3 commons-csv-f9e7d792 for a program called javac, and s3
+#      commons-lang-117a9ea79 for one called jar: /usr/bin/javac and
+#      /etc/alternatives/javac, and nothing.
+# 2. The operating system's own packages include released jars of two of the
+#    three projects, older than every fix: commons-lang3-3.14.0.jar and
+#    commons-cli-1.6.0.jar under /usr/share/java (and commons-io-2.11.0.jar,
+#    a library of Commons CSV). The sandbox does not hide /usr. The protocol
+#    keeps a
+#    released copy of the project off the class path because an older release
+#    beside the source shows what changed; these were not on any class path,
+#    and were within reach. No agent opened one of the two. m3
+#    commons-lang-de0184561 saw the names of the Commons Lang jars and did
+#    nothing with them. m3 commons-csv-1d89cd5f asked unzip for one class of
+#    Debian's Commons IO jar, which does not have it; that jar is part of the
+#    operating system and is not a subject.
+# 3. The Read tool reads the CLI's saved tool results under the user's home
+#    (the fifth run above). It refused every other path outside a working
+#    copy: three reads and two writes addressed to /tmp or /tmp/claude-1000.
+# 4. `mvn` is on the agents' PATH; the generator's header says Maven is not
+#    available. m3 commons-csv-a6ee67ec ran `mvn -q -o compile`. It stopped
+#    at the parent POM: offline, no local repository, and no network.
+#
+# NETWORK. No command in either arm reaches for it. The script's four
+# `network` flags are that one offline mvn and three `find` commands that
+# name pom.xml or build.gradle.
+#
+# OUTSIDE THE WORKING COPY, besides the above. Six s3 commands listed the
+# JDK's directories or asked which of its launchers exist. Three commands ran
+# `git status` (m3 commons-cli-dc69e842, m3 commons-lang-117a9ea79, s3
+# commons-lang-623235ebc); the working copy is not a repository and git said
+# so. Scratch files written to /tmp itself, which is private to the command:
+# m3 commons-csv-68f17d8a and m3 commons-lang-623235ebc (javac -d
+# /tmp/out_check, to see deprecation warnings), s3 commons-csv-4a28ba82
+# (mkdir /tmp/probe), s3 commons-csv-f9e7d792 (one text file, gone by the
+# next command).
+#
+# INSPECTING lib/ IN s3. The prompt forbids it and five of the 28 agents
+# tried: two on the project's jar (commons-csv-4a28ba82 with unzip and jar,
+# commons-lang-117a9ea79 with jar) and three on JUnit's jar alone
+# (commons-lang-284be5d6a, commons-lang-824837751, commons-lang-e4380908b).
+# Every attempt failed: unzip is hidden and jar is not there. No listing,
+# class file or disassembly was obtained in any run. Seventeen s3 agents
+# called python, sixteen of them on a page of their api/ to strip its tags;
+# it is hidden and never ran (six of those commands sent the refusal to
+# /dev/null, so their result is empty). Three asked for `java -version`: not
+# found. s3
+# commons-csv-f9e7d792 tried to run compile.sh with the JDK's own bin
+# directory first on its PATH; the harness refused the command.
+#
+# DIRECT CALLS TO javac IN s3: one run, listed in direct-javac.txt.
+#
+# KNOWLEDGE OF THE FIX is not a violation and is counted by the analysis
+# script. Its rule marks three runs, each for a test the agent named after
+# the method it tests, which is also the name of a trigger test: m3
+# commons-lang-963c337d7 (testEquals, testHashCode), m3 commons-lang-9a92df9fa
+# (testIsCreatable), s3 commons-csv-10220941 (testWithHeaderComments). Nothing
+# an agent said or wrote names an issue, a pull request or a fix commit.
+#
+# REFUSED CALLS. The harness refused 9 calls in m3 (8 shell commands and one
+# write addressed to /tmp) and 8 in s3 (4 shell commands, 3 reads and one
+# write outside the working copy). The sandbox denied 16 s3 commands a hidden
+# program (12 python, 4 unzip) and no m3 command. audit.txt's counts agree.

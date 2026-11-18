@@ -1,0 +1,2 @@
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testThreeArgConstructor_withEmptyReaderAndTracking_bytesReadStaysZero()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLine_onEmptyInput_returnsNullAndSetsLastCharToEof()

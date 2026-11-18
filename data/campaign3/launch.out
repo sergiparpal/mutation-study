@@ -1,0 +1,65 @@
+CLI:    2.1.316 (Claude Code)  (/home/sergi/.local/share/claude/versions/2.1.316)
+model:  claude-sonnet-5
+commit: 41d1ffc64149217039e7b669ed582795862d16af
+start:  2026-11-18T13:29:53Z
+
+ 1  commons-lang-e0dba35f9     m3  ok
+ 1  commons-lang-e0dba35f9     s3  ok
+ 2  commons-lang-1d6ef29ce     s3  ok
+ 2  commons-lang-1d6ef29ce     m3  ok
+ 3  commons-csv-68b4b091       m3  ok
+ 3  commons-csv-68b4b091       s3  ok
+ 4  commons-lang-e992a498d     s3  ok
+ 4  commons-lang-e992a498d     m3  ok
+ 5  commons-lang-7e5906fb0     m3  ok
+ 5  commons-lang-7e5906fb0     s3  ok
+ 6  commons-lang-de0184561     s3  ok
+ 6  commons-lang-de0184561     m3  ok
+ 7  commons-lang-d4b4d8c35     m3  ok
+ 7  commons-lang-d4b4d8c35     s3  ok
+ 8  commons-lang-0edbb4ae0     s3  ok
+ 8  commons-lang-0edbb4ae0     m3  ok
+ 9  commons-lang-824837751     m3  ok
+ 9  commons-lang-824837751     s3  ok
+10  commons-lang-963c337d7     s3  ok
+10  commons-lang-963c337d7     m3  ok
+11  commons-csv-f9e7d792       m3  ok
+11  commons-csv-f9e7d792       s3  ok
+12  commons-lang-677e57f56     s3  ok
+12  commons-lang-677e57f56     m3  ok
+13  commons-lang-9a92df9fa     m3  ok
+13  commons-lang-9a92df9fa     s3  ok
+14  commons-lang-9288e2c95     s3  ok
+14  commons-lang-9288e2c95     m3  ok
+15  commons-csv-4a28ba82       m3  ok
+15  commons-csv-4a28ba82       s3  ok
+16  commons-csv-68f17d8a       s3  ok
+16  commons-csv-68f17d8a       m3  ok
+17  commons-lang-623235ebc     m3  ok
+17  commons-lang-623235ebc     s3  ok
+18  commons-lang-68c333308     s3  ok
+18  commons-lang-68c333308     m3  ok
+19  commons-lang-df1e91895     m3  ok
+19  commons-lang-df1e91895     s3  ok
+20  commons-lang-284be5d6a     s3  ok
+20  commons-lang-284be5d6a     m3  ok
+21  commons-csv-a6ee67ec       m3  ok
+21  commons-csv-a6ee67ec       s3  ok
+22  commons-cli-dc69e842       s3  ok
+22  commons-cli-dc69e842       m3  ok
+23  commons-csv-10220941       m3  ok
+23  commons-csv-10220941       s3  ok
+24  commons-csv-1d89cd5f       s3  ok
+24  commons-csv-1d89cd5f       m3  ok
+25  commons-lang-117a9ea79     m3  ok
+25  commons-lang-117a9ea79     s3  ok
+26  commons-csv-966b3851       s3  ok
+26  commons-csv-966b3851       m3  ok
+27  commons-lang-e4380908b     m3  ok
+27  commons-lang-e4380908b     s3  ok
+28  commons-lang-98dc24990     s3  ok
+28  commons-lang-98dc24990     m3  ok
+
+m3: 28 runs with a status, 28 packaged
+s3: 28 runs with a status, 28 packaged
+end:    2026-11-18T16:55:05Z

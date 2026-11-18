@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.ConversionAgentTest#testBinaryToHexDigitMsb0_4bitsWithPos()
+org.opentest4j.AssertionFailedError: expected: <D> but was: <d>
+    at org.apache.commons.lang3.ConversionAgentTest.testBinaryToHexDigitMsb0_4bitsWithPos(ConversionAgentTest.java:309)
+
+2) org.apache.commons.lang3.ConversionAgentTest#testIntToHexDigit()
+org.opentest4j.AssertionFailedError: expected: <A> but was: <a>
+    at org.apache.commons.lang3.ConversionAgentTest.testIntToHexDigit(ConversionAgentTest.java:841)
+
+Tests run: 117, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 117, failed: 2
+FAILURES!!!

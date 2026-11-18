@@ -1,0 +1,3 @@
+org.apache.commons.csv.CSVRecordAgentTest#testIsSetByIndexTooLargeThrows()
+org.apache.commons.csv.CSVRecordAgentTest#testIsSetByIndexNegativeThrows()
+org.apache.commons.csv.CSVRecordAgentTest#testIsSetByIndexFalseForNullValue()

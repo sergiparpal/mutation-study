@@ -1,0 +1,27 @@
+1) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISO()
+org.opentest4j.AssertionFailedError: expected: <P0000Y0M0DT0H0M0.000S> but was: <P0Y0M0DT0H0M0.000S>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatDurationISO(DurationFormatUtilsAgentTest.java:161)
+
+2) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationPatternMultipleOptionalBlocks()
+org.opentest4j.AssertionFailedError: expected: <(00)> but was: <(01)>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatDurationPatternMultipleOptionalBlocks(DurationFormatUtilsAgentTest.java:96)
+
+3) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodISOSameInstant()
+org.opentest4j.AssertionFailedError: expected: <P0000Y0M0DT0H0M0.000S> but was: <P0Y0M0DT0H0M0.000S>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatPeriodISOSameInstant(DurationFormatUtilsAgentTest.java:268)
+
+4) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatOptionalLiteralFollowsPrecedingNonLiteral()
+org.opentest4j.AssertionFailedError: expected: <3 days> but was: <3>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatOptionalLiteralFollowsPrecedingNonLiteral(DurationFormatUtilsAgentTest.java:353)
+
+5) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatWithLiteralToken()
+org.opentest4j.AssertionFailedError: expected: <abc> but was: <>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatWithLiteralToken(DurationFormatUtilsAgentTest.java:324)
+
+6) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodISOMonthDayBorrowAlgorithm()
+org.opentest4j.AssertionFailedError: expected: <P0000Y1M26DT0H0M0.000S> but was: <P0Y1M26DT0H0M0.000S>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatPeriodISOMonthDayBorrowAlgorithm(DurationFormatUtilsAgentTest.java:275)
+
+Tests run: 42, Failures: 6, Aborted: 0, Skipped: 0
+Test methods: 42, failed: 6
+FAILURES!!!

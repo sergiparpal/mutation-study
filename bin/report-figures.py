@@ -9,7 +9,8 @@ step (bin/analyze-agent-suites.sh).
 
 §3.1 to §3.8 are the first campaign and are computed here. §3.10 is the second
 campaign: this script runs bin/analyze-campaign2.py and
-bin/describe-campaign2.py and prints what they print.
+bin/describe-campaign2.py and prints what they print. §3.11 is the third: it
+runs bin/analyze-campaign3.py and bin/describe-campaign3.py.
 
 Conventions, all of them stated in the write-up:
 
@@ -261,6 +262,14 @@ def main():
     section("§3.10  Second campaign: descriptive figures")
     sys.stdout.flush()
     subprocess.run([sys.executable, "-B", "bin/describe-campaign2.py"], check=False)
+
+    # ---- §3.11 -----------------------------------------------------------
+    section("§3.11  Third campaign: the analysis fixed by its protocol")
+    sys.stdout.flush()
+    subprocess.run([sys.executable, "-B", "bin/analyze-campaign3.py"], check=False)
+    section("§3.11  Third campaign: descriptive figures")
+    sys.stdout.flush()
+    subprocess.run([sys.executable, "-B", "bin/describe-campaign3.py"], check=False)
 
 
 if __name__ == "__main__":

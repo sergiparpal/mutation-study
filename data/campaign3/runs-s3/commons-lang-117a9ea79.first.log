@@ -1,0 +1,26 @@
+1) org.apache.commons.lang3.time.FastDateFormatAgentTest#constructor_nullLocale_throwsNullPointerException()
+org.opentest4j.AssertionFailedError: Expected NullPointerException for a null locale
+    at org.apache.commons.lang3.time.FastDateFormatAgentTest.constructor_nullLocale_throwsNullPointerException(FastDateFormatAgentTest.java:137)
+
+2) org.apache.commons.lang3.time.FastDateFormatAgentTest#getInstance_nullPattern_throwsIllegalArgumentException()
+java.lang.NullPointerException: pattern
+    at java.base/java.util.Objects.requireNonNull(Objects.java:248)
+    at org.apache.commons.lang3.time.AbstractFormatCache.getInstance(AbstractFormatCache.java:221)
+    at org.apache.commons.lang3.time.FastDateFormat.getInstance(FastDateFormat.java:308)
+    at org.apache.commons.lang3.time.FastDateFormatAgentTest.getInstance_nullPattern_throwsIllegalArgumentException(FastDateFormatAgentTest.java:74)
+
+3) org.apache.commons.lang3.time.FastDateParserAgentTest#parseStringPositionCalendar_nonLenientCalendarWithInvalidField_throwsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Expected IllegalArgumentException for an out-of-range field on a non-lenient Calendar
+    at org.apache.commons.lang3.time.FastDateParserAgentTest.parseStringPositionCalendar_nonLenientCalendarWithInvalidField_throwsIllegalArgumentException(FastDateParserAgentTest.java:156)
+
+4) org.apache.commons.lang3.time.FastDatePrinterAgentTest#constructor_nullLocale_throwsNullPointerException()
+org.opentest4j.AssertionFailedError: Expected NullPointerException for a null locale
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.constructor_nullLocale_throwsNullPointerException(FastDatePrinterAgentTest.java:65)
+
+5) org.apache.commons.lang3.time.FastDatePrinterAgentTest#parsePattern_invalidPattern_throwsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Expected IllegalArgumentException for an invalid pattern
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.parsePattern_invalidPattern_throwsIllegalArgumentException(FastDatePrinterAgentTest.java:291)
+
+Tests run: 86, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 86, failed: 5
+FAILURES!!!

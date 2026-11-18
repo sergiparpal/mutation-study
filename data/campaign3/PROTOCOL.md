@@ -310,4 +310,36 @@ run on the subjects had been made.
 
 ## Deviations
 
-None.
+None in the procedure.
+
+**18 November 2026, at the audit, before any measurement: what was enforced.**
+Reading the transcripts showed that the sandbox did less than this protocol
+and the header of `bin/generate-postcutoff.sh` say. Nothing was changed for
+it: the 56 runs were over, and the scripts stay as they ran. The account is in
+`violations.txt`; in short:
+
+- The CLI gives sandboxed commands a temporary directory, `/tmp/claude-1000`
+  here. It is not private to a command, as `/tmp` itself is: it is the host's
+  directory, readable and writable from inside, shared by every command of
+  every run. During the campaign it also held the working files of the session
+  that prepared the campaign, among them the generator's dry run, with the
+  developers' tests for each fix. It has to be assumed that these were within
+  reach of every agent in both arms. No agent reached for them: no command in
+  the 56 transcripts lists that directory or names a path in it other than the
+  files the same run had put there.
+- The operating system's packages include released jars of Commons Lang
+  (3.14.0) and Commons CLI (1.6.0) under `/usr/share/java`, which the sandbox
+  does not hide. No agent opened one.
+- The Read tool, confined to the working copy, also reads the outputs the CLI
+  saves under the user's home when a command prints more than it passes on.
+- `mvn` is on the agents' `PATH`. One agent ran it; it can do nothing without
+  a local repository or the network.
+
+**How the violation rule is applied to it.** As written. Five runs read a file
+that is outside their working copy and not in a private `/tmp`: in four, a
+file the run had itself written in the shared temporary directory, and in one
+the CLI's saved copy of the output of the run's own command. Each of these
+files came from what is in the run's own working copy, and no run obtained
+anything from outside it. The rule has no exception for that, and none is made
+after the fact: the five runs are listed in `violations.txt` and left out of
+the primary analysis. They are in it again in the first sensitivity analysis.

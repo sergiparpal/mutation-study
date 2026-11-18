@@ -1,0 +1,19 @@
+1) org.apache.commons.lang3.builder.AbstractReflectionAgentTest#testStaticSetAccessibleNullObjectReturnsFalse()
+java.lang.NullPointerException
+    at org.apache.commons.lang3.builder.AbstractReflection.setAccessible(AbstractReflection.java:138)
+    at org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testStaticSetAccessibleNullObjectReturnsFalse(AbstractReflectionAgentTest.java:123)
+
+2) org.apache.commons.lang3.builder.AbstractReflectionAgentTest#testInstanceSetAccessibleNullFieldReturnsFalse()
+java.lang.NullPointerException
+    at org.apache.commons.lang3.builder.AbstractReflection.setAccessible(AbstractReflection.java:138)
+    at org.apache.commons.lang3.builder.AbstractReflection.setAccessible(AbstractReflection.java:215)
+    at org.apache.commons.lang3.builder.AbstractReflectionAgentTest$ConcreteReflection.exposeSetAccessible(AbstractReflectionAgentTest.java:63)
+    at org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testInstanceSetAccessibleNullFieldReturnsFalse(AbstractReflectionAgentTest.java:156)
+
+3) org.apache.commons.lang3.builder.AbstractReflectionAgentTest#testStaticSetAccessibleAlreadyAccessibleReturnsTrueEvenWhenFlagFalse()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.builder.AbstractReflectionAgentTest.testStaticSetAccessibleAlreadyAccessibleReturnsTrueEvenWhenFlagFalse(AbstractReflectionAgentTest.java:149)
+
+Tests run: 44, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 44, failed: 3, left out beforehand: 1
+FAILURES!!!

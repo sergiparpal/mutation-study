@@ -1,0 +1,42 @@
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testValuesNeverNullForEmptyRecord()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByIndexReturnsCorrespondingValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetParserReturnsNullWhenConstructedWithNullParser()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsMappedFalseWhenNoHeaderMapping()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIteratorReturnsValuesInOrder()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testToStringContainsCommentWhenPresent()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsSetByIndexTrueForNonNullValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testSerializationPreservesValuesCommentRecordNumberAndPositions()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetRecordNumber()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testToListContainsValuesInOrder()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetCharacterPosition()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testSizeMatchesValuesLength()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testPositionBoundaryValues()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testToListEditingDoesNotAffectRecord()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByIndexTooLargeThrows()	1	0	
+FAILED	method	org.apache.commons.csv.CSVRecordAgentTest#testIsSetByIndexTooLargeThrows()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testToMapEditingDoesNotAffectRecord()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testHasCommentTrueWhenPresent()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testHasCommentFalseWhenAbsent()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIteratorOnEmptyRecordHasNoNext()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testPutInReturnsSameMapInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testForEachLoopUsesIterableContract()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetBytePosition()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByIndexReturnsNullElement()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testValuesReturnsSameArrayReferenceNotACopy()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByNameThrowsIllegalStateWhenNoHeaderMapping()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testSerializationParserIsNullAfterDeserialization()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testToMapIsEmptyWhenRecordHasNoHeaders()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testToStringContainsValuesAndRecordNumber()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testSizeOfEmptyRecordIsZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByIndexOnEmptyRecordThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetCommentPresent()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByIndexNegativeThrows()	1	0	
+FAILED	method	org.apache.commons.csv.CSVRecordAgentTest#testIsSetByIndexNegativeThrows()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testStreamCountMatchesSize()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testStreamContainsValuesInOrder()	1	0	
+FAILED	method	org.apache.commons.csv.CSVRecordAgentTest#testIsSetByIndexFalseForNullValue()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsConsistentTrueWhenNoHeaderMapping()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testPutInWithNoHeadersDoesNotRemoveExistingEntries()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetCommentAbsentIsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByEnumThrowsWhenNoHeaderMapping()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsSetByNameFalseWhenNoHeaderMapping()	1	0	

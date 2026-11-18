@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.BitFieldAgentTest#testHighBitMaskShiftCount()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <-1>
+    at org.apache.commons.lang3.BitFieldAgentTest.testHighBitMaskShiftCount(BitFieldAgentTest.java:174)
+
+2) org.apache.commons.lang3.BitFieldAgentTest#testNegativeMaskConstructorEquivalence()
+org.opentest4j.AssertionFailedError: expected: <255> but was: <-1>
+    at org.apache.commons.lang3.BitFieldAgentTest.testNegativeMaskConstructorEquivalence(BitFieldAgentTest.java:207)
+
+Tests run: 22, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 22, failed: 2
+FAILURES!!!

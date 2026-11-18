@@ -1,0 +1,20 @@
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#getDisplayNameDelegatesToWrappedTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#constructorWrapsTimeZoneAndUnwrapReturnsEquivalentInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#setRawOffsetAlwaysThrowsUnsupportedOperationExceptionAndLeavesStateUnchanged()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#getOffsetByDateForFixedZoneIsAlwaysRawOffset()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#useDaylightTimeDelegatesToWrappedTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#getOffsetByDateDelegatesToWrappedTimeZoneAcrossDstBoundary()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#unwrapReturnsWrappedZoneForMultipleDistinctZones()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#hasSameRulesDelegatesToWrappedTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#toStringReturnsNonNullRepresentation()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#hashCodeIsConsistentAcrossRepeatedCalls()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#getRawOffsetDelegatesToWrappedTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#getIdDelegatesToWrappedTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#inDaylightTimeDelegatesToWrappedTimeZoneAcrossDstBoundary()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#getOffsetByFieldsDelegatesToWrappedTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#setIdAlwaysThrowsUnsupportedOperationExceptionAndLeavesStateUnchanged()	1	0	
+FAILED	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#cloneReturnsDistinctEquivalentInstance()	1	1	org.opentest4j.AssertionFailedError: expected: not same but was: <sun.util.calendar.ZoneInfo[id="America/New_York",offset=-18000000,dstSavings=3600000,useDaylight=true,transitions=235,lastRule=java.util.SimpleTimeZone[id=America/New_York,offset=-18000000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=3,startMonth=2,startDay=8,startDayOfWeek=1,startTime=7200000,startTimeMode=0,endMode=3,endMonth=10,endDay=1,endDayOfWeek=1,endTime=7200000,endTimeMode=0]]>
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#getDstSavingsDelegatesToWrappedTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#observesDaylightTimeDelegatesToWrappedTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#equalsIsReflexiveAndRejectsNullAndUnrelatedType()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#toZoneIdDelegatesToWrappedTimeZone()	1	0	

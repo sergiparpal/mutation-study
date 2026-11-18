@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.ArrayUtilsAgentTest#testToStringArrayWithNullElementThrowsWithoutDefault()
+org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.ArrayUtilsAgentTest.testToStringArrayWithNullElementThrowsWithoutDefault(ArrayUtilsAgentTest.java:954)
+
+2) org.apache.commons.lang3.ArrayUtilsAgentTest#testHashCodeNullIsZero()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <629>
+    at org.apache.commons.lang3.ArrayUtilsAgentTest.testHashCodeNullIsZero(ArrayUtilsAgentTest.java:252)
+
+Tests run: 109, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 109, failed: 2
+FAILURES!!!

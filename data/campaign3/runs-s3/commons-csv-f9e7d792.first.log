@@ -1,0 +1,30 @@
+1) org.apache.commons.csv.CSVParserAgentTest#testHeaderCommentDetectedWhenPresent()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.csv.CSVParserAgentTest.testHeaderCommentDetectedWhenPresent(CSVParserAgentTest.java:507)
+
+2) org.apache.commons.csv.CSVParserAgentTest#testConstructorNullReaderThrowsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.csv.CSVParserAgentTest.testConstructorNullReaderThrowsIllegalArgumentException(CSVParserAgentTest.java:137)
+Caused by: java.lang.NullPointerException: origin
+
+3) org.apache.commons.csv.CSVParserAgentTest#testConstructorNullFormatThrowsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.csv.CSVParserAgentTest.testConstructorNullFormatThrowsIllegalArgumentException(CSVParserAgentTest.java:147)
+Caused by: java.lang.NullPointerException: format
+
+4) org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapEmptyWhenNoHeaderConfigured()
+org.opentest4j.AssertionFailedError: expected: not <null>
+    at org.apache.commons.csv.CSVParserAgentTest.testGetHeaderMapEmptyWhenNoHeaderConfigured(CSVParserAgentTest.java:398)
+
+5) org.apache.commons.csv.CSVParserAgentTest#testParseReaderNullThrowsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.csv.CSVParserAgentTest.testParseReaderNullThrowsIllegalArgumentException(CSVParserAgentTest.java:78)
+Caused by: java.lang.NullPointerException: origin
+
+6) org.apache.commons.csv.LexerAgentTest#testReadEscapeReturnsCharacterFollowingEscape()
+org.opentest4j.AssertionFailedError: expected: <44> but was: <-1>
+    at org.apache.commons.csv.LexerAgentTest.testReadEscapeReturnsCharacterFollowingEscape(LexerAgentTest.java:234)
+
+Tests run: 87, Failures: 6, Aborted: 0, Skipped: 0
+Test methods: 87, failed: 6
+FAILURES!!!

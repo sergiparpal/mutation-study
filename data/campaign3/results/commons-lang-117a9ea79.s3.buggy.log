@@ -1,0 +1,19 @@
+1) org.apache.commons.lang3.time.FastDateFormatAgentTest#getTimeZone_returnsACopyThatCanBeMutatedWithoutAffectingTheFormatter()
+org.opentest4j.AssertionFailedError: expected: <1970-01-01 00:00:00> but was: <1970-01-01 00:02:03>
+    at org.apache.commons.lang3.time.FastDateFormatAgentTest.getTimeZone_returnsACopyThatCanBeMutatedWithoutAffectingTheFormatter(FastDateFormatAgentTest.java:382)
+
+2) org.apache.commons.lang3.time.FastDateFormatAgentTest#format_calendarObject_usesFormatterTimeZoneNotCalendarTimeZone()
+org.opentest4j.AssertionFailedError: expected: <1970-01-01 00:00:00> but was: <1970-01-01 00:02:03>
+    at org.apache.commons.lang3.time.FastDateFormatAgentTest.format_calendarObject_usesFormatterTimeZoneNotCalendarTimeZone(FastDateFormatAgentTest.java:180)
+
+3) org.apache.commons.lang3.time.FastDateFormatAgentTest#format_dateObject_usesFormatterTimeZone()
+org.opentest4j.AssertionFailedError: expected: <1970-01-01 00:00:00> but was: <1970-01-01 00:02:03>
+    at org.apache.commons.lang3.time.FastDateFormatAgentTest.format_dateObject_usesFormatterTimeZone(FastDateFormatAgentTest.java:172)
+
+4) org.apache.commons.lang3.time.FastDatePrinterAgentTest#constructor_nullTimeZone_throwsNullPointerException()
+org.opentest4j.AssertionFailedError: Expected NullPointerException for a null time zone
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.constructor_nullTimeZone_throwsNullPointerException(FastDatePrinterAgentTest.java:55)
+
+Tests run: 81, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 81, failed: 4, left out beforehand: 5
+FAILURES!!!

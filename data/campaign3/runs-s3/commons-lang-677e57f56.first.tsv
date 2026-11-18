@@ -1,0 +1,44 @@
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testStopWithoutStartThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testSplitClassConstructorAndAccessors()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetSplitTimeDeprecatedWithoutSplitThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testUnsplitAllowsSplitSuspendStopAgain()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testFormatTimeFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testSplitWithoutStartThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testMessageConstructorStoresMessage()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetTimeWithTimeUnit()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testToStringFormatWithMessage()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testStartAfterStopWithoutResetThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetTimeAndNanoTimeConsistencyAfterStop()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testDefaultConstructorInitialState()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testStartTwiceWithoutResetThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetSplitTimeDeprecatedMatchesSplitNanoTime()	1	0	
+FAILED	method	org.apache.commons.lang3.time.StopWatchAgentTest#testSplitTwiceThrows()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.IllegalStateException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testCreateReturnsUnstartedWatch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testSplitWithLabelWithoutStartThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testSuspendTwiceThrows()	1	0	
+FAILED	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetSplitsRecordsLabeledSplits()	1	1	org.opentest4j.AssertionFailedError: expected: <2> but was: <0>
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testSuspendAndResume()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetStopTimeDeprecatedWithoutStartThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetStopInstantWithoutStartThrows()	1	0	
+FAILED	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetSupplierDelegatesAndRecordsTime()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testResumeWithoutSuspendThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetStartAndStopTimeDeprecatedMatchInstants()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetStartInstantWithoutStartThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testUnsplitWithoutSplitThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testStartThenStopTransitionsState()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testCreateStartedReturnsStartedWatch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetStartTimeDeprecatedWithoutStartThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testToSplitStringFormatWithMessage()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testResetClearsStateAfterStop()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetSplitDurationWithoutSplitThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testFormatSplitTimeFormat()	1	0	
+FAILED	method	org.apache.commons.lang3.time.StopWatchAgentTest#testRunRunnableDelegatesAndRecordsTime()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testStopTwiceThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetSplitNanoTimeWithoutSplitThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testSplitClassEqualsAndHashCode()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetSplitDurationAndNanoTimeConsistency()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testSuspendWithoutStartThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testToStringFormatWithoutMessage()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetSplitsEmptyInitially()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testGetDurationMatchesNanoTime()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.StopWatchAgentTest#testResetThenStartSucceeds()	1	0	

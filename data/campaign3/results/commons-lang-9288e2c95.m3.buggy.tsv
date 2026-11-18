@@ -1,0 +1,16 @@
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToMillisSinceNullTreatedAsEpoch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToInstantNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToInstantWithDefaultBothNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToInstantWithDefaultNullInstant()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisEpoch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToMillisSinceFutureInstantIsNegative()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisNegativeOrdinary()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToInstantNonNull()	1	0	
+FAILED	method	org.apache.commons.lang3.time.InstantsAgentTest#testToMillisSinceInstantMaxOverflowsToLongMin()	1	1	org.opentest4j.AssertionFailedError: expected: <-9223372036854775808> but was: <9223372036854775807>
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisMaxOverflowsToLongMax()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToInstantWithDefaultNonNullInstant()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToMillisSinceEpoch()	1	0	
+FAILED	method	org.apache.commons.lang3.time.InstantsAgentTest#testToMillisSinceInstantMinOverflowsToLongMax()	1	1	org.opentest4j.AssertionFailedError: expected: <9223372036854775807> but was: <-9223372036854775808>
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisOrdinary()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.InstantsAgentTest#testToEpochMillisMinOverflowsToLongMin()	1	0	

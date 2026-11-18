@@ -1,0 +1,35 @@
+1) org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapWhitespaceExactlyAtTextLength()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <4>
+    at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapWhitespaceExactlyAtTextLength(TextHelpAppendableAgentTest.java:199)
+
+2) org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapDoesNotTreatTabAsWhitespace()
+org.opentest4j.AssertionFailedError: expected: <3> but was: <2>
+    at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapDoesNotTreatTabAsWhitespace(TextHelpAppendableAgentTest.java:193)
+
+3) org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapNoWhitespaceReturnsStartPosPlusWidth()
+org.opentest4j.AssertionFailedError: expected: <5> but was: <4>
+    at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapNoWhitespaceReturnsStartPosPlusWidth(TextHelpAppendableAgentTest.java:164)
+
+4) org.apache.commons.cli.help.TextHelpAppendableAgentTest#testIndexOfWrapFindsWhitespaceBeyondWidthWhenTextIsShort()
+org.opentest4j.AssertionFailedError: expected: <3> but was: <7>
+    at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testIndexOfWrapFindsWhitespaceBeyondWidthWhenTextIsShort(TextHelpAppendableAgentTest.java:176)
+
+5) org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendTableWithNullIsNoopEvenWhenOutputWouldFail()
+java.lang.NullPointerException
+    at org.apache.commons.cli.help.TextHelpAppendable.adjustTableFormat(TextHelpAppendable.java:154)
+    at org.apache.commons.cli.help.TextHelpAppendable.appendTable(TextHelpAppendable.java:244)
+    at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testAppendTableWithNullIsNoopEvenWhenOutputWouldFail(TextHelpAppendableAgentTest.java:339)
+
+6) org.apache.commons.cli.help.TextHelpAppendableAgentTest#testPrintWrappedProducesMultipleLinesWhenTextExceedsMaxWidth()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testPrintWrappedProducesMultipleLinesWhenTextExceedsMaxWidth(TextHelpAppendableAgentTest.java:361)
+
+7) org.apache.commons.cli.help.TextHelpAppendableAgentTest#testAppendTableWithNullIsNoop()
+java.lang.NullPointerException
+    at org.apache.commons.cli.help.TextHelpAppendable.adjustTableFormat(TextHelpAppendable.java:154)
+    at org.apache.commons.cli.help.TextHelpAppendable.appendTable(TextHelpAppendable.java:244)
+    at org.apache.commons.cli.help.TextHelpAppendableAgentTest.testAppendTableWithNullIsNoop(TextHelpAppendableAgentTest.java:331)
+
+Tests run: 39, Failures: 7, Aborted: 0, Skipped: 0
+Test methods: 39, failed: 7
+FAILURES!!!

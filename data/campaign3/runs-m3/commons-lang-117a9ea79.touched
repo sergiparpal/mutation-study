@@ -1,0 +1,3 @@
+./src/test/java/org/apache/commons/lang3/time/FastDateFormatAgentTest.java
+./src/test/java/org/apache/commons/lang3/time/FastDateParserAgentTest.java
+./src/test/java/org/apache/commons/lang3/time/FastDatePrinterAgentTest.java

@@ -1,0 +1,34 @@
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorVarargsWrapsConstructorExceptionInInvocationTargetException()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorVarargsNonPublicClassThrowsNoSuchMethodException()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.NoSuchMethodException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeExactConstructorVarargsNullArgsTreatedAsEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetAccessibleConstructorByTypesFound()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetAccessibleConstructorByTypesNonPublicClassReturnsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetAccessibleConstructorByTypesNullParameterTypesTreatedAsEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetAccessibleConstructorFromCtorNonPublicClassReturnsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorVarargsPrimitiveUnwrapping()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetMatchingAccessibleConstructorNullClassThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorVarargsAbstractClassThrowsInstantiationException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeExactConstructorVarargsPrimitiveTypeMismatchThrowsNoSuchMethodException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeExactConstructorExplicitTypesNullClassThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetMatchingAccessibleConstructorCompatibleFallback()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorVarargsCompatibleMatch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetAccessibleConstructorFromCtorReturnsEquivalentConstructor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeExactConstructorVarargsDoesNotFallBackToCompatibleMatch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorVarargsNullClassThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetMatchingAccessibleConstructorNoMatchReturnsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetMatchingAccessibleConstructorExactMatch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorVarargsHappyPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetAccessibleConstructorByTypesNullClassThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetAccessibleConstructorByTypesNotFound()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetAccessibleConstructorExactSignatureDoesNotFallBackToCompatible()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorExplicitTypesNullClassThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeExactConstructorExplicitTypesNullArgsAndTypesTreatedAsEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorVarargsNullArgsTreatedAsEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeExactConstructorVarargsHappyPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetAccessibleConstructorFromCtorNullThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorVarargsNoMatchThrowsNoSuchMethodException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeExactConstructorVarargsNullClassThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeExactConstructorExplicitTypesHappyPath()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testGetMatchingAccessibleConstructorNonPublicClassReturnsNull()	1	1	org.opentest4j.AssertionFailedError: expected: <null> but was: <public org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest$NonPublicTarget()>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorExplicitTypesNullArgsAndTypesTreatedAsEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.ConstructorUtilsAgentTest#testInvokeConstructorExplicitTypesHappyPath()	1	0	

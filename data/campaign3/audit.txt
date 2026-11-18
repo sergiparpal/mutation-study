@@ -1,0 +1,214 @@
+m3: 28 transcripts
+  commons-cli-dc69e842       commands=10  refused=1  denied=0  network=0 vcs=1 outside=1 other=0
+      [outside] cat <<'EOF' > /tmp/Calc.java public class Calc { public static void main(String[] args) { int indent = 30, maxWidth = 90; double indentFrac = indent *
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [vcs] git status --short 2>/dev/null || echo "not a git repo"
+          -> not a git repo
+  commons-csv-10220941       commands=10  refused=1  denied=0  network=1 vcs=0 outside=0 other=0
+      [network] ls target/classes >/dev/null 2>&1 || (echo "no target/classes, need to compile main first"; find . -maxdepth 2 -iname "pom.xml" -o -iname "build.gradl
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+  commons-csv-1d89cd5f       commands=13  refused=0  denied=0  network=0 vcs=0 outside=1 other=0
+      [outside] cd /tmp/ub_check && unzip -o -q /tmp/w-m8zpx0rO/_tools/lib/13-commons-io-2.22.0.jar -d extracted2 "org/apache/commons/io/input/UnsynchronizedBufferedR
+          -> Exit code 1 /bin/bash: line 2: cd: /tmp/ub_check: No such file or directory Error: class not found: extracted2/org/apache/commons/io/input/Unsynchroni
+  commons-csv-4a28ba82       commands=13  refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-csv-68b4b091       commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-csv-68f17d8a       commands=13  refused=0  denied=0  network=0 vcs=0 outside=2 other=0
+      [outside] javac -nowarn --release 8 -Xlint:deprecation -encoding UTF-8 -cp "target/classes:_tools/lib/01-junit-jupiter-5.14.3.jar:_tools/lib/02-junit-jupiter-ap
+          -> src/test/java/org/apache/commons/csv/CSVRecordAgentTest.java:43: warning: [deprecation] build() in Builder has been deprecated final CSVFormat format 
+      [outside] rm -rf /tmp/out_check && ./_tools/test.sh org.apache.commons.csv.CSVRecordAgentTest 2>&1 | tail -100
+          -> compiled OK Tests run: 33, Failures: 0, Aborted: 0, Skipped: 0 Test methods: 33, failed: 0 OK
+  commons-csv-966b3851       commands=10  refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-csv-a6ee67ec       commands=10  refused=0  denied=0  network=1 vcs=0 outside=0 other=0
+      [network] ls target/classes/org/apache/commons/csv/ 2>/dev/null | head -5 || echo "no classes"; mvn -q -o compile 2>&1 | tail -50
+          -> CSVException.class CSVFormat$1.class CSVFormat$Builder.class CSVFormat$Predefined.class CSVFormat.class [[1;31mERROR[m] [ERROR] Some problems were e
+  commons-csv-f9e7d792       commands=10  refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-0edbb4ae0     commands=9   refused=1  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-117a9ea79     commands=21  refused=2  denied=0  network=1 vcs=1 outside=1 other=0
+      [network] find . -iname "*.gradle*" -o -iname "pom.xml" | head -20
+          -> ./pom.xml
+      [outside] mkdir -p /tmp/fdp_check && cat > /tmp/fdp_check/Check.java << 'EOF' import org.apache.commons.lang3.time.*; import java.util.*; public class Check { p
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [vcs] ./_tools/test.sh org.apache.commons.lang3.time.FastDateFormatAgentTest org.apache.commons.lang3.time.FastDateParserAgentTest org.apache.commons.lang3.
+          -> Note: Some input files use or override a deprecated API. Note: Recompile with -Xlint:deprecation for details. compiled OK Tests run: 63, Failures: 0, 
+  commons-lang-1d6ef29ce     commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-284be5d6a     commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-623235ebc     commands=12  refused=0  denied=0  network=0 vcs=0 outside=2 other=0
+      [outside] javac -nowarn --release 8 -Xlint:deprecation -encoding UTF-8 -cp "target/classes:_tools/lib/01-junit-jupiter-5.14.1.jar:_tools/lib/02-junit-jupiter-ap
+          -> src/test/java/org/apache/commons/lang3/ArrayUtilsAgentTest.java:52: warning: [deprecation] add(int[],int,int) in ArrayUtils has been deprecated assert
+      [outside] rm -rf /tmp/out_check
+          -> (Bash completed with no output)
+  commons-lang-677e57f56     commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-68c333308     commands=10  refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-7e5906fb0     commands=12  refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-824837751     commands=11  refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-9288e2c95     commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-963c337d7     commands=6   refused=0  denied=0  network=0 vcs=0 outside=0 other=0  knew: names the trigger test testEquals; names the trigger test testHashCode
+  commons-lang-98dc24990     commands=5   refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-9a92df9fa     commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 other=0  knew: names the trigger test testIsCreatable
+  commons-lang-d4b4d8c35     commands=8   refused=0  denied=0  network=0 vcs=1 outside=0 other=0
+      [vcs] find . -maxdepth 2 -not -path './.git*' | head -50
+          -> . ./CONTRIBUTING.md ./pom.xml ./.vscode ./LICENSE.txt ./CODE_OF_CONDUCT.md ./.claude ./.claude/loop.md ./.claude/skills ./.claude/hooks ./.claude/.cc-
+  commons-lang-de0184561     commands=6   refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-df1e91895     commands=19  refused=2  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-e0dba35f9     commands=6   refused=0  denied=0  network=1 vcs=0 outside=0 other=0
+      [network] find . -iname "pom.xml" -o -iname "build.gradle" | head -5; echo "---"; grep -r "junit" pom.xml 2>/dev/null; echo "---tools---"; cat ./_tools/test.sh 
+          -> ./pom.xml --- <groupId>org.junit.jupiter</groupId> <artifactId>junit-jupiter</artifactId> <groupId>org.junit-pioneer</groupId> <artifactId>junit-pione
+  commons-lang-e4380908b     commands=10  refused=2  denied=0  network=0 vcs=0 outside=0 other=0
+  commons-lang-e992a498d     commands=6   refused=0  denied=0  network=0 vcs=0 outside=0 other=0
+  runs with a flagged command: 9 of 28; calls the harness refused: 9; commands the sandbox denied: 0; runs that touched another file: 0; runs that name the fix: 2
+
+s3: 28 transcripts
+  commons-cli-dc69e842       commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 inspect=0 javac=0 other=0
+  commons-csv-10220941       commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 inspect=1 javac=1 other=0  knew: names the trigger test testWithHeaderComments
+      [inspect] which jar javac java 2>&1; java -version 2>&1
+          -> Exit code 127 /usr/bin/javac /bin/bash: line 1: java: command not found
+      [javac] which jar javac java 2>&1; java -version 2>&1
+          -> Exit code 127 /usr/bin/javac /bin/bash: line 1: java: command not found
+  commons-csv-1d89cd5f       commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/csv/ExtendedBufferedReader.html') as f: content = f.read() # strip tags crudely for read
+          -> (Bash completed with no output)
+  commons-csv-4a28ba82       commands=18  refused=2  denied=2  network=0 vcs=0 outside=2 inspect=4 javac=3 other=0
+      [inspect] python3 -c " import re, html with open('api/org/apache/commons/csv/CSVFormat.html') as f: content = f.read() print(len(content)) "
+          -> Exit code 126 /bin/bash: line 7: /usr/bin/python3: Permission denied
+      [inspect] unzip -l lib/project.jar | grep -i 'org/apache/commons/csv/'
+          -> /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/project.jar | grep -i 'org/apache/commons/csv/'
+          -> /bin/bash: line 1: jar: command not found
+      [outside] mkdir -p /tmp/probe && cat > /tmp/probe/Probe.java <<'EOF' package org.apache.commons.csv; import java.io.Reader; public class Probe { void m() throws
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [inspect] mkdir -p /tmp/probe && cat > /tmp/probe/Probe.java <<'EOF' package org.apache.commons.csv; import java.io.Reader; public class Probe { void m() throws
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [javac] mkdir -p /tmp/probe && cat > /tmp/probe/Probe.java <<'EOF' package org.apache.commons.csv; import java.io.Reader; public class Probe { void m() throws
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [outside] mkdir -p /tmp/probe
+          -> (Bash completed with no output)
+      [javac] javac --release 8 -cp "lib/*" -d .probe/out .probe/org/apache/commons/csv/Probe.java && echo COMPILE_OK
+          -> COMPILE_OK
+      [javac] javac --release 8 -cp "lib/*" -d .probe/out .probe/org/apache/commons/csv/Probe2.java && echo COMPILE_OK
+          -> COMPILE_OK
+  commons-csv-68b4b091       commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 inspect=0 javac=0 other=0
+  commons-csv-68f17d8a       commands=7   refused=0  denied=1  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/csv/CSVRecord.html') as f: content = f.read() text = re.sub('<[^>]+>', '', content) text
+          -> Exit code 126 /bin/bash: line 15: /tmp/w-3AAvWqE0/.cc-writes/csvrecord.txt: No such file or directory /bin/bash: line 22: /usr/bin/python3: Permission
+  commons-csv-966b3851       commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/csv/CSVParser.html') as f: content = f.read() text = re.sub(r'<[^>]+>', '', content) tex
+          -> (Bash completed with no output)
+  commons-csv-a6ee67ec       commands=9   refused=0  denied=1  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/csv/CSVFormat.html') as f: content = f.read() print(len(content)) "
+          -> Exit code 126 /bin/bash: line 7: /usr/bin/python3: Permission denied
+  commons-csv-f9e7d792       commands=35  refused=5  denied=1  network=0 vcs=1 outside=16 inspect=2 javac=2 other=0
+      [vcs] find . -maxdepth 4 -not -path '*/.git*' | sort
+          -> . ./.bash_profile ./.bashrc ./.claude ./.claude/.cc-writes ./.claude/agents ./.claude/commands ./.claude/hooks ./.claude/launch.json ./.claude/loop.md
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/csv/CSVParser.html') as f: content = f.read() text = re.sub('<[^>]+>', ' ', content) tex
+          -> /bin/bash: line 19: /tmp/w-j05KbvOj/.start/CSVParser.txt: Not a directory /bin/bash: line 28: /usr/bin/python3: Permission denied
+      [outside] sed -e 's/<[^>]*>/ /g' api/org/apache/commons/csv/CSVParser.html | sed -e "s/&nbsp;/ /g; s/&amp;/\&/g; s/&lt;/</g; s/&gt;/>/g; s/&quot;/\"/g; s/&#39;/
+          -> 545 /tmp/csvparser.txt
+      [outside] mkdir -p /tmp/claude-1000/doc for f in CSVParser Lexer Token "Token.Type" "CSVParser.Builder" "CSVParser.CSVRecordIterator"; do out=$(echo "$f" | tr -
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [outside] mkdir -p /tmp/claude-1000/doc && sed -e 's/<[^>]*>/ /g' "api/org/apache/commons/csv/CSVParser.html" | sed -e "s/&nbsp;/ /g; s/&amp;/\&/g; s/&lt;/</g; 
+          -> 545 /tmp/claude-1000/doc/CSVParser.txt
+      [outside] sed -e 's/<[^>]*>/ /g' "api/org/apache/commons/csv/Lexer.html" | sed -e "s/&nbsp;/ /g; s/&amp;/\&/g; s/&lt;/</g; s/&gt;/>/g; s/&quot;/\"/g; s/&#39;/'/
+          -> 253 /tmp/claude-1000/doc/Lexer.txt
+      [outside] sed -e 's/<[^>]*>/ /g' "api/org/apache/commons/csv/Token.html" | sed -e "s/&nbsp;/ /g; s/&amp;/\&/g; s/&lt;/</g; s/&gt;/>/g; s/&quot;/\"/g; s/&#39;/'/
+          -> 157 /tmp/claude-1000/doc/Token.txt
+      [outside] sed -e 's/<[^>]*>/ /g' "api/org/apache/commons/csv/Token.Type.html" | sed -e "s/&nbsp;/ /g; s/&amp;/\&/g; s/&lt;/</g; s/&gt;/>/g; s/&quot;/\"/g; s/&#3
+          -> 158 /tmp/claude-1000/doc/TokenType.txt 188 /tmp/claude-1000/doc/CSVParserBuilder.txt 125 /tmp/claude-1000/doc/CSVRecordIterator.txt 471 total
+      [outside] cat /tmp/claude-1000/doc/CSVParser.txt | head -200
+          -> CSVParser <!-- try { if (location.href.indexOf('is-external=true') == -1) { parent.document.title="CSVParser"; } } catch(err) { } //--> var data = {"i
+      [outside] cat /tmp/claude-1000/doc/CSVParser.txt | sed -n '200,400p'
+          -> Creates a parser for the given String . static CSVParser parse &#8203;(java.net.URL url, java.nio.charset.Charset charset, org.apache.commons.csv.CSVF
+      [outside] cat /tmp/claude-1000/doc/CSVParser.txt | sed -n '400,545p'
+          -> public java.lang.String getHeaderComment() Gets the header comment, if any. The header comment appears before the header record. Returns: The header c
+      [outside] cat /tmp/claude-1000/doc/Lexer.txt
+          -> Lexer <!-- try { if (location.href.indexOf('is-external=true') == -1) { parent.document.title="Lexer"; } } catch(err) { } //--> var data = {"i0":10,"i
+      [outside] cat /tmp/claude-1000/doc/CSVParserBuilder.txt
+          -> CSVParser.Builder <!-- try { if (location.href.indexOf('is-external=true') == -1) { parent.document.title="CSVParser.Builder"; } } catch(err) { } //--
+      [outside] cat /tmp/claude-1000/doc/Token.txt
+          -> Token <!-- try { if (location.href.indexOf('is-external=true') == -1) { parent.document.title="Token"; } } catch(err) { } //--> var data = {"i0":10,"i
+      [outside] cat /tmp/claude-1000/doc/TokenType.txt
+          -> Token.Type <!-- try { if (location.href.indexOf('is-external=true') == -1) { parent.document.title="Token.Type"; } } catch(err) { } //--> var data = {
+      [outside] cat /tmp/claude-1000/doc/CSVRecordIterator.txt
+          -> CSVParser.CSVRecordIterator <!-- try { if (location.href.indexOf('is-external=true') == -1) { parent.document.title="CSVParser.CSVRecordIterator"; } }
+      [inspect] mkdyes=1; mkdir -p tests/org/apache/commons/csv && ls tests/org/apache/commons/csv && java -version 2>&1 && which javac && javac -version 2>&1
+          -> Exit code 127 /bin/bash: line 1: java: command not found
+      [javac] mkdyes=1; mkdir -p tests/org/apache/commons/csv && ls tests/org/apache/commons/csv && java -version 2>&1 && which javac && javac -version 2>&1
+          -> Exit code 127 /bin/bash: line 1: java: command not found
+      [javac] ls /usr/lib/jvm/ 2>&1; echo "---"; find / -maxdepth 4 -iname "javac" 2>/dev/null
+          -> java-1.11.0-openjdk-amd64 java-11-openjdk-amd64 openjdk-11 --- /etc/alternatives/javac /usr/bin/javac
+      [outside] cat /tmp/claude-1000/doc/CSVParser.txt | sed -n '1,60p' | tail -20
+          -> Nested | Field | Constr | Method Detail: Field | Constr | Method <!-- $('.navPadding').css('padding-top', $('.fixedNav').css("height")); //--> Package
+      [outside] cat /tmp/claude-1000/doc/Lexer.txt | sed -n '55,80p'
+          -> org.apache.commons.csv.Lexer All Implemented Interfaces: java.io.Closeable , java.lang.AutoCloseable final class Lexer extends java.lang.Object implem
+  commons-lang-0edbb4ae0     commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 inspect=0 javac=0 other=0
+  commons-lang-117a9ea79     commands=12  refused=0  denied=1  network=0 vcs=0 outside=0 inspect=3 javac=1 other=0
+      [inspect] python3 -c " import re,sys with open('api/org/apache/commons/lang3/time/FastDateFormat.html') as f: html = f.read() print(len(html)) "
+          -> Exit code 126 /bin/bash: line 7: /usr/bin/python3: Permission denied
+      [inspect] jar tf lib/project.jar | grep -i "time/FastDate"
+          -> /bin/bash: line 1: jar: command not found
+      [inspect] which javac java; ls /usr/lib/jvm/ 2>/dev/null; find / -maxdepth 4 -iname "jar" -type f 2>/dev/null | head
+          -> /usr/bin/javac java-1.11.0-openjdk-amd64 java-11-openjdk-amd64 openjdk-11
+      [javac] which javac java; ls /usr/lib/jvm/ 2>/dev/null; find / -maxdepth 4 -iname "jar" -type f 2>/dev/null | head
+          -> /usr/bin/javac java-1.11.0-openjdk-amd64 java-11-openjdk-amd64 openjdk-11
+  commons-lang-1d6ef29ce     commands=6   refused=0  denied=1  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] python3 -I -c " import re with open('api/org/apache/commons/lang3/CharRange.html') as f: html = f.read() text = re.sub('<[^>]+>', '', html) import htm
+          -> Exit code 126 /bin/bash: line 9: /usr/bin/python3: Permission denied
+  commons-lang-284be5d6a     commands=7   refused=0  denied=1  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] find tests -type f && echo --- && unzip -l lib/junit-jupiter-api-5.14.4.jar | grep -i Assertions | head
+          -> --- /bin/bash: line 1: /usr/bin/unzip: Permission denied
+  commons-lang-623235ebc     commands=15  refused=1  denied=0  network=0 vcs=1 outside=0 inspect=0 javac=0 other=0
+      [vcs] git status 2>/dev/null; ls -la; find tests -type f
+          -> total 32 drwx------ 7 sergi sergi 4096 Nov 18 07:25 . drwxr-xr-x 4 sergi sergi 80 Nov 18 07:25 .. crw-rw-rw- 1 nobody nogroup 1, 3 Nov 18 03:11 .bash_
+  commons-lang-677e57f56     commands=8   refused=0  denied=0  network=0 vcs=1 outside=0 inspect=1 javac=0 other=0
+      [vcs] find . -maxdepth 3 -not -path './.git*' | sort
+          -> . ./.bash_profile ./.bashrc ./.claude ./.claude/.cc-writes ./.claude/agents ./.claude/commands ./.claude/hooks ./.claude/launch.json ./.claude/loop.md
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/lang3/time/StopWatch.html') as f: content = f.read() text = re.sub(r'<[^>]+>', '', conte
+          -> (Bash completed with no output)
+  commons-lang-68c333308     commands=11  refused=0  denied=1  network=0 vcs=0 outside=0 inspect=2 javac=0 other=0
+      [inspect] cd /tmp/w-sdd9UgOR/api/org/apache/commons/lang3/time && python3 -c " import re,html with open('FastDatePrinter.html') as f: s = f.read() s = re.sub(r'
+          -> (Bash completed with no output)
+      [inspect] which python3; python3 --version
+          -> Exit code 126 /bin/bash: line 1: /usr/bin/python3: Permission denied
+  commons-lang-7e5906fb0     commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 inspect=0 javac=0 other=0
+  commons-lang-824837751     commands=10  refused=0  denied=1  network=0 vcs=0 outside=0 inspect=4 javac=1 other=0
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/lang3/reflect/ConstructorUtils.html') as f: content = f.read() content = re.sub(r'<[^>]+
+          -> <persisted-output> Output too large (33.8KB). Full output saved to: /home/sergi/.claude/projects/-tmp-w-qHFCqcgA/25fb86ae-0cab-45fd-beb9-f10603f88839/
+      [inspect] unzip -l lib/junit-jupiter-api-5.14.4.jar | grep -E "Assertions.class|Executable.class|Assumptions.class"
+          -> /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/junit-jupiter-api-5.14.4.jar | grep -E "Assertions.class|Executable.class"
+          -> /bin/bash: line 1: jar: command not found
+      [inspect] which javac java 2>&1; ls /usr/lib/jvm/java-11-openjdk-amd64/bin/ 2>&1
+          -> /usr/bin/javac javac
+      [javac] which javac java 2>&1; ls /usr/lib/jvm/java-11-openjdk-amd64/bin/ 2>&1
+          -> /usr/bin/javac javac
+  commons-lang-9288e2c95     commands=5   refused=0  denied=0  network=0 vcs=0 outside=0 inspect=0 javac=0 other=0
+  commons-lang-963c337d7     commands=9   refused=0  denied=1  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] cd /tmp/w-9m6uZZb0/api/org/apache/commons/lang3/time && python3 -c " import re,html with open('ImmutableTimeZone.html') as f: content = f.read() conte
+          -> /bin/bash: line 19: /usr/bin/python3: Permission denied
+  commons-lang-98dc24990     commands=5   refused=0  denied=1  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] cat /tmp/w-EwxCApQu/api/org/apache/commons/lang3/BitField.html | python3 -c " import sys,re,html s=sys.stdin.read() s=re.sub(r'<[^>]+>', ' ', s) s=htm
+          -> Exit code 126 /bin/bash: line 18: /usr/bin/python3: Permission denied
+  commons-lang-9a92df9fa     commands=5   refused=0  denied=0  network=0 vcs=0 outside=0 inspect=0 javac=0 other=0
+  commons-lang-d4b4d8c35     commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] which lynx w3m html2text pandoc 2>/dev/null; python3 --version 2>/dev/null; echo done
+          -> done
+  commons-lang-de0184561     commands=4   refused=0  denied=0  network=0 vcs=0 outside=0 inspect=0 javac=0 other=0
+  commons-lang-df1e91895     commands=10  refused=0  denied=1  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] python3 -c " import re,html data = open('api/org/apache/commons/lang3/reflect/TypeUtils.html').read() print(len(data)) "
+          -> Exit code 126 /bin/bash: line 6: /usr/bin/python3: Permission denied
+  commons-lang-e0dba35f9     commands=5   refused=0  denied=1  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/lang3/time/FastDateParser.html') as f: c = f.read() c = re.sub(r'<[^>]+>', '', c) c = ht
+          -> /bin/bash: line 8: /usr/bin/python3: Permission denied
+  commons-lang-e4380908b     commands=10  refused=0  denied=1  network=0 vcs=0 outside=0 inspect=3 javac=1 other=0
+      [inspect] ls -R tests/ 2>/dev/null; unzip -l lib/junit-jupiter-api-5.14.4.jar | grep -E "Assertions|Test\.class|DisplayName" | head -30
+          -> tests/: /bin/bash: line 1: /usr/bin/unzip: Permission denied
+      [inspect] jar tf lib/junit-jupiter-api-5.14.4.jar | grep -E "^org/junit/jupiter/api/(Test|Assertions|DisplayName)\.class"
+          -> /bin/bash: line 1: jar: command not found
+      [inspect] which java javac; java -version 2>&1; ls /usr/lib/jvm/ 2>/dev/null
+          -> /usr/bin/javac /bin/bash: line 1: java: command not found java-1.11.0-openjdk-amd64 java-11-openjdk-amd64 openjdk-11
+      [javac] which java javac; java -version 2>&1; ls /usr/lib/jvm/ 2>/dev/null
+          -> /usr/bin/javac /bin/bash: line 1: java: command not found java-1.11.0-openjdk-amd64 java-11-openjdk-amd64 openjdk-11
+  commons-lang-e992a498d     commands=5   refused=0  denied=1  network=0 vcs=0 outside=0 inspect=1 javac=0 other=0
+      [inspect] python3 -c " import re,html with open('api/org/apache/commons/lang3/math/Fraction.html') as f: s = f.read() s = re.sub(r'<[^>]+>', ' ', s) s = html.un
+          -> /bin/bash: line 9: /usr/bin/python3: Permission denied
+  runs with a flagged command: 21 of 28; calls the harness refused: 8; commands the sandbox denied: 16; runs that touched another file: 0; runs that name the fix: 1
+

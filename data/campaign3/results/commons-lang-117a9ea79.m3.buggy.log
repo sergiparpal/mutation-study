@@ -1,0 +1,23 @@
+1) org.apache.commons.lang3.time.FastDateParserAgentTest#testGetTimeZoneReturnsDefensiveCopy()
+org.opentest4j.AssertionFailedError: expected: <GMT> but was: <MUTATED>
+    at org.apache.commons.lang3.time.FastDateParserAgentTest.testGetTimeZoneReturnsDefensiveCopy(FastDateParserAgentTest.java:183)
+
+2) org.apache.commons.lang3.time.FastDateParserAgentTest#testToStringContainsPatternLocaleAndTimeZone()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.time.FastDateParserAgentTest.testToStringContainsPatternLocaleAndTimeZone(FastDateParserAgentTest.java:204)
+
+3) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testGetTimeZoneReturnsDefensiveCopy()
+org.opentest4j.AssertionFailedError: expected: <GMT> but was: <MUTATED>
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testGetTimeZoneReturnsDefensiveCopy(FastDatePrinterAgentTest.java:165)
+
+4) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorNullTimeZoneThrows()
+org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testConstructorNullTimeZoneThrows(FastDatePrinterAgentTest.java:51)
+
+5) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testToStringContainsPatternLocaleAndTimeZone()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testToStringContainsPatternLocaleAndTimeZone(FastDatePrinterAgentTest.java:194)
+
+Tests run: 63, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 63, failed: 5
+FAILURES!!!

@@ -1,0 +1,42 @@
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testGetMaxLengthEstimateIsPositiveAndDeterministic()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatDateUsesGregorianCalendarFields()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testGettersReturnConstructorArguments()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testEqualsNullAndForeignTypeReturnFalse()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatCalendarSameTimeZoneAsPrinter()	1	0	
+FAILED	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testParsePatternRejectsUnterminatedQuote()	1	1	org.opentest4j.AssertionFailedError: Expected IllegalArgumentException for an invalid (unterminated quote) pattern
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatRfc822TimeZoneAtZeroOffset()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testEqualsReturnsFalseForDifferentPattern()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatLongIntoStringBufferAppendsAndReturnsSameBuffer()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatSingleLetterPatternHasNoLeadingZeroPadding()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatRfc822AndIso8601TimeZoneAtNegativeOffset()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatCalendarIntoAppendableReturnsSameInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatDoubleLetterPatternPadsToTwoDigits()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatLongBasicDatePattern()	1	0	
+FAILED	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testSelectNumberRuleReturnsNonNullRuleForVariousPadding()	1	1	java.lang.IllegalArgumentException
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatAbbreviatedAndFullWeekdayNames()	1	0	
+FAILED	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorRejectsNullLocale()	1	1	org.opentest4j.AssertionFailedError: Expected NullPointerException for null locale
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testLocaleStyleConstantsAreDistinct()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testToStringIsNotNullOrEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatObjectAcceptsDateCalendarAndLongConsistently()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testEqualsReturnsFalseForDifferentLocale()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testGetTimeZoneDisplayMatchesTimeZoneApi()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatDateIntoStringBufferAppendsAndReturnsSameBuffer()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatMillisecondPatternPadsToThreeDigits()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatAbbreviatedAndFullMonthNames()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorRejectsNullPattern()	1	0	
+FAILED	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorRejectsNullTimeZone()	1	1	org.opentest4j.AssertionFailedError: Expected NullPointerException for null timeZone
+FAILED	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatIso8601ExtendedTimeZoneAtZeroOffset()	1	1	org.opentest4j.AssertionFailedError: expected: <+00:00> but was: <Z>
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testEqualsIsReflexive()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testGetMaxLengthEstimateBoundsActualFormattedLength()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatLiteralQuotedText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatCalendarIntoStringBufferAppendsAndReturnsSameBuffer()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testParsePatternReturnsEmptyListForEmptyPattern()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testEqualsReturnsFalseForDifferentTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testEqualsAndHashCodeForEquivalentConstructorArguments()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testDeprecatedFormatObjectReturnsSuppliedBuffer()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatDateIntoAppendableReturnsSameInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatLongIntoAppendableReturnsSameInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testApplyRulesFormatsIntoAndReturnsSuppliedBuffer()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testClearDoesNotBreakSubsequentTimeZoneDisplayLookups()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatCalendarUsesPrinterTimeZoneNotCalendarTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testParsePatternReturnsNonEmptyListForValidPattern()	1	0	

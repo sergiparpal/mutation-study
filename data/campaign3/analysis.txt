@@ -1,0 +1,96 @@
+Runs
+  m3: 28 runs of 28, 28 with an accepted suite; $13.75 at list prices, 18.2 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['41d1ffc']
+      tests left out at acceptance: 0 of 1217 (0.0%)
+  s3: 28 runs of 28, 28 with an accepted suite; $21.34 at list prices, 16.2 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['41d1ffc']
+      tests left out at acceptance: 63 of 1558 (4.0%)
+
+Violations listed in violations.txt: 5
+  m3 commons-csv-1d89cd5f
+  m3 commons-lang-df1e91895
+  s3 commons-csv-f9e7d792
+  s3 commons-lang-623235ebc
+  s3 commons-lang-824837751
+
+========================================================================
+PRIMARY ANALYSIS (runs with a violation left out)
+  H1, paired set: 23 subjects
+      detection  m3 8/23 (34.8%)   s3 5/23 (21.7%)
+      both 5, m3 only 3, s3 only 0, neither 15
+      exact McNemar, two-sided: p = 0.25
+      difference +13.0 points, 95% bootstrap interval [+0.0, +26.1]
+========================================================================
+
+Decision, by the rule fixed in the protocol:
+  H1 not rejected: this corpus does not show a difference between the arms.
+  That is not evidence that there is none; the interval above says what it allows.
+
+Subjects outside the paired set
+  commons-lang-824837751: s3: violation
+  commons-csv-f9e7d792: m3: Broken (does not compile against the buggy revision); s3: violation
+  commons-lang-623235ebc: s3: violation
+  commons-lang-df1e91895: m3: violation
+  commons-csv-1d89cd5f: m3: violation
+
+SENSITIVITY ANALYSES (none confirmatory)
+  1. Runs with a violation included: 27 subjects
+      detection  m3 9/27 (33.3%)   s3 6/27 (22.2%)
+      both 6, m3 only 3, s3 only 0, neither 18
+      exact McNemar, two-sided: p = 0.25
+      difference +11.1 points, 95% bootstrap interval [+0.0, +22.2]
+  2. Intention to treat (every subject; no suite or no verdict counts as not detected; runs with a violation as measured): 28 subjects
+      detection  m3 9/28 (32.1%)   s3 6/28 (21.4%)
+      both 6, m3 only 3, s3 only 0, neither 19
+      exact McNemar, two-sided: p = 0.25
+      difference +10.7 points, 95% bootstrap interval [+0.0, +21.4]
+  3. Runs whose transcript names the fix: 3 (m3 commons-lang-963c337d7, m3 commons-lang-9a92df9fa, s3 commons-csv-10220941)
+     with those runs left out: 20 subjects
+      detection  m3 7/20 (35.0%)   s3 5/20 (25.0%)
+      both 5, m3 only 2, s3 only 0, neither 13
+      exact McNemar, two-sided: p = 0.5
+      difference +10.0 points, 95% bootstrap interval [+0.0, +25.0]
+  4. Verdicts that are Fail by timeout: 0
+  5. s3 runs in which the agent called javac itself: 1 (commons-csv-4a28ba82)
+     with those runs left out: 22 subjects
+      detection  m3 8/22 (36.4%)   s3 5/22 (22.7%)
+      both 5, m3 only 3, s3 only 0, neither 14
+      exact McNemar, two-sided: p = 0.25
+      difference +13.6 points, 95% bootstrap interval [+0.0, +27.3]
+
+DESCRIPTIVE (no test of this protocol)
+By corpus the subject was mined for
+  matched corpus: 15 subjects
+      detection  m3 4/15 (26.7%)   s3 2/15 (13.3%)
+      both 2, m3 only 2, s3 only 0, neither 11
+      exact McNemar, two-sided: p = 0.5
+      difference +13.3 points, 95% bootstrap interval [+0.0, +33.3]
+  first corpus: 10 subjects
+      detection  m3 4/10 (40.0%)   s3 3/10 (30.0%)
+      both 3, m3 only 1, s3 only 0, neither 6
+      exact McNemar, two-sided: p = 1
+      difference +10.0 points, 95% bootstrap interval [+0.0, +30.0]
+By project
+  commons-cli   n= 1  m3 detected 0  s3 detected 0
+  commons-csv   n= 6  m3 detected 0  s3 detected 0
+  commons-lang  n=16  m3 detected 8  s3 detected 5
+By fault type (subjects of the matched corpus, as classified when it was built)
+  ALGORITHM       n= 2  m3 detected 0  s3 detected 0
+  MISSING_CLAUSE  n= 0  m3 detected 0  s3 detected 0
+  OMISSION        n= 8  m3 detected 3  s3 detected 1
+  STATE           n= 2  m3 detected 1  s3 detected 1
+  SUBSTITUTION    n= 3  m3 detected 0  s3 detected 0
+
+THE SECOND CAMPAIGN BESIDE THE THIRD (descriptive: the campaigns differ in more
+than the date of the faults, see the protocol)
+  second campaign, Defects4J:   m2 22/39 (56.4%)   s2 7/39 (17.9%)   difference +38.5 points
+  third campaign, post-cutoff:  m3 8/23 (34.8%)   s3 5/23 (21.7%)   difference +13.0 points
+  difference between the two differences -25.4 points, 95% bootstrap interval [-46.9, -2.3]
+
+THE EARLIER POST-CUTOFF RUNS BESIDE THIS CAMPAIGN (descriptive)
+  implementation-visible, 19 subjects with a valid verdict in both: earlier 13, m3 7, both 7
+      earlier only: commons-lang-0edbb4ae0, commons-lang-677e57f56, commons-lang-623235ebc, commons-lang-284be5d6a, commons-cli-dc69e842, commons-csv-10220941
+      m3 only: none
+  specification-only, 11 subjects with a valid verdict in both: earlier 2, s3 1, both 1
+      earlier only: commons-lang-963c337d7
+      s3 only: none

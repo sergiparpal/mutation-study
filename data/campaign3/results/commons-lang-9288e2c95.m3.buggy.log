@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.time.InstantsAgentTest#testToMillisSinceInstantMaxOverflowsToLongMin()
+org.opentest4j.AssertionFailedError: expected: <-9223372036854775808> but was: <9223372036854775807>
+    at org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceInstantMaxOverflowsToLongMin(InstantsAgentTest.java:122)
+
+2) org.apache.commons.lang3.time.InstantsAgentTest#testToMillisSinceInstantMinOverflowsToLongMax()
+org.opentest4j.AssertionFailedError: expected: <9223372036854775807> but was: <-9223372036854775808>
+    at org.apache.commons.lang3.time.InstantsAgentTest.testToMillisSinceInstantMinOverflowsToLongMax(InstantsAgentTest.java:116)
+
+Tests run: 16, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 16, failed: 2
+FAILURES!!!

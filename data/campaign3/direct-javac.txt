@@ -1,0 +1,27 @@
+# Third campaign: s3 runs in which the agent called javac itself, where its
+# prompt says to compile through compile.sh and nothing else. One per line:
+# arm, subject, reason. Lines that begin with # are notes.
+#
+# Not violations (PROTOCOL.md, "Exclusions"): these runs stay in the primary
+# analysis and are left out in the fifth sensitivity analysis.
+
+s3 commons-csv-4a28ba82     compiled two scratch classes of its own with javac, to see whether the methods it meant to call exist
+
+# Decided on 18 November 2026 from the transcripts, before any suite was
+# measured. Every s3 command that names javac was read whole.
+#
+# s3 commons-csv-4a28ba82 wrote .probe/org/apache/commons/csv/Probe.java and
+# Probe2.java in its working copy, two classes in the project's package that
+# call methods of CSVFormat, CSVParser, CSVPrinter and CSVRecord, and compiled
+# each once with `javac --release 8 -cp "lib/*" -d .probe/out`. Both compiled.
+# It removed .probe each time. An earlier attempt, with the file in /tmp, was
+# refused by the harness. Before that it had tried to list lib/project.jar
+# with unzip and with jar, and failed (violations.txt). The compiler was given
+# no option that executes code, no code from lib/ was run, and nothing in it
+# was printed, unpacked or disassembled.
+#
+# The other s3 commands that name javac do not call it on a source file: six,
+# in five runs, ask where it is or which launchers the JDK has
+# (commons-csv-10220941, commons-csv-f9e7d792 twice, commons-lang-117a9ea79,
+# commons-lang-824837751, commons-lang-e4380908b), and one of those would
+# have printed its version had the command before it not failed.
