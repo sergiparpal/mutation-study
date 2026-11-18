@@ -844,6 +844,8 @@ on the sample. `bin/run-campaign2.sh` makes the runs in the order it fixes and
 | Operator's profile | in force: settings, memory, plugins | ignored; memory off |
 | S arm, running or unpacking `lib/` | forbidden by the prompt | forbidden by the prompt, and of the JDK's launchers only `javac` can be read; `unzip`, `python` and `perl` are hidden |
 | Model | the alias `sonnet`, which resolved to `claude-sonnet-5` | `claude-sonnet-5`, by id |
+| Reasoning effort | inherited from the operator's configuration, `xhigh` | the CLI's default: no flag is passed and the operator's configuration is not read |
+| Tools | `Read`, `Write`, `Bash` | `Read`, `Write`, `Edit`, `Glob`, `Grep`, `Bash` |
 | Record of a run | the closing message | every message |
 | Prompts | share two instructions | differ only in what the arm requires |
 | Acceptance | an M suite must pass whole; S tests are disabled one by one | tests are disabled one by one in both |
@@ -1052,7 +1054,9 @@ analysis script does not. None of it is a test.
 
 Descriptive, as the protocol says: the campaigns differ in more than the
 benchmark's metadata, so the difference between the M arms is an upper bound
-on what the metadata accounts for.
+on what the metadata accounts for. Reasoning effort is among the differences
+(table above), and the second campaign's suites cost less than half of what
+the first's did at list prices: $0.40 and $0.58 against $1.07 and $0.93.
 
 - **M arms**, on the 36 bugs with a verdict in both. The first campaign's
   detected 26 and `m2` detects 20, all 20 among the 26. The six lost are

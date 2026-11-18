@@ -105,8 +105,8 @@ table above:
   knew one or the other, and one of the eleven is the developer's own test,
   copied from a backup the checkout leaves in the tree. The second campaign
   removes all of it and the arm detects six fewer of 36 bugs. The campaigns
-  differ in other ways too, so six is an upper bound on what the metadata
-  added, not a measurement of it.
+  differ in other ways too, reasoning effort and prompts among them, so six
+  is an upper bound on what the metadata added, not a measurement of it.
 - **The second campaign is the same forty bugs.** Its analysis was fixed
   before its runs, with the first campaign's results already known. It shows
   that the effect survives control on new runs. It does not show that it holds

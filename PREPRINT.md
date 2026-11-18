@@ -128,13 +128,14 @@ Contributions:
    alongside detection register far less of the difference than detection
    does. This bears directly on how agent-written suites are currently
    evaluated and on proposals to use mutation feedback to improve them.
-3. A measurement of what a standard Defects4J checkout adds on top of the
-   repaired code. The checkout ships the fix commit in its git history, with a
-   subject line naming the fault, and Defects4J's own metadata: the bug
-   identifier, the names of the trigger tests and backup copies of developer
-   test classes. In the first campaign the agent used the metadata, and we
-   report the evidence (§3.9). With all of it removed the
-   implementation-visible arm detects 20 of the 36 bugs it had detected 26 of.
+3. A bound on what a standard Defects4J checkout adds on top of the repaired
+   code. The checkout ships the fix commit in its git history, with a subject
+   line naming the fault, and Defects4J's own metadata: the bug identifier,
+   the names of the trigger tests and backup copies of developer test classes.
+   In the first campaign the agent used the metadata, and we report the
+   evidence (§3.9). With all of it removed, in a campaign that differs from
+   the first in other ways as well, the implementation-visible arm detects 20
+   of the 36 bugs it had detected 26 of.
 4. Evidence that an instruction is not a control. Told not to inspect the
    compiled classes, 22 of 40 specification-only agents tried, in runs where a
    sandbox stopped them and a transcript shows it. Studies that restrict an
@@ -1092,10 +1093,10 @@ spread across projects that §3.4 describes does not recur, and neither does
 the support it seemed to give to documentation density as an explanation.
 
 **The first campaign beside the second.** This comparison is descriptive. The
-campaigns differ in prompts, acceptance, isolation, harness version and date
-as well as in the benchmark's metadata, so the difference between the two
-implementation-visible arms is an upper bound on what the metadata accounts
-for, not a measurement of it.
+campaigns differ in prompts, tools, reasoning effort, acceptance, isolation,
+harness version and date as well as in the benchmark's metadata (§2.10), so
+the difference between the two implementation-visible arms is an upper bound
+on what the metadata accounts for, not a measurement of it.
 
 | | first campaign | second campaign |
 |---|---|---|
@@ -1138,7 +1139,11 @@ S2 mutation score falls by a sixth and detection by more than half.
 
 **Cost.** At list prices the 40 M2 runs cost $16.18 and the 40 S2 runs $23.07,
 or $0.40 and $0.58 a suite, in 18 and 14 turns a run on average. Like the
-first campaign's, they were made against a subscription quota.
+first campaign's, they were made against a subscription quota. The first
+campaign's suites cost $1.07 and $0.93 (§3.6). The lower figures fit the
+difference in reasoning effort between the campaigns, which is one more
+reason not to read the distance between them as the effect of the metadata
+alone.
 
 ---
 
