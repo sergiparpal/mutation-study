@@ -1239,7 +1239,9 @@ the reasons for each decision. In short:
      classes for each fix, renamed, in archives, and each subject's trigger
      tests by name. Whether an agent could list those subdirectories was not
      tried; nothing in the settings hides them, so it is assumed they were
-     within reach of every agent in both arms. **No agent reached for them.**
+     within reach of every agent in both arms. (Tried after the analysis,
+     without a model: they were. See "The sandbox after the third campaign".)
+     **No agent reached for them.**
      No command in the 56 transcripts lists that directory or names a path in
      it other than the files the same run had just put there. Five commands
      searched the whole file system by name. One of them, by the `m3` agent of
@@ -1388,6 +1390,75 @@ was done that the protocol does not provide for and that changes no script it
 fixes and no figure of its analysis: `bin/describe-campaign3.py`, written
 after the runs.
 
+## The sandbox after the third campaign
+
+The third campaign's audit found the sandbox of both campaigns doing less than
+their protocols say ("The audit", above). Part of that was read off the
+settings and not tried. On 18 November 2026, after the campaign was analysed,
+it was tried, and settings that close it were written for any later run. The
+generators of the two campaigns are not changed: they are the record of how
+those runs were made, and no run has been made with the new settings.
+
+**`bin/agent-sandbox.py`** holds the settings and a probe of them. The probe
+runs the CLI as the generators do, with their flags and environment, in a
+working copy under `/tmp`, but pointed at a server on the same machine that
+stands in for the API and answers each request with the next of a fixed list of
+tool calls. No model is called. What the CLI does with a tool call is the real
+thing: the sandbox it builds around a command, and what `--restricted` lets a
+file tool read. Before the run the probe leaves a file with a random word in
+the shared temporary directory, in `/tmp` and in `/var/tmp`, and searches the
+part of the file system the campaigns' settings left readable for archives that
+hold a class of any project under study, the Defects4J projects included. The
+commands then try to read all of it.
+
+**Under the settings of the two campaigns** (`sandbox/probe-as-run.txt`), in
+both arms, with CLI 2.1.316:
+
+- A command's `$TMPDIR` is `/tmp/claude-1000`. The command lists it, the
+  directories of every other session on the machine included, reads the file
+  left in a subdirectory of it, and writes beside that file. What the audit
+  assumed therefore holds: the dry run left there during the third campaign,
+  with the developers' tests for each fix, was within reach of every agent.
+  That no agent reached for it rests on the transcripts, as before.
+- `/usr/share/java` is listed and both jars are read:
+  `commons-lang3-3.14.0.jar` and `commons-cli-1.6.0.jar`. They are the only
+  archives on the machine, outside what the settings hide, that hold a class of
+  a project under study.
+- The `mvn` on the `PATH` is the operating system's Maven 3.8.7, under
+  `/usr/share/maven`. It starts in the implementation-visible arm. In the other
+  it does not, `java` being hidden.
+- What the settings were written to hide is hidden: files in the machine's
+  `/tmp` and `/var/tmp`, the home directory and `/opt`. The file tools refuse
+  every path outside the working copy, the run's own temporary files among
+  them, with the one exception the audit found: the Read tool reads the copy
+  the CLI saves, under the home, of a command's output when it is longer than
+  the CLI passes on.
+
+**Under the new settings** (`sandbox/probe.txt`) every check passes in both
+arms. Two things differ from the campaigns' settings:
+
+- Each run has a temporary directory of its own. The generator is to make an
+  empty one and name it to the CLI in `CLAUDE_CODE_TMPDIR`; sandboxed commands
+  then get a directory inside it as `$TMPDIR`, which starts with nothing of any
+  other session in it, and `/tmp/claude-1000` does not exist for them. The name
+  has to be short. With a directory under the home's cache, which is where the
+  staged revision is, the CLI gave commands the shared directory again; that
+  was tried too, and the probe fails when it happens.
+- `/usr/share/java`, `/usr/share/maven-repo`, `/usr/share/maven` and
+  `/usr/share/doc` are hidden: the packaged jars, the packaged Maven with its
+  repository, and the packages' release notes. `mvn` is then not found in
+  either arm. `javac` compiles, and `java` runs where the arm allows it.
+
+**Not closed.** The Read tool still reads the CLI's saved copy of a long
+output. It holds what the run's own command printed and nothing else. The
+violation rules of both protocols count reading it, as they are written.
+
+**To be done again** before any campaign, on the machine and with the CLI
+binary that campaign will use: the temporary directory and the confinement of
+the file tools are the CLI's behaviour and may change with its version, and the
+jars are the machine's. Neither file under `sandbox/` is the verbose output,
+which lists the other sessions' directories and the machine's mount table.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -1440,5 +1511,5 @@ mistake for results:
 - [x] Second campaign: both arms regenerated, without Defects4J's metadata in the working copy, under that protocol: 80 runs, audited, measured and analysed (56% vs 18% detection; both hypotheses hold)
 - [x] Third campaign prepared: protocol, scripts, checks without the model and a pilot (`campaign3/`)
 - [x] Third campaign run: the 28 post-cutoff subjects in both arms, under the second campaign's conditions: 56 runs, audited, measured and analysed (35% vs 22% detection over 23 pairs; its hypothesis is not rejected)
-- [ ] The sandbox's shared temporary directory closed off, and the operating system's jars of the projects hidden, before any further run
+- [x] Sandbox settings for any further run, with a temporary directory of its own for each run and the operating system's jars of the projects hidden, and a probe of them that calls no model (`bin/agent-sandbox.py`, `sandbox/`). No run has been made with them
 - [ ] A matched post-cutoff corpus large enough to test the effect size

@@ -1,0 +1,50 @@
+CLI 2.1.316 (Claude Code); JDK tools in /usr/lib/jvm/java-11-openjdk-amd64/bin
+searching the readable file system for archives of the projects under study ...
+  /usr/share/java/commons-cli-1.6.0.jar
+  /usr/share/java/commons-lang3-3.14.0.jar
+
+implementation-visible arm, the settings of the two campaigns
+  FAIL  a command's $TMPDIR is the run's own directory  [/tmp/claude-1000]
+  FAIL  nothing of another session is in it  [92 entries when the run starts]
+  FAIL  the temporary directory all sessions share cannot be listed
+  FAIL  a file in it cannot be read
+  FAIL  nor written
+  ok    files in the machine's /tmp and /var/tmp cannot be read
+  ok    a command can make a temporary file and read it back  [/tmp/claude-1000/tmp.7mfR91opVg]
+  FAIL  the packaged jars, Maven and package documents cannot be listed  [/usr/share/java: 156, /usr/share/maven-repo: 6, /usr/share/maven: 5, /usr/share/doc: 904]
+  FAIL  no archive holding a class of a project under study can be read  [2 of 2 found on this machine
+          /usr/share/java/commons-cli-1.6.0.jar
+          /usr/share/java/commons-lang3-3.14.0.jar]
+  FAIL  Maven does not run
+  ok    the home directory and /opt cannot be listed
+  ok    javac compiles and java runs
+  ok    the Read tool does not read a file of the shared temporary directory
+  ok    the Glob tool does not list /usr/share/java
+  ok    the Read tool does not read a file of the hidden directories  [/usr/share/maven-repo/aopalliance/aopalliance/1.0/aopalliance-1.0.pom]
+  note  the Read tool on a file the run wrote in its $TMPDIR: refused
+  note  the Read tool on the CLI's saved copy of the run's own long output: read [it is under ~/.claude/projects]
+  note  21 requests for a model's answer, all of them to the stand-in; 21 turns
+
+specification-only arm, the settings of the two campaigns
+  FAIL  a command's $TMPDIR is the run's own directory  [/tmp/claude-1000]
+  FAIL  nothing of another session is in it  [91 entries when the run starts]
+  FAIL  the temporary directory all sessions share cannot be listed
+  FAIL  a file in it cannot be read
+  FAIL  nor written
+  ok    files in the machine's /tmp and /var/tmp cannot be read
+  ok    a command can make a temporary file and read it back  [/tmp/claude-1000/tmp.ydlCGueccK]
+  FAIL  the packaged jars, Maven and package documents cannot be listed  [/usr/share/java: 156, /usr/share/maven-repo: 6, /usr/share/maven: 5, /usr/share/doc: 904]
+  FAIL  no archive holding a class of a project under study can be read  [2 of 2 found on this machine
+          /usr/share/java/commons-cli-1.6.0.jar
+          /usr/share/java/commons-lang3-3.14.0.jar]
+  ok    Maven does not run
+  ok    the home directory and /opt cannot be listed
+  ok    javac compiles; java is not there
+  ok    the Read tool does not read a file of the shared temporary directory
+  ok    the Glob tool does not list /usr/share/java
+  ok    the Read tool does not read a file of the hidden directories  [/usr/share/maven-repo/aopalliance/aopalliance/1.0/aopalliance-1.0.pom]
+  note  the Read tool on a file the run wrote in its $TMPDIR: refused
+  note  the Read tool on the CLI's saved copy of the run's own long output: read [it is under ~/.claude/projects]
+  note  21 requests for a model's answer, all of them to the stand-in; 21 turns
+
+NOT every check passed
