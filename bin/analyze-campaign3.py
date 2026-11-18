@@ -9,6 +9,8 @@ Written and committed before any run of the campaign. It reads
   data/campaign3/runs-<arm>/               the records of the runs
   data/campaign3/violations.txt            runs with a violation, decided at
                                            the audit: `arm subject reason`
+  data/campaign3/direct-javac.txt          s3 runs that called javac themselves,
+                                           listed at the audit, same format
 
 and prints the primary analysis, the sensitivity analyses and the descriptive
 comparisons, in that order. Nothing in it is chosen after the data.
@@ -107,8 +109,8 @@ def read_verdicts(root):
     return out
 
 
-def read_violations(root):
-    path = os.path.join(root, "violations.txt")
+def read_violations(root, name="violations.txt"):
+    path = os.path.join(root, name)
     out = set()
     if os.path.exists(path):
         for line in open(path):
@@ -386,6 +388,11 @@ def main():
         + (f" ({', '.join(f'{a} {t}' for a, t in timeouts)})" if timeouts else ""))
     if timeouts:
         contrast(data, data.tags, lines, "   with those read as Pass", skip=data.violations, timeouts_pass=True)
+    direct = read_violations(root, "direct-javac.txt")
+    out(f"  5. s3 runs in which the agent called javac itself: {len(direct)}"
+        + (f" ({', '.join(t for _, t in sorted(direct))})" if direct else ""))
+    if direct:
+        contrast(data, data.tags, lines, "   with those runs left out", skip=data.violations | direct)
     out("")
 
     out("DESCRIPTIVE (no test of this protocol)")

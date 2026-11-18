@@ -62,7 +62,13 @@ stage_revision() {
             -Drat.skip=true -Dcheckstyle.skip=true -Dpmd.skip=true -Dspotbugs.skip=true \
             -Danimal.sniffer.skip=true -Denforcer.skip=true) > "$log.debug" 2>&1
     local rc=$?
-    grep -v '^\[DEBUG\]' "$log.debug" | grep -v '^\s*$' > "$log"
+    # Kept: what Maven says at its ordinary levels, and what follows an error.
+    # Not kept: the debug lines and what they spill over into, and the banner
+    # -X opens with, which names the machine's kernel and locale.
+    awk '/^\[DEBUG\]/ { keep = 0; next }
+         /^\[(INFO|WARNING)\]/ { keep = 0; print; next }
+         /^\[ERROR\]/ { keep = 1; print; next }
+         keep { print }' "$log.debug" > "$log"
     local level
     level=$(grep -o -E -- '--release [0-9]+' "$log.debug" | head -1)
     if [ -z "$level" ]; then

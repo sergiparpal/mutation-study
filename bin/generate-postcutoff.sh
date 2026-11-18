@@ -156,6 +156,8 @@ case "$MODEL" in
 esac
 
 JDK_BIN=$(dirname "$(readlink -f "$(command -v javac)")")
+JAVA_VERSION=$(java -version 2>&1 | head -1 | tr -d '"')
+MAVEN_VERSION=$(mvn -v 2>/dev/null | head -1 | sed 's/ (.*//')
 
 # The binary itself, not the `claude` link: an update moves the link.
 CLAUDE_BIN=${CLAUDE_BIN:-$( [ -n "$DRY" ] || readlink -f "$(command -v claude)")}
@@ -640,6 +642,7 @@ json.dump({
     "flags": "--restricted --strict-mcp-config --disable-slash-commands --no-session-persistence --permission-mode acceptEdits --permission-prompts none",
     "environment": "env -i HOME PATH TZ=America/Los_Angeles LANG=C.UTF-8 CLAUDE_CODE_DISABLE_AUTO_MEMORY=1 CLAUDE_CODE_DISABLE_LEGACY_MODEL_REMAP=1 DISABLE_AUTOUPDATER=1",
     "javac_level": "$LEVEL", "junit": "$JUNIT_HINT",
+    "java": "$JAVA_VERSION", "maven": "$MAVEN_VERSION",
     "started": "$STARTED", "finished": "$FINISHED",
     "dry_run": "$DRY",
 }, open(sys.argv[1], "w"), indent=2)

@@ -87,6 +87,14 @@ Post-cutoff replication corpora, their mining scripts and their results are
 under `data/postcutoff*`, `data/matched-*`, `bin/mine-postcutoff.sh`,
 `bin/run-postcutoff.sh` and `bin/tally-postcutoff.py`.
 
+A third campaign, which will make the comparison on those post-cutoff
+subjects under the second campaign's conditions, is prepared and has not been
+run: its protocol is `data/campaign3/PROTOCOL.md`, its pilot is under
+`data/campaign3/pilot/`, and its scripts are `bin/generate-postcutoff.sh`,
+`bin/run-campaign3.sh`, `bin/audit-campaign3.py`, `bin/measure-campaign3.sh`,
+`bin/analyze-campaign3.py`, `bin/campaign3-lib.sh` and
+`bin/AgentTestRunner.java`.
+
 ## What this does not show
 
 Several things, recorded here because they are easy to over-read from the

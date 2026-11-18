@@ -1085,6 +1085,100 @@ changes a script it fixes or a figure of the primary analysis: the check
 without the `s2` run of Csv-10, declared before measurement; the one
 redaction in a log; and `bin/describe-campaign2.py`, written after the runs.
 
+## Third campaign
+
+The comparison of the two arms on the post-cutoff subjects, under the second
+campaign's conditions and a protocol fixed before any run on them
+(`campaign3/PROTOCOL.md`). **It has not been run.** What exists is the
+protocol, the scripts it fixes, the checks made without the model and a pilot
+on two commits outside the sample.
+
+The runs of "Post-cutoff corpora" above stay as they are. They had the fix
+commit within the agent's reach, enforced nothing, kept no transcript and no
+test, and left one arm of one corpus without a verdict. This campaign's arms,
+`m3` and `s3`, are separate conditions, pooled neither with those runs nor
+with the Defects4J campaigns.
+
+**Subjects** (`campaign3/subjects.txt`): the 28 fix commits validated for
+either corpus, each once: 19 from Commons Lang, 8 from Commons CSV, 1 from
+Commons CLI; 17 mined for the matched corpus only, 9 for the first only, 2 for
+both. Six of them were used in neither arm before, because the harness
+compiled every developer test and that fails once the file with the trigger
+tests is gone. Here the generated suite is compiled alone, so they are in.
+
+**Scripts.**
+
+| | |
+|---|---|
+| `bin/generate-postcutoff.sh` | builds both working copies, runs the agent, accepts the suite. Its header is the specification |
+| `bin/run-campaign3.sh` | the runs, in the order the protocol fixes |
+| `bin/audit-campaign3.py` | reads the transcripts |
+| `bin/measure-campaign3.sh` | detection: the suite on the fix commit and on its parent |
+| `bin/analyze-campaign3.py` | the analysis the protocol fixes |
+| `bin/campaign3-lib.sh` | what the generator and the measurement share: a revision exported with `git archive`, built with Maven offline |
+| `bin/AgentTestRunner.java` | runs a suite on the JUnit Platform and reports per test method. The same runner in the agent's script, at acceptance and at measurement |
+
+**What differs from the second campaign** is in the protocol, as a table. In
+short: the code is an export of the upstream fix commit, not a Defects4J
+checkout; the tests are JUnit 5 and are run by a runner of ours, not by the
+project's build; the generated suite is compiled without the developers'
+tests on its class path; a test that fails on the fixed revision is left out
+by name instead of being edited out of the source, which also covers
+parameterised tests; and only detection is measured.
+
+Two things about the class path are worth recording, since both would have
+leaked or broken silently:
+
+- **A released copy of the project on its own test class path.** Commons
+  Text is a test library of Commons Lang and depends on a released
+  `commons-lang3`, so Maven puts that jar on the test class path, behind the
+  tree's own classes. Beside the source, an older release shows what has
+  changed since. It is dropped from every class path
+  (`bin/campaign3-lib.sh`).
+- **What `s3` gets besides the project and JUnit.** Commons Lang declares
+  Mockito and Byte Buddy at compile scope, though no production class uses
+  them. `lib/` holds only the libraries the compiled production classes refer
+  to, by `jdeps`: Commons IO and Commons Codec for Commons CSV, nothing for
+  the other two.
+
+### Checks made without the model
+
+`DRY=1` runs the generator and the measurement with no model call. The
+scripts given to the agent are tried on a two-test class the generator writes,
+and the developers' own test classes for the fix, renamed, stand in for the
+agent's suite. They are not self-contained, so in a dry run only, the
+project's test sources are on the compiler's source path.
+
+On all 28 subjects and both arms: both revisions build offline, the agent's
+scripts work in every working copy, every stand-in suite is accepted and,
+measured, is `Fail`. In 55 of the 56 measurements the tests that fail on the
+parent commit are exactly the trigger tests the mining recorded with Maven,
+which is the check that the runner judges a suite as the project's own build
+does. The other is one measurement of `commons-csv-f9e7d792`, two of whose
+four trigger tests draw random input and passed on the parent that time.
+
+### Pilot (`campaign3/pilot/`)
+
+Four runs with the model, on 18 November 2026, on two fix commits that are
+not among the subjects and whose classes no subject has under test:
+`commons-lang-6c4269eb8` (`WordUtils`) and `commons-csv-ab3d7236`
+(`CSVPrinter`), each in both arms. Not part of any result.
+
+- All four ended normally on `claude-sonnet-5`, CLI 2.1.316, for $1.61 at list
+  prices.
+- Each agent wrote its test class and nothing else, and used the script it
+  was given. The transcripts show no network or version-control command and
+  no path outside the working copy. The harness refused one call and the
+  sandbox denied one. One specification-only agent called `javac` itself,
+  which the protocol now settles in advance.
+- The suites went through acceptance (0 of 81 tests left out in `m3`, 7 of 99
+  in `s3`) and measurement. Their verdicts, all `Pass`, check the pipeline and
+  nothing else.
+
+One redaction: Maven's banner in the pilot's eight build logs named the
+generating machine's kernel, and that version is replaced by `[redacted]`.
+The scripts no longer keep the banner.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -1135,4 +1229,6 @@ mistake for results:
 - [x] Generator for the rerun (`bin/generate-suites.sh`): written, dry-run on the 40 bugs, piloted on three bugs outside the sample
 - [x] Protocol of the second campaign fixed (`campaign2/PROTOCOL.md`), with its analysis script
 - [x] Second campaign: both arms regenerated, without Defects4J's metadata in the working copy, under that protocol: 80 runs, audited, measured and analysed (56% vs 18% detection; both hypotheses hold)
+- [x] Third campaign prepared: protocol, scripts, checks without the model and a pilot (`campaign3/`)
+- [ ] Third campaign run: the 28 post-cutoff subjects in both arms, under the second campaign's conditions
 - [ ] A matched post-cutoff corpus large enough to test the effect size

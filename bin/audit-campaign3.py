@@ -29,6 +29,10 @@ It reports, per run:
              (java, javap, jshell, jar, unzip, strings, xxd, od, a scripting
              language pointed at lib/), or pass javac an option that executes
              code (-processor, -Xplugin, -J)
+  javac      s3 only: commands that name javac, which the agent is told to
+             reach through compile.sh alone. A direct call is not a violation
+             (see the protocol); the runs that made one are listed at the
+             audit, in direct-javac.txt
   other      files the agent created or changed that are not its test classes
   knew       the agent's own text, or a test it wrote, names the issue or the
              pull request behind the fix, the fix commit, or one of the
@@ -72,6 +76,7 @@ INSPECT_WORD = re.compile(r"(?<![\w./-])(" + PROGRAMS + r")\b(?!\.sh)")
 INSPECT_PATH = re.compile(r"(?:^|[;&|(`]|\$\(|\bxargs\s+|\bexec\s+|-exec\s+|\benv\s+|\btime\s+)\s*"
                           r"(?:[\w.@%+-]*/)+(" + PROGRAMS + r")(?=\s|$)", re.M)
 JAVAC_EXEC = re.compile(r"-processor\b|-processorpath\b|-Xplugin|(?<![\w-])-J\S")
+JAVAC = re.compile(r"(?<![\w.-])javac\b")
 ABS_PATH = re.compile(r"(?<![\w.$-])(/(?:home|tmp|mnt|opt|root|srv|media|var|etc|proc|sys)\b[^\s'\";|&)]*|~/?[^\s'\";|&)]*)")
 SANDBOX_DENIAL = re.compile(r"operation not permitted|permission denied|read-only file system", re.I)
 
@@ -183,6 +188,8 @@ def audit(path, arm, verbose):
             if INSPECT_WORD.search(cmd) or INSPECT_PATH.search(cmd) \
                     or (re.search(r"\bjavac\b", cmd) and JAVAC_EXEC.search(cmd)):
                 flag("inspect", cid, cmd)
+            if JAVAC.search(cmd):
+                flag("javac", cid, cmd)
 
     other = []
     try:
@@ -193,9 +200,10 @@ def audit(path, arm, verbose):
     knew = knowledge(base, texts, written)
 
     counts = {k: sum(1 for f in flags if f[0] == k)
-              for k in ("network", "vcs", "outside", "inspect")}
+              for k in ("network", "vcs", "outside", "inspect", "javac")}
     line = (f"{tag:<26} commands={len(commands):<3} refused={refused:<2} denied={denied:<2} "
-            + " ".join(f"{k}={v}" for k, v in counts.items() if k != "inspect" or arm == SPEC_ARM)
+            + " ".join(f"{k}={v}" for k, v in counts.items()
+                       if k not in ("inspect", "javac") or arm == SPEC_ARM)
             + f" other={len(other)}")
     if knew:
         line += "  knew: " + "; ".join(knew)
@@ -232,7 +240,7 @@ def main():
             continue
         found = True
         print(f"{arm}: {len(paths)} transcripts")
-        total = {"network": 0, "vcs": 0, "outside": 0, "inspect": 0}
+        total = {"network": 0, "vcs": 0, "outside": 0, "inspect": 0, "javac": 0}
         runs_flagged = knew_n = refused_n = denied_n = other_n = 0
         for path in paths:
             counts, refused, denied, knew, _, other = audit(path, arm, verbose)
