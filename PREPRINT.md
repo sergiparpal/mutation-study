@@ -122,8 +122,9 @@ Contributions:
    real faults from four real projects, with the conditions enforced and the
    analysis fixed in advance: about two thirds of it. That the regression
    evaluation setting flatters generated suites is not a new observation —
-   Dinella et al. state it in 2022 (§6) — but to our knowledge it has not been
-   quantified for an agent that reads the codebase.
+   Dinella et al. state it in 2022 and Huang et al. measure it for prompted
+   models (§6) — but to our knowledge it has not been quantified for an agent
+   that reads the codebase.
 2. The finding, tested as a pre-specified hypothesis, that the metrics reported
    alongside detection register far less of the difference than detection
    does. This bears directly on how agent-written suites are currently
@@ -1279,15 +1280,21 @@ which it supports only weakly.
 
 The complementary condition — the agent writing tests against the **buggy**
 revision — is not covered by our arms, though it is well represented in the
-literature: it is TOGA's evaluation setting, TDD-Bench Verified's premise, and
-half of Konstantinou et al.'s design (§6).
+literature: it is TOGA's evaluation setting, TDD-Bench Verified's premise, one
+side of the designs of Konstantinou et al. and of Huang et al., and, on
+Defects4J itself, one of the two inputs Zhao et al. give their models (§6).
 
 What would be specific to this harness is the *certification* rate: how often a
 suite written against the buggy revision passes on it and fails on the fixed
 one, locking the defect in place rather than merely missing it. Published work
-measures how often such suites fail to detect; none that we found reports how
-often they actively encode the fault as expected behaviour. The harness
-supports the condition with a one-character change to the checkout.
+measures how often such suites fail to detect. Huang et al. come nearest to
+the other question: of the tests their models write from an incorrect
+solution, 34.8% pass on it, against 26.3% of the tests written from the
+correct one. That is a rate per test, on programming tasks, and a test that
+never reaches the fault passes on the faulty code too. None that we found
+reports, for real faults, how often a suite encodes the fault as expected
+behaviour. The harness supports the condition with a one-character change to
+the checkout.
 
 ## 5. Threats to validity
 
@@ -1578,6 +1585,38 @@ provokes behaviour differing from the reference, and **fault detection**, which
 additionally requires the assertion to be correct. Our harness reports
 detection only.
 
+Huang, Zhang, Harman, Du and Cui, *"Measuring the Influence of Incorrect Code
+on Test Generation"* (arXiv:2409.09464) had measured the effect of incorrect
+code earlier, and over more conditions. Eleven models write tests for
+HumanEval, MBPP and APPS tasks from five prompts: the task description alone,
+the description with a correct solution, the description with an incorrect
+one, and each solution without the description. The incorrect solutions are
+ones the models themselves produced. Counting every generated test that
+passes on the correct solution, the tests written from the description and
+the correct solution detect 47.4% of the faulty solutions the authors
+collect; with the incorrect solution in its place, 38.1%; from the correct
+solution without the description, 35.5%. A second experiment uses real code
+and no description: 10 tasks from BugsInPy and 31 from SWE-Bench, the ones
+among 993 for which a correct test was generated from either version.
+Averaged over the models, and counting only suites in which every test passes
+on the patched code, tests written from the patched code detect 13.5% of
+those bugs and tests written from the pre-patch code 7.1% (35.3% and 31.0%
+when each passing test counts). That pair is the regression evaluation
+setting beside its alternative: the difference Dinella et al. had stated,
+measured for models that are handed the code in a prompt.
+
+Two of their results bear on ours. The first is what a specification is worth
+when it is complete. Their description alone detects 40.6% (the mean of the
+three datasets in their Table 5), a seventh less than the description with
+the correct solution and more than the correct solution alone. Our
+specification is the partial documentation of a real library, and withholding
+the code there costs two thirds of the detections. Both fit the reading of
+§4.3, that what counts is how usable an oracle the generator is given. The
+second is the nearest published figure to the certification rate of §4.6, and
+is quoted there. They measure test accuracy and line coverage besides
+detection, and not mutation score, so the comparison this paper tests cannot
+be made on their data.
+
 ### Tests written before the fix exists
 
 Ahmed, Hirzel, Pan, Shinnar and Sinha, *"TDD-Bench Verified: Can LLMs Generate
@@ -1653,6 +1692,55 @@ when strength is what varies between the suites compared, which is the setting
 Just et al. establish. When provenance varies as well it is a much looser one,
 a setting their design could not surface because no suite in it had an oracle
 independent of the code.
+
+Zhao, Zhou and Cohen, *"Do Coverage and Mutation Scores of LLM-Generated Test
+Suites Correlate with Their Effectiveness? (Replicability Study)"* (ISSTA
+2026; arXiv:2607.22880) repeat two analyses for suites written by language
+models on Defects4J: that of Inozemtseva and Holmes, and that of Papadakis,
+Shin, Yoo and Bae, *"Are Mutation Scores Correlated with Real Fault
+Detection? A Large Scale Empirical Study on the Relationship Between Mutants
+and Real Faults"* (ICSE 2018). Thirteen configurations of eleven models are
+prompted with a method that a fix changes and the code around it, for 318
+methods from all 17 projects, once with the fixed version and once with the
+buggy one: 8,268 suites and 101,123 tests. Coverage is measured with
+CodeCover and mutation score with PIT, both per method. The unit is a method
+and a single prompt, where ours is a class and an agent.
+
+For the suites generated from the fixed version, they find the proxies
+informative across models and not within one. Over the thirteen
+configurations, the share of bugs detected correlates with raw mutation score
+at *r* = 0.86 when scores are averaged over methods and 0.62 when they are
+pooled, and with average branch coverage at 0.86; among the suites of a
+single model the correlations are weak. Their raw score is the one we report,
+and their two aggregations are our per-suite mean and our pooled figure. For
+the suites generated from the buggy version, coverage and detection are
+weakly correlated in every view, and they hold mutation analysis
+inapplicable: it needs a suite that passes on the code under test, which
+"would exclude precisely the tests that expose the bug". They conclude that
+coverage and mutation score are usable for comparing models when the code
+given to the model can be assumed correct and the aim is regression testing,
+and not when that code may be faulty.
+
+The two results fit together. Where they find mutation score a good guide,
+every generator has read the same repaired method and the generators differ
+in how thoroughly they pin it down, which is the axis on which Just et al.
+validated the metric. A correlation over such generators orders them. It does
+not say what a difference in mutation score is worth in detection once the
+generators differ in what they were given to read, and that is what our arms
+measure. Their Figure 4 shows the mechanism of §4.1 in one example: for
+Lang-14, the same model asserts that a `String` and a `StringBuilder` holding
+the same characters are equal when it is shown the fixed method, and that
+they are not when it is shown the buggy one.
+
+Both of their conditions keep an implementation in the prompt. The setting
+without one they leave to future work — "black-box or specification-based
+settings, where models generate tests from natural-language specifications,
+docstrings, or other behavioral descriptions without access to the
+implementation" — and our specification-only arm is such a setting. Its
+suites are still accepted and mutated on the fixed revision, so a mutation
+score exists on both sides of the change in where the expectations come from.
+Their buggy-input condition could not provide that, and it is the comparison
+this paper tests.
 
 ## 7. Conclusion
 
