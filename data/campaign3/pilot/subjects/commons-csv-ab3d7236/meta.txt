@@ -1,0 +1,5 @@
+project=commons-csv
+sha=ab3d7236ed76a1a19bf91c7fbed84247a9819bd3
+short=ab3d7236
+date=2026-07-16
+subject=skip trailing delimiter on comment lines in printComment

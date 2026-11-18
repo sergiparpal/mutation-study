@@ -1,0 +1,5 @@
+project=commons-lang
+sha=6c4269eb8a2aeb722ee81a41a4a88a46c2deccf8
+short=6c4269eb8
+date=2026-06-26
+subject=fix WordUtils.containsAllWords missing words across line breaks (#1732)

@@ -1,0 +1,9 @@
+# Pilot of the third campaign: two fix commits that are in neither post-cutoff
+# corpus, on classes that no subject of the campaign has under test
+# (WordUtils, CSVPrinter). The first was looked at for the matched corpus and
+# turned down because its quota was full (data/matched-candidates.csv, 103).
+# The second is in that corpus's pool of candidates (data/matched-pool.txt) and
+# was not examined for it. Both were validated with the developers' own tests
+# in a dry run: one test of each fails on the parent commit.
+commons-lang-6c4269eb8
+commons-csv-ab3d7236
