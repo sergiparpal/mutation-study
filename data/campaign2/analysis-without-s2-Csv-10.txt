@@ -1,0 +1,86 @@
+A check outside the protocol, declared in violations.txt before anything was
+measured. It decides nothing.
+
+The s2 run of Csv-10 compiled a scratch file with javac directly, to find out
+which methods a class has. That is not a violation as the protocol defines one,
+and the run is in the primary analysis (analysis.txt). What follows is the
+output of the same script, bin/analyze-campaign2.py, on the same measurements,
+with that one run listed as a violation. Where it says "PRIMARY ANALYSIS", read
+"this check"; its sensitivity analysis 1 is the primary analysis of
+analysis.txt.
+
+------------------------------------------------------------------------
+
+Runs
+  m2: 40 runs, 40 with an accepted suite; $16.18 at list prices, 18.1 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['2f56801']
+      tests disabled at acceptance: 0 of 1453 (0.0%)
+  s2: 40 runs, 40 with an accepted suite; $23.07 at list prices, 14.3 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['2f56801']
+      tests disabled at acceptance: 101 of 1500 (6.7%)
+
+Violations listed in violations.txt: 1
+  s2 Csv-10
+
+========================================================================
+PRIMARY ANALYSIS (runs with a violation left out)
+  paired set 38 bugs, complete set 35 bugs
+  H1  detection  m2 21/38 (55.3%)   s2 6/38 (15.8%)
+      both 5, m2 only 16, s2 only 1, neither 16
+      exact McNemar, two-sided: p = 0.000275
+      difference +39.5 points, 95% bootstrap interval [+23.7, +57.9]
+  H2  on the complete set:
+      detection       m2 54.3%  s2 17.1%  fall 68.4%
+      mutation score  m2 53.8%  s2 39.0%  fall 27.5%   (per-suite means 64.2%, 45.3%)
+      line coverage   m2 83.5%  s2 70.3%  fall 15.9%
+      fall(detection) - fall(mutation score) = +41.0 points, 95% bootstrap interval [+15.2, +62.3]
+      fall(detection) - fall(line coverage) = +52.6 points, 95% bootstrap interval [+27.5, +72.9]
+========================================================================
+
+Decision, by the rule fixed in the protocol:
+  H1 rejected, and the interval of H2 lies above 0: detection falls further than mutation score.
+
+Per project (paired set)
+  Lang  n=12  m2 detected 5  s2 detected 0
+  Csv   n= 9  m2 detected 6  s2 detected 2
+  Gson  n=10  m2 detected 7  s2 detected 2
+  Cli   n= 7  m2 detected 3  s2 detected 2
+
+Suites without a verdict
+  m2: Cli-21 (Broken)
+  s2: Cli-21 (Broken)
+
+SENSITIVITY ANALYSES (none confirmatory)
+1. Runs with a violation included
+  paired set 39 bugs, complete set 36 bugs
+  H1  detection  m2 22/39 (56.4%)   s2 7/39 (17.9%)
+      both 6, m2 only 16, s2 only 1, neither 16
+      exact McNemar, two-sided: p = 0.000275
+      difference +38.5 points, 95% bootstrap interval [+20.5, +56.4]
+  H2  on the complete set:
+      detection       m2 55.6%  s2 19.4%  fall 65.0%
+      mutation score  m2 54.0%  s2 39.1%  fall 27.7%   (per-suite means 64.3%, 45.3%)
+      line coverage   m2 83.7%  s2 70.3%  fall 16.1%
+      fall(detection) - fall(mutation score) = +37.3 points, 95% bootstrap interval [+12.0, +59.0]
+      fall(detection) - fall(line coverage) = +48.9 points, 95% bootstrap interval [+24.0, +69.8]
+2. Intention to treat (40 bugs attempted in both arms; no suite or no verdict counts as not detected; runs with a violation as measured)
+      m2 22/40 (55.0%)   s2 7/40 (17.5%)   m2 only 16, s2 only 1; exact McNemar p = 0.000275
+3. Runs whose transcript shows the agent knew its bug: 2 (m2 Lang-36, s2 Lang-36)
+   with those runs left out
+  paired set 37 bugs, complete set 34 bugs
+  H1  detection  m2 21/37 (56.8%)   s2 6/37 (16.2%)
+      both 5, m2 only 16, s2 only 1, neither 15
+      exact McNemar, two-sided: p = 0.000275
+      difference +40.5 points, 95% bootstrap interval [+21.6, +56.8]
+  H2  on the complete set:
+      detection       m2 55.9%  s2 17.6%  fall 68.4%
+      mutation score  m2 54.0%  s2 39.0%  fall 27.8%   (per-suite means 64.6%, 45.5%)
+      line coverage   m2 83.1%  s2 69.8%  fall 16.0%
+      fall(detection) - fall(mutation score) = +40.7 points, 95% bootstrap interval [+15.6, +62.1]
+      fall(detection) - fall(line coverage) = +52.4 points, 95% bootstrap interval [+27.7, +72.6]
+
+THE FIRST CAMPAIGN BESIDE THE SECOND (descriptive: the campaigns differ in
+more than one respect, see the protocol)
+  first M 26/36 (72.2%)   m2 20/36 (55.6%)   both 20, first M only 6, m2 only 0, neither 10; exact McNemar p = 0.0312
+  first S 6/36 (16.7%)   s2 6/36 (16.7%)   both 4, first S only 2, s2 only 2, neither 28; exact McNemar p = 1
+  three generators, 34 bugs with a verdict from each: m2 19, EvoSuite 15, s2 6 detected
