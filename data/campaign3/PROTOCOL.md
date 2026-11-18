@@ -343,3 +343,19 @@ files came from what is in the run's own working copy, and no run obtained
 anything from outside it. The rule has no exception for that, and none is made
 after the fact: the five runs are listed in `violations.txt` and left out of
 the primary analysis. They are in it again in the first sensitivity analysis.
+
+**18 November 2026, after the analysis: what was assumed above was tried.**
+With this campaign's settings, flags and environment, and with a server on the
+same machine standing in for the API so that no model is called
+(`bin/agent-sandbox.py probe --as-run`; what it printed is
+`data/sandbox/probe-as-run.txt`), a sandboxed command of either arm lists the
+shared temporary directory, the directories of other sessions included, reads
+a file left in a subdirectory of it and writes beside that file. It also reads
+both jars under `/usr/share/java`. The `mvn` on the `PATH` is the operating
+system's Maven 3.8.7; it starts in `m3` and, `java` being hidden, not in `s3`.
+So the working files of the session that prepared the campaign were within
+reach of every agent, as assumed. Nothing in the record of the 56 runs
+changes, and no figure: that no agent reached for those files rests on the
+transcripts, as before. The scripts this protocol fixes are not changed.
+Settings that give each run a temporary directory of its own and hide those
+jars are in `bin/agent-sandbox.py`, for a later run; none was made with them.
