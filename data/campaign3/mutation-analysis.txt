@@ -1,0 +1,72 @@
+Suites measured with PIT
+  m3: 28 of 28 archived suites measured, 28 with a figure
+  s3: 28 of 28 archived suites measured, 28 with a figure
+
+========================================================================
+THE SECOND CAMPAIGN'S H2, ON THIS CAMPAIGN (secondary; the corpus was not sized for it)
+Complete set, runs with a violation left out
+  paired set 23 subjects, complete set 23 subjects
+      detection       m3 8/23 34.8%  s3 5/23 21.7%  fall 37.5%
+      mutation score  m3 56.7%  s3 51.9%  fall 8.6%   (per-suite means 67.7%, 57.9%)
+      line coverage   m3 77.8%  s3 71.9%  fall 7.5%
+      fall(detection) - fall(mutation score) = +28.9 points, 95% bootstrap interval [-7.2, +66.6]
+      fall(detection) - fall(line coverage) = +30.0 points, 95% bootstrap interval [-6.7, +67.0]
+========================================================================
+The interval includes 0: on this corpus the fall in detection is not shown to
+exceed the fall in mutation score.
+No decision follows from it: the protocol fixes none, and the corpus was not sized
+for this test. The third campaign's H1, which the second campaign's sequence would
+require first, is not rejected (analysis.txt).
+
+OUTSIDE THE COMPLETE SET
+  commons-lang-824837751: s3: violation
+  commons-csv-f9e7d792: m3: Broken (does not compile against the buggy revision); s3: violation
+  commons-lang-623235ebc: s3: violation
+  commons-lang-df1e91895: m3: violation
+  commons-csv-1d89cd5f: m3: violation
+
+SENSITIVITY ANALYSES, as in the second campaign (none confirmatory)
+1. Runs with a violation included
+  paired set 27 subjects, complete set 27 subjects
+      detection       m3 9/27 33.3%  s3 6/27 22.2%  fall 33.3%
+      mutation score  m3 46.4%  s3 42.3%  fall 8.8%   (per-suite means 66.4%, 55.7%)
+      line coverage   m3 65.9%  s3 61.4%  fall 6.8%
+      fall(detection) - fall(mutation score) = +24.5 points, 95% bootstrap interval [-7.5, +59.4]
+      fall(detection) - fall(line coverage) = +26.5 points, 95% bootstrap interval [-5.7, +60.6]
+2. Intention to treat concerns detection alone; there is nothing to add to analysis.txt
+3. Runs whose transcript names the fix: 3 (m3 commons-lang-963c337d7, m3 commons-lang-9a92df9fa, s3 commons-csv-10220941)
+   with those runs left out
+  paired set 20 subjects, complete set 20 subjects
+      detection       m3 7/20 35.0%  s3 5/20 25.0%  fall 28.6%
+      mutation score  m3 58.5%  s3 52.1%  fall 10.9%   (per-suite means 69.0%, 57.9%)
+      line coverage   m3 79.3%  s3 72.4%  fall 8.7%
+      fall(detection) - fall(mutation score) = +17.7 points, 95% bootstrap interval [-13.9, +56.4]; 1 resamples without an m3 detection left out
+      fall(detection) - fall(line coverage) = +19.9 points, 95% bootstrap interval [-10.9, +58.1]; 1 resamples without an m3 detection left out
+4. Mutation score as the mean over suites: beside each pooled figure above
+
+DESCRIPTIVE (no test)
+Every suite with a figure, runs with a violation included
+  m3: 28 suites, 7834 mutants; mutation score 46.9% pooled, 66.3% mean; line coverage 66.5% pooled
+  s3: 28 suites, 7834 mutants; mutation score 42.4% pooled, 55.3% mean; line coverage 61.6% pooled
+By project (complete set of the primary analysis)
+  commons-cli   n= 1  m3 detected 0, mutation 73.4%, lines 96.4%;  s3 detected 0, mutation 35.1%, lines 60.0%
+  commons-csv   n= 6  m3 detected 0, mutation 51.7%, lines 71.9%;  s3 detected 0, mutation 53.4%, lines 70.0%
+  commons-lang  n=16  m3 detected 8, mutation 58.8%, lines 81.0%;  s3 detected 5, mutation 51.5%, lines 73.7%
+Mutants by PIT's status (every suite with a figure)
+  m3: killed 3626, timed_out 29, memory_error 17, run_error 0, non_viable 0, equivalent 0, survived 1282, no_coverage 2880
+  s3: killed 3269, timed_out 33, memory_error 16, run_error 0, non_viable 0, equivalent 0, survived 1304, no_coverage 3212
+
+Did PIT run the tests the measurement ran?
+  (methods the filter kept, against methods_run_on_fixed of results/verdicts.csv;
+   methods it left out, against the keys of the suite's excluded.txt)
+  56 of 56 suites with a figure agree on both counts
+
+THE SECOND CAMPAIGN'S H2, AS ITS ANALYSIS COMPUTES IT (for comparison; the
+campaigns differ in more than the date of the faults, and in the mutation tool)
+Second campaign, complete set, runs with a violation left out
+  paired set 39 subjects, complete set 36 subjects
+      detection       m2 20/36 55.6%  s2 7/36 19.4%  fall 65.0%
+      mutation score  m2 54.0%  s2 39.1%  fall 27.7%   (per-suite means 64.3%, 45.3%)
+      line coverage   m2 83.7%  s2 70.3%  fall 16.1%
+      fall(detection) - fall(mutation score) = +37.3 points, 95% bootstrap interval [+12.0, +59.0]
+      fall(detection) - fall(line coverage) = +48.9 points, 95% bootstrap interval [+24.0, +69.8]
