@@ -1858,6 +1858,54 @@ leverage natural language specifications (docstrings)" — the same source of
 truth as our specification-only arm, four years earlier and with a far smaller
 model. TOGA's own paper treats the docstring as optional context.
 
+Hossain and Dwyer, *"TOGLL: Correct and Strong Test Oracle Generation with
+LLMs"* (ICSE 2025; arXiv:2405.03786) put a fine-tuned language model in the
+place of TOGA's classifier. Seven code models of 110 million to 2.7 billion
+parameters are fine-tuned on EvoSuite's tests for the 110 projects of SF110,
+each to complete a test prefix with the oracle EvoSuite gave it, under six
+prompts. Exact match with that oracle, averaged over the models, is 55.4% from
+the prefix alone, 64.4% with the method's docstring added, 75% with its
+signature instead and 77% with its code; a docstring beside the signature or
+the code changes those two figures by half a point at most. Fewer than half of
+the samples have a docstring. TOGLL is a 110-million-parameter model on the
+prompt with prefix, docstring and code. On the 25 projects of the 2023
+evaluation its oracle compiles and passes for 63% of the prefixes that need an
+assertion and 93.4% of those that need an expected exception, as means over
+projects, where TOGA is at 16.4% and 18.86%. Its assertions detect 13,318 of
+69,793 PIT mutants, EvoSuite's own 15,985 and TOGA's 6,893.
+
+The paper sets its oracles apart from regression oracles on one ground:
+"Regression oracles are generated based on the executed program behavior", and
+TOGLL "does not execute the code and is not aware of the test execution
+results". That is the strict sense of the term, and our implementation-visible
+agent, which runs its tests on the repaired code, is in it (§2.2). The
+definition leaves open what our arms were built to separate, whether an
+expectation can come from the implementation without the implementation being
+run. Three things in the paper itself suggest that it can. The prompt TOGLL
+uses contains the method's code. The oracles its model is trained to reproduce
+are EvoSuite's, which by the paper's own description "capture the behavior of
+the system under test". And a generated oracle counts as correct when it
+passes on the project as it stands: the projects are "the latest stable
+releases of projects with no known bugs. Therefore, any failure of a generated
+test oracle suggests it is incorrect." Konstantinou, Degiovanni and Papadakis,
+below, measure the pull of code that is only read.
+
+On Defects4J the paper follows TOGA's setup with TOGA's 374 samples, 304 that
+need an assertion and 70 an expected exception, and counts a bug as detected
+when the completed test passes on the fixed version and fails on the buggy
+one. TOGLL's oracles detect 64 bugs, 27 with an expected exception and 37 with
+an assertion, and TOGA's detect 31. Bugs detected by the prefix alone, 1 for
+TOGLL and 36 for TOGA, are left out, as the 2023 evaluation recommends. The
+Doc2OracLL paper of the next section uses the same 374 samples, and the counts
+have the same two limits. No number is given of bugs that the samples can
+reach, so there is no rate for the table of conditions. And the paper does not
+say which revision the method in the prompt is taken from. Its inputs are
+TOGA's, "the same input dataset", and the Doc2OracLL paper says of TOGA that
+it uses the method of the fixed version. If TOGLL's prompt held that method's
+code, its 64 detections are those of a model that had read the repair, which
+is our implementation-visible condition without the execution. The paper does
+not say.
+
 ### Documentation in place of the method's code
 
 Hossain, Taylor and Dwyer, *"Doc2OracLL: Investigating the Impact of
