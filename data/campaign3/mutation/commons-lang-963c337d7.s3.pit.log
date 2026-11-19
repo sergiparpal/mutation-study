@@ -1,0 +1,73 @@
+1:24:52 AM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+1:24:52 AM PIT >> INFO : Created 1 mutation test units in pre scan
+1:24:52 AM PIT >> INFO : Sending 3 test classes to minion
+1:24:52 AM PIT >> INFO : Sent tests to minion
+1:24:53 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest#cloneReturnsDistinctEquivalentInstance()
+1:24:53 AM PIT >> INFO : Calculated coverage in 0 seconds.
+1:24:53 AM PIT >> INFO : 0 tests took longer than 2000 ms
+1:24:53 AM PIT >> INFO : Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest]/[method:getDisplayNameDelegatesToWrappedTimeZone()]) took 28 ms
+1:24:53 AM PIT >> INFO : Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest]/[method:equalsIsReflexiveAndRejectsNullAndUnrelatedType()]) covered 7 blocks
+1:24:53 AM PIT >> INFO : Created 1 mutation test units
+1:24:54 AM PIT >> INFO : Completed in 1 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 5 Killed 4 (80%)
+> KILLED 4 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 6 Killed 5 (83%)
+> KILLED 5 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 3 Killed 2 (67%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 2 Killed 1 (50%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 6 Killed 5 (83%)
+> KILLED 5 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 3 Killed 2 (67%)
+> KILLED 2 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : 1 seconds
+--------------------------------------------------------------------------------
+> Total  : 1 seconds
+--------------------------------------------------------------------------------
+> 0 tests took longer than 2000 ms
+> Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest]/[method:getDisplayNameDelegatesToWrappedTimeZone()]) took 28 ms
+> Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.time.ImmutableTimeZoneAgentTest]/[method:equalsIsReflexiveAndRejectsNullAndUnrelatedType()]) covered 7 blocks
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 23/26 (88%)
+>> 3 tests examined
+>> Generated 25 mutations Killed 19 (76%)
+>> Mutations with no coverage 4. Test strength 90%
+>> Ran 22 tests (0.88 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
