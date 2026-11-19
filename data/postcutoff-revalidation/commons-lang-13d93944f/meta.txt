@@ -1,0 +1,6 @@
+repo=commons-lang
+sha=13d93944ff76c6ca3e140d15478111b18acad0e6
+date=2026-06-21
+nprod=1
+ntest=1
+subject=[LANG-1824] Fix Strings.replace overflow on large replacements (#1716)

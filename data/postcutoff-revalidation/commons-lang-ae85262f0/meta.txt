@@ -1,0 +1,6 @@
+repo=commons-lang
+sha=ae85262f04df19b6307de18758cfdcc31cae733d
+date=2026-06-29
+nprod=1
+ntest=1
+subject=[LANG-1828] Fix OOM in StringUtils.leftPad/rightPad when size is Integer.MIN_VALUE (#1736).

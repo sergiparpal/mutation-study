@@ -1,0 +1,37 @@
+# Replay, on 2026-11-19 in a clean clone of apache/commons-lang, of the git
+# commands bin/mine-postcutoff.sh runs for the Commons Lang candidates of the
+# first post-cutoff corpus from ae85262f0 on, in the order of
+# data/postcutoff-candidates.txt. Each heading gives the lines of the script.
+
+## ae85262f0, parent state (lines 107-111), then the rejection path (line 123)
+$ git checkout -q --detach ae85262f0~1
+[exit 0]
+$ git checkout -q ae85262f0 -- src/test/java/org/apache/commons/lang3/StringUtilsTest.java
+[exit 0]
+$ git checkout -q -- .
+[exit 0]
+$ git status --short
+M  src/test/java/org/apache/commons/lang3/StringUtilsTest.java
+[exit 0]
+
+## the next candidates' parent checkouts (line 107), in the order of postcutoff-candidates.txt
+$ git checkout -q --detach 581ce79c4~1
+error: Your local changes to the following files would be overwritten by checkout:
+	src/test/java/org/apache/commons/lang3/StringUtilsTest.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+[exit 1]
+$ git checkout -q --detach 13d93944f~1
+error: Your local changes to the following files would be overwritten by checkout:
+	src/test/java/org/apache/commons/lang3/StringUtilsTest.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+[exit 1]
+$ git checkout -q --detach 9288e2c95~1
+[exit 0]
+
+## the same two parents from a clean clone
+$ git checkout -q --detach 581ce79c4~1
+[exit 0]
+$ git checkout -q --detach 13d93944f~1
+[exit 0]

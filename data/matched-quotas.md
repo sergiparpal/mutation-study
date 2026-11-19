@@ -155,3 +155,19 @@ written.
    alone, from a `.detection` file left by an attempt made under the old rule,
    whose build had also died at the RAT audit; that subject's latest run has no
    accepted suite.
+
+## Corrections (recorded 2026-11-19)
+
+Nothing above has been edited.
+
+1. **The two Gson candidates were never validated.** The Outcome says
+   gson-698ba9eb failed fail-to-pass validation, and `matched-candidates.csv`
+   gives the same reason for replacing gson-e4f54f78. Neither build reached a
+   test: both stopped at the Maven enforcer, because Gson requires JDK 17 and
+   the machine had JDK 11 (`postcutoff/gson-698ba9eb/buggy.log`,
+   `postcutoff/gson-e4f54f78/buggy.log`). So the ALGORITHM quota closed at 3 of
+   4, and gson-e4f54f78's OMISSION slot went to commons-lang-68c333308, because
+   of the build environment rather than the candidates. Neither has been tried
+   under JDK 17. The composition the Outcome gives is still that of the corpus
+   that was run. `README.md`, under Post-cutoff corpora, records this with the
+   other rejections of both corpora.
