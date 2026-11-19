@@ -2,7 +2,7 @@
 
 ### Agent-Generated Test Suites on Defects4J, With and Without the Implementation
 
-*Version 1.0.0, 19 November 2026.*
+*Draft.*
 
 ---
 
