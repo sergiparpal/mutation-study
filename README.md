@@ -88,6 +88,7 @@ values came from.
 |---|---|
 | `PREPRINT.md` | the write-up: method, results, threats, related work |
 | `data/README.md` | the method record, including deviations, tooling failures and corrections |
+| `CITATION.cff` | how to cite the work. `.zenodo.json`, which Zenodo reads when it archives a release, is written from it by `bin/zenodo-metadata.py` |
 | `data/agent-metrics-final.csv` | per-suite detection, mutation and coverage of the first campaign and of EvoSuite; the second campaign's are in `data/campaign2/results/agent-metrics.csv` |
 | `data/fault-taxonomy.csv` | hand classification of the 40 Defects4J faults |
 | `data/memorisation-grades.csv`, `data/memorisation-readings.csv` | what the model recalls about each fault with no code in context: the mechanical screen and the hand readings |

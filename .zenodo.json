@@ -1,0 +1,19 @@
+{
+  "upload_type": "dataset",
+  "title": "Mutation Score Understates Oracle Provenance: Agent-Generated Test Suites on Defects4J, With and Without the Implementation",
+  "creators": [
+    {
+      "name": "Parpal, Sergi"
+    }
+  ],
+  "description": "<p>Two test suites were generated per Defects4J bug with the same agent and model, under two conditions: the agent either works in the project's source tree or sees only its javadoc. The comparison was run twice on the same 40 bugs. In the second campaign, with the benchmark's metadata removed from the working copy, the conditions enforced by a sandbox, every transcript kept and the analysis fixed in advance, real-fault detection falls from 56% to 18% over 39 bugs, while mutation score falls from 54% to 39% and line coverage from 84% to 70%. The first campaign, on standard Defects4J checkouts, gave 72% against 14%. A third campaign, under the second's conditions and a protocol also fixed in advance, on 28 faults that postdate the model's training data, gives 35% against 22% over 23 subjects, a difference its test does not reject (p = 0.25); there mutation score, measured afterwards with PIT, is 57% against 52%. The repository holds the generation and measurement scripts, the protocols and full records of the second and third campaigns, the per-suite measurements, an EvoSuite baseline, a hand classification of the 40 faults, a probe of what the model recalls about each fault with no code in context, two post-cutoff replication corpora, and an audit of what the benchmark's own files told the agent.</p>",
+  "keywords": [
+    "test generation",
+    "mutation testing",
+    "Defects4J",
+    "large language models",
+    "empirical software engineering"
+  ],
+  "license": "cc-by-4.0",
+  "notes": "If you use this data or these scripts, please cite this work. The code under bin/ is under the MIT License (LICENSE) and the data under data/ under CC BY 4.0 (data/LICENSE)."
+}
