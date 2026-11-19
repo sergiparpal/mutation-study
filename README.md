@@ -109,7 +109,8 @@ values came from.
 
 Post-cutoff replication corpora, their mining scripts and their results are
 under `data/postcutoff*`, `data/matched-*`, `bin/mine-postcutoff.sh`,
-`bin/run-postcutoff.sh` and `bin/tally-postcutoff.py`.
+`bin/run-postcutoff.sh`, `bin/tally-postcutoff.py` and
+`bin/revalidate-postcutoff.sh`.
 
 The third campaign, which makes the comparison on those post-cutoff subjects
 under the second campaign's conditions, is under `data/campaign3/`: its

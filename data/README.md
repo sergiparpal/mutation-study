@@ -806,6 +806,56 @@ In these runs the M-arm agent works in a `git worktree`, with the repository's
 history reachable. The Defects4J runs delete `.git`; here only the prompt
 forbids git.
 
+**Rejections recorded with the wrong reason (found 2026-11-19).** All five
+rejections recorded under `postcutoff/` and `postcutoff-first/` give a reason
+their logs do not support. They came to light when every 2026 fix commit of
+Commons Lang, CSV and CLI was validated again, in clean clones and under the
+same contract, to count the subjects available for a larger corpus
+(`bin/revalidate-postcutoff.sh`). The `status` files are left as written; the
+new runs of the three Commons Lang candidates, and a replay of their
+checkouts, are in `postcutoff-revalidation/`.
+
+- **`gson-698ba9eb` and `gson-e4f54f78`, matched corpus: never validated.**
+  Both `buggy.log` files stop at the Maven enforcer: Gson requires JDK 17 and
+  the machine had only JDK 11, so nothing was compiled or run. Their `status`
+  files say the tests pass on the parent, and `matched-quotas.md` and
+  `matched-candidates.csv` say they failed fail-to-pass validation. Neither is
+  what happened. The fourth ALGORITHM slot stayed empty, and gson-e4f54f78's
+  OMISSION slot went to `commons-lang-68c333308`, because of the build
+  environment, not the candidates. Neither has been tried under JDK 17.
+- **`commons-lang-581ce79c4` and `commons-lang-13d93944f`, first corpus:
+  `cannot check out parent commit`.** Both parents check out in a clean clone.
+  The checkouts failed on a file the previous candidate left behind. When
+  `bin/mine-postcutoff.sh` rejects a candidate at the parent it runs
+  `git checkout -- .`, which restores the working tree from the index, so the
+  test file it had taken from the fix stays staged. After
+  `commons-lang-ae85262f0` that file was `StringUtilsTest.java`, and both
+  checkouts would have overwritten it. The mining clone's reflog shows HEAD at
+  ae85262f0's parent until the next checkout that succeeded, to 9288e2c95's
+  parent, which has the staged version of that file; replaying the script's
+  commands gives both failures and that success
+  (`postcutoff-revalidation/checkout-replay.txt`). Validated again, both are
+  rejected anyway: with the fix's `StringsTest.java`, the parent's test sources
+  do not compile. The outcome stands; the reason does not.
+- **`commons-lang-ae85262f0`, first corpus: `tests pass on the parent`.** They
+  did not pass: the forked test JVM died with `Java heap space` (`buggy.log`,
+  from line 887). The script takes the trigger tests from the per-test failure
+  lines of Maven's summary, found none, and read that as a pass. Its
+  `classes.txt` and `testclasses.txt` are also empty, so `-Dtest` named no
+  class and the whole suite ran; the committed script lists one class of each
+  for this commit, and the record does not show why the lists are empty.
+  Validated again with the fix's `StringUtilsTest` alone, the test JVM runs out
+  of memory on the parent, and the fix passes it (173 tests, one skipped). The
+  candidate meets the contract: twelve of the first corpus's fourteen
+  candidates do, not eleven, and the third campaign, whose subjects are the
+  validated commits of both corpora, would have had 29. Its protocol and
+  results stand as run.
+
+The trigger pattern also misses a failure inside a lambda (reported as
+`Class.lambda$name$N:line`), an error with no line in the test class
+(`Class.method » …`), and every line of a log in which a test wrote NUL bytes,
+which `grep` then reads as binary. None of these changed a recorded status.
+
 ## Second campaign
 
 The comparison of the two arms, made again on the same 40 bugs with the leaks
@@ -1600,6 +1650,13 @@ mistake for results:
   until the two were moved aside. Their S-arm suites had been measured for
   detection and coverage before that (both `Pass`, commit `2dfdc0d`); those
   rows are not in the final tables.
+- **Post-cutoff mining.** Every rejection recorded for the two post-cutoff
+  corpora gives the wrong reason: two builds stopped by a JDK too old for Gson
+  and one test JVM out of memory, all three read as passing tests, and a test
+  file one candidate left staged, which broke the next two checkouts.
+  Described under Post-cutoff corpora. One of the five,
+  `commons-lang-ae85262f0`, meets the contract and is in neither corpus nor
+  the third campaign.
 - **Figures that were wrong and went unnoticed**, because nothing in the
   pipeline failed: `mut_killed` counting uncovered mutants, `Broken` suites
   counted as missed detections, the doubled test totals, and the RAT audit
