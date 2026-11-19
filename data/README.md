@@ -811,7 +811,8 @@ rejections recorded under `postcutoff/` and `postcutoff-first/` give a reason
 their logs do not support. They came to light when every 2026 fix commit of
 Commons Lang, CSV and CLI was validated again, in clean clones and under the
 same contract, to count the subjects available for a larger corpus
-(`bin/revalidate-postcutoff.sh`). The `status` files are left as written; the
+(`bin/revalidate-postcutoff.sh`; Post-cutoff pool, below). The `status` files
+are left as written; the
 new runs of the three Commons Lang candidates, and a replay of their
 checkouts, are in `postcutoff-revalidation/`.
 
@@ -1627,6 +1628,88 @@ the file tools are the CLI's behaviour and may change with its version, and the
 jars are the machine's. Neither file under `sandbox/` is the verbose output,
 which lists the other sessions' directories and the machine's mount table.
 
+## Post-cutoff pool (counted 2026-11-19)
+
+How many post-cutoff subjects a corpus larger than the third campaign's could
+draw on, counted without running the model. The files are in
+`postcutoff-pool/`. `candidates.tsv` has one row per candidate: its
+validation, its trigger tests, and the screen's decision with the reason.
+`eligible.tsv` lists the eligible candidates. `bin/count-postcutoff-pool.py`
+writes both and prints the counts below; with `--check` it confirms that the
+files are what its rules give.
+
+**Candidates.** Every commit from 2026-01-01 to 2026-11-19 that changes both
+`src/main/java` and `src/test/java`, listed with the logic of
+`bin/list-candidates.sh` from the default branches as fetched on 2026-11-19:
+Commons Lang at `06e9c27a9`, Commons CSV at `99794ae97`, Commons CLI at
+`aec9bb2dd` and Gson at `7fc4d18d5`. That gives 390 commits, 44 of them in
+Gson.
+
+**Validation.** `bin/revalidate-postcutoff.sh`, three instances at a time on
+separate clones. Of the 346 Commons commits, 243 meet the subject contract. In
+three of them the parent's test JVM runs out of memory, and in one,
+`commons-lang-5d46a39e4`, the parent's tests loop until the 600-second limit
+stops them. Of the rest, 65 pass on the parent, 35 have test sources that do
+not compile against the parent, 1 fails on the fix, and 2 were not validated
+because the screen excludes them whatever the result. The Gson commits were
+not validated: Gson's build requires JDK 17, and the machine has only JDK 11.
+The validation logs are not kept: they come to 239 MB, two of them 207 and
+29 MB. The script makes them again.
+
+**Screen.** The rules of `matched-quotas.md`, as `matched-candidates.csv`
+applied them, to the candidates that meet the contract:
+
+- **Excluded populations.** The `(fNNN)` audit sweep, the `readObject` sweep
+  and the supplementary-character sweep, recognised by subject or by the
+  matched corpus having left them out of its pool. Commits that carry one of
+  them on are excluded with it: `085c2dd9e` fixes a line the supplementary
+  sweep wrote, and `ac026ed6e` fixes the fault of audit commit `2e16df626`
+  again. One population is new: ten direct commits a maintainer made on
+  2026-11-15 and 11-18, each marked `Assisted-By: OpenAI Codex`, an audit
+  sweep like the `(fNNN)` one.
+- **Not the fix of a fault:** two features, two performance-only changes
+  (their trigger tests measure time), a revert, a commit that bundles two
+  faults, and two hardening changes.
+- **Decisions already in `matched-candidates.csv`.**
+- **Counted once.** Commits with the same subject count once, keeping one that
+  meets the contract. The usual pair is a contributor's pull request followed
+  by the maintainer's commit of the same name, which no longer exposes the
+  fault. Seven clusters also count once: one fault fixed twice, or one
+  concern worked through in a short window.
+
+The strict reading also folds three series by one author spread over up to
+four weeks, and drops two fixes that change only an exception message.
+
+```
+Commons commits that change code and tests      346
+meet the subject contract                       243
+  in an excluded population                     −61
+  not the fix of a fault                         −8
+  rejected by the matched corpus                 −6
+  counted once                                  −10
+eligible                                        158
+  strict reading                                 −7
+eligible, strict                                151
+```
+
+Of the eligible, 27 are third-campaign subjects. All 28 of its subjects meet
+the contract again, but CSV-329 is in the supplementary-character population,
+which the matched corpus excluded. The other 131 eligible candidates are new,
+124 under the strict reading. By repository: Commons Lang 126, CSV 24, CLI 8.
+119 are dated up to 2026-09-22, the end of the window whose cutoff was probed
+for the matched corpus, and 39 after it.
+
+**What the count leaves open.**
+
+- The screen was applied knowing which candidates meet the contract, whereas
+  the matched corpus classified its candidates blind. A corpus drawn from this
+  pool needs its rules fixed before selection.
+- No candidate has been classified by fault type, so whether the pool can
+  fill quotas matched to the Defects4J sample is not known.
+- The commits after 2026-09-22 have not been probed for the model's cutoff.
+- Nine of the new eligible commits credit an AI in their message (Copilot
+  Autofix, Codex, ChatGPT, Claude). The screen leaves them in.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -1688,4 +1771,5 @@ mistake for results:
 - [x] Third campaign run: the 28 post-cutoff subjects in both arms, under the second campaign's conditions: 56 runs, audited, measured and analysed (35% vs 22% detection over 23 pairs; its hypothesis is not rejected)
 - [x] Sandbox settings for any further run, with a temporary directory of its own for each run and the operating system's jars of the projects hidden, and a probe of them that calls no model (`bin/agent-sandbox.py`, `sandbox/`). No run has been made with them
 - [x] Third campaign, afterwards: mutation score and line coverage of its 56 suites with PIT, as its protocol provides, and the second campaign's H2 on them as a secondary result (+28.9 points, interval −7.2 to +66.6; `campaign3/mutation/`, `campaign3/mutation-analysis.txt`)
+- [x] Post-cutoff pool counted without the model: 158 eligible Commons subjects, 151 under the strict reading, 131 and 124 of them new (`postcutoff-pool/`)
 - [ ] A matched post-cutoff corpus large enough to test the effect size
