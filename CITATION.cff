@@ -3,7 +3,9 @@ title: >-
   Mutation Score Understates Oracle Provenance: Agent-Generated Test
   Suites on Defects4J, With and Without the Implementation
 message: >-
-  If you use this data or these scripts, please cite the repository.
+  If you use this data or these scripts, please cite this work. The code
+  under bin/ is under the MIT License (LICENSE) and the data under data/
+  under CC BY 4.0 (data/LICENSE).
 type: dataset
 authors:
   - family-names: Parpal
@@ -35,6 +37,6 @@ keywords:
   - Defects4J
   - large language models
   - empirical software engineering
-license: MIT
-license-url: https://github.com/sergiparpal/mutation-study/blob/main/LICENSE
-date-released: 2026-10-01
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2026-11-19
