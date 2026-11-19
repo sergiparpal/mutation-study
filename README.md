@@ -59,19 +59,24 @@ and 20% and the mutation scores 54%, 47% and 39%.
 **The third campaign is on faults the model cannot have seen.** The second
 campaign's conditions, on 28 fix commits of Commons Lang, Commons CSV and
 Commons CLI from January to September 2026, with its test and exclusions also
-fixed before the first run (`data/campaign3/PROTOCOL.md`). Detection only.
+fixed before the first run (`data/campaign3/PROTOCOL.md`). Mutation score and
+coverage were measured afterwards with PIT, as that protocol provides.
 
-| arm | real fault detected |
-|---|---|
-| implementation-visible | 8/23 — 35% |
-| specification-only | 5/23 — 22% |
+| arm | real fault detected | mutation score | line coverage |
+|---|---|---|---|
+| implementation-visible | 8/23 — 35% | 57% | 78% |
+| specification-only | 5/23 — 22% | 52% | 72% |
 
 Over the 23 subjects with a verdict in both arms and no excluded run, three
-faults are detected by the first arm alone and none by the second alone
-(exact McNemar, *p* = 0.25). **The pre-specified test does not reject.** The
+faults are detected by the first arm alone and none by the second alone (exact
+McNemar, *p* = 0.25). **The pre-specified test does not reject.** The
 difference is 13 points, with a 95% bootstrap interval of 0 to 26. So the
 effect is established on Defects4J and not on post-cutoff faults: the
-direction is the same there, and the corpus is too small to show more.
+direction is the same there, and the corpus is too small to show more. The
+same holds for the claim in the title. There, detection loses 37.5% of its
+value and mutation score 8.6%; the gap between the two losses is 29 points,
+with an interval of −7 to 67 that includes zero. That figure is a secondary
+result, on a corpus not sized for it.
 
 Mutation score and coverage measure how much of a program a suite exercises
 and how hard it checks what it exercises. Neither measures where the expected
@@ -107,14 +112,18 @@ under `data/postcutoff*`, `data/matched-*`, `bin/mine-postcutoff.sh`,
 
 The third campaign, which makes the comparison on those post-cutoff subjects
 under the second campaign's conditions, is under `data/campaign3/`: its
-protocol (`PROTOCOL.md`), its pilot (`pilot/`), every run's transcript,
-prompt and settings, the suites as written, the audit with the lists of
-violations and of direct compiler calls, the measurement's logs and verdicts,
-and the analysis as printed. Its scripts are `bin/generate-postcutoff.sh`,
+protocol (`PROTOCOL.md`), its pilot (`pilot/`), every run's transcript, prompt
+and settings, the suites as written, the audit with the lists of violations
+and of direct compiler calls, the measurement's logs and verdicts, and the
+analysis as printed. Its scripts are `bin/generate-postcutoff.sh`,
 `bin/run-campaign3.sh`, `bin/audit-campaign3.py`, `bin/measure-campaign3.sh`,
 `bin/analyze-campaign3.py`, `bin/campaign3-lib.sh` and
 `bin/AgentTestRunner.java`, all committed before its runs, and
-`bin/describe-campaign3.py`, written after them.
+`bin/describe-campaign3.py`, written after them. Its suites' mutation score
+and coverage were measured afterwards, as its protocol provides, by
+`bin/mutation-campaign3.sh` with `bin/ExcludedTestsFilter.java`, and analysed
+by `bin/analyze-mutation-campaign3.py`; their output is in
+`data/campaign3/mutation/` and `data/campaign3/mutation-analysis.txt`.
 
 `bin/agent-sandbox.py`, written after the third campaign, holds sandbox
 settings for any later run, which give each run a temporary directory of its
@@ -149,13 +158,15 @@ table above:
 - **On new faults the effect is not shown.** The third campaign's test does
   not reject: 8/23 against 5/23, *p* = 0.25. That is not evidence of no
   effect. The test needed six discordant pairs against none and the corpus
-  produced three, all in the direction of the earlier campaigns. The gap is
-  25 points narrower than in the second campaign, with an interval that
-  excludes zero, between corpora that differ in project, kind of fault and
-  build as well as in date; every detection in the third is in Commons Lang.
-  So the narrower gap cannot be put down to recall, and recall cannot be
-  excluded as a part of the Defects4J figure. Mutation score was not
-  measured there, so the claim in the title is tested on Defects4J alone.
+  produced three, all in the direction of the earlier campaigns. The gap is 25
+  points narrower than in the second campaign, with an interval that excludes
+  zero, between corpora that differ in project, kind of fault and build as
+  well as in date; every detection in the third is in Commons Lang. So the
+  narrower gap cannot be put down to recall, and recall cannot be excluded as
+  a part of the Defects4J figure. Mutation score, measured there afterwards
+  with PIT, loses 8.6% of its value against detection's 37.5%, but the
+  interval of the gap between the two, −7 to 67 points, includes zero: the
+  claim in the title is shown on Defects4J alone.
 - **The sandbox was less tight than its settings were meant to make it.** The
   third campaign's audit found that the directory the harness gives commands
   for temporary files is the host's own and shared by every run, in that
@@ -191,14 +202,17 @@ table above:
 ## Reproducing
 
 `./bin/report-figures.py` recomputes every figure in the write-up from `data/`
-and needs neither Defects4J nor model access. `./bin/analyze-campaign2.py`
-and `./bin/analyze-campaign3.py` print the second and the third campaign's
-analyses on their own.
+and needs neither Defects4J nor model access. `./bin/analyze-campaign2.py` and
+`./bin/analyze-campaign3.py` print the second and the third campaign's
+analyses on their own, and `./bin/analyze-mutation-campaign3.py` the third
+campaign's mutation figures.
 
 Re-measuring from the packaged suites in `data/agent-suites/` and
 `data/campaign2/suites/` needs Defects4J v3.0.1 under Java 11 with
 `TZ=America/Los_Angeles` (`bin/analyze-agent-suites.sh`). The post-cutoff
 corpora and the third campaign's suites (`bin/measure-campaign3.sh`) need
-clones of the upstream repositories, Java 11 and Maven 3.9+. Regenerating the
-suites needs the model and costs between $0.40 and $1 per suite at list
-prices.
+clones of the upstream repositories, Java 11 and Maven 3.9+. Their mutation
+score (`bin/mutation-campaign3.sh`) also needs PIT, which the script fetches
+from Maven Central once and checks against the hashes written in it.
+Regenerating the suites needs the model and costs between $0.40 and $1 per
+suite at list prices.

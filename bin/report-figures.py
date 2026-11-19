@@ -10,7 +10,8 @@ step (bin/analyze-agent-suites.sh).
 §3.1 to §3.8 are the first campaign and are computed here. §3.10 is the second
 campaign: this script runs bin/analyze-campaign2.py and
 bin/describe-campaign2.py and prints what they print. §3.11 is the third: it
-runs bin/analyze-campaign3.py and bin/describe-campaign3.py.
+runs bin/analyze-campaign3.py, bin/analyze-mutation-campaign3.py (mutation
+score and coverage, measured after the campaign) and bin/describe-campaign3.py.
 
 Conventions, all of them stated in the write-up:
 
@@ -267,6 +268,9 @@ def main():
     section("§3.11  Third campaign: the analysis fixed by its protocol")
     sys.stdout.flush()
     subprocess.run([sys.executable, "-B", "bin/analyze-campaign3.py"], check=False)
+    section("§3.11  Third campaign: mutation score and coverage, measured afterwards with PIT")
+    sys.stdout.flush()
+    subprocess.run([sys.executable, "-B", "bin/analyze-mutation-campaign3.py"], check=False)
     section("§3.11  Third campaign: descriptive figures")
     sys.stdout.flush()
     subprocess.run([sys.executable, "-B", "bin/describe-campaign3.py"], check=False)

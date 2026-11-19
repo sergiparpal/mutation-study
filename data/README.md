@@ -1096,7 +1096,9 @@ measured and analysed in that order, each step committed before the next.
 *p* = 0.25. The record is under `campaign3/`: every run's transcript, prompt
 and settings (`runs-m3/`, `runs-s3/`), the suites as written (`suites/`),
 `audit.txt`, `violations.txt`, `direct-javac.txt`, the logs and verdicts of
-the measurement (`results/`) and `analysis.txt`.
+the measurement (`results/`) and `analysis.txt`. Mutation score and line
+coverage were measured afterwards, as the protocol provides: `mutation/` and
+`mutation-analysis.txt`.
 
 The runs of "Post-cutoff corpora" above stay as they are. They had the fix
 commit within the agent's reach, enforced nothing, kept no transcript and no
@@ -1129,7 +1131,9 @@ checkout; the tests are JUnit 5 and are run by a runner of ours, not by the
 project's build; the generated suite is compiled without the developers'
 tests on its class path; a test that fails on the fixed revision is left out
 by name instead of being edited out of the source, which also covers
-parameterised tests; and only detection is measured.
+parameterised tests; and only detection is measured in the campaign itself.
+Mutation score and line coverage were measured afterwards, as the protocol
+provides ("Mutation score and line coverage, measured afterwards", below).
 
 Two things about the class path are worth recording, since both would have
 leaked or broken silently:
@@ -1381,6 +1385,116 @@ project, and the counts in "The runs" and "The audit" above.
   prompts and tools among them, so six is an upper bound on what the reach of
   the fix commit added, not a measurement of it.
 
+### Mutation score and line coverage, measured afterwards
+
+The protocol left both unmeasured and said how they would be measured later:
+with PIT and its default mutators, on the classes the fix modifies, with the
+suite as accepted, and the second campaign's H2 computed as that campaign's
+protocol defines it and reported as a secondary result, whatever it is ("Not
+measured: mutation score and coverage"). That was done on 19 November 2026,
+after the analysis above. The protocol and its seven scripts are unchanged,
+and no figure above changes.
+
+**Scripts**, written that day and committed before they were run on any
+subject (`aff1ff0`):
+
+| | |
+|---|---|
+| `bin/mutation-campaign3.sh` | stages the fix commit as the measurement does, compiles each archived suite on its own, and runs PIT. Its header is the specification |
+| `bin/ExcludedTestsFilter.java` | leaves out, on the JUnit Platform PIT drives, the test methods that failed at acceptance, by the keys and the rule of `bin/AgentTestRunner.java`, and records the methods kept |
+| `bin/analyze-mutation-campaign3.py` | the H2 statistic and interval, with the second campaign's own functions (`bin/analyze-campaign2.py`). On that campaign's data it gives that campaign's figures |
+
+**How.** PIT 1.30.2 with its JUnit 5 plugin 1.2.3, on the JDK of the
+measurement and in its environment. The classes mutated are those of the
+subject's `classes.txt` with the classes nested in them, which are in the
+same source file. PIT's options are its defaults but for eight threads, a
+heap of 1 GB for each process that runs tests, an XML report only, and its
+own class path kept off the tests': PIT's command line adds it unless told
+not to, and PIT's dependencies include a released Commons Lang (3.18.0). The
+mutation score is PIT's: the mutants it counts as detected (killed, timed out,
+out of memory, run error, not viable) over every mutant made in those
+classes, the ones no test reaches included. Line coverage is PIT's too, over
+the same classes. A suite gets no figure if it does not compile, if PIT stops
+because a test fails on the unmutated code (PIT is not allowed to skip such a
+test, since the suite would then not be the suite as accepted), or if PIT
+does not finish within two hours.
+
+- **PIT's jars** are fetched once from Maven Central by Maven, and each is
+  checked against the SHA-256 written in the script before every run.
+- **Java's `assert` statements.** PIT turns them on in the processes that run
+  tests, and the measurement's runs leave them off. No test of the 56 suites
+  uses one. One mutated method holds one, `Conversion.shortToBinary` in
+  `commons-lang-0edbb4ae0`, right after a check that makes it hold on the
+  unmutated code.
+- **Major and PIT.** The Defects4J campaigns' mutation scores are Major's,
+  with its operators, on Defects4J's build; these are PIT's, with its default
+  mutators. The absolute figures are not comparable between the campaigns;
+  the falls between the arms are what H2 compares.
+- **Tried first.** Before the scripts were written, PIT was run by hand on one
+  suite of the campaign, the `s3` suite of `commons-lang-677e57f56`, to see
+  how it runs with the JUnit 5 plugin, and its figures were seen. Then the
+  script was run on the pilot's two subjects (`pilot/mutation/`): in all four
+  suites, the test methods PIT ran and those it left out are the ones the
+  pilot's measurement ran and left out.
+
+**Measurement** (`campaign3/mutation/`). `./bin/mutation-campaign3.sh`, run
+once, on 19 November 2026, with the scripts as committed (`aff1ff0`); its
+output was committed before the analysis was run (`7722330`). Every one of the
+56 suites has a figure: each compiles against the fix commit, PIT found each
+green on the unmutated code, and none ran out of time. In all 56, the test
+methods PIT ran are the ones the detection measurement ran on the fix commit,
+and the ones it left out are those left out at acceptance. The arms are
+mutated in the same classes, 7,834 mutants each. Of the 15,668, PIT counts
+6,990 as detected: 6,895 killed, 62 timed out, 33 out of memory. None is a run
+error, not viable or equivalent. Per suite, `mutation/` holds PIT's log, its
+XML record of every mutant, the test methods the filter kept and left out,
+the compiler's output and the row of `mutation.csv`.
+
+**Analysis** (`campaign3/mutation-analysis.txt`).
+`./bin/analyze-mutation-campaign3.py`, run once, as committed, after the
+measurement had been committed (`2fd53ab`). Every subject of the paired set
+has every measure in both arms, so the complete set is the paired set: 23
+subjects.
+
+| | `m3` | `s3` | fall |
+|---|---|---|---|
+| detection | 8/23 — 34.8% | 5/23 — 21.7% | 37.5% |
+| mutation score, pooled | 56.7% | 51.9% | 8.6% |
+| line coverage, pooled | 77.8% | 71.9% | 7.5% |
+
+- **The second campaign's H2 statistic**, fall(detection) − fall(mutation
+  score), is +28.9 points, with a 95% bootstrap interval of [−7.2, +66.6].
+  The interval includes zero: on this corpus the fall in detection is not
+  shown to exceed the fall in mutation score. The protocol fixes no decision
+  for it and says the corpus was not sized for it. In the second campaign's
+  sequence it would not have been assessed at all, since H1 is not rejected.
+  Against line coverage: +30.0 points [−6.7, +67.0].
+- **Sensitivity**, as in the second campaign. With the five runs with a
+  violation included, 27 subjects: +24.5 points [−7.5, +59.4]. Without the
+  three runs that name a trigger test, 20 subjects: +17.7 points [−13.9,
+  +56.4]. As means over suites, the mutation scores are 67.7% and 57.9%.
+- **The second campaign beside it**, as its analysis computes it: detection
+  falls 65.0%, mutation score 27.7%, coverage 16.1%, and the statistic is
+  +37.3 points [+12.0, +59.0]. Descriptive: the campaigns differ in the
+  mutation tool as well as in everything "Analysis" above lists.
+
+Descriptive, printed by `bin/describe-campaign3.py` subject by subject, and
+by the analysis script:
+
+- `m3` has the higher mutation score in 18 of the 23 subjects and `s3` in 3,
+  all three on `CSVFormat` in Commons CSV (`commons-csv-10220941`,
+  `commons-csv-4a28ba82`, `commons-csv-a6ee67ec`); the two are equal in 2.
+  Line coverage: `m3` higher in 18, `s3` in 2, equal in 3.
+- Of the mutants their tests reach, `m3` detects 73.3% and `s3` 71.7%. What
+  separates the arms on this measure is mostly what their tests reach.
+- By project: Commons Lang, 16 subjects, 58.8% and 51.5%; Commons CSV, 6
+  subjects, 51.7% and 53.4%; Commons CLI, 1 subject, 73.4% and 35.1%.
+- Over every suite, the five runs with a violation included: 46.9% and 42.4%
+  pooled, 66.3% and 55.3% as means, line coverage 66.5% and 61.6%. The pooled
+  figures are lower than on the complete set because one subject outside it,
+  `commons-lang-623235ebc`, puts the 1,880 mutants of `ArrayUtils` in each
+  arm, at 14.3% and 17.0%.
+
 ### Deviations from the protocol
 
 None in the procedure. Two entries are recorded in the protocol, both dated 18
@@ -1390,7 +1504,9 @@ written. The second, after the analysis: that what the first assumes about the
 shared temporary directory was tried and holds ("The sandbox after the third
 campaign", below). One thing was done that the protocol does not provide for
 and that changes no script it fixes and no figure of its analysis:
-`bin/describe-campaign3.py`, written after the runs.
+`bin/describe-campaign3.py`, written after the runs. The measurement of
+mutation score and coverage afterwards is one the protocol provides for, in
+the way it states (above).
 
 ## The sandbox after the third campaign
 
@@ -1514,4 +1630,5 @@ mistake for results:
 - [x] Third campaign prepared: protocol, scripts, checks without the model and a pilot (`campaign3/`)
 - [x] Third campaign run: the 28 post-cutoff subjects in both arms, under the second campaign's conditions: 56 runs, audited, measured and analysed (35% vs 22% detection over 23 pairs; its hypothesis is not rejected)
 - [x] Sandbox settings for any further run, with a temporary directory of its own for each run and the operating system's jars of the projects hidden, and a probe of them that calls no model (`bin/agent-sandbox.py`, `sandbox/`). No run has been made with them
+- [x] Third campaign, afterwards: mutation score and line coverage of its 56 suites with PIT, as its protocol provides, and the second campaign's H2 on them as a secondary result (+28.9 points, interval −7.2 to +66.6; `campaign3/mutation/`, `campaign3/mutation-analysis.txt`)
 - [ ] A matched post-cutoff corpus large enough to test the effect size

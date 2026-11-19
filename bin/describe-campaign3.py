@@ -9,7 +9,10 @@ follow the result subject by subject: which faults each arm detects, the tests
 left out at acceptance per project, turns and cost, how the agents used the
 scripts they were given, and the counts behind the audit's account of what
 the agents tried: the shared temporary directory, searches of the whole file
-system, the jars in lib/, python, direct calls to the compiler.
+system, the jars in lib/, python, direct calls to the compiler. Last, added on
+19 November 2026 after bin/mutation-campaign3.sh had been run: mutation score
+and line coverage subject by subject, which bin/analyze-mutation-campaign3.py
+gives only pooled.
 
 It reads only files already in data/campaign3 and takes the transcript reader
 of bin/audit-campaign3.py and the definitions of bin/analyze-campaign3.py by
@@ -19,6 +22,7 @@ Usage: ./bin/describe-campaign3.py        (from anywhere in the repository)
 """
 
 import collections
+import csv
 import importlib.util
 import json
 import os
@@ -151,6 +155,56 @@ def main():
         for (a, what), runs in sorted(names.items()):
             if a == arm:
                 print(f"      runs that {what} ({len(runs)}): {short(runs)}")
+
+    mutation(data)
+
+
+def mutation(data):
+    """Mutation score and line coverage, subject by subject.
+
+    Added on 19 November 2026, after bin/mutation-campaign3.sh had been run.
+    The set is the complete set of bin/analyze-mutation-campaign3.py: the
+    paired set, runs with a violation left out, with a PIT figure in both arms.
+    """
+    section("Mutation score and line coverage with PIT (bin/mutation-campaign3.sh), subject by subject")
+    path = os.path.join(C3, "mutation", "mutation.csv")
+    if not os.path.exists(path):
+        print("  not measured")
+        return
+    with open(path) as fh:
+        mut = {(r["arm"], r["subject"]): r for r in csv.DictReader(fh)}
+
+    def score(arm, t):
+        r = mut[(arm, t)]
+        return int(r["detected"]) / int(r["generated"])
+
+    def lines(arm, t):
+        r = mut[(arm, t)]
+        return int(r["lines_covered"]) / int(r["lines_total"])
+
+    complete = [t for t in data.paired(data.tags, data.violations)
+                if all(mut.get((a, t), {}).get("status") == "ok" and int(mut[(a, t)]["generated"])
+                       and int(mut[(a, t)]["lines_total"] or 0) for a in ARMS)]
+    print(f"  complete set: {len(complete)} subjects")
+    print("  subject                    detected     mutation score    line coverage")
+    print("                             m3    s3      m3      s3       m3      s3")
+    for t in sorted(complete, key=lambda t: (project(t), t)):
+        print(f"  {t:<26} {data.verdict('m3', t):<5} {data.verdict('s3', t):<5}"
+              f"  {100 * score('m3', t):5.1f}%  {100 * score('s3', t):5.1f}%"
+              f"   {100 * lines('m3', t):5.1f}%  {100 * lines('s3', t):5.1f}%")
+    for label, f in (("mutation score", score), ("line coverage", lines)):
+        higher = {t for t in complete if f("m3", t) > f("s3", t)}
+        lower = {t for t in complete if f("m3", t) < f("s3", t)}
+        same = set(complete) - higher - lower
+        print(f"  {label}: m3 higher in {len(higher)}, s3 higher in {len(lower)} ({short(lower)}), "
+              f"equal in {len(same)} ({short(same)})")
+    for arm in ARMS:
+        det = sum(int(mut[(arm, t)]["detected"]) for t in complete)
+        gen = sum(int(mut[(arm, t)]["generated"]) for t in complete)
+        unreached = sum(int(mut[(arm, t)]["no_coverage"]) for t in complete)
+        print(f"  {arm}: of the {gen} mutants, {gen - unreached} reached by a test; "
+              f"detected {det}, {100 * det / gen:.1f}% of all and {100 * det / (gen - unreached):.1f}% "
+              f"of those reached")
 
 
 if __name__ == "__main__":
