@@ -1566,7 +1566,7 @@ their protocols say ("The audit", above). Part of that was read off the
 settings and not tried. On 18 November 2026, after the campaign was analysed,
 it was tried, and settings that close it were written for any later run. The
 generators of the two campaigns are not changed: they are the record of how
-those runs were made, and no run has been made with the new settings.
+those runs were made. The fourth campaign is the first to use the new settings.
 
 **`bin/agent-sandbox.py`** holds the settings and a probe of them. The probe
 runs the CLI as the generators do, with their flags and environment, in a
@@ -1820,7 +1820,7 @@ the 117 left without the flagged candidates and the nine that credit an AI,
 - The ratings, the adjudications and the re-reading of the omissions were all
   made by Claude Opus 5.5, and none has been checked by hand.
 
-## Fourth campaign (drafted 2026-11-20)
+## Fourth campaign
 
 The fourth campaign compares the two arms on 115 subjects, not matched by fault
 type. They are the eligible candidates of the post-cutoff pool that no agent
@@ -1828,10 +1828,10 @@ has run on, less the flagged candidates and the nine that credit an AI. The
 conditions are the third campaign's, with the sandbox of
 `bin/agent-sandbox.py`.
 
-The protocol is `campaign4/PROTOCOL.md`, a draft. The merge of its pull request
-fixes it, after the pilot. The second campaign's H2 is one of its hypotheses,
-and a secondary analysis weights detection by the Defects4J sample's fault
-types.
+The protocol is `campaign4/PROTOCOL.md`. It was fixed on 20 November 2026,
+before any run on the subjects, by the merge of its pull request. The second
+campaign's H2 is one of its hypotheses, and a secondary analysis weights
+detection by the Defects4J sample's fault types.
 
 - `campaign4/subjects.txt`: the subjects in the order of the runs, with each
   one's fault type and whether the strict reading keeps it.
@@ -1907,11 +1907,11 @@ mistake for results:
 - [x] Second campaign: both arms regenerated, without Defects4J's metadata in the working copy, under that protocol: 80 runs, audited, measured and analysed (56% vs 18% detection; both hypotheses hold)
 - [x] Third campaign prepared: protocol, scripts, checks without the model and a pilot (`campaign3/`)
 - [x] Third campaign run: the 28 post-cutoff subjects in both arms, under the second campaign's conditions: 56 runs, audited, measured and analysed (35% vs 22% detection over 23 pairs; its hypothesis is not rejected)
-- [x] Sandbox settings for any further run, with a temporary directory of its own for each run and the operating system's jars of the projects hidden, and a probe of them that calls no model (`bin/agent-sandbox.py`, `sandbox/`). No run has been made with them
+- [x] Sandbox settings for any further run, with a temporary directory of its own for each run and the operating system's jars of the projects hidden, and a probe of them that calls no model (`bin/agent-sandbox.py`, `sandbox/`). The fourth campaign is the first to use them
 - [x] Third campaign, afterwards: mutation score and line coverage of its 56 suites with PIT, as its protocol provides, and the second campaign's H2 on them as a secondary result (+28.9 points, interval −7.2 to +66.6; `campaign3/mutation/`, `campaign3/mutation-analysis.txt`)
 - [x] Post-cutoff pool counted without the model: 158 eligible Commons subjects, 151 under the strict reading, 131 and 124 of them new (`postcutoff-pool/`)
 - [x] Post-cutoff pool classified by fault type, blind: a corpus matched to the Defects4J sample can take at most 69 of the new subjects, omissions binding (`postcutoff-pool/fault-types.tsv`)
-- [x] Fourth campaign drafted: protocol, scripts and checks without the model on its 115 unmatched post-cutoff subjects (`campaign4/`)
-- [x] Fourth campaign piloted: four runs on the third campaign's two pilot subjects, audited and measured (`campaign4/pilot/`)
-- [ ] Fourth campaign: protocol fixed, then its 230 runs
+- [x] Fourth campaign prepared: protocol, scripts, checks without the model on its 115 unmatched post-cutoff subjects, and a pilot (`campaign4/`)
+- [x] Fourth campaign's protocol fixed before any run on the subjects (`campaign4/PROTOCOL.md`)
+- [ ] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed
 - [ ] A matched post-cutoff corpus large enough to test the effect size

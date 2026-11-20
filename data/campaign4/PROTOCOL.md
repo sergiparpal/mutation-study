@@ -1,10 +1,10 @@
 # Fourth campaign: protocol
 
-**Draft of 20 November 2026, not fixed.** The checks without the model and the
-pilot below have been made. The protocol is fixed by the merge of the pull
-request that adds it, with its scripts as they are in that commit. From then
-on, anything done differently is a deviation and is listed at the end, with its
-date and reason, before the step it affects.
+Fixed on 20 November 2026, before any run on the subjects, by the merge of the
+pull request that adds it (#21), after the checks without the model and the
+pilot below. The merge commit, with the scripts as they are in it, is the
+reference. Anything done differently afterwards is a deviation and is listed at
+the end, with its date and reason, before the step it affects.
 
 ## Why a fourth campaign
 
