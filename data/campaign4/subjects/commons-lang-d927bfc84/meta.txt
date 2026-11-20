@@ -1,0 +1,5 @@
+project=commons-lang
+sha=d927bfc848c409af2050d1c32b3e7cf1daed304e
+short=d927bfc84
+date=2026-06-11
+subject=Throw IllegalArgumentException for trailing whitespace in (#1701)

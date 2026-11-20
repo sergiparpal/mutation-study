@@ -1,0 +1,5 @@
+project=commons-lang
+sha=4052e9862bf540f0b294bcf58aad5b5e85eae4ad
+short=4052e9862
+date=2026-01-28
+subject=LANG-1818: Fix ClassUtils.getShortClassName(Class) to correctly handle $ in valid class names (#1591)

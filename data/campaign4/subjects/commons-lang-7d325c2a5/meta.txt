@@ -1,0 +1,5 @@
+project=commons-lang
+sha=7d325c2a5bfb61991020f46585ae78a34546527e
+short=7d325c2a5
+date=2026-10-28
+subject=Keep RandomStringUtils.random rejection cap from failing valid ranges (#1843)

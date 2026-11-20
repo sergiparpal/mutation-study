@@ -1,0 +1,5 @@
+project=commons-csv
+sha=a99f2609299a72b08a3e43c2968822555528da4e
+short=a99f26092
+date=2026-06-15
+subject=quote value starting with comment marker in minimal quote mode

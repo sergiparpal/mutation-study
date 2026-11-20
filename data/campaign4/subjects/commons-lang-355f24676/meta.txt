@@ -1,0 +1,5 @@
+project=commons-lang
+sha=355f246760cad21ca597424b49bb1151c0a63a96
+short=355f24676
+date=2026-11-15
+subject=Fix premature overflow in Fraction.divideBy (#1865)

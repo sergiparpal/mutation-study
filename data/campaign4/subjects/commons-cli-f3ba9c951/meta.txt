@@ -1,0 +1,5 @@
+project=commons-cli
+sha=f3ba9c9518edf3702a8d06d211a91959611ff413
+short=f3ba9c951
+date=2026-06-28
+subject=Use Locale.ENGLISH when parsing dates in Converter.DATE (#426)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=1418a770ba436d15693c3bb29a67e501c2008274
+short=1418a770b
+date=2026-01-25
+subject=[LANG-1452] RecursiveToStringStyle and MultilineRecursiveToStringStyle shouldn't recurse into a java.math.BigDecimal (#1584)

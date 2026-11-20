@@ -1,0 +1,5 @@
+project=commons-csv
+sha=1e3de1274636959d3cf70acbba14ae10128369a5
+short=1e3de1274
+date=2026-06-09
+subject=clear escape delimiter buffer before peek in isEscapeDelimiter

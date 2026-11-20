@@ -1,0 +1,5 @@
+project=commons-lang
+sha=14deed1bff705a46c485733451f462f549ac528d
+short=14deed1bf
+date=2026-05-24
+subject=NumericEntityUnescaper.translate() for entity values out of range passed (#1673)

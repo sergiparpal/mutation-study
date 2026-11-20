@@ -1,0 +1,6 @@
+project=commons-lang
+sha=19b59ffddbde0db1405c2cf4df8413ccee189be0
+short=19b59ffdd
+date=2026-05-06
+subject=StringUtils.joins() for primitive types can throw OOME before index (#1636)
+parent=the test JVM ran out of memory

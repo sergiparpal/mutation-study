@@ -1,0 +1,5 @@
+project=commons-lang
+sha=2240c1f93e5f96b12a83ec8615c29dfac46258e9
+short=2240c1f93
+date=2026-06-11
+subject=Fix int overflow in StringUtils.midString() length handling (#1699)

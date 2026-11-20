@@ -1,0 +1,5 @@
+project=commons-lang
+sha=45c80d99559017ea6efcb5db6156bb9a5c850d34
+short=45c80d995
+date=2026-10-18
+subject=Keep EventCountCircuitBreaker event count from wrapping on int overflow (#1825)

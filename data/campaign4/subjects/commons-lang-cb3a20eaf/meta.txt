@@ -1,0 +1,5 @@
+project=commons-lang
+sha=cb3a20eafad7baf2d206bb1083e134c22021a574
+short=cb3a20eaf
+date=2026-10-24
+subject=keep StrSubstitutor from treating a value's trailing $ as an escape (#1834)

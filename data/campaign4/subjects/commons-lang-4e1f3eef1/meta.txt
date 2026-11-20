@@ -1,0 +1,5 @@
+project=commons-lang
+sha=4e1f3eef1f16de28c83d67040b7a5e554b81fcdf
+short=4e1f3eef1
+date=2026-06-20
+subject=reject sign characters in UnicodeUnescaper hex values (#1721)

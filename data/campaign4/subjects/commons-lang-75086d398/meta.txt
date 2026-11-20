@@ -1,0 +1,5 @@
+project=commons-lang
+sha=75086d398acd1e5c64340e7276d775fbc4d767f5
+short=75086d398
+date=2026-10-27
+subject=keep DateUtils.ceiling and round inside a DST overlap hour (#1842)

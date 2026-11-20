@@ -1,0 +1,5 @@
+project=commons-lang
+sha=4a6a98432f57e6286ba48777268a26b68dfd9547
+short=4a6a98432
+date=2026-02-12
+subject=StringUtils.abbreviate(String, String, int) contract violations (#1572)

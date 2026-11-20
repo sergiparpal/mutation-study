@@ -1,0 +1,5 @@
+project=commons-lang
+sha=54ee8ec1c9c44a6617e8e41acf475a79857ac564
+short=54ee8ec1c
+date=2026-08-04
+subject=Reject non-ASCII hex characters in Conversion.hexDigitToInt (#1767)

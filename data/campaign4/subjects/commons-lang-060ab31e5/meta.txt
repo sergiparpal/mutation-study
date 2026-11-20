@@ -1,0 +1,5 @@
+project=commons-lang
+sha=060ab31e517d856292e97428345821b5b289249a
+short=060ab31e5
+date=2026-06-13
+subject=reject doubled leading sign in createBigInteger (#1702)

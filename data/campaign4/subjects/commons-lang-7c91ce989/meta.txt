@@ -1,0 +1,5 @@
+project=commons-lang
+sha=7c91ce9898e2bfe0eb938ed16d4e1b8840d39aef
+short=7c91ce989
+date=2026-07-11
+subject=Match String case folding in StrBuilder.equalsIgnoreCase (#1745)

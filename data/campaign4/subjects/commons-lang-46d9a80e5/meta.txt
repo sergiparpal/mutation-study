@@ -1,0 +1,5 @@
+project=commons-lang
+sha=46d9a80e548f792c5ee1a9e63f82a84256bf18a4
+short=46d9a80e5
+date=2026-06-18
+subject=Fix spurious overflow in Fraction.add/subtract for coprime denominators (#1709)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=05fffe85e39d3a8b783ff039d8d8e0b5e63a4f73
+short=05fffe85e
+date=2026-11-19
+subject=[LANG-1840] Fix NPE in MultilineRecursiveToStringStyle for null map entries (#1889)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=daa17b8629a7a9921ffe42e7c2c0f0051af42571
+short=daa17b862
+date=2026-05-07
+subject=Annotation lookup matches unrelated overloads via assignable-parameter resolution (#1637)

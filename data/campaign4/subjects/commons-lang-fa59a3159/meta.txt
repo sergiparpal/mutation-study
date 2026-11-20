@@ -1,0 +1,5 @@
+project=commons-lang
+sha=fa59a31596ce37abe09c5f058c6f2e035f7c6677
+short=fa59a3159
+date=2026-04-25
+subject=[LANG-1821] NumberUtils.isCreatable fails for hexadecimal numbers with long type qualifier (#1629)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=e2838b281f874302856114e75767fb24799e0cca
+short=e2838b281
+date=2026-05-17
+subject=StringUtils.indexOfAny(CharSequence, int, char...) should not throw for a bad index (#1656)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=a0ffef035d6a0e7803da8405ebceacb011efbaa0
+short=a0ffef035
+date=2026-06-19
+subject=fix silent int overflow in Fraction.getFraction(double) (#1717)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=7da57b615f144b194cf05e9d11e17b04216c8e85
+short=7da57b615
+date=2026-11-18
+subject=Preserve negative durations in DurationUtils.accept (#1882)

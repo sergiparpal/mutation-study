@@ -1,0 +1,5 @@
+project=commons-lang
+sha=d732cf0f83e5e8509d053e79779b440963d9bd56
+short=d732cf0f8
+date=2026-11-15
+subject=Preserve equivalent generic upper bounds in TypeUtils (#1866)

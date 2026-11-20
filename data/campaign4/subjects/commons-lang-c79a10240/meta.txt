@@ -1,0 +1,5 @@
+project=commons-lang
+sha=c79a10240bd7ddcb956c3f6853f956e0251fb745
+short=c79a10240
+date=2026-05-20
+subject=ClassUtils.getShortClassName(String) can throw NoClassDefFoundError on malformed inner classes (#1665)

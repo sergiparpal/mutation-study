@@ -1,0 +1,5 @@
+project=commons-cli
+sha=8010193eec848982cb4618a0a31487aca76851a2
+short=8010193ee
+date=2026-07-11
+subject=reject invalid dates in Converter.DATE (#430)

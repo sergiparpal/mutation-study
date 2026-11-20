@@ -1,0 +1,5 @@
+project=commons-lang
+sha=0953617b75115d2bedb50f8c11bac433b68da182
+short=0953617b7
+date=2026-05-17
+subject=HashCodeBuilder.append(Object) StackOverflowError on (#1650)

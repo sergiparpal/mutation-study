@@ -1,0 +1,5 @@
+project=commons-lang
+sha=79380dba919716065f5e16465671782119449a36
+short=79380dba9
+date=2026-05-18
+subject=DurationUtils.toMillisInt() throws ArithmeticException on long overflows before clamping (#1657)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=526a03a8701f85e422786f0a4d1fadd3f0c249c1
+short=526a03a87
+date=2026-05-18
+subject=DateUtils.parseDateWithLeniency(String, Locale, String[], boolean) doesn't reset its time zone (#1660)

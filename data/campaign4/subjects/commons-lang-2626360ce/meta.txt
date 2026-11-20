@@ -1,0 +1,5 @@
+project=commons-lang
+sha=2626360ce04cf7b1ac0001a51e35d8177a39953a
+short=2626360ce
+date=2026-11-18
+subject=Preserve interrupt status in BackgroundInitializer.isInitialized (#1879)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=127050d2b54bd6224bc53573228e8774dc7be28b
+short=127050d2b
+date=2026-04-16
+subject=NumberUtils.isCreatable(String) should match NumberUtils.createNumber(String), exactly (#1626)

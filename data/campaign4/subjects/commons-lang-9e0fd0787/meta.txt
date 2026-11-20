@@ -1,0 +1,5 @@
+project=commons-lang
+sha=9e0fd0787e64d3ba733268d75273b283874fc2d7
+short=9e0fd0787
+date=2026-10-07
+subject=[LANG-1655] Recompose Hangul after stripping accents (#1799)

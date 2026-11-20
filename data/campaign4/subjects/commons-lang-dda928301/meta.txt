@@ -1,0 +1,5 @@
+project=commons-lang
+sha=dda92830127b7486fb02932e87a05891feb9cef1
+short=dda928301
+date=2026-07-06
+subject=Keep FastDateParser.parse error message intact for imperial locale (#1743)

@@ -1,0 +1,5 @@
+project=commons-csv
+sha=b5940a642eef0de550733887fc5b78451d4a8eed
+short=b5940a642
+date=2026-06-13
+subject=escape quote char in printWithEscapes when QuoteMode is NONE

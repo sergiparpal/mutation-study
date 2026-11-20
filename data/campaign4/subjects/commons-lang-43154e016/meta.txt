@@ -1,0 +1,5 @@
+project=commons-lang
+sha=43154e016ae213a0da5b727cd1aa18e6e0c56adb
+short=43154e016
+date=2026-10-05
+subject=Default unbounded WildcardType upper bound to Object in TypeUtils (#1807)

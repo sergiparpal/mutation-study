@@ -1,0 +1,5 @@
+project=commons-lang
+sha=864dd6ea887fd394f15e3b55203d6f52f717373b
+short=864dd6ea8
+date=2026-05-07
+subject=NaN bypass in primitive double range validators. (#1640)

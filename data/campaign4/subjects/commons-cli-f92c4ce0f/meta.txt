@@ -1,0 +1,5 @@
+project=commons-cli
+sha=f92c4ce0f80fd09b648a9b73b6495417eb97edbf
+short=f92c4ce0f
+date=2026-07-11
+subject=reject non-BMP code points in the Character type converter (#425)

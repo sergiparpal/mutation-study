@@ -1,0 +1,5 @@
+project=commons-csv
+sha=23eb602d25a9cf0c989085e9a618dd2b3bff5b45
+short=23eb602d2
+date=2026-05-20
+subject=[CSV-323] ExtendedBufferedReader byte tracking leads to an incorrect CSVRecord.getBytePosition()

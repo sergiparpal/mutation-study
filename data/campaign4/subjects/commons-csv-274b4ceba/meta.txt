@@ -1,0 +1,5 @@
+project=commons-csv
+sha=274b4ceba4e418726a5c9e7043bf9d460b0429c5
+short=274b4ceba
+date=2026-06-20
+subject=skip byte counting at EOF in ExtendedBufferedReader.read

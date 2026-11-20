@@ -1,0 +1,5 @@
+project=commons-lang
+sha=2c3748412e5a4f4f167ac4f15c8fe0a093ea5e2b
+short=2c3748412
+date=2026-06-10
+subject=drop redundant lowercase in case-insensitive Strings.replace (#1697)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=35d652e9e26461ddbeb19aa32bc6acd012ccc641
+short=35d652e9e
+date=2026-06-30
+subject=Fix Strings.CI.indexOf returning out-of-range index for empty search (#1737)

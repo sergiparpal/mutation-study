@@ -1,0 +1,5 @@
+project=commons-lang
+sha=e1ffb6ea0b9e21ea71c4540b0fca4db8e4c1dd93
+short=e1ffb6ea0
+date=2026-01-28
+subject=ThreadUtils.sleepQuietly(Duration) now restores the current thread's interrupt flag when catching InterruptedException.

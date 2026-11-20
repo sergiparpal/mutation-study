@@ -1,0 +1,5 @@
+project=commons-lang
+sha=4a5ef8ed29f0c135627f43b58c7ab7b6defe37b7
+short=4a5ef8ed2
+date=2026-01-17
+subject=Fix handling of null marker in StringUtils.abbreviate(String, String, int, int)  (#1571)

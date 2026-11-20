@@ -1,0 +1,5 @@
+project=commons-lang
+sha=4c3f1dd00ee7b8800478edb2b50dd687103b5f2a
+short=4c3f1dd00
+date=2026-05-15
+subject=StringUtils.repeat(String, [String,] int) now throws IllegalArgumentException (#1644)

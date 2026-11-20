@@ -1,0 +1,5 @@
+project=commons-lang
+sha=c07bc828f0e208455b3f44345f69414eddf00b2f
+short=c07bc828f
+date=2026-05-05
+subject=Fix typo in SystemProperties.JDK_XML_ENTITY_REPLACEMENT_LIMIT (#1631)

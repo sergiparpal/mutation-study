@@ -1,0 +1,5 @@
+project=commons-csv
+sha=5e2d0590ca74424d5a51defef489e374abfb921a
+short=5e2d0590c
+date=2026-05-20
+subject=[CSV-321] CSVFormat.equals()/hashCode() ignores maxRows

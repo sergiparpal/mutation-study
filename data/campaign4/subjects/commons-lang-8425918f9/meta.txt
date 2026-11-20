@@ -1,0 +1,5 @@
+project=commons-lang
+sha=8425918f90e8c3c6e39f14e18335ecb8e4589b91
+short=8425918f9
+date=2026-07-07
+subject=Keep ExtendedMessageFormat from rejecting a quoted format style (#1744)

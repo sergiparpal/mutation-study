@@ -1,0 +1,5 @@
+project=commons-cli
+sha=7d77ecce8b11763b7282d6b40dffdb4ce8e85668
+short=7d77ecce8
+date=2026-08-01
+subject=Reject trailing text after the date in Converter.DATE (#435)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=b1aba6833f31ac2c9cc5a1302cac966f997db31e
+short=b1aba6833
+date=2026-07-30
+subject=fix StrBuilder.lastIndexOf(String) start index for an empty search (#1759)

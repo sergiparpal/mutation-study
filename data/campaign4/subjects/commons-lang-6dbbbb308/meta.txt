@@ -1,0 +1,5 @@
+project=commons-lang
+sha=6dbbbb308bb77ba9c0ddab1ae400ee2ff76026b4
+short=6dbbbb308
+date=2026-06-21
+subject=fix unescapeCsv bounds error on a single quote field (#1723)

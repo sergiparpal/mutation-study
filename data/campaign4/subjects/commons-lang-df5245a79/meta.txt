@@ -1,0 +1,5 @@
+project=commons-lang
+sha=df5245a79364b7e117d00962829a303086c7e5d5
+short=df5245a79
+date=2026-08-22
+subject=Keep StopWatch.formatSplitTime from clamping splits to int millis (#1777)

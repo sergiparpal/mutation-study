@@ -1,0 +1,5 @@
+project=commons-lang
+sha=83fe22025de1df35a22ede1bbe75ccc5267ac779
+short=83fe22025
+date=2026-11-15
+subject=Preserve numeric types for negative hexadecimal minima (#1877)

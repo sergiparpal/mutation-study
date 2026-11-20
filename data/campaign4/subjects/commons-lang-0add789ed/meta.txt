@@ -1,0 +1,5 @@
+project=commons-lang
+sha=0add789ed39fb3d59ce16048a3960821ee313bf7
+short=0add789ed
+date=2026-07-30
+subject=fix negative week year formatting in FastDatePrinter (#1762)

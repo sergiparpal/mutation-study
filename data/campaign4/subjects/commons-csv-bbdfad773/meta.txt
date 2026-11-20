@@ -1,0 +1,5 @@
+project=commons-csv
+sha=bbdfad773199ec4edeb64b70b85e256ea7687852
+short=bbdfad773
+date=2026-07-01
+subject=quote value ending with multi-character delimiter prefix

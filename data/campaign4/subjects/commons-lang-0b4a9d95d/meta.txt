@@ -1,0 +1,5 @@
+project=commons-lang
+sha=0b4a9d95df610bfcc83c375110ac100d08662ba1
+short=0b4a9d95d
+date=2026-05-18
+subject=LocaleUtils.parseLocale(String) operator precedence bug allows invalid language with numeric country (#1658)

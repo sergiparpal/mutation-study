@@ -1,0 +1,5 @@
+project=commons-lang
+sha=13d25e0591e640e53f1238e78f6b0e69d0fd6aea
+short=13d25e059
+date=2026-06-20
+subject=Fix int overflow in DurationFormatUtils.formatPeriod (#1720)

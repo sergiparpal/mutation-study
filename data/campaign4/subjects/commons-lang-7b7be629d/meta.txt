@@ -1,0 +1,5 @@
+project=commons-lang
+sha=7b7be629d6383ae8ddd7e0ed8c6d700ec23aebd0
+short=7b7be629d
+date=2026-07-12
+subject=Keep HashCodeBuilder.append(Object) from poisoning reflection hashCode (#1747)

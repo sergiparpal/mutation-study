@@ -1,0 +1,5 @@
+project=commons-lang
+sha=4060e60f45338ff337a145bd55bf1541353d8e3d
+short=4060e60f4
+date=2026-10-25
+subject=Stop ExceptionUtils.removeCommonFrames at the first differing frame (#1831)

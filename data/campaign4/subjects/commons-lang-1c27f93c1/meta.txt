@@ -1,0 +1,5 @@
+project=commons-lang
+sha=1c27f93c1dab1f6d4b33b7e0134d8ff04acee020
+short=1c27f93c1
+date=2026-11-16
+subject=Fix class loader resolution when cloning dynamic proxies (#1868)

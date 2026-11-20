@@ -1,0 +1,5 @@
+project=commons-lang
+sha=eedd91729833cedcb31b0fd8116869c71e57ac74
+short=eedd91729
+date=2026-06-18
+subject=count duplicate values in ObjectUtils.median (#1715)

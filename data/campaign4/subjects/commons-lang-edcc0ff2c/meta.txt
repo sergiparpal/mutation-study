@@ -1,0 +1,5 @@
+project=commons-lang
+sha=edcc0ff2c05f018f39387f674821f459b5f04ebf
+short=edcc0ff2c
+date=2026-11-15
+subject=[LANG-1730] Parse GMT independently of platform aliases (#1874)

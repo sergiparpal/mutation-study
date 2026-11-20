@@ -1,0 +1,5 @@
+project=commons-lang
+sha=f4bdd4e1d2c99cdab12e5177989fc11e1add33d5
+short=f4bdd4e1d
+date=2026-10-24
+subject=Fix FastDateParser normalization of out-of-range ISO day-of-week values (#1839)

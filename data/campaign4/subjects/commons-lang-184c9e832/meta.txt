@@ -1,0 +1,5 @@
+project=commons-lang
+sha=184c9e83211a0552698a934d45d3ebca2c789881
+short=184c9e832
+date=2026-05-17
+subject=WordUtils.wrap() zero-width wrapOn regex match causes infinite loop. (#1649)

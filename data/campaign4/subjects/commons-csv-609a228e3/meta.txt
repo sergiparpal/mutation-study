@@ -1,0 +1,5 @@
+project=commons-csv
+sha=609a228e35adf9d73275a6b88e065de091c94be6
+short=609a228e3
+date=2026-06-22
+subject=keep quoted empty trailing field with trailingDelimiter
