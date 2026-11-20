@@ -1,0 +1,20 @@
+# P132: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+--- a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+@@ -1025,13 +1025,13 @@ public Date parse(final String source) throws ParseException {
+         final Date date = parse(source, pp);
+         if (date == null) {
+             // Add a note regarding supported date range
+             final int errorIndex = pp.getErrorIndex();
+             final String msg = String.format("Unparseable date: '%s', parse position = %s", source, pp);
+             if (locale.equals(JAPANESE_IMPERIAL)) {
+-                throw new ParseException(String.format("; the %s locale does not support dates before 1868-01-01.", locale, msg), errorIndex);
++                throw new ParseException(String.format("%s; the %s locale does not support dates before 1868-01-01.", msg, locale), errorIndex);
+             }
+             throw new ParseException(msg, errorIndex);
+         }
+         return date;
+     }
+ 

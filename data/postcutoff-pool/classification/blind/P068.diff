@@ -1,0 +1,425 @@
+# P068: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +28/-28   lines, code only (comments and blank lines left out, by line prefix): +28/-28
+diff --git a/src/main/java/org/apache/commons/lang3/Conversion.java b/src/main/java/org/apache/commons/lang3/Conversion.java
+--- a/src/main/java/org/apache/commons/lang3/Conversion.java
++++ b/src/main/java/org/apache/commons/lang3/Conversion.java
+@@ -157,13 +157,13 @@ public static char binaryBeMsb0ToHexDigit(final boolean[] src, final int srcPos)
+      * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBools > src.length}.
+      */
+     public static byte binaryToByte(final boolean[] src, final int srcPos, final byte dstInit, final int dstPos, final int nBools) {
+         if (src.length == 0 && srcPos == 0 || 0 == nBools) {
+             return dstInit;
+         }
+-        if (nBools - 1 + dstPos >= Byte.SIZE) {
++        if ((long) nBools - 1 + dstPos >= Byte.SIZE) {
+             throw new IllegalArgumentException("nBools - 1 + dstPos >= 8");
+         }
+         byte out = dstInit;
+         for (int i = 0; i < nBools; i++) {
+             final int shift = i + dstPos;
+             final int bits = (src[i + srcPos] ? 1 : 0) << shift;
+@@ -304,13 +304,13 @@ public static char binaryToHexDigitMsb0_4bits(final boolean[] src, final int src
+      * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBools > src.length}.
+      */
+     public static int binaryToInt(final boolean[] src, final int srcPos, final int dstInit, final int dstPos, final int nBools) {
+         if (src.length == 0 && srcPos == 0 || 0 == nBools) {
+             return dstInit;
+         }
+-        if (nBools - 1 + dstPos >= Integer.SIZE) {
++        if ((long) nBools - 1 + dstPos >= Integer.SIZE) {
+             throw new IllegalArgumentException("nBools - 1 + dstPos >= 32");
+         }
+         int out = dstInit;
+         for (int i = 0; i < nBools; i++) {
+             final int shift = i + dstPos;
+             final int bits = (src[i + srcPos] ? 1 : 0) << shift;
+@@ -334,13 +334,13 @@ public static int binaryToInt(final boolean[] src, final int srcPos, final int d
+      * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBools > src.length}.
+      */
+     public static long binaryToLong(final boolean[] src, final int srcPos, final long dstInit, final int dstPos, final int nBools) {
+         if (src.length == 0 && srcPos == 0 || 0 == nBools) {
+             return dstInit;
+         }
+-        if (nBools - 1 + dstPos >= Long.SIZE) {
++        if ((long) nBools - 1 + dstPos >= Long.SIZE) {
+             throw new IllegalArgumentException("nBools - 1 + dstPos >= 64");
+         }
+         long out = dstInit;
+         for (int i = 0; i < nBools; i++) {
+             final int shift = i + dstPos;
+             final long bits = (src[i + srcPos] ? 1L : 0) << shift;
+@@ -364,13 +364,13 @@ public static long binaryToLong(final boolean[] src, final int srcPos, final lon
+      * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBools > src.length}.
+      */
+     public static short binaryToShort(final boolean[] src, final int srcPos, final short dstInit, final int dstPos, final int nBools) {
+         if (src.length == 0 && srcPos == 0 || 0 == nBools) {
+             return dstInit;
+         }
+-        if (nBools - 1 + dstPos >= Short.SIZE) {
++        if ((long) nBools - 1 + dstPos >= Short.SIZE) {
+             throw new IllegalArgumentException("nBools - 1 + dstPos >= 16");
+         }
+         short out = dstInit;
+         for (int i = 0; i < nBools; i++) {
+             final int shift = i + dstPos;
+             final int bits = (src[i + srcPos] ? 1 : 0) << shift;
+@@ -394,13 +394,13 @@ public static short binaryToShort(final boolean[] src, final int srcPos, final s
+      * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBytes > src.length}.
+      */
+     public static int byteArrayToInt(final byte[] src, final int srcPos, final int dstInit, final int dstPos, final int nBytes) {
+         if (src.length == 0 && srcPos == 0 || 0 == nBytes) {
+             return dstInit;
+         }
+-        if ((nBytes - 1) * Byte.SIZE + dstPos >= Integer.SIZE) {
++        if (((long) nBytes - 1) * Byte.SIZE + dstPos >= Integer.SIZE) {
+             throw new IllegalArgumentException("(nBytes - 1) * 8 + dstPos >= 32");
+         }
+         int out = dstInit;
+         for (int i = 0; i < nBytes; i++) {
+             final int shift = i * Byte.SIZE + dstPos;
+             final int bits = (0xff & src[i + srcPos]) << shift;
+@@ -424,13 +424,13 @@ public static int byteArrayToInt(final byte[] src, final int srcPos, final int d
+      * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBytes > src.length}.
+      */
+     public static long byteArrayToLong(final byte[] src, final int srcPos, final long dstInit, final int dstPos, final int nBytes) {
+         if (src.length == 0 && srcPos == 0 || 0 == nBytes) {
+             return dstInit;
+         }
+-        if ((nBytes - 1) * Byte.SIZE + dstPos >= Long.SIZE) {
++        if (((long) nBytes - 1) * Byte.SIZE + dstPos >= Long.SIZE) {
+             throw new IllegalArgumentException("(nBytes - 1) * 8 + dstPos >= 64");
+         }
+         long out = dstInit;
+         for (int i = 0; i < nBytes; i++) {
+             final int shift = i * Byte.SIZE + dstPos;
+             final long bits = (0xffL & src[i + srcPos]) << shift;
+@@ -454,13 +454,13 @@ public static long byteArrayToLong(final byte[] src, final int srcPos, final lon
+      * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBytes > src.length}.
+      */
+     public static short byteArrayToShort(final byte[] src, final int srcPos, final short dstInit, final int dstPos, final int nBytes) {
+         if (src.length == 0 && srcPos == 0 || 0 == nBytes) {
+             return dstInit;
+         }
+-        if ((nBytes - 1) * Byte.SIZE + dstPos >= Short.SIZE) {
++        if (((long) nBytes - 1) * Byte.SIZE + dstPos >= Short.SIZE) {
+             throw new IllegalArgumentException("(nBytes - 1) * 8 + dstPos >= 16");
+         }
+         short out = dstInit;
+         for (int i = 0; i < nBytes; i++) {
+             final int shift = i * Byte.SIZE + dstPos;
+             final int bits = (0xff & src[i + srcPos]) << shift;
+@@ -500,13 +500,13 @@ public static UUID byteArrayToUuid(final byte[] src, final int srcPos) {
+      * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBools > dst.length}.
+      */
+     public static boolean[] byteToBinary(final byte src, final int srcPos, final boolean[] dst, final int dstPos, final int nBools) {
+         if (0 == nBools) {
+             return dst;
+         }
+-        if (nBools - 1 + srcPos >= Byte.SIZE) {
++        if ((long) nBools - 1 + srcPos >= Byte.SIZE) {
+             throw new IllegalArgumentException("nBools -  1 + srcPos >= 8");
+         }
+         for (int i = 0; i < nBools; i++) {
+             final int shift = i + srcPos;
+             dst[dstPos + i] = (0x1 & src >> shift) != 0;
+         }
+@@ -526,13 +526,13 @@ public static boolean[] byteToBinary(final byte src, final int srcPos, final boo
+      * @throws StringIndexOutOfBoundsException if {@code dst.init.length() < dstPos}.
+      */
+     public static String byteToHex(final byte src, final int srcPos, final String dstInit, final int dstPos, final int nHexs) {
+         if (0 == nHexs) {
+             return dstInit;
+         }
+-        if ((nHexs - 1) * 4 + srcPos >= Byte.SIZE) {
++        if (((long) nHexs - 1) * 4 + srcPos >= Byte.SIZE) {
+             throw new IllegalArgumentException("(nHexs - 1) * 4 + srcPos >= 8");
+         }
+         final StringBuilder sb = new StringBuilder(dstInit);
+         int append = sb.length();
+         for (int i = 0; i < nHexs; i++) {
+             final int shift = i * 4 + srcPos;
+@@ -745,13 +745,13 @@ public static int hexDigitToInt(final char hexChar) {
+      * @throws IllegalArgumentException if {@code (nHex-1)*4+dstPos >= 8}.
+      */
+     public static byte hexToByte(final String src, final int srcPos, final byte dstInit, final int dstPos, final int nHex) {
+         if (0 == nHex) {
+             return dstInit;
+         }
+-        if ((nHex - 1) * 4 + dstPos >= Byte.SIZE) {
++        if (((long) nHex - 1) * 4 + dstPos >= Byte.SIZE) {
+             throw new IllegalArgumentException("(nHex - 1) * 4 + dstPos >= 8");
+         }
+         byte out = dstInit;
+         for (int i = 0; i < nHex; i++) {
+             final int shift = i * 4 + dstPos;
+             final int bits = (0xf & hexDigitToInt(src.charAt(i + srcPos))) << shift;
+@@ -773,13 +773,13 @@ public static byte hexToByte(final String src, final int srcPos, final byte dstI
+      * @throws IllegalArgumentException if {@code (nHexs - 1) * 4 + dstPos >= 32}.
+      */
+     public static int hexToInt(final String src, final int srcPos, final int dstInit, final int dstPos, final int nHex) {
+         if (0 == nHex) {
+             return dstInit;
+         }
+-        if ((nHex - 1) * 4 + dstPos >= Integer.SIZE) {
++        if (((long) nHex - 1) * 4 + dstPos >= Integer.SIZE) {
+             throw new IllegalArgumentException("(nHexs - 1) * 4 + dstPos >= 32");
+         }
+         int out = dstInit;
+         for (int i = 0; i < nHex; i++) {
+             final int shift = i * 4 + dstPos;
+             final int bits = (0xf & hexDigitToInt(src.charAt(i + srcPos))) << shift;
+@@ -801,13 +801,13 @@ public static int hexToInt(final String src, final int srcPos, final int dstInit
+      * @throws IllegalArgumentException if {@code (nHexs - 1) * 4 + dstPos >= 64}.
+      */
+     public static long hexToLong(final String src, final int srcPos, final long dstInit, final int dstPos, final int nHex) {
+         if (0 == nHex) {
+             return dstInit;
+         }
+-        if ((nHex - 1) * 4 + dstPos >= Long.SIZE) {
++        if (((long) nHex - 1) * 4 + dstPos >= Long.SIZE) {
+             throw new IllegalArgumentException("(nHexs - 1) * 4 + dstPos >= 64");
+         }
+         long out = dstInit;
+         for (int i = 0; i < nHex; i++) {
+             final int shift = i * 4 + dstPos;
+             final long bits = (0xfL & hexDigitToInt(src.charAt(i + srcPos))) << shift;
+@@ -829,13 +829,13 @@ public static long hexToLong(final String src, final int srcPos, final long dstI
+      * @throws IllegalArgumentException if {@code (nHexs - 1) * 4 + dstPos >= 16}.
+      */
+     public static short hexToShort(final String src, final int srcPos, final short dstInit, final int dstPos, final int nHex) {
+         if (0 == nHex) {
+             return dstInit;
+         }
+-        if ((nHex - 1) * 4 + dstPos >= Short.SIZE) {
++        if (((long) nHex - 1) * 4 + dstPos >= Short.SIZE) {
+             throw new IllegalArgumentException("(nHexs - 1) * 4 + dstPos >= 16");
+         }
+         short out = dstInit;
+         for (int i = 0; i < nHex; i++) {
+             final int shift = i * 4 + dstPos;
+             final int bits = (0xf & hexDigitToInt(src.charAt(i + srcPos))) << shift;
+@@ -859,13 +859,13 @@ public static short hexToShort(final String src, final int srcPos, final short d
+      * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nInts > src.length}.
+      */
+     public static long intArrayToLong(final int[] src, final int srcPos, final long dstInit, final int dstPos, final int nInts) {
+         if (src.length == 0 && srcPos == 0 || 0 == nInts) {
+             return dstInit;
+         }
+-        if ((nInts - 1) * Integer.SIZE + dstPos >= Long.SIZE) {
++        if (((long) nInts - 1) * Integer.SIZE + dstPos >= Long.SIZE) {
+             throw new IllegalArgumentException("(nInts - 1) * 32 + dstPos >= 64");
+         }
+         long out = dstInit;
+         for (int i = 0; i < nInts; i++) {
+             final int shift = i * Integer.SIZE + dstPos;
+             final long bits = (0xffffffffL & src[i + srcPos]) << shift;
+@@ -889,13 +889,13 @@ public static long intArrayToLong(final int[] src, final int srcPos, final long
+      * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBools > dst.length}.
+      */
+     public static boolean[] intToBinary(final int src, final int srcPos, final boolean[] dst, final int dstPos, final int nBools) {
+         if (0 == nBools) {
+             return dst;
+         }
+-        if (nBools - 1 + srcPos >= Integer.SIZE) {
++        if ((long) nBools - 1 + srcPos >= Integer.SIZE) {
+             throw new IllegalArgumentException("nBools -  1 + srcPos >= 32");
+         }
+         for (int i = 0; i < nBools; i++) {
+             final int shift = i + srcPos;
+             dst[dstPos + i] = (0x1 & src >> shift) != 0;
+         }
+@@ -916,13 +916,13 @@ public static boolean[] intToBinary(final int src, final int srcPos, final boole
+      * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBytes > dst.length}.
+      */
+     public static byte[] intToByteArray(final int src, final int srcPos, final byte[] dst, final int dstPos, final int nBytes) {
+         if (0 == nBytes) {
+             return dst;
+         }
+-        if ((nBytes - 1) * Byte.SIZE + srcPos >= Integer.SIZE) {
++        if (((long) nBytes - 1) * Byte.SIZE + srcPos >= Integer.SIZE) {
+             throw new IllegalArgumentException("(nBytes - 1) * 8 + srcPos >= 32");
+         }
+         for (int i = 0; i < nBytes; i++) {
+             final int shift = i * Byte.SIZE + srcPos;
+             dst[dstPos + i] = (byte) (0xff & src >> shift);
+         }
+@@ -942,13 +942,13 @@ public static byte[] intToByteArray(final int src, final int srcPos, final byte[
+      * @throws StringIndexOutOfBoundsException if {@code dst.init.length() < dstPos}.
+      */
+     public static String intToHex(final int src, final int srcPos, final String dstInit, final int dstPos, final int nHexs) {
+         if (0 == nHexs) {
+             return dstInit;
+         }
+-        if ((nHexs - 1) * 4 + srcPos >= Integer.SIZE) {
++        if (((long) nHexs - 1) * 4 + srcPos >= Integer.SIZE) {
+             throw new IllegalArgumentException("(nHexs - 1) * 4 + srcPos >= 32");
+         }
+         final StringBuilder sb = new StringBuilder(dstInit);
+         int append = sb.length();
+         for (int i = 0; i < nHexs; i++) {
+             final int shift = i * 4 + srcPos;
+@@ -1058,13 +1058,13 @@ public static char intToHexDigitMsb0(final int nibble) {
+      * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nShorts > dst.length}.
+      */
+     public static short[] intToShortArray(final int src, final int srcPos, final short[] dst, final int dstPos, final int nShorts) {
+         if (0 == nShorts) {
+             return dst;
+         }
+-        if ((nShorts - 1) * Short.SIZE + srcPos >= Integer.SIZE) {
++        if (((long) nShorts - 1) * Short.SIZE + srcPos >= Integer.SIZE) {
+             throw new IllegalArgumentException("(nShorts - 1) * 16 + srcPos >= 32");
+         }
+         for (int i = 0; i < nShorts; i++) {
+             final int shift = i * Short.SIZE + srcPos;
+             dst[dstPos + i] = (short) (0xffff & src >> shift);
+         }
+@@ -1085,13 +1085,13 @@ public static short[] intToShortArray(final int src, final int srcPos, final sho
+      * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBools > dst.length}.
+      */
+     public static boolean[] longToBinary(final long src, final int srcPos, final boolean[] dst, final int dstPos, final int nBools) {
+         if (0 == nBools) {
+             return dst;
+         }
+-        if (nBools - 1 + srcPos >= Long.SIZE) {
++        if ((long) nBools - 1 + srcPos >= Long.SIZE) {
+             throw new IllegalArgumentException("nBools -  1 + srcPos >= 64");
+         }
+         for (int i = 0; i < nBools; i++) {
+             final int shift = i + srcPos;
+             dst[dstPos + i] = (0x1 & src >> shift) != 0;
+         }
+@@ -1112,13 +1112,13 @@ public static boolean[] longToBinary(final long src, final int srcPos, final boo
+      * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBytes > dst.length}.
+      */
+     public static byte[] longToByteArray(final long src, final int srcPos, final byte[] dst, final int dstPos, final int nBytes) {
+         if (0 == nBytes) {
+             return dst;
+         }
+-        if ((nBytes - 1) * Byte.SIZE + srcPos >= Long.SIZE) {
++        if (((long) nBytes - 1) * Byte.SIZE + srcPos >= Long.SIZE) {
+             throw new IllegalArgumentException("(nBytes - 1) * 8 + srcPos >= 64");
+         }
+         for (int i = 0; i < nBytes; i++) {
+             final int shift = i * Byte.SIZE + srcPos;
+             dst[dstPos + i] = (byte) (0xff & src >> shift);
+         }
+@@ -1138,13 +1138,13 @@ public static byte[] longToByteArray(final long src, final int srcPos, final byt
+      * @throws StringIndexOutOfBoundsException if {@code dst.init.length() < dstPos}.
+      */
+     public static String longToHex(final long src, final int srcPos, final String dstInit, final int dstPos, final int nHexs) {
+         if (0 == nHexs) {
+             return dstInit;
+         }
+-        if ((nHexs - 1) * 4 + srcPos >= Long.SIZE) {
++        if (((long) nHexs - 1) * 4 + srcPos >= Long.SIZE) {
+             throw new IllegalArgumentException("(nHexs - 1) * 4 + srcPos >= 64");
+         }
+         final StringBuilder sb = new StringBuilder(dstInit);
+         int append = sb.length();
+         for (int i = 0; i < nHexs; i++) {
+             final int shift = i * 4 + srcPos;
+@@ -1173,13 +1173,13 @@ public static String longToHex(final long src, final int srcPos, final String ds
+      * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nInts > dst.length}.
+      */
+     public static int[] longToIntArray(final long src, final int srcPos, final int[] dst, final int dstPos, final int nInts) {
+         if (0 == nInts) {
+             return dst;
+         }
+-        if ((nInts - 1) * Integer.SIZE + srcPos >= Long.SIZE) {
++        if (((long) nInts - 1) * Integer.SIZE + srcPos >= Long.SIZE) {
+             throw new IllegalArgumentException("(nInts - 1) * 32 + srcPos >= 64");
+         }
+         for (int i = 0; i < nInts; i++) {
+             final int shift = i * Integer.SIZE + srcPos;
+             dst[dstPos + i] = (int) (0xffffffff & src >> shift);
+         }
+@@ -1200,13 +1200,13 @@ public static int[] longToIntArray(final long src, final int srcPos, final int[]
+      * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nShorts > dst.length}.
+      */
+     public static short[] longToShortArray(final long src, final int srcPos, final short[] dst, final int dstPos, final int nShorts) {
+         if (0 == nShorts) {
+             return dst;
+         }
+-        if ((nShorts - 1) * Short.SIZE + srcPos >= Long.SIZE) {
++        if (((long) nShorts - 1) * Short.SIZE + srcPos >= Long.SIZE) {
+             throw new IllegalArgumentException("(nShorts - 1) * 16 + srcPos >= 64");
+         }
+         for (int i = 0; i < nShorts; i++) {
+             final int shift = i * Short.SIZE + srcPos;
+             dst[dstPos + i] = (short) (0xffff & src >> shift);
+         }
+@@ -1227,13 +1227,13 @@ public static short[] longToShortArray(final long src, final int srcPos, final s
+      * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nShorts > src.length}.
+      */
+     public static int shortArrayToInt(final short[] src, final int srcPos, final int dstInit, final int dstPos, final int nShorts) {
+         if (src.length == 0 && srcPos == 0 || 0 == nShorts) {
+             return dstInit;
+         }
+-        if ((nShorts - 1) * Short.SIZE + dstPos >= Integer.SIZE) {
++        if (((long) nShorts - 1) * Short.SIZE + dstPos >= Integer.SIZE) {
+             throw new IllegalArgumentException("(nShorts - 1) * 16 + dstPos >= 32");
+         }
+         int out = dstInit;
+         for (int i = 0; i < nShorts; i++) {
+             final int shift = i * Short.SIZE + dstPos;
+             final int bits = (0xffff & src[i + srcPos]) << shift;
+@@ -1257,13 +1257,13 @@ public static int shortArrayToInt(final short[] src, final int srcPos, final int
+      * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nShorts > src.length}.
+      */
+     public static long shortArrayToLong(final short[] src, final int srcPos, final long dstInit, final int dstPos, final int nShorts) {
+         if (src.length == 0 && srcPos == 0 || 0 == nShorts) {
+             return dstInit;
+         }
+-        if ((nShorts - 1) * Short.SIZE + dstPos >= Long.SIZE) {
++        if (((long) nShorts - 1) * Short.SIZE + dstPos >= Long.SIZE) {
+             throw new IllegalArgumentException("(nShorts - 1) * 16 + dstPos >= 64");
+         }
+         long out = dstInit;
+         for (int i = 0; i < nShorts; i++) {
+             final int shift = i * Short.SIZE + dstPos;
+             final long bits = (0xffffL & src[i + srcPos]) << shift;
+@@ -1287,13 +1287,13 @@ public static long shortArrayToLong(final short[] src, final int srcPos, final l
+      * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBools > dst.length}.
+      */
+     public static boolean[] shortToBinary(final short src, final int srcPos, final boolean[] dst, final int dstPos, final int nBools) {
+         if (0 == nBools) {
+             return dst;
+         }
+-        if (nBools - 1 + srcPos >= Short.SIZE) {
++        if ((long) nBools - 1 + srcPos >= Short.SIZE) {
+             throw new IllegalArgumentException("nBools -  1 + srcPos >= 16");
+         }
+         assert nBools - 1 < Short.SIZE - srcPos;
+         for (int i = 0; i < nBools; i++) {
+             final int shift = i + srcPos;
+             dst[dstPos + i] = (0x1 & src >> shift) != 0;
+@@ -1315,13 +1315,13 @@ public static boolean[] shortToBinary(final short src, final int srcPos, final b
+      * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBytes > dst.length}.
+      */
+     public static byte[] shortToByteArray(final short src, final int srcPos, final byte[] dst, final int dstPos, final int nBytes) {
+         if (0 == nBytes) {
+             return dst;
+         }
+-        if ((nBytes - 1) * Byte.SIZE + srcPos >= Short.SIZE) {
++        if (((long) nBytes - 1) * Byte.SIZE + srcPos >= Short.SIZE) {
+             throw new IllegalArgumentException("(nBytes - 1) * 8 + srcPos >= 16");
+         }
+         for (int i = 0; i < nBytes; i++) {
+             final int shift = i * Byte.SIZE + srcPos;
+             dst[dstPos + i] = (byte) (0xff & src >> shift);
+         }
+@@ -1341,13 +1341,13 @@ public static byte[] shortToByteArray(final short src, final int srcPos, final b
+      * @throws StringIndexOutOfBoundsException if {@code dst.init.length() < dstPos}.
+      */
+     public static String shortToHex(final short src, final int srcPos, final String dstInit, final int dstPos, final int nHexs) {
+         if (0 == nHexs) {
+             return dstInit;
+         }
+-        if ((nHexs - 1) * 4 + srcPos >= Short.SIZE) {
++        if (((long) nHexs - 1) * 4 + srcPos >= Short.SIZE) {
+             throw new IllegalArgumentException("(nHexs - 1) * 4 + srcPos >= 16");
+         }
+         final StringBuilder sb = new StringBuilder(dstInit);
+         int append = sb.length();
+         for (int i = 0; i < nHexs; i++) {
+             final int shift = i * 4 + srcPos;

@@ -1,0 +1,79 @@
+# P098: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +23/-2   lines, code only (comments and blank lines left out, by line prefix): +13/-2
+diff --git a/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java b/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
+--- a/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
++++ b/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
+@@ -63,12 +63,15 @@ final class ExtendedBufferedReader extends UnsynchronizedBufferedReader {
+ 
+     private long bytesReadMark;
+ 
+     /** Encoder for calculating the number of bytes for each character read. */
+     private final CharsetEncoder encoder;
+ 
++    /** Bytes {@link #encoder} emits as a byte-order mark on every {@link CharsetEncoder#encode(CharBuffer)} call (for example {@code UTF-16}). */
++    private final int bomLength;
++
+     /**
+      * Constructs a new instance using the default buffer size.
+      */
+     ExtendedBufferedReader(final Reader reader) {
+         this(reader, null, false);
+     }
+@@ -81,12 +84,13 @@ final class ExtendedBufferedReader extends UnsynchronizedBufferedReader {
+      * @param charset    The character set for encoding, or {@code null} if not applicable.
+      * @param trackBytes {@code true} to enable byte tracking; {@code false} to disable it.
+      */
+     ExtendedBufferedReader(final Reader reader, final Charset charset, final boolean trackBytes) {
+         super(reader);
+         encoder = charset != null && trackBytes ? charset.newEncoder() : null;
++        bomLength = encoder != null ? measureBomLength(encoder) : 0;
+     }
+ 
+     /**
+      * Closes the stream.
+      *
+      * @throws IOException If an I/O error occurs
+@@ -147,24 +151,41 @@ private int getEncodedCharLength(final int current) throws CharacterCodingExcept
+     }
+ 
+     private int getEncodedCharLength(final int previous, final int current) throws CharacterCodingException {
+         final char cChar = (char) current;
+         final char lChar = (char) previous;
+         if (!Character.isSurrogate(cChar)) {
+-            return encoder.encode(CharBuffer.wrap(new char[] { cChar })).limit();
++            return encoder.encode(CharBuffer.wrap(new char[] { cChar })).limit() - bomLength;
+         }
+         if (Character.isHighSurrogate(cChar)) {
+             // Move on to the next char (low surrogate)
+             return 0;
+         }
+         if (Character.isSurrogatePair(lChar, cChar)) {
+-            return encoder.encode(CharBuffer.wrap(new char[] { lChar, cChar })).limit();
++            return encoder.encode(CharBuffer.wrap(new char[] { lChar, cChar })).limit() - bomLength;
+         }
+         throw new CharacterCodingException();
+     }
+ 
++    /**
++     * Measures the byte-order mark that {@code encoder} prepends to every {@link CharsetEncoder#encode(CharBuffer)} call. Charsets such as {@code UTF-16} emit
++     * a BOM each time, which would otherwise be counted once per character. The BOM is the constant prefix shared by encoding one and two characters.
++     *
++     * @param encoder The encoder to measure.
++     * @return The byte-order mark length in bytes, or 0 when the encoder writes none.
++     */
++    private static int measureBomLength(final CharsetEncoder encoder) {
++        try {
++            final int one = encoder.encode(CharBuffer.wrap(new char[] { 'a' })).limit();
++            final int two = encoder.encode(CharBuffer.wrap(new char[] { 'a', 'a' })).limit();
++            return Math.max(0, 2 * one - two);
++        } catch (final CharacterCodingException e) {
++            return 0;
++        }
++    }
++
+     /**
+      * Returns the last character that was read as an integer (0 to 65535). This will be the last character returned by any of the read methods. This will not
+      * include a character read using the {@link #peek()} method. If no character has been read then this will return {@link Constants#UNDEFINED}. If the end of
+      * the stream was reached on the last read then this will return {@link IOUtils#EOF}.
+      *
+      * @return The last character that was read

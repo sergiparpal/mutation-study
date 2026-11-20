@@ -1,0 +1,24 @@
+# P123: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +2/-2   lines, code only (comments and blank lines left out, by line prefix): +2/-2
+diff --git a/src/main/java/org/apache/commons/lang3/math/Fraction.java b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+--- a/src/main/java/org/apache/commons/lang3/math/Fraction.java
++++ b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+@@ -548,16 +548,16 @@ public Fraction add(final Fraction fraction) {
+      *   cannot be represented in an {@code int}.
+      */
+     private Fraction addSub(final Fraction fraction, final boolean isAdd) {
+         Objects.requireNonNull(fraction, "fraction");
+         // zero is identity for addition.
+         if (numerator == 0) {
+-            return isAdd ? fraction : fraction.negate();
++            return isAdd ? fraction.reduce() : fraction.reduce().negate();
+         }
+         if (fraction.numerator == 0) {
+-            return this;
++            return reduce();
+         }
+         // Knuth 4.5.1 assumes operands in lowest terms and this class does not reduce on
+         // construction, so reduce both first, as multiplyBy does.
+         final int thisGcd = greatestCommonDivisor(numerator, denominator);
+         final int thatGcd = greatestCommonDivisor(fraction.numerator, fraction.denominator);
+         final int thisNumerator = numerator / thisGcd;

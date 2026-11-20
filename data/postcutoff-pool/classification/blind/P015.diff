@@ -1,0 +1,134 @@
+# P015: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +18/-48   lines, code only (comments and blank lines left out, by line prefix): +10/-31
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -18,12 +18,13 @@
+ 
+ import java.lang.reflect.Array;
+ import java.math.BigDecimal;
+ import java.math.BigInteger;
+ import java.math.RoundingMode;
+ import java.util.Objects;
++import java.util.function.Consumer;
+ 
+ import org.apache.commons.lang3.CharUtils;
+ import org.apache.commons.lang3.StringUtils;
+ import org.apache.commons.lang3.Validate;
+ 
+ /**
+@@ -101,12 +102,21 @@ public class NumberUtils {
+      * {@link Integer#MIN_VALUE} as a {@link Long}.
+      *
+      * @since 3.12.0
+      */
+     public static final Long LONG_INT_MIN_VALUE = Long.valueOf(Integer.MIN_VALUE);
+ 
++    private static <T> boolean accept(final Consumer<T> consumer, final T obj) {
++        try {
++            consumer.accept(obj);
++            return true;
++        } catch (Exception e) {
++            return false;
++        }
++    }
++
+     /**
+      * Compares two {@code byte} values numerically. This is the same functionality as provided in Java 7.
+      *
+      * @param x the first {@code byte} to compare.
+      * @param y the second {@code byte} to compare.
+      * @return the value {@code 0} if {@code x == y}; a value less than {@code 0} if {@code x < y}; and a value greater than {@code 0} if {@code x > y}.
+@@ -164,13 +174,13 @@ public static int compare(final short x, final short y) {
+      * Creates a {@link BigDecimal} from a {@link String}.
+      *
+      * <p>
+      * Returns {@code null} if the string is {@code null}.
+      * </p>
+      *
+-     * @param str a {@link String} to convert, may be null.
++     * @param str a {@link String} to convert, may be null.Return
+      * @return converted {@link BigDecimal} (or null if the input is null).
+      * @throws NumberFormatException if the value cannot be converted.
+      */
+     public static BigDecimal createBigDecimal(final String str) {
+         if (str == null) {
+             return null;
+@@ -727,70 +737,30 @@ public static boolean isNumber(final String str) {
+      * <p>
+      * Parsable numbers include those Strings understood by {@link Integer#parseInt(String)}, {@link Long#parseLong(String)}, {@link Float#parseFloat(String)}
+      * or {@link Double#parseDouble(String)}. This method can be used instead of catching {@link java.text.ParseException} when calling one of those methods.
+      * </p>
+      *
+      * <p>
+-     * Hexadecimal and scientific notations are <strong>not</strong> considered parsable. See {@link #isCreatable(String)} on those cases.
++     * Scientific notation (for example, {@code "1.2e-5"}) and type suffixes (e.g., {@code "2.0f"}, {@code "2.0d"}) are supported
++     * as they are valid for {@link Float#parseFloat(String)} and {@link Double#parseDouble(String)}.
+      * </p>
+      *
+      * <p>
+      * {@code null} and empty String will return {@code false}.
+      * </p>
+      *
+      * @param str the String to check.
+      * @return {@code true} if the string is a parsable number.
++     * @see Integer#parseInt(String)
++     * @see Long#parseLong(String)
++     * @see Double#parseDouble(String)
++     * @see Float#parseFloat(String)
+      * @since 3.4
+      */
+     public static boolean isParsable(final String str) {
+-        if (StringUtils.isEmpty(str)) {
+-            return false;
+-        }
+-        if (str.charAt(0) == '-') {
+-            if (str.length() == 1) {
+-                return false;
+-            }
+-            return isParsableDecimal(str, 1);
+-        }
+-        return isParsableDecimal(str, 0);
+-    }
+-
+-    /**
+-     * Tests whether a number string is parsable as a decimal number or integer.
+-     *
+-     * <ul>
+-     * <li>At most one decimal point is allowed.</li>
+-     * <li>No signs, exponents or type qualifiers are allowed.</li>
+-     * <li>Only ASCII digits are allowed if a decimal point is present.</li>
+-     * </ul>
+-     *
+-     * @param str      the String to test.
+-     * @param beginIdx the index to start checking from.
+-     * @return {@code true} if the string is a parsable number.
+-     */
+-    private static boolean isParsableDecimal(final String str, final int beginIdx) {
+-        // See https://docs.oracle.com/javase/specs/jls/se8/html/jls-3.html#jls-NonZeroDigit
+-        int decimalPoints = 0;
+-        boolean asciiNumeric = true;
+-        for (int i = beginIdx; i < str.length(); i++) {
+-            final char ch = str.charAt(i);
+-            final boolean isDecimalPoint = ch == '.';
+-            if (isDecimalPoint) {
+-                decimalPoints++;
+-            }
+-            if (decimalPoints > 1 || !isDecimalPoint && !Character.isDigit(ch)) {
+-                return false;
+-            }
+-            if (!isDecimalPoint) {
+-                asciiNumeric &= CharUtils.isAsciiNumeric(ch);
+-            }
+-            if (decimalPoints > 0 && !asciiNumeric) {
+-                return false;
+-            }
+-        }
+-        return true;
++        return accept(Double::parseDouble, str) || accept(Long::parseLong, str) || accept(Float::parseFloat, str) || accept(Long::parseLong, str);
+     }
+ 
+     private static boolean isSign(final char ch) {
+         return ch == '-' || ch == '+';
+     }
+ 

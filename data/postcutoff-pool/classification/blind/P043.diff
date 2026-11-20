@@ -1,0 +1,85 @@
+# P043: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-24   lines, code only (comments and blank lines left out, by line prefix): +4/-24
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -758,18 +758,13 @@ public static byte max(byte a, final byte b, final byte c) {
+     public static double max(final double... array) {
+         // Validates input
+         validateArray(array);
+         // Finds and returns max
+         double max = array[0];
+         for (int j = 1; j < array.length; j++) {
+-            if (Double.isNaN(array[j])) {
+-                return Double.NaN;
+-            }
+-            if (array[j] > max) {
+-                max = array[j];
+-            }
++            max = Math.max(max, array[j]);
+         }
+         return max;
+     }
+ 
+     /**
+      * Gets the maximum of three {@code double} values.
+@@ -801,18 +796,13 @@ public static double max(final double a, final double b, final double c) {
+     public static float max(final float... array) {
+         // Validates input
+         validateArray(array);
+         // Finds and returns max
+         float max = array[0];
+         for (int j = 1; j < array.length; j++) {
+-            if (Float.isNaN(array[j])) {
+-                return Float.NaN;
+-            }
+-            if (array[j] > max) {
+-                max = array[j];
+-            }
++            max = Math.max(max, array[j]);
+         }
+         return max;
+     }
+     // must handle Long, Float, Integer, Float, Short,
+     // BigDecimal, BigInteger and Byte
+     // useful methods:
+@@ -1039,18 +1029,13 @@ public static byte min(byte a, final byte b, final byte c) {
+     public static double min(final double... array) {
+         // Validates input
+         validateArray(array);
+         // Finds and returns min
+         double min = array[0];
+         for (int i = 1; i < array.length; i++) {
+-            if (Double.isNaN(array[i])) {
+-                return Double.NaN;
+-            }
+-            if (array[i] < min) {
+-                min = array[i];
+-            }
++            min = Math.min(min, array[i]);
+         }
+         return min;
+     }
+ 
+     /**
+      * Gets the minimum of three {@code double} values.
+@@ -1082,18 +1067,13 @@ public static double min(final double a, final double b, final double c) {
+     public static float min(final float... array) {
+         // Validates input
+         validateArray(array);
+         // Finds and returns min
+         float min = array[0];
+         for (int i = 1; i < array.length; i++) {
+-            if (Float.isNaN(array[i])) {
+-                return Float.NaN;
+-            }
+-            if (array[i] < min) {
+-                min = array[i];
+-            }
++            min = Math.min(min, array[i]);
+         }
+         return min;
+     }
+ 
+     /**
+      * Gets the minimum of three {@code float} values.

@@ -1,0 +1,27 @@
+# P154: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +5/-1   lines, code only (comments and blank lines left out, by line prefix): +5/-1
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -1909,16 +1909,20 @@ public boolean equalsIgnoreCase(final StrBuilder other) {
+         }
+         final char[] thisBuf = this.buffer;
+         final char[] otherBuf = other.buffer;
+         for (int i = size - 1; i >= 0; i--) {
+             final char c1 = thisBuf[i];
+             final char c2 = otherBuf[i];
+-            if (c1 != c2 && Character.toUpperCase(c1) != Character.toUpperCase(c2)) {
++            if (c1 != c2) {
++                final char u1 = Character.toUpperCase(c1);
++                final char u2 = Character.toUpperCase(c2);
++                if (u1 != u2 && Character.toLowerCase(u1) != Character.toLowerCase(u2)) {
+                     return false;
+                 }
+             }
++        }
+         return true;
+     }
+ 
+     /**
+      * Gets the internal buffer for testing.
+      *

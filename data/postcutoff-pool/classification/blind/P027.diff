@@ -1,0 +1,73 @@
+# P027: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +8/-8   lines, code only (comments and blank lines left out, by line prefix): +8/-8
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -5191,14 +5191,14 @@ public static String leftPad(final String str, final int size) {
+      * @param size    the size to pad to.
+      * @param padChar the character to pad with.
+      * @return left padded String or original String if no padding is necessary, {@code null} if null String input.
+      * @since 2.0
+      */
+     public static String leftPad(final String str, final int size, final char padChar) {
+-        if (str == null) {
+-            return null;
++        if (str == null || size <= str.length()) {
++            return str;
+         }
+         final int pads = size - str.length();
+         if (pads <= 0) {
+             return str; // returns original String when possible
+         }
+         if (pads > PAD_LIMIT) {
+@@ -5229,14 +5229,14 @@ public static String leftPad(final String str, final int size, final char padCha
+      * @param str    the String to pad out, may be null.
+      * @param size   the size to pad to.
+      * @param padStr the String to pad with, null or empty treated as single space.
+      * @return left padded String or original String if no padding is necessary, {@code null} if null String input.
+      */
+     public static String leftPad(final String str, final int size, String padStr) {
+-        if (str == null) {
+-            return null;
++        if (str == null || size <= str.length()) {
++            return str;
+         }
+         if (isEmpty(padStr)) {
+             padStr = SPACE;
+         }
+         final int padLen = padStr.length();
+         final int strLen = str.length();
+@@ -6985,14 +6985,14 @@ public static String rightPad(final String str, final int size) {
+      * @param size    the size to pad to.
+      * @param padChar the character to pad with.
+      * @return right padded String or original String if no padding is necessary, {@code null} if null String input.
+      * @since 2.0
+      */
+     public static String rightPad(final String str, final int size, final char padChar) {
+-        if (str == null) {
+-            return null;
++        if (str == null || size <= str.length()) {
++            return str;
+         }
+         final int pads = size - str.length();
+         if (pads <= 0) {
+             return str; // returns original String when possible
+         }
+         if (pads > PAD_LIMIT) {
+@@ -7023,14 +7023,14 @@ public static String rightPad(final String str, final int size, final char padCh
+      * @param str    the String to pad out, may be null.
+      * @param size   the size to pad to.
+      * @param padStr the String to pad with, null or empty treated as single space.
+      * @return right padded String or original String if no padding is necessary, {@code null} if null String input.
+      */
+     public static String rightPad(final String str, final int size, String padStr) {
+-        if (str == null) {
+-            return null;
++        if (str == null || size <= str.length()) {
++            return str;
+         }
+         if (isEmpty(padStr)) {
+             padStr = SPACE;
+         }
+         final int padLen = padStr.length();
+         final int strLen = str.length();

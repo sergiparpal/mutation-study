@@ -1,0 +1,26 @@
+# P094: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-4   lines, code only (comments and blank lines left out, by line prefix): +1/-4
+diff --git a/src/main/java/org/apache/commons/lang3/Strings.java b/src/main/java/org/apache/commons/lang3/Strings.java
+--- a/src/main/java/org/apache/commons/lang3/Strings.java
++++ b/src/main/java/org/apache/commons/lang3/Strings.java
+@@ -1285,19 +1285,16 @@ public String replace(final String text, final String searchString, final String
+      * @param text         text to search and replace in, may be null
+      * @param searchString the String to search for, may be null
+      * @param replacement  the String to replace it with, may be null
+      * @param max          maximum number of values to replace, or {@code -1} if no maximum
+      * @return the text with any replacements processed, {@code null} if null String input
+      */
+-    public String replace(final String text, String searchString, final String replacement, int max) {
++    public String replace(final String text, final String searchString, final String replacement, int max) {
+         if (StringUtils.isEmpty(text) || StringUtils.isEmpty(searchString) || replacement == null || max == 0) {
+             return text;
+         }
+-        if (ignoreCase) {
+-            searchString = searchString.toLowerCase();
+-        }
+         int start = 0;
+         int end = indexOf(text, searchString, start);
+         if (end == INDEX_NOT_FOUND) {
+             return text;
+         }
+         final int replLength = searchString.length();

@@ -1,0 +1,21 @@
+# P110: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-2   lines, code only (comments and blank lines left out, by line prefix): +1/-2
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -498,14 +498,13 @@ public static Number createNumber(final String str) {
+             return createBigInteger(str);
+         }
+         // Must be a Float, Double, BigDecimal
+         try {
+             final Float f = createFloat(str);
+             final Double d = createDouble(str);
+-            if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec))
+-                    && ((double) d.floatValue() == d.doubleValue() || f.toString().equals(d.toString()))) {
++            if (!f.isInfinite() && !(f.floatValue() == 0.0F && !isZero(mant, dec)) && f.toString().equals(d.toString())) {
+                 return f;
+             }
+             if (!d.isInfinite() && !(d.doubleValue() == 0.0D && !isZero(mant, dec))) {
+                 final BigDecimal b = createBigDecimal(str);
+                 if (b.compareTo(BigDecimal.valueOf(d.doubleValue())) == 0) {
+                     return d;

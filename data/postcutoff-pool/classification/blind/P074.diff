@@ -1,0 +1,20 @@
+# P074: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -4717,13 +4717,13 @@ public static String join(final Object[] array, final String delimiter) {
+      *         given by {@code endIndex - startIndex}.
+      * @throws ArrayIndexOutOfBoundsException Thrown if<br> {@code startIndex < 0} or <br> {@code startIndex >= array.length()} or <br> {@code endIndex < 0} or
+      *         <br> {@code endIndex > array.length()}.
+      */
+     public static String join(final Object[] array, final String delimiter, final int startIndex, final int endIndex) {
+         return array != null ? Streams.of(array).skip(startIndex).limit(Math.max(0, endIndex - startIndex))
+-                .collect(LangCollectors.joining(delimiter, EMPTY, EMPTY, ObjectUtils::toString)) : null;
++                .collect(LangCollectors.joining(ObjectUtils.toString(delimiter), EMPTY, EMPTY, ObjectUtils::toString)) : null;
+     }
+ 
+     /**
+      * Joins the elements of the provided array into a single String containing the provided list of elements.
+      *
+      * <p>

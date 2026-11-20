@@ -1,0 +1,23 @@
+# P128: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-1   lines, code only (comments and blank lines left out, by line prefix): +4/-1
+diff --git a/src/main/java/org/apache/commons/lang3/concurrent/BackgroundInitializer.java b/src/main/java/org/apache/commons/lang3/concurrent/BackgroundInitializer.java
+--- a/src/main/java/org/apache/commons/lang3/concurrent/BackgroundInitializer.java
++++ b/src/main/java/org/apache/commons/lang3/concurrent/BackgroundInitializer.java
+@@ -342,13 +342,16 @@ public synchronized boolean isInitialized() {
+         if (future == null || !future.isDone()) {
+             return false;
+         }
+         try {
+             future.get();
+             return true;
+-        } catch (CancellationException | ExecutionException | InterruptedException e) {
++        } catch (final InterruptedException e) {
++            Thread.currentThread().interrupt();
++            return false;
++        } catch (CancellationException | ExecutionException e) {
+             return false;
+         }
+     }
+ 
+     /**
+      * Tests whether this {@link BackgroundInitializer} has already

@@ -1,0 +1,6 @@
+id	case	final	reason
+P084	disagreement	ALGORITHM	The TextField built from DateFormatSymbols' Gregorian era names gives way to a new calendar-aware rule class: the mechanism is replaced, not one call corrected.
+P094	disagreement	ALGORITHM	Removal-only fix: a redundant lowercasing step before a case-insensitive search is deleted; the sample classifies removal-only fixes ALGORITHM (Csv-15, Cli-32).
+P095	disagreement	STATE	Class identity lost through clone's serialisation; the fix records proxy classes and reuses them, extending the serialisation rather than replacing its approach (rule 6: serialisation, identity).
+P097	unclear	UNCLEAR	No category applies: javadoc, a parameter rename and an if folded into a ternary change no behaviour; the one behavioural change is an exception message. Flagged NOT_A_FIX.
+P002	disagreement	SUBSTITUTION	setNullString built the quoted null string from the raw quoteCharacter instead of the defaulted quote; the line is replaced by a call to a helper moved out of setQuote, so the removed expression does not survive (rules 1 and 2): wrong variable.

@@ -1,0 +1,21 @@
+# P062: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +2/-1   lines, code only (comments and blank lines left out, by line prefix): +2/-1
+diff --git a/src/main/java/org/apache/commons/lang3/time/StopWatch.java b/src/main/java/org/apache/commons/lang3/time/StopWatch.java
+--- a/src/main/java/org/apache/commons/lang3/time/StopWatch.java
++++ b/src/main/java/org/apache/commons/lang3/time/StopWatch.java
+@@ -516,13 +516,14 @@ public Instant getStopInstant() {
+      * @since 3.12.0
+      * @deprecated Use {@link #getStopInstant()}.
+      */
+     @Deprecated
+     public long getStopTime() {
+         // stopTimeNanos stores System.nanoTime() for elapsed time
+-        return getStopInstant().toEpochMilli();
++        final Instant stop = getStopInstant();
++        return stop != null ? stop.toEpochMilli() : 0;
+     }
+ 
+     /**
+      * Delegates to {@link FailableSupplier#get()} while recording the duration of the call.
+      *
+      * @param <T>      the type of results supplied by this supplier.

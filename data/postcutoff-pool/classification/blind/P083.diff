@@ -1,0 +1,88 @@
+# P083: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 3   lines, all: +7/-5   lines, code only (comments and blank lines left out, by line prefix): +4/-4
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java b/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java
+--- a/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java
+@@ -588,13 +588,13 @@ public String getPattern() {
+      * Gets the time zone used by this formatter.
+      *
+      * <p>
+      * This zone is always used for {@link Date} formatting.
+      * </p>
+      *
+-     * @return The time zone.
++     * @return A copy of the time zone, changing it has no effect on this formatter.
+      */
+     @Override
+     public TimeZone getTimeZone() {
+         return printer.getTimeZone();
+     }
+ 
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+--- a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+@@ -937,13 +937,14 @@ protected FastDateParser(final String pattern, final TimeZone timeZone, final Lo
+      * @param locale       locale, null maps to the default Locale.
+      * @param centuryStart The start of the century for 2 digit year parsing
+      * @since 3.5
+      */
+     protected FastDateParser(final String pattern, final TimeZone timeZone, final Locale locale, final Date centuryStart) {
+         this.pattern = Objects.requireNonNull(pattern, "pattern");
+-        this.timeZone = Objects.requireNonNull(timeZone, "timeZone");
++        // TimeZone is mutable and instances are shared through the FastDateFormat cache.
++        this.timeZone = (TimeZone) Objects.requireNonNull(timeZone, "timeZone").clone();
+         this.locale = LocaleUtils.toLocale(locale);
+         final Calendar definingCalendar = Calendar.getInstance(timeZone, this.locale);
+         final int centuryStartYear;
+         if (centuryStart != null) {
+             definingCalendar.setTime(centuryStart);
+             centuryStartYear = definingCalendar.get(Calendar.YEAR);
+@@ -1105,13 +1106,13 @@ private Strategy getStrategy(final char f, final int width, final Calendar defin
+      * (non-Javadoc)
+      *
+      * @see org.apache.commons.lang3.time.DateParser#getTimeZone()
+      */
+     @Override
+     public TimeZone getTimeZone() {
+-        return timeZone;
++        return (TimeZone) timeZone.clone();
+     }
+ 
+     /**
+      * Returns a hash code compatible with equals.
+      *
+      * @return A hash code compatible with equals
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java b/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
+--- a/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
+@@ -1064,13 +1064,14 @@ static String getTimeZoneDisplay(final TimeZone tz, final boolean daylight, fina
+      * @param timeZone  non-null time zone to use.
+      * @param locale  non-null locale to use.
+      * @throws NullPointerException Thrown if pattern, timeZone, or locale is null.
+      */
+     protected FastDatePrinter(final String pattern, final TimeZone timeZone, final Locale locale) {
+         this.pattern = pattern;
+-        this.timeZone = timeZone;
++        // TimeZone is mutable and instances are shared through the FastDateFormat cache.
++        this.timeZone = (TimeZone) timeZone.clone();
+         this.locale = LocaleUtils.toLocale(locale);
+         init();
+     }
+ 
+     /**
+      * Performs the formatting by applying the rules to the
+@@ -1301,13 +1302,13 @@ public String getPattern() {
+ 
+     /* (non-Javadoc)
+      * @see org.apache.commons.lang3.time.DatePrinter#getTimeZone()
+      */
+     @Override
+     public TimeZone getTimeZone() {
+-        return timeZone;
++        return (TimeZone) timeZone.clone();
+     }
+ 
+     /**
+      * Returns a hash code compatible with equals.
+      *
+      * @return A hash code compatible with equals.

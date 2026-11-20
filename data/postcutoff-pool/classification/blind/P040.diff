@@ -1,0 +1,55 @@
+# P040: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +6/-2   lines, code only (comments and blank lines left out, by line prefix): +6/-2
+diff --git a/src/main/java/org/apache/commons/csv/CSVFormat.java b/src/main/java/org/apache/commons/csv/CSVFormat.java
+--- a/src/main/java/org/apache/commons/csv/CSVFormat.java
++++ b/src/main/java/org/apache/commons/csv/CSVFormat.java
+@@ -2321,18 +2321,20 @@ private void printWithEscapes(final CharSequence charSeq, final Appendable appen
+         int start = 0;
+         int pos = 0;
+         final int end = charSeq.length();
+         final char[] delimArray = getDelimiterCharArray();
+         final int delimLength = delimArray.length;
+         final char escape = getEscapeChar();
++        final boolean quoteSet = isQuoteCharacterSet();
++        final char quote = quoteSet ? getQuoteCharacter().charValue() : 0;
+         while (pos < end) {
+             char c = charSeq.charAt(pos);
+             final boolean isDelimiterStart = isDelimiter(c, charSeq, pos, delimArray, delimLength);
+             final boolean isCr = c == Constants.CR;
+             final boolean isLf = c == Constants.LF;
+-            if (isCr || isLf || c == escape || isDelimiterStart) {
++            if (isCr || isLf || c == escape || quoteSet && c == quote || isDelimiterStart) {
+                 // write out segment up until this char
+                 if (pos > start) {
+                     appendable.append(charSeq, start, pos);
+                 }
+                 if (isLf) {
+                     c = 'n';
+@@ -2365,24 +2367,26 @@ private void printWithEscapes(final Reader reader, final Appendable appendable)
+         int pos = 0;
+         @SuppressWarnings("resource") // Temp reader on input reader.
+         final ExtendedBufferedReader bufferedReader = new ExtendedBufferedReader(reader);
+         final char[] delimArray = getDelimiterCharArray();
+         final int delimLength = delimArray.length;
+         final char escape = getEscapeChar();
++        final boolean quoteSet = isQuoteCharacterSet();
++        final char quote = quoteSet ? getQuoteCharacter().charValue() : 0;
+         final StringBuilder builder = new StringBuilder(IOUtils.DEFAULT_BUFFER_SIZE);
+         int c;
+         final char[] lookAheadBuffer = new char[delimLength - 1];
+         while (EOF != (c = bufferedReader.read())) {
+             builder.append((char) c);
+             Arrays.fill(lookAheadBuffer, (char) 0);
+             bufferedReader.peek(lookAheadBuffer);
+             final String test = builder.toString() + new String(lookAheadBuffer);
+             final boolean isDelimiterStart = isDelimiter((char) c, test, pos, delimArray, delimLength);
+             final boolean isCr = c == Constants.CR;
+             final boolean isLf = c == Constants.LF;
+-            if (isCr || isLf || c == escape || isDelimiterStart) {
++            if (isCr || isLf || c == escape || quoteSet && c == quote || isDelimiterStart) {
+                 // write out segment up until this char
+                 if (pos > start) {
+                     append(builder.substring(start, pos), appendable);
+                     builder.setLength(0);
+                     pos = -1;
+                 }

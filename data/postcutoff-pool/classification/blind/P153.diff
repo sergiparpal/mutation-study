@@ -1,0 +1,37 @@
+# P153: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +6/-3   lines, code only (comments and blank lines left out, by line prefix): +4/-3
+diff --git a/src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java b/src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java
+--- a/src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java
++++ b/src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java
+@@ -73,25 +73,28 @@ public class TextHelpAppendable extends FilterHelpAppendable {
+      * @return position on which the text must be wrapped or @{code text.length()} if the wrap position is at the end of the text.
+      */
+     public static int indexOfWrap(final CharSequence text, final int width, final int startPos) {
+         if (width < 1) {
+             throw new IllegalArgumentException("Width must be greater than 0");
+         }
++        // width can be Integer.MAX_VALUE (TextStyle.UNSET_MAX_WIDTH), so keep the wrap boundary in a long;
++        // startPos + width as an int overflows to a negative value and yields a negative wrap index.
++        final long end = (long) startPos + width;
+         // handle case of width > text.
+         // the line ends before the max wrap pos or a new line char found
+-        int limit = Math.min(startPos + width, text.length());
++        int limit = (int) Math.min(end, text.length());
+         for (int idx = startPos; idx < limit; idx++) {
+             if (BREAK_CHAR_SET.contains(text.charAt(idx))) {
+                 return idx;
+             }
+         }
+-        if (startPos + width >= text.length()) {
++        if (end >= text.length()) {
+             return text.length();
+         }
+ 
+-        limit = Math.min(startPos + width, text.length() - 1);
++        limit = (int) Math.min(end, text.length() - 1);
+         int pos;
+         // look for the last whitespace character before limit
+         for (pos = limit; pos >= startPos; --pos) {
+             if (Util.isWhitespace(text.charAt(pos))) {
+                 break;
+             }

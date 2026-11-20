@@ -1,0 +1,30 @@
+# P129: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +5/-5   lines, code only (comments and blank lines left out, by line prefix): +5/-5
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -349,19 +349,19 @@ public static String abbreviate(final String str, final String abbrevMarker, fin
+      * @param offset       left edge of source String.
+      * @param maxWidth     maximum length of result String, must be at least 4.
+      * @return abbreviated String, {@code null} if null String input.
+      * @throws IllegalArgumentException if the width is too small.
+      * @since 3.6
+      */
+-    public static String abbreviate(final String str, final String abbrevMarker, int offset, final int maxWidth) {
+-        if (isNotEmpty(str) && EMPTY.equals(abbrevMarker) && maxWidth > 0) {
+-            return substring(str, 0, maxWidth);
+-        }
+-        if (isAnyEmpty(str, abbrevMarker)) {
++    public static String abbreviate(final String str, String abbrevMarker, int offset, final int maxWidth) {
++        if (isEmpty(str)) {
+             return str;
+         }
++        if (abbrevMarker == null) {
++            abbrevMarker = EMPTY;
++        }
+         final int abbrevMarkerLength = abbrevMarker.length();
+         final int minAbbrevWidth = abbrevMarkerLength + 1;
+         final int minAbbrevWidthOffset = abbrevMarkerLength + abbrevMarkerLength + 1;
+ 
+         if (maxWidth < minAbbrevWidth) {
+             throw new IllegalArgumentException(String.format("Minimum abbreviation width is %d", minAbbrevWidth));

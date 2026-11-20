@@ -1,0 +1,22 @@
+# P041: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-0   lines, code only (comments and blank lines left out, by line prefix): +3/-0
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -356,12 +356,16 @@ public static Number createNumber(final String str) {
+         if (str == null) {
+             return null;
+         }
+         if (StringUtils.isBlank(str)) {
+             throw new NumberFormatException("A blank string is not a valid number");
+         }
++        // Float.valueOf(String) and Double.valueOf(String) trim leading characters up to U+0020, the integral parsers do not.
++        if (str.charAt(0) <= ' ') {
++            throw new NumberFormatException(str + " is not a valid number.");
++        }
+         // Need to deal with all possible hex prefixes here
+         final String[] hexPrefixes = { "0x", "0X", "#" };
+         final int length = str.length();
+         final int offset = isSign(str.charAt(0)) ? 1 : 0;
+         int pfxLen = 0;
+         for (final String pfx : hexPrefixes) {

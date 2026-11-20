@@ -1704,11 +1704,121 @@ for the matched corpus, and 39 after it.
 - The screen was applied knowing which candidates meet the contract, whereas
   the matched corpus classified its candidates blind. A corpus drawn from this
   pool needs its rules fixed before selection.
-- No candidate has been classified by fault type, so whether the pool can
-  fill quotas matched to the Defects4J sample is not known.
+- Whether the pool can fill quotas matched to the Defects4J sample: see Fault
+  types of the post-cutoff pool, below.
 - The commits after 2026-09-22 have not been probed for the model's cutoff.
 - Nine of the new eligible commits credit an AI in their message (Copilot
   Autofix, Codex, ChatGPT, Claude). The screen leaves them in.
+
+## Fault types of the post-cutoff pool (classified 2026-11-19)
+
+Whether the pool can fill quotas matched to the Defects4J sample, and how
+large a matched corpus could be. Every eligible candidate was classified by
+fault type from its production diff alone. `postcutoff-pool/fault-types.tsv`
+has the result, one row per eligible candidate in the order of
+`eligible.tsv`. `postcutoff-pool/classification/` has what the raters were
+given and what they wrote. `bin/classify-postcutoff-pool.py` makes the
+raters' inputs, merges their outputs with the adjudications, rewrites
+`fault-types.tsv` and prints the figures below. With `--check` it confirms
+that the files are what the seeds, the diffs and the recorded outputs give,
+and, given the mirrors, that git gives the same diffs.
+
+**Raters.** Six subagents of an interactive Claude Code session, model Claude
+Opus 5.5, with one brief (`classification/instructions.md`): the categories
+and rules of Study A, the conventions the matched corpus followed for whole
+commits, and the forty Defects4J classifications as reference. Their requests
+are in `classification/prompts.md`. Each candidate was the diff of
+`src/main/java` against the commit's parent, whitespace ignored, under an id
+in random order (`classification/blind/P001.diff` to `P158.diff`), with no
+commit message, test, validation or outcome. Five raters took 32 or 30 diffs
+each (`classification/batches.tsv`), and a sixth rated again 32 drawn at
+random. Their outputs are in `classification/out/` as written. Each rater's
+tool calls were read afterwards: each opened the brief and its own diffs,
+every diff in full, and nothing else, and ran no command but to write and
+check its output.
+
+**Rules for whole commits.** The matched corpus classified whole commits, not
+the minimised patches of Defects4J, and the brief writes down how. Only code
+lines count, not javadoc or comments. A removed line whose expression survives
+verbatim inside a new ternary, `if`/`else` or `try`/`catch` is preserved, so a
+fix that otherwise only adds is `OMISSION`. A commit is one fault, classified
+on its root cause; one that fixes several distinct faults is flagged `BUNDLE`,
+and one that does not look like the fix of a fault, `NOT_A_FIX`.
+
+**Adjudication.** The rule (`classification/adjudication-rule.md`) was written
+at 23:15 UTC, before the first output came in at 23:27. The final type is the
+rater's, except for `UNCLEAR`, for disagreements between the two ratings, and
+for `OMISSION` with removed code lines not marked preserved. Those the
+session's own model decided, from the same diff and brief. It saw the
+repository and abbreviated hash of the disagreements, and no commit message.
+There were five (`classification/adjudications.tsv`): four disagreements,
+decided `ALGORITHM` twice, `STATE` and `SUBSTITUTION`, and one `UNCLEAR`,
+which stays unclassified because its code changes no behaviour but an
+exception message. No `OMISSION` lacked the mark.
+
+**`fault-types.tsv`.** `fault_type` is the final type, and `decided_by` says
+whose it is. `rater` and `second_rater` are the two ratings, and
+`matched_corpus` is the label in `matched-candidates.csv` where there is one.
+`alt` (the runner-up), `code_lines`, `preserved`, `flag` and `note` are the
+first rater's.
+
+**Agreement.** The second rating agreed with the first on 28 of 32 (Cohen's
+κ 0.84). Twenty candidates had been classified for the matched corpus; no
+rater saw those labels, and the raters agreed with 16 (κ 0.72). Those labels
+stay as recorded in `matched-candidates.csv`.
+
+**Counts.** The Defects4J sample is counted as `fault-taxonomy.csv`
+classifies it, except Csv-16, whose fault is object identity, which the rules
+put under `STATE`. A corpus of N subjects is matched when each type has its
+share of N, rounded by largest remainder, ties going to the type with more
+bugs in the sample. `max N` is the largest matched corpus a group can fill,
+and `binding` the type that stops it.
+
+```
+                          OMISSION  ALGORITHM  SUBSTITUTION  STATE  MISSING_CLAUSE  API  UNCLEAR  total  max N  binding
+Defects4J sample                22          6             5      4               3    0              40
+eligible                        48         23            34     16              25   11        1    158     88  OMISSION
+  strict reading                47         21            30     16              25   11        1    151     86  OMISSION
+new                             38         21            26     14              21   10        1    131     69  OMISSION
+  strict reading                37         19            22     14              21   10        1    124     68  OMISSION
+third-campaign subjects         10          2             8      2               4    1        0     27     16  ALGORITHM
+```
+
+Omissions are 55% of the sample and 29% of the new candidates. A matched
+corpus drawn from these can have 69 subjects at most, with quotas of 38, 10,
+9, 7, 5 and 0: all their omissions.
+
+**How firm.** 21 of the 38 new omissions, and 25 of the 48 in all, remove code
+lines that the raters read as context or as preserved inside a guard; 5 of the
+sample's 22 omissions remove lines. One of the disagreements was an
+`OMISSION` whose removed lines were marked preserved and were not, so all 25
+were read again against the rules, a check the adjudication rule had not
+provided for. None changed. Two readings that would add omissions were tried
+on the new candidates. Counting as `OMISSION` the six `STATE` fixes that
+remove no code line (seven in all), which the rules put under `STATE` as
+ownership, identity or a derived field not refreshed, the largest matched
+corpus is 80. Moving each `API` label to the rater's runner-up, it is 77.
+Leaving out the flagged candidates, it stays 69.
+
+**For a campaign.** At the third campaign's 23 pairs with a verdict in both
+arms per 28 subjects, 69 subjects give about 57 pairs. With discordant pairs
+as in that campaign, 3 in 23 detected by M3 only and none by S3 only, the
+exact McNemar test rejects with probability 0.77, and with one pair in 46 the
+other way, 0.45. Unmatched, the 131 new candidates give about 108 pairs (0.82
+with one reverse pair in 46), the 124 of the strict reading 102 (0.79), and
+the 117 left without the flagged candidates and the nine that credit an AI,
+96 (0.76).
+
+**What the classification leaves open.**
+
+- Seven candidates are flagged and left in, since flags do not change
+  eligibility, though the screen excludes both kinds. `BUNDLE`: `110683aa6`,
+  `9b95001e9`, `48bf95fb1`, `86ed42da5`, and `7e5906fb0`, a third-campaign
+  subject. `NOT_A_FIX`: `8089a0c2d`, whose rewrite may be a feature, and
+  `2c0b84836`, whose code changes only an exception message, like the two
+  fixes the strict reading drops; the strict reading keeps it.
+- The ratings, the adjudications and the re-reading of the omissions were all
+  made by Claude Opus 5.5, and none has been checked by hand.
 
 ## Infrastructure failures and exclusions
 
@@ -1772,4 +1882,5 @@ mistake for results:
 - [x] Sandbox settings for any further run, with a temporary directory of its own for each run and the operating system's jars of the projects hidden, and a probe of them that calls no model (`bin/agent-sandbox.py`, `sandbox/`). No run has been made with them
 - [x] Third campaign, afterwards: mutation score and line coverage of its 56 suites with PIT, as its protocol provides, and the second campaign's H2 on them as a secondary result (+28.9 points, interval −7.2 to +66.6; `campaign3/mutation/`, `campaign3/mutation-analysis.txt`)
 - [x] Post-cutoff pool counted without the model: 158 eligible Commons subjects, 151 under the strict reading, 131 and 124 of them new (`postcutoff-pool/`)
+- [x] Post-cutoff pool classified by fault type, blind: a corpus matched to the Defects4J sample can take at most 69 of the new subjects, omissions binding (`postcutoff-pool/fault-types.tsv`)
 - [ ] A matched post-cutoff corpus large enough to test the effect size

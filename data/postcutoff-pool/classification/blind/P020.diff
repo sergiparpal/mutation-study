@@ -1,0 +1,23 @@
+# P020: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-0   lines, code only (comments and blank lines left out, by line prefix): +2/-0
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -7444,13 +7444,17 @@ private static String[] splitByWholeSeparatorWorker(final String str, final Stri
+                         }
+                     }
+                     beg = end + separatorLength;
+                 }
+             } else {
+                 // String.substring( beg ) goes from 'beg' to the end of the String.
++                // beg == len means the String ended on a separator, so the trailing
++                // token is empty and must be dropped unless empty tokens are preserved.
++                if (preserveAllTokens || beg < len) {
+                     substrings.add(str.substring(beg));
++                }
+                 end = len;
+             }
+         }
+         return substrings.toArray(ArrayUtils.EMPTY_STRING_ARRAY);
+     }
+ 

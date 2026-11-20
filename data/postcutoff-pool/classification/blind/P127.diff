@@ -1,0 +1,23 @@
+# P127: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-1   lines, code only (comments and blank lines left out, by line prefix): +2/-1
+diff --git a/src/main/java/org/apache/commons/lang3/math/Fraction.java b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+--- a/src/main/java/org/apache/commons/lang3/math/Fraction.java
++++ b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+@@ -171,13 +171,16 @@ public static Fraction getFraction(double value) {
+             denom1 = denom2;
+             i++;
+         } while (delta1 > delta2 && denom2 <= 10000 && denom2 > 0 && i < 25);
+         if (i == 25) {
+             throw new ArithmeticException("Unable to convert double to fraction");
+         }
+-        return getReducedFraction((numer0 + wholeNumber * denom0) * sign, denom0);
++        // wholeNumber can be up to Integer.MAX_VALUE while denom0 > 1 for any non-integer value,
++        // so the int product overflows for values near the limit; check it instead of wrapping silently.
++        final int numerator = Math.addExact(numer0, mulAndCheck(wholeNumber, denom0));
++        return getReducedFraction(numerator * sign, denom0);
+     }
+ 
+     /**
+      * Creates a {@link Fraction} instance with the 2 parts of a fraction Y/Z.
+      * <p>
+      * Any negative signs are resolved to be on the numerator.

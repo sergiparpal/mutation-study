@@ -1,0 +1,59 @@
+# P056: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 2   lines, all: +9/-3   lines, code only (comments and blank lines left out, by line prefix): +8/-2
+diff --git a/src/main/java/org/apache/commons/lang3/time/DurationUtils.java b/src/main/java/org/apache/commons/lang3/time/DurationUtils.java
+--- a/src/main/java/org/apache/commons/lang3/time/DurationUtils.java
++++ b/src/main/java/org/apache/commons/lang3/time/DurationUtils.java
+@@ -232,13 +232,13 @@ static ChronoUnit toChronoUnit(final TimeUnit timeUnit) {
+      */
+     public static Duration toDuration(final long amount, final TimeUnit timeUnit) {
+         return Duration.of(amount, toChronoUnit(timeUnit));
+     }
+ 
+     /**
+-     * Converts a Duration to milliseconds bound to an int (instead of a long).
++     * Converts a Duration to milliseconds bound to an {@code int} (instead of a {@code long}).
+      * <p>
+      * Handy for low-level APIs that take millisecond timeouts in ints rather than longs.
+      * </p>
+      * <ul>
+      * <li>If the duration milliseconds are greater than {@link Integer#MAX_VALUE}, then return
+      * {@link Integer#MAX_VALUE}.</li>
+@@ -249,13 +249,19 @@ public static Duration toDuration(final long amount, final TimeUnit timeUnit) {
+      * @param duration The duration to convert, not null.
+      * @return int milliseconds.
+      */
+     public static int toMillisInt(final Duration duration) {
+         Objects.requireNonNull(duration, "duration");
+         // intValue() does not do a narrowing conversion here
+-        return LONG_TO_INT_RANGE.fit(Long.valueOf(duration.toMillis())).intValue();
++        final long millis;
++        try {
++            millis = duration.toMillis();
++        } catch (final ArithmeticException e) {
++            return duration.isNegative() ? Integer.MIN_VALUE : Integer.MAX_VALUE;
++        }
++        return LONG_TO_INT_RANGE.fit(Long.valueOf(millis)).intValue();
+     }
+ 
+     /**
+      * Returns the given non-null value or {@link Duration#ZERO} if null.
+      *
+      * @param duration The duration to test.
+diff --git a/src/main/java/org/apache/commons/lang3/time/StopWatch.java b/src/main/java/org/apache/commons/lang3/time/StopWatch.java
+--- a/src/main/java/org/apache/commons/lang3/time/StopWatch.java
++++ b/src/main/java/org/apache/commons/lang3/time/StopWatch.java
+@@ -324,13 +324,13 @@ public StopWatch(final String message) {
+      * Formats the split time with {@link DurationFormatUtils#formatDurationHMS}.
+      *
+      * @return the split time formatted by {@link DurationFormatUtils#formatDurationHMS}.
+      * @since 3.10
+      */
+     public String formatSplitTime() {
+-        return DurationFormatUtils.formatDurationHMS(getSplitDuration().toMillis());
++        return DurationFormatUtils.formatDurationHMS(DurationUtils.toMillisInt(getSplitDuration()));
+     }
+ 
+     /**
+      * Formats the time formatted with {@link DurationFormatUtils#formatDurationHMS}.
+      *
+      * @return the time formatted by {@link DurationFormatUtils#formatDurationHMS}.

@@ -1,0 +1,20 @@
+# P143: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/StringEscapeUtils.java b/src/main/java/org/apache/commons/lang3/StringEscapeUtils.java
+--- a/src/main/java/org/apache/commons/lang3/StringEscapeUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringEscapeUtils.java
+@@ -78,13 +78,13 @@ private static final class CsvUnescaper extends CharSequenceTranslator {
+ 
+         @Override
+         public int translate(final CharSequence input, final int index, final Writer out) throws IOException {
+             if (index != 0) {
+                 throw new IllegalStateException("CsvUnescaper should never reach the [1] index");
+             }
+-            if (input.charAt(0) != CSV_QUOTE || input.charAt(input.length() - 1) != CSV_QUOTE) {
++            if (input.length() < 2 || input.charAt(0) != CSV_QUOTE || input.charAt(input.length() - 1) != CSV_QUOTE) {
+                 out.write(input.toString());
+                 return Character.codePointCount(input, 0, input.length());
+             }
+             // strip quotes
+             final String quoteless = input.subSequence(1, input.length() - 1).toString();
+             if (StringUtils.containsAny(quoteless, CSV_SEARCH_CHARS)) {

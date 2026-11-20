@@ -1,0 +1,20 @@
+# P093: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -436,13 +436,13 @@ public static Number createNumber(final String str) {
+             }
+             // Requesting a specific type.
+             final String numeric = str.substring(0, length - 1);
+             switch (lastChar) {
+             case 'l':
+             case 'L':
+-                if (dec == null && exp == null && (!numeric.isEmpty() && numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
++                if (dec == null && exp == null && (!numeric.isEmpty() && isSign(numeric.charAt(0)) && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                     try {
+                         return createLong(numeric);
+                     } catch (final NumberFormatException ignored) {
+                         // Too big for a long
+                     }
+                     return createBigInteger(numeric);

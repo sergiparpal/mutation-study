@@ -1,0 +1,42 @@
+# P121: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +2/-1   lines, code only (comments and blank lines left out, by line prefix): +2/-0
+diff --git a/src/main/java/org/apache/commons/lang3/time/StopWatch.java b/src/main/java/org/apache/commons/lang3/time/StopWatch.java
+--- a/src/main/java/org/apache/commons/lang3/time/StopWatch.java
++++ b/src/main/java/org/apache/commons/lang3/time/StopWatch.java
+@@ -686,12 +686,13 @@ public <E extends Throwable> void runT(final FailableRunnable<E> runnable) throw
+      */
+     public void split() {
+         if (runningState != State.RUNNING) {
+             throw new IllegalStateException("Stopwatch is not running.");
+         }
+         stopTimeNanos = System.nanoTime();
++        stopInstant = Instant.now();
+         splitState = SplitState.SPLIT;
+         splits.add(new Split(String.valueOf(splits.size()), Duration.ofNanos(stopTimeNanos - startTimeNanos)));
+     }
+ 
+     /**
+      * Splits the time with a label.
+@@ -707,12 +708,13 @@ public void split() {
+      */
+     public void split(final String label) {
+         if (runningState != State.RUNNING) {
+             throw new IllegalStateException("Stopwatch is not running.");
+         }
+         stopTimeNanos = System.nanoTime();
++        stopInstant = Instant.now();
+         splitState = SplitState.SPLIT;
+         splits.add(new Split(label, Duration.ofNanos(stopTimeNanos - startTimeNanos)));
+     }
+ 
+     /**
+      * Starts this StopWatch.
+@@ -832,8 +834,7 @@ public void unsplit() {
+         if (splitState != SplitState.SPLIT) {
+             throw new IllegalStateException("Stopwatch has not been split.");
+         }
+         splitState = SplitState.UNSPLIT;
+         splits.remove(splits.size() - 1);
+     }
+-
+ }

@@ -1,0 +1,46 @@
+# P133: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +9/-2   lines, code only (comments and blank lines left out, by line prefix): +9/-2
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -362,31 +362,38 @@ public static Number createNumber(final String str) {
+         for (final String pfx : hexPrefixes) {
+             if (str.startsWith(pfx, offset)) {
+                 pfxLen += pfx.length() + offset;
+                 break;
+             }
+         }
++        final char lastChar = str.charAt(length - 1);
+         if (pfxLen > 0) { // we have a hex number
+             char firstSigDigit = 0; // strip leading zeroes
+             for (int i = pfxLen; i < length; i++) {
+                 firstSigDigit = str.charAt(i);
+                 if (firstSigDigit != '0') {
+                     break;
+                 }
+                 pfxLen++;
+             }
+-            final int hexDigits = length - pfxLen;
++            final boolean isLongCh = lastChar == 'l' || lastChar == 'L';
++            int hexDigits = length - pfxLen;
++            if (isLongCh) {
++                hexDigits--;
++            }
+             if (hexDigits > 16 || hexDigits == 16 && firstSigDigit > '7') { // too many for Long
+                 return createBigInteger(str);
+             }
++            if (isLongCh) {
++                return createLong(str.substring(0, str.length() - 1));
++            }
+             if (hexDigits > 8 || hexDigits == 8 && firstSigDigit > '7') { // too many for an int
+                 return createLong(str);
+             }
+             return createInteger(str);
+         }
+-        final char lastChar = str.charAt(length - 1);
+         final String mant;
+         final String dec;
+         final String exp;
+         final int decPos = str.indexOf('.');
+         final int expPos = str.indexOf('e') + str.indexOf('E') + 1; // assumes both not present
+         // if both e and E are present, this is caught by the checks on expPos (which prevent IOOBE)

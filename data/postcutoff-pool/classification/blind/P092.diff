@@ -1,0 +1,66 @@
+# P092: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +10/-3   lines, code only (comments and blank lines left out, by line prefix): +6/-3
+diff --git a/src/main/java/org/apache/commons/lang3/LocaleUtils.java b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+--- a/src/main/java/org/apache/commons/lang3/LocaleUtils.java
++++ b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+@@ -323,12 +323,13 @@ static Locale ofCountry(final String country) {
+      * </p>
+      *
+      * @param str the String to parse as a Locale.
+      * @return a Locale parsed from the given String.
+      * @throws IllegalArgumentException if the given String cannot be parsed.
+      * @see Locale
++     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Locale.html#special_cases_constructor">Locale special cases</a>
+      */
+     private static Locale parseLocale(final String str) {
+         if (isISO639LanguageCode(str)) {
+             return new Locale(str);
+         }
+         final int limit = 3;
+@@ -340,12 +341,20 @@ private static Locale parseLocale(final String str) {
+             if (isISO639LanguageCode(language) && isISO3166CountryCode(country) || isNumericAreaCode(country)) {
+                 return new Locale(language, country);
+             }
+         } else if (segments.length == limit) {
+             final String country = segments[1];
+             final String variant = segments[2];
++            // Special case 1: https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Locale.html#special_cases_constructor
++            if (str.equals("th_TH_TH_#u-nu-thai")) {
++                return new Locale(language, country, "TH");
++            }
++            // Special case 2: https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Locale.html#special_cases_constructor
++            if (str.equals("ja_JP_JP_#u-ca-japanese")) {
++                return new Locale(language, country, "JP");
++            }
+             if (isISO639LanguageCode(language) && (country.isEmpty() || isISO3166CountryCode(country) || isNumericAreaCode(country)) && !variant.isEmpty()) {
+                 return new Locale(language, country, variant);
+             }
+         }
+         if (ArrayUtils.contains(Locale.getISOCountries(), str)) {
+             return new Locale(StringUtils.EMPTY, str);
+@@ -393,24 +402,22 @@ public static Locale toLocale(final Locale locale) {
+      *
+      * @param str the locale String to convert, null returns null.
+      * @return a Locale, null if null input.
+      * @throws IllegalArgumentException if the string is an invalid format.
+      * @see Locale#forLanguageTag(String)
+      * @see Locale#getISOCountries()
++     * @see <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Locale.html#special_cases_constructor">Locale special cases</a>
+      */
+     public static Locale toLocale(final String str) {
+         if (str == null) {
+             // TODO Should this return the default locale?
+             return null;
+         }
+         if (str.isEmpty()) { // LANG-941 - JDK 8 introduced an empty locale where all fields are blank
+             return new Locale(StringUtils.EMPTY, StringUtils.EMPTY);
+         }
+-        if (str.contains("#")) { // LANG-879 - Cannot handle Java 7 script & extensions
+-            throw new IllegalArgumentException("Invalid locale format: " + str);
+-        }
+         final int len = str.length();
+         if (len < 2) {
+             throw new IllegalArgumentException("Invalid locale format: " + str);
+         }
+         final char ch0 = str.charAt(0);
+         if (ch0 == UNDERSCORE || ch0 == DASH) {

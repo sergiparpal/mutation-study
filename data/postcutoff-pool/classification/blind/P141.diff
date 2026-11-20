@@ -1,0 +1,54 @@
+# P141: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +23/-0   lines, code only (comments and blank lines left out, by line prefix): +15/-0
+diff --git a/src/main/java/org/apache/commons/lang3/time/ImmutableTimeZone.java b/src/main/java/org/apache/commons/lang3/time/ImmutableTimeZone.java
+--- a/src/main/java/org/apache/commons/lang3/time/ImmutableTimeZone.java
++++ b/src/main/java/org/apache/commons/lang3/time/ImmutableTimeZone.java
+@@ -38,12 +38,27 @@ final class ImmutableTimeZone extends TimeZone {
+     @Override
+     public Object clone() {
+         // Immutable, so return this.
+         return this;
+     }
+ 
++    /**
++     * {@inheritDoc}
++     */
++    @Override
++    public boolean equals(final Object obj) {
++        if (this == obj) {
++            return true;
++        }
++        if (!(obj instanceof TimeZone)) {
++            return false;
++        }
++        final TimeZone other = (TimeZone) obj;
++        return timeZone.equals(other instanceof ImmutableTimeZone ? ((ImmutableTimeZone) other).timeZone : other);
++    }
++
+     /**
+      * {@inheritDoc}
+      */
+     @Override
+     public String getDisplayName(final boolean daylight, final int style, final Locale locale) {
+         return timeZone.getDisplayName(daylight, style, locale);
+@@ -86,12 +101,20 @@ public int getOffset(final long date) {
+      */
+     @Override
+     public int getRawOffset() {
+         return timeZone.getRawOffset();
+     }
+ 
++    /**
++     * {@inheritDoc}
++     */
++    @Override
++    public int hashCode() {
++        return timeZone.hashCode();
++    }
++
+     /**
+      * {@inheritDoc}
+      */
+     @Override
+     public boolean hasSameRules(final TimeZone other) {
+         return timeZone.hasSameRules(other);

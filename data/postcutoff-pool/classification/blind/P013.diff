@@ -1,0 +1,35 @@
+# P013: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +2/-2   lines, code only (comments and blank lines left out, by line prefix): +2/-2
+diff --git a/src/main/java/org/apache/commons/csv/CSVRecord.java b/src/main/java/org/apache/commons/csv/CSVRecord.java
+--- a/src/main/java/org/apache/commons/csv/CSVRecord.java
++++ b/src/main/java/org/apache/commons/csv/CSVRecord.java
+@@ -124,13 +124,13 @@ public String get(final int i) {
+      */
+     public String get(final String name) {
+         final Map<String, Integer> headerMap = getHeaderMapRaw();
+         if (headerMap == null) {
+             throw new IllegalStateException("No header mapping was specified, the record values can't be accessed by name");
+         }
+-        final Integer index = headerMap.get(name);
++        final Integer index = name == null ? null : headerMap.get(name);
+         if (index == null) {
+             throw new IllegalArgumentException(String.format("Mapping for %s not found, expected one of %s", name, headerMap.keySet()));
+         }
+         try {
+             return values[index.intValue()]; // Explicit unboxing is intentional
+         } catch (final ArrayIndexOutOfBoundsException e) {
+@@ -240,13 +240,13 @@ public boolean isConsistent() {
+      * @param name
+      *            the name of the column to be retrieved.
+      * @return whether a given column is mapped.
+      */
+     public boolean isMapped(final String name) {
+         final Map<String, Integer> headerMap = getHeaderMapRaw();
+-        return headerMap != null && headerMap.containsKey(name);
++        return name != null && headerMap != null && headerMap.containsKey(name);
+     }
+ 
+     /**
+      * Checks whether a column with a given index has a value.
+      *
+      * @param index

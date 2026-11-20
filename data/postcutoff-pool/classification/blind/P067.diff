@@ -1,0 +1,20 @@
+# P067: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +2/-0   lines, code only (comments and blank lines left out, by line prefix): +2/-0
+diff --git a/src/main/java/org/apache/commons/csv/CSVFormat.java b/src/main/java/org/apache/commons/csv/CSVFormat.java
+--- a/src/main/java/org/apache/commons/csv/CSVFormat.java
++++ b/src/main/java/org/apache/commons/csv/CSVFormat.java
+@@ -803,12 +803,14 @@ public Builder setQuote(final char quoteCharacter) {
+          */
+         public Builder setQuote(final Character quoteCharacter) {
+             if (isLineBreak(quoteCharacter)) {
+                 throw new IllegalArgumentException("The quoteCharacter cannot be a line break");
+             }
+             this.quoteCharacter = quoteCharacter;
++            final Character quote = quoteCharacter != null ? quoteCharacter : Constants.DOUBLE_QUOTE_CHAR;
++            this.quotedNullString = quote + nullString + quote;
+             return this;
+         }
+ 
+         /**
+          * Sets the quote policy to use for output.
+          *

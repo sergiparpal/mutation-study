@@ -1,0 +1,33 @@
+# P052: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +2/-0   lines, code only (comments and blank lines left out, by line prefix): +2/-0
+diff --git a/src/main/java/org/apache/commons/csv/Lexer.java b/src/main/java/org/apache/commons/csv/Lexer.java
+--- a/src/main/java/org/apache/commons/csv/Lexer.java
++++ b/src/main/java/org/apache/commons/csv/Lexer.java
+@@ -20,12 +20,13 @@
+ package org.apache.commons.csv;
+ 
+ import static org.apache.commons.io.IOUtils.EOF;
+ 
+ import java.io.Closeable;
+ import java.io.IOException;
++import java.util.Arrays;
+ 
+ import org.apache.commons.io.IOUtils;
+ 
+ /**
+  * Lexical analyzer.
+  */
+@@ -269,12 +270,13 @@ Token nextToken(final Token token) throws IOException {
+             }
+             final String comment = line.trim();
+             token.content.append(comment);
+             token.type = Token.Type.COMMENT;
+             return token;
+         }
++        Arrays.fill(delimiterBuf, '\0');
+         // Important: make sure a new char gets consumed in each iteration
+         while (token.type == Token.Type.INVALID) {
+             // ignore whitespaces at beginning of a token
+             if (ignoreSurroundingSpaces) {
+                 while (Character.isWhitespace((char) c) && !isDelimiter(c) && !eol) {
+                     c = reader.read();

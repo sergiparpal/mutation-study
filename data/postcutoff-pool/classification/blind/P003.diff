@@ -1,0 +1,20 @@
+# P003: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/time/StopWatch.java b/src/main/java/org/apache/commons/lang3/time/StopWatch.java
+--- a/src/main/java/org/apache/commons/lang3/time/StopWatch.java
++++ b/src/main/java/org/apache/commons/lang3/time/StopWatch.java
+@@ -324,13 +324,13 @@ public StopWatch(final String message) {
+      * Formats the split time with {@link DurationFormatUtils#formatDurationHMS}.
+      *
+      * @return The split time formatted by {@link DurationFormatUtils#formatDurationHMS}.
+      * @since 3.10
+      */
+     public String formatSplitTime() {
+-        return DurationFormatUtils.formatDurationHMS(DurationUtils.toMillisInt(getSplitDuration()));
++        return DurationFormatUtils.formatDurationHMS(DurationUtils.toMillisLong(getSplitDuration()));
+     }
+ 
+     /**
+      * Formats the time formatted with {@link DurationFormatUtils#formatDurationHMS}.
+      *
+      * @return The time formatted by {@link DurationFormatUtils#formatDurationHMS}.

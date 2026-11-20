@@ -1,0 +1,24 @@
+# P066: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +5/-0   lines, code only (comments and blank lines left out, by line prefix): +3/-0
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java b/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
+--- a/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
+@@ -87,13 +87,18 @@ private static int distance(final Class<?>[] fromClassArray, final Class<?>[] to
+             final Class<?> aClass = fromClassArray[offset];
+             final Class<?> toClass = toClassArray[offset];
+             if (aClass == null || aClass.equals(toClass)) {
+                 continue;
+             }
+             if (ClassUtils.isAssignable(aClass, toClass, true) && !ClassUtils.isAssignable(aClass, toClass, false)) {
++                // Autoboxing/unboxing conversion. When a primitive is boxed, rank the exact
++                // wrapper ahead of any of its supertypes so the most specific overload wins.
+                 answer++;
++                if (aClass.isPrimitive() && !ClassUtils.primitiveToWrapper(aClass).equals(toClass)) {
++                    answer += 2;
++                }
+             } else {
+                 answer += 2;
+             }
+         }
+         return answer;
+     }

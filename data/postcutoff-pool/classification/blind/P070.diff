@@ -1,0 +1,20 @@
+# P070: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+--- a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+@@ -1524,13 +1524,13 @@ public static Type[] normalizeUpperBounds(final Type[] bounds) {
+             return bounds;
+         }
+         final Set<Type> types = new HashSet<>(bounds.length);
+         for (final Type type1 : bounds) {
+             boolean subtypeFound = false;
+             for (final Type type2 : bounds) {
+-                if (type1 != type2 && isAssignable(type2, type1, null)) {
++                if (!equals(type1, type2) && isAssignable(type2, type1, null)) {
+                     subtypeFound = true;
+                     break;
+                 }
+             }
+             if (!subtypeFound) {
+                 types.add(type1);

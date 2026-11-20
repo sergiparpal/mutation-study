@@ -1,0 +1,20 @@
+# P100: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/builder/MultilineRecursiveToStringStyle.java b/src/main/java/org/apache/commons/lang3/builder/MultilineRecursiveToStringStyle.java
+--- a/src/main/java/org/apache/commons/lang3/builder/MultilineRecursiveToStringStyle.java
++++ b/src/main/java/org/apache/commons/lang3/builder/MultilineRecursiveToStringStyle.java
+@@ -148,13 +148,13 @@ protected void appendDetail(final StringBuffer buffer, final String fieldName, f
+         spaces -= INDENT;
+         resetIndent();
+     }
+ 
+     @Override
+     public void appendDetail(final StringBuffer buffer, final String fieldName, final Object value) {
+-        if (!ClassUtils.isPrimitiveWrapper(value.getClass()) && !String.class.equals(value.getClass())
++        if (value != null && !ClassUtils.isPrimitiveWrapper(value.getClass()) && !String.class.equals(value.getClass())
+                 && accept(value.getClass())) {
+             spaces += INDENT;
+             resetIndent();
+             buffer.append(ReflectionToStringBuilder.toString(value, this));
+             spaces -= INDENT;
+             resetIndent();

@@ -1,0 +1,86 @@
+# P131: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +27/-1   lines, code only (comments and blank lines left out, by line prefix): +20/-1
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -4262,12 +4262,15 @@ public static int lastIndexOf(final double[] array, final double valueToFind, fi
+      * @param array       the array to traverse for looking for the object, may be {@code null}.
+      * @param valueToFind the value to find.
+      * @param startIndex  the start index to traverse backwards from.
+      * @return the last index of the value within the array, {@link #INDEX_NOT_FOUND} ({@code -1}) if not found or {@code null} array input.
+      */
+     public static int lastIndexOf(final double[] array, final double valueToFind, int startIndex) {
++        if (Double.isNaN(valueToFind)) {
++            return lastIndexOfNaN(array, startIndex);
++        }
+         if (isEmpty(array) || startIndex < 0) {
+             return INDEX_NOT_FOUND;
+         }
+         if (startIndex >= array.length) {
+             startIndex = array.length - 1;
+         }
+@@ -4293,12 +4296,15 @@ public static int lastIndexOf(final double[] array, final double valueToFind, in
+      * @param valueToFind the value to find.
+      * @param startIndex  the start index to traverse backwards from.
+      * @param tolerance   search for value within plus/minus this amount.
+      * @return the last index of the value within the array, {@link #INDEX_NOT_FOUND} ({@code -1}) if not found or {@code null} array input.
+      */
+     public static int lastIndexOf(final double[] array, final double valueToFind, int startIndex, final double tolerance) {
++        if (Double.isNaN(valueToFind)) {
++            return lastIndexOfNaN(array, startIndex);
++        }
+         if (isEmpty(array) || startIndex < 0) {
+             return INDEX_NOT_FOUND;
+         }
+         if (startIndex >= array.length) {
+             startIndex = array.length - 1;
+         }
+@@ -4344,14 +4350,16 @@ public static int lastIndexOf(final float[] array, final float valueToFind, int
+         if (isEmpty(array) || startIndex < 0) {
+             return INDEX_NOT_FOUND;
+         }
+         if (startIndex >= array.length) {
+             startIndex = array.length - 1;
+         }
++        final boolean searchNaN = Float.isNaN(valueToFind);
+         for (int i = startIndex; i >= 0; i--) {
+-            if (valueToFind == array[i]) {
++            final float element = array[i];
++            if (valueToFind == element || searchNaN && Float.isNaN(element)) {
+                 return i;
+             }
+         }
+         return INDEX_NOT_FOUND;
+     }
+ 
+@@ -4532,12 +4540,30 @@ public static int lastIndexOf(final short[] array, final short valueToFind, int
+                 return i;
+             }
+         }
+         return INDEX_NOT_FOUND;
+     }
+ 
++    /**
++     * Finds the last index of the NaN value in a double array.
++     * @param array the array to traverse backwards for NaN, may be {@code null}.
++     * @param startIndex the start index to traverse backwards from.
++     * @return the last index of the NaN value within the array, {@link #INDEX_NOT_FOUND} ({@code -1}) if not found or {@code null} array input.
++     */
++    private static int lastIndexOfNaN(final double[] array, final int startIndex) {
++        if (isEmpty(array) || startIndex < 0) {
++            return INDEX_NOT_FOUND;
++        }
++        for (int i = Math.min(startIndex, array.length - 1); i >= 0; i--) {
++            if (Double.isNaN(array[i])) {
++                return i;
++            }
++        }
++        return INDEX_NOT_FOUND;
++    }
++
+     /**
+      * Maps elements from an array into elements of a new array of a given type, while mapping old elements to new elements.
+      *
+      * @param <T>           The input array type.
+      * @param <R>           The output array type.
+      * @param <E>           The type of exceptions thrown when the mapper function fails.

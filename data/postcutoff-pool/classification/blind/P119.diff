@@ -1,0 +1,40 @@
+# P119: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +5/-3   lines, code only (comments and blank lines left out, by line prefix): +2/-1
+diff --git a/src/main/java/org/apache/commons/lang3/builder/DiffBuilder.java b/src/main/java/org/apache/commons/lang3/builder/DiffBuilder.java
+--- a/src/main/java/org/apache/commons/lang3/builder/DiffBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/DiffBuilder.java
+@@ -528,15 +528,17 @@ public DiffBuilder<T> append(final String fieldName, final long[] lhs, final lon
+      * @throws NullPointerException Thrown if field name is {@code null}.
+      */
+     public DiffBuilder<T> append(final String fieldName, final Object lhs, final Object rhs) {
+         if (equals || lhs == rhs) {
+             return this;
+         }
+-        // rhs cannot be null, as lhs != rhs
++        // At least one value is non-null, as lhs != rhs.
+         final Object test = lhs != null ? lhs : rhs;
+-        if (ObjectUtils.isArray(test)) {
++        // Primitive arrays must have the same type; all reference arrays can use the Object[] overload.
++        if (ObjectUtils.isArray(test) && (lhs == null || rhs == null || lhs.getClass() == rhs.getClass()
++                || lhs instanceof Object[] && rhs instanceof Object[])) {
+             if (test instanceof boolean[]) {
+                 return append(fieldName, (boolean[]) lhs, (boolean[]) rhs);
+             }
+             if (test instanceof byte[]) {
+                 return append(fieldName, (byte[]) lhs, (byte[]) rhs);
+             }
+@@ -557,13 +559,13 @@ public DiffBuilder<T> append(final String fieldName, final Object lhs, final Obj
+             }
+             if (test instanceof short[]) {
+                 return append(fieldName, (short[]) lhs, (short[]) rhs);
+             }
+             return append(fieldName, (Object[]) lhs, (Object[]) rhs);
+         }
+-        // Not array type
++        // Compare non-arrays and arrays with incompatible types as objects.
+         return Objects.equals(lhs, rhs) ? this : add(fieldName, () -> lhs, () -> rhs, Object.class);
+     }
+ 
+     /**
+      * Tests if two {@code Object[]}s are equal.
+      *

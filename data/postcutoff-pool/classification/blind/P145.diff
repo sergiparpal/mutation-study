@@ -1,0 +1,79 @@
+# P145: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +16/-3   lines, code only (comments and blank lines left out, by line prefix): +14/-3
+diff --git a/src/main/java/org/apache/commons/csv/CSVParser.java b/src/main/java/org/apache/commons/csv/CSVParser.java
+--- a/src/main/java/org/apache/commons/csv/CSVParser.java
++++ b/src/main/java/org/apache/commons/csv/CSVParser.java
+@@ -47,13 +47,15 @@
+ import java.util.TreeMap;
+ import java.util.stream.Collectors;
+ import java.util.stream.Stream;
+ import java.util.stream.StreamSupport;
+ 
+ import org.apache.commons.io.Charsets;
++import org.apache.commons.io.IOUtils;
+ import org.apache.commons.io.build.AbstractStreamBuilder;
++import org.apache.commons.io.function.IOSupplier;
+ import org.apache.commons.io.function.Uncheck;
+ 
+ /**
+  * Parses CSV files according to the specified format.
+  *
+  * Because CSV appears in many different dialects, the parser supports many formats by allowing the
+@@ -368,12 +370,24 @@ public static CSVParser parse(final File file, final Charset charset, final CSVF
+      */
+     public static CSVParser parse(final InputStream inputStream, final Charset charset, final CSVFormat format)
+             throws IOException {
+         return parse(new InputStreamReader(inputStream, Charsets.toCharset(charset)), format);
+     }
+ 
++    private static CSVParser parse(final IOSupplier<InputStream> supplier, final Charset charset, final CSVFormat format) throws IOException {
++        Objects.requireNonNull(supplier, "supplier");
++        final InputStream inputStream = supplier.get();
++        try {
++            return parse(inputStream, charset, format);
++        } catch (final IOException | RuntimeException e) {
++            // This method allocated the stream and the caller never gets a parser to close, so close it here.
++            IOUtils.closeQuietlySuppress(inputStream, e);
++            throw e;
++        }
++    }
++
+     /**
+      * Creates and returns a parser for the given {@link Path}, which the caller MUST close.
+      *
+      * @param path
+      *            a CSV file. Must not be null.
+      * @param charset
+@@ -389,13 +403,13 @@ public static CSVParser parse(final InputStream inputStream, final Charset chars
+      * @throws NullPointerException if {@code path} is {@code null}.
+      * @since 1.5
+      */
+     @SuppressWarnings("resource")
+     public static CSVParser parse(final Path path, final Charset charset, final CSVFormat format) throws IOException {
+         Objects.requireNonNull(path, "path");
+-        return parse(Files.newInputStream(path), charset, format);
++        return parse(() -> Files.newInputStream(path), charset, format);
+     }
+ 
+     /**
+      * Creates a CSV parser using the given {@link CSVFormat}
+      *
+      * <p>
+@@ -458,16 +472,15 @@ public static CSVParser parse(final String string, final CSVFormat format) throw
+      *             If the parameters of the format are inconsistent.
+      * @throws IOException
+      *             If an I/O error occurs
+      * @throws CSVException Thrown on invalid CSV input data.
+      * @throws NullPointerException if {@code url} is {@code null}.
+      */
+-    @SuppressWarnings("resource")
+     public static CSVParser parse(final URL url, final Charset charset, final CSVFormat format) throws IOException {
+         Objects.requireNonNull(url, "url");
+-        return parse(url.openStream(), charset, format);
++        return parse(url::openStream, charset, format);
+     }
+ 
+     private String headerComment;
+ 
+     private String trailerComment;
+ 

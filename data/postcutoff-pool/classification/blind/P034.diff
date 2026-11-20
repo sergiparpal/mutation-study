@@ -1,0 +1,22 @@
+# P034: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +2/-2   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/math/Fraction.java b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+--- a/src/main/java/org/apache/commons/lang3/math/Fraction.java
++++ b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+@@ -325,14 +325,14 @@ public static Fraction getFraction(final String str) {
+      */
+     public static Fraction getReducedFraction(int numerator, int denominator) {
+         checkDenominator(denominator);
+         if (numerator == 0) {
+             return ZERO; // normalize zero.
+         }
+-        // allow 2^k/-2^31 as a valid fraction (where k>0)
+-        if (denominator == Integer.MIN_VALUE && (numerator & 1) == 0) {
++        // Reduce common powers of two before sign normalization to avoid negating Integer.MIN_VALUE.
++        while ((numerator & 1) == 0 && (denominator & 1) == 0) {
+             numerator /= 2;
+             denominator /= 2;
+         }
+         if (denominator < 0) {
+             if (numerator == Integer.MIN_VALUE || denominator == Integer.MIN_VALUE) {
+                 throw new ArithmeticException("overflow: can't negate");

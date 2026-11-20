@@ -1,0 +1,38 @@
+# P002: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +5/-2   lines, code only (comments and blank lines left out, by line prefix): +4/-2
+diff --git a/src/main/java/org/apache/commons/csv/CSVFormat.java b/src/main/java/org/apache/commons/csv/CSVFormat.java
+--- a/src/main/java/org/apache/commons/csv/CSVFormat.java
++++ b/src/main/java/org/apache/commons/csv/CSVFormat.java
+@@ -777,14 +777,13 @@ public Builder setMaxRows(final long maxRows) {
+          *
+          * @param nullString the String to convert to and from {@code null}. No substitution occurs if {@code null}.
+          * @return This instance.
+          */
+         public Builder setNullString(final String nullString) {
+             this.nullString = nullString;
+-            this.quotedNullString = quoteCharacter + nullString + quoteCharacter;
+-            return this;
++            return setQuotedNullString();
+         }
+ 
+         /**
+          * Sets the quote character.
+          *
+          * @param quoteCharacter the quote character.
+@@ -803,12 +802,16 @@ public Builder setQuote(final char quoteCharacter) {
+          */
+         public Builder setQuote(final Character quoteCharacter) {
+             if (isLineBreak(quoteCharacter)) {
+                 throw new IllegalArgumentException("The quoteCharacter cannot be a line break");
+             }
+             this.quoteCharacter = quoteCharacter;
++            return setQuotedNullString();
++        }
++
++        private Builder setQuotedNullString() {
+             final Character quote = quoteCharacter != null ? quoteCharacter : Constants.DOUBLE_QUOTE_CHAR;
+             this.quotedNullString = quote + nullString + quote;
+             return this;
+         }
+ 
+         /**

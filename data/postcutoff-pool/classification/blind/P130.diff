@@ -1,0 +1,22 @@
+# P130: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +3/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/csv/CSVParser.java b/src/main/java/org/apache/commons/csv/CSVParser.java
+--- a/src/main/java/org/apache/commons/csv/CSVParser.java
++++ b/src/main/java/org/apache/commons/csv/CSVParser.java
+@@ -577,13 +577,15 @@ public CSVParser(final Reader reader, final CSVFormat format, final long charact
+                 .setCharset((Charset) null).setTrackBytes(false));
+         // @formatter:off
+     }
+ 
+     private void addRecordValue(final boolean lastRecord) {
+         final String input = format.trim(reusableToken.content.toString());
+-        if (lastRecord && input.isEmpty() && format.getTrailingDelimiter()) {
++        // Only drop the empty field produced by an actual trailing delimiter. A quoted empty
++        // field ("") is a real value, not a trailing delimiter, so it must be kept.
++        if (lastRecord && input.isEmpty() && format.getTrailingDelimiter() && !reusableToken.isQuoted) {
+             return;
+         }
+         recordList.add(handleNull(input));
+     }
+ 
+     /**

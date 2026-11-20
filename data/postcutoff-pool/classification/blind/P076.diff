@@ -1,0 +1,39 @@
+# P076: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +8/-2   lines, code only (comments and blank lines left out, by line prefix): +3/-1
+diff --git a/src/main/java/org/apache/commons/lang3/time/DurationUtils.java b/src/main/java/org/apache/commons/lang3/time/DurationUtils.java
+--- a/src/main/java/org/apache/commons/lang3/time/DurationUtils.java
++++ b/src/main/java/org/apache/commons/lang3/time/DurationUtils.java
+@@ -43,25 +43,31 @@ public class DurationUtils {
+     /**
+      * An Integer Range that accepts Longs.
+      */
+     static final LongRange LONG_TO_INT_RANGE = LongRange.of(NumberUtils.LONG_INT_MIN_VALUE, NumberUtils.LONG_INT_MAX_VALUE);
+ 
+     /**
+-     * Accepts the function with the duration as a long milliseconds and int nanoseconds.
++     * Accepts the consumer with the duration split into milliseconds and nanoseconds.
++     * <p>
++     * The nanosecond component is non-negative, and the millisecond component is rounded down so that the two components represent the original duration,
++     * including negative durations.
++     * </p>
+      *
+      * @param <T> The function exception.
+      * @param consumer Accepting function.
+      * @param duration The duration to pick apart.
+      * @throws T Thrown as described in the function signature.
+      * @see StopWatch
+      */
+     @SuppressWarnings("boxing") // boxing unavoidable
+     public static <T extends Throwable> void accept(final FailableBiConsumer<Long, Integer, T> consumer, final Duration duration)
+             throws T {
+         if (consumer != null && duration != null) {
+-            consumer.accept(duration.toMillis(), getNanosOfMilli(duration));
++            final int nanos = getNanosOfMilli(duration);
++            final long millis = duration.isNegative() ? duration.minusNanos(nanos).toMillis() : duration.toMillis();
++            consumer.accept(millis, nanos);
+         }
+     }
+ 
+     /**
+      * Gets a Duration of unit stored in the system property at the given key.
+      *

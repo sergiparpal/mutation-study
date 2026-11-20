@@ -1,0 +1,139 @@
+# P073: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +17/-0   lines, code only (comments and blank lines left out, by line prefix): +16/-0
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -651,12 +651,21 @@ public static String center(String str, final int size, String padStr) {
+             return str;
+         }
+         str = leftPad(str, strLen + pads / 2, padStr);
+         return rightPad(str, size, padStr);
+     }
+ 
++    private static void checkFromToIndex(final int startIndex, final int endIndex, final int length) {
++        if (startIndex < 0) {
++            throw new ArrayIndexOutOfBoundsException(startIndex);
++        }
++        if (endIndex > length) {
++            throw new ArrayIndexOutOfBoundsException(endIndex);
++        }
++    }
++
+     /**
+      * Removes one newline from end of a String if it's there, otherwise leave it alone. A newline is &quot;{@code \n}&quot;, &quot;{@code \r}&quot;, or
+      * &quot;{@code \r\n}&quot;.
+      *
+      * <p>
+      * NOTE: This method changed in 2.0. It now more closely matches Perl chomp.
+@@ -3863,12 +3872,13 @@ public static String join(final boolean[] array, final char delimiter) {
+      */
+     public static String join(final boolean[] array, final char delimiter, final int startIndex, final int endIndex) {
+         // See StringUtilsJoinBenchmark
+         if (array == null) {
+             return null;
+         }
++        checkFromToIndex(startIndex, endIndex, array.length);
+         final int count = endIndex - startIndex;
+         if (count <= 0) {
+             return EMPTY;
+         }
+         final byte maxElementChars = 5; // "false"
+         final StringBuilder stringBuilder = capacity(count, maxElementChars);
+@@ -3940,12 +3950,13 @@ public static String join(final byte[] array, final char delimiter) {
+      */
+     public static String join(final byte[] array, final char delimiter, final int startIndex, final int endIndex) {
+         // See StringUtilsJoinBenchmark
+         if (array == null) {
+             return null;
+         }
++        checkFromToIndex(startIndex, endIndex, array.length);
+         final int count = endIndex - startIndex;
+         if (count <= 0) {
+             return EMPTY;
+         }
+         final byte maxElementChars = 4; // "-128"
+         final StringBuilder stringBuilder = capacity(count, maxElementChars);
+@@ -4017,12 +4028,13 @@ public static String join(final char[] array, final char delimiter) {
+      */
+     public static String join(final char[] array, final char delimiter, final int startIndex, final int endIndex) {
+         // See StringUtilsJoinBenchmark
+         if (array == null) {
+             return null;
+         }
++        checkFromToIndex(startIndex, endIndex, array.length);
+         final int count = endIndex - startIndex;
+         if (count <= 0) {
+             return EMPTY;
+         }
+         final byte maxElementChars = 1;
+         final StringBuilder stringBuilder = capacity(count, maxElementChars);
+@@ -4094,12 +4106,13 @@ public static String join(final double[] array, final char delimiter) {
+      */
+     public static String join(final double[] array, final char delimiter, final int startIndex, final int endIndex) {
+         // See StringUtilsJoinBenchmark
+         if (array == null) {
+             return null;
+         }
++        checkFromToIndex(startIndex, endIndex, array.length);
+         final int count = endIndex - startIndex;
+         if (count <= 0) {
+             return EMPTY;
+         }
+         final byte maxElementChars = 22; // "1.7976931348623157E308"
+         final StringBuilder stringBuilder = capacity(count, maxElementChars);
+@@ -4171,12 +4184,13 @@ public static String join(final float[] array, final char delimiter) {
+      */
+     public static String join(final float[] array, final char delimiter, final int startIndex, final int endIndex) {
+         // See StringUtilsJoinBenchmark
+         if (array == null) {
+             return null;
+         }
++        checkFromToIndex(startIndex, endIndex, array.length);
+         final int count = endIndex - startIndex;
+         if (count <= 0) {
+             return EMPTY;
+         }
+         final byte maxElementChars = 12; // "3.4028235E38"
+         final StringBuilder stringBuilder = capacity(count, maxElementChars);
+@@ -4248,12 +4262,13 @@ public static String join(final int[] array, final char separator) {
+      */
+     public static String join(final int[] array, final char delimiter, final int startIndex, final int endIndex) {
+         // See StringUtilsJoinBenchmark
+         if (array == null) {
+             return null;
+         }
++        checkFromToIndex(startIndex, endIndex, array.length);
+         final int count = endIndex - startIndex;
+         if (count <= 0) {
+             return EMPTY;
+         }
+         final byte maxElementChars = 11; // "-2147483648"
+         final StringBuilder stringBuilder = capacity(count, maxElementChars);
+@@ -4488,12 +4503,13 @@ public static String join(final long[] array, final char separator) {
+      */
+     public static String join(final long[] array, final char delimiter, final int startIndex, final int endIndex) {
+         // See StringUtilsJoinBenchmark
+         if (array == null) {
+             return null;
+         }
++        checkFromToIndex(startIndex, endIndex, array.length);
+         final int count = endIndex - startIndex;
+         if (count <= 0) {
+             return EMPTY;
+         }
+         final byte maxElementChars = 20; // "-9223372036854775808"
+         final StringBuilder stringBuilder = capacity(count, maxElementChars);
+@@ -4684,12 +4700,13 @@ public static String join(final short[] array, final char delimiter) {
+      */
+     public static String join(final short[] array, final char delimiter, final int startIndex, final int endIndex) {
+         // See StringUtilsJoinBenchmark
+         if (array == null) {
+             return null;
+         }
++        checkFromToIndex(startIndex, endIndex, array.length);
+         final int count = endIndex - startIndex;
+         if (count <= 0) {
+             return EMPTY;
+         }
+         final byte maxElementChars = 6; // "-32768"
+         final StringBuilder stringBuilder = capacity(count, maxElementChars);

@@ -1,0 +1,20 @@
+# P057: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java
+--- a/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java
+@@ -249,13 +249,13 @@ static boolean isMatchingConstructor(final Constructor<?> method, final Class<?>
+ 
+     private static boolean isMatchingExecutable(final Executable method, final Class<?>[] parameterTypes) {
+         final Class<?>[] methodParameterTypes = method.getParameterTypes();
+         if (ClassUtils.isAssignable(parameterTypes, methodParameterTypes, true)) {
+             return true;
+         }
+-        if (method.isVarArgs()) {
++        if (method.isVarArgs() && parameterTypes.length >= methodParameterTypes.length - 1) {
+             int i;
+             for (i = 0; i < methodParameterTypes.length - 1 && i < parameterTypes.length; i++) {
+                 if (!ClassUtils.isAssignable(parameterTypes[i], methodParameterTypes[i], true)) {
+                     return false;
+                 }
+             }

@@ -1,0 +1,65 @@
+# P137: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +13/-6   lines, code only (comments and blank lines left out, by line prefix): +5/-5
+diff --git a/src/main/java/org/apache/commons/cli/DefaultParser.java b/src/main/java/org/apache/commons/cli/DefaultParser.java
+--- a/src/main/java/org/apache/commons/cli/DefaultParser.java
++++ b/src/main/java/org/apache/commons/cli/DefaultParser.java
+@@ -503,20 +503,22 @@ private void handleProperties(final Properties properties) throws ParseException
+             final OptionGroup optionGroup = options.getOptionGroup(opt);
+             final boolean selected = optionGroup != null && optionGroup.isSelected();
+             if (!cmd.hasOption(option) && !selected) {
+                 // get the value from the properties
+                 final String value = properties.getProperty(option);
+                 if (opt.hasArg()) {
+-                    if (opt.isValuesEmpty()) {
+-                        opt.processValue(stripLeadingAndTrailingQuotesDefaultOff(value));
+-                    }
+-                } else if (!("yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) || "1".equalsIgnoreCase(value))) {
+-                    // if the value is not yes, true or 1 then don't add the option to the CommandLine
+-                    continue;
++                    // add the value to the copy of the option in the CommandLine, not to the option registered in Options,
++                    // and keep a value the option already has
++                    handleOption(opt);
++                    if (currentOption.isValuesEmpty()) {
++                        currentOption.processValue(stripLeadingAndTrailingQuotesDefaultOff(value));
+                     }
++                } else if ("yes".equalsIgnoreCase(value) || "true".equalsIgnoreCase(value) || "1".equalsIgnoreCase(value)) {
++                    // only add the option to the CommandLine if the value is yes, true or 1
+                     handleOption(opt);
++                }
+                 currentOption = null;
+             }
+         }
+     }
+ 
+     /**
+@@ -724,12 +726,16 @@ private boolean isShortOption(final String token) {
+         // check for several concatenated short options
+         return !optName.isEmpty() && options.hasShortOption(String.valueOf(optName.charAt(0)));
+     }
+ 
+     /**
+      * Parses the arguments according to the specified options and properties.
++     * <p>
++     * A value from {@code properties} is only used for an option that is not on the command line and has no value yet. Property values are added to the
++     * returned {@link CommandLine} without changing the values of the registered options.
++     * </p>
+      *
+      * @param options         The specified Options.
+      * @param properties      command line option name-value pairs.
+      * @param nonOptionAction see {@link NonOptionAction}.
+      * @param arguments       The command line arguments.
+      * @return The list of atomic option and value tokens.
+@@ -787,12 +793,13 @@ public CommandLine parse(final Options options, final String[] arguments, final
+      *
+      * @param options    The specified Options.
+      * @param arguments  The command line arguments.
+      * @param properties command line option name-value pairs.
+      * @return The list of atomic option and value tokens.
+      * @throws ParseException if there are any problems encountered while parsing the command line tokens.
++     * @see #parse(Options, Properties, NonOptionAction, String[])
+      */
+     public CommandLine parse(final Options options, final String[] arguments, final Properties properties) throws ParseException {
+         return parse(options, arguments, properties, false);
+     }
+ 
+     /**

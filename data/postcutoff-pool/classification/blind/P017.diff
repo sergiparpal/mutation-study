@@ -1,0 +1,199 @@
+# P017: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 3   lines, all: +27/-15   lines, code only (comments and blank lines left out, by line prefix): +16/-11
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/ConstructorUtils.java b/src/main/java/org/apache/commons/lang3/reflect/ConstructorUtils.java
+--- a/src/main/java/org/apache/commons/lang3/reflect/ConstructorUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/ConstructorUtils.java
+@@ -102,13 +102,13 @@ public static <T> Constructor<T> getAccessibleConstructor(final Constructor<T> c
+      * First it checks if there is a constructor matching the exact signature. If not then all the constructors of the class are checked to see if their
+      * signatures are assignment-compatible with the parameter types. The first assignment-compatible matching constructor is returned.
+      * </p>
+      *
+      * @param <T>            the constructor type.
+      * @param cls            The class to find a constructor for, not {@code null}.
+-     * @param parameterTypes find method with compatible parameters.
++     * @param parameterTypes The parameter types to match, {@code null} treated as empty.
+      * @return The constructor, null if no matching accessible constructor found.
+      * @throws NullPointerException Thrown if {@code cls} is {@code null}
+      * @throws SecurityException    Thrown if a security manager is present and the caller's class loader is not the same as or an ancestor of the class loader for the
+      *                              class and invocation of {@link SecurityManager#checkPackageAccess(String)} denies access to the package of the class.
+      * @see SecurityManager#checkPackageAccess(String)
+      */
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java
+--- a/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java
+@@ -19,12 +19,13 @@
+ import java.lang.reflect.AccessibleObject;
+ import java.lang.reflect.Constructor;
+ import java.lang.reflect.Member;
+ import java.lang.reflect.Method;
+ import java.lang.reflect.Modifier;
+ 
++import org.apache.commons.lang3.ArrayUtils;
+ import org.apache.commons.lang3.ClassUtils;
+ 
+ /**
+  * Contains common code for working with {@link java.lang.reflect.Method Methods}/{@link java.lang.reflect.Constructor Constructors},
+  * extracted and refactored from {@link MethodUtils} when it was imported from Commons BeanUtils.
+  */
+@@ -189,17 +190,18 @@ private static float getPrimitivePromotionCost(final Class<?> srcClass, final Cl
+         return cost;
+     }
+ 
+     /**
+      * Gets the sum of the object transformation cost for each class in the source argument list.
+      *
+-     * @param srcArgs    The source arguments.
++     * @param srcArgs    The source argument types, {@code null} treated as empty.
+      * @param executable The executable to calculate transformation costs for.
+      * @return The total transformation cost.
+      */
+-    private static float getTotalTransformationCost(final Class<?>[] srcArgs, final Executable executable) {
++    private static float getTotalTransformationCost(Class<?>[] srcArgs, final Executable executable) {
++        srcArgs = ArrayUtils.nullToEmpty(srcArgs);
+         final Class<?>[] destArgs = executable.getParameterTypes();
+         final boolean isVarArgs = executable.isVarArgs();
+         // "source" and "destination" are the actual and declared args respectively.
+         float totalCost = 0.0f;
+         final long normalArgsLen = isVarArgs ? destArgs.length - 1 : destArgs.length;
+         if (srcArgs.length < normalArgsLen) {
+@@ -244,13 +246,21 @@ static boolean isAccessible(final Member member) {
+     }
+ 
+     static boolean isMatchingConstructor(final Constructor<?> method, final Class<?>[] parameterTypes) {
+         return isMatchingExecutable(Executable.of(method), parameterTypes);
+     }
+ 
+-    private static boolean isMatchingExecutable(final Executable method, final Class<?>[] parameterTypes) {
++    /**
++     * Tests whether an executable accepts the given parameter types.
++     *
++     * @param method The executable to match.
++     * @param parameterTypes The parameter types to match, {@code null} treated as empty.
++     * @return {@code true} if the parameter types match.
++     */
++    private static boolean isMatchingExecutable(final Executable method, Class<?>[] parameterTypes) {
++        parameterTypes = ArrayUtils.nullToEmpty(parameterTypes);
+         final Class<?>[] methodParameterTypes = method.getParameterTypes();
+         if (ClassUtils.isAssignable(parameterTypes, methodParameterTypes, true)) {
+             return true;
+         }
+         if (method.isVarArgs() && parameterTypes.length >= methodParameterTypes.length - 1) {
+             int i;
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java b/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
+--- a/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
+@@ -363,46 +363,47 @@ private static Method getInvokeMethod(final boolean forceAccess, final String me
+      * <p>
+      * This method can match primitive parameter by passing in wrapper classes. For example, a {@link Boolean} will match a primitive {@code boolean} parameter.
+      * </p>
+      *
+      * @param cls            find method in this class.
+      * @param methodName     find method with this name.
+-     * @param requestTypes find method with most compatible parameters.
++     * @param requestTypes  The parameter types to match, {@code null} treated as empty.
+      * @return The accessible method or null.
+      * @throws SecurityException Thrown if an underlying accessible object's method denies the request.
+      * @see SecurityManager#checkPermission
+      */
+     public static Method getMatchingAccessibleMethod(final Class<?> cls, final String methodName, final Class<?>... requestTypes) {
+-        final Method candidate = getMethodObject(cls, methodName, requestTypes);
++        final Class<?>[] actualTypes = ArrayUtils.nullToEmpty(requestTypes);
++        final Method candidate = getMethodObject(cls, methodName, actualTypes);
+         if (candidate != null) {
+             // The exact match may be declared on a non-public class, so prefer the public
+             // declaration the way the search below does; a static method hides, so it is kept.
+             final Method accessibleCandidate = MemberUtils.isStatic(candidate) ? null : getAccessibleMethod(cls, candidate);
+             return MemberUtils.setAccessibleWorkaround(accessibleCandidate != null ? accessibleCandidate : candidate);
+         }
+         // search through all methods
+         final Method[] methods = cls.getMethods();
+         final List<Method> matchingMethods = Stream.of(methods)
+-                .filter(method -> method.getName().equals(methodName) && MemberUtils.isMatchingMethod(method, requestTypes)).collect(Collectors.toList());
++                .filter(method -> method.getName().equals(methodName) && MemberUtils.isMatchingMethod(method, actualTypes)).collect(Collectors.toList());
+         // Sort methods by signature to force deterministic result
+         matchingMethods.sort(METHOD_BY_SIGNATURE);
+         Method bestMatch = null;
+         for (final Method method : matchingMethods) {
+             // get accessible version of method
+             final Method accessibleMethod = getAccessibleMethod(method);
+-            if (accessibleMethod != null && (bestMatch == null || MemberUtils.compareMethodFit(accessibleMethod, bestMatch, requestTypes) < 0)) {
++            if (accessibleMethod != null && (bestMatch == null || MemberUtils.compareMethodFit(accessibleMethod, bestMatch, actualTypes) < 0)) {
+                 bestMatch = accessibleMethod;
+             }
+         }
+         if (bestMatch != null) {
+             MemberUtils.setAccessibleWorkaround(bestMatch);
+             if (bestMatch.isVarArgs()) {
+                 final Class<?>[] bestMatchParameterTypes = bestMatch.getParameterTypes();
+                 final Class<?> varArgType = bestMatchParameterTypes[bestMatchParameterTypes.length - 1].getComponentType();
+-                for (int paramIdx = bestMatchParameterTypes.length - 1; paramIdx < requestTypes.length; paramIdx++) {
+-                    final Class<?> parameterType = requestTypes[paramIdx];
++                for (int paramIdx = bestMatchParameterTypes.length - 1; paramIdx < actualTypes.length; paramIdx++) {
++                    final Class<?> parameterType = actualTypes[paramIdx];
+                     if (!ClassUtils.isAssignable(parameterType, varArgType, true)) {
+                         return null;
+                     }
+                 }
+             }
+         }
+@@ -411,54 +412,55 @@ public static Method getMatchingAccessibleMethod(final Class<?> cls, final Strin
+ 
+     /**
+      * Gets a method whether or not it's accessible. If no such method can be found, return {@code null}.
+      *
+      * @param cls            The class that will be subjected to the method search.
+      * @param methodName     The method that we wish to call.
+-     * @param parameterTypes Argument class types.
++     * @param parameterTypes Argument class types, {@code null} treated as empty.
+      * @throws IllegalStateException Thrown if there is no unique result.
+      * @throws NullPointerException  Thrown if the class is {@code null}.
+      * @return The method.
+      * @since 3.5
+      */
+     public static Method getMatchingMethod(final Class<?> cls, final String methodName, final Class<?>... parameterTypes) {
+         Objects.requireNonNull(cls, "cls");
+         Validate.notEmpty(methodName, "methodName");
++        final Class<?>[] actualTypes = ArrayUtils.nullToEmpty(parameterTypes);
+         final List<Method> methods = Stream.of(cls.getDeclaredMethods())
+                 .filter(method -> method.getName().equals(methodName))
+                 .collect(Collectors.toList());
+         final List<Class<?>> allSuperclassesAndInterfaces = getAllSuperclassesAndInterfaces(cls);
+         Collections.reverse(allSuperclassesAndInterfaces);
+         allSuperclassesAndInterfaces.stream()
+                 .map(Class::getDeclaredMethods)
+                 .flatMap(Stream::of)
+                 .filter(method -> method.getName().equals(methodName))
+                 .forEach(methods::add);
+         for (final Method method : methods) {
+-            if (Arrays.deepEquals(method.getParameterTypes(), parameterTypes)) {
++            if (Arrays.deepEquals(method.getParameterTypes(), actualTypes)) {
+                 return method;
+             }
+         }
+         final TreeMap<Integer, List<Method>> candidates = new TreeMap<>();
+         methods.stream()
+-            .filter(method -> ClassUtils.isAssignable(parameterTypes, method.getParameterTypes(), true))
++            .filter(method -> ClassUtils.isAssignable(actualTypes, method.getParameterTypes(), true))
+             .forEach(method -> {
+-                 final int distance = distance(parameterTypes, method.getParameterTypes());
++                 final int distance = distance(actualTypes, method.getParameterTypes());
+                  final List<Method> candidatesAtDistance = candidates.computeIfAbsent(distance, k -> new ArrayList<>());
+                  candidatesAtDistance.add(method);
+         });
+         if (candidates.isEmpty()) {
+             return null;
+         }
+         final List<Method> bestCandidates = candidates.values().iterator().next();
+         if (bestCandidates.size() == 1 || !Objects.equals(bestCandidates.get(0).getDeclaringClass(),
+                 bestCandidates.get(1).getDeclaringClass())) {
+             return bestCandidates.get(0);
+         }
+         throw new IllegalStateException(String.format("Found multiple candidates for method %s on class %s : %s",
+-                methodName + Stream.of(parameterTypes).map(String::valueOf).collect(Collectors.joining(",", "(", ")")), cls.getName(),
++                methodName + Stream.of(actualTypes).map(String::valueOf).collect(Collectors.joining(",", "(", ")")), cls.getName(),
+                 bestCandidates.stream().map(Method::toString).collect(Collectors.joining(",", "[", "]"))));
+     }
+ 
+     /**
+      * Gets a Method, or {@code null} if a checked {@link Class#getMethod(String, Class...) } exception is thrown.
+      *

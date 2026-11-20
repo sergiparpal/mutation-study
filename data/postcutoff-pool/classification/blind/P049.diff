@@ -1,0 +1,42 @@
+# P049: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +5/-5   lines, code only (comments and blank lines left out, by line prefix): +5/-5
+diff --git a/src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java b/src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java
+--- a/src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java
++++ b/src/main/java/org/apache/commons/lang3/text/ExtendedMessageFormat.java
+@@ -417,12 +417,15 @@ private int readArgumentIndex(final String pattern, final ParsePosition pos) {
+         final StringBuilder result = new StringBuilder();
+         boolean error = false;
+         for (; !error && pos.getIndex() < pattern.length(); next(pos)) {
+             char c = pattern.charAt(pos.getIndex());
+             if (Character.isWhitespace(c)) {
+                 seekNonWs(pattern, pos);
++                if (pos.getIndex() >= pattern.length()) {
++                    break;
++                }
+                 c = pattern.charAt(pos.getIndex());
+                 if (c != START_FMT && c != END_FE) {
+                     error = true;
+                     continue;
+                 }
+             }
+@@ -435,18 +438,15 @@ private int readArgumentIndex(final String pattern, final ParsePosition pos) {
+                 }
+             }
+             error = !Character.isDigit(c);
+             result.append(c);
+         }
+         if (error) {
+-            throw new IllegalArgumentException(
+-                    "Invalid format argument index at position " + start + ": "
+-                            + pattern.substring(start, pos.getIndex()));
++            throw new IllegalArgumentException("Invalid format argument index at position " + start + ": " + pattern.substring(start, pos.getIndex()));
+         }
+-        throw new IllegalArgumentException(
+-                "Unterminated format element at position " + start);
++        throw new IllegalArgumentException("Unterminated format element at position " + start);
+     }
+ 
+     /**
+      * Consume whitespace from the current parse position.
+      *
+      * @param pattern String to read

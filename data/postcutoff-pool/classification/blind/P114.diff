@@ -1,0 +1,44 @@
+# P114: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +6/-4   lines, code only (comments and blank lines left out, by line prefix): +2/-2
+diff --git a/src/main/java/org/apache/commons/csv/CSVFormat.java b/src/main/java/org/apache/commons/csv/CSVFormat.java
+--- a/src/main/java/org/apache/commons/csv/CSVFormat.java
++++ b/src/main/java/org/apache/commons/csv/CSVFormat.java
+@@ -2511,17 +2511,18 @@ private void printWithQuotes(final Object object, final CharSequence charSeq, fi
+                 // an empty line has no tokens.
+                 if (newRecord) {
+                     quote = true;
+                 }
+             } else {
+                 char c = charSeq.charAt(pos);
+-                if (c <= Constants.COMMENT || isCommentMarkerSet() && c == commentMarker.charValue()) {
++                if (c <= Constants.COMMENT || Character.isWhitespace(c) || isCommentMarkerSet() && c == commentMarker.charValue()) {
+                     // Some other chars at the start of a value caused the parser to fail, so for now
+                     // encapsulate if we start in anything less than '#'. We are being conservative
+                     // by including the default comment char and any configured comment marker too,
+-                    // which the parser would otherwise read back as a comment line.
++                    // which the parser would otherwise read back as a comment line. A leading Unicode
++                    // whitespace above ' ' is stripped by ignoreSurroundingSpaces on read, so quote it too.
+                     quote = true;
+                 } else {
+                     while (pos < len) {
+                         c = charSeq.charAt(pos);
+                         if (c == Constants.LF || c == Constants.CR || c == quoteChar || c == escapeChar || isDelimiter(c, charSeq, pos, delim, delimLength)) {
+                             quote = true;
+@@ -2531,14 +2532,15 @@ private void printWithQuotes(final Object object, final CharSequence charSeq, fi
+                     }
+ 
+                     if (!quote) {
+                         pos = len - 1;
+                         c = charSeq.charAt(pos);
+                         // Some other chars at the end caused the parser to fail, so for now
+-                        // encapsulate if we end in anything less than ' '
+-                        if (isTrimChar(c)) {
++                        // encapsulate if we end in anything less than ' '. A trailing Unicode whitespace
++                        // above ' ' is stripped by ignoreSurroundingSpaces on read, so quote it too.
++                        if (isTrimChar(c) || Character.isWhitespace(c)) {
+                             quote = true;
+                         } else if (endsWithDelimiterPrefix(charSeq, delim, delimLength)) {
+                             // A trailing partial multi-character delimiter would merge with the following delimiter on read.
+                             quote = true;
+                         }
+                     }
