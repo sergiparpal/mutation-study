@@ -1839,10 +1839,14 @@ types.
   `bin/subjects-campaign4.py` writes the records from `postcutoff-pool/` and
   the clones, and its `--check` compares them.
 - `campaign4/probe.txt`: `bin/agent-sandbox.py probe` with CLI 2.1.316.
+- `campaign4/pilot/`: the pilot. It is four runs with the model, on 20
+  November 2026, on the third campaign's two pilot subjects in both arms, with
+  their audit, detection and mutation measurements. It is not part of any
+  result.
 
-The protocol reports the checks without the model: a dry run of the generator
-and both measurements on the 115 subjects. Their output is not kept. No run
-with the model has been made.
+The protocol reports the checks without the model and the pilot. The checks
+were a dry run of the generator and both measurements on the 115 subjects, and
+their output is not kept. No run with the model has been made on the subjects.
 
 ## Infrastructure failures and exclusions
 
@@ -1908,5 +1912,6 @@ mistake for results:
 - [x] Post-cutoff pool counted without the model: 158 eligible Commons subjects, 151 under the strict reading, 131 and 124 of them new (`postcutoff-pool/`)
 - [x] Post-cutoff pool classified by fault type, blind: a corpus matched to the Defects4J sample can take at most 69 of the new subjects, omissions binding (`postcutoff-pool/fault-types.tsv`)
 - [x] Fourth campaign drafted: protocol, scripts and checks without the model on its 115 unmatched post-cutoff subjects (`campaign4/`)
-- [ ] Fourth campaign: pilot, protocol fixed, then its 230 runs
+- [x] Fourth campaign piloted: four runs on the third campaign's two pilot subjects, audited and measured (`campaign4/pilot/`)
+- [ ] Fourth campaign: protocol fixed, then its 230 runs
 - [ ] A matched post-cutoff corpus large enough to test the effect size

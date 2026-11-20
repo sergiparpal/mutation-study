@@ -1,0 +1,5 @@
+subject,arm,verdict,note,methods_run_on_fixed,keys_left_out,failing_on_buggy,failing_keys,seconds_fixed,seconds_buggy
+commons-lang-6c4269eb8,m4,Pass,,64,0,0,,1,1
+commons-lang-6c4269eb8,s4,Pass,,57,1,0,,1,1
+commons-csv-ab3d7236,m4,Pass,,38,0,0,,0,0
+commons-csv-ab3d7236,s4,Pass,,32,6,0,,0,0

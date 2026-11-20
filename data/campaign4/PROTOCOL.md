@@ -1,10 +1,10 @@
 # Fourth campaign: protocol
 
-**Draft of 20 November 2026, not fixed.** It is fixed by the merge of the pull
-request that adds it, with its scripts as they are in that commit, after the
-checks without the model and the pilot below. From then on, anything done
-differently is a deviation and is listed at the end, with its date and reason,
-before the step it affects. Still missing before it can be fixed: the pilot.
+**Draft of 20 November 2026, not fixed.** The checks without the model and the
+pilot below have been made. The protocol is fixed by the merge of the pull
+request that adds it, with its scripts as they are in that commit. From then
+on, anything done differently is a deviation and is listed at the end, with its
+date and reason, before the step it affects.
 
 ## Why a fourth campaign
 
@@ -398,12 +398,32 @@ was fixed:
 
 ## Pilot
 
-To be made before this protocol is fixed, with the user's agreement: the third
-campaign's two pilot subjects, `commons-lang-6c4269eb8` (`WordUtils`) and
-`commons-csv-ab3d7236` (`CSVPrinter`), each in both arms, with this campaign's
-generator and their records from the third campaign
-(`../campaign3/pilot/subjects/`). Four runs; the third campaign's cost $1.61
-at list prices. Their record goes in `pilot/` and is not part of any result.
+Four runs with the model, on 20 November 2026, with the user's agreement: the
+third campaign's two pilot subjects, `commons-lang-6c4269eb8` (`WordUtils`) and
+`commons-csv-ab3d7236` (`CSVPrinter`), each in both arms. The generator was
+this campaign's, at the commit that adds this protocol (`8a2e729`). The
+subjects' records were the third campaign's (`../campaign3/pilot/subjects/`).
+This campaign's scripts then audited the runs and measured detection and
+mutation. The record is in `pilot/`, with the audit's output in
+`pilot/audit.txt`. It is not part of any result.
+
+- **Runs.** All four ended normally on `claude-sonnet-5`, CLI 2.1.316. They
+  took 15 minutes and cost $2.07 at list prices. In `m4` they took 13 turns
+  (`commons-lang`) and 20 (`commons-csv`); in `s4`, 7 and 13.
+- **Commands.** Each agent wrote its test class and nothing else. The
+  transcripts show no network or version-control command. The harness refused
+  nothing and the sandbox denied nothing. The first request of the first run
+  was refused once for authentication; the CLI retried it and the run went on.
+- **Audit.** It flagged two commands of one `s4` run (`commons-csv-ab3d7236`).
+  The agent called `javac` itself, writing the classes to `/tmp/out2`, and then
+  removed that directory. Inside the sandbox `/tmp` is private to each command,
+  so neither command reached outside the working copy. The `javac` call is one
+  that step 2 lists and the primary analysis keeps.
+- **Temporary directory.** No command named the run's own temporary directory.
+  At the end it held only the CLI's empty directories (`.tmp.tar.xz`).
+- **Measurement.** Acceptance left out 0 of 102 tests in `m4` and 7 of 96 in
+  `s4`. All four suites are `Pass`, as in the third campaign's pilot; the
+  verdicts check the pipeline and nothing else. PIT gave each suite a figure.
 
 The third campaign chose its pilot on classes no subject had under test. Here
 two subjects do: `commons-lang-184c9e832` (`WordUtils`) and

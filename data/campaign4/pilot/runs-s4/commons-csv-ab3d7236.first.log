@@ -1,0 +1,43 @@
+1) org.apache.commons.csv.CSVPrinterAgentTest#printRecordsStreamOfSimpleValuesWrittenAsSingleRecord()
+org.opentest4j.AssertionFailedError: expected: <p,q
+> but was: <p
+q
+>
+    at org.apache.commons.csv.CSVPrinterAgentTest.printRecordsStreamOfSimpleValuesWrittenAsSingleRecord(CSVPrinterAgentTest.java:456)
+
+2) org.apache.commons.csv.CSVPrinterAgentTest#printRecordsSimpleIterableWrittenAsSingleRecord()
+org.opentest4j.AssertionFailedError: expected: <x,y,z
+> but was: <x
+y
+z
+>
+    at org.apache.commons.csv.CSVPrinterAgentTest.printRecordsSimpleIterableWrittenAsSingleRecord(CSVPrinterAgentTest.java:435)
+
+3) org.apache.commons.csv.CSVPrinterAgentTest#printRecordsNullIterableThrowsNpe()
+org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+    at org.apache.commons.csv.CSVPrinterAgentTest.printRecordsNullIterableThrowsNpe(CSVPrinterAgentTest.java:477)
+
+4) org.apache.commons.csv.CSVPrinterAgentTest#printRecordsResultSetWithHeaderPrintsHeaderThenRowsAndCountsOnlyRows()
+org.opentest4j.AssertionFailedError: expected: <H1,H2
+r1c1,r1c2
+r2c1,r2c2
+> but was: <r1c1,r1c2
+r2c1,r2c2
+>
+    at org.apache.commons.csv.CSVPrinterAgentTest.printRecordsResultSetWithHeaderPrintsHeaderThenRowsAndCountsOnlyRows(CSVPrinterAgentTest.java:507)
+
+5) org.apache.commons.csv.CSVPrinterAgentTest#printRecordNullIterableThrowsNpe()
+org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+    at org.apache.commons.csv.CSVPrinterAgentTest.printRecordNullIterableThrowsNpe(CSVPrinterAgentTest.java:399)
+
+6) org.apache.commons.csv.CSVPrinterAgentTest#printRecordsSimpleObjectArrayWrittenAsSingleRecord()
+org.opentest4j.AssertionFailedError: expected: <x,y,z
+> but was: <x
+y
+z
+>
+    at org.apache.commons.csv.CSVPrinterAgentTest.printRecordsSimpleObjectArrayWrittenAsSingleRecord(CSVPrinterAgentTest.java:415)
+
+Tests run: 38, Failures: 6, Aborted: 0, Skipped: 0
+Test methods: 38, failed: 6
+FAILURES!!!
