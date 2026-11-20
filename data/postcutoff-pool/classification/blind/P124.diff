@@ -1,0 +1,39 @@
+# P124: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +6/-2   lines, code only (comments and blank lines left out, by line prefix): +4/-2
+diff --git a/src/main/java/org/apache/commons/lang3/RandomUtils.java b/src/main/java/org/apache/commons/lang3/RandomUtils.java
+--- a/src/main/java/org/apache/commons/lang3/RandomUtils.java
++++ b/src/main/java/org/apache/commons/lang3/RandomUtils.java
+@@ -342,13 +342,15 @@ public double randomDouble() {
+     public double randomDouble(final double startInclusive, final double endExclusive) {
+         Validate.isTrue(endExclusive >= startInclusive, "Start value must be smaller or equal to end value.");
+         Validate.isTrue(startInclusive >= 0, "Both range values must be non-negative.");
+         if (startInclusive == endExclusive) {
+             return startInclusive;
+         }
+-        return startInclusive + (endExclusive - startInclusive) * random().nextDouble();
++        final double result = startInclusive + (endExclusive - startInclusive) * random().nextDouble();
++        // Rounding in the scaling above can reach endExclusive; clamp to the greatest value below endExclusive.
++        return result < endExclusive ? result : Math.nextDown(endExclusive);
+     }
+ 
+     /**
+      * Generates a random float between 0 (inclusive) and Float.MAX_VALUE (exclusive).
+      *
+      * @return The random float.
+@@ -371,13 +373,15 @@ public float randomFloat() {
+     public float randomFloat(final float startInclusive, final float endExclusive) {
+         Validate.isTrue(endExclusive >= startInclusive, "Start value must be smaller or equal to end value.");
+         Validate.isTrue(startInclusive >= 0, "Both range values must be non-negative.");
+         if (startInclusive == endExclusive) {
+             return startInclusive;
+         }
+-        return startInclusive + (endExclusive - startInclusive) * random().nextFloat();
++        final float result = startInclusive + (endExclusive - startInclusive) * random().nextFloat();
++        // Rounding in the scaling above can reach endExclusive; clamp to the greatest value below endExclusive.
++        return result < endExclusive ? result : Math.nextDown(endExclusive);
+     }
+ 
+     /**
+      * Generates a random int between 0 (inclusive) and {@link Integer#MAX_VALUE} ({@value Integer#MAX_VALUE} exclusive).
+      *
+      * @return The random integer.

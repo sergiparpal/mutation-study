@@ -1,0 +1,31 @@
+# P023: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +7/-2   lines, code only (comments and blank lines left out, by line prefix): +6/-2
+diff --git a/src/main/java/org/apache/commons/cli/Converter.java b/src/main/java/org/apache/commons/cli/Converter.java
+--- a/src/main/java/org/apache/commons/cli/Converter.java
++++ b/src/main/java/org/apache/commons/cli/Converter.java
+@@ -76,18 +76,23 @@ public interface Converter<T, E extends Exception> {
+ 
+     /**
+      * Converts a String to a {@link Date} using the format string Form "EEE MMM dd HH:mm:ss zzz yyyy".
+      */
+     Converter<Date, java.text.ParseException> DATE = s -> {
+         final String pattern = "EEE MMM dd HH:mm:ss zzz yyyy";
++        final SimpleDateFormat format = new SimpleDateFormat(pattern);
++        // reject out-of-range fields (for example "Feb 30") instead of silently rolling them over.
++        format.setLenient(false);
+         try {
+-            return new SimpleDateFormat(pattern).parse(s);
++            return format.parse(s);
+         } catch (final java.text.ParseException e) {
+             // Date.toString() always emits English month/day names, so fall back to Locale.ENGLISH
+             // when the default locale rejects the documented format.
+-            return new SimpleDateFormat(pattern, Locale.ENGLISH).parse(s);
++            final SimpleDateFormat englishFormat = new SimpleDateFormat(pattern, Locale.ENGLISH);
++            englishFormat.setLenient(false);
++            return englishFormat.parse(s);
+         }
+     };
+ 
+     /**
+      * Applies the conversion function to the String argument.
+      *

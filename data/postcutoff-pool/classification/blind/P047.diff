@@ -1,0 +1,36 @@
+# P047: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +9/-2   lines, code only (comments and blank lines left out, by line prefix): +7/-2
+diff --git a/src/main/java/org/apache/commons/csv/Lexer.java b/src/main/java/org/apache/commons/csv/Lexer.java
+--- a/src/main/java/org/apache/commons/csv/Lexer.java
++++ b/src/main/java/org/apache/commons/csv/Lexer.java
+@@ -274,21 +274,28 @@ Token nextToken(final Token token) throws IOException {
+             token.content.append(comment);
+             token.type = Token.Type.COMMENT;
+             return token;
+         }
+         // Important: make sure a new char gets consumed in each iteration
+         while (token.type == Token.Type.INVALID) {
++            // isDelimiter consumes the trailing characters of a multi-character delimiter as a side effect, so it must
++            // only be evaluated once per character. Remember a match found while skipping whitespace below.
++            boolean delimiter = false;
+             // ignore whitespaces at beginning of a token
+             if (ignoreSurroundingSpaces) {
+-                while (Character.isWhitespace((char) c) && !isDelimiter(c) && !eol) {
++                while (Character.isWhitespace((char) c) && !eol) {
++                    if (isDelimiter(c)) {
++                        delimiter = true;
++                        break;
++                    }
+                     c = reader.read();
+                     eol = readEndOfLine(c);
+                 }
+             }
+             // ok, start of token reached: encapsulated, or token
+-            if (isDelimiter(c)) {
++            if (delimiter || isDelimiter(c)) {
+                 // empty token return TOKEN("")
+                 token.type = Token.Type.TOKEN;
+             } else if (eol) {
+                 // empty token return EORECORD("")
+                 // noop: token.content.append("");
+                 token.type = Token.Type.EORECORD;

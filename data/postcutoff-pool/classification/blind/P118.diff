@@ -1,0 +1,20 @@
+# P118: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/LocaleUtils.java b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+--- a/src/main/java/org/apache/commons/lang3/LocaleUtils.java
++++ b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+@@ -335,13 +335,13 @@ private static Locale parseLocale(final String str) {
+         final int limit = 3;
+         final char separator = str.indexOf(UNDERSCORE) != -1 ? UNDERSCORE : DASH;
+         final String[] segments = str.split(String.valueOf(separator), 3);
+         final String language = segments[0];
+         if (segments.length == 2) {
+             final String country = segments[1];
+-            if (isISO639LanguageCode(language) && isISO3166CountryCode(country) || isNumericAreaCode(country)) {
++            if (isISO639LanguageCode(language) && (isISO3166CountryCode(country) || isNumericAreaCode(country))) {
+                 return new Locale(language, country);
+             }
+         } else if (segments.length == limit) {
+             final String country = segments[1];
+             final String variant = segments[2];
+             // Special case 1: https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/Locale.html#special_cases_constructor

@@ -1,0 +1,49 @@
+# P024: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +16/-2   lines, code only (comments and blank lines left out, by line prefix): +9/-2
+diff --git a/src/main/java/org/apache/commons/csv/CSVPrinter.java b/src/main/java/org/apache/commons/csv/CSVPrinter.java
+--- a/src/main/java/org/apache/commons/csv/CSVPrinter.java
++++ b/src/main/java/org/apache/commons/csv/CSVPrinter.java
+@@ -243,27 +243,41 @@ public void printComment(final String comment) throws IOException {
+                 case CR:
+                     if (i + 1 < comment.length() && comment.charAt(i + 1) == LF) {
+                         i++;
+                     }
+                     // falls-through: break intentionally excluded.
+                 case LF:
+-                    println();
++                    printCommentSeparator();
+                     appendable.append(format.getCommentMarker().charValue()); // Explicit unboxing is intentional
+                     appendable.append(SP);
+                     break;
+                 default:
+                     appendable.append(c);
+                     break;
+                 }
+             }
+-            println();
++            printCommentSeparator();
+         } finally {
+             lock.unlock();
+         }
+     }
+ 
++    /**
++     * Ends a comment line with the record separator only. A comment is not a record, so the trailing delimiter that
++     * {@link #println()} writes must not follow it.
++     *
++     * @throws IOException If an I/O error occurs.
++     */
++    private void printCommentSeparator() throws IOException {
++        final String recordSeparator = format.getRecordSeparator();
++        if (recordSeparator != null) {
++            appendable.append(recordSeparator);
++        }
++        newRecord = true;
++    }
++
+     /**
+      * Prints headers for a result set based on its metadata.
+      *
+      * @param resultSet The ResultSet to query for metadata.
+      * @throws IOException If an I/O error occurs.
+      * @throws SQLException If a database access error occurs or this method is called on a closed result set.

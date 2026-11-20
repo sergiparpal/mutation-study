@@ -1,0 +1,48 @@
+# P147: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +17/-0   lines, code only (comments and blank lines left out, by line prefix): +10/-0
+diff --git a/src/main/java/org/apache/commons/lang3/AnnotationUtils.java b/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
+--- a/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
++++ b/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
+@@ -114,12 +114,26 @@ private static boolean annotationArrayMemberEquals(final Annotation[] a1, final
+                 return false;
+             }
+         }
+         return true;
+     }
+ 
++    /**
++     * Helper method for generating a hash code for an array of annotations.
++     *
++     * @param annotations The array
++     * @return A hash code for the specified array
++     */
++    private static int annotationArrayMemberHash(final Annotation[] annotations) {
++        int result = 1;
++        for (final Annotation annotation : annotations) {
++            result = 31 * result + (annotation == null ? 0 : hashCode(annotation));
++        }
++        return result;
++    }
++
+     /**
+      * Helper method for comparing two objects of an array type.
+      *
+      * @param componentType The component type of the array
+      * @param o1 The first object
+      * @param o2 The second object
+@@ -161,12 +175,15 @@ private static boolean arrayMemberEquals(final Class<?> componentType, final Obj
+      *
+      * @param componentType The component type of the array
+      * @param o The array
+      * @return A hash code for the specified array
+      */
+     private static int arrayMemberHash(final Class<?> componentType, final Object o) {
++        if (componentType.isAnnotation()) {
++            return annotationArrayMemberHash((Annotation[]) o);
++        }
+         if (componentType.equals(Byte.TYPE)) {
+             return Arrays.hashCode((byte[]) o);
+         }
+         if (componentType.equals(Short.TYPE)) {
+             return Arrays.hashCode((short[]) o);
+         }

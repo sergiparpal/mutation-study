@@ -1,0 +1,66 @@
+# P134: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +7/-8   lines, code only (comments and blank lines left out, by line prefix): +7/-8
+diff --git a/src/main/java/org/apache/commons/lang3/ObjectUtils.java b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+--- a/src/main/java/org/apache/commons/lang3/ObjectUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+@@ -18,21 +18,20 @@
+ 
+ import java.io.IOException;
+ import java.io.Serializable;
+ import java.lang.reflect.Array;
+ import java.time.Duration;
+ import java.util.ArrayList;
++import java.util.Arrays;
+ import java.util.Collection;
+-import java.util.Collections;
+ import java.util.Comparator;
+ import java.util.HashMap;
+ import java.util.Hashtable;
+ import java.util.Map;
+ import java.util.Objects;
+ import java.util.Optional;
+-import java.util.TreeSet;
+ import java.util.function.Consumer;
+ import java.util.function.Supplier;
+ import java.util.stream.Stream;
+ 
+ import org.apache.commons.lang3.exception.CloneFailedException;
+ import org.apache.commons.lang3.function.Consumers;
+@@ -1055,15 +1054,15 @@ public static <T extends Comparable<? super T>> T max(final T... values) {
+      */
+     @SafeVarargs
+     public static <T> T median(final Comparator<T> comparator, final T... items) {
+         Validate.notEmpty(items, "null/empty items");
+         Validate.noNullElements(items);
+         Objects.requireNonNull(comparator, "comparator");
+-        final TreeSet<T> treeSet = new TreeSet<>(comparator);
+-        Collections.addAll(treeSet, items);
+-        return (T) treeSet.toArray()[(treeSet.size() - 1) / 2];
++        final T[] sorted = items.clone();
++        Arrays.sort(sorted, comparator);
++        return sorted[(sorted.length - 1) / 2];
+     }
+ 
+     /**
+      * Finds the "best guess" middle value among comparables. If there is an even number of total values, the lower of the two middle values will be returned.
+      *
+      * @param <T>   type of values processed by this method.
+@@ -1074,15 +1073,15 @@ public static <T> T median(final Comparator<T> comparator, final T... items) {
+      * @since 3.0.1
+      */
+     @SafeVarargs
+     public static <T extends Comparable<? super T>> T median(final T... items) {
+         Validate.notEmpty(items);
+         Validate.noNullElements(items);
+-        final TreeSet<T> sort = new TreeSet<>();
+-        Collections.addAll(sort, items);
+-        return (T) sort.toArray()[(sort.size() - 1) / 2];
++        final T[] sorted = items.clone();
++        Arrays.sort(sorted);
++        return sorted[(sorted.length - 1) / 2];
+     }
+ 
+     /**
+      * Null safe comparison of Comparables.
+      * <p>
+      * TODO Move to ComparableUtils.

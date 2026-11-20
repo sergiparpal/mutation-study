@@ -1,0 +1,20 @@
+# P004: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java b/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java
+--- a/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java
+@@ -214,13 +214,13 @@ public static Field getField(final Class<?> cls, final String fieldName, final b
+         // incase there is a public supersuperclass field hidden by a private/package
+         // superclass field.
+         Field match = null;
+         for (final Class<?> class1 : ClassUtils.getAllInterfaces(cls)) {
+             try {
+                 final Field test = class1.getField(fieldName);
+-                Validate.isTrue(match == null,
++                Validate.isTrue(match == null || match.equals(test),
+                         "Reference to field %s is ambiguous relative to %s; a matching field exists on two or more implemented interfaces.", fieldName, cls);
+                 match = test;
+             } catch (final NoSuchFieldException ignored) {
+                 // ignore
+             }
+         }

@@ -1,0 +1,35 @@
+# P006: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +2/-2   lines, code only (comments and blank lines left out, by line prefix): +2/-2
+diff --git a/src/main/java/org/apache/commons/lang3/RandomStringUtils.java b/src/main/java/org/apache/commons/lang3/RandomStringUtils.java
+--- a/src/main/java/org/apache/commons/lang3/RandomStringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/RandomStringUtils.java
+@@ -966,13 +966,13 @@ public String nextAscii(final int minLengthInclusive, final int maxLengthExclusi
+      * @param count The length of random string to create.
+      * @return The random string.
+      * @throws IllegalArgumentException Thrown if {@code count} &lt; 0.
+      * @since 3.5
+      */
+     public String nextGraph(final int count) {
+-        return next(count, 33, 126, false, false);
++        return next(count, 33, 127, false, false);
+     }
+ 
+     /**
+      * Creates a random string whose length is between the inclusive minimum and the exclusive maximum.
+      *
+      * <p>
+@@ -1031,13 +1031,13 @@ public String nextNumeric(final int minLengthInclusive, final int maxLengthExclu
+      * @return The random string.
+      * @throws IllegalArgumentException Thrown if {@code count} &lt; 0.
+      * @since 3.5
+      * @since 3.16.0
+      */
+     public String nextPrint(final int count) {
+-        return next(count, 32, 126, false, false);
++        return next(count, 32, 127, false, false);
+     }
+ 
+     /**
+      * Creates a random string whose length is between the inclusive minimum and the exclusive maximum.
+      *
+      * <p>

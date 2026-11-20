@@ -1,0 +1,37 @@
+# P071: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +18/-1   lines, code only (comments and blank lines left out, by line prefix): +17/-1
+diff --git a/src/main/java/org/apache/commons/lang3/math/Fraction.java b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+--- a/src/main/java/org/apache/commons/lang3/math/Fraction.java
++++ b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+@@ -629,13 +629,30 @@ public int compareTo(final Fraction other) {
+      */
+     public Fraction divideBy(final Fraction fraction) {
+         Objects.requireNonNull(fraction, "fraction");
+         if (fraction.numerator == 0) {
+             throw new ArithmeticException("The fraction to divide by must not be zero");
+         }
+-        return multiplyBy(fraction.invert());
++        if (numerator == 0) {
++            return ZERO;
++        }
++        // Products of int values fit in a long. Reduce before narrowing to avoid overflow in an intermediate reciprocal.
++        long resultNumerator = (long) numerator * fraction.denominator;
++        long resultDenominator = (long) denominator * fraction.numerator;
++        if (resultDenominator < 0) {
++            resultNumerator = -resultNumerator;
++            resultDenominator = -resultDenominator;
++        }
++        long gcd = Math.abs(resultNumerator);
++        long remainder = resultDenominator;
++        while (remainder != 0) {
++            final long next = gcd % remainder;
++            gcd = remainder;
++            remainder = next;
++        }
++        return new Fraction(Math.toIntExact(resultNumerator / gcd), Math.toIntExact(resultDenominator / gcd));
+     }
+ 
+     /**
+      * Gets the fraction as a {@code double}. This calculates the fraction
+      * as the numerator divided by denominator.
+      *

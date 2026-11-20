@@ -1,0 +1,74 @@
+# P105: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 3   lines, all: +11/-1   lines, code only (comments and blank lines left out, by line prefix): +5/-1
+diff --git a/src/main/java/org/apache/commons/csv/CSVParser.java b/src/main/java/org/apache/commons/csv/CSVParser.java
+--- a/src/main/java/org/apache/commons/csv/CSVParser.java
++++ b/src/main/java/org/apache/commons/csv/CSVParser.java
+@@ -816,14 +816,17 @@ public String getTrailerComment() {
+      */
+     private String handleNull(final String input) {
+         final boolean isQuoted = reusableToken.isQuoted;
+         final String nullString = format.getNullString();
+         final boolean strictQuoteMode = isStrictQuoteMode();
+         if (input.equals(nullString)) {
++            // A token that needed an escape translation cannot be the null marker: printing null emits the null
++            // string without escaping it (it may be quoted, but never escaped), so an escaped "\N" for nullString
++            // "\N" can only have come from a field whose value really is "\N".
+             // nullString = NULL(String), distinguish between "NULL" and NULL in ALL_NON_NULL or NON_NUMERIC quote mode
+-            return strictQuoteMode && isQuoted ? input : null;
++            return reusableToken.isEscaped || strictQuoteMode && isQuoted ? input : null;
+         }
+         // don't set nullString, distinguish between "" and ,, (absent values) in All_NON_NULL or NON_NUMERIC quote mode
+         return strictQuoteMode && nullString == null && input.isEmpty() && !isQuoted ? null : input;
+     }
+ 
+     /**
+diff --git a/src/main/java/org/apache/commons/csv/Lexer.java b/src/main/java/org/apache/commons/csv/Lexer.java
+--- a/src/main/java/org/apache/commons/csv/Lexer.java
++++ b/src/main/java/org/apache/commons/csv/Lexer.java
+@@ -73,18 +73,21 @@ final class Lexer implements Closeable {
+      * @throws IOException  on stream access error.
+      * @throws CSVException Thrown on invalid input.
+      */
+     private void appendNextEscapedCharacterToToken(final Token token) throws IOException {
+         if (isEscapeDelimiter()) {
+             token.content.append(delimiter);
++            token.isEscaped = true;
+         } else {
+             final int unescaped = readEscape();
+             if (unescaped == EOF) { // unexpected char after escape
++                // The escape character is kept verbatim, so nothing was translated.
+                 token.content.append((char) escape).append((char) reader.getLastChar());
+             } else {
+                 token.content.append((char) unescaped);
++                token.isEscaped = true;
+             }
+         }
+     }
+ 
+     /**
+      * Closes resources.
+diff --git a/src/main/java/org/apache/commons/csv/Token.java b/src/main/java/org/apache/commons/csv/Token.java
+--- a/src/main/java/org/apache/commons/csv/Token.java
++++ b/src/main/java/org/apache/commons/csv/Token.java
+@@ -58,17 +58,21 @@ enum Type {
+ 
+     /** Token ready flag: indicates a valid token with content (ready for the parser). */
+     boolean isReady;
+ 
+     boolean isQuoted;
+ 
++    /** True when an escape sequence in the input was translated while building {@link #content}. */
++    boolean isEscaped;
++
+     void reset() {
+         content.setLength(0);
+         type = INVALID;
+         isReady = false;
+         isQuoted = false;
++        isEscaped = false;
+     }
+ 
+     /**
+      * Converts the token state to a string to ease debugging.
+      *
+      * @return A string helpful for debugging.

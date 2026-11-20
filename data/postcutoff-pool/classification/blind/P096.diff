@@ -1,0 +1,36 @@
+# P096: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +5/-3   lines, code only (comments and blank lines left out, by line prefix): +1/-0
+diff --git a/src/main/java/org/apache/commons/lang3/ThreadUtils.java b/src/main/java/org/apache/commons/lang3/ThreadUtils.java
+--- a/src/main/java/org/apache/commons/lang3/ThreadUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ThreadUtils.java
+@@ -504,25 +504,27 @@ private static Predicate<ThreadGroup> predicateThreadGroup(final String threadGr
+      */
+     public static void sleep(final Duration duration) throws InterruptedException {
+         DurationUtils.accept(Thread::sleep, duration);
+     }
+ 
+     /**
+-     * Sleeps for the given duration while ignoring {@link InterruptedException}.
++     * Sleeps for the given duration without throwing {@link InterruptedException}.
+      * <p>
+-     * The sleep duration may be shorter than duration if we catch a {@link InterruptedException}.
++     * The sleep duration may be shorter than the given duration if we catch a {@link InterruptedException}.
+      * </p>
+      *
+      * @param duration the length of time to sleep.
++     * @see #sleep(Duration)
++     * @see Thread#interrupted()
+      * @since 3.13.0
+      */
+     public static void sleepQuietly(final Duration duration) {
+         try {
+             sleep(duration);
+         } catch (final InterruptedException ignore) {
+-            // Ignore & be quiet.
++            Thread.currentThread().interrupt();
+         }
+     }
+ 
+     /**
+      * ThreadUtils instances should NOT be constructed in standard programming. Instead, the class should be used as {@code ThreadUtils.getAllThreads()}
+      * <p>

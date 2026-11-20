@@ -1,0 +1,22 @@
+# P080: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +3/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java b/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
+--- a/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
+@@ -859,13 +859,15 @@ private static final class WeekYear implements NumberRule {
+         WeekYear(final NumberRule rule) {
+             this.rule = rule;
+         }
+ 
+         @Override
+         public void appendTo(final Appendable buffer, final Calendar calendar) throws IOException {
+-            rule.appendTo(buffer, calendar.getWeekYear());
++            // Some Calendar implementations (JapaneseImperialCalendar) do not support week-dates.
++            // Fall back to Calendar.YEAR in that case.
++            rule.appendTo(buffer, calendar.isWeekDateSupported() ? calendar.getWeekYear() : calendar.get(Calendar.YEAR));
+         }
+ 
+         @Override
+         public void appendTo(final Appendable buffer, final int value) throws IOException {
+             rule.appendTo(buffer, value);
+         }

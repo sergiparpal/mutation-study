@@ -1,0 +1,20 @@
+# P051: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -2808,13 +2808,13 @@ public static int indexOfAny(final CharSequence cs, final int csStart, final cha
+             return INDEX_NOT_FOUND;
+         }
+         final int csLen = cs.length();
+         final int csLast = csLen - 1;
+         final int searchLen = searchChars.length;
+         final int searchLast = searchLen - 1;
+-        for (int i = csStart; i < csLen; i++) {
++        for (int i = Math.max(csStart, 0); i < csLen; i++) {
+             final char ch = cs.charAt(i);
+             for (int j = 0; j < searchLen; j++) {
+                 if (searchChars[j] == ch) {
+                     // ch is a supplementary character
+                     if (i >= csLast || j >= searchLast || !Character.isHighSurrogate(ch) || searchChars[j + 1] == cs.charAt(i + 1)) {
+                         return i;

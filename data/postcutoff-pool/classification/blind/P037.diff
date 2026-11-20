@@ -1,0 +1,25 @@
+# P037: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +2/-3   lines, code only (comments and blank lines left out, by line prefix): +2/-3
+diff --git a/src/main/java/org/apache/commons/lang3/Conversion.java b/src/main/java/org/apache/commons/lang3/Conversion.java
+--- a/src/main/java/org/apache/commons/lang3/Conversion.java
++++ b/src/main/java/org/apache/commons/lang3/Conversion.java
+@@ -724,17 +724,16 @@ public static boolean[] hexDigitToBinary(final char hexChar) {
+      *
+      * @param hexChar The hexadecimal digit to convert.
+      * @return An int equals to {@code hexDigit}.
+      * @throws IllegalArgumentException if {@code hexDigit} is not a hexadecimal digit.
+      */
+     public static int hexDigitToInt(final char hexChar) {
+-        final int digit = Character.digit(hexChar, 16);
+-        if (digit < 0) {
++        if (!CharUtils.isHex(hexChar)) {
+             throw new IllegalArgumentException("Cannot convert '" + hexChar + "' to a hexadecimal digit");
+         }
+-        return digit;
++        return Character.digit(hexChar, 16);
+     }
+ 
+     /**
+      * Converts a hexadecimal string into a byte using the default (little-endian, LSB0) byte and bit ordering.
+      *
+      * @param src     The hexadecimal string to convert.

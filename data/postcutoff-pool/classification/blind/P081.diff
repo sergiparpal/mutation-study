@@ -1,0 +1,61 @@
+# P081: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-4   lines, code only (comments and blank lines left out, by line prefix): +4/-4
+diff --git a/src/main/java/org/apache/commons/lang3/LocaleUtils.java b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+--- a/src/main/java/org/apache/commons/lang3/LocaleUtils.java
++++ b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+@@ -211,23 +211,23 @@ public static boolean isAvailableLocale(final Locale locale) {
+      * Tests whether the given String is a <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166</a> alpha-2 country code.
+      *
+      * @param str The String to check.
+      * @return true if the given String is a <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166</a> compliant country code.
+      */
+     private static boolean isISO3166CountryCode(final String str) {
+-        return StringUtils.isAllUpperCase(str) && isAlpha2Len(str);
++        return isAlpha2Len(str) && str.chars().allMatch(ch -> CharUtils.isAsciiAlphaUpper((char) ch));
+     }
+ 
+     /**
+      * Tests whether the given String is a <a href="https://www.iso.org/iso-639-language-code">ISO 639</a> compliant language code.
+      *
+      * @param str The String to check.
+      * @return true, if the given String is a <a href="https://www.iso.org/iso-639-language-code">ISO 639</a> compliant language code.
+      */
+     private static boolean isISO639LanguageCode(final String str) {
+-        return StringUtils.isAllLowerCase(str) && (isAlpha2Len(str) || isAlpha3Len(str));
++        return (isAlpha2Len(str) || isAlpha3Len(str)) && str.chars().allMatch(ch -> CharUtils.isAsciiAlphaLower((char) ch));
+     }
+ 
+     /**
+      * Tests whether a Locale's language is undetermined.
+      * <p>
+      * A Locale's language tag is undetermined if it's value is {@code "und"}. If a language is empty, or not well-formed (for example, "a" or "e2"), it will be
+@@ -247,13 +247,13 @@ public static boolean isLanguageUndetermined(final Locale locale) {
+      * Tests whether the given String is a UN M.49 numeric area code.
+      *
+      * @param str The String to check.
+      * @return true if the given String is a UN M.49 numeric area code.
+      */
+     private static boolean isNumericAreaCode(final String str) {
+-        return StringUtils.isNumeric(str) && isAlpha3Len(str);
++        return isAlpha3Len(str) && str.chars().allMatch(ch -> CharUtils.isAsciiNumeric((char) ch));
+     }
+ 
+     /**
+      * Obtains the list of languages supported for a given country.
+      *
+      * <p>
+@@ -443,13 +443,13 @@ public static Locale toLocale(final String str) {
+         if (ch0 == UNDERSCORE || ch0 == DASH) {
+             if (len < 3) {
+                 throw new IllegalArgumentException("Invalid locale format: " + str);
+             }
+             final char ch1 = str.charAt(1);
+             final char ch2 = str.charAt(2);
+-            if (!Character.isUpperCase(ch1) || !Character.isUpperCase(ch2)) {
++            if (!CharUtils.isAsciiAlphaUpper(ch1) || !CharUtils.isAsciiAlphaUpper(ch2)) {
+                 throw new IllegalArgumentException("Invalid locale format: " + str);
+             }
+             if (len == 3) {
+                 return new Locale(StringUtils.EMPTY, str.substring(1, 3));
+             }
+             if (len < 5 || str.charAt(3) != ch0) {

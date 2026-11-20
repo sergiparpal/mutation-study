@@ -1,0 +1,140 @@
+# P059: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +9/-9   lines, code only (comments and blank lines left out, by line prefix): +9/-9
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -6718,13 +6718,13 @@ public static void reverse(final boolean[] array) {
+      */
+     public static void reverse(final boolean[] array, final int startIndexInclusive, final int endIndexExclusive) {
+         if (array == null) {
+             return;
+         }
+         int i = Math.max(startIndexInclusive, 0);
+-        int j = Math.min(array.length, endIndexExclusive) - 1;
++        int j = max0(Math.min(array.length, endIndexExclusive)) - 1;
+         boolean tmp;
+         while (j > i) {
+             tmp = array[j];
+             array[j] = array[i];
+             array[i] = tmp;
+             j--;
+@@ -6760,13 +6760,13 @@ public static void reverse(final byte[] array) {
+      */
+     public static void reverse(final byte[] array, final int startIndexInclusive, final int endIndexExclusive) {
+         if (array == null) {
+             return;
+         }
+         int i = Math.max(startIndexInclusive, 0);
+-        int j = Math.min(array.length, endIndexExclusive) - 1;
++        int j = max0(Math.min(array.length, endIndexExclusive)) - 1;
+         byte tmp;
+         while (j > i) {
+             tmp = array[j];
+             array[j] = array[i];
+             array[i] = tmp;
+             j--;
+@@ -6802,13 +6802,13 @@ public static void reverse(final char[] array) {
+      */
+     public static void reverse(final char[] array, final int startIndexInclusive, final int endIndexExclusive) {
+         if (array == null) {
+             return;
+         }
+         int i = Math.max(startIndexInclusive, 0);
+-        int j = Math.min(array.length, endIndexExclusive) - 1;
++        int j = max0(Math.min(array.length, endIndexExclusive)) - 1;
+         char tmp;
+         while (j > i) {
+             tmp = array[j];
+             array[j] = array[i];
+             array[i] = tmp;
+             j--;
+@@ -6844,13 +6844,13 @@ public static void reverse(final double[] array) {
+      */
+     public static void reverse(final double[] array, final int startIndexInclusive, final int endIndexExclusive) {
+         if (array == null) {
+             return;
+         }
+         int i = Math.max(startIndexInclusive, 0);
+-        int j = Math.min(array.length, endIndexExclusive) - 1;
++        int j = max0(Math.min(array.length, endIndexExclusive)) - 1;
+         double tmp;
+         while (j > i) {
+             tmp = array[j];
+             array[j] = array[i];
+             array[i] = tmp;
+             j--;
+@@ -6886,13 +6886,13 @@ public static void reverse(final float[] array) {
+      */
+     public static void reverse(final float[] array, final int startIndexInclusive, final int endIndexExclusive) {
+         if (array == null) {
+             return;
+         }
+         int i = Math.max(startIndexInclusive, 0);
+-        int j = Math.min(array.length, endIndexExclusive) - 1;
++        int j = max0(Math.min(array.length, endIndexExclusive)) - 1;
+         float tmp;
+         while (j > i) {
+             tmp = array[j];
+             array[j] = array[i];
+             array[i] = tmp;
+             j--;
+@@ -6932,13 +6932,13 @@ public static void reverse(final int[] array) {
+      */
+     public static void reverse(final int[] array, final int startIndexInclusive, final int endIndexExclusive) {
+         if (array == null) {
+             return;
+         }
+         int i = Math.max(startIndexInclusive, 0);
+-        int j = Math.min(array.length, endIndexExclusive) - 1;
++        int j = max0(Math.min(array.length, endIndexExclusive)) - 1;
+         int tmp;
+         while (j > i) {
+             tmp = array[j];
+             array[j] = array[i];
+             array[i] = tmp;
+             j--;
+@@ -6978,13 +6978,13 @@ public static void reverse(final long[] array) {
+      */
+     public static void reverse(final long[] array, final int startIndexInclusive, final int endIndexExclusive) {
+         if (array == null) {
+             return;
+         }
+         int i = Math.max(startIndexInclusive, 0);
+-        int j = Math.min(array.length, endIndexExclusive) - 1;
++        int j = max0(Math.min(array.length, endIndexExclusive)) - 1;
+         long tmp;
+         while (j > i) {
+             tmp = array[j];
+             array[j] = array[i];
+             array[i] = tmp;
+             j--;
+@@ -7027,13 +7027,13 @@ public static void reverse(final Object[] array) {
+      */
+     public static void reverse(final Object[] array, final int startIndexInclusive, final int endIndexExclusive) {
+         if (array == null) {
+             return;
+         }
+         int i = Math.max(startIndexInclusive, 0);
+-        int j = Math.min(array.length, endIndexExclusive) - 1;
++        int j = max0(Math.min(array.length, endIndexExclusive)) - 1;
+         Object tmp;
+         while (j > i) {
+             tmp = array[j];
+             array[j] = array[i];
+             array[i] = tmp;
+             j--;
+@@ -7073,13 +7073,13 @@ public static void reverse(final short[] array) {
+      */
+     public static void reverse(final short[] array, final int startIndexInclusive, final int endIndexExclusive) {
+         if (array == null) {
+             return;
+         }
+         int i = Math.max(startIndexInclusive, 0);
+-        int j = Math.min(array.length, endIndexExclusive) - 1;
++        int j = max0(Math.min(array.length, endIndexExclusive)) - 1;
+         short tmp;
+         while (j > i) {
+             tmp = array[j];
+             array[j] = array[i];
+             array[i] = tmp;
+             j--;

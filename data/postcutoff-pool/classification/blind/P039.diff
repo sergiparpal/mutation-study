@@ -1,0 +1,44 @@
+# P039: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +7/-6   lines, code only (comments and blank lines left out, by line prefix): +3/-6
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+--- a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+@@ -233,13 +233,15 @@ private static final class WildcardTypeImpl implements WildcardType {
+          * Constructs a new instance.
+          *
+          * @param upperBounds of this type.
+          * @param lowerBounds of this type.
+          */
+         private WildcardTypeImpl(final Type[] upperBounds, final Type[] lowerBounds) {
+-            this.upperBounds = upperBounds != null ? upperBounds.clone() : ArrayUtils.EMPTY_TYPE_ARRAY;
++            // A wildcard with no explicit upper bound has an implicit upper bound of Object, per
++            // WildcardType.getUpperBounds(); returning an empty array breaks equals() with a JDK wildcard.
++            this.upperBounds = ArrayUtils.isNotEmpty(upperBounds) ? upperBounds.clone() : new Type[] {Object.class};
+             this.lowerBounds = lowerBounds != null ? lowerBounds.clone() : ArrayUtils.EMPTY_TYPE_ARRAY;
+         }
+ 
+         /**
+          * {@inheritDoc}
+          */
+@@ -266,17 +268,16 @@ public Type[] getUpperBounds() {
+ 
+         /**
+          * {@inheritDoc}
+          */
+         @Override
+         public int hashCode() {
+-            int result = 73 << 8;
+-            result |= Arrays.hashCode(upperBounds);
+-            result <<= 8;
+-            result |= Arrays.hashCode(lowerBounds);
+-            return result;
++            // Same algorithm as the JDK's WildcardType, over the bounds that equals() compares, so that equal wildcards share a hash code.
++            // A lone null lower bound means no lower bound, which the JDK reports as an empty array.
++            final Type[] lower = lowerBounds.length == 1 && lowerBounds[0] == null ? ArrayUtils.EMPTY_TYPE_ARRAY : lowerBounds;
++            return Arrays.hashCode(lower) ^ Arrays.hashCode(getImplicitUpperBounds(this));
+         }
+ 
+         /**
+          * {@inheritDoc}
+          */
+         @Override

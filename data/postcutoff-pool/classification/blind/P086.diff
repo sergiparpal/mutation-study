@@ -1,0 +1,41 @@
+# P086: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-1   lines, code only (comments and blank lines left out, by line prefix): +3/-1
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java b/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
+--- a/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
+@@ -1175,18 +1175,20 @@ private int substituteRecursive(final StrBuilder buf, final int offset, final in
+         final boolean top = priorVariables == null;
+         boolean altered = false;
+         int lengthChange = 0;
+         char[] chars = buf.buffer;
+         int bufEnd = offset + length;
+         int pos = offset;
++        // an escape character must come from the text being scanned, not from the end of a substituted value
++        int escapeStart = offset;
+         while (pos < bufEnd) {
+             final int startMatchLen = pfxMatcher.isMatch(chars, pos, offset, bufEnd);
+             if (startMatchLen == 0) {
+                 pos++;
+             } else // found variable start marker
+-            if (pos > offset && chars[pos - 1] == escape) {
++            if (pos > escapeStart && chars[pos - 1] == escape) {
+                 // escaped
+                 if (preserveEscapes) {
+                     pos++;
+                     continue;
+                 }
+                 buf.deleteCharAt(pos - 1);
+@@ -1261,12 +1263,13 @@ private int substituteRecursive(final StrBuilder buf, final int offset, final in
+                                     throw new IllegalStateException("Maximum interpolation size (" + MAX_SUBSTITUTION_LENGTH
+                                             + " characters) exceeded in variable substitution");
+                                 }
+                                 int change = substitute(buf, startPos, varLen, priorVariables);
+                                 change = change + varLen - (endPos - startPos);
+                                 pos += change;
++                                escapeStart = pos;
+                                 bufEnd += change;
+                                 lengthChange += change;
+                                 chars = buf.buffer; // in case buffer was altered
+                             }
+                             // remove variable from the cyclic stack
+                             priorVariables.remove(priorVariables.size() - 1);

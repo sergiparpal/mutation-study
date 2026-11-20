@@ -1,0 +1,487 @@
+# P010: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 6   lines, all: +68/-37   lines, code only (comments and blank lines left out, by line prefix): +25/-17
+diff --git a/src/main/java/org/apache/commons/lang3/builder/AbstractReflection.java b/src/main/java/org/apache/commons/lang3/builder/AbstractReflection.java
+--- a/src/main/java/org/apache/commons/lang3/builder/AbstractReflection.java
++++ b/src/main/java/org/apache/commons/lang3/builder/AbstractReflection.java
+@@ -109,30 +109,45 @@ public B setForceAccessible(final boolean forceAccessible) {
+      */
+     static boolean getForceAccessible() {
+         return SystemProperties.getBoolean(AbstractReflection.class, "forceAccessible", () -> true);
+     }
+ 
+     /**
+-     * If {@code forceAccessible} flag is true, each field in the given array is made accessible by calling {@link AccessibleObject#setAccessible(boolean)
++     * If {@code forceAccessible} flag is true, then the field is made accessible by calling {@link AccessibleObject#setAccessible(boolean)
+      * AccessibleObject#setAccessible(true)} but <em>only</em> if a field is not already accessible.
+      *
+      * @param forceAccessible Whether to call {@link AccessibleObject#setAccessible(boolean)} if a field is not already accessible.
+-     * @param fields          The fields to set.
++     * @param field          The field to set.
++     * @return true if the field is accessible, false otherwise.
+      * @throws SecurityException Thrown if {@code forceAccessible} flag is true and the request is denied.
+      * @see AccessibleObject#setAccessible(boolean)
+      * @see SecurityManager#checkPermission
+      */
+-    static void setAccessible(final boolean forceAccessible, final Field... fields) {
+-        if (forceAccessible) {
+-            for (final Field field : fields) {
+-                // Test to avoid the permission check if there is a security manager.
+-                if (field != null && !field.isAccessible()) {
+-                    field.setAccessible(true);
++    static boolean setAccessible(final boolean forceAccessible, final Field field) {
++        return !field.isAccessible() && forceAccessible && setAccessibleTrue(field);
+     }
++
++    /**
++     * Sets the field as accessible by calling {@link AccessibleObject#setAccessible(boolean) AccessibleObject#setAccessible(true)} but <em>only</em> if a field
++     * is not already accessible.
++     *
++     * @param field The field to set, may be null.
++     * @return true if the field is accessible, false otherwise.
++     * @throws SecurityException Thrown if {@code forceAccessible} flag is true and the request is denied.
++     * @see AccessibleObject#setAccessible(boolean)
++     * @see SecurityManager#checkPermission
++     */
++    private static boolean setAccessibleTrue(final Field field) {
++        if (field != null) {
++            // Test isAccessible() to avoid the permission check.
++            if (!field.isAccessible()) {
++                field.setAccessible(true);
+             }
++            return field.isAccessible();
+         }
++        return false;
+     }
+ 
+     /**
+      * Whether to call {@link AccessibleObject#setAccessible(boolean) AccessibleObject#setAccessible(true)} on inaccessible fields.
+      */
+     private final boolean forceAccessible;
+@@ -157,15 +172,16 @@ protected boolean isForceAccessible() {
+     }
+ 
+     /**
+      * If {@code forceAccessible} flag is true, each field in the given array is made accessible by calling {@link AccessibleObject#setAccessible(boolean)
+      * AccessibleObject#setAccessible(true)} but <em>only</em> if a field is not already accessible.
+      *
+-     * @param fields The fields to set.
++     * @param field The fields to set.
+      * @throws SecurityException Thrown if {@code forceAccessible} flag is true and the request is denied.
++     * @return true if the field is accessible, false otherwise.
+      * @see AccessibleObject#setAccessible(boolean)
+      * @see SecurityManager#checkPermission
+      */
+-    void setAccessible(final Field... fields) {
+-        setAccessible(isForceAccessible(), fields);
++    boolean setAccessible(final Field field) {
++        return setAccessible(isForceAccessible(), field);
+     }
+ }
+diff --git a/src/main/java/org/apache/commons/lang3/builder/CompareToBuilder.java b/src/main/java/org/apache/commons/lang3/builder/CompareToBuilder.java
+--- a/src/main/java/org/apache/commons/lang3/builder/CompareToBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/CompareToBuilder.java
+@@ -21,12 +21,13 @@
+ import java.util.Collection;
+ import java.util.Comparator;
+ import java.util.Objects;
+ 
+ import org.apache.commons.lang3.ArrayUtils;
+ import org.apache.commons.lang3.ObjectUtils;
++import org.apache.commons.lang3.builder.AbstractReflection.AbstractBuilder;
+ 
+ /**
+  * Assists in implementing {@link Comparable#compareTo(Object)} methods.
+  *
+  * <p>It is consistent with {@code equals(Object)} and
+  * {@code hashCode()} built with {@link EqualsBuilder} and
+@@ -69,13 +70,15 @@
+  * <p>Alternatively, there are {@link #reflectionCompare(Object, Object) reflectionCompare} methods that use
+  * reflection to determine the fields to append. Because fields can be private,
+  * {@code reflectionCompare} uses {@link java.lang.reflect.AccessibleObject#setAccessible(boolean)} to
+  * bypass normal access control checks. This will fail under a security manager,
+  * unless the appropriate permissions are set up correctly. It is also
+  * slower than appending explicitly.</p>
+- *
++ * <p>
++ * See also {@link AbstractBuilder#setForceAccessible(boolean)}
++ * </p>
+  * <p>A typical implementation of {@code compareTo(Object)} using
+  * {@code reflectionCompare} looks like:</p>
+ 
+  * <pre>
+  * public int compareTo(Object o) {
+  *   return CompareToBuilder.reflectionCompare(this, o);
+@@ -88,12 +91,13 @@
+  *
+  * @see Comparable
+  * @see Object#equals(Object)
+  * @see Object#hashCode()
+  * @see EqualsBuilder
+  * @see HashCodeBuilder
++ * @see AbstractBuilder#setForceAccessible(boolean)
+  * @since 1.0
+  */
+ public class CompareToBuilder extends AbstractReflection implements Builder<Integer> {
+ 
+     /**
+      * Builds instances of CompareToBuilder.
+@@ -142,27 +146,27 @@ private static void reflectionAppend(
+         final CompareToBuilder builder,
+         final boolean useTransients,
+         final String[] excludeFields,
+         final boolean forceAccessible) {
+ 
+         final Field[] fields = clazz.getDeclaredFields();
+-        setAccessible(forceAccessible, fields);
+         for (int i = 0; i < fields.length && builder.comparison == 0; i++) {
+             final Field field = fields[i];
+             final String name = field.getName();
+             if (!ArrayUtils.contains(excludeFields, name)
+                 && !name.contains("$")
+                 && (useTransients || !Modifier.isTransient(field.getModifiers()))
+-                && !Modifier.isStatic(field.getModifiers())
+-                && field.isAccessible()) {
++                && !Modifier.isStatic(field.getModifiers())) {
++                if (setAccessible(forceAccessible, field)) {
+                     // IllegalAccessException can't happen. Would get a Security exception instead.
+                     // Throw a runtime exception in case the impossible happens.
+                     builder.append(Reflection.getUnchecked(field, lhs), Reflection.getUnchecked(field, rhs));
+                 }
+             }
+         }
++    }
+ 
+     /**
+      * Compares two {@link Object}s via reflection.
+      *
+      * <p>Fields can be private, thus {@code AccessibleObject.setAccessible}
+      * is used to bypass normal access control checks. This will fail under a
+diff --git a/src/main/java/org/apache/commons/lang3/builder/EqualsBuilder.java b/src/main/java/org/apache/commons/lang3/builder/EqualsBuilder.java
+--- a/src/main/java/org/apache/commons/lang3/builder/EqualsBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/EqualsBuilder.java
+@@ -23,12 +23,13 @@
+ import java.util.HashSet;
+ import java.util.List;
+ import java.util.Set;
+ 
+ import org.apache.commons.lang3.ArrayUtils;
+ import org.apache.commons.lang3.ClassUtils;
++import org.apache.commons.lang3.builder.AbstractReflection.AbstractBuilder;
+ import org.apache.commons.lang3.tuple.Pair;
+ 
+ /**
+  * Assists in implementing {@link Object#equals(Object)} methods.
+  *
+  * <p>This class provides methods to build a good equals method for any
+@@ -69,24 +70,28 @@
+  * the fields to test. Because these fields are usually private, the method,
+  * {@code reflectionEquals}, uses {@code AccessibleObject.setAccessible} to
+  * change the visibility of the fields. This will fail under a security
+  * manager, unless the appropriate permissions are set up correctly. It is
+  * also slower than testing explicitly.  Non-primitive fields are compared using
+  * {@code equals()}.</p>
++ * <p>
++ * See also {@link AbstractBuilder#setForceAccessible(boolean)}
++ * </p>
+  *
+  * <p>A typical invocation for this method would look like:</p>
+  * <pre>
+  * public boolean equals(Object obj) {
+  *   return EqualsBuilder.reflectionEquals(this, obj);
+  * }
+  * </pre>
+  *
+  * <p>The {@link EqualsExclude} annotation can be used to exclude fields from being
+  * used by the {@code reflectionEquals} methods.</p>
+  *
+  * @since 1.0
++ * @see AbstractBuilder#setForceAccessible(boolean)
+  */
+ public class EqualsBuilder extends AbstractReflection implements Builder<Boolean> {
+ 
+     /**
+      * Builds instances of CompareToBuilder.
+      */
+@@ -103,28 +108,28 @@ private Builder() {
+         public EqualsBuilder get() {
+             return new EqualsBuilder(this);
+         }
+ 
+     }
+ 
++    /**
++     * A registry of objects used by reflection methods to detect cyclical object references and avoid infinite loops.
++     *
++     * @since 3.0
++     */
++    private static final ThreadLocal<Set<Pair<IDKey, IDKey>>> REGISTRY = ThreadLocal.withInitial(HashSet::new);
++
+     /**
+      * Constructs a new Builder.
+      *
+      * @return a new Builder.
+      */
+     public static Builder builder() {
+         return new Builder();
+     }
+ 
+-    /**
+-     * A registry of objects used by reflection methods to detect cyclical object references and avoid infinite loops.
+-     *
+-     * @since 3.0
+-     */
+-    private static final ThreadLocal<Set<Pair<IDKey, IDKey>>> REGISTRY = ThreadLocal.withInitial(HashSet::new);
+-
+     /*
+      * NOTE: we cannot store the actual objects in a HashSet, as that would use the very hashCode()
+      * we are in the process of calculating.
+      *
+      * So we generate a one-to-one mapping from the original object to a new object.
+      *
+@@ -961,13 +966,12 @@ public EqualsBuilder reflectionAppend(final Object lhs, final Object rhs) {
+             return this;
+         }
+         if (lhs == null || rhs == null) {
+             isEquals = false;
+             return this;
+         }
+-
+         // Find the leaf class since there may be transients in the leaf
+         // class or in classes between the leaf and root.
+         // If we are not testing transients or a subclass has no ivars,
+         // then a subclass can test equals to a superclass.
+         final Class<?> lhsClass = lhs.getClass();
+         final Class<?> rhsClass = rhs.getClass();
+@@ -986,13 +990,12 @@ public EqualsBuilder reflectionAppend(final Object lhs, final Object rhs) {
+             }
+         } else {
+             // The two classes are not related.
+             isEquals = false;
+             return this;
+         }
+-
+         try {
+             if (testClass.isArray()) {
+                 append(lhs, rhs);
+             } else // If either class is being excluded, call normal object equals method on lhsClass.
+             if (bypassReflectionClasses != null && (bypassReflectionClasses.contains(lhsClass) || bypassReflectionClasses.contains(rhsClass))) {
+                 isEquals = lhs.equals(rhs);
+@@ -1015,34 +1018,35 @@ public EqualsBuilder reflectionAppend(final Object lhs, final Object rhs) {
+     }
+ 
+     /**
+      * Appends the fields and values defined by the given object of the
+      * given Class.
+      *
+-     * @param lhs  the left-hand side object
+-     * @param rhs  the right-hand side object
+-     * @param clazz  the class to append details of
++     * @param lhs  the left-hand side object.
++     * @param rhs  the right-hand side object.
++     * @param clazz  the class to append details of.
+      */
+     private void reflectionAppend(final Object lhs, final Object rhs, final Class<?> clazz) {
+         if (isRegistered(lhs, rhs)) {
+             return;
+         }
+         try {
+             register(lhs, rhs);
+             final Field[] fields = clazz.getDeclaredFields();
+-            setAccessible(fields);
+             for (int i = 0; i < fields.length && isEquals; i++) {
+                 final Field field = fields[i];
+                 if (!ArrayUtils.contains(excludeFields, field.getName())
+                     && !field.getName().contains("$")
+                     && (testTransients || !Modifier.isTransient(field.getModifiers()))
+                     && !Modifier.isStatic(field.getModifiers())
+                     && !field.isAnnotationPresent(EqualsExclude.class)) {
++                    if (setAccessible(field)) {
+                         append(Reflection.getUnchecked(field, lhs), Reflection.getUnchecked(field, rhs));
+                     }
+                 }
++            }
+         } finally {
+             unregister(lhs, rhs);
+         }
+     }
+ 
+     /**
+diff --git a/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java b/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java
+--- a/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java
+@@ -26,12 +26,13 @@
+ import java.util.Set;
+ 
+ import org.apache.commons.lang3.ArraySorter;
+ import org.apache.commons.lang3.ArrayUtils;
+ import org.apache.commons.lang3.ObjectUtils;
+ import org.apache.commons.lang3.Validate;
++import org.apache.commons.lang3.builder.AbstractReflection.AbstractBuilder;
+ 
+ /**
+  * Assists in implementing {@link Object#hashCode()} methods.
+  *
+  * <p>
+  * This class enables a good {@code hashCode} method to be built for any class. It follows the rules laid out in
+@@ -82,12 +83,15 @@
+  * <p>
+  * Alternatively, there is a method that uses reflection to determine the fields to test. Because these fields are
+  * usually private, the method, {@code reflectionHashCode}, uses {@code AccessibleObject.setAccessible}
+  * to change the visibility of the fields. This will fail under a security manager, unless the appropriate permissions
+  * are set up correctly. It is also slower than testing explicitly.
+  * </p>
++ * <p>
++ * See also {@link AbstractBuilder#setForceAccessible(boolean)}
++ * </p>
+  *
+  * <p>
+  * A typical invocation for this method would look like:
+  * </p>
+  *
+  * <pre>
+@@ -96,12 +100,13 @@
+  * }
+  * </pre>
+  *
+  * <p>The {@link HashCodeExclude} annotation can be used to exclude fields from being
+  * used by the {@code reflectionHashCode} methods.</p>
+  *
++ * @see AbstractBuilder#setForceAccessible(boolean)
+  * @since 1.0
+  */
+ public class HashCodeBuilder extends AbstractReflection implements Builder<Integer> {
+ 
+     /**
+      * Builds instances of CompareToBuilder.
+@@ -226,33 +231,34 @@ static boolean isRegistered(final Object value) {
+      * @param builder
+      *            the builder to append to
+      * @param useTransients
+      *            whether to use transient fields
+      * @param excludeFields
+      *            Collection of String field names to exclude from use in calculation of hash code
+-     * @param setAccessible Whether to set fields' accessible flags
++     * @param forceAccessible Whether to set fields' accessible flags
+      */
+     private static void reflectionAppend(final Object object, final Class<?> clazz, final HashCodeBuilder builder, final boolean useTransients,
+-            final String[] excludeFields, final boolean setAccessible) {
++            final String[] excludeFields, final boolean forceAccessible) {
+         if (isRegistered(object)) {
+             return;
+         }
+         try {
+             register(object);
+             // The elements in the returned array are not sorted and are not in any particular order.
+             final Field[] fields = ArraySorter.sort(clazz.getDeclaredFields(), Comparator.comparing(Field::getName));
+-            setAccessible(setAccessible, fields);
+             for (final Field field : fields) {
+                 if (!ArrayUtils.contains(excludeFields, field.getName())
+                     && !field.getName().contains("$")
+                     && (useTransients || !Modifier.isTransient(field.getModifiers()))
+                     && !Modifier.isStatic(field.getModifiers())
+                     && !field.isAnnotationPresent(HashCodeExclude.class)) {
++                    if (setAccessible(forceAccessible, field)) {
+                         builder.append(Reflection.getUnchecked(field, object));
+                     }
+                 }
++            }
+         } finally {
+             unregister(object);
+         }
+     }
+ 
+     /**
+diff --git a/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java b/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java
+--- a/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java
+@@ -609,24 +609,20 @@ protected boolean accept(final Field field) {
+             return false;
+         }
+         if (Modifier.isStatic(field.getModifiers()) && !isAppendStatics()) {
+             // Reject static fields.
+             return false;
+         }
+-
+-        if (this.excludeFieldNames != null
+-            && Arrays.binarySearch(this.excludeFieldNames, field.getName()) >= 0) {
++        if (this.excludeFieldNames != null && Arrays.binarySearch(this.excludeFieldNames, field.getName()) >= 0) {
+             // Reject fields from the getExcludeFieldNames list.
+             return false;
+         }
+-
+         if (ArrayUtils.isNotEmpty(includeFieldNames)) {
+             // Accept fields from the getIncludeFieldNames list. {@code null} or empty means all fields are included. All fields are included by default.
+             return Arrays.binarySearch(this.includeFieldNames, field.getName()) >= 0;
+         }
+-
+         return !field.isAnnotationPresent(ToStringExclude.class);
+     }
+ 
+     /**
+      * Appends the fields and values defined by the given object of the given Class.
+      *
+@@ -642,16 +638,16 @@ protected void appendFieldsIn(final Class<?> clazz) {
+         if (clazz.isArray()) {
+             reflectionAppendArray(getObject());
+             return;
+         }
+         // The elements in the returned array are not sorted and are not in any particular order.
+         final Field[] fields = ArraySorter.sort(clazz.getDeclaredFields(), Comparator.comparing(Field::getName));
+-        setAccessible(fields);
+         for (final Field field : fields) {
+             final String fieldName = field.getName();
+             if (accept(field)) {
++                setAccessible(field);
+                 try {
+                     // Warning: Field.get(Object) creates wrappers objects
+                     // for primitive types.
+                     final Object fieldValue = field.isAccessible() ? getValue(field) : null;
+                     if (!excludeNullValues || fieldValue != null) {
+                         this.append(fieldName, fieldValue, !field.isAnnotationPresent(ToStringSummary.class));
+diff --git a/src/main/java/org/apache/commons/lang3/builder/ToStringBuilder.java b/src/main/java/org/apache/commons/lang3/builder/ToStringBuilder.java
+--- a/src/main/java/org/apache/commons/lang3/builder/ToStringBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/ToStringBuilder.java
+@@ -16,12 +16,13 @@
+  */
+ package org.apache.commons.lang3.builder;
+ 
+ import java.util.Objects;
+ 
+ import org.apache.commons.lang3.ObjectUtils;
++import org.apache.commons.lang3.builder.AbstractReflection.AbstractBuilder;
+ 
+ /**
+  * Assists in implementing {@link Object#toString()} methods.
+  *
+  * <p>This class enables a good and consistent {@code toString()} to be built for any
+  * class or object. This class aims to simplify the process by:</p>
+@@ -64,12 +65,15 @@
+  * <p>Alternatively, there is a method that uses reflection to determine
+  * the fields to test. Because these fields are usually private, the method,
+  * {@code reflectionToString}, uses {@code AccessibleObject.setAccessible} to
+  * change the visibility of the fields. This will fail under a security manager,
+  * unless the appropriate permissions are set up correctly. It is also
+  * slower than testing explicitly.</p>
++ * <p>
++ * See also {@link AbstractBuilder#setForceAccessible(boolean)}
++ * </p>
+  *
+  * <p>A typical invocation for this method would look like:</p>
+  *
+  * <pre>
+  * public String toString() {
+  *   return ToStringBuilder.reflectionToString(this);
+@@ -82,12 +86,13 @@
+  * System.out.println("An object: " + ToStringBuilder.reflectionToString(anObject));
+  * </pre>
+  *
+  * <p>The exact format of the {@code toString} is determined by
+  * the {@link ToStringStyle} passed into the constructor.</p>
+  *
++ * @see AbstractBuilder#setForceAccessible(boolean)
+  * @since 1.0
+  */
+ public class ToStringBuilder extends AbstractReflection implements Builder<String> {
+ 
+     /**
+      * Builds instances of CompareToBuilder.

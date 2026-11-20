@@ -1,0 +1,21 @@
+# P054: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-2   lines, code only (comments and blank lines left out, by line prefix): +1/-2
+diff --git a/src/main/java/org/apache/commons/lang3/text/FormattableUtils.java b/src/main/java/org/apache/commons/lang3/text/FormattableUtils.java
+--- a/src/main/java/org/apache/commons/lang3/text/FormattableUtils.java
++++ b/src/main/java/org/apache/commons/lang3/text/FormattableUtils.java
+@@ -101,14 +101,13 @@ public static Formatter append(final CharSequence seq, final Formatter formatter
+             buf.replace(precision - actualEllipsis.length(), seq.length(), actualEllipsis.toString());
+         }
+         final boolean leftJustify = (flags & FormattableFlags.LEFT_JUSTIFY) == FormattableFlags.LEFT_JUSTIFY;
+         for (int i = buf.length(); i < width; i++) {
+             buf.insert(leftJustify ? i : 0, padChar);
+         }
+-        formatter.format(buf.toString());
+-        return formatter;
++        return formatter.format(SIMPLEST_FORMAT, buf.toString());
+     }
+ 
+     /**
+      * Handles the common {@link Formattable} operations of truncate-pad-append,
+      * padding width underflow with spaces.
+      *

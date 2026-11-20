@@ -1,0 +1,30 @@
+# P079: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-3   lines, code only (comments and blank lines left out, by line prefix): +3/-2
+diff --git a/src/main/java/org/apache/commons/csv/CSVFormat.java b/src/main/java/org/apache/commons/csv/CSVFormat.java
+--- a/src/main/java/org/apache/commons/csv/CSVFormat.java
++++ b/src/main/java/org/apache/commons/csv/CSVFormat.java
+@@ -2519,20 +2519,21 @@ private void printWithQuotes(final Object object, final CharSequence charSeq, fi
+     private void printWithQuotes(final Reader reader, final Appendable appendable) throws IOException {
+         if (getQuoteMode() == QuoteMode.NONE) {
+             printWithEscapes(reader, appendable);
+             return;
+         }
+         final char quote = getQuoteCharacter().charValue(); // Explicit unboxing is intentional
++        final char escape = isEscapeCharacterSet() ? getEscapeChar() : quote;
+         // (1) Append opening quote
+         append(quote, appendable);
+-        // (2) Append Reader contents, doubling quotes
++        // (2) Append Reader contents, doubling quotes and escape characters
+         int c;
+         while (EOF != (c = reader.read())) {
+             append((char) c, appendable);
+-            if (c == quote) {
+-                append(quote, appendable);
++            if (c == quote || c == escape) {
++                append((char) c, appendable);
+             }
+         }
+         // (3) Append closing quote
+         append(quote, appendable);
+     }
+ 

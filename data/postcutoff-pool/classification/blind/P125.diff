@@ -1,0 +1,20 @@
+# P125: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/ClassUtils.java b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+--- a/src/main/java/org/apache/commons/lang3/ClassUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+@@ -598,13 +598,13 @@ public static Class<?> getClass(final ClassLoader classLoader, final String clas
+                 lastDotIndex = next.lastIndexOf(PACKAGE_SEPARATOR_CHAR);
+                 if (lastDotIndex != -1) {
+                     next = next.substring(0, lastDotIndex) + INNER_CLASS_SEPARATOR_CHAR + next.substring(lastDotIndex + 1);
+                 }
+             }
+         } while (lastDotIndex != -1);
+-        throw new ClassNotFoundException(next);
++        throw new ClassNotFoundException(className);
+     }
+ 
+     /**
+      * Gets the (initialized) class represented by {@code className} using the current thread's context class loader.
+      * This implementation supports the syntaxes "{@code java.util.Map.Entry[]}", "{@code java.util.Map$Entry[]}",
+      * "{@code [Ljava.util.Map.Entry;}", and "{@code [Ljava.util.Map$Entry;}".

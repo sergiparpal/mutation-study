@@ -1,0 +1,28 @@
+# P018: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-3   lines, code only (comments and blank lines left out, by line prefix): +3/-2
+diff --git a/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java b/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
+--- a/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
++++ b/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
+@@ -920,18 +920,19 @@ public static void removeCommonFrames(final List<String> causeFrames, final List
+         Objects.requireNonNull(causeFrames, "causeFrames");
+         Objects.requireNonNull(wrapperFrames, "wrapperFrames");
+         int causeFrameIndex = causeFrames.size() - 1;
+         int wrapperFrameIndex = wrapperFrames.size() - 1;
+         while (causeFrameIndex >= 0 && wrapperFrameIndex >= 0) {
+             // Remove the frame from the cause trace if it is the same
+-            // as in the wrapper trace
++            // as in the wrapper trace; common frames end at the first difference
+             final String causeFrame = causeFrames.get(causeFrameIndex);
+             final String wrapperFrame = wrapperFrames.get(wrapperFrameIndex);
+-            if (causeFrame.equals(wrapperFrame)) {
+-                causeFrames.remove(causeFrameIndex);
++            if (!causeFrame.equals(wrapperFrame)) {
++                break;
+             }
++            causeFrames.remove(causeFrameIndex);
+             causeFrameIndex--;
+             wrapperFrameIndex--;
+         }
+     }
+ 
+     /**

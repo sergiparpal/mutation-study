@@ -1,0 +1,38 @@
+# P112: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +6/-1   lines, code only (comments and blank lines left out, by line prefix): +3/-1
+diff --git a/src/main/java/org/apache/commons/csv/CSVPrinter.java b/src/main/java/org/apache/commons/csv/CSVPrinter.java
+--- a/src/main/java/org/apache/commons/csv/CSVPrinter.java
++++ b/src/main/java/org/apache/commons/csv/CSVPrinter.java
+@@ -499,13 +499,17 @@ public void printRecords(final Object... values) throws IOException {
+      * @param resultSet The values to print.
+      * @throws IOException  If an I/O error occurs.
+      * @throws SQLException Thrown when a database access error occurs.
+      */
+     public void printRecords(final ResultSet resultSet) throws SQLException, IOException {
+         final int columnCount = resultSet.getMetaData().getColumnCount();
+-        while (resultSet.next() && format.useRow(resultSet.getRow())) {
++        // Count the rows produced here instead of ResultSet.getRow(): getRow() is the absolute cursor
++        // position, which is optional for TYPE_FORWARD_ONLY result sets and returns 0 there, silently
++        // disabling maxRows. Mirrors the row-produced counter the parser uses (CSV-327).
++        long rowCount = 0;
++        while (format.useRow(rowCount + 1) && resultSet.next()) {
+             lock.lock();
+             try {
+                 for (int i = 1; i <= columnCount; i++) {
+                     final Object object = resultSet.getObject(i);
+                     if (object instanceof Clob) {
+                         try (Reader reader = ((Clob) object).getCharacterStream()) {
+@@ -520,12 +524,13 @@ public void printRecords(final ResultSet resultSet) throws SQLException, IOExcep
+                     }
+                 }
+                 endOfRecord();
+             } finally {
+                 lock.unlock();
+             }
++            rowCount++;
+         }
+     }
+ 
+     /**
+      * Prints all the objects with metadata in the given JDBC result set based on the header boolean.
+      * <p>

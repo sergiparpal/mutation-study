@@ -1,0 +1,34 @@
+# P021: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +15/-0   lines, code only (comments and blank lines left out, by line prefix): +13/-0
+diff --git a/src/main/java/org/apache/commons/lang3/time/DateUtils.java b/src/main/java/org/apache/commons/lang3/time/DateUtils.java
+--- a/src/main/java/org/apache/commons/lang3/time/DateUtils.java
++++ b/src/main/java/org/apache/commons/lang3/time/DateUtils.java
+@@ -1344,13 +1344,28 @@ private static Calendar modify(final Calendar val, final int field, final Modify
+                 offset = val.get(aField[0]) - min;
+                 // Set roundUp if this is more than halfway between the minimum and maximum
+                 roundUp = offset > (max - min) / 2;
+             }
+             // We need to remove this field
+             if (offset != 0) {
++                switch (aField[0]) {
++                // Remove the sub-hour fields arithmetically, like the LANG-59 block above: Calendar.set() resolves
++                // an ambiguous wall time in a DST overlap to standard time, shifting the result by an hour.
++                case Calendar.MILLISECOND:
++                    val.setTimeInMillis(val.getTimeInMillis() - offset);
++                    break;
++                case Calendar.SECOND:
++                    val.setTimeInMillis(val.getTimeInMillis() - offset * MILLIS_PER_SECOND);
++                    break;
++                case Calendar.MINUTE:
++                    val.setTimeInMillis(val.getTimeInMillis() - offset * MILLIS_PER_MINUTE);
++                    break;
++                default:
+                     val.set(aField[0], val.get(aField[0]) - offset);
++                    break;
++                }
+             }
+         }
+         throw new IllegalArgumentException("The field " + field + " is not supported");
+     }
+ 
+     /**

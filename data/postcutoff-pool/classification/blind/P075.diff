@@ -1,0 +1,140 @@
+# P075: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +9/-9   lines, code only (comments and blank lines left out, by line prefix): +9/-9
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -8085,13 +8085,13 @@ public static boolean startsWith(final byte[] data, final byte[] expected) {
+      */
+     public static boolean[] subarray(final boolean[] array, int startIndexInclusive, int endIndexExclusive) {
+         if (array == null) {
+             return null;
+         }
+         startIndexInclusive = max0(startIndexInclusive);
+-        endIndexExclusive = Math.min(endIndexExclusive, array.length);
++        endIndexExclusive = max0(Math.min(endIndexExclusive, array.length));
+         final int newSize = endIndexExclusive - startIndexInclusive;
+         if (newSize <= 0) {
+             return EMPTY_BOOLEAN_ARRAY;
+         }
+         return arraycopy(array, startIndexInclusive, 0, newSize, boolean[]::new);
+     }
+@@ -8112,13 +8112,13 @@ public static boolean[] subarray(final boolean[] array, int startIndexInclusive,
+      */
+     public static byte[] subarray(final byte[] array, int startIndexInclusive, int endIndexExclusive) {
+         if (array == null) {
+             return null;
+         }
+         startIndexInclusive = max0(startIndexInclusive);
+-        endIndexExclusive = Math.min(endIndexExclusive, array.length);
++        endIndexExclusive = max0(Math.min(endIndexExclusive, array.length));
+         final int newSize = endIndexExclusive - startIndexInclusive;
+         if (newSize <= 0) {
+             return EMPTY_BYTE_ARRAY;
+         }
+         return arraycopy(array, startIndexInclusive, 0, newSize, byte[]::new);
+     }
+@@ -8139,13 +8139,13 @@ public static byte[] subarray(final byte[] array, int startIndexInclusive, int e
+      */
+     public static char[] subarray(final char[] array, int startIndexInclusive, int endIndexExclusive) {
+         if (array == null) {
+             return null;
+         }
+         startIndexInclusive = max0(startIndexInclusive);
+-        endIndexExclusive = Math.min(endIndexExclusive, array.length);
++        endIndexExclusive = max0(Math.min(endIndexExclusive, array.length));
+         final int newSize = endIndexExclusive - startIndexInclusive;
+         if (newSize <= 0) {
+             return EMPTY_CHAR_ARRAY;
+         }
+         return arraycopy(array, startIndexInclusive, 0, newSize, char[]::new);
+     }
+@@ -8166,13 +8166,13 @@ public static char[] subarray(final char[] array, int startIndexInclusive, int e
+      */
+     public static double[] subarray(final double[] array, int startIndexInclusive, int endIndexExclusive) {
+         if (array == null) {
+             return null;
+         }
+         startIndexInclusive = max0(startIndexInclusive);
+-        endIndexExclusive = Math.min(endIndexExclusive, array.length);
++        endIndexExclusive = max0(Math.min(endIndexExclusive, array.length));
+         final int newSize = endIndexExclusive - startIndexInclusive;
+         if (newSize <= 0) {
+             return EMPTY_DOUBLE_ARRAY;
+         }
+         return arraycopy(array, startIndexInclusive, 0, newSize, double[]::new);
+     }
+@@ -8193,13 +8193,13 @@ public static double[] subarray(final double[] array, int startIndexInclusive, i
+      */
+     public static float[] subarray(final float[] array, int startIndexInclusive, int endIndexExclusive) {
+         if (array == null) {
+             return null;
+         }
+         startIndexInclusive = max0(startIndexInclusive);
+-        endIndexExclusive = Math.min(endIndexExclusive, array.length);
++        endIndexExclusive = max0(Math.min(endIndexExclusive, array.length));
+         final int newSize = endIndexExclusive - startIndexInclusive;
+         if (newSize <= 0) {
+             return EMPTY_FLOAT_ARRAY;
+         }
+         return arraycopy(array, startIndexInclusive, 0, newSize, float[]::new);
+     }
+@@ -8220,13 +8220,13 @@ public static float[] subarray(final float[] array, int startIndexInclusive, int
+      */
+     public static int[] subarray(final int[] array, int startIndexInclusive, int endIndexExclusive) {
+         if (array == null) {
+             return null;
+         }
+         startIndexInclusive = max0(startIndexInclusive);
+-        endIndexExclusive = Math.min(endIndexExclusive, array.length);
++        endIndexExclusive = max0(Math.min(endIndexExclusive, array.length));
+         final int newSize = endIndexExclusive - startIndexInclusive;
+         if (newSize <= 0) {
+             return EMPTY_INT_ARRAY;
+         }
+         return arraycopy(array, startIndexInclusive, 0, newSize, int[]::new);
+     }
+@@ -8247,13 +8247,13 @@ public static int[] subarray(final int[] array, int startIndexInclusive, int end
+      */
+     public static long[] subarray(final long[] array, int startIndexInclusive, int endIndexExclusive) {
+         if (array == null) {
+             return null;
+         }
+         startIndexInclusive = max0(startIndexInclusive);
+-        endIndexExclusive = Math.min(endIndexExclusive, array.length);
++        endIndexExclusive = max0(Math.min(endIndexExclusive, array.length));
+         final int newSize = endIndexExclusive - startIndexInclusive;
+         if (newSize <= 0) {
+             return EMPTY_LONG_ARRAY;
+         }
+         return arraycopy(array, startIndexInclusive, 0, newSize, long[]::new);
+     }
+@@ -8274,13 +8274,13 @@ public static long[] subarray(final long[] array, int startIndexInclusive, int e
+      */
+     public static short[] subarray(final short[] array, int startIndexInclusive, int endIndexExclusive) {
+         if (array == null) {
+             return null;
+         }
+         startIndexInclusive = max0(startIndexInclusive);
+-        endIndexExclusive = Math.min(endIndexExclusive, array.length);
++        endIndexExclusive = max0(Math.min(endIndexExclusive, array.length));
+         final int newSize = endIndexExclusive - startIndexInclusive;
+         if (newSize <= 0) {
+             return EMPTY_SHORT_ARRAY;
+         }
+         return arraycopy(array, startIndexInclusive, 0, newSize, short[]::new);
+     }
+@@ -8311,13 +8311,13 @@ public static short[] subarray(final short[] array, int startIndexInclusive, int
+      */
+     public static <T> T[] subarray(final T[] array, int startIndexInclusive, int endIndexExclusive) {
+         if (array == null) {
+             return null;
+         }
+         startIndexInclusive = max0(startIndexInclusive);
+-        endIndexExclusive = Math.min(endIndexExclusive, array.length);
++        endIndexExclusive = max0(Math.min(endIndexExclusive, array.length));
+         final int newSize = endIndexExclusive - startIndexInclusive;
+         final Class<T> type = getComponentType(array);
+         if (newSize <= 0) {
+             return newInstance(type, 0);
+         }
+         return arraycopy(array, startIndexInclusive, 0, newSize, () -> newInstance(type, newSize));

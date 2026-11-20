@@ -1,0 +1,54 @@
+# P142: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-0   lines, code only (comments and blank lines left out, by line prefix): +4/-0
+diff --git a/src/main/java/org/apache/commons/lang3/time/DurationFormatUtils.java b/src/main/java/org/apache/commons/lang3/time/DurationFormatUtils.java
+--- a/src/main/java/org/apache/commons/lang3/time/DurationFormatUtils.java
++++ b/src/main/java/org/apache/commons/lang3/time/DurationFormatUtils.java
+@@ -673,18 +673,20 @@ static Token[] lexx(final String format) {
+             case '[':
+                 if (inOptional) {
+                     throw new IllegalArgumentException("Nested optional block at index: " + i);
+                 }
+                 optionalIndex++;
+                 inOptional = true;
++                previous = null;
+                 break;
+             case ']':
+                 if (!inOptional) {
+                     throw new IllegalArgumentException("Attempting to close unopened optional block at index: " + i);
+                 }
+                 inOptional = false;
++                previous = null;
+                 break;
+             case '\'':
+                 if (inLiteral) {
+                     if (i + 1 < format.length() && format.charAt(i + 1) == '\'') {
+                         // escaped quote '' ? append literal apostrophe, stay in literal
+                         buffer.append('\'');
+@@ -704,12 +706,13 @@ static Token[] lexx(final String format) {
+                     } else {
+                         buffer = new StringBuilder();
+                         list.add(new Token(buffer, inOptional, optionalIndex));
+                         inLiteral = true;
+                     }
+                 }
++                previous = null;
+                 break;
+             case 'y':
+                 value = y;
+                 break;
+             case 'M':
+                 value = M;
+@@ -732,12 +735,13 @@ static Token[] lexx(final String format) {
+             default:
+                 if (buffer == null) {
+                     buffer = new StringBuilder();
+                     list.add(new Token(buffer, inOptional, optionalIndex));
+                 }
+                 buffer.append(ch);
++                previous = null;
+             }
+             if (value != null) {
+                 if (previous != null && previous.getValue().equals(value)) {
+                     previous.increment();
+                 } else {
+                     final Token token = new Token(value, inOptional, optionalIndex);

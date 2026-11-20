@@ -1,0 +1,42 @@
+# P032: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +6/-3   lines, code only (comments and blank lines left out, by line prefix): +4/-3
+diff --git a/src/main/java/org/apache/commons/lang3/time/Instants.java b/src/main/java/org/apache/commons/lang3/time/Instants.java
+--- a/src/main/java/org/apache/commons/lang3/time/Instants.java
++++ b/src/main/java/org/apache/commons/lang3/time/Instants.java
+@@ -14,12 +14,13 @@
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+  */
+ 
+ package org.apache.commons.lang3.time;
+ 
++import java.time.Duration;
+ import java.time.Instant;
+ 
+ /**
+  * Works with {@link Instant}s.
+  *
+  * @since 3.21.0
+@@ -83,17 +84,19 @@ public static Instant toInstant(final Instant instant, final Instant defaultInst
+      * </ul>
+      *
+      * @param instant The instant to convert, not null.
+      * @return long The duration in milliseconds since the given Instant.
+      */
+     public static long toMillisSince(final Instant instant) {
+-        final Instant instant2 = toInstant(instant);
++        // The sign of the duration is the opposite of the sign of the instant's epoch second: an instant far in the past
++        // yields a large positive duration, an instant far in the future a large negative one. Bind on the duration.
++        final Duration duration = DurationUtils.since(toInstant(instant));
+         try {
+-            return DurationUtils.since(instant2).toMillis();
++            return duration.toMillis();
+         } catch (final ArithmeticException e) {
+-            return toBound(instant2, Long.MIN_VALUE, Long.MAX_VALUE);
++            return duration.isNegative() ? Long.MIN_VALUE : Long.MAX_VALUE;
+         }
+     }
+ 
+     /**
+      * No instances needed.
+      */

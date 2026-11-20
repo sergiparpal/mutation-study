@@ -1,0 +1,35 @@
+# P126: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +2/-2   lines, code only (comments and blank lines left out, by line prefix): +2/-2
+diff --git a/src/main/java/org/apache/commons/lang3/BitField.java b/src/main/java/org/apache/commons/lang3/BitField.java
+--- a/src/main/java/org/apache/commons/lang3/BitField.java
++++ b/src/main/java/org/apache/commons/lang3/BitField.java
+@@ -193,13 +193,13 @@ public short getShortValue(final short holder) {
+      *
+      * @param holder The int data containing the bits we're interested in.
+      * @return The selected bits, shifted right appropriately.
+      * @see #setValue(int,int)
+      */
+     public int getValue(final int holder) {
+-        return getRawValue(holder) >> shiftCount;
++        return getRawValue(holder) >>> shiftCount;
+     }
+ 
+     /**
+      * Gets the value for the specified BitField, appropriately shifted right.
+      * <p>
+      * Many users of a BitField will want to treat the specified bits as an long value, and will not want to be aware that the value is stored as a BitField (and
+@@ -209,13 +209,13 @@ public int getValue(final int holder) {
+      * @param holder The long data containing the bits we're interested in.
+      * @return The selected bits, shifted right appropriately.
+      * @see #setValue(long,long)
+      * @since 3.21.0
+      */
+     public long getValue(final long holder) {
+-        return getRawValue(holder) >> shiftCount;
++        return getRawValue(holder) >>> shiftCount;
+     }
+ 
+     /**
+      * Tests whether all of the bits are set or not.
+      * <p>
+      * This is a stricter test than {@link #isSet(int)}, in that all of the bits in a multi-bit set must be set for this method to return {@code true}.

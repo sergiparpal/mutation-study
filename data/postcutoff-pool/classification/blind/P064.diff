@@ -1,0 +1,47 @@
+# P064: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +8/-7   lines, code only (comments and blank lines left out, by line prefix): +8/-7
+diff --git a/src/main/java/org/apache/commons/csv/CSVFormat.java b/src/main/java/org/apache/commons/csv/CSVFormat.java
+--- a/src/main/java/org/apache/commons/csv/CSVFormat.java
++++ b/src/main/java/org/apache/commons/csv/CSVFormat.java
+@@ -1687,17 +1687,17 @@ public boolean equals(final Object obj) {
+         final CSVFormat other = (CSVFormat) obj;
+         return allowMissingColumnNames == other.allowMissingColumnNames && autoFlush == other.autoFlush &&
+                 Objects.equals(commentMarker, other.commentMarker) && Objects.equals(delimiter, other.delimiter) &&
+                 duplicateHeaderMode == other.duplicateHeaderMode && Objects.equals(escapeCharacter, other.escapeCharacter) &&
+                 Arrays.equals(headerComments, other.headerComments) && Arrays.equals(headers, other.headers) &&
+                 ignoreEmptyLines == other.ignoreEmptyLines && ignoreHeaderCase == other.ignoreHeaderCase &&
+-                ignoreSurroundingSpaces == other.ignoreSurroundingSpaces && lenientEof == other.lenientEof &&
+-                Objects.equals(nullString, other.nullString) && Objects.equals(quoteCharacter, other.quoteCharacter) &&
+-                quoteMode == other.quoteMode && Objects.equals(quotedNullString, other.quotedNullString) &&
+-                Objects.equals(recordSeparator, other.recordSeparator) && skipHeaderRecord == other.skipHeaderRecord &&
+-                trailingData == other.trailingData && trailingDelimiter == other.trailingDelimiter && trim == other.trim;
++                ignoreSurroundingSpaces == other.ignoreSurroundingSpaces && lenientEof == other.lenientEof && maxRows == other.maxRows &&
++                Objects.equals(nullString, other.nullString) && Objects.equals(quoteCharacter, other.quoteCharacter) && quoteMode == other.quoteMode &&
++                Objects.equals(quotedNullString, other.quotedNullString) && Objects.equals(recordSeparator, other.recordSeparator) &&
++                skipHeaderRecord == other.skipHeaderRecord && trailingData == other.trailingData && trailingDelimiter == other.trailingDelimiter &&
++                trim == other.trim;
+     }
+ 
+     private void escape(final char c, final Appendable appendable) throws IOException {
+         append(escapeCharacter.charValue(), appendable); // Explicit (un)boxing is intentional
+         append(c, appendable);
+     }
+@@ -2026,15 +2026,16 @@ public boolean getTrim() {
+     @Override
+     public int hashCode() {
+         final int prime = 31;
+         int result = 1;
+         result = prime * result + Arrays.hashCode(headerComments);
+         result = prime * result + Arrays.hashCode(headers);
+-        return prime * result + Objects.hash(allowMissingColumnNames, autoFlush, commentMarker, delimiter, duplicateHeaderMode, escapeCharacter,
+-                ignoreEmptyLines, ignoreHeaderCase, ignoreSurroundingSpaces, lenientEof, nullString, quoteCharacter, quoteMode, quotedNullString,
++        result = prime * result + Objects.hash(allowMissingColumnNames, autoFlush, commentMarker, delimiter, duplicateHeaderMode, escapeCharacter,
++                ignoreEmptyLines, ignoreHeaderCase, ignoreSurroundingSpaces, lenientEof, maxRows, nullString, quoteCharacter, quoteMode, quotedNullString,
+                 recordSeparator, skipHeaderRecord, trailingData, trailingDelimiter, trim);
++        return result;
+     }
+ 
+     /**
+      * Tests whether comments are supported by this format.
+      *
+      * Note that the comment introducer character is only recognized at the start of a line.

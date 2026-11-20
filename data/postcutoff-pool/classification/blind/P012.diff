@@ -1,0 +1,44 @@
+# P012: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +10/-7   lines, code only (comments and blank lines left out, by line prefix): +7/-2
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+--- a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+@@ -1226,28 +1226,31 @@ private static boolean isAssignable(final Type type, final WildcardType toWildca
+             final Type[] upperBounds = getImplicitUpperBounds(wildcardType);
+             final Type[] lowerBounds = getImplicitLowerBounds(wildcardType);
+             for (Type toBound : toUpperBounds) {
+                 // if there are assignments for unresolved type variables,
+                 // now's the time to substitute them.
+                 toBound = substituteTypeVariables(toBound, typeVarAssigns);
+-                // each upper bound of the subject type has to be assignable to
+-                // each
+-                // upper bound of the target type
++                // at least one upper bound of the subject type has to be assignable to
++                // each upper bound of the target type
++                boolean satisfied = false;
+                 for (final Type bound : upperBounds) {
+-                    if (!isAssignable(bound, toBound, typeVarAssigns)) {
+-                        return false;
++                    if (isAssignable(bound, toBound, typeVarAssigns)) {
++                        satisfied = true;
++                        break;
+                     }
+                 }
++                if (!satisfied) {
++                    return false;
++                }
+             }
+             for (Type toBound : toLowerBounds) {
+                 // if there are assignments for unresolved type variables,
+                 // now's the time to substitute them.
+                 toBound = substituteTypeVariables(toBound, typeVarAssigns);
+                 // each lower bound of the target type has to be assignable to
+-                // each
+-                // lower bound of the subject type
++                // each lower bound of the subject type
+                 for (final Type bound : lowerBounds) {
+                     if (!isAssignable(toBound, bound, typeVarAssigns)) {
+                         return false;
+                     }
+                 }
+             }

@@ -1,0 +1,20 @@
+# P016: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -2359,13 +2359,13 @@ public int lastIndexOf(final char ch, int startIndex) {
+      * </p>
+      *
+      * @param str  The string to find, null returns -1.
+      * @return The last index of the string, or -1 if not found.
+      */
+     public int lastIndexOf(final String str) {
+-        return lastIndexOf(str, size - 1);
++        return lastIndexOf(str, size);
+     }
+ 
+     /**
+      * Searches the string builder to find the last reference to the specified
+      * string starting searching from the given index.
+      * <p>

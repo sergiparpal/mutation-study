@@ -1,0 +1,25 @@
+# P065: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +7/-0   lines, code only (comments and blank lines left out, by line prefix): +4/-0
+diff --git a/src/main/java/org/apache/commons/lang3/ClassUtils.java b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+--- a/src/main/java/org/apache/commons/lang3/ClassUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+@@ -1640,12 +1640,19 @@ private static String toCleanName(final String className) {
+         // The class name length without array markers.
+         final int cnLen = arrIdx > 0 ? arrIdx : canonicalName.length();
+         if (cnLen > MAX_CLASS_NAME_LENGTH && !encodedName) {
+             throw new IllegalArgumentException(String.format("Class name greater than maxium length %,d", MAX_CLASS_NAME_LENGTH));
+         }
+         if (canonicalName.endsWith(arrayMarker)) {
++            // Reject malformed inputs like "java.lang.String[]junk[]" or
++            // "java.lang.String[]][]" where the suffix is not composed of
++            // repeated "[]" pairs.
++            final String tail = canonicalName.substring(arrIdx);
++            if (!tail.matches("(?:\\[\\])+")) {
++                throw new IllegalArgumentException("Malformed array name: " + canonicalName);
++            }
+             final int dims =  (canonicalName.length() - arrIdx) / 2;
+             if (dims > MAX_JVM_ARRAY_DIMENSION) {
+                 throw new IllegalArgumentException("Array dimension greater than JVM specification maximum of 255.");
+             }
+             final StringBuilder classNameBuffer = new StringBuilder(StringUtils.repeat(encodedArrayOpen, dims));
+             canonicalName = canonicalName.substring(0, arrIdx);

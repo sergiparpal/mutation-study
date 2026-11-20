@@ -1,0 +1,25 @@
+# P106: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +3/-2   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/csv/CSVFormat.java b/src/main/java/org/apache/commons/csv/CSVFormat.java
+--- a/src/main/java/org/apache/commons/csv/CSVFormat.java
++++ b/src/main/java/org/apache/commons/csv/CSVFormat.java
+@@ -2451,16 +2451,17 @@ private void printWithQuotes(final Object object, final CharSequence charSeq, fi
+                 // an empty line has no tokens.
+                 if (newRecord) {
+                     quote = true;
+                 }
+             } else {
+                 char c = charSeq.charAt(pos);
+-                if (c <= Constants.COMMENT) {
++                if (c <= Constants.COMMENT || isCommentMarkerSet() && c == commentMarker.charValue()) {
+                     // Some other chars at the start of a value caused the parser to fail, so for now
+                     // encapsulate if we start in anything less than '#'. We are being conservative
+-                    // by including the default comment char too.
++                    // by including the default comment char and any configured comment marker too,
++                    // which the parser would otherwise read back as a comment line.
+                     quote = true;
+                 } else {
+                     while (pos < len) {
+                         c = charSeq.charAt(pos);
+                         if (c == Constants.LF || c == Constants.CR || c == quoteChar || c == escapeChar || isDelimiter(c, charSeq, pos, delim, delimLength)) {
+                             quote = true;

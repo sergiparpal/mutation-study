@@ -1,0 +1,41 @@
+# P120: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +10/-0   lines, code only (comments and blank lines left out, by line prefix): +10/-0
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+--- a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+@@ -1040,12 +1040,17 @@ public Date parse(final String source) throws ParseException {
+      * </p>
+      *
+      * @see org.apache.commons.lang3.time.DateParser#parse(String, java.text.ParsePosition)
+      */
+     @Override
+     public Date parse(final String source, final ParsePosition pos) {
++        final int startIndex = pos.getIndex();
++        if (startIndex > source.length()) {
++            pos.setErrorIndex(startIndex);
++            return null;
++        }
+         // timing tests indicate getting new instance is 19% faster than cloning
+         final Calendar cal = Calendar.getInstance(timeZone, locale);
+         cal.clear();
+         return parse(source, pos, cal) ? cal.getTime() : null;
+     }
+ 
+@@ -1059,12 +1064,17 @@ public Date parse(final String source, final ParsePosition pos) {
+      * @param calendar The calendar into which to set parsed fields.
+      * @return true, if source has been parsed (pos parsePosition is updated); otherwise false (and pos errorIndex is updated)
+      * @throws IllegalArgumentException when Calendar has been set to be not lenient, and a parsed field is out of range.
+      */
+     @Override
+     public boolean parse(final String source, final ParsePosition pos, final Calendar calendar) {
++        final int startIndex = pos.getIndex();
++        if (startIndex > source.length()) {
++            pos.setErrorIndex(startIndex);
++            return false;
++        }
+         final ListIterator<StrategyAndWidth> lt = patterns.listIterator();
+         while (lt.hasNext()) {
+             final StrategyAndWidth strategyAndWidth = lt.next();
+             final int maxWidth = strategyAndWidth.getMaxWidth(lt);
+             if (!strategyAndWidth.strategy.parse(this, calendar, source, pos, maxWidth)) {
+                 return false;

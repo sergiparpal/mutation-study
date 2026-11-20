@@ -1,0 +1,35 @@
+# P063: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +3/-1   lines, code only (comments and blank lines left out, by line prefix): +3/-1
+diff --git a/src/main/java/org/apache/commons/csv/CSVFormat.java b/src/main/java/org/apache/commons/csv/CSVFormat.java
+--- a/src/main/java/org/apache/commons/csv/CSVFormat.java
++++ b/src/main/java/org/apache/commons/csv/CSVFormat.java
+@@ -2261,13 +2261,14 @@ public void print(final Object value, final Appendable out, final boolean newRec
+             }
+             charSequence = getTrim() ? trim(charSequence) : charSequence;
+             print(value, charSequence, out, newRecord);
+         }
+     }
+ 
+-    private synchronized void print(final Object object, final CharSequence value, final Appendable out, final boolean newRecord) throws IOException {
++    private void print(final Object object, final CharSequence value, final Appendable out, final boolean newRecord) throws IOException {
++        synchronized (writeLock) {
+             final int offset = 0;
+             final int len = value.length();
+             if (!newRecord) {
+                 out.append(getDelimiterString());
+             }
+             if (object == null) {
+@@ -2278,12 +2279,13 @@ private synchronized void print(final Object object, final CharSequence value, f
+             } else if (isEscapeCharacterSet()) {
+                 printWithEscapes(value, out);
+             } else {
+                 out.append(value, offset, len);
+             }
+         }
++    }
+ 
+     /**
+      * Prints to the specified {@code Path} with given {@code Charset}, returns a {@code CSVPrinter} which the caller MUST close.
+      *
+      * <p>
+      * See also {@link CSVPrinter}.

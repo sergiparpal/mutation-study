@@ -1,0 +1,248 @@
+# P025: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +36/-18   lines, code only (comments and blank lines left out, by line prefix): +18/-0
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -7425,22 +7425,24 @@ public static void shuffle(final boolean[] array) {
+     }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      *
+-     * @param array  the array to shuffle.
+-     * @param random the source of randomness used to permute the elements.
++     * @param array  the array to shuffle, no-op if {@code null}.
++     * @param random the source of randomness used to permute the elements, no-op if {@code null}.
+      * @see <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle algorithm</a>
+      * @since 3.6
+      */
+     public static void shuffle(final boolean[] array, final Random random) {
++        if (array != null && random != null) {
+             for (int i = array.length; i > 1; i--) {
+                 swap(array, i - 1, random.nextInt(i), 1);
+             }
+         }
++    }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      * <p>
+      * This method uses the current {@link ThreadLocalRandom} as its random number generator.
+@@ -7459,22 +7461,24 @@ public static void shuffle(final byte[] array) {
+     }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      *
+-     * @param array  the array to shuffle.
+-     * @param random the source of randomness used to permute the elements.
++     * @param array  the array to shuffle, no-op if {@code null}.
++     * @param random the source of randomness used to permute the elements, no-op if {@code null}.
+      * @see <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle algorithm</a>
+      * @since 3.6
+      */
+     public static void shuffle(final byte[] array, final Random random) {
++        if (array != null && random != null) {
+             for (int i = array.length; i > 1; i--) {
+                 swap(array, i - 1, random.nextInt(i), 1);
+             }
+         }
++    }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      * <p>
+      * This method uses the current {@link ThreadLocalRandom} as its random number generator.
+@@ -7493,22 +7497,24 @@ public static void shuffle(final char[] array) {
+     }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      *
+-     * @param array  the array to shuffle.
+-     * @param random the source of randomness used to permute the elements.
++     * @param array  the array to shuffle, no-op if {@code null}.
++     * @param random the source of randomness used to permute the elements, no-op if {@code null}.
+      * @see <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle algorithm</a>
+      * @since 3.6
+      */
+     public static void shuffle(final char[] array, final Random random) {
++        if (array != null && random != null) {
+             for (int i = array.length; i > 1; i--) {
+                 swap(array, i - 1, random.nextInt(i), 1);
+             }
+         }
++    }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      * <p>
+      * This method uses the current {@link ThreadLocalRandom} as its random number generator.
+@@ -7527,22 +7533,24 @@ public static void shuffle(final double[] array) {
+     }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      *
+-     * @param array  the array to shuffle.
+-     * @param random the source of randomness used to permute the elements.
++     * @param array  the array to shuffle, no-op if {@code null}.
++     * @param random the source of randomness used to permute the elements, no-op if {@code null}.
+      * @see <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle algorithm</a>
+      * @since 3.6
+      */
+     public static void shuffle(final double[] array, final Random random) {
++        if (array != null && random != null) {
+             for (int i = array.length; i > 1; i--) {
+                 swap(array, i - 1, random.nextInt(i), 1);
+             }
+         }
++    }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      * <p>
+      * This method uses the current {@link ThreadLocalRandom} as its random number generator.
+@@ -7561,22 +7569,24 @@ public static void shuffle(final float[] array) {
+     }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      *
+-     * @param array  the array to shuffle.
+-     * @param random the source of randomness used to permute the elements.
++     * @param array  the array to shuffle, no-op if {@code null}.
++     * @param random the source of randomness used to permute the elements, no-op if {@code null}.
+      * @see <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle algorithm</a>
+      * @since 3.6
+      */
+     public static void shuffle(final float[] array, final Random random) {
++        if (array != null && random != null) {
+             for (int i = array.length; i > 1; i--) {
+                 swap(array, i - 1, random.nextInt(i), 1);
+             }
+         }
++    }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      * <p>
+      * This method uses the current {@link ThreadLocalRandom} as its random number generator.
+@@ -7595,22 +7605,24 @@ public static void shuffle(final int[] array) {
+     }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      *
+-     * @param array  the array to shuffle.
+-     * @param random the source of randomness used to permute the elements.
++     * @param array  the array to shuffle, no-op if {@code null}.
++     * @param random the source of randomness used to permute the elements, no-op if {@code null}.
+      * @see <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle algorithm</a>
+      * @since 3.6
+      */
+     public static void shuffle(final int[] array, final Random random) {
++        if (array != null && random != null) {
+             for (int i = array.length; i > 1; i--) {
+                 swap(array, i - 1, random.nextInt(i), 1);
+             }
+         }
++    }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      * <p>
+      * This method uses the current {@link ThreadLocalRandom} as its random number generator.
+@@ -7629,22 +7641,24 @@ public static void shuffle(final long[] array) {
+     }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      *
+-     * @param array  the array to shuffle.
+-     * @param random the source of randomness used to permute the elements.
++     * @param array  the array to shuffle, no-op if {@code null}.
++     * @param random the source of randomness used to permute the elements, no-op if {@code null}.
+      * @see <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle algorithm</a>
+      * @since 3.6
+      */
+     public static void shuffle(final long[] array, final Random random) {
++        if (array != null && random != null) {
+             for (int i = array.length; i > 1; i--) {
+                 swap(array, i - 1, random.nextInt(i), 1);
+             }
+         }
++    }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      * <p>
+      * This method uses the current {@link ThreadLocalRandom} as its random number generator.
+@@ -7663,22 +7677,24 @@ public static void shuffle(final Object[] array) {
+     }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      *
+-     * @param array  the array to shuffle.
+-     * @param random the source of randomness used to permute the elements.
++     * @param array  the array to shuffle, no-op if {@code null}.
++     * @param random the source of randomness used to permute the elements, no-op if {@code null}.
+      * @see <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle algorithm</a>
+      * @since 3.6
+      */
+     public static void shuffle(final Object[] array, final Random random) {
++        if (array != null && random != null) {
+             for (int i = array.length; i > 1; i--) {
+                 swap(array, i - 1, random.nextInt(i), 1);
+             }
+         }
++    }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      * <p>
+      * This method uses the current {@link ThreadLocalRandom} as its random number generator.
+@@ -7697,22 +7713,24 @@ public static void shuffle(final short[] array) {
+     }
+ 
+     /**
+      * Shuffles randomly the elements of the specified array using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle
+      * algorithm</a>.
+      *
+-     * @param array  the array to shuffle.
+-     * @param random the source of randomness used to permute the elements.
++     * @param array  the array to shuffle, no-op if {@code null}.
++     * @param random the source of randomness used to permute the elements, no-op if {@code null}.
+      * @see <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates shuffle algorithm</a>
+      * @since 3.6
+      */
+     public static void shuffle(final short[] array, final Random random) {
++        if (array != null && random != null) {
+             for (int i = array.length; i > 1; i--) {
+                 swap(array, i - 1, random.nextInt(i), 1);
+             }
+         }
++    }
+ 
+     /**
+      * Tests whether the given data array starts with an expected array, for example, signature bytes.
+      * <p>
+      * If both arrays are null, the method returns true. The method return false when one array is null and the other not.
+      * </p>

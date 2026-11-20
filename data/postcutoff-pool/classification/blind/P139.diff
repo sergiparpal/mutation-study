@@ -1,0 +1,45 @@
+# P139: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-10   lines, code only (comments and blank lines left out, by line prefix): +2/-10
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+--- a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+@@ -83,15 +83,14 @@ public Type getGenericComponentType() {
+ 
+         /**
+          * {@inheritDoc}
+          */
+         @Override
+         public int hashCode() {
+-            int result = 67 << 4;
+-            result |= componentType.hashCode();
+-            return result;
++            // Match the JDK's hash code for an equal generic array type.
++            return componentType.hashCode();
+         }
+ 
+         /**
+          * {@inheritDoc}
+          */
+         @Override
+@@ -155,19 +154,14 @@ public Type getRawType() {
+ 
+         /**
+          * {@inheritDoc}
+          */
+         @Override
+         public int hashCode() {
+-            int result = 71 << 4;
+-            result |= raw.hashCode();
+-            result <<= 4;
+-            result |= Objects.hashCode(useOwner);
+-            result <<= 8;
+-            result |= Arrays.hashCode(typeArguments);
+-            return result;
++            // Match the JDK's hash code for an equal parameterized type.
++            return Arrays.hashCode(typeArguments) ^ Objects.hashCode(useOwner) ^ raw.hashCode();
+         }
+ 
+         /**
+          * {@inheritDoc}
+          */
+         @Override

@@ -1,0 +1,35 @@
+# P011: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-0   lines, code only (comments and blank lines left out, by line prefix): +4/-0
+diff --git a/src/main/java/org/apache/commons/lang3/concurrent/TimedSemaphore.java b/src/main/java/org/apache/commons/lang3/concurrent/TimedSemaphore.java
+--- a/src/main/java/org/apache/commons/lang3/concurrent/TimedSemaphore.java
++++ b/src/main/java/org/apache/commons/lang3/concurrent/TimedSemaphore.java
+@@ -294,12 +294,15 @@ public synchronized void acquire() throws InterruptedException {
+         prepareAcquire();
+         boolean canPass;
+         do {
+             canPass = acquirePermit();
+             if (!canPass) {
+                 wait();
++                if (shutdown) {
++                    throw new IllegalStateException("TimedSemaphore is shut down.");
++                }
+             }
+         } while (!canPass);
+     }
+ 
+     /**
+      * Internal helper method for acquiring a permit. This method checks whether currently a permit can be acquired and - if so - increases the internal
+@@ -451,12 +454,13 @@ public synchronized void shutdown() {
+                 getExecutorService().shutdownNow();
+             }
+             if (task != null) {
+                 task.cancel(false);
+             }
+             shutdown = true;
++            notifyAll();
+         }
+     }
+ 
+     /**
+      * Starts the timer. This method is called when {@link #acquire()} is called for the first time. It schedules a task to be executed at fixed rate to monitor
+      * the time period specified.

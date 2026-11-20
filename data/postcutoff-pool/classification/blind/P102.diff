@@ -1,0 +1,24 @@
+# P102: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +4/-2   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java b/src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java
+--- a/src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java
++++ b/src/main/java/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.java
+@@ -117,14 +117,16 @@ public int translate(final CharSequence input, final int index, final Writer out
+                 // Check there's more than just an x after the &#
+                 if (start == seqEnd) {
+                     return 0;
+                 }
+             }
+             int end = start;
+-            // Note that this supports character codes without a ; on the end
+-            while (end < seqEnd && CharUtils.isHex(input.charAt(end))) {
++            // Note that this supports character codes without a ; on the end.
++            // A decimal entity (&#...) only holds decimal digits; a-f are hex digits and must
++            // not be consumed here, otherwise the following text is swallowed into a failed parse.
++            while (end < seqEnd && (isHex ? CharUtils.isHex(input.charAt(end)) : CharUtils.isAsciiNumeric(input.charAt(end)))) {
+                 end++;
+             }
+             final boolean semiNext = end != seqEnd && input.charAt(end) == ';';
+             if (!semiNext) {
+                 if (isSet(OPTION.semiColonRequired)) {
+                     return 0;

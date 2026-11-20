@@ -1,0 +1,80 @@
+# P109: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +22/-11   lines, code only (comments and blank lines left out, by line prefix): +21/-1
+diff --git a/src/main/java/org/apache/commons/lang3/ClassUtils.java b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+--- a/src/main/java/org/apache/commons/lang3/ClassUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+@@ -15,15 +15,17 @@
+  * limitations under the License.
+  */
+ package org.apache.commons.lang3;
+ 
+ import java.lang.reflect.Method;
+ import java.lang.reflect.Modifier;
++import java.util.ArrayDeque;
+ import java.util.ArrayList;
+ import java.util.Collections;
+ import java.util.Comparator;
++import java.util.Deque;
+ import java.util.HashMap;
+ import java.util.HashSet;
+ import java.util.Iterator;
+ import java.util.LinkedHashSet;
+ import java.util.List;
+ import java.util.Map;
+@@ -1008,36 +1010,45 @@ public static String getShortCanonicalName(final String canonicalName) {
+         return getShortClassName(getCanonicalName(canonicalName));
+     }
+ 
+     /**
+      * Gets the class name minus the package name from a {@link Class}.
+      *
+-     * <p>
+-     * This method simply gets the name using {@code Class.getName()} and then calls {@link #getShortClassName(String)}. See
+-     * relevant notes there.
+-     * </p>
+-     *
+      * @param cls the class to get the short name for.
+      * @return the class name without the package name or an empty string. If the class is an inner class then the returned
+      *         value will contain the outer class or classes separated with {@code .} (dot) character.
+      */
+     public static String getShortClassName(final Class<?> cls) {
+         if (cls == null) {
+             return StringUtils.EMPTY;
+         }
+-        return getShortClassName(cls.getName());
++        int dim = 0;
++        Class<?> c = cls;
++        while (c.isArray()) {
++            dim++;
++            c = c.getComponentType();
++        }
++        final String base;
++        // Preserve legacy behavior for anonymous/local classes (keeps compiler ordinals: $13, $10Named, etc.)
++        if (c.isAnonymousClass() || c.isLocalClass()) {
++            base = getShortClassName(c.getName());
++        } else {
++            final Deque<String> parts = new ArrayDeque<>();
++            Class<?> x = c;
++            while (x != null) {
++                parts.push(x.getSimpleName());
++                x = x.getDeclaringClass();
++            }
++            base = String.join(".", parts);
++        }
++        return base + StringUtils.repeat("[]", dim);
+     }
+ 
+     /**
+      * Gets the class name of the {@code object} without the package name or names.
+      *
+-     * <p>
+-     * The method looks up the class of the object and then converts the name of the class invoking
+-     * {@link #getShortClassName(Class)} (see relevant notes there).
+-     * </p>
+-     *
+      * @param object the class to get the short name for, may be {@code null}.
+      * @param valueIfNull the value to return if the object is {@code null}.
+      * @return the class name of the object without the package name, or {@code valueIfNull} if the argument {@code object}
+      *         is {@code null}.
+      */
+     public static String getShortClassName(final Object object, final String valueIfNull) {

@@ -1,0 +1,19 @@
+# P101: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-0   lines, code only (comments and blank lines left out, by line prefix): +1/-0
+diff --git a/src/main/java/org/apache/commons/csv/Lexer.java b/src/main/java/org/apache/commons/csv/Lexer.java
+--- a/src/main/java/org/apache/commons/csv/Lexer.java
++++ b/src/main/java/org/apache/commons/csv/Lexer.java
+@@ -188,12 +188,13 @@ boolean isEscape(final int ch) {
+      * For example, for delimiter "[|]" and escape '!', return true if the next characters constitute "![!|!]".
+      *
+      * @return true if the next characters constitute an escape delimiter.
+      * @throws IOException If an I/O error occurs.
+      */
+     boolean isEscapeDelimiter() throws IOException {
++        Arrays.fill(escapeDelimiterBuf, '\0');
+         reader.peek(escapeDelimiterBuf);
+         if (escapeDelimiterBuf[0] != delimiter[0]) {
+             return false;
+         }
+         for (int i = 1; i < delimiter.length; i++) {
+             if (escapeDelimiterBuf[2 * i] != delimiter[i] || escapeDelimiterBuf[2 * i - 1] != escape) {

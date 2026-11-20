@@ -1,0 +1,56 @@
+# P022: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +14/-6   lines, code only (comments and blank lines left out, by line prefix): +5/-2
+diff --git a/src/main/java/org/apache/commons/lang3/concurrent/EventCountCircuitBreaker.java b/src/main/java/org/apache/commons/lang3/concurrent/EventCountCircuitBreaker.java
+--- a/src/main/java/org/apache/commons/lang3/concurrent/EventCountCircuitBreaker.java
++++ b/src/main/java/org/apache/commons/lang3/concurrent/EventCountCircuitBreaker.java
+@@ -221,21 +221,27 @@ public long getCheckIntervalStart() {
+          */
+         public long getEventCount() {
+             return eventCount;
+         }
+ 
+         /**
+-         * Returns a new instance of {@link CheckIntervalData} with the event counter
+-         * incremented by the given delta. If the delta is 0, this object is returned.
++         * Returns a new instance of {@link CheckIntervalData} with the event counter incremented by the given delta. If the delta is 0, this object is
++         * returned.
++         * <p>
++         * If the increment would overflow, the event counter saturates at {@link Long#MAX_VALUE}.
++         * </p>
+          *
+          * @param delta The delta
+          * @return The updated instance
+          */
+         public CheckIntervalData increment(final int delta) {
+-            return delta == 0 ? this : new CheckIntervalData(getEventCount() + delta,
+-                    getCheckIntervalStart());
++            if (delta == 0) {
++                return this;
++            }
++            final long nextCount = getEventCount() + delta;
++            return new CheckIntervalData(nextCount < getEventCount() ? Long.MAX_VALUE : nextCount, getCheckIntervalStart());
+         }
+     }
+ 
+     /**
+      * A specialized {@link AbstractStateStrategy} implementation for the state closed.
+      */
+@@ -477,14 +483,16 @@ public boolean incrementAndCheckState() {
+     }
+ 
+     /**
+      * {@inheritDoc}
+      *
+      * <p>
+-     * The event count is a protective counter and only moves toward the opening threshold:
+-     * negative increments are rejected.
++     * The event count is a protective counter: negative increments are rejected, and an increment that would overflow
++     * {@link Long#MAX_VALUE} saturates the counter at {@link Long#MAX_VALUE} instead of wrapping negative. Saturation prevents
++     * an overloaded interval from causing an automatic close. The counter resets when a new check interval starts or the
++     * circuit breaker changes state.
+      * </p>
+      *
+      * @throws IllegalArgumentException Thrown if the increment is negative.
+      */
+     @Override
+     public boolean incrementAndCheckState(final Integer increment) {

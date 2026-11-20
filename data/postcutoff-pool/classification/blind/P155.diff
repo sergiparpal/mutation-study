@@ -1,0 +1,20 @@
+# P155: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +1/-1   lines, code only (comments and blank lines left out, by line prefix): +1/-1
+diff --git a/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java b/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
+--- a/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
++++ b/src/main/java/org/apache/commons/csv/ExtendedBufferedReader.java
+@@ -207,13 +207,13 @@ public void mark(final int readAheadLimit) throws IOException {
+     @Override
+     public int read() throws IOException {
+         final int current = super.read();
+         if (current == CR || current == LF && lastChar != CR || current == EOF && lastChar != CR && lastChar != LF && lastChar != EOF) {
+             lineNumber++;
+         }
+-        if (encoder != null) {
++        if (encoder != null && current != EOF) {
+             this.bytesRead += getEncodedCharLength(current);
+         }
+         lastChar = current;
+         position++;
+         return lastChar;
+     }

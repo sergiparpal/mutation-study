@@ -1,0 +1,37 @@
+# P104: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +2/-8   lines, code only (comments and blank lines left out, by line prefix): +2/-8
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -366,29 +366,23 @@ public static String abbreviate(final String str, String abbrevMarker, int offse
+             throw new IllegalArgumentException(String.format("Minimum abbreviation width is %d", minAbbrevWidth));
+         }
+         final int strLen = str.length();
+         if (strLen <= maxWidth) {
+             return str;
+         }
+-        if (offset > strLen) {
+-            offset = strLen;
+-        }
+-        if (strLen - offset < maxWidth - abbrevMarkerLength) {
+-            offset = strLen - (maxWidth - abbrevMarkerLength);
++        if (strLen - offset <= maxWidth - abbrevMarkerLength) {
++            return abbrevMarker + str.substring(strLen - (maxWidth - abbrevMarkerLength));
+         }
+         if (offset <= abbrevMarkerLength + 1) {
+             return str.substring(0, maxWidth - abbrevMarkerLength) + abbrevMarker;
+         }
+         if (maxWidth < minAbbrevWidthOffset) {
+             throw new IllegalArgumentException(String.format("Minimum abbreviation width with offset is %d", minAbbrevWidthOffset));
+         }
+-        if (offset + maxWidth - abbrevMarkerLength < strLen) {
+         return abbrevMarker + abbreviate(str.substring(offset), abbrevMarker, maxWidth - abbrevMarkerLength);
+     }
+-        return abbrevMarker + str.substring(strLen - (maxWidth - abbrevMarkerLength));
+-    }
+ 
+     /**
+      * Abbreviates a String to the length passed, replacing the middle characters with the supplied replacement String.
+      *
+      * <p>
+      * This abbreviation only occurs if the following criteria is met:

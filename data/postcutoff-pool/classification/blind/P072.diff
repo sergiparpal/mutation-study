@@ -1,0 +1,70 @@
+# P072: production diff (src/main/java) of one commit against its parent; whitespace-only changes ignored
+# files: 1   lines, all: +11/-5   lines, code only (comments and blank lines left out, by line prefix): +10/-5
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java b/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
+--- a/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
+@@ -369,24 +369,30 @@ private static Method getInvokeMethod(final boolean forceAccess, final String me
+      * @param requestTypes  The parameter types to match, {@code null} treated as empty.
+      * @return The accessible method or null.
+      * @throws SecurityException Thrown if an underlying accessible object's method denies the request.
+      * @see SecurityManager#checkPermission
+      */
+     public static Method getMatchingAccessibleMethod(final Class<?> cls, final String methodName, final Class<?>... requestTypes) {
++        return getMatchingAccessibleMethod(cls, methodName, false, requestTypes);
++    }
++
++    private static Method getMatchingAccessibleMethod(final Class<?> cls, final String methodName, final boolean staticOnly,
++            final Class<?>... requestTypes) {
+         final Class<?>[] actualTypes = ArrayUtils.nullToEmpty(requestTypes);
+         final Method candidate = getMethodObject(cls, methodName, actualTypes);
+-        if (candidate != null) {
++        if (candidate != null && (!staticOnly || MemberUtils.isStatic(candidate))) {
+             // The exact match may be declared on a non-public class, so prefer the public
+             // declaration the way the search below does; a static method hides, so it is kept.
+             final Method accessibleCandidate = MemberUtils.isStatic(candidate) ? null : getAccessibleMethod(cls, candidate);
+             return MemberUtils.setAccessibleWorkaround(accessibleCandidate != null ? accessibleCandidate : candidate);
+         }
+         // search through all methods
+         final Method[] methods = cls.getMethods();
+         final List<Method> matchingMethods = Stream.of(methods)
+-                .filter(method -> method.getName().equals(methodName) && MemberUtils.isMatchingMethod(method, actualTypes)).collect(Collectors.toList());
++                .filter(method -> method.getName().equals(methodName) && (!staticOnly || MemberUtils.isStatic(method))
++                        && MemberUtils.isMatchingMethod(method, actualTypes)).collect(Collectors.toList());
+         // Sort methods by signature to force deterministic result
+         matchingMethods.sort(METHOD_BY_SIGNATURE);
+         Method bestMatch = null;
+         for (final Method method : matchingMethods) {
+             // get accessible version of method
+             final Method accessibleMethod = getAccessibleMethod(method);
+@@ -750,14 +756,14 @@ public static Object invokeExactStaticMethod(final Class<?> cls, final String me
+      * @throws InvocationTargetException   Thrown if the underlying method throws an exception.
+      * @throws ExceptionInInitializerError Thrown if the initialization provoked by this method fails.
+      */
+     public static Object invokeExactStaticMethod(final Class<?> cls, final String methodName, final Object[] args, final Class<?>[] parameterTypes)
+             throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+         final Class<?>[] paramTypes = ArrayUtils.nullToEmpty(parameterTypes);
+-        final Method method = getAccessibleMethod(cls, methodName, ArrayUtils.nullToEmpty(paramTypes));
+-        requireNonNull(method, cls, methodName, paramTypes);
++        final Method candidate = getAccessibleMethod(cls, methodName, ArrayUtils.nullToEmpty(paramTypes));
++        final Method method = requireNonNull(candidate != null && MemberUtils.isStatic(candidate) ? candidate : null, cls, methodName, paramTypes);
+         return method.invoke(null, ArrayUtils.nullToEmpty(args));
+     }
+ 
+     /**
+      * Invokes a named method without parameters.
+      *
+@@ -1050,13 +1056,13 @@ public static Object invokeStaticMethod(final Class<?> cls, final String methodN
+      * @throws ExceptionInInitializerError Thrown if the initialization provoked by this method fails.
+      * @see SecurityManager#checkPermission
+      */
+     public static Object invokeStaticMethod(final Class<?> cls, final String methodName, final Object[] args, final Class<?>[] parameterTypes)
+             throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+         final Class<?>[] paramTypes = ArrayUtils.nullToEmpty(parameterTypes);
+-        final Method method = getMatchingAccessibleMethod(cls, methodName, paramTypes);
++        final Method method = getMatchingAccessibleMethod(cls, methodName, true, paramTypes);
+         requireNonNull(method, cls, methodName, paramTypes);
+         return method.invoke(null, toVarArgs(method, ArrayUtils.nullToEmpty(args)));
+     }
+ 
+     private static Method requireNonNull(final Method method, final Class<?> cls, final String methodName, final Class<?>[] parameterTypes)
+             throws NoSuchMethodException {
