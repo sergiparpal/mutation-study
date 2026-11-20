@@ -1,0 +1,5 @@
+project=commons-csv
+sha=b29fb40acd3ecc09bb4f43d20f88ad5ee9fa8324
+short=b29fb40ac
+date=2026-05-21
+subject=Lexer.isDelimiter() accepts a partial multi-character delimiter at EOF.

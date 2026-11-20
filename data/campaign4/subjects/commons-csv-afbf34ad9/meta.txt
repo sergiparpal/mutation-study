@@ -1,0 +1,5 @@
+project=commons-csv
+sha=afbf34ad92cbf741b9dfad84699e890d8695a6f9
+short=afbf34ad9
+date=2026-06-25
+subject=evaluate isDelimiter once in nextToken whitespace skip

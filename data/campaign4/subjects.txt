@@ -1,0 +1,130 @@
+# Fourth campaign: the subjects, in the order of the runs.
+#
+# The eligible candidates of the post-cutoff pool (data/postcutoff-pool/eligible.tsv)
+# that no agent has run on: not the third campaign's subjects, and not its two
+# pilot subjects (commons-lang-6c4269eb8, commons-csv-ab3d7236), which pilot this
+# campaign too. Of those, left out as PROTOCOL.md says ("The subjects"): the six
+# the blind classification flagged (data/postcutoff-pool/fault-types.tsv) and the
+# nine whose commit message credits an AI. Tags are <repo>-<first 9 characters
+# of the fix commit>. The order is random.Random(20261120).shuffle of the rows
+# sorted by tag.
+#
+# fault type: the final type in fault-types.tsv, classified blind before any run.
+# strict: whether the subject is eligible under the strict reading of the screen.
+#
+# subject                  date        fault type       strict
+commons-lang-d98cea29f   2026-11-15  MISSING_CLAUSE   yes
+commons-lang-6dbbbb308   2026-06-21  MISSING_CLAUSE   yes
+commons-lang-184c9e832   2026-05-17  OMISSION         yes
+commons-lang-b11591895   2026-05-18  API              yes
+commons-lang-7b7be629d   2026-07-12  STATE            yes
+commons-csv-a99f26092    2026-06-15  MISSING_CLAUSE   yes
+commons-lang-c99f2ddfe   2026-07-17  SUBSTITUTION     yes
+commons-lang-aae7f0e61   2026-06-24  OMISSION         yes
+commons-lang-d732cf0f8   2026-11-15  SUBSTITUTION     yes
+commons-cli-db57942a6    2026-08-01  OMISSION         yes
+commons-lang-57bd7dd09   2026-10-25  SUBSTITUTION     yes
+commons-lang-10f442145   2026-08-10  ALGORITHM        yes
+commons-lang-0b4a9d95d   2026-05-18  SUBSTITUTION     yes
+commons-lang-4060e60f4   2026-10-25  OMISSION         yes
+commons-lang-aafee70bf   2026-06-26  ALGORITHM        yes
+commons-lang-2c3748412   2026-06-10  ALGORITHM        yes
+commons-lang-79380dba9   2026-05-18  API              yes
+commons-lang-b1aba6833   2026-07-30  SUBSTITUTION     yes
+commons-lang-5914a8e80   2026-05-07  STATE            yes
+commons-lang-9bcc0d0bf   2026-05-27  OMISSION         yes
+commons-lang-f4442b1c9   2026-11-03  OMISSION         yes
+commons-csv-1a8403dd5    2026-07-18  STATE            yes
+commons-csv-609a228e3    2026-06-22  MISSING_CLAUSE   yes
+commons-lang-c7f1a6d27   2026-10-05  ALGORITHM        yes
+commons-lang-14deed1bf   2026-05-24  OMISSION         yes
+commons-lang-45c80d995   2026-10-18  OMISSION         yes
+commons-lang-fbae26f08   2026-06-18  OMISSION         yes
+commons-lang-4c3f1dd00   2026-05-15  SUBSTITUTION     yes
+commons-lang-5dede14ab   2026-10-20  MISSING_CLAUSE   yes
+commons-lang-19b59ffdd   2026-05-06  OMISSION         yes
+commons-lang-05fffe85e   2026-11-19  MISSING_CLAUSE   yes
+commons-lang-52c06bea2   2026-01-28  OMISSION         yes
+commons-lang-ddf5625d5   2026-06-18  SUBSTITUTION     yes
+commons-lang-daa17b862   2026-05-07  ALGORITHM        yes
+commons-lang-1418a770b   2026-01-25  MISSING_CLAUSE   yes
+commons-lang-c79a10240   2026-05-20  OMISSION         yes
+commons-lang-8425918f9   2026-07-07  ALGORITHM        yes
+commons-csv-1e3de1274    2026-06-09  STATE            yes
+commons-lang-d927bfc84   2026-06-11  OMISSION         yes
+commons-lang-26ead6134   2026-01-26  SUBSTITUTION     yes
+commons-csv-b5940a642    2026-06-13  MISSING_CLAUSE   yes
+commons-csv-f53d04737    2026-07-13  API              yes
+commons-csv-23eb602d2    2026-05-20  OMISSION         yes
+commons-cli-f3ba9c951    2026-06-28  OMISSION         yes
+commons-csv-274b4ceba    2026-06-20  MISSING_CLAUSE   yes
+commons-lang-f164995c9   2026-11-18  MISSING_CLAUSE   yes
+commons-lang-df5245a79   2026-08-22  SUBSTITUTION     yes
+commons-lang-83fe22025   2026-11-15  MISSING_CLAUSE   yes
+commons-lang-cb3a20eaf   2026-10-24  SUBSTITUTION     yes
+commons-csv-bbdfad773    2026-07-01  OMISSION         yes
+commons-lang-18063c1f6   2026-06-18  OMISSION         yes
+commons-cli-8010193ee    2026-07-11  API              yes
+commons-lang-aa47951bd   2026-03-04  STATE            yes
+commons-lang-89047990d   2026-10-12  OMISSION         yes
+commons-lang-1c1a79822   2026-10-16  SUBSTITUTION     yes
+commons-lang-651283fed   2026-11-14  OMISSION         yes
+commons-cli-0f561e597    2026-08-22  SUBSTITUTION     yes
+commons-lang-060ab31e5   2026-06-13  OMISSION         yes
+commons-lang-5b3a81dcd   2026-10-16  ALGORITHM        yes
+commons-lang-0add789ed   2026-07-30  OMISSION         yes
+commons-lang-dda928301   2026-07-06  SUBSTITUTION     no
+commons-lang-0953617b7   2026-05-17  OMISSION         yes
+commons-lang-7da57b615   2026-11-18  OMISSION         yes
+commons-lang-4e1f3eef1   2026-06-20  OMISSION         yes
+commons-lang-54ee8ec1c   2026-08-04  API              yes
+commons-lang-9e0fd0787   2026-10-07  API              yes
+commons-lang-f4bdd4e1d   2026-10-24  OMISSION         yes
+commons-cli-f92c4ce0f    2026-07-11  API              yes
+commons-lang-864dd6ea8   2026-05-07  MISSING_CLAUSE   yes
+commons-lang-e1ffb6ea0   2026-01-28  STATE            yes
+commons-lang-ae85262f0   2026-06-29  MISSING_CLAUSE   yes
+commons-lang-5904c573f   2026-05-05  ALGORITHM        yes
+commons-lang-4a6a98432   2026-02-12  ALGORITHM        no
+commons-lang-127050d2b   2026-04-16  ALGORITHM        yes
+commons-lang-35d652e9e   2026-06-30  SUBSTITUTION     yes
+commons-lang-13d25e059   2026-06-20  SUBSTITUTION     no
+commons-lang-7d325c2a5   2026-10-28  SUBSTITUTION     yes
+commons-lang-f015a7ed9   2026-07-04  OMISSION         no
+commons-cli-7d77ecce8    2026-08-01  API              yes
+commons-lang-a0ffef035   2026-06-19  SUBSTITUTION     no
+commons-lang-3df7f4440   2026-04-30  ALGORITHM        yes
+commons-lang-3f0c0fd5c   2026-07-02  OMISSION         yes
+commons-lang-2626360ce   2026-11-18  STATE            yes
+commons-lang-d215e7fec   2026-10-21  OMISSION         yes
+commons-lang-43154e016   2026-10-05  ALGORITHM        yes
+commons-lang-7c7bc19f2   2026-11-15  SUBSTITUTION     yes
+commons-lang-355f24676   2026-11-15  ALGORITHM        yes
+commons-csv-89784890b    2026-07-20  OMISSION         yes
+commons-csv-09e27ffdb    2026-07-21  API              yes
+commons-lang-edcc0ff2c   2026-11-15  OMISSION         yes
+commons-csv-5e2d0590c    2026-05-20  MISSING_CLAUSE   yes
+commons-lang-2011ce3ba   2026-07-04  SUBSTITUTION     yes
+commons-lang-75086d398   2026-10-27  OMISSION         yes
+commons-lang-a9a0dd8a7   2026-02-23  MISSING_CLAUSE   yes
+commons-lang-fa59a3159   2026-04-25  OMISSION         yes
+commons-csv-f1bf8cd22    2026-08-05  STATE            yes
+commons-lang-28f46460d   2026-05-24  OMISSION         yes
+commons-lang-3e50a7f9c   2026-06-20  MISSING_CLAUSE   yes
+commons-lang-526a03a87   2026-05-18  STATE            yes
+commons-lang-eedd91729   2026-06-18  ALGORITHM        yes
+commons-lang-2240c1f93   2026-06-11  SUBSTITUTION     yes
+commons-csv-afbf34ad9    2026-06-25  STATE            yes
+commons-lang-e2838b281   2026-05-17  SUBSTITUTION     yes
+commons-lang-4a5ef8ed2   2026-01-17  ALGORITHM        yes
+commons-csv-6595acc09    2026-07-08  MISSING_CLAUSE   yes
+commons-lang-46d9a80e5   2026-06-18  ALGORITHM        no
+commons-csv-b29fb40ac    2026-05-21  STATE            yes
+commons-lang-b62244517   2026-01-23  SUBSTITUTION     no
+commons-lang-0c4093928   2026-07-13  MISSING_CLAUSE   yes
+commons-lang-c07bc828f   2026-05-05  SUBSTITUTION     yes
+commons-lang-1c27f93c1   2026-11-16  STATE            yes
+commons-lang-4052e9862   2026-01-28  ALGORITHM        yes
+commons-lang-5d46a39e4   2026-01-19  OMISSION         yes
+commons-lang-7c91ce989   2026-07-11  MISSING_CLAUSE   yes
+commons-lang-4bfbfeabe   2026-10-24  OMISSION         yes

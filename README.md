@@ -134,6 +134,16 @@ own and hide the operating system's jars, and a check of them that calls no
 model. Its output under those settings and under the two campaigns' is in
 `data/sandbox/`.
 
+The fourth campaign is drafted under `data/campaign4/`. It makes the comparison
+on 115 of the pool's post-cutoff subjects, not matched by fault type, under
+those settings. The directory holds its protocol (`PROTOCOL.md`), not yet
+fixed, the subjects and their records, and the sandbox probe. Its scripts are
+`bin/subjects-campaign4.py`, `bin/generate-campaign4.sh`,
+`bin/run-campaign4.sh`, `bin/audit-campaign4.py`, `bin/measure-campaign4.sh`,
+`bin/mutation-campaign4.sh` and `bin/analyze-campaign4.py`. They use the third
+campaign's `bin/campaign3-lib.sh`, `bin/AgentTestRunner.java` and
+`bin/ExcludedTestsFilter.java` unchanged.
+
 ## What this does not show
 
 Several things, recorded here because they are easy to over-read from the

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=b6224451728562b0a4b33b63e8589753b1e2a57c
+short=b62244517
+date=2026-01-23
+subject=Fix ClassNotFoundException message variable (#1577)

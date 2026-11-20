@@ -1,0 +1,5 @@
+project=commons-lang
+sha=5b3a81dcd5e4c8bcee87b5bb07f4c0672be48545
+short=5b3a81dcd
+date=2026-10-16
+subject=Fix unmatched-quote handling in ExtendedMessageFormat

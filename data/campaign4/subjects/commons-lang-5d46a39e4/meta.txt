@@ -1,0 +1,6 @@
+project=commons-lang
+sha=5d46a39e450f5dd69027329c9bc0542c113a04be
+short=5d46a39e4
+date=2026-01-19
+subject=RandomStringUtils.random() methods may not return when asked to generate only letters or only numbers while provided with a range that contains neither
+parent=the parent's tests did not finish within 600s

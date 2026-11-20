@@ -1,0 +1,5 @@
+project=commons-lang
+sha=5914a8e80a547301b76bf8ef691053e4dfc901a7
+short=5914a8e80
+date=2026-05-07
+subject=TimedSemaphore.shutdown() must wake threads blocked in acquire(). (#1639)

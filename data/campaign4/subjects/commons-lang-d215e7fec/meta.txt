@@ -1,0 +1,5 @@
+project=commons-lang
+sha=d215e7fec92fcd4e89f5c834e34636ce7cc37f1e
+short=d215e7fec
+date=2026-10-21
+subject=keep array encoding intact in ClassUtils.getAbbreviatedName (#1829)

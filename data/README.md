@@ -1820,6 +1820,30 @@ the 117 left without the flagged candidates and the nine that credit an AI,
 - The ratings, the adjudications and the re-reading of the omissions were all
   made by Claude Opus 5.5, and none has been checked by hand.
 
+## Fourth campaign (drafted 2026-11-20)
+
+The fourth campaign compares the two arms on 115 subjects, not matched by fault
+type. They are the eligible candidates of the post-cutoff pool that no agent
+has run on, less the flagged candidates and the nine that credit an AI. The
+conditions are the third campaign's, with the sandbox of
+`bin/agent-sandbox.py`.
+
+The protocol is `campaign4/PROTOCOL.md`, a draft. The merge of its pull request
+fixes it, after the pilot. The second campaign's H2 is one of its hypotheses,
+and a secondary analysis weights detection by the Defects4J sample's fault
+types.
+
+- `campaign4/subjects.txt`: the subjects in the order of the runs, with each
+  one's fault type and whether the strict reading keeps it.
+- `campaign4/subjects/<tag>/`: each subject's record.
+  `bin/subjects-campaign4.py` writes the records from `postcutoff-pool/` and
+  the clones, and its `--check` compares them.
+- `campaign4/probe.txt`: `bin/agent-sandbox.py probe` with CLI 2.1.316.
+
+The protocol reports the checks without the model: a dry run of the generator
+and both measurements on the 115 subjects. Their output is not kept. No run
+with the model has been made.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -1883,4 +1907,6 @@ mistake for results:
 - [x] Third campaign, afterwards: mutation score and line coverage of its 56 suites with PIT, as its protocol provides, and the second campaign's H2 on them as a secondary result (+28.9 points, interval −7.2 to +66.6; `campaign3/mutation/`, `campaign3/mutation-analysis.txt`)
 - [x] Post-cutoff pool counted without the model: 158 eligible Commons subjects, 151 under the strict reading, 131 and 124 of them new (`postcutoff-pool/`)
 - [x] Post-cutoff pool classified by fault type, blind: a corpus matched to the Defects4J sample can take at most 69 of the new subjects, omissions binding (`postcutoff-pool/fault-types.tsv`)
+- [x] Fourth campaign drafted: protocol, scripts and checks without the model on its 115 unmatched post-cutoff subjects (`campaign4/`)
+- [ ] Fourth campaign: pilot, protocol fixed, then its 230 runs
 - [ ] A matched post-cutoff corpus large enough to test the effect size

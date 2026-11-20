@@ -1,0 +1,5 @@
+project=commons-lang
+sha=7c7bc19f295d7057205d3f691ad983f880eedfe2
+short=7c7bc19f2
+date=2026-11-15
+subject=Accept a null delimiter in StringUtils.join(Object[], String, int, int) (#1873)

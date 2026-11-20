@@ -1,0 +1,5 @@
+project=commons-lang
+sha=aafee70bfdfc7617ed509b54e3971441a3a5f57d
+short=aafee70bf
+date=2026-06-26
+subject=fix NumberUtils min/max varargs dropping the sign of zero (#1733)

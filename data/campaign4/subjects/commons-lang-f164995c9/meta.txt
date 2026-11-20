@@ -1,0 +1,5 @@
+project=commons-lang
+sha=f164995c904a592b832e98d8073f1f9051578dd7
+short=f164995c9
+date=2026-11-18
+subject=Restrict MethodUtils static invocation to static overloads (#1881)

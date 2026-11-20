@@ -1,0 +1,5 @@
+project=commons-lang
+sha=10f4421456b891d5a426348511383f387c99f3e1
+short=10f442145
+date=2026-08-10
+subject=Fix spurious overflow in Fraction.multiplyBy for unreduced operands (#1769)

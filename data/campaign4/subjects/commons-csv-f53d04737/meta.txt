@@ -1,0 +1,5 @@
+project=commons-csv
+sha=f53d04737a47ef7762b01ef33fa2c2117f7820ac
+short=f53d04737
+date=2026-07-13
+subject=exclude byte-order mark from ExtendedBufferedReader byte counting

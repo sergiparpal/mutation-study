@@ -1,0 +1,5 @@
+project=commons-lang
+sha=a9a0dd8a72c51b14f0e5ea4bddfbf228685ff977
+short=a9a0dd8a7
+date=2026-02-23
+subject=LANG-771 Fix DateUtils.ceiling increment on exact boundary (#1609)

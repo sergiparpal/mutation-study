@@ -1,0 +1,5 @@
+project=commons-lang
+sha=18063c1f6d935d60d0e7341d68434ab4c88a34ee
+short=18063c1f6
+date=2026-06-18
+subject=strip L suffix for oversized hex literals in createNumber (#1712)

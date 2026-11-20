@@ -1,0 +1,5 @@
+project=commons-csv
+sha=1a8403dd53e2164d9d8520e2628e180feed3bfdc
+short=1a8403dd5
+date=2026-07-18
+subject=synchronize private CSVFormat print overload on writeLock

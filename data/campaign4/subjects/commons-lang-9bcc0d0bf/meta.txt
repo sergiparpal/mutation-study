@@ -1,0 +1,5 @@
+project=commons-lang
+sha=9bcc0d0bf84f6278a000eaf39af0e9780be9046c
+short=9bcc0d0bf
+date=2026-05-27
+subject=[LANG-1801] RandomStringUtils.random() does not strictly validate (#1682)

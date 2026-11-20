@@ -1,0 +1,5 @@
+project=commons-csv
+sha=09e27ffdb76540136e710a2026a0d77bc9a49aee
+short=09e27ffdb
+date=2026-07-21
+subject=count rows produced instead of getRow() in printRecords(ResultSet)

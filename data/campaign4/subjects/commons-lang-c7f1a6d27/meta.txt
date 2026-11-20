@@ -1,0 +1,5 @@
+project=commons-lang
+sha=c7f1a6d27707e8cd8cbed94f83e0c58d2c480614
+short=c7f1a6d27
+date=2026-10-05
+subject=Take FastDatePrinter era names from the locale's calendar (#1800)

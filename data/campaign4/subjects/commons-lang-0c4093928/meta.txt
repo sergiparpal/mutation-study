@@ -1,0 +1,5 @@
+project=commons-lang
+sha=0c409392897ac41e06f76ecdd1c639e4bee52505
+short=0c4093928
+date=2026-07-13
+subject=Fix FieldUtils.getField false ambiguity on inherited interface field (#1748)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=57bd7dd094fd855f2ab3c969170933bbd7bafa2d
+short=57bd7dd09
+date=2026-10-25
+subject=Keep LocaleUtils.toLocale to ASCII language and country codes (#1838)

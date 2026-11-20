@@ -1,0 +1,5 @@
+project=commons-lang
+sha=26ead6134ad55bf1350e41f05f4d0cbe6d0be4be
+short=26ead6134
+date=2026-01-26
+subject=[LANG-1814] ArrayUtils.subarray(..) may overflow index arithmetic and violate contract for extreme index values #1585

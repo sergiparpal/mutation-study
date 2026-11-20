@@ -1,0 +1,5 @@
+project=commons-lang
+sha=c99f2ddfe2fc9294070b697cdd1f603b0a31078b
+short=c99f2ddfe
+date=2026-07-17
+subject=Fix ArrayUtils.reverse range underflow on Integer.MIN_VALUE end (#1750)

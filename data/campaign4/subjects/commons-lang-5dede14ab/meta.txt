@@ -1,0 +1,5 @@
+project=commons-lang
+sha=5dede14ab1e385b6d972b8bcb4f1f0f941e59db2
+short=5dede14ab
+date=2026-10-20
+subject=reject varargs candidates with too few arguments in MemberUtils (#1828)

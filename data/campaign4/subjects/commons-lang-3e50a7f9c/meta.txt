@@ -1,0 +1,5 @@
+project=commons-lang
+sha=3e50a7f9cf103357d781483d41ec9c9386e69e9d
+short=3e50a7f9c
+date=2026-06-20
+subject=Find NaN in ArrayUtils.lastIndexOf for double and float arrays (#1718)

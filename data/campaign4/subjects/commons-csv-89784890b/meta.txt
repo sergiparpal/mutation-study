@@ -1,0 +1,5 @@
+project=commons-csv
+sha=89784890bddd98a2945e9cde74247e3732536c63
+short=89784890b
+date=2026-07-20
+subject=fill the lookahead buffer on short reads from a chunked source

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=89047990d0c1cb947fc8092fc1ba42881b611837
+short=89047990d
+date=2026-10-12
+subject=Recurse into nested annotation arrays in AnnotationUtils.hashCode (#1814)

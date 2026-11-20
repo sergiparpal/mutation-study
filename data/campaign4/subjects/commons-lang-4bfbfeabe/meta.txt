@@ -1,0 +1,5 @@
+project=commons-lang
+sha=4bfbfeabe548f8e3aa4cc928b51f71939e6eb773
+short=4bfbfeabe
+date=2026-10-24
+subject=Reject leading whitespace in NumberUtils.createNumber (#1833)

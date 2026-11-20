@@ -1,0 +1,5 @@
+project=commons-lang
+sha=3df7f4440e7447bc55e95400ec511323e708c652
+short=3df7f4440
+date=2026-04-30
+subject=[LANG-1823] LocaleUtils.toLocale cannot parse valid JDK Locale string containing '#'  (#1630)

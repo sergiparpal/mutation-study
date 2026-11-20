@@ -1,0 +1,5 @@
+project=commons-lang
+sha=5904c573ffacaa5d8836ffc2b346f400c8901ed1
+short=5904c573f
+date=2026-05-05
+subject=NumberUtils.createNumber(String): Float shortcut can bypass exact (#1635)

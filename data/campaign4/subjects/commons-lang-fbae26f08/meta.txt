@@ -1,0 +1,5 @@
+project=commons-lang
+sha=fbae26f0819b795b38b4a251021c3086751f69f4
+short=fbae26f08
+date=2026-06-18
+subject=Drop trailing empty token from splitByWholeSeparator (#1710)

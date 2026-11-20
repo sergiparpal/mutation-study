@@ -1,0 +1,5 @@
+project=commons-lang
+sha=1c1a7982206c915d3470e89af2366e34c1b21d23
+short=1c1a79822
+date=2026-10-16
+subject=Escape CharSequence values in ToStringStyle.JSON_STYLE (#1821)

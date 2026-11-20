@@ -1,0 +1,5 @@
+project=commons-lang
+sha=f4442b1c9c02945fea6165a9011dd1671fe5bce5
+short=f4442b1c9
+date=2026-11-03
+subject=Keep FastDateFormat able to parse the '+hh:mm' offsets its own 'Z' patterns format (#1857)

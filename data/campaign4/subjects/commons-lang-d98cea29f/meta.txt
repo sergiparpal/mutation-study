@@ -1,0 +1,5 @@
+project=commons-lang
+sha=d98cea29f9d6326a47e951193d9424cb52d3fb73
+short=d98cea29f
+date=2026-11-15
+subject=Handle incompatible array types in DiffBuilder (#1867)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=2011ce3ba2386669086882182dc41d76148e5489
+short=2011ce3ba
+date=2026-07-04
+subject=Stop ExtendedMessageFormat seekNonWs reading past the pattern end (#1740)

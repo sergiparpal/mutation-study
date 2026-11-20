@@ -1,0 +1,5 @@
+project=commons-cli
+sha=db57942a6a593ebf2be28172a22a2f1db6bdccb9
+short=db57942a6
+date=2026-08-01
+subject=Reject an empty option name in getMatchingOptions (#434)

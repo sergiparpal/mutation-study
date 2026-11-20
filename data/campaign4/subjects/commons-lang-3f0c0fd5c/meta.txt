@@ -1,0 +1,5 @@
+project=commons-lang
+sha=3f0c0fd5cb8af9f2ae6d7f869d7e87c66985ab90
+short=3f0c0fd5c
+date=2026-07-02
+subject=Keep DurationFormatUtils.lexx() from merging repeated fields split by a literal (#1738)

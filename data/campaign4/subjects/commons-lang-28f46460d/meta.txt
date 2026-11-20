@@ -1,0 +1,5 @@
+project=commons-lang
+sha=28f46460d63b4c7806a2b9cce382b2b79ba6fd50
+short=28f46460d
+date=2026-05-24
+subject=ClassUtils.toCleanName(String) resolves malformed array suffixes instead (#1670)

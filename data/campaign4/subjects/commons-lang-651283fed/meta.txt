@@ -1,0 +1,5 @@
+project=commons-lang
+sha=651283fedbdd1fc59cc2e7cf8c14ca2b7dd691bf
+short=651283fed
+date=2026-11-14
+subject=Fix null parameter types in reflection method and constructor lookup (#1870)

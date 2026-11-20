@@ -1,0 +1,5 @@
+project=commons-cli
+sha=0f561e5979d1f10b93ae98ef1fcd908ec33c048e
+short=0f561e597
+date=2026-08-22
+subject=[CLI-354] Fix HelpFormatter wrapped description indent (#439)

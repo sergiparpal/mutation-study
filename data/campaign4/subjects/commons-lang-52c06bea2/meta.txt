@@ -1,0 +1,5 @@
+project=commons-lang
+sha=52c06bea2f2b6c277c517dc9f5bb0d62d17e073c
+short=52c06bea2
+date=2026-01-28
+subject=fix LANG-1816 (#1589)

@@ -1,0 +1,5 @@
+project=commons-lang
+sha=b11591895eed00e9f6e0bcb19178dedbaab4a971
+short=b11591895
+date=2026-05-18
+subject=FormattableUtils.append re-parses literal output as format string (#1661)

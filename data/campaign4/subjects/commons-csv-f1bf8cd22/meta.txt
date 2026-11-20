@@ -1,0 +1,5 @@
+project=commons-csv
+sha=f1bf8cd22d97d99efa7b554cffa3e8144bd14de3
+short=f1bf8cd22
+date=2026-08-05
+subject=Close the stream parse(Path) and parse(URL) open on construction failure (#630).

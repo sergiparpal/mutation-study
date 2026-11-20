@@ -1,0 +1,5 @@
+project=commons-lang
+sha=ddf5625d50a4c2fbe9346f12a26fc60e68af894e
+short=ddf5625d5
+date=2026-06-18
+subject=Fix int mask sign extension in BitField long methods (#1711)
