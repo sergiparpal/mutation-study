@@ -1902,6 +1902,59 @@ The records were searched for details of the machine they were made on before
 they were committed, inside the compressed transcripts and archives too.
 Nothing needed redacting.
 
+### The audit
+
+`campaign4/audit.txt` is the output of `bin/audit-campaign4.py -v` on the 230
+transcripts. `campaign4/violations.txt` and `campaign4/direct-javac.txt` are
+the lists the protocol asks for. They were committed before anything was
+measured, with the reasons for each decision. In short:
+
+- **What was read.** Every command the script flags was read whole, with its
+  whole result: 29 commands in 24 `m4` runs and 220 in 100 `s4` runs. So was
+  what the script does not look at, as in the third campaign: the file tools'
+  paths, absolute paths, directory variables, program names, `s4` commands
+  that name `lib/`, a jar or `javac`, searches of the whole file system, and
+  the agents' code.
+- **No run committed a violation.**
+- **Network.** One agent reached for it: the `s4` agent of
+  `commons-csv-afbf34ad9`. It asked three times for the sources jar of
+  Commons CSV on Maven Central. The harness refused to widen the network
+  allowlist, and the sandbox's proxy refused the connection. Nothing came
+  back.
+- **Outside the working copy.** Nothing was read there but the operating
+  system and the JDK, plus the three places the rule leaves out:
+  - a command's own private `/tmp`;
+  - the run's own temporary directory;
+  - the CLI's saved copies of the output of the run's own commands, read 11
+    times in 6 runs.
+
+  Four `m4` runs and eleven `s4` runs used their own temporary directory for
+  scratch classes, classes unpacked from their own `_tools/lib`, or the text
+  of their own `api/` pages. Under the third campaign's wording, those that
+  read it back would have been violations.
+- **What the sandbox puts in a working copy.** Listings show `.bashrc`,
+  `.gitconfig`, `.mcp.json`, `.vscode`, `.claude/settings.json` and the like
+  inside each working copy. They are the sandbox's write protection: each is
+  `/dev/null` mounted over the name, and `.claude` is an empty directory.
+  They are not in the upstream trees, and they hold nothing.
+- **`lib/` in `s4`.** 45 of the 115 agents tried to list or open a jar: 37
+  the project's and 8 JUnit's alone. None succeeded: `unzip` is hidden, and
+  `jar`, `javap` and `java` are not there. 85 called `python`, nearly always
+  to strip the tags from an `api/` page. It is hidden and never ran.
+- **Direct calls to `javac` in `s4`.** Seven runs, listed in
+  `direct-javac.txt`. Three compiled their own tests with deprecation warnings
+  on. Four compiled a scratch class, two of which only print the default time
+  zone. Under the protocol none is a violation. The seven are left out in the
+  fifth sensitivity analysis.
+- **Knowledge of the fix.** The script's rule marks nine runs, four `m4` and
+  five `s4`. Each is for a test the agent named after the method it tests,
+  which is also the name of a trigger test: `testIsCreatable`,
+  `testSubtract`, `testHexDigitToInt`, `testHexToInt` and
+  `testEqualsIgnoreCase`. Nothing an agent said or wrote names an issue, a
+  pull request or a fix commit.
+- **Refused calls.** The harness refused 29 calls in `m4` and 30 in `s4`. The
+  sandbox denied 84 `s4` commands a hidden program, and no `m4` command.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -1967,6 +2020,6 @@ mistake for results:
 - [x] Post-cutoff pool classified by fault type, blind: a corpus matched to the Defects4J sample can take at most 69 of the new subjects, omissions binding (`postcutoff-pool/fault-types.tsv`)
 - [x] Fourth campaign prepared: protocol, scripts, checks without the model on its 115 unmatched post-cutoff subjects, and a pilot (`campaign4/`)
 - [x] Fourth campaign's protocol fixed before any run on the subjects (`campaign4/PROTOCOL.md`)
-- [x] Fourth campaign's 230 runs made: 227 accepted suites, 115 in `m4` and 112 in `s4` (`campaign4/runs-m4/`, `runs-s4/`, `suites/`)
+- [x] Fourth campaign's 230 runs made and audited: 227 accepted suites, 115 in `m4` and 112 in `s4`, and no violation (`campaign4/runs-m4/`, `runs-s4/`, `suites/`, `audit.txt`)
 - [ ] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed
 - [ ] A matched post-cutoff corpus large enough to test the effect size

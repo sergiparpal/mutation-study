@@ -1,0 +1,42 @@
+# Fourth campaign: s4 runs in which the agent called javac itself, where its
+# prompt says to compile through compile.sh and nothing else. One per line:
+# arm, subject, reason. Lines that begin with # are notes.
+#
+# Not violations (PROTOCOL.md, "Exclusions"): these runs stay in the primary
+# analysis and are left out in the fifth sensitivity analysis.
+
+s4 commons-csv-1e3de1274    compiled its own test class with -Xlint:deprecation into /tmp, to see the deprecation warnings
+s4 commons-csv-afbf34ad9    compiled its own tests twice with the options of compile.sh and -Xlint:deprecation, to see the deprecation warnings
+s4 commons-csv-b29fb40ac    compiled its own tests once with -Xlint:deprecation, to see the deprecation warnings
+s4 commons-lang-75086d398   compiled a scratch class that prints the default time zone, in /tmp; java is not there, so it never ran
+s4 commons-lang-7c91ce989   compiled a scratch class that names StrMatcher, to see whether the class exists
+s4 commons-lang-a9a0dd8a7   compiled a scratch class that prints the default time zone, in its working copy; java is not there, so it never ran
+s4 commons-lang-aa47951bd   compiled a scratch class that imports FailableRunnable, FailableSupplier and StopWatch, to see whether they exist
+
+# Decided on 21 November 2026 from the transcripts, before any suite was
+# measured. Every s4 command that names javac was read whole, 35 commands in
+# 26 runs.
+#
+# Eight commands in these seven runs ran javac on a source file:
+# - The three commons-csv runs compiled their own test classes, with
+#   -Xlint:deprecation added to the options of compile.sh, or some of them,
+#   into /tmp/out_check or out/.
+# - The four commons-lang runs compiled one scratch class each. Two classes
+#   print TimeZone.getDefault(): /tmp/TzCheck.java (75086d398) and
+#   TZCheck.java at the root of the working copy (a9a0dd8a7, still there when
+#   the run ended, outside tests/). Both then tried java, which is not there.
+#   The other two, tests/Probe.java (7c91ce989) and probe_scratch/Probe.java
+#   (aa47951bd), only name classes of the project. Both compiled against lib/,
+#   printed "OK", and were removed in the next command.
+# The harness refused four more such commands, each with a scratch class in
+# /tmp or in the run's own temporary directory: in commons-csv-1e3de1274 and
+# commons-csv-afbf34ad9 after they had compiled their tests, and in
+# commons-lang-7c91ce989 and commons-lang-aa47951bd before the compilation
+# listed above.
+#
+# The compiler was given no option that executes code, no code from lib/ was
+# run, and nothing in it was printed, unpacked or disassembled.
+#
+# The other 23 s4 commands that name javac do not call it on a source file.
+# They ask where it is, which launchers the JDK's bin holds (javac alone), or
+# the compiler's version.
