@@ -1,0 +1,87 @@
+4:22:18 AM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+4:22:19 AM PIT >> INFO : Created 1 mutation test units in pre scan
+4:22:19 AM PIT >> INFO : Sending 56 test classes to minion
+4:22:19 AM PIT >> INFO : Sent tests to minion
+4:22:19 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredFieldNotPublic()
+4:22:19 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByFieldWithForceAccess()
+4:22:19 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldAmbiguousShadowedField()
+4:22:19 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredStaticFieldNotPublic()
+4:22:19 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredStaticFieldNotStatic()
+4:22:19 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredFieldNotPublic()
+4:22:19 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByClassAndNameWithForceAccess()
+4:22:19 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredStaticFieldNotPublicWithoutForceAccess()
+4:22:19 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldByNameNotAccessible()
+4:22:19 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByNameNotAccessible()
+4:22:19 AM PIT >> INFO : MINION : WARNING: An illegal reflective access operation has occurred
+4:22:19 AM PIT >> INFO : MINION : WARNING: Illegal reflective access by org.apache.commons.lang3.reflect.FieldUtils (file:/home/sergi/.cache/gen-stage/mutation-MA4PjuIK/fixed/target/classes/) to field java.lang.reflect.Field.modifiers
+4:22:19 AM PIT >> INFO : MINION : WARNING: Please consider reporting this to the maintainers of org.apache.commons.lang3.reflect.FieldUtils
+4:22:19 AM PIT >> INFO : MINION : WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+4:22:19 AM PIT >> INFO : MINION : WARNING: All illegal access operations will be denied in a future release
+4:22:19 AM PIT >> INFO : Calculated coverage in 0 seconds.
+4:22:19 AM PIT >> INFO : 0 tests took longer than 2000 ms
+4:22:19 AM PIT >> INFO : Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.FieldUtilsAgentTest]/[method:testReadDeclaredFieldWithForceAccess()]) took 52 ms
+4:22:19 AM PIT >> INFO : Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.FieldUtilsAgentTest]/[method:testReadStaticFieldByClassAndNameConsidersSuperclasses()]) covered 32 blocks
+4:22:19 AM PIT >> INFO : Created 1 mutation test units
+4:22:23 AM PIT >> INFO : Completed in 4 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 28 Killed 24 (86%)
+> KILLED 24 SURVIVED 3 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 20 Killed 19 (95%)
+> KILLED 19 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 21 Killed 17 (81%)
+> KILLED 17 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 3 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 2 Killed 2 (100%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : 3 seconds
+--------------------------------------------------------------------------------
+> Total  : 4 seconds
+--------------------------------------------------------------------------------
+> 0 tests took longer than 2000 ms
+> Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.FieldUtilsAgentTest]/[method:testReadDeclaredFieldWithForceAccess()]) took 52 ms
+> Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.FieldUtilsAgentTest]/[method:testReadStaticFieldByClassAndNameConsidersSuperclasses()]) covered 32 blocks
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 122/132 (92%)
+>> 56 tests examined
+>> Generated 73 mutations Killed 64 (88%)
+>> Mutations with no coverage 4. Test strength 93%
+>> Ran 94 tests (1.29 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/

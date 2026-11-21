@@ -139,8 +139,9 @@ of the pool's post-cutoff subjects, not matched by fault type, under those
 settings. The directory holds its protocol (`PROTOCOL.md`), fixed before any
 run on the subjects, the subjects and their records, the sandbox probe, the
 pilot (`pilot/`), the records of its 230 runs (`runs-m4/`, `runs-s4/`,
-`suites/`), their audit (`audit.txt`, `violations.txt`, `direct-javac.txt`)
-and the measurement of detection (`results/`). Its scripts are
+`suites/`), their audit (`audit.txt`, `violations.txt`, `direct-javac.txt`),
+the measurement of detection (`results/`) and that of mutation score and line
+coverage (`mutation/`). Its scripts are
 `bin/subjects-campaign4.py`, `bin/generate-campaign4.sh`,
 `bin/run-campaign4.sh`, `bin/audit-campaign4.py`, `bin/measure-campaign4.sh`,
 `bin/mutation-campaign4.sh` and `bin/analyze-campaign4.py`. They use the third

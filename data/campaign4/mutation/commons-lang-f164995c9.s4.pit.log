@@ -1,0 +1,114 @@
+3:21:20 AM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+3:21:21 AM PIT >> INFO : Created 1 mutation test units in pre scan
+3:21:21 AM PIT >> INFO : Sending 23 test classes to minion
+3:21:21 AM PIT >> INFO : Sent tests to minion
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsListWithAnnotationSearchSupersNoIgnoreAccessFindsOnlyPublic()
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodByNameFindsMethod()
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMatchingAccessibleMethodMatchesByWrapperType()
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodClassMethodFindsPublicMethod()
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodExplicitParameterTypes()
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsWithAnnotationNoSupersNoIgnoreAccessFindsNothing()
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodNoArgs()
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactStaticMethodWithArgs()
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodWithArgs()
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodPropagatesInvocationTargetException()
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodSingleArgFindsMethod()
+3:21:21 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactStaticMethodExplicitParameterTypes()
+3:21:21 AM PIT >> INFO : Calculated coverage in 0 seconds.
+3:21:21 AM PIT >> INFO : 0 tests took longer than 2000 ms
+3:21:21 AM PIT >> INFO : Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.MethodUtilsAgentTest]/[method:testGetMethodsListWithAnnotationFourArgNullAnnotationThrowsNpe()]) took 52 ms
+3:21:21 AM PIT >> INFO : Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.MethodUtilsAgentTest]/[method:testInvokeMethodForceAccessWithArgsMatchesByBoxing()]) covered 110 blocks
+3:21:21 AM PIT >> INFO : Created 1 mutation test units
+3:21:28 AM PIT >> INFO : Completed in 7 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE
+>> Generated 11 Killed 3 (27%)
+> KILLED 3 SURVIVED 3 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 5 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 11 Killed 4 (36%)
+> KILLED 4 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 5 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 5 Killed 2 (40%)
+> KILLED 2 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 2 Killed 0 (0%)
+> KILLED 0 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 8 Killed 4 (50%)
+> KILLED 4 SURVIVED 3 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 5 Killed 5 (100%)
+> KILLED 5 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 69 Killed 16 (23%)
+> KILLED 16 SURVIVED 30 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 23 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 33 Killed 17 (52%)
+> KILLED 17 SURVIVED 5 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 11 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 11 Killed 0 (0%)
+> KILLED 0 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 11 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 6 Killed 5 (83%)
+> KILLED 5 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 4 Killed 3 (75%)
+> KILLED 3 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : 7 seconds
+--------------------------------------------------------------------------------
+> Total  : 7 seconds
+--------------------------------------------------------------------------------
+> 0 tests took longer than 2000 ms
+> Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.MethodUtilsAgentTest]/[method:testGetMethodsListWithAnnotationFourArgNullAnnotationThrowsNpe()]) took 52 ms
+> Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.MethodUtilsAgentTest]/[method:testInvokeMethodForceAccessWithArgsMatchesByBoxing()]) covered 110 blocks
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 189/266 (71%)
+>> 23 tests examined
+>> Generated 165 mutations Killed 59 (36%)
+>> Mutations with no coverage 59. Test strength 56%
+>> Ran 286 tests (1.73 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/

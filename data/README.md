@@ -1975,6 +1975,62 @@ revisions and the verdict, and `verdicts.csv`.
 - The records were searched for details of the machine before they were
   committed. Nothing needed redacting.
 
+### Mutation score and line coverage
+
+`./bin/mutation-campaign4.sh` ran once, on 21 November 2026, from 10:42 to
+12:37 UTC, after detection was committed. It measures as the third campaign
+did afterwards ("Mutation score and line coverage, measured afterwards",
+above): PIT 1.30.2 and its default mutators, on the classes the fix modifies
+and the classes nested in them, with each suite as accepted. PIT's jars were
+already on the machine and matched the hashes in the script, so nothing was
+fetched. Its record is `campaign4/mutation/`. Per suite, it holds PIT's log,
+its XML record of every mutant, the test methods the filter kept and left out,
+the compiler's output and the row of `mutation.csv`.
+
+- **PIT finished on every one of the 227 suites.** Each compiles against the
+  fix commit, PIT found each green on the unmutated code, and none ran out of
+  time. PIT took between 1 and 150 seconds a suite, 15 at the median. 221
+  suites have a mutation score and a line-coverage figure, 112 in `m4` and 109
+  in `s4`. The other six are those of the three subjects whose fix is in
+  `Converter` (below).
+- **The tests PIT ran are the ones detection ran.** In every suite, the test
+  methods the filter kept are those detection ran on the fix commit: 5,714 in
+  `m4` and 7,062 in `s4`. The methods it left out are the 41 and 237 left out
+  at acceptance. The check counts the methods kept against
+  `methods_run_on_fixed` in `results/verdicts.csv`, and the methods left out
+  against the keys of each suite's `excluded.txt`, as the third campaign's
+  mutation analysis does. The header of `bin/mutation-campaign4.sh` says the
+  analysis makes this comparison, but `bin/analyze-campaign4.py` does not, so
+  it was made separately.
+- **The mutants.** Both suites of a subject are mutated in the same classes.
+  On the 112 subjects with a suite in both arms, each arm faces the same
+  37,246 mutants. The three subjects with only an `m4` suite add 5,786, in
+  `StringUtils`, `ArrayUtils` and `StrBuilder`. Of the 80,278 mutants in all,
+  PIT counts 36,022 as detected: 35,569 killed, 348 timed out and 105 out of
+  memory. None is a run error, not viable or equivalent.
+- **No mutation score.** In the three `commons-cli` subjects whose fix is in
+  `Converter` (`commons-cli-f3ba9c951`, `-8010193ee`, `-7d77ecce8`), PIT made
+  no mutant and counted no line in either arm, as in the protocol's dry run.
+  The complete set leaves them out.
+- **Subjects the dry run noted:**
+  - The four subjects whose fix is in `FastDateParser` took 10 to 20 seconds
+    a suite. With the developers' tests, PIT had not finished them within the
+    dry run's 30 minutes.
+  - `commons-lang-c07bc828f` has a figure in both arms. Neither agent's suite
+    tests `java.awt.headless`.
+- **Java's `assert` statements.** No test of the 227 suites uses one. Two
+  mutated methods hold one, and each holds on the unmutated code:
+  - `Conversion.shortToBinary` in `commons-lang-54ee8ec1c`, right after the
+    check that makes it hold, as in the third campaign;
+  - `ExtendedMessageFormat.appendQuotedString` in `commons-lang-2011ce3ba`,
+    `-5b3a81dcd`, `-8425918f9` and `-d927bfc84`. Its every caller reaches it
+    only on a quote character, which is what it asserts.
+- **The time of day in PIT's logs** is in the fixed time zone of the
+  measurement's environment (`America/Los_Angeles`), as in the third
+  campaign's.
+- The records were searched for details of the machine before they were
+  committed, inside the compressed XML too. Nothing needed redacting.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -2041,5 +2097,6 @@ mistake for results:
 - [x] Fourth campaign prepared: protocol, scripts, checks without the model on its 115 unmatched post-cutoff subjects, and a pilot (`campaign4/`)
 - [x] Fourth campaign's protocol fixed before any run on the subjects (`campaign4/PROTOCOL.md`)
 - [x] Fourth campaign's 230 runs made, audited and measured for detection: 227 accepted suites, 115 in `m4` and 112 in `s4`, no violation, and a verdict for every suite (`campaign4/runs-m4/`, `runs-s4/`, `suites/`, `audit.txt`, `results/`)
+- [x] Fourth campaign's mutation score and line coverage measured with PIT: it finished on all 227 suites, and 221 have a figure. The other six, those of the three subjects whose fix is in `Converter`, have no mutant (`campaign4/mutation/`)
 - [ ] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed
 - [ ] A matched post-cutoff corpus large enough to test the effect size

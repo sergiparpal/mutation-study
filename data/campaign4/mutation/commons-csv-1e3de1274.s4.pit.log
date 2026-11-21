@@ -1,0 +1,104 @@
+3:16:48 AM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+3:16:48 AM PIT >> INFO : Created 1 mutation test units in pre scan
+3:16:48 AM PIT >> INFO : Sending 3 test classes to minion
+3:16:48 AM PIT >> INFO : Sent tests to minion
+3:16:48 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.csv.LexerAgentTest#testIsStartOfLineTrueForEndOfFileSentinel()
+3:16:48 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.csv.LexerAgentTest#testReadEscapePassesThroughUnknownCharacter()
+3:16:48 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.csv.LexerAgentTest#testGetCurrentLineNumberAdvancesAfterNewline()
+3:16:48 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.csv.LexerAgentTest#testGetBytesReadIncreasesAfterReading()
+3:16:48 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.csv.LexerAgentTest#testIsEscapeDelimiterTrueWhenEscapedDelimiterFollows()
+3:16:48 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.csv.LexerAgentTest#testNextTokenAfterEofKeepsReturningEof()
+3:16:48 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.csv.LexerAgentTest#testNextTokenSimpleFields()
+3:16:48 AM PIT >> INFO : MINION : c3.exclude: left out org.apache.commons.csv.LexerAgentTest#testNextTokenQuotedField()
+3:16:49 AM PIT >> INFO : Calculated coverage in 0 seconds.
+3:16:49 AM PIT >> INFO : 0 tests took longer than 2000 ms
+3:16:49 AM PIT >> INFO : Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.csv.LexerAgentTest]/[method:testNextTokenSkipsCommentLine()]) took 15 ms
+3:16:49 AM PIT >> INFO : Largest test ([engine:junit-jupiter]/[class:org.apache.commons.csv.LexerAgentTest]/[method:testGetFirstEolCapturesCarriageReturnLineFeed()]) covered 100 blocks
+3:16:49 AM PIT >> INFO : Created 1 mutation test units
+3:16:55 AM PIT >> INFO : Completed in 7 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE
+>> Generated 3 Killed 1 (33%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 2 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 12 Killed 3 (25%)
+> KILLED 3 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 7 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 3 Killed 1 (33%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 2 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 7 Killed 2 (29%)
+> KILLED 2 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 3 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 14 Killed 9 (64%)
+> KILLED 9 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 5 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 66 Killed 27 (41%)
+> KILLED 27 SURVIVED 17 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 22 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 10 Killed 2 (20%)
+> KILLED 2 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 6 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 8 Killed 1 (13%)
+> KILLED 1 SURVIVED 3 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 4 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 3 Killed 2 (67%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : 6 seconds
+--------------------------------------------------------------------------------
+> Total  : 7 seconds
+--------------------------------------------------------------------------------
+> 0 tests took longer than 2000 ms
+> Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.csv.LexerAgentTest]/[method:testNextTokenSkipsCommentLine()]) took 15 ms
+> Largest test ([engine:junit-jupiter]/[class:org.apache.commons.csv.LexerAgentTest]/[method:testGetFirstEolCapturesCarriageReturnLineFeed()]) covered 100 blocks
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 109/177 (62%)
+>> 3 tests examined
+>> Generated 127 mutations Killed 49 (39%)
+>> Mutations with no coverage 52. Test strength 65%
+>> Ran 301 tests (2.37 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
