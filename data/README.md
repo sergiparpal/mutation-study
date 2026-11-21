@@ -254,8 +254,9 @@ comparison. Its section holds its results.
 
 Suites are analysed by `bin/analyze-agent-suites.sh`, which wraps Defects4J's
 own `run_bug_detection.pl`, `run_coverage.pl` and `run_mutation.pl`, and merged
-by `bin/merge-agent-metrics.py`. `bin/report-figures.py` prints every figure
-below, and every figure in the write-up, from the files in this directory.
+by `bin/merge-agent-metrics.py`. `bin/report-figures.py` prints most of the
+figures of §3 of the write-up from the files in this directory; what it leaves
+out is described at its head.
 
 ## Results
 
