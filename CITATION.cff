@@ -20,17 +20,20 @@ abstract: >-
   kept and the analysis fixed in advance, real-fault detection falls from 56%
   to 18% over 39 bugs, while mutation score falls from 54% to 39% and line
   coverage from 84% to 70%. The first campaign, on standard Defects4J
-  checkouts, gave 72% against 14%. A third campaign, under the second's
-  conditions and a protocol also fixed in advance, on 28 faults that postdate
-  the model's training data, gives 35% against 22% over 23 subjects, a
-  difference its test does not reject (p = 0.25); there mutation score,
-  measured afterwards with PIT, is 57% against 52%. The repository holds the
-  generation and measurement scripts, the protocols and full records of the
-  second and third campaigns, the per-suite measurements, an EvoSuite
-  baseline, a hand classification of the 40 faults, a probe of what the model
-  recalls about each fault with no code in context, two post-cutoff
-  replication corpora, and an audit of what the benchmark's own files told
-  the agent.
+  checkouts, gave 72% against 14%. Two further campaigns, under the second's
+  conditions and protocols also fixed in advance, took the comparison to
+  faults that postdate the model's training data. On 28 of them the arms
+  detect 35% against 22% over 23 subjects, a difference the test does not
+  reject (p = 0.25). On 115 more, in a tighter sandbox, they detect 19%
+  against 3% over 112 subjects (p = 0.00004), while their mutation scores,
+  measured with PIT, are 44% against 50% pooled and 62% against 56% as means
+  over suites. The repository holds the generation and measurement scripts,
+  the protocols and full records of the second, third and fourth campaigns,
+  the per-suite measurements, an EvoSuite baseline, a hand classification of
+  the 40 faults, a probe of what the model recalls about each fault with no
+  code in context, two post-cutoff replication corpora and the pool of
+  post-cutoff subjects the fourth campaign draws on, and an audit of what the
+  benchmark's own files told the agent.
 keywords:
   - test generation
   - mutation testing

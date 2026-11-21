@@ -52,20 +52,26 @@ the metadata added. Nor did a prompt keep the specification-only agent away
 from the compiled classes: in the second campaign 22 of 40 agents tried to
 list or unpack a jar, and only the sandbox stopped them.
 
-A third campaign took the second's conditions, under a protocol also fixed
-beforehand, to 28 fix commits of three of the projects that postdate the
-model's training data. Over the 23 subjects of its paired set the arms detect
-**35% and 22%**: three faults are detected by the implementation-visible arm
-alone and none by the other, and the test does not reject (*p* = 0.25; the
-difference is 13 points, with an interval from 0 to 26). The effect is
-therefore established on Defects4J and not on faults the model cannot have
-seen. The gap is narrower there than on Defects4J, between corpora that
-differ in more than the date of their faults, so the difference cannot be
-assigned to recall and recall cannot be excluded as a part of the Defects4J
-figure. Mutation score, measured on those suites afterwards with PIT as the
-protocol provides, is 57% against 52%: detection loses 37.5% of its value
-there and mutation score 8.6%, but the interval of the gap between the two
-losses, −7 to 67 points, includes zero.
+Two further campaigns took the second's conditions, each under a protocol
+also fixed beforehand, to fix commits of three of the projects that postdate
+the model's training data. On the first 28 such faults the arms detect 35%
+and 22% over 23 subjects, a difference the test does not reject (*p* =
+0.25). The fourth campaign tightened the sandbox after that campaign's audit
+and made mutation score part of its protocol. On 115 more faults it puts the
+arms at **19% and 3%** over 112 subjects: 19 faults are detected by the
+implementation-visible arm alone and one by the other (*p* = 4.0 × 10⁻⁵). The
+difference is 16 points, with an interval from 9 to 23.
+
+The test of the claim in the title holds there too. Pooled over every mutant,
+the specification-only suites score higher on mutation, 50% against 44%,
+while detecting 3 of the faults against 19. That comes from one class that
+holds a third of the mutants, which they cover more widely. As means over
+suites the order is the usual one, 62% against 56%.
+
+Recall of the benchmark therefore does not account for the effect. Both arms
+detect far less on these faults than on Defects4J, and the gap between them is
+narrower in points. The corpora differ in more than the date of their faults,
+so they cannot say how much of the Defects4J figure recall does account for.
 
 Three further observations. An agent writing from javadoc alone is wrong about
 the code in one test out of fifteen, and catches seven faults, one of which the
@@ -130,18 +136,28 @@ three. What differs most is where their expectations came from.
 The first campaign had put the two arms at 72% and 14%. The difference between
 the campaigns is itself informative, and §3.10 sets them side by side.
 
-Both campaigns are on Defects4J, which is public and older than the model. A
-third campaign (§2.11, §3.11) took the second's conditions to 28 faults fixed
-upstream after the model's training data ends, under a protocol likewise
-committed before its first run. There the arms detect 35% and 22% over 23
-subjects. Every fault the specification-only arm detects the other detects
-too, with three more, and the pre-specified test does not reject (*p* =
-0.25). We report that as the limit of what this paper establishes: the effect
-holds on Defects4J under control, and on faults the model cannot have seen
-its direction is the same and its existence is not shown. The same goes for
-mutation score there. Measured on those suites afterwards, it falls less
-between the arms than detection does, by 29 points, with an interval that
-includes zero.
+Both campaigns are on Defects4J, which is public and older than the model.
+Two more took the second's conditions to faults fixed upstream after the
+model's training data ends, each under a protocol likewise committed before
+its first run.
+
+The third campaign (§2.11, §3.11), on 28 such faults, puts the arms at 35% and
+22% over 23 subjects. Every fault the specification-only arm detects, the
+other detects too, and three more. The pre-specified test does not reject
+(*p* = 0.25).
+
+The fourth (§2.12, §3.12) took 115 more from a pool counted afterwards, in a
+sandbox tightened after the third's audit. There the arms detect 19% and 3%
+over 112 subjects. The implementation-visible arm alone detects 19 faults and
+the other arm alone one, and the test rejects (*p* = 4.0 × 10⁻⁵).
+
+The fourth campaign's second hypothesis, the claim in the title, holds there
+too. Pooled over the mutants, the specification-only suites score higher on
+mutation than the implementation-visible ones, 50% against 44%, while
+detecting 3 of the faults against 19. Recall of the benchmark therefore does
+not account for the effect. Both arms detect much less on the newer faults
+than on Defects4J, in corpora that differ in more than their date, and we
+cannot say how much of the Defects4J figure is recall that the source cues.
 
 Contributions:
 
@@ -153,11 +169,11 @@ Contributions:
    Dinella et al. state it in 2022 and Huang et al. measure it for prompted
    models (§6) — but to our knowledge it has not been quantified for an agent
    that reads the codebase.
-2. The finding, tested as a pre-specified hypothesis on Defects4J, that the
-   metrics reported alongside detection register far less of the difference
-   than detection does. This bears directly on how agent-written suites are
-   currently evaluated and on proposals to use mutation feedback to improve
-   them.
+2. The finding, tested as a pre-specified hypothesis on Defects4J and again on
+   faults that postdate the model's training data, that the metrics reported
+   alongside detection register far less of the difference than detection
+   does. This bears directly on how agent-written suites are currently
+   evaluated and on proposals to use mutation feedback to improve them.
 3. A bound on what a standard Defects4J checkout adds on top of the repaired
    code. The checkout ships the fix commit in its git history, with a subject
    line naming the fault, and Defects4J's own metadata: the bug identifier,
@@ -178,11 +194,13 @@ Contributions:
    agent of the second campaign and 5 only by EvoSuite.
 7. A direct probe of what the model recalls about each fault with no code in
    context, which finds at least two of forty recalled with their mechanism.
-8. A replication under the same controls on 28 faults that postdate the
-   model's training data, with its analysis fixed in advance and every
-   transcript kept. Its test does not reject, and we report it as such: 35%
-   against 22% over 23 subjects, a gap narrower than on Defects4J, in a
-   corpus too small and too different from Defects4J to say why.
+8. Two replications under the same controls on faults that postdate the
+   model's training data, each with its analysis fixed in advance and every
+   transcript kept. On 28 faults the test does not reject: 35% against 22%
+   over 23 subjects. On 115 more, in a sandbox that closes what the first
+   one's audit found open, both hypotheses hold: 19% against 3% over 112
+   subjects. Pooled, the mutation score there is higher for the suites that
+   detect less.
 
 ---
 
@@ -193,7 +211,9 @@ campaign and the measurements made around it. §2.10 describes the second,
 which keeps the subjects, the two arms and the measurements, and changes what
 the agent is given, what is enforced and what is recorded. §2.11 describes a
 third campaign, which takes the second's conditions to faults that postdate
-the model's training data.
+the model's training data. §2.12 describes a fourth, which does the same on
+115 more such faults, with a tighter sandbox and mutation score in its
+protocol.
 
 ### 2.1 Subjects
 
@@ -682,6 +702,115 @@ different rules, 19 of the 28 from one project. The specification is the
 fixed revision's. There is one run per subject and arm, and one measurement
 per suite. And the suites are run by our runner, not by the projects' build.
 
+### 2.12 The fourth campaign
+
+The fourth campaign makes the comparison again on faults that postdate the
+model's training data. Its corpus is four times the size of the third's, and
+the openings that the third campaign's audit found in the sandbox (§3.11) are
+closed.
+
+**The subjects** come from a pool counted after the third campaign. Its
+candidates are every commit of Commons Lang, Commons CSV and Commons CLI from
+1 January to 19 November 2026 that changes both the code and its tests. Each
+was validated as the corpora of §3.8 were: the fix's tests fail on the parent
+commit and pass on the fix. The rules of the matched corpus then screened
+them. Of the 158 candidates that pass, the campaign takes the 129 that no
+agent had run on, less two groups set aside before any run. Six are the ones
+a blind classification of the diffs flagged as fixing several faults at once,
+or none. The other nine are those whose commit message credits an AI with the
+fix. One commit is in both groups. That leaves 115: 93 from Commons Lang, 16
+from Commons CSV and 6 from Commons CLI, fixed between 17 January and 19
+November 2026.
+
+**The protocol** (`data/campaign4/PROTOCOL.md`) was fixed with its scripts
+before any run on the subjects. Two checks came first. One was a dry run of
+every step, with the developers' own tests standing in for the agent's. The
+other was four pilot runs on the third campaign's pilot subjects. The
+campaign's arms, M4 and S4, are separate conditions, pooled with no other.
+
+**Not matched by fault type.** The same classification puts omissions at 30%
+of the subjects, against 55% of the Defects4J sample. A corpus matched to the
+sample, as the matched corpus of §3.8 was, could have taken at most 69 of the
+pool's new subjects. This campaign takes all of them instead, less the two
+groups above, and a secondary analysis weights each fault type by its share in
+the sample.
+
+**What is kept from the third campaign.** The model, the harness version, the
+tools, the limits and the prompts; the export of the fix commit; the runner,
+the acceptance and the measurement of detection.
+
+**What differs:**
+
+- *The sandbox.* The runs use the settings of `bin/agent-sandbox.py`, and the
+  check that comes with them passed in both arms before the first run.
+  - Each run has a temporary directory of its own, which no other run can
+    reach. Its contents are kept in the run's record.
+  - The operating system's jars of the projects, its Maven repository and its
+    package notes cannot be read, and Maven does not start.
+  - The definition of a violation changes accordingly. Reading back files the
+    run itself put in its own temporary directory is not a violation. Neither
+    is reading the harness's saved copy of the run's own long output.
+- *Mutation score and coverage* are part of the protocol. They are measured
+  before the analysis, as the third campaign measured them afterwards: PIT and
+  its default mutators, on the classes the fix modifies, with each suite as
+  accepted. PIT is stopped after two hours on a suite.
+
+**The analysis was fixed in advance.**
+
+- *H1*, that the arms differ in detection. The test is exact McNemar,
+  two-sided, at α = 0.05, on the subjects with a verdict in both arms. The
+  difference is reported with a percentile bootstrap interval over subjects.
+- *H2*, the second campaign's (§2.10). It is computed on the subjects that
+  also have a mutation score and a coverage figure in both arms. It is assessed
+  only if H1 is rejected with M4 above S4, and supported if the lower bound of
+  its interval is above zero.
+
+The protocol fixes what this paper says for each outcome. For H1 rejected with
+M4 above S4 and H2 supported, it says:
+
+> On faults that postdate the model's training data, the arms differ in
+> detection in the direction they do on Defects4J, and detection falls further
+> than mutation score: the claim of the paper's title holds on these faults.
+> Recall of the benchmark does not account for it.
+
+Nothing else is decided by test. A composition analysis weights the detection
+rates by the Defects4J sample's fault types, with no decision rule. Six
+sensitivity analyses are reported:
+
+- with the runs that commit a violation;
+- every subject counted, a missing suite as a miss;
+- without the runs that name the fix;
+- with timeouts read as misses;
+- without the S4 runs that call the compiler directly;
+- only the subjects a strict reading of the screen keeps.
+
+**What the tests can show.** The protocol expected about 94 pairs. With that
+many, H1 rejects with probability about 0.97 if the gap is half the second
+campaign's, and about 0.99 at the shares of the third campaign. It still needs
+six discordant pairs against none. H2 was not sized.
+
+**Exclusions** are the third campaign's, with the two exceptions above. An S4
+agent that calls the compiler directly again commits no violation, unless it
+gives the compiler an option that executes code. A run that names the fix, its
+issue or one of its trigger tests is counted, and left out only in a
+sensitivity analysis.
+
+**What the fourth campaign does not control.**
+
+- *How new the fixes are.* That they postdate the training data rests on one
+  check: the model disclaimed five issue identifiers from January 2026, the
+  earliest part of the window. No subject was probed on its own.
+- *What else is new.* Only the fix is, as in the third campaign.
+- *The fault types.* A model classified them from the diffs alone, and nobody
+  has checked them by hand.
+- *The projects.* 93 of the 115 subjects are from Commons Lang.
+- *The specification.* It is the fixed revision's.
+- *Repetition.* There is one run per subject and arm, and one measurement per
+  suite.
+- *What S4 can run.* Its sandbox hides `unzip`, Python, Perl and the JDK's
+  launchers but the compiler. It does not hide every other general-purpose
+  tool, and the transcript audit covers the rest.
+
 ---
 
 ## 3. Results
@@ -690,6 +819,8 @@ per suite. And the suites are run by our runner, not by the projects' build.
 and §3.9 what an audit of that campaign found. §3.10 reports the second
 campaign, which is the confirmatory result. §3.11 reports the third, on
 faults that postdate the model's training data, whose test does not reject.
+§3.12 reports the fourth, on 115 more such faults, where both of its
+hypotheses hold.
 
 ### 3.1 First campaign: the two arms
 
@@ -1055,7 +1186,9 @@ record of what the agent did. The third campaign repeats the comparison on
 these subjects, and on the ones this harness could not use, with the fix
 commit out of reach, the conditions enforced and every transcript kept
 (§3.11). There the implementation-visible arm detects 7 of the 19 subjects on
-which it had detected 13 here.
+which it had detected 13 here. The fourth campaign takes the comparison, under
+the same conditions and a tighter sandbox, to 115 more fixes of the same
+projects (§3.12).
 
 ### 3.9 The implementation-visible agent knew which bug it was testing
 
@@ -1448,6 +1581,165 @@ S3 detects one of the two.
 **Cost.** At list prices the 28 M3 runs cost $13.75 and the 28 S3 runs
 $21.34, or $0.49 and $0.76 a suite, in 18 and 16 turns a run on average.
 
+### 3.12 Fourth campaign: the comparison on 115 post-cutoff faults
+
+The 230 runs of the fourth campaign (§2.12) were made in one session, from
+17:21 UTC on 20 November to 07:27 UTC on 21 November 2026, in the order the
+protocol fixes. None was cut short by a usage limit and none was made twice.
+Fourteen runs reached the limit of 50 turns, 4 in M4 and 10 in S4, and eleven
+of them left an accepted suite all the same. The other three are S4 runs: two
+wrote no test file, and the third wrote tests that do not compile. Under the
+protocol a run that completes is final, so these three subjects have no S4
+verdict. The M4 agents wrote 5,755 tests in 115 suites, and the S4 agents
+7,299 in 112.
+
+**The audit found no violation.** Every command the audit script flags was
+read with its result, and so was everything the script does not look at, as
+in the third campaign.
+
+- *The network.* One S4 agent reached for it, asking three times for the
+  sources jar of Commons CSV on Maven Central. The harness refused to widen the
+  network allowlist, the sandbox's proxy refused the connection, and nothing
+  came back.
+- *Outside the working copy.* Nothing was read but the operating system and
+  the JDK, and the three places the rule leaves out:
+  - a command's private `/tmp`;
+  - the run's own temporary directory;
+  - the harness's saved copies of the run's own long output.
+
+  Four M4 runs and eleven S4 runs used their own temporary directory, for
+  scratch classes, classes unpacked from their own libraries or the text of
+  their own javadoc pages. Under the third campaign's settings that directory
+  was shared, and the runs that read their files back would have been
+  violations by its rule.
+- *`lib/` in S4.* 45 of the 115 S4 agents tried to list or open a jar there,
+  against 22 of 40 in the second campaign and 5 of 28 in the third. None
+  succeeded: `unzip` is hidden, and the JDK's other launchers are not there.
+- *Python.* 85 S4 agents called it, nearly always to strip the tags from a
+  javadoc page. It is hidden as well.
+- *The compiler.* Seven S4 agents called it directly. Three wanted to see the
+  deprecation warnings in their own tests. Four compiled scratch classes, two
+  of which print the default time zone. None gave the compiler an option that
+  executes code.
+- *Naming the fix.* The protocol's rule marks nine runs, four of M4 and five of
+  S4, as naming a trigger test. In each, the agent named a test after the
+  method it tests, and that name is also a trigger test's: `testIsCreatable`,
+  `testSubtract`, `testHexDigitToInt`, `testHexToInt`,
+  `testEqualsIgnoreCase`. Nothing an agent said or wrote names an issue, a
+  pull request or a fix commit.
+
+**Measurement.** Every suite compiles against both revisions and passes again
+on the fix commit. So no suite is `Broken`, and every subject with a suite in
+both arms has a verdict in both. No verdict is a timeout. The paired set is
+the 112 subjects with an S4 suite.
+
+| | M4 (reads code) | S4 (spec only) |
+|---|---|---|
+| **Real fault detected**, paired set, 112 subjects | **21/112 — 19%** | **3/112 — 3%** |
+| Every subject, no suite counted as not detected | 21/115 — 18% | 3/115 — 3% |
+
+**H1 is rejected, with M4 above S4.** Of the 112 subjects, two are detected by
+both arms, 19 by M4 alone, one by S4 alone and 90 by neither. The exact
+McNemar test gives *p* = 4.0 × 10⁻⁵. The difference is 16.1 points, with a 95%
+bootstrap interval of 8.9 to 23.2.
+
+**H2 is supported.** The complete set is the paired set less the three Commons
+CLI subjects whose fix is in `Converter`. That is an interface whose code is
+all in lambdas, and PIT makes no mutant in it. Two of the three are M4
+detections.
+
+| | M4 (reads code) | S4 (spec only) | fall |
+|---|---|---|---|
+| Real fault detected, 109 subjects | 19/109 — 17% | 3/109 — 3% | 84.2% |
+| Mutation score, pooled | 44% | 50% | −15.0% |
+| Line coverage, pooled | 62% | 68% | −10.2% |
+
+The gap between the first two falls is 99.2 points, with a 95% bootstrap
+interval of 73.8 to 120.9. Against line coverage it is 94.4 points, from 70.7
+to 113.7. By the rule fixed in the protocol, on faults that postdate the
+model's training data the arms differ in detection in the direction they do
+on Defects4J. Detection falls further than mutation score, so the claim of the
+title holds on these faults, and recall of the benchmark does not account for
+it.
+
+**Mutation score does not fall: pooled, it rises.** Over the 109 subjects,
+the S4 suites detect more mutants than the M4 suites. Subject by subject the
+order is the other way. M4's score is the higher in 80 of the 109 subjects and
+S4's in 25, and they are equal in four. As means over suites, the scores are
+62.4% and 56.4%.
+
+The pooled figure weights each subject by its mutants, and eight subjects
+whose fix is in `StringUtils` hold 31.6% of them. Both arms' suites miss all
+eight faults. In those subjects the S4 suites, written from the class's
+documentation, reach 79% of the mutants and detect 62%. The M4 suites reach
+46% and detect 33%. Over the other 101 subjects, M4 detects 48.6% of the
+mutants and S4 44.4%. Of the mutants their tests reach, the arms detect 72.6%
+and 73.5%. As in the third campaign, what separates them on this measure is
+what their tests reach. Aggregated either way, mutation score falls far less
+than detection does.
+
+**Composition.** Weighted by the Defects4J sample's fault types, detection is
+16.0% in M4 and 3.6% in S4. The difference is 12.4 points, with an interval
+stratified by type of 4.6 to 20.7. By type:
+
+| fault type | subjects | M4 detects | S4 detects |
+|---|---|---|---|
+| omission | 35 | 7 | 2 |
+| missing clause | 18 | 10 | 1 |
+| state | 12 | 1 | 0 |
+| API | 8 | 3 | 0 |
+| substitution | 22 | 0 | 0 |
+| algorithm | 17 | 0 | 0 |
+
+**Sensitivity.** None of these is confirmatory, and none reads differently.
+- *Every subject counted*, with a missing suite as a miss: 21/115 against
+  3/115, *p* = 4.0 × 10⁻⁵.
+- *Without the nine runs that name a trigger test*: 20/106 against 3/106,
+  *p* = 7.6 × 10⁻⁵.
+- *Without the seven S4 runs that called the compiler*: 20/105 against 3/105,
+  *p* = 7.6 × 10⁻⁵.
+- *Only the 108 subjects the strict reading of the screen keeps*, 105 of them
+  paired: the same figures.
+
+No run committed a violation and no verdict is a timeout, so the other two
+analyses are the primary one.
+
+**Where the detections are.** By project, M4 and S4 detect 15 and 2 of the 90
+paired subjects of Commons Lang, 3 and 0 of the 16 of Commons CSV, and 3 and 1
+of the 6 of Commons CLI. The two faults both arms detect are an empty option
+name that Commons CLI's `Options` should reject, and a `BigDecimal` that
+`RecursiveToStringStyle` should not recurse into. The one S4 detects alone is
+a negative duration that `DurationUtils.accept` did not preserve. By the date
+of the fix, the arms detect 17 and 2 of the 84 subjects fixed up to 22
+September 2026, and 4 and 1 of the 28 fixed after it.
+
+**Wrong expectations.** Acceptance left out 237 of the 7,299 S4 tests, 3.2%,
+in 77 of the 112 suites: 3.0% in Commons Lang, 5.2% in Commons CSV and 3 of
+152 in Commons CLI. Of the 5,755 M4 tests it left out 41, in four suites, all
+of them in Commons Lang.
+
+**The other campaigns beside the fourth.** This comparison is descriptive.
+
+- *The third campaign.* The gap between the arms is 16.1 points here and 13.0
+  in the third campaign. The difference between the two, 3.0 points, has an
+  interval of −13.6 to 17.2. On faults that postdate the training data the two
+  campaigns' gaps are close. What the third's test lacked was discordant
+  pairs: it had three against none, where it needed six (§2.11). The two
+  campaigns' subjects were selected by different rules, and they ran in
+  different sandboxes.
+- *The second campaign.* There the gap is 38.5 points. The difference from
+  this one, −22.4 points, has an interval of −40.5 to −3.9. Both arms detect
+  far less here than on Defects4J: M4 19% against M2's 56%, and S4 3% against
+  S2's 18%.
+
+As in §3.11, the second campaign differs from the post-cutoff ones in more
+than the date of the faults. The projects, the kinds of fault, the test
+framework, how the working copy is built and how a suite is run all differ
+too. So none of this measures what recall contributed on Defects4J.
+
+**Cost.** At list prices the 115 M4 runs cost $61.38 and the 115 S4 runs
+$98.68, or $0.53 and $0.88 a suite, in 21 and 18 turns a run on average.
+
 ---
 
 ## 4. Discussion
@@ -1473,18 +1765,23 @@ code. The specification-only arm's 18% is closer to that question but is not
 the answer either, because withholding the implementation removes information a
 real developer would have.
 
-How much of this carries over to faults the model cannot have seen is not
-settled by our data. On 23 fix commits that postdate its training data, under
-the second campaign's controls, the arms are at 35% and 22% (§3.11). Every
-fault the specification-only arm detects there the other arm detects too, and
-it detects three more, which is the direction of the mechanism and a
-difference the pre-specified test does not distinguish from none. The
-implementation-visible arm is some twenty points lower there than on
-Defects4J and the specification-only arm is about where it was. Reading the
-repaired code helped
-less on those subjects. Whether that is their projects and kinds of fault, or
-recall of Defects4J that the source cues, the comparison cannot say, because
-the two corpora differ in all of these at once.
+The mechanism shows on faults the model cannot have seen as well. The fourth
+campaign took 112 fix commits that postdate its training data, under the
+second campaign's controls and a tighter sandbox. There the arms are at 19%
+and 3% (§3.12). The implementation-visible arm detects 19 faults the other
+misses, and the other detects one fault it misses.
+
+The third campaign had put 23 earlier faults at 35% and 22% (§3.11). The
+difference is in the same direction and of nearly the same size, and its test
+could not distinguish it from none.
+
+Both arms detect far less on the post-cutoff subjects than on Defects4J. The
+gap between them is narrower in points and wider in proportion. The
+specification-only arm keeps a third of the other arm's detections on
+Defects4J, and a seventh on the fourth campaign's subjects. These differences
+could come from the projects and the kinds of fault, or from recall of
+Defects4J that the source cues. The comparison cannot say which, because the
+corpora differ in all of these at once.
 
 ### 4.2 What mutation score does and does not register
 
@@ -1503,14 +1800,22 @@ code they do. A reader shown only the two mutation scores would expect the
 suites to differ in fault detection. Nothing in the scores would lead them to
 expect 56% against 18%.
 
-On the post-cutoff faults of the third campaign, measured with PIT after the
-campaign, the scores are closer still: 57% against 52%. The suite that read
-the code is ahead in 18 of 23 subjects, and of the mutants their tests reach
-the two kill nearly the same share. Detection is 35% against 22% there, and
-that difference is not established either (§3.11). Whether mutation score
-understates the difference on faults the model cannot have seen is therefore
-not shown. The gap between the two falls is 29 points, in the direction of
-the second campaign's, with an interval that includes zero.
+On the post-cutoff faults the scores are closer still, and in the fourth
+campaign they cross. In the third, measured with PIT after the campaign, they
+are 57% against 52%, where detection is 35% against 22%, a difference that is
+not established (§3.11). In the fourth, where mutation score is part of the
+protocol, the specification-only suites score higher when the mutants are
+pooled, 50% against 44%, and lower as means over suites, 56% against 62%. The
+implementation-visible suite is ahead in 80 of the 109 subjects. Detection on
+the same subjects is 17% against 3%, and the pre-specified gap between the two
+falls is 99 points, with an interval from 74 to 121 (§3.12).
+
+In both campaigns, the two arms kill nearly the same share of the mutants
+their tests reach. What separates them on this measure is how much of the
+code their tests reach. Eight of the fourth campaign's subjects have their fix
+in `StringUtils`, which holds a third of that campaign's mutants. There the
+specification-only suites reach 79% of the mutants and the
+implementation-visible ones 46%, and neither detects any of the eight faults.
 
 This is not a failure of mutation analysis on its own terms, and it does not
 contradict the established result that mutation score predicts real-fault
@@ -1541,7 +1846,9 @@ implementation-visible suites in neither.
 
 Stated as one sentence: **mutation score tracks the strength of a suite's
 assertions, and tracks the provenance of its expectations only as far as the
-two happen to move together.** In our arms they moved together a little.
+two happen to move together.** On Defects4J our arms moved them together a
+little. Pooled over the fourth campaign's faults, they did not move together
+at all.
 
 The practical consequence for anyone evaluating agent-written suites: a high
 mutation score is evidence that the tests exercise the code and that their
@@ -1551,8 +1858,9 @@ project actually had.
 
 This bears on proposals to close the loop by feeding mutation results back to
 the generating agent. Such a loop optimises a quantity that lost 28% of its
-value when fault detection lost 65% — and an agent that can read the
-implementation has a cheap way to raise it.
+value when fault detection lost 65%. Pooled over the fourth campaign's
+post-cutoff faults, that quantity rose by 15% while detection lost 84%. And an
+agent that can read the implementation has a cheap way to raise it.
 
 ### 4.3 Oracle quality, not oracle presence
 
@@ -1584,8 +1892,9 @@ is of the first kind.
 We cannot say where specification-grounded generation is worth its cost. A
 handful of detections in each Defects4J campaign, four of them the same, read
 after the fact, are not a capability we can characterise. On post-cutoff
-faults the arm detects 5 of 23 (§3.11), a rate close to its 18% on Defects4J
-and from a sample too small to say more than that.
+faults the arm detects 5 of 23 in the third campaign (§3.11), and 3 of 112 in
+the fourth (§3.12). In the fourth, 3.2% of its tests were wrong about the code
+at acceptance.
 
 ### 4.5 Separating the two, in practice
 
@@ -1711,23 +2020,29 @@ shows that no agent announced a recollection, not that none had one. The probe
 is also a single sample per bug, from one model at one point in time.
 
 Replication on faults postdating the model's training cutoff is the stronger
-check, and ours does not deliver it. GitBug-Java, the obvious candidate, no
-longer serves: its bugs come from 2023 commit histories, selected in early
-2024 precisely because that postdated the then-current cutoffs. We mined two
-small corpora and ran them twice. The first runs (§3.8) had the fix commit
-within the agent's reach and lost one arm of one corpus to a harness error.
-The third campaign (§3.11) ran all 28 subjects under the second campaign's
-controls and a protocol fixed beforehand. Its hypothesis is not rejected: 35%
-against 22% over 23 pairs, three faults detected by the implementation-visible
-arm alone and none by the other, *p* = 0.25, with an interval for the
-difference from 0 to 26 points. So the effect this paper rests on is
-established on Defects4J and not on faults the model cannot have seen. The
-gap on the post-cutoff subjects is narrower than on Defects4J by 25 points,
-with an interval that excludes zero, and the corpora differ in project, kind
-of fault and build as well as in date, so that difference cannot be assigned
-to recall. Nor can recall be excluded as a part of the Defects4J effect. A
-post-cutoff corpus several times this size, matched to the Defects4J sample,
-is what the question needs.
+check. GitBug-Java, the obvious candidate, no longer serves: its bugs come
+from 2023 commit histories, selected in early 2024 precisely because that
+postdated the then-current cutoffs. We mined our own. The first runs (§3.8)
+had the fix commit within the agent's reach and lost one arm of one corpus to
+a harness error. The third campaign (§3.11) ran the 28 subjects of those
+corpora under the second campaign's controls and a protocol fixed beforehand.
+Its hypothesis is not rejected: 35% against 22% over 23 pairs, *p* = 0.25.
+The fourth (§3.12) ran 115 more, from a pool of the three projects' 2026
+fixes, under the same controls, a tighter sandbox and a protocol of its own.
+It gives 19% against 3% over 112 pairs, *p* = 4.0 × 10⁻⁵, with an interval for
+the difference from 9 to 23 points. So the effect does not rest on recall of
+the benchmark.
+
+Two limits remain. First, that the fixes postdate the training data rests on
+one check: the model disclaimed five issue identifiers from January 2026. And
+only the fix is new; the code around it, fault included, may be in the
+training data. Second, the replications do not apportion the Defects4J
+figure. The gap on the fourth campaign's subjects is narrower than on
+Defects4J by 22 points, with an interval from 4 to 41 that excludes zero. But
+the corpora differ in project, kind of fault and build as well as in date, so
+that difference cannot be assigned to recall. Settling it would take a
+post-cutoff corpus matched to the Defects4J sample, and the pool can supply at
+most 69 such subjects (§2.12).
 
 **The sandbox enforced less than its settings were meant to.** The third
 campaign's audit found that the directory the harness gives commands for
@@ -1745,7 +2060,10 @@ have been caught by the audit and not prevented by the sandbox. A check made
 after the third campaign, with its settings and no model in the loop, confirmed
 both: a sandboxed command lists and reads that directory, and reads those jars.
 Settings under which it does neither are in the repository with that check
-(`bin/agent-sandbox.py`), for any later run. No run reported here used them.
+(`bin/agent-sandbox.py`). The fourth campaign ran under them, after the check
+had passed in both arms (§2.12). Its audit found no command that read
+anything outside the working copy except the operating system, the JDK and
+the run's own files.
 
 **The tooling produced wrong figures without flagging them.** A table whose
 column was named `mut_killed` counted unexecuted mutants; a build that failed
@@ -1770,7 +2088,8 @@ that does not compile against the buggy revision, because it uses something
 the fix added, is `Broken` rather than detecting: two Defects4J suites of the
 first campaign (§2.9), both Cli-21 suites of the second (§3.10), one
 post-cutoff suite of the earlier runs (§3.8) and both suites of one subject
-of the third campaign (§3.11) are in that position.
+of the third campaign (§3.11) are in that position. No suite of the fourth
+campaign is (§3.12).
 
 **Javadoc is not an independent specification.** The S arm's oracle is
 documentation written by the same developers as the code, and sometimes derived
@@ -1782,18 +2101,28 @@ direction.
 **Mutation score is measured over the classes the fix modifies**, which is
 Defects4J's default scope. A wider scope would change the absolute figures,
 though there is no obvious reason it would change the between-arm comparison.
-In the third campaign it is measured with PIT and its default mutators
-instead of Major, over the same classes and the classes nested in them, so
-its levels are not comparable with the Defects4J campaigns'. H2 compares the
-falls between the arms.
+In the third and fourth campaigns it is measured with PIT and its default
+mutators instead of Major, over the same classes and the classes nested in
+them, so its levels are not comparable with the Defects4J campaigns'. H2
+compares the falls between the arms. In the fourth campaign the scope is also
+uneven between subjects. Eight fixes in `StringUtils` put a third of the
+mutants in one class, and three fixes in an interface whose code is all in
+lambdas put none in theirs.
 
 **The mutation and coverage figures are pooled.** Averaged per suite instead,
 the two arms of the first campaign are at 67.6% and 48.5% rather than 58% and
-44%, those of the second at 64.3% and 45.3% rather than 54% and 39%, and
-those of the third at 67.7% and 57.9% rather than 56.7% and 51.9%: the
-direction and the per-bug consistency are the same and the gap is larger. The
-near-tie between EvoSuite and the first campaign's specification-only suites
-changes sign (§3.5), which is why we call it a tie.
+44%, those of the second at 64.3% and 45.3% rather than 54% and 39%, those of
+the third at 67.7% and 57.9% rather than 56.7% and 51.9%, and those of the
+fourth at 62.4% and 56.4% rather than 43.6% and 50.1%. In the first three
+the direction and the per-bug consistency are the same and the gap is larger.
+In the fourth the direction itself turns on the aggregation. Pooled, the
+specification-only suites are ahead, because a third of the mutants are in
+one class that they cover more widely. Per suite they are behind, as they are
+in 80 of the 109 subjects (§3.12). H2 was fixed on the pooled figures, as in
+the second campaign. Per suite, the fourth campaign's mutation score falls by
+a tenth, where detection falls by 84%. The near-tie between EvoSuite and the
+first campaign's specification-only suites changes sign (§3.5), which is why
+we call it a tie.
 
 **Line coverage is not reliable for every subject.** For Csv-4 the
 implementation-visible and EvoSuite suites are credited with 28% and 21% of the
@@ -1825,8 +2154,8 @@ an agent's access to the implementation may matter differently.
 
 **One run per bug per arm, in each campaign.** LLM output is stochastic and no
 variance estimate was collected; the figures carry no confidence interval
-attributable to sampling the model, and the bootstrap intervals of §3.10 and
-§3.11 resample bugs, not runs. Repeated runs would be the standard remedy and
+attributable to sampling the model, and the bootstrap intervals of §3.10 to
+§3.12 resample bugs, not runs. Repeated runs would be the standard remedy and
 were not affordable at roughly $1 per suite across 80 suites. The two Defects4J
 campaigns are the nearest thing to a repetition, under conditions that differ:
 the implementation-visible arms detect 26 and 20 of the same 36 bugs with 20 in
@@ -1836,7 +2165,7 @@ first, is large relative to any plausible run-to-run variation, but this is an
 argument, not a measurement. In the first campaign, where a run was lost to an
 infrastructure failure it was repeated (§3.6), so a few suites are a second
 draw; that is not a replication, and the first draws were not kept. In the
-second and the third no run was repeated.
+second, the third and the fourth no run was repeated.
 
 **The first campaign's comparison had no analysis fixed in advance; the
 second's had.** In the first campaign only the first arm had a decision rule.
@@ -1854,19 +2183,25 @@ was known, and its analysis — the pairing, the exact test, the choice of
 metrics — was not specified beforehand. The second campaign's hypotheses,
 tests, exclusions and decision rule are in a protocol committed before its
 first run (§2.10), and the repository's history shows the order: protocol,
-runs, audit, measurement, analysis. The same holds for the third campaign
-(§2.11).
+runs, audit, measurement, analysis. The same holds for the third and fourth
+campaigns (§2.11, §2.12).
 
 **The tests describe consistency of direction, not effect size in a
 population.** The *p* values of §3.1 and §3.10 say the asymmetry between the
 arms is very unlikely under the null; they say nothing about how large the gap
-would be in a different corpus. The third campaign is a different corpus, and
-there the gap is 13 points, with an interval from 0 to 26 (§3.11). The
-interval for H2, 12 to 59 points, is wide. It supports the statement that
+would be in a different corpus. The third and fourth campaigns are different
+corpora. There the gap is 13 points, with an interval from 0 to 26 (§3.11),
+and 16 points, from 9 to 23 (§3.12).
+
+The interval for H2, 12 to 59 points, is wide. It supports the statement that
 detection falls further than mutation score and gives little hold on by how
-much. H2 was tested on Defects4J alone. Computed afterwards on the third
-campaign, as its protocol provides, it is a secondary result on a corpus not
-sized for it: 28.9 points, with an interval from −7.2 to 66.6.
+much. H2 was tested on Defects4J and, as a hypothesis of its protocol, on the
+fourth campaign. There it is 99.2 points, from 73.8 to 120.9. It is that
+large because the pooled mutation score does not fall at all, and that
+depends on how the mutants are spread over the subjects (§5.2). Computed
+afterwards on the third campaign, as its protocol provides, it is a secondary
+result on a corpus not sized for it: 28.9 points, with an interval from −7.2
+to 66.6.
 
 ## 6. Related work
 
@@ -2399,9 +2734,10 @@ things. They state the worry of Defects4J itself, which "is likely to have
 been included in LLM training data", and take tests written after the cutoff
 from projects selected for having a history, of at least 100 commits: the
 assertion to be predicted is new, and the code it concerns need not be. Our
-third campaign takes fixes made after the cutoff in libraries that have long
-been public (§2.11): the fault and its repair are new, and the documentation
-and most of the code are not. Neither makes a subject unseen as a whole.
+third and fourth campaigns take fixes made after the cutoff in libraries that
+have long been public (§2.11, §2.12): the fault and its repair are new, and
+the documentation and most of the code are not. Neither makes a subject
+unseen as a whole.
 Beyond that the paper has no fault other than PIT's mutants, no condition
 without the code and no agent. Its models are open ones of 1.5 to 70 billion
 parameters, and the authors note that proprietary models "may perform better".
@@ -2432,20 +2768,22 @@ In that campaign only a prompt kept the specification-only agent from the
 compiled classes. In the second, where a sandbox did, more than half of the
 agents tried.
 
-A third campaign took the second's conditions to 28 faults fixed after the
-model's training data ends. Over the 23 with a verdict in both arms and no
-excluded run, the arms detect 35% and 22%. Every fault the specification-only
-arm detects, the other detects too, with three more, and the test fixed
-beforehand does not reject (*p* = 0.25). The effect is established on
-Defects4J and not beyond it. The gap is narrower on the newer faults, in a
-corpus that differs from Defects4J in more than their date, and we cannot say
-how much of the Defects4J figure is recall that the source cues. Mutation
-score, measured on those suites afterwards, falls by 8.6% where detection
-falls by 37.5%, and the interval of the difference between the two falls
-includes zero. That campaign's audit also found the sandbox leaving a shared
-directory open, which only the transcripts show that no agent used: a
-sandbox's settings are a claim, and the record of what the agents did is the
-check on it.
+Two more campaigns took the second's conditions to faults fixed after the
+model's training data ends. On the first 28 such faults the arms detect 35%
+and 22% over 23 subjects, and the test fixed beforehand does not reject (*p* =
+0.25). On 115 more, in a sandbox closed further, they detect 19% and 3% over
+112, and the test rejects (*p* = 4.0 × 10⁻⁵). There the pre-specified test of
+the title's claim holds too. Pooled
+over the mutants, the suites that detect a sixth as many faults have the
+higher mutation score, though not as a mean over suites. So recall of the
+benchmark does not account for the effect. Both arms detect far less on the
+newer faults, in corpora that differ from Defects4J in more than their date,
+and we cannot say how much of the Defects4J figure is recall that the source
+cues.
+
+The third campaign's audit also found the sandbox leaving a shared directory
+open, which only the transcripts show that no agent used: a sandbox's settings
+are a claim, and the record of what the agents did is the check on it.
 
 The immediate consequence is for evaluation: figures reported for generated
 suites on real-fault benchmarks should state what the generator was allowed to
@@ -2501,6 +2839,19 @@ the operating system's jars, and a check of what a sandboxed command can reach
 that calls no model; what it prints under those settings and under the
 campaigns' own is in `data/sandbox/`.
 
+The fourth campaign's scripts were committed with its protocol
+(`data/campaign4/PROTOCOL.md`) before its runs: `bin/subjects-campaign4.py`,
+which writes the subjects' records from the pool; `bin/generate-campaign4.sh`,
+which runs the agent under the settings of `bin/agent-sandbox.py`;
+`bin/run-campaign4.sh`; `bin/audit-campaign4.py`; `bin/measure-campaign4.sh`;
+`bin/mutation-campaign4.sh`; and `bin/analyze-campaign4.py`. They use the
+third campaign's `bin/campaign3-lib.sh`, `bin/AgentTestRunner.java` and
+`bin/ExcludedTestsFilter.java` unchanged. `bin/describe-campaign4.py`,
+written after the analysis, prints the descriptive figures of §3.12. The pool
+the subjects come from is counted by `bin/count-postcutoff-pool.py` and
+classified by fault type with `bin/classify-postcutoff-pool.py`, under
+`data/postcutoff-pool/`.
+
 Raw artifacts are under `data/`. For the first campaign: one directory per arm
 holding, for each bug, the record of the run (its closing message, cost and
 turn count, not a transcript) and the intermediate logs; the packaged suites;
@@ -2519,14 +2870,24 @@ them, with the list of tests left out at acceptance; the audit's output, the
 list of violations and the list of direct compiler calls, with the reason for
 each decision; the log of every build, compilation and run of the
 measurement, and its table of verdicts; and the analysis as the script
-printed it. The method record, including the deviations and tooling failures
-encountered, is in `data/README.md`.
+printed it. For the fourth campaign, under `data/campaign4/`: the same record
+of every run as for the third, with what the run left in its own temporary
+directory; the suites as the agents wrote them; the audit's output, the list
+of violations, which is empty, and the list of direct compiler calls, with
+the reason for each decision; the logs and verdicts of the measurement; PIT's
+log and its record of every mutant for every suite; and the analysis as the
+script printed it. The method record, including the deviations and tooling
+failures encountered, is in `data/README.md`.
 
 **The figures need neither model access nor a Defects4J installation.**
 `bin/report-figures.py` recomputes every figure in §3 from the files under
 `data/`, and `bin/audit-trigger-leaks.py` the evidence of §3.9. Re-measuring
 from the packaged suites in `data/agent-suites/` and `data/campaign2/suites/`
 needs Defects4J (`bin/analyze-agent-suites.sh`). Re-measuring those in
-`data/campaign3/suites/` needs clones of the three upstream repositories,
-Java 11, and Maven with the projects' dependencies in its local repository
-(`bin/measure-campaign3.sh`). Regenerating the suites needs the model.
+`data/campaign3/suites/` and `data/campaign4/suites/` needs clones of the
+three upstream repositories, Java 11, and Maven with the projects'
+dependencies in its local repository (`bin/measure-campaign3.sh`,
+`bin/measure-campaign4.sh`). Their mutation score also needs PIT, which
+`bin/mutation-campaign3.sh` and `bin/mutation-campaign4.sh` fetch once and
+check against the hashes written in them. Regenerating the suites needs the
+model.

@@ -16,8 +16,9 @@ metrics usually reported alongside it can see.
 
 Two suites per bug from the same agent and model, under two conditions: the
 agent either works in the project's source tree or sees only its javadoc. The
-comparison was run twice on the same 40 Defects4J bugs, and a third time on
-28 faults fixed after the model's training data ends.
+comparison was run twice on the same 40 Defects4J bugs, and twice more on
+faults fixed after the model's training data ends: 28 in a third campaign and
+115 in a fourth.
 
 **The second campaign is the controlled one.** Its working copies hold nothing
 of the benchmark's own, a sandbox enforces the conditions, every run's
@@ -70,13 +71,38 @@ coverage were measured afterwards with PIT, as that protocol provides.
 Over the 23 subjects with a verdict in both arms and no excluded run, three
 faults are detected by the first arm alone and none by the second alone (exact
 McNemar, *p* = 0.25). **The pre-specified test does not reject.** The
-difference is 13 points, with a 95% bootstrap interval of 0 to 26. So the
-effect is established on Defects4J and not on post-cutoff faults: the
-direction is the same there, and the corpus is too small to show more. The
-same holds for the claim in the title. There, detection loses 37.5% of its
-value and mutation score 8.6%; the gap between the two losses is 29 points,
-with an interval of −7 to 67 that includes zero. That figure is a secondary
-result, on a corpus not sized for it.
+difference is 13 points, with a 95% bootstrap interval of 0 to 26: the
+direction of the Defects4J campaigns, in a corpus too small to show more.
+There detection loses 37.5% of its value and mutation score 8.6%. The gap
+between the two losses is 29 points, with an interval of −7 to 67 that
+includes zero, a secondary result on a corpus not sized for it.
+
+**The fourth campaign is on 115 more of them.** It uses the same conditions,
+on fix commits from a pool counted afterwards from the three projects' 2026
+histories. They are not matched by fault type, and the sandbox was tightened
+after the third campaign's audit. Its protocol (`data/campaign4/PROTOCOL.md`)
+makes the claim in the title one of its hypotheses.
+
+| arm | real fault detected | mutation score | line coverage |
+|---|---|---|---|
+| implementation-visible | **21/112 — 19%** | 44% | 62% |
+| specification-only | **3/112 — 3%** | 50% | 68% |
+
+Detection is over the 112 subjects with a verdict in both arms. Nineteen
+faults are detected by the first arm alone and one by the second alone (exact
+McNemar, *p* = 4.0 × 10⁻⁵). The difference is 16 points, with an interval of 9
+to 23. Mutation score and coverage are over the 109 of those subjects in
+whose fixed classes PIT makes a mutant.
+
+**There detection loses 84% of its value, and mutation score none: pooled,
+it is higher in the arm that detects less.** The gap between the two losses is
+99 points, with an interval of 74 to 121, so by the test the protocol fixed
+the claim in the title holds on these faults.
+
+The pooled figure leans on eight subjects whose fix is in `StringUtils`.
+They hold a third of the mutants, and the specification-only suites cover
+them more widely. As means over suites the scores are 62% and 56%, in the
+usual order. Both arms detect far less than on Defects4J.
 
 Mutation score and coverage measure how much of a program a suite exercises
 and how hard it checks what it exercises. Neither measures where the expected
@@ -144,9 +170,10 @@ the measurement of detection (`results/`), that of mutation score and line
 coverage (`mutation/`), and the analysis (`analysis.txt`). Its scripts are
 `bin/subjects-campaign4.py`, `bin/generate-campaign4.sh`,
 `bin/run-campaign4.sh`, `bin/audit-campaign4.py`, `bin/measure-campaign4.sh`,
-`bin/mutation-campaign4.sh` and `bin/analyze-campaign4.py`. They use the third
-campaign's `bin/campaign3-lib.sh`, `bin/AgentTestRunner.java` and
-`bin/ExcludedTestsFilter.java` unchanged.
+`bin/mutation-campaign4.sh` and `bin/analyze-campaign4.py`, all committed with
+its protocol, and `bin/describe-campaign4.py`, written after the analysis.
+They use the third campaign's `bin/campaign3-lib.sh`,
+`bin/AgentTestRunner.java` and `bin/ExcludedTestsFilter.java` unchanged.
 
 ## What this does not show
 
@@ -172,18 +199,25 @@ table above:
   before its runs, with the first campaign's results already known. It shows
   that the effect survives control on new runs. It does not show that it holds
   on new faults. There is one run per bug and arm in each campaign.
-- **On new faults the effect is not shown.** The third campaign's test does
-  not reject: 8/23 against 5/23, *p* = 0.25. That is not evidence of no
-  effect. The test needed six discordant pairs against none and the corpus
-  produced three, all in the direction of the earlier campaigns. The gap is 25
-  points narrower than in the second campaign, with an interval that excludes
-  zero, between corpora that differ in project, kind of fault and build as
-  well as in date; every detection in the third is in Commons Lang. So the
-  narrower gap cannot be put down to recall, and recall cannot be excluded as
-  a part of the Defects4J figure. Mutation score, measured there afterwards
-  with PIT, loses 8.6% of its value against detection's 37.5%, but the
-  interval of the gap between the two, −7 to 67 points, includes zero: the
-  claim in the title is shown on Defects4J alone.
+- **On new faults the effect rests on one campaign.** The third campaign's
+  test does not reject: 8/23 against 5/23, *p* = 0.25, three discordant pairs
+  where the test needed six. The fourth's does, on 112 subjects.
+  - Its difference, 16 points, is close to the third's 13.
+  - It is 22 points narrower than the second campaign's, with an interval that
+    excludes zero. The corpora differ in project, kind of fault and build as
+    well as in date, so the narrower gap cannot be put down to recall, and
+    recall cannot be excluded as a part of the Defects4J figure.
+  - That the fixes postdate the training data rests on one check, of five
+    issue identifiers. And only the fix is new: the code around it may be in
+    the training data.
+- **The fourth campaign's H2 depends on how mutants are pooled.** Pooled,
+  mutation score rises from the implementation-visible arm to the
+  specification-only one. As means over suites it falls by a tenth, and the
+  implementation-visible arm is ahead in 80 of 109 subjects. Either way it
+  falls far less than detection does. But the size of the pre-specified
+  statistic, 99 points, comes from the pooling.
+- **The fourth campaign's subjects are not matched to the Defects4J sample by
+  fault type.** Weighted to it, detection is 16.0% against 3.6%.
 - **The sandbox was less tight than its settings were meant to make it.** The
   third campaign's audit found that the directory the harness gives commands
   for temporary files is the host's own and shared by every run, in that
@@ -196,7 +230,8 @@ table above:
   result is the same with them in (9/27 against 6/27, *p* = 0.25). A check made
   after the campaign, with its settings and no model, confirmed that a command
   could list and read that directory. Settings that close it are in
-  `bin/agent-sandbox.py`; no run reported here used them.
+  `bin/agent-sandbox.py`, and the fourth campaign ran under them; its audit
+  found no violation.
 - **Contamination is measured, not bounded.** A direct probe finds two of the
   forty faults recalled with their mechanism and two more recognised, and
   benchmark identifiers not memorised. But recall may be cued by the source
@@ -219,17 +254,18 @@ table above:
 ## Reproducing
 
 `./bin/report-figures.py` recomputes every figure in the write-up from `data/`
-and needs neither Defects4J nor model access. `./bin/analyze-campaign2.py` and
-`./bin/analyze-campaign3.py` print the second and the third campaign's
-analyses on their own, and `./bin/analyze-mutation-campaign3.py` the third
-campaign's mutation figures.
+and needs neither Defects4J nor model access. `./bin/analyze-campaign2.py`,
+`./bin/analyze-campaign3.py` and `./bin/analyze-campaign4.py` print the
+second, third and fourth campaigns' analyses on their own, and
+`./bin/analyze-mutation-campaign3.py` the third campaign's mutation figures.
 
 Re-measuring from the packaged suites in `data/agent-suites/` and
 `data/campaign2/suites/` needs Defects4J v3.0.1 under Java 11 with
 `TZ=America/Los_Angeles` (`bin/analyze-agent-suites.sh`). The post-cutoff
-corpora and the third campaign's suites (`bin/measure-campaign3.sh`) need
-clones of the upstream repositories, Java 11 and Maven 3.9+. Their mutation
-score (`bin/mutation-campaign3.sh`) also needs PIT, which the script fetches
-from Maven Central once and checks against the hashes written in it.
+corpora and the third and fourth campaigns' suites (`bin/measure-campaign3.sh`,
+`bin/measure-campaign4.sh`) need clones of the upstream repositories, Java 11
+and Maven 3.9+. Their mutation score (`bin/mutation-campaign3.sh`,
+`bin/mutation-campaign4.sh`) also needs PIT, which each script fetches from
+Maven Central once and checks against the hashes written in it.
 Regenerating the suites needs the model and costs between $0.40 and $1 per
 suite at list prices.

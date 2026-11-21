@@ -2067,8 +2067,8 @@ subjects with a suite in both arms.
   benchmark does not account for it."
 - **Why the falls in mutation score and coverage are negative.** The
   analysis script prints the means over suites. The other figures here are
-  descriptive, computed from `mutation/mutation.csv` and the subjects'
-  `classes.txt`.
+  descriptive. `bin/describe-campaign4.py` prints them from
+  `mutation/mutation.csv` and the subjects' `classes.txt`.
   - Pooled over the complete set, `s4`'s suites detect more mutants than
     `m4`'s.
   - As means over suites, `m4`'s are higher: 62.4% against 56.4%. `m4` has
@@ -2124,6 +2124,29 @@ Descriptive, and no test of the protocol, as the analysis script prints them:
   between the two differences is −22.4 points [−40.5, −3.9]. The campaigns
   differ in more than the date of the faults. This is not a measurement of
   what recall contributes.
+
+`bin/describe-campaign4.py`, written on 21 November 2026 after the analysis,
+prints the descriptive figures the write-up quotes and the analysis script
+does not:
+
+- the tests left out at acceptance per project, turns and cost;
+- the faults each arm detects, with the class each fix modifies;
+- mutation score and line coverage subject by subject, the share of mutants
+  each arm's tests reach, and the subjects whose fix is in `StringUtils` apart
+  from the rest;
+- counts from the transcripts.
+
+Those counts agree with the audit's (above):
+- 45 `s4` runs tried to list or open a jar of `lib/`. In one of them,
+  `commons-lang-ae85262f0`, the only try was a command the harness refused.
+- 85 called `python` in a command the harness ran, and the harness refused two
+  more such commands.
+- 10 asked for `java -version`, and 2 tried to run a class with `java`.
+- 7 called `javac` on their own sources or a list of them, and the harness
+  refused 4 more such commands.
+- The harness refused 29 calls in `m4` and 30 in `s4`.
+
+`bin/report-figures.py` runs both scripts for §3.12 of the write-up.
 
 ## Infrastructure failures and exclusions
 
@@ -2193,4 +2216,5 @@ mistake for results:
 - [x] Fourth campaign's 230 runs made, audited and measured for detection: 227 accepted suites, 115 in `m4` and 112 in `s4`, no violation, and a verdict for every suite (`campaign4/runs-m4/`, `runs-s4/`, `suites/`, `audit.txt`, `results/`)
 - [x] Fourth campaign's mutation score and line coverage measured with PIT: it finished on all 227 suites, and 221 have a figure. The other six, those of the three subjects whose fix is in `Converter`, have no mutant (`campaign4/mutation/`)
 - [x] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed. Detection is 18.8% against 2.7% over 112 pairs, and H1 is rejected. H2 is supported: +99.2 points [+73.8, +120.9], with `s4`'s pooled mutation score above `m4`'s (`campaign4/analysis.txt`)
+- [x] Write-up carries the fourth campaign: `PREPRINT.md` §2.12 and §3.12, and the abstract, introduction, discussion, threats, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign4.py`, and §3.12 in `bin/report-figures.py`
 - [ ] A matched post-cutoff corpus large enough to test the effect size
