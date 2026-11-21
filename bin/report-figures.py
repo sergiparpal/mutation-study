@@ -13,7 +13,9 @@ bin/describe-campaign2.py and prints what they print. §3.11 is the third: it
 runs bin/analyze-campaign3.py, bin/analyze-mutation-campaign3.py (mutation
 score and coverage, measured after the campaign) and bin/describe-campaign3.py.
 §3.12 is the fourth: it runs bin/analyze-campaign4.py, whose analysis includes
-mutation score and coverage, and bin/describe-campaign4.py.
+mutation score and coverage, and bin/describe-campaign4.py. If a script it runs
+fails, the report stops there, with a line naming the script, and exits with
+status 1.
 
 Conventions, all of them stated in the write-up:
 
@@ -114,6 +116,19 @@ def section(title):
     print()
     print(title)
     print("-" * len(title))
+
+
+def run(*args):
+    """Run a script under bin/ with this interpreter; it prints its own part.
+
+    A script that fails stops the report, as a failure in the sections
+    computed here does: a report with a section missing must not exit 0.
+    """
+    sys.stdout.flush()
+    status = subprocess.run([sys.executable, *args]).returncode
+    if status:
+        sys.exit(f"report-figures.py: {args[-1]} failed with return code "
+                 f"{status}; the report stops here")
 
 
 def main():
@@ -253,37 +268,29 @@ def main():
 
     # ---- §3.8 ------------------------------------------------------------
     section("§3.8  Post-cutoff corpora")
-    sys.stdout.flush()
-    subprocess.run([sys.executable, "bin/tally-postcutoff.py"], check=False)
+    run("bin/tally-postcutoff.py")
 
     # ---- §3.10 -----------------------------------------------------------
     # The second campaign has its own two scripts: the analysis its protocol
     # fixed before the runs, and the descriptive figures written after them.
     section("§3.10  Second campaign: the analysis fixed by its protocol")
-    sys.stdout.flush()
-    subprocess.run([sys.executable, "-B", "bin/analyze-campaign2.py"], check=False)
+    run("-B", "bin/analyze-campaign2.py")
     section("§3.10  Second campaign: descriptive figures")
-    sys.stdout.flush()
-    subprocess.run([sys.executable, "-B", "bin/describe-campaign2.py"], check=False)
+    run("-B", "bin/describe-campaign2.py")
 
     # ---- §3.11 -----------------------------------------------------------
     section("§3.11  Third campaign: the analysis fixed by its protocol")
-    sys.stdout.flush()
-    subprocess.run([sys.executable, "-B", "bin/analyze-campaign3.py"], check=False)
+    run("-B", "bin/analyze-campaign3.py")
     section("§3.11  Third campaign: mutation score and coverage, measured afterwards with PIT")
-    sys.stdout.flush()
-    subprocess.run([sys.executable, "-B", "bin/analyze-mutation-campaign3.py"], check=False)
+    run("-B", "bin/analyze-mutation-campaign3.py")
     section("§3.11  Third campaign: descriptive figures")
-    sys.stdout.flush()
-    subprocess.run([sys.executable, "-B", "bin/describe-campaign3.py"], check=False)
+    run("-B", "bin/describe-campaign3.py")
 
     # ---- §3.12 -----------------------------------------------------------
     section("§3.12  Fourth campaign: the analysis fixed by its protocol")
-    sys.stdout.flush()
-    subprocess.run([sys.executable, "-B", "bin/analyze-campaign4.py"], check=False)
+    run("-B", "bin/analyze-campaign4.py")
     section("§3.12  Fourth campaign: descriptive figures")
-    sys.stdout.flush()
-    subprocess.run([sys.executable, "-B", "bin/describe-campaign4.py"], check=False)
+    run("-B", "bin/describe-campaign4.py")
 
 
 if __name__ == "__main__":
