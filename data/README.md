@@ -2001,9 +2001,12 @@ the compiler's output and the row of `mutation.csv`.
   at acceptance. The check counts the methods kept against
   `methods_run_on_fixed` in `results/verdicts.csv`, and the methods left out
   against the keys of each suite's `excluded.txt`, as the third campaign's
-  mutation analysis does. The header of `bin/mutation-campaign4.sh` says the
-  analysis makes this comparison, but `bin/analyze-campaign4.py` does not, so
-  it was made separately.
+  mutation analysis does. `bin/analyze-campaign4.py` does not make this
+  comparison, so it was made separately. The header of
+  `bin/mutation-campaign4.sh` said that it does, in a sentence taken from
+  `bin/mutation-campaign3.sh`, where it holds. That sentence was corrected on
+  21 November 2026, after the run, and is the only change to the script since:
+  the copy that ran is the one in the protocol's merge commit, `18929a3`.
 - **The mutants.** Both suites of a subject are mutated in the same classes.
   On the 112 subjects with a suite in both arms, each arm faces the same
   37,246 mutants. The three subjects with only an `m4` suite add 5,786, in
