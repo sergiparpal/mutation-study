@@ -1,7 +1,8 @@
 cff-version: 1.2.0
 title: >-
   Mutation Score Understates Oracle Provenance: Agent-Generated Test
-  Suites on Defects4J, With and Without the Implementation
+  Suites on Defects4J and on Post-Cutoff Faults, With and Without the
+  Implementation
 message: >-
   If you use this data or these scripts, please cite this work. The code
   under bin/ is under the MIT License (LICENSE) and the data under data/

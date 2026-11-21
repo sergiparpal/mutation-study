@@ -1,6 +1,6 @@
 # Mutation Score Understates Oracle Provenance
 
-### Agent-Generated Test Suites on Defects4J, With and Without the Implementation
+### Agent-Generated Test Suites on Defects4J and on Post-Cutoff Faults, With and Without the Implementation
 
 *Draft.*
 
