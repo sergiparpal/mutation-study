@@ -21,6 +21,10 @@ once, in CITATION.cff, and .zenodo.json is derived from it here:
 The version and the publication date are left out: Zenodo takes them from
 the release's tag and date.
 
+CITATION.cff is read with PyYAML (python3-yaml on Debian and Ubuntu, or
+pip install PyYAML in a virtual environment). No other Python script under
+bin/ needs a package outside the standard library.
+
 Usage:
     ./bin/zenodo-metadata.py           rewrite .zenodo.json
     ./bin/zenodo-metadata.py --check   exit 1 if .zenodo.json is not what CITATION.cff gives
@@ -31,7 +35,12 @@ import json
 import os
 import sys
 
-import yaml
+try:
+    import yaml
+except ImportError:
+    sys.exit("zenodo-metadata.py: PyYAML is needed to read CITATION.cff "
+             "(python3-yaml on Debian and Ubuntu, or pip install PyYAML in a "
+             "virtual environment)")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CFF = os.path.join(ROOT, "CITATION.cff")

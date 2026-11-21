@@ -262,6 +262,8 @@ Defects4J or model access. `./bin/analyze-campaign2.py`,
 `./bin/analyze-campaign3.py` and `./bin/analyze-campaign4.py` print the
 second, third and fourth campaigns' analyses on their own, and
 `./bin/analyze-mutation-campaign3.py` the third campaign's mutation figures.
+No Python script under `bin/` needs a package outside the standard library
+except `bin/zenodo-metadata.py`, which reads `CITATION.cff` with PyYAML.
 
 Re-measuring from the packaged suites in `data/agent-suites/` and
 `data/campaign2/suites/` needs Defects4J v3.0.1 under Java 11 with
