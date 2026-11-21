@@ -1,0 +1,111 @@
+Runs
+  m4: 115 runs of 115, 115 with an accepted suite; $61.38 at list prices, 20.9 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['18929a3']
+      tests left out at acceptance: 41 of 5755 (0.7%)
+  s4: 115 runs of 115, 112 with an accepted suite; $98.68 at list prices, 18.1 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['18929a3']
+      tests left out at acceptance: 237 of 7299 (3.2%)
+      no suite: commons-lang-9e0fd0787: agent tests do not compile in the project
+      no suite: commons-lang-3e50a7f9c: agent produced no test file
+      no suite: commons-lang-2240c1f93: agent produced no test file
+
+Violations listed in violations.txt: 0
+
+========================================================================
+PRIMARY ANALYSIS (runs with a violation left out)
+  H1, paired set: 112 subjects
+      detection  m4 21/112 (18.8%)   s4 3/112 (2.7%)
+      both 2, m4 only 19, s4 only 1, neither 90
+      exact McNemar, two-sided: p = 4.01e-05
+      difference +16.1 points, 95% bootstrap interval [+8.9, +23.2]
+========================================================================
+
+Decision on H1, by the rule fixed in the protocol:
+  H1 rejected with m4 above s4: on faults that postdate the model's training
+  data, the arms differ in detection in the direction they do on Defects4J.
+
+Subjects outside the paired set
+  commons-lang-9e0fd0787: s4: agent tests do not compile in the project
+  commons-lang-3e50a7f9c: s4: agent produced no test file
+  commons-lang-2240c1f93: s4: agent produced no test file
+
+========================================================================
+H2: DETECTION FALLS FURTHER THAN MUTATION SCORE (the second campaign's)
+  m4: 115 of 115 archived suites measured with PIT, 112 with a figure
+  s4: 112 of 112 archived suites measured with PIT, 109 with a figure
+Complete set, runs with a violation left out
+  paired set 112 subjects, complete set 109 subjects
+      detection       m4 19/109 17.4%  s4 3/109 2.8%  fall 84.2%
+      mutation score  m4 43.6%  s4 50.1%  fall -15.0%   (per-suite means 62.4%, 56.4%)
+      line coverage   m4 62.1%  s4 68.4%  fall -10.2%
+      fall(detection) - fall(mutation score) = +99.2 points, 95% bootstrap interval [+73.8, +120.9]
+      fall(detection) - fall(line coverage) = +94.4 points, 95% bootstrap interval [+70.7, +113.7]
+========================================================================
+Decision on H2, by the rule fixed in the protocol:
+  H2 supported: the lower bound is above zero. Detection falls further between
+  the arms than mutation score does, on faults that postdate the training data.
+
+COMPOSITION: DETECTION WEIGHTED BY THE DEFECTS4J SAMPLE'S FAULT TYPES (secondary)
+  type              weight   n   m4 detected   s4 detected
+  OMISSION           55.0%  35      7   20.0%      2    5.7%
+  ALGORITHM          15.0%  17      0    0.0%      0    0.0%
+  SUBSTITUTION       12.5%  22      0    0.0%      0    0.0%
+  STATE              10.0%  12      1    8.3%      0    0.0%
+  MISSING_CLAUSE      7.5%  18     10   55.6%      1    5.6%
+  API                 0.0%   8      3   37.5%      0    0.0%
+  weighted detection  m4 16.0%  s4 3.6%
+  weighted difference +12.4 points, 95% bootstrap interval (stratified by type) [+4.6, +20.7]
+
+SENSITIVITY ANALYSES (none confirmatory)
+  1. Runs with a violation included: there are none, same as the primary analysis
+  2. Intention to treat (every subject; no suite or no verdict counts as not detected; runs with a violation as measured): 115 subjects
+      detection  m4 21/115 (18.3%)   s4 3/115 (2.6%)
+      both 2, m4 only 19, s4 only 1, neither 93
+      exact McNemar, two-sided: p = 4.01e-05
+      difference +15.7 points, 95% bootstrap interval [+8.7, +22.6]
+  3. Runs whose transcript names the fix: 9 (m4 commons-lang-127050d2b, m4 commons-lang-46d9a80e5, m4 commons-lang-4bfbfeabe, m4 commons-lang-54ee8ec1c, s4 commons-lang-060ab31e5, s4 commons-lang-127050d2b, s4 commons-lang-4bfbfeabe, s4 commons-lang-54ee8ec1c, s4 commons-lang-7c91ce989)
+     with those runs left out: 106 subjects
+      detection  m4 20/106 (18.9%)   s4 3/106 (2.8%)
+      both 2, m4 only 18, s4 only 1, neither 85
+      exact McNemar, two-sided: p = 7.63e-05
+      difference +16.0 points, 95% bootstrap interval [+8.5, +23.6]
+  4. Verdicts that are Fail by timeout: 0
+  5. s4 runs in which the agent called javac itself: 7 (commons-csv-1e3de1274, commons-csv-afbf34ad9, commons-csv-b29fb40ac, commons-lang-75086d398, commons-lang-7c91ce989, commons-lang-a9a0dd8a7, commons-lang-aa47951bd)
+     with those runs left out: 105 subjects
+      detection  m4 20/105 (19.0%)   s4 3/105 (2.9%)
+      both 2, m4 only 18, s4 only 1, neither 84
+      exact McNemar, two-sided: p = 7.63e-05
+      difference +16.2 points, 95% bootstrap interval [+8.6, +23.8]
+  6. Only the subjects the strict reading keeps (108): 105 subjects
+      detection  m4 20/105 (19.0%)   s4 3/105 (2.9%)
+      both 2, m4 only 18, s4 only 1, neither 84
+      exact McNemar, two-sided: p = 7.63e-05
+      difference +16.2 points, 95% bootstrap interval [+8.6, +23.8]
+
+DESCRIPTIVE (no test of this protocol)
+By project
+  commons-cli            n=  6  m4 detected   3  s4 detected   1
+  commons-csv            n= 16  m4 detected   3  s4 detected   0
+  commons-lang           n= 90  m4 detected  15  s4 detected   2
+By fault type
+  ALGORITHM              n= 17  m4 detected   0  s4 detected   0
+  API                    n=  8  m4 detected   3  s4 detected   0
+  MISSING_CLAUSE         n= 18  m4 detected  10  s4 detected   1
+  OMISSION               n= 35  m4 detected   7  s4 detected   2
+  STATE                  n= 12  m4 detected   1  s4 detected   0
+  SUBSTITUTION           n= 22  m4 detected   0  s4 detected   0
+By date of the fix (up to 2026-09-22, the end of the matched corpus's window)
+  after 2026-09-22       n= 28  m4 detected   4  s4 detected   1
+  up to 2026-09-22       n= 84  m4 detected  17  s4 detected   2
+
+THE THIRD CAMPAIGN BESIDE THE FOURTH (descriptive: different subjects, selected by
+different rules, run in different sandboxes)
+  third campaign, m3 against s3: 8/23 (34.8%) against 5/23 (21.7%)   difference +13.0 points
+  fourth campaign, post-cutoff pool: m4 21/112 (18.8%) against s4 3/112 (2.7%)   difference +16.1 points
+  difference between the two differences +3.0 points, 95% bootstrap interval [-13.6, +17.2]
+
+THE SECOND CAMPAIGN BESIDE THE FOURTH (descriptive: the campaigns differ in more
+than the date of the faults, see the protocol)
+  second campaign, Defects4J, m2 against s2: 22/39 (56.4%) against 7/39 (17.9%)   difference +38.5 points
+  fourth campaign, post-cutoff pool: m4 21/112 (18.8%) against s4 3/112 (2.7%)   difference +16.1 points
+  difference between the two differences -22.4 points, 95% bootstrap interval [-40.5, -3.9]

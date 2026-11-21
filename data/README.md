@@ -2031,6 +2031,100 @@ the compiler's output and the row of `mutation.csv`.
 - The records were searched for details of the machine before they were
   committed, inside the compressed XML too. Nothing needed redacting.
 
+### Analysis
+
+`./bin/analyze-campaign4.py > data/campaign4/analysis.txt` ran once, on 21
+November 2026, with the script as it was fixed with the protocol. It ran after
+the mutation measurement had been committed (`96c9497`). No run has a
+violation, so the primary analysis keeps every run. The paired set is the 112
+subjects with a suite in both arms.
+
+- **H1, the arms differ in detection: rejected, with `m4` above `s4`.**
+  - `m4` detects 21/112 (18.8%) and `s4` 3/112 (2.7%).
+  - Both arms detect two faults, `m4` alone 19, and `s4` alone one
+    (`commons-lang-7da57b615`, negative durations in `DurationUtils.accept`).
+  - Exact McNemar, two-sided: *p* = 4.0 × 10⁻⁵.
+  - The difference is +16.1 points, with a 95% bootstrap interval of [+8.9,
+    +23.2].
+- **H2, detection falls further than mutation score: supported.** The
+  complete set is 109 subjects: the paired set less the three `Converter`
+  subjects, two of which only `m4` detects.
+
+  | | `m4` | `s4` | fall |
+  |---|---|---|---|
+  | detection | 19/109 — 17.4% | 3/109 — 2.8% | 84.2% |
+  | mutation score, pooled | 43.6% | 50.1% | −15.0% |
+  | line coverage, pooled | 62.1% | 68.4% | −10.2% |
+
+  - fall(detection) − fall(mutation score) is +99.2 points, with a 95%
+    interval of [+73.8, +120.9]. No resample was left out for want of an `m4`
+    detection.
+  - Against line coverage the figure is +94.4 points [+70.7, +113.7].
+- **The decision**, as the protocol's table words it: "On faults that
+  postdate the model's training data, the arms differ in detection in the
+  direction they do on Defects4J, and detection falls further than mutation
+  score: the claim of the paper's title holds on these faults. Recall of the
+  benchmark does not account for it."
+- **Why the falls in mutation score and coverage are negative.** The
+  analysis script prints the means over suites. The other figures here are
+  descriptive, computed from `mutation/mutation.csv` and the subjects'
+  `classes.txt`.
+  - Pooled over the complete set, `s4`'s suites detect more mutants than
+    `m4`'s.
+  - As means over suites, `m4`'s are higher: 62.4% against 56.4%. `m4` has
+    the higher score in 80 of the 109 subjects, `s4` in 25, and the two are
+    equal in 4.
+  - The pooled figure weights each subject by its mutants. The eight subjects
+    whose fix is in `StringUtils` hold 11,765 of each arm's 37,246 mutants
+    (31.6%). Their verdicts are `Pass` in both arms. There `s4` detects 62.4%
+    of the mutants and `m4` 32.7%. Over the other 101 subjects, `m4` detects
+    48.6% and `s4` 44.4%.
+- **Composition** (secondary, no decision rule). Weighted by the Defects4J
+  sample's fault types, detection is 16.0% in `m4` and 3.6% in `s4`. The
+  difference is +12.4 points, with an interval stratified by type of [+4.6,
+  +20.7]. By type, on the paired set:
+
+  | type | subjects | `m4` | `s4` |
+  |---|---|---|---|
+  | omission | 35 | 7 | 2 |
+  | missing clause | 18 | 10 | 1 |
+  | state | 12 | 1 | 0 |
+  | substitution | 22 | 0 | 0 |
+  | algorithm | 17 | 0 | 0 |
+  | API (weight zero) | 8 | 3 | 0 |
+- **Sensitivity**, none confirmatory. Every analysis has the same direction:
+  - **With the runs with a violation:** there are none.
+  - **Intention to treat**, 115 subjects: 21/115 against 3/115, *p* = 4.0 ×
+    10⁻⁵, +15.7 points [+8.7, +22.6].
+  - **Without the nine runs the knowledge rule marks**, 106 subjects: 20/106
+    against 3/106, *p* = 7.6 × 10⁻⁵, +16.0 points [+8.5, +23.6].
+  - **Verdicts by timeout:** there are none.
+  - **Without the seven `s4` runs that called `javac`**, 105 subjects:
+    20/105 against 3/105, *p* = 7.6 × 10⁻⁵, +16.2 points [+8.6, +23.8].
+  - **Only the 108 subjects the strict reading keeps**, 105 of them paired:
+    the same figures. The seven subjects it leaves out are not those of the
+    `javac` runs, and again one of them is an `m4` detection.
+
+Descriptive, and no test of the protocol, as the analysis script prints them:
+
+- **By project**, on the paired set:
+  - Commons Lang: 15 and 2 of 90;
+  - Commons CSV: 3 and 0 of 16;
+  - Commons CLI: 3 and 1 of 6.
+- **By date of the fix**:
+  - up to 22 September 2026, the end of the matched corpus's window: 17 and
+    2 of 84;
+  - after it: 4 and 1 of 28.
+- **The third campaign beside this one.** Its difference is +13.0 points and
+  this one's +16.1. The difference between the two differences is +3.0
+  points [−13.6, +17.2]. The subjects differ, are selected by different
+  rules, and are run in different sandboxes.
+- **The second campaign beside this one.** Its difference on Defects4J is
+  +38.5 points (22/39 against 7/39) and this one's +16.1. The difference
+  between the two differences is −22.4 points [−40.5, −3.9]. The campaigns
+  differ in more than the date of the faults. This is not a measurement of
+  what recall contributes.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -2098,5 +2192,5 @@ mistake for results:
 - [x] Fourth campaign's protocol fixed before any run on the subjects (`campaign4/PROTOCOL.md`)
 - [x] Fourth campaign's 230 runs made, audited and measured for detection: 227 accepted suites, 115 in `m4` and 112 in `s4`, no violation, and a verdict for every suite (`campaign4/runs-m4/`, `runs-s4/`, `suites/`, `audit.txt`, `results/`)
 - [x] Fourth campaign's mutation score and line coverage measured with PIT: it finished on all 227 suites, and 221 have a figure. The other six, those of the three subjects whose fix is in `Converter`, have no mutant (`campaign4/mutation/`)
-- [ ] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed
+- [x] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed. Detection is 18.8% against 2.7% over 112 pairs, and H1 is rejected. H2 is supported: +99.2 points [+73.8, +120.9], with `s4`'s pooled mutation score above `m4`'s (`campaign4/analysis.txt`)
 - [ ] A matched post-cutoff corpus large enough to test the effect size
