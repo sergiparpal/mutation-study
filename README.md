@@ -131,7 +131,7 @@ values came from.
 | `bin/analyze-agent-suites.sh` | measurement, wrapping Defects4J's own scripts |
 | `bin/merge-agent-metrics.py` | merges Defects4J's tables and recomputes the mutation columns from Major's output |
 | `bin/remeasure-cli-evosuite.sh` | measures five EvoSuite suites again with one path in Defects4J corrected |
-| `bin/report-figures.py` | recomputes every figure in §3 of the write-up from `data/` |
+| `bin/report-figures.py` | recomputes most of the figures of §3 of the write-up from `data/` |
 | `bin/audit-trigger-leaks.py` | what the generated suites and run records give away about what the agent knew |
 
 Post-cutoff replication corpora, their mining scripts and their results are
@@ -254,9 +254,11 @@ table above:
 
 ## Reproducing
 
-`./bin/report-figures.py` recomputes the figures of §3 of the write-up from
-`data/`. The evidence of §3.9 is printed by `./bin/audit-trigger-leaks.py`,
-and what the transcript audits found is in the `audit.txt` and
+`./bin/report-figures.py` recomputes most of the figures of §3 of the write-up
+from `data/`. The evidence of §3.9 is printed by `./bin/audit-trigger-leaks.py`,
+the classification of §3.3 is recorded in `data/contract-violation.md`, and
+some other figures are quoted from records under `data/`, as the script's
+header describes. What the transcript audits found is in the `audit.txt` and
 `violations.txt` of `data/campaign2/` to `data/campaign4/`. None of it needs
 Defects4J or model access. `./bin/analyze-campaign2.py`,
 `./bin/analyze-campaign3.py` and `./bin/analyze-campaign4.py` print the

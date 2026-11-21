@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
-Print every figure quoted in §3 of the write-up, recomputed from data/.
+Print most of the figures quoted in §3 of the write-up, recomputed from data/.
 
 Needs no Defects4J installation and no model access: it reads the merged
 per-suite measurements, the run records and the probe grades already in the
 repository. Rebuilding those from the packaged suites is a separate, slower
 step (bin/analyze-agent-suites.sh).
 
-§3.1 to §3.8 are the first campaign and are computed here. §3.10 is the second
-campaign: this script runs bin/analyze-campaign2.py and
+§3.1, §3.2 and §3.4 to §3.7 are the first campaign and are computed here, and
+§3.8, the post-cutoff corpora, is printed by bin/tally-postcutoff.py. §3.10 is
+the second campaign: this script runs bin/analyze-campaign2.py and
 bin/describe-campaign2.py and prints what they print. §3.11 is the third: it
 runs bin/analyze-campaign3.py, bin/analyze-mutation-campaign3.py (mutation
 score and coverage, measured after the campaign) and bin/describe-campaign3.py.
@@ -16,6 +17,16 @@ score and coverage, measured after the campaign) and bin/describe-campaign3.py.
 mutation score and coverage, and bin/describe-campaign4.py. If a script it runs
 fails, the report stops there, with a line naming the script, and exits with
 status 1.
+
+Not printed here: §3.3, a reading of the javadoc recorded in
+data/contract-violation.md and data/contract-violation.csv, and the evidence
+of §3.9, which bin/audit-trigger-leaks.py prints. Some figures elsewhere in §3
+are quoted from records under data/ rather than recomputed. Among them are the
+number of bugs EvoSuite produced a suite for (§3.5) and the cost of a run whose
+record was overwritten (§3.6), both in data/README.md; the fault types of the
+Defects4J sample (§3.8, data/fault-taxonomy.csv); and the second campaign's
+analysis without the S2 run of Csv-10 (§3.10,
+data/campaign2/analysis-without-s2-Csv-10.txt).
 
 Conventions, all of them stated in the write-up:
 

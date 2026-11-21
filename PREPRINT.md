@@ -2075,8 +2075,9 @@ tests of six suites; six suites that never ran were counted as failing to
 detect. Each was found by an audit of the artifact rather than by the
 pipeline. The figures reported here are the audited ones, but the pattern is a
 threat in itself: figures that have not been traced back to raw output should
-be read with that in mind. `bin/report-figures.py` regenerates every figure in
-§3 so that they can be.
+be read with that in mind. `bin/report-figures.py` regenerates most of the
+figures of §3 so that they can be; Data availability says where the others
+come from.
 
 ### 5.2 Construct validity
 
@@ -2884,8 +2885,12 @@ script printed it. The method record, including the deviations and tooling
 failures encountered, is in `data/README.md`.
 
 **The figures need neither model access nor a Defects4J installation.**
-`bin/report-figures.py` recomputes every figure in §3 from the files under
-`data/`, and `bin/audit-trigger-leaks.py` the evidence of §3.9. Re-measuring
+`bin/report-figures.py` recomputes most of the figures of §3 from the files
+under `data/`, and `bin/audit-trigger-leaks.py` the evidence of §3.9. The
+classification of §3.3 is recorded in `data/contract-violation.md` and
+`data/contract-violation.csv`, and some other figures are quoted from records
+under `data/`, among them the cost of a run whose record was overwritten
+(§3.6) and the fault types of the Defects4J sample (§3.8). Re-measuring
 from the packaged suites in `data/agent-suites/` and `data/campaign2/suites/`
 needs Defects4J (`bin/analyze-agent-suites.sh`). Re-measuring those in
 `data/campaign3/suites/` and `data/campaign4/suites/` needs clones of the
