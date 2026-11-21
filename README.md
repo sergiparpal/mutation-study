@@ -1,6 +1,7 @@
 # Mutation Score Understates Oracle Provenance
 
-Agent-generated test suites on Defects4J, with and without the implementation.
+Agent-generated test suites on Defects4J and on post-cutoff faults, with and
+without the implementation.
 
 Evaluations of automated test generation on Defects4J generate a suite against
 the **fixed** revision of a bug and then check it against the buggy one. For a

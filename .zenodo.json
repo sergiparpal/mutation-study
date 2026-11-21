@@ -1,6 +1,6 @@
 {
   "upload_type": "dataset",
-  "title": "Mutation Score Understates Oracle Provenance: Agent-Generated Test Suites on Defects4J, With and Without the Implementation",
+  "title": "Mutation Score Understates Oracle Provenance: Agent-Generated Test Suites on Defects4J and on Post-Cutoff Faults, With and Without the Implementation",
   "creators": [
     {
       "name": "Parpal, Sergi"
