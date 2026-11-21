@@ -1,0 +1,27 @@
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendLeftJustifyPadsOnRight()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendWithCustomPadChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendNullFormatterThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendWithEllipsisAndPaddingDefaultSpace()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendWithPadCharNoPaddingNeeded()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendPadsWithSpacesRightJustifiedByDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testToStringUsesDefaultFlagsWidthAndPrecision()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendEllipsisLongerThanPrecisionThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendFullSignatureEllipsisEqualToPrecision()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendBasicNoWidthNoPrecision()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendNullSequenceThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendWithEllipsisTruncation()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendFullSignatureNegativeWidthAndPrecisionLeavesSeqUnchanged()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendWithEmptyEllipsisIsHardTruncation()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testToStringWithEmptyFormattedRepresentation()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testToStringReturnsFormattableDefaultRepresentation()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendHardTruncatesWhenPrecisionLessThanLength()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendPrecisionZeroTruncatesToEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendWithCustomPadCharLeftJustified()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendWithNullEllipsisIsHardTruncation()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendWidthSmallerThanContentCausesNoPadding()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendPrecisionGreaterThanLengthHasNoEffect()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendWithPadCharAndTruncation()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendFullSignatureRightJustifiedWithCustomPad()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testAppendFullSignatureTruncatesPadsAndAppends()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testPublicConstructorIsUsable()	1	0	
+FAILED	method	org.apache.commons.lang3.text.FormattableUtilsAgentTest#testToStringNullFormattableThrows()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.

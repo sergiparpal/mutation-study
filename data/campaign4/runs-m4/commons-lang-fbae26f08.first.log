@@ -1,0 +1,35 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testReplaceFamily()
+org.opentest4j.AssertionFailedError: expected: <foo> but was: <f>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testReplaceFamily(StringUtilsAgentTest.java:351)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testSubstringFamily()
+org.opentest4j.AssertionFailedError: expected: <a> but was: <abc>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSubstringFamily(StringUtilsAgentTest.java:254)
+
+3) org.apache.commons.lang3.StringUtilsAgentTest#testEqualsAndCompare()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testEqualsAndCompare(StringUtilsAgentTest.java:163)
+
+4) org.apache.commons.lang3.StringUtilsAgentTest#testToCodePointsAndOverlay()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.StringUtilsAgentTest.testToCodePointsAndOverlay(StringUtilsAgentTest.java:730)
+
+5) org.apache.commons.lang3.StringUtilsAgentTest#testSplitFamily()
+org.opentest4j.AssertionFailedError: array contents differ at index [1], expected: <b> but was: <b.c>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSplitFamily(StringUtilsAgentTest.java:278)
+
+6) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfBoundaries()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <5>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfBoundaries(StringUtilsAgentTest.java:182)
+
+7) org.apache.commons.lang3.StringUtilsAgentTest#testDistanceAlgorithms()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testDistanceAlgorithms(StringUtilsAgentTest.java:625)
+
+8) org.apache.commons.lang3.StringUtilsAgentTest#testLeftRightMid()
+org.opentest4j.AssertionFailedError: expected: <bc> but was: <abc>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testLeftRightMid(StringUtilsAgentTest.java:497)
+
+Tests run: 33, Failures: 8, Aborted: 0, Skipped: 0
+Test methods: 33, failed: 8
+FAILURES!!!

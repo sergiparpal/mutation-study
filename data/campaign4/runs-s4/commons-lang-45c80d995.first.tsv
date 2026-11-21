@@ -1,0 +1,19 @@
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testNanoTimeReflectsCurrentTime()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testSixArgConstructorUsesIndependentThresholdsAndIntervals()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testFourArgConstructorUsesSameIntervalDifferentThresholds()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testIncrementAndCheckStateAcceptsZeroIncrement()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testCloseChangesStateToClosed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testListenerIsNotNotifiedWhenStateDoesNotActuallyChange()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testOpenOnAlreadyOpenBreakerHasNoEffect()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testNewlyCreatedBreakerIsClosed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testRemoveChangeListenerStopsNotifications()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testIncrementAndCheckStateRejectsNegativeIncrement()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testCheckStateWithoutEventsStaysClosed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testOpenChangesStateToOpen()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testIncrementAndCheckStateAcceptsLargePositiveIncrementWithoutThrowing()	1	0	
+FAILED	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testBreakerClosesAfterGoingBelowClosingThresholdInInterval()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testIncrementAndCheckStateReturnValueMatchesIsClosed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testThreeArgConstructorUsesSameThresholdAndInterval()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testAddChangeListenerIsNotifiedOnActualStateTransition()	1	0	
+FAILED	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testBreakerOpensAfterExceedingOpeningThresholdInInterval()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testCloseOnAlreadyClosedBreakerHasNoEffect()	1	0	

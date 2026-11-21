@@ -1,0 +1,12 @@
+1) org.apache.commons.lang3.ClassUtilsAgentTest#getSimpleNameObject()
+org.opentest4j.AssertionFailedError: expected: <String> but was: <Class>
+    at org.apache.commons.lang3.ClassUtilsAgentTest.getSimpleNameObject(ClassUtilsAgentTest.java:517)
+
+2) org.apache.commons.lang3.ClassUtilsAgentTest#getClassRejectsTooManyArrayDimensions()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.ClassNotFoundException>
+    at org.apache.commons.lang3.ClassUtilsAgentTest.getClassRejectsTooManyArrayDimensions(ClassUtilsAgentTest.java:306)
+Caused by: java.lang.ClassNotFoundException: [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[I
+
+Tests run: 78, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 78, failed: 2
+FAILURES!!!

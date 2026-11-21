@@ -1,0 +1,11 @@
+1) org.apache.commons.csv.CSVFormatAgentTest#testWithRecordSeparatorDeprecatedRejectsInvalidSeparator()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.csv.CSVFormatAgentTest.testWithRecordSeparatorDeprecatedRejectsInvalidSeparator(CSVFormatAgentTest.java:728)
+
+2) org.apache.commons.csv.CSVFormatAgentTest#testInformixUnloadFieldValues()
+org.opentest4j.AssertionFailedError: expected: <,> but was: <|>
+    at org.apache.commons.csv.CSVFormatAgentTest.testInformixUnloadFieldValues(CSVFormatAgentTest.java:169)
+
+Tests run: 85, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 85, failed: 2
+FAILURES!!!

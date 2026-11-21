@@ -1,0 +1,65 @@
+1) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsListWithAnnotationSearchSupersNoIgnoreAccessFindsOnlyPublic()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetMethodsListWithAnnotationSearchSupersNoIgnoreAccessFindsOnlyPublic(MethodUtilsAgentTest.java:336)
+
+2) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodByNameFindsMethod()
+org.opentest4j.AssertionFailedError: expected: not <null>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetAccessibleMethodByNameFindsMethod(MethodUtilsAgentTest.java:118)
+
+3) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMatchingAccessibleMethodMatchesByWrapperType()
+org.opentest4j.AssertionFailedError: expected: not <null>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetMatchingAccessibleMethodMatchesByWrapperType(MethodUtilsAgentTest.java:193)
+
+4) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodClassMethodFindsPublicMethod()
+org.opentest4j.AssertionFailedError: expected: not <null>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetAccessibleMethodClassMethodFindsPublicMethod(MethodUtilsAgentTest.java:104)
+
+5) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodExplicitParameterTypes()
+java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Animal.overloaded(java.lang.String)
+    at org.apache.commons.lang3.reflect.MethodUtils.requireNonNull(MethodUtils.java:1070)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactMethod(MethodUtils.java:696)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeExactMethodExplicitParameterTypes(MethodUtilsAgentTest.java:432)
+
+6) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsWithAnnotationNoSupersNoIgnoreAccessFindsNothing()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetMethodsWithAnnotationNoSupersNoIgnoreAccessFindsNothing(MethodUtilsAgentTest.java:343)
+
+7) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodNoArgs()
+java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Animal.identify()
+    at org.apache.commons.lang3.reflect.MethodUtils.requireNonNull(MethodUtils.java:1070)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactMethod(MethodUtils.java:696)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactMethod(MethodUtils.java:627)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeExactMethodNoArgs(MethodUtilsAgentTest.java:398)
+
+8) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactStaticMethodWithArgs()
+java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Animal.staticGreet(java.lang.String)
+    at org.apache.commons.lang3.reflect.MethodUtils.requireNonNull(MethodUtils.java:1070)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactStaticMethod(MethodUtils.java:763)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactStaticMethod(MethodUtils.java:729)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeExactStaticMethodWithArgs(MethodUtilsAgentTest.java:465)
+
+9) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodWithArgs()
+java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Animal.overloaded(java.lang.String)
+    at org.apache.commons.lang3.reflect.MethodUtils.requireNonNull(MethodUtils.java:1070)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactMethod(MethodUtils.java:696)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactMethod(MethodUtils.java:660)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeExactMethodWithArgs(MethodUtilsAgentTest.java:415)
+
+10) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodPropagatesInvocationTargetException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.reflect.InvocationTargetException> but was: <java.lang.NoSuchMethodException>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeExactMethodPropagatesInvocationTargetException(MethodUtilsAgentTest.java:450)
+Caused by: java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Animal.throwingMethod()
+
+11) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodSingleArgFindsMethod()
+org.opentest4j.AssertionFailedError: expected: not <null>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetAccessibleMethodSingleArgFindsMethod(MethodUtilsAgentTest.java:133)
+
+12) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactStaticMethodExplicitParameterTypes()
+java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Animal.staticGreet(java.lang.String)
+    at org.apache.commons.lang3.reflect.MethodUtils.requireNonNull(MethodUtils.java:1070)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactStaticMethod(MethodUtils.java:763)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeExactStaticMethodExplicitParameterTypes(MethodUtilsAgentTest.java:471)
+
+Tests run: 57, Failures: 12, Aborted: 0, Skipped: 0
+Test methods: 57, failed: 12
+FAILURES!!!

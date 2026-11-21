@@ -1,0 +1,3 @@
+org.apache.commons.csv.CSVFormatAgentTest#testInformixUnloadFormat()
+org.apache.commons.csv.CSVFormatAgentTest#testWithRecordSeparatorStringRejectsInvalidSeparator()
+org.apache.commons.csv.CSVFormatAgentTest#testPrintDoesNotTrimByDefault()

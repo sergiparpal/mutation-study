@@ -1,0 +1,44 @@
+{
+  "autoMemoryEnabled": false,
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "filesystem": {
+      "denyRead": [
+        "/home",
+        "/mnt",
+        "/tmp",
+        "/var/tmp",
+        "/opt",
+        "/root",
+        "/srv",
+        "/media",
+        "/usr/share/java",
+        "/usr/share/maven-repo",
+        "/usr/share/maven",
+        "/usr/share/doc",
+        "/usr/lib/jvm/java-11-openjdk-amd64/bin",
+        "/usr/bin/unzip",
+        "/usr/bin/zipinfo",
+        "/usr/bin/funzip",
+        "/usr/bin/zipgrep",
+        "/usr/bin/bsdtar",
+        "/usr/bin/python3",
+        "/usr/bin/python3.12",
+        "/usr/bin/perl"
+      ],
+      "allowRead": [
+        "/tmp/w-sDiwgSnI",
+        "/usr/lib/jvm/java-11-openjdk-amd64/bin/javac"
+      ],
+      "allowWrite": [
+        "/tmp/w-sDiwgSnI"
+      ]
+    },
+    "network": {
+      "allowedDomains": [],
+      "strictAllowlist": true
+    }
+  }
+}

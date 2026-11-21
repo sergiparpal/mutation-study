@@ -1,0 +1,23 @@
+1) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISO()
+org.opentest4j.AssertionFailedError: expected: <P0DT0H0M0.000S> but was: <P0Y0M0DT0H0M0.000S>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatDurationISO(DurationFormatUtilsAgentTest.java:151)
+
+2) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodMonthsCalculatedBeforeDays()
+org.opentest4j.AssertionFailedError: expected: <1M23D> but was: <1M26D>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatPeriodMonthsCalculatedBeforeDays(DurationFormatUtilsAgentTest.java:272)
+
+3) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTableMultipleOptionalBlocks()
+org.opentest4j.AssertionFailedError: expected: <(00)> but was: <(01)>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatDurationExampleTableMultipleOptionalBlocks(DurationFormatUtilsAgentTest.java:80)
+
+4) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxEscapedSingleQuote()
+org.opentest4j.AssertionFailedError: expected: java.lang.String@aaa0fc9<'> but was: java.lang.StringBuilder@dbf57b3<'>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testLexxEscapedSingleQuote(DurationFormatUtilsAgentTest.java:347)
+
+5) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxLiteralText()
+org.opentest4j.AssertionFailedError: expected: java.lang.String@441772e<hello> but was: java.lang.StringBuilder@7334aada<hello>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testLexxLiteralText(DurationFormatUtilsAgentTest.java:338)
+
+Tests run: 35, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 35, failed: 5
+FAILURES!!!

@@ -1,0 +1,5 @@
+org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullFormatThrowsIllegalArgumentException()
+org.apache.commons.csv.CSVParserAgentTest#testParseStringBasicRecords()
+org.apache.commons.csv.CSVParserAgentTest#testParseReaderNullThrowsIllegalArgumentException()
+org.apache.commons.csv.CSVParserAgentTest#testIteratorRethrowsIOExceptionAsIllegalStateException()
+org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullReaderThrowsIllegalArgumentException()

@@ -1,0 +1,57 @@
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testIsFullDetailDefersToDefaultFullDetailWhenNull()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendSuperAppendsNonNullSuperToString()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendDetailForPrimitiveScalarsYieldsValueText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testJsonStyleThrowsOnMissingFieldNameForPrimitive()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testJsonStyleFormat()	1	1	org.opentest4j.AssertionFailedError: expected: <{"name": "John Doe", "age": 33, "smoker": false}> but was: <{"name":"John Doe","age":33,"smoker":false}>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testReflectionAppendArrayDetailMatchesTypedPrimitiveArrayDetail()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendCyclicObjectUsesStandardToString()	1	1	org.opentest4j.AssertionFailedError: expected: <cyclicValue> but was: <java.lang.String@49ec71f8>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendToStringIgnoresNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testRemoveLastFieldSeparatorUndoesAppendFieldSeparator()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendInternalRoutesArraysByDetailFlag()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testSetNullTextAcceptsNullAsEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testDefaultStyleFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testPublicAppendBooleanIncludesValueAndConditionalFieldName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testBooleanFlagsRoundTrip()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testSetFieldSeparatorTextsAcceptNullAsEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testSetContentTextsAcceptNullAsEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendCyclicObjectIsInvariantToFieldName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testPublicAppendIntIncludesValueAndConditionalFieldName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testIsFullDetailHonorsExplicitRequest()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testSingletonConstantsAreNotNullAndAreToStringStyles()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendFieldEndIsInvariantToFieldName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testNoFieldNamesStyleFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testRegistryLifecycle()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendSummarySizeIsInvariantToFieldName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendNullArrayValueUsesNullText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendInternalIsInvariantToFieldName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendSummarySizeDefaultFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendDetailForObjectIsItsToString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testSetSizeTextsAcceptNullAsEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendFieldStartIsConditionalOnUseFieldNames()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testSetSummaryObjectTextsAcceptNullAsEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testReflectionAppendArrayDetailMatchesTypedObjectArrayDetail()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendFieldSeparatorMatchesItsGetter()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendDetailForIntArrayUsesArrayDelimiters()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testSimpleStyleFormat()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendToStringAppendsNonNullToString()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendInternalRoutesMapsToDetailMethod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testVisitedMarkIsClearedWhenRegistryStackEmpties()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendNullObjectValueUsesNullText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendSuperIgnoresNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testJsonStyleThrowsOnMissingFieldNameForObject()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendNullTextDefaultIndicator()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendDetailForMapReflectsContentNotFieldName()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendIdentityHashCodeContainsTheHashValue()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendSummaryForIntArrayUsesSizeText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testMultiLineStyleFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testGetShortClassNameExcludesPackageName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendDetailForCollectionReflectsContentNotFieldName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendSummaryForObjectArrayUsesSizeText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendInternalRoutesCollectionsToDetailMethod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendSummaryForObjectWrapsWithSummaryObjectText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendNullTextIsInvariantToFieldName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testSetArrayTextsAcceptNullAsEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendClassNameIsConditionalOnUseClassName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testShortPrefixStyleFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendInternalRoutesPlainObjectsByDetailFlag()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.ToStringStyleAgentTest#testNoClassNameStyleFormat()	1	0	

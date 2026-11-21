@@ -1843,10 +1843,64 @@ detection by the Defects4J sample's fault types.
   November 2026, on the third campaign's two pilot subjects in both arms, with
   their audit, detection and mutation measurements. It is not part of any
   result.
+- `campaign4/runs-m4/`, `campaign4/runs-s4/`: each run's record, by subject.
+  It holds the prompt, the settings, the transcript (`.stream.jsonl.xz`), the
+  CLI's result (`.json`), the run's metadata (`.meta.json`), what the run left
+  in its own temporary directory (`.tmp.tar.xz`), the acceptance logs and the
+  status.
+- `campaign4/suites/`: the accepted suites, as the agents wrote them.
+- `campaign4/generation.log`, `campaign4/launch.out`: the generator's log, and
+  the runner's, one line a run.
 
 The protocol reports the checks without the model and the pilot. The checks
 were a dry run of the generator and both measurements on the 115 subjects, and
-their output is not kept. No run with the model has been made on the subjects.
+their output is not kept.
+
+### The runs
+
+`bin/run-campaign4.sh` made the 230 runs in one session, from 17:21 UTC on 20
+November 2026 to 07:27 UTC on 21 November, from commit `18929a3`: the
+subjects in the order of `subjects.txt`, both arms of a subject before the
+next, the first arm alternating, one agent at a time. Every run reports
+`claude-sonnet-5` and Claude Code 2.1.316, and every revision was built with
+Java 11.0.33 and Maven 3.9.16 at `--release 8`. No run was cut short by a
+usage limit and none was made twice.
+
+| | `m4` | `s4` |
+|---|---|---|
+| runs that left an accepted suite | 115 | 112 |
+| tests written | 5755 | 7299 |
+| tests left out at acceptance | 41 (0.7%), in 4 suites | 237 (3.2%), in 77 suites |
+| turns a run, mean and most | 20.9, 52 | 18.1, 52 |
+| list price | $61.38, $0.53 a suite | $98.68, $0.88 a suite |
+
+Fourteen runs did not end by themselves: they reached the turn limit, 4 in
+`m4` and 10 in `s4`. Each had made 50 responses and reports 51 turns. No run
+reached the cost limit. Two runs that ended by the agent's own decision report
+52 turns: they called several tools in one response, and made 42 and 48
+responses.
+
+Eleven of the fourteen runs that reached the limit left an accepted suite all
+the same. The other three are the three `s4` runs without one. In
+`commons-lang-2240c1f93` and `commons-lang-3e50a7f9c` the agent wrote no test
+file. In `commons-lang-9e0fd0787` its tests do not compile in the project.
+Under the protocol a run that completes is final, so these three subjects are
+outside the paired set.
+
+The tests left out, per project:
+
+- `m4`: Lang 41 of 4892; none of CSV's 724 or CLI's 139.
+- `s4`: Lang 187 of 6248 (3.0%), CSV 47 of 899 (5.2%), CLI 3 of 152.
+
+The search of the working copies found nothing in 226 of the 230. In the `m4`
+copies of `commons-lang-1418a770b`, `-b1aba6833`, `-7c91ce989` and
+`-c07bc828f` it found what the dry run had: names of the subjects' trigger
+tests in other test classes of Commons Lang. Examples are `testBigDecimal` in
+`EqualsBuilderTest` and `testConstants` in `NumberUtilsTest`.
+
+The records were searched for details of the machine they were made on before
+they were committed, inside the compressed transcripts and archives too.
+Nothing needed redacting.
 
 ## Infrastructure failures and exclusions
 
@@ -1913,5 +1967,6 @@ mistake for results:
 - [x] Post-cutoff pool classified by fault type, blind: a corpus matched to the Defects4J sample can take at most 69 of the new subjects, omissions binding (`postcutoff-pool/fault-types.tsv`)
 - [x] Fourth campaign prepared: protocol, scripts, checks without the model on its 115 unmatched post-cutoff subjects, and a pilot (`campaign4/`)
 - [x] Fourth campaign's protocol fixed before any run on the subjects (`campaign4/PROTOCOL.md`)
+- [x] Fourth campaign's 230 runs made: 227 accepted suites, 115 in `m4` and 112 in `s4` (`campaign4/runs-m4/`, `runs-s4/`, `suites/`)
 - [ ] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed
 - [ ] A matched post-cutoff corpus large enough to test the effect size

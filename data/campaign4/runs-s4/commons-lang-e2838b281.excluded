@@ -1,0 +1,4 @@
+org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateWithMarker()
+org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfAnyCharSequences()
+org.apache.commons.lang3.StringUtilsAgentTest#testReplaceAllAndFirstAndPatternRegex()
+org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateWithMarkerAndOffset()

@@ -1,0 +1,3 @@
+SerializationUtilsTest.testCloneProxiesFromDifferentClassLoaders
+SerializationUtilsTest.testCloneProxyWithContextClassLoader
+SerializationUtilsTest.testCloneProxyWithCustomClassLoader

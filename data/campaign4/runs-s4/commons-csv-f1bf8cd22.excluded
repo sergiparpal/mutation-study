@@ -1,0 +1,5 @@
+org.apache.commons.csv.CSVParserAgentTest#deprecatedConstructor_nullFormat_throwsIllegalArgumentException()
+org.apache.commons.csv.CSVParserAgentTest#parseReader_nullReader_throwsIllegalArgumentException()
+org.apache.commons.csv.CSVParserAgentTest#stream_returnsSequentialStreamOverAllRecords()
+org.apache.commons.csv.CSVParserAgentTest#deprecatedConstructor_nullReader_throwsIllegalArgumentException()
+org.apache.commons.csv.CSVParserAgentTest#getHeaderMapAndNames_withoutHeaderFormat_areEmpty()

@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.builder.HashCodeBuilderAgentTest#testAppendBooleanTrueAddsOne()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+    at org.apache.commons.lang3.builder.HashCodeBuilderAgentTest.testAppendBooleanTrueAddsOne(HashCodeBuilderAgentTest.java:115)
+
+2) org.apache.commons.lang3.builder.HashCodeBuilderAgentTest#testAppendBooleanFalseAddsZero()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+    at org.apache.commons.lang3.builder.HashCodeBuilderAgentTest.testAppendBooleanFalseAddsZero(HashCodeBuilderAgentTest.java:120)
+
+Tests run: 49, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 49, failed: 2
+FAILURES!!!

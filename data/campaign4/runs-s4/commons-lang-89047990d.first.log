@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.AnnotationUtilsAgentTest#testToStringMatchesNaturalAnnotationToString()
+org.opentest4j.AssertionFailedError: expected: <@org.apache.commons.lang3.AnnotationUtilsAgentTest$SampleAnnotation(value="x", number=5)> but was: <@org.apache.commons.lang3.AnnotationUtilsAgentTest$SampleAnnotation(number=5, value=x)>
+    at org.apache.commons.lang3.AnnotationUtilsAgentTest.testToStringMatchesNaturalAnnotationToString(AnnotationUtilsAgentTest.java:264)
+
+Tests run: 25, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 25, failed: 1
+FAILURES!!!

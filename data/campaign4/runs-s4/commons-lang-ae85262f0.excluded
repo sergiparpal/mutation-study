@@ -1,0 +1,3 @@
+org.apache.commons.lang3.StringUtilsAgentTest#testSplitPreserveAllTokensStringSeparatorMax()
+org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateMarkerOffsetMaxWidth()
+org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfAnyCharSequences()

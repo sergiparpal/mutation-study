@@ -1,0 +1,55 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.commons.lang3.reflect.FieldUtils (file:/home/sergi/.cache/gen-stage/w-BSrgNYZb/target/classes/) to field java.lang.reflect.Field.modifiers
+WARNING: Please consider reporting this to the maintainers of org.apache.commons.lang3.reflect.FieldUtils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+1) org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredFieldNotPublic()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.reflect.FieldUtilsAgentTest.testWriteDeclaredFieldNotPublic(FieldUtilsAgentTest.java:659)
+Caused by: java.lang.IllegalArgumentException: Cannot locate declared field org.apache.commons.lang3.reflect.FieldUtilsAgentTest$Child.cPrivate
+
+2) org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByFieldWithForceAccess()
+org.opentest4j.AssertionFailedError: expected: <55> but was: <222>
+    at org.apache.commons.lang3.reflect.FieldUtilsAgentTest.testReadStaticFieldByFieldWithForceAccess(FieldUtilsAgentTest.java:580)
+
+3) org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldAmbiguousShadowedField()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.reflect.FieldUtilsAgentTest.testGetFieldAmbiguousShadowedField(FieldUtilsAgentTest.java:220)
+
+4) org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredStaticFieldNotPublic()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.lang3.reflect.FieldUtilsAgentTest.testWriteDeclaredStaticFieldNotPublic(FieldUtilsAgentTest.java:722)
+Caused by: java.lang.NullPointerException: Cannot locate declared field org.apache.commons.lang3.reflect.FieldUtilsAgentTest$Child.privateStatic
+
+5) org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredStaticFieldNotStatic()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.lang3.reflect.FieldUtilsAgentTest.testWriteDeclaredStaticFieldNotStatic(FieldUtilsAgentTest.java:704)
+Caused by: java.lang.NullPointerException
+
+6) org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredFieldNotPublic()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.reflect.FieldUtilsAgentTest.testReadDeclaredFieldNotPublic(FieldUtilsAgentTest.java:309)
+Caused by: java.lang.IllegalArgumentException: Cannot locate declared field class org.apache.commons.lang3.reflect.FieldUtilsAgentTest$Child.cPrivate
+
+7) org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByClassAndNameWithForceAccess()
+org.opentest4j.AssertionFailedError: expected: <55> but was: <222>
+    at org.apache.commons.lang3.reflect.FieldUtilsAgentTest.testReadStaticFieldByClassAndNameWithForceAccess(FieldUtilsAgentTest.java:526)
+
+8) org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredStaticFieldNotPublicWithoutForceAccess()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.lang3.reflect.FieldUtilsAgentTest.testReadDeclaredStaticFieldNotPublicWithoutForceAccess(FieldUtilsAgentTest.java:394)
+Caused by: java.lang.NullPointerException: Cannot locate declared field org.apache.commons.lang3.reflect.FieldUtilsAgentTest$Child.privateStatic
+
+9) org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldByNameNotAccessible()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.reflect.FieldUtilsAgentTest.testReadFieldByNameNotAccessible(FieldUtilsAgentTest.java:460)
+Caused by: java.lang.IllegalArgumentException: Cannot locate field pProtected on class org.apache.commons.lang3.reflect.FieldUtilsAgentTest$Child
+
+10) org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByNameNotAccessible()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.reflect.FieldUtilsAgentTest.testWriteFieldByNameNotAccessible(FieldUtilsAgentTest.java:807)
+Caused by: java.lang.IllegalArgumentException: Cannot locate declared field org.apache.commons.lang3.reflect.FieldUtilsAgentTest$Child.pProtected
+
+Tests run: 95, Failures: 10, Aborted: 0, Skipped: 0
+Test methods: 95, failed: 10
+FAILURES!!!

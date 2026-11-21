@@ -1,0 +1,5 @@
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISO()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodMonthsCalculatedBeforeDays()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTableMultipleOptionalBlocks()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxEscapedSingleQuote()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxLiteralText()

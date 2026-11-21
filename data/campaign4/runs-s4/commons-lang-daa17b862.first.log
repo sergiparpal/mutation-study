@@ -1,0 +1,66 @@
+1) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMatchingAccessibleMethodResolvesPrimitiveWrapper()
+org.opentest4j.AssertionFailedError: expected: not <null>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetMatchingAccessibleMethodResolvesPrimitiveWrapper(MethodUtilsAgentTest.java:265)
+
+2) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodClassMethodNullArgumentsReturnNull()
+java.lang.NullPointerException
+    at org.apache.commons.lang3.ClassUtils.isPublic(ClassUtils.java:1533)
+    at org.apache.commons.lang3.reflect.MethodUtils.getAccessibleMethod(MethodUtils.java:115)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetAccessibleMethodClassMethodNullArgumentsReturnNull(MethodUtilsAgentTest.java:186)
+
+3) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodByNameFindsMethod()
+org.opentest4j.AssertionFailedError: expected: not <null>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetAccessibleMethodByNameFindsMethod(MethodUtilsAgentTest.java:211)
+
+4) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodNoArg()
+java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.noArgMethod()
+    at org.apache.commons.lang3.reflect.MethodUtils.requireNonNull(MethodUtils.java:1049)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactMethod(MethodUtils.java:675)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactMethod(MethodUtils.java:606)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeExactMethodNoArg(MethodUtilsAgentTest.java:450)
+
+5) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsWithAnnotationFourArgMatchesListVersion()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetMethodsWithAnnotationFourArgMatchesListVersion(MethodUtilsAgentTest.java:399)
+
+6) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactStaticMethodWithExplicitParamTypes()
+java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.staticMethod(java.lang.String)
+    at org.apache.commons.lang3.reflect.MethodUtils.requireNonNull(MethodUtils.java:1049)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactStaticMethod(MethodUtils.java:742)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeExactStaticMethodWithExplicitParamTypes(MethodUtilsAgentTest.java:497)
+
+7) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodWithArgs()
+java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.exactMatch(java.lang.Integer)
+    at org.apache.commons.lang3.reflect.MethodUtils.requireNonNull(MethodUtils.java:1049)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactMethod(MethodUtils.java:675)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactMethod(MethodUtils.java:639)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeExactMethodWithArgs(MethodUtilsAgentTest.java:456)
+
+8) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactStaticMethod()
+java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.staticMethod(java.lang.String)
+    at org.apache.commons.lang3.reflect.MethodUtils.requireNonNull(MethodUtils.java:1049)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactStaticMethod(MethodUtils.java:742)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactStaticMethod(MethodUtils.java:708)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeExactStaticMethod(MethodUtilsAgentTest.java:491)
+
+9) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeMethodWithPrimitiveWrapping()
+java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.primitiveMatch(java.lang.Integer)
+    at org.apache.commons.lang3.reflect.MethodUtils.requireNonNull(MethodUtils.java:1049)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(MethodUtils.java:861)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(MethodUtils.java:960)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(MethodUtils.java:921)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeMethodWithPrimitiveWrapping(MethodUtilsAgentTest.java:522)
+
+10) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodSingleArgFindsPublicMethod()
+org.opentest4j.AssertionFailedError: expected: not <null>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetAccessibleMethodSingleArgFindsPublicMethod(MethodUtilsAgentTest.java:196)
+
+11) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodWithExplicitParamTypes()
+java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.exactMatch(java.lang.Integer)
+    at org.apache.commons.lang3.reflect.MethodUtils.requireNonNull(MethodUtils.java:1049)
+    at org.apache.commons.lang3.reflect.MethodUtils.invokeExactMethod(MethodUtils.java:675)
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeExactMethodWithExplicitParamTypes(MethodUtilsAgentTest.java:462)
+
+Tests run: 50, Failures: 11, Aborted: 0, Skipped: 0
+Test methods: 50, failed: 11
+FAILURES!!!

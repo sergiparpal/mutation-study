@@ -1,0 +1,8 @@
+org.apache.commons.csv.LexerAgentTest#testIsStartOfLineTrueForEndOfFileSentinel()
+org.apache.commons.csv.LexerAgentTest#testReadEscapePassesThroughUnknownCharacter()
+org.apache.commons.csv.LexerAgentTest#testGetCurrentLineNumberAdvancesAfterNewline()
+org.apache.commons.csv.LexerAgentTest#testGetBytesReadIncreasesAfterReading()
+org.apache.commons.csv.LexerAgentTest#testIsEscapeDelimiterTrueWhenEscapedDelimiterFollows()
+org.apache.commons.csv.LexerAgentTest#testNextTokenAfterEofKeepsReturningEof()
+org.apache.commons.csv.LexerAgentTest#testNextTokenSimpleFields()
+org.apache.commons.csv.LexerAgentTest#testNextTokenQuotedField()

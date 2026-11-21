@@ -1,0 +1,2 @@
+org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testEqualsDifferentRegistryContent()
+org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testUnknownFormatNameNotInRegistryThrows()

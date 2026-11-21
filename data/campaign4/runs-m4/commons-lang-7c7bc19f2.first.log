@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testSubstring()
+org.opentest4j.AssertionFailedError: expected: <c> but was: <ab>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSubstring(StringUtilsAgentTest.java:262)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testReplaceChars()
+org.opentest4j.AssertionFailedError: expected: <ac> but was: <acc>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testReplaceChars(StringUtilsAgentTest.java:499)
+
+Tests run: 40, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 40, failed: 2
+FAILURES!!!

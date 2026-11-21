@@ -1,0 +1,3 @@
+org.apache.commons.lang3.ConversionAgentTest#testIntToHexDigitMsb0()
+org.apache.commons.lang3.ConversionAgentTest#testBinaryToHexDigitMsb0TwoArg()
+org.apache.commons.lang3.ConversionAgentTest#testIntToHexDigit()

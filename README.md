@@ -137,8 +137,9 @@ model. Its output under those settings and under the two campaigns' is in
 The fourth campaign is under `data/campaign4/`. It makes the comparison on 115
 of the pool's post-cutoff subjects, not matched by fault type, under those
 settings. The directory holds its protocol (`PROTOCOL.md`), fixed before any
-run on the subjects, the subjects and their records, the sandbox probe and the
-pilot (`pilot/`). Its scripts are
+run on the subjects, the subjects and their records, the sandbox probe, the
+pilot (`pilot/`) and the records of its 230 runs (`runs-m4/`, `runs-s4/`,
+`suites/`). Its scripts are
 `bin/subjects-campaign4.py`, `bin/generate-campaign4.sh`,
 `bin/run-campaign4.sh`, `bin/audit-campaign4.py`, `bin/measure-campaign4.sh`,
 `bin/mutation-campaign4.sh` and `bin/analyze-campaign4.py`. They use the third

@@ -1,0 +1,23 @@
+1) org.apache.commons.lang3.time.StopWatchAgentTest#testRunDelegatesToRunnableAndExecutesIt()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.time.StopWatchAgentTest.testRunDelegatesToRunnableAndExecutesIt(StopWatchAgentTest.java:596)
+
+2) org.apache.commons.lang3.time.StopWatchAgentTest#testGetTDelegatesToSupplierAndReturnsItsValue()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.time.StopWatchAgentTest.testGetTDelegatesToSupplierAndReturnsItsValue(StopWatchAgentTest.java:609)
+
+3) org.apache.commons.lang3.time.StopWatchAgentTest#testSplitTwiceThrows()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalStateException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.time.StopWatchAgentTest.testSplitTwiceThrows(StopWatchAgentTest.java:254)
+
+4) org.apache.commons.lang3.time.StopWatchAgentTest#testRunTDelegatesToRunnableAndExecutesIt()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.time.StopWatchAgentTest.testRunTDelegatesToRunnableAndExecutesIt(StopWatchAgentTest.java:640)
+
+5) org.apache.commons.lang3.time.StopWatchAgentTest#testGetDelegatesToSupplierAndReturnsItsValue()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.time.StopWatchAgentTest.testGetDelegatesToSupplierAndReturnsItsValue(StopWatchAgentTest.java:581)
+
+Tests run: 83, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 83, failed: 5
+FAILURES!!!

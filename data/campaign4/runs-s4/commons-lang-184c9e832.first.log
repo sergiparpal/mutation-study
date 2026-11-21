@@ -1,0 +1,27 @@
+1) org.apache.commons.lang3.text.WordUtilsAgentTest#testWrap4_longWordWrapped()
+org.opentest4j.AssertionFailedError: expected: <Click here to jump
+to the commons
+website -
+https://commons.apach
+e.org> but was: <Click here to jump
+to the commons
+website -
+https://commons.apac
+he.org>
+    at org.apache.commons.lang3.text.WordUtilsAgentTest.testWrap4_longWordWrapped(WordUtilsAgentTest.java:313)
+
+2) org.apache.commons.lang3.text.WordUtilsAgentTest#testWrap5_spaceWrapOnMatchesFourArgVersion()
+org.opentest4j.AssertionFailedError: expected: <Click here to jump
+to the commons
+website -
+https://commons.apach
+e.org> but was: <Click here to jump
+to the commons
+website -
+https://commons.apac
+he.org>
+    at org.apache.commons.lang3.text.WordUtilsAgentTest.testWrap5_spaceWrapOnMatchesFourArgVersion(WordUtilsAgentTest.java:332)
+
+Tests run: 56, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 56, failed: 2
+FAILURES!!!

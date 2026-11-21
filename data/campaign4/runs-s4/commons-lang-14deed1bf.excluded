@@ -1,0 +1,3 @@
+org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testNoOptionsSetByDefault()
+org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testNoArgumentOptionsLeavesEverythingUnset()
+org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testDefaultConstructorIgnoresMissingSemicolon()

@@ -1,0 +1,35 @@
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxProducesOneTokenPerField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsNegativeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenIncrement()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodZeroLengthPeriod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsSuppressTrailingZeroElements()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatInternalMethodPadding()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationHMS()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISO()	1	1	org.opentest4j.AssertionFailedError: expected: <P0DT0H0M0.000S> but was: <P0Y0M0DT0H0M0.000S>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationPaddingFlag()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenToStringNotNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTableLeadingOptionalLiteral()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTableSingleOptionalBlock()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxGroupsRepeatedTokenCharacters()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTableWhollyOptionalPattern()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodMonthsCalculatedBeforeDays()	1	1	org.opentest4j.AssertionFailedError: expected: <1M23D> but was: <1M26D>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationHMSNegativeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenEqualsForMatchingConfiguration()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTableMultipleOptionalBlocks()	1	1	org.opentest4j.AssertionFailedError: expected: <(00)> but was: <(01)>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodStartAfterEndThrows()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxEscapedSingleQuote()	1	1	org.opentest4j.AssertionFailedError: expected: java.lang.String@aaa0fc9<'> but was: java.lang.StringBuilder@dbf57b3<'>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodISOZeroLengthPeriod()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxLiteralText()	1	1	org.opentest4j.AssertionFailedError: expected: java.lang.String@441772e<hello> but was: java.lang.StringBuilder@7334aada<hello>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenHashCodeIgnoresCount()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTableOptionalTokensWithoutLiterals()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISONegativeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsPluralization()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTableLeadingOptionalBlock()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodISOStartAfterEndThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationNegativeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTableSimplePattern()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodMatchesDurationForSubMonthRanges()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsZeroDoesNotThrow()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatInternalMethodMatchesPublicContract()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsSuppressLeadingZeroElements()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodPaddingFlag()	1	0	

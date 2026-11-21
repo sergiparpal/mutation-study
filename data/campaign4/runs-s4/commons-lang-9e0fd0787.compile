@@ -1,0 +1,4 @@
+src/test/java/org/apache/commons/lang3/StringUtilsAgentTest.java:1079: error: illegal start of expression
+        assertEquals("queued", StringUtils.removeIgnoreCase(*null_safe_no_op("queued"), (String) null));
+                                                            ^
+1 error

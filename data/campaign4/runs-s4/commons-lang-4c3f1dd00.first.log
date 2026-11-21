@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateWithMarker()
+org.opentest4j.AssertionFailedError: expected: <abcdefg> but was: <abcd>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testAbbreviateWithMarker(StringUtilsAgentTest.java:1240)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testIsNoneBlankAndEmpty()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIsNoneBlankAndEmpty(StringUtilsAgentTest.java:114)
+
+Tests run: 138, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 138, failed: 2
+FAILURES!!!

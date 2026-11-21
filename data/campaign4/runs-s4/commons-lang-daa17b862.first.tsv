@@ -1,0 +1,50 @@
+FAILED	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMatchingAccessibleMethodResolvesPrimitiveWrapper()	1	1	org.opentest4j.AssertionFailedError: expected: not <null>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodClassMethodFindsThroughInterface()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAnnotationNullArgumentsThrowNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeMethodWithoutForceAccessFailsOnPrivateMethod()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodClassMethodNullArgumentsReturnNull()	1	1	java.lang.NullPointerException
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeStaticMethod()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodByNameFindsMethod()	1	1	org.opentest4j.AssertionFailedError: expected: not <null>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodNoSuchMethodWhenTypeMismatches()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeMethodWrapsUnderlyingException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsListWithAnnotationFourArgIgnoreAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeMethodForceAccessInvokesPrivateMethod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodSingleArgReturnsNullWhenUnreachable()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsWithAnnotationTwoArgMatchesListVersion()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetOverrideHierarchyIncludeInterfaces()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsListWithAnnotationFourArgSearchSupers()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeMethodNullObjectThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetOverrideHierarchyNullMethodThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsListWithAnnotationTwoArgNullThrowsNpe()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodNoArg()	1	1	java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.noArgMethod()
+FAILED	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsWithAnnotationFourArgMatchesListVersion()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMatchingMethodThrowsOnAmbiguity()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactStaticMethodWithExplicitParamTypes()	1	1	java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.staticMethod(java.lang.String)
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodNullObjectThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetOverrideHierarchyNullBehavesLikeExclude()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeMethodFindsInterfaceDeclaredMethod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsListWithAnnotationTwoArgEmptyWhenNoneAnnotated()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeStaticMethodNoSuchMethodWhenIncompatible()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMatchingAccessibleMethodReturnsNullWhenNoMatch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactStaticMethodNoSuchMethodWhenTypeMismatches()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeMethodNoArgConvenience()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodWithArgs()	1	1	java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.exactMatch(java.lang.Integer)
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsWithAnnotationTwoArgNullThrowsNpe()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactStaticMethod()	1	1	java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.staticMethod(java.lang.String)
+FAILED	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeMethodWithPrimitiveWrapping()	1	1	java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.primitiveMatch(java.lang.Integer)
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeMethodWithExplicitParamTypes()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAnnotationAbsentReturnsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodObjectFound()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodSingleArgFindsPublicMethod()	1	1	org.opentest4j.AssertionFailedError: expected: not <null>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMatchingMethodNullClassThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodClassMethodReturnsNullWhenNoAccessibleEquivalent()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsListWithAnnotationFourArgNullThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMatchingMethodFindsUniqueMethod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodObjectNotFoundReturnsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAccessibleMethodByNameReturnsNullWhenMissing()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetOverrideHierarchyExcludeInterfaces()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeStaticMethodWithExplicitParamTypes()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAnnotationDirectlyPresent()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsListWithAnnotationTwoArg()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetAnnotationSearchSupersFindsOverriddenAnnotation()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeExactMethodWithExplicitParamTypes()	1	1	java.lang.NoSuchMethodException: No method: org.apache.commons.lang3.reflect.MethodUtilsAgentTest$Base.exactMatch(java.lang.Integer)

@@ -1,0 +1,12 @@
+1) org.apache.commons.lang3.text.StrBuilderAgentTest#testEqualsIgnoreCase()
+java.lang.NullPointerException
+    at org.apache.commons.lang3.text.StrBuilder.equalsIgnoreCase(StrBuilder.java:1907)
+    at org.apache.commons.lang3.text.StrBuilderAgentTest.testEqualsIgnoreCase(StrBuilderAgentTest.java:864)
+
+2) org.apache.commons.lang3.text.StrBuilderAgentTest#testAppendlnAppendsNewLineThenValue()
+org.opentest4j.AssertionFailedError: expected: <a|b> but was: <ab|>
+    at org.apache.commons.lang3.text.StrBuilderAgentTest.testAppendlnAppendsNewLineThenValue(StrBuilderAgentTest.java:383)
+
+Tests run: 181, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 181, failed: 2
+FAILURES!!!

@@ -1,0 +1,17 @@
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineDropsCrOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineEmptyLines()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testPositionCountsCharactersNotBytes()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testDefaultConstructorInitialState()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineDropsLfAndIncrementsLineNumber()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadCharArrayInvalidRangeThrowsIndexOutOfBoundsException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadCharArrayZeroLengthReturnsZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadIsZeroWhenNoByteTrackingByDefaultConstructor()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadTracksEncodedBytesWhenEnabled()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testMarkResetAllowsRereadingChars()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadIsZeroWhenTrackBytesExplicitlyFalse()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadCharArrayUpdatesPositionAndLastChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineReturnsNullAtEofOfEmptyStream()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineDropsCrLf()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testResetWithoutMarkThrowsIOException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testCloseThenReadThrowsIOException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadIsZeroWhenTrackBytesTrueButCharsetNull()	1	0	

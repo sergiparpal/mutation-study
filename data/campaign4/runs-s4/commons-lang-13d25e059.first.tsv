@@ -1,0 +1,46 @@
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testPackagePrivateSingleCharacterFieldConstants()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsNegativeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxMixedPatternTokenSequence()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsZeroDoesNotThrowAndIsNotNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testContainsTokenWithValueOnEmptyArray()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsSuppressLeadingZeroElementsShortensResult()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationHMSZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodYearsCalculatedFirst()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodOneDayApartSameMonth()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxEmptyFormatProducesNoTokens()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenGetValueAndInitialCount()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISODocumentedExample()	1	1	org.opentest4j.AssertionFailedError: expected: <P7D6TH5M4.321S> but was: <P0Y0M7DT6H5M4.321S>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatUsesYearsAndMonthsFields()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testIsoExtendedFormatPatternConstantValue()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISOZero()	1	1	org.opentest4j.AssertionFailedError: expected: <P0D0TH0M0.000S> but was: <P0Y0M0DT0H0M0.000S>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatReplicatesExampleTableViaTokensDirectly()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationHMSNegativeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenNotEqualsForDifferentValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsSuppressTrailingZeroElementsShortensResult()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodStartAfterEndThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatWithEmptyTokenArrayProducesEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxQuotedLiteralText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationHMSTypicalValue()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testContainsTokenWithValue()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenEqualsAndHashCodeDependOnValueOnly()	1	1	org.opentest4j.AssertionFailedError: expected: <H> but was: <HHH>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISONegativeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxRepeatedCharacterIsSingleTokenWithCount()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodZeroElapsedTime()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodISOZeroElapsedTimeHasIsoShape()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodISOStartAfterEndThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationNegativeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTablePattern1()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTablePattern2()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTablePattern3()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTablePattern4()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTablePattern5()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTablePattern6()	1	1	org.opentest4j.AssertionFailedError: expected: <(00)> but was: <(01)>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTablePattern7()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenIncrementIncreasesCount()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenToStringIsNotNullOrEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testPublicConstructorIsUsable()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPaddingFlagControlsLeadingZeros()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationPadWithZerosTrueVsFalse()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodMonthsCalculatedFirst()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationTwoArgDefaultsToPadded()	1	0	

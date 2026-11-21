@@ -1,0 +1,3 @@
+./src/test/java/org/apache/commons/lang3/reflect/ConstructorUtilsAgentTest.java
+./src/test/java/org/apache/commons/lang3/reflect/MemberUtilsAgentTest.java
+./src/test/java/org/apache/commons/lang3/reflect/MethodUtilsAgentTest.java

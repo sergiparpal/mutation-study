@@ -1,0 +1,15 @@
+1) org.apache.commons.lang3.ConversionAgentTest#testIntToHexDigitMsb0()
+org.opentest4j.AssertionFailedError: expected: <F> but was: <f>
+    at org.apache.commons.lang3.ConversionAgentTest.testIntToHexDigitMsb0(ConversionAgentTest.java:853)
+
+2) org.apache.commons.lang3.ConversionAgentTest#testBinaryToHexDigitMsb0TwoArg()
+org.opentest4j.AssertionFailedError: expected: <D> but was: <d>
+    at org.apache.commons.lang3.ConversionAgentTest.testBinaryToHexDigitMsb0TwoArg(ConversionAgentTest.java:212)
+
+3) org.apache.commons.lang3.ConversionAgentTest#testIntToHexDigit()
+org.opentest4j.AssertionFailedError: expected: <A> but was: <a>
+    at org.apache.commons.lang3.ConversionAgentTest.testIntToHexDigit(ConversionAgentTest.java:823)
+
+Tests run: 134, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 134, failed: 3
+FAILURES!!!

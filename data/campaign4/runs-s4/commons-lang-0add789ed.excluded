@@ -1,0 +1,5 @@
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testParseTokenSingleNonLetterCharacter()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorNullTimeZoneThrowsNPE()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testIso8601ExtendedTimeZonePattern()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorNullLocaleThrowsNPE()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorInvalidPatternThrowsIllegalArgumentException()

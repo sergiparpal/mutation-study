@@ -1,0 +1,4 @@
+org.apache.commons.lang3.text.StrSubstitutorAgentTest#testStaticReplaceWithMapNullSuffixThrows()
+org.apache.commons.lang3.text.StrSubstitutorAgentTest#testConstructorMapPrefixSuffixNullPrefixThrows()
+org.apache.commons.lang3.text.StrSubstitutorAgentTest#testStaticReplaceWithMapNullPrefixThrows()
+org.apache.commons.lang3.text.StrSubstitutorAgentTest#testConstructorMapPrefixSuffixNullSuffixThrows()

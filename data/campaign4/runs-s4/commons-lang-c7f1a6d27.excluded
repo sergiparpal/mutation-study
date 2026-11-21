@@ -1,0 +1,3 @@
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorNullLocaleThrowsNullPointerException()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testSelectNumberRuleReturnsNonNullRule()
+org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorWithInvalidPatternEventuallyThrowsIllegalArgumentException()

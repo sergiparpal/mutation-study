@@ -1,0 +1,26 @@
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateValueWithURLClassFailureThrowsParseException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testOpenFileNonExistentFileThrowsParseException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testNoArgConstructorGetConverterFallsBackToDefaultForUnregisteredType()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateObjectNoAccessibleConstructorThrowsParseException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateObjectSuccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateValueWithStringClassIsIdentity()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testGetConverterReturnsDefaultWhenAbsent()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testOpenFileExistingReadableFile()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateURLWellFormed()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateObjectClassNotFoundThrowsParseException()	1	0	
+FAILED	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateDateAlwaysThrowsUnsupportedOperationException()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.UnsupportedOperationException> but was: <java.lang.IllegalArgumentException>
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateNumberInvalidThrowsParseException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateClassNotFoundThrowsParseException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateFilesAlwaysThrowsUnsupportedOperationException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateDefaultMapCallsAreConsistent()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateURLMalformedThrowsParseException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testGetDefaultIsNotNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateValueWithFileClassSuccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateClassFound()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateFile()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testConstructorWithCustomConverterMapIsUsedByGetConverter()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateDefaultMapIsNotNullAndNotEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateValueWithClassClassSuccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateValueWithClassClassFailureThrowsParseException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateNumberDecimal()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.TypeHandlerAgentTest#testCreateNumberInteger()	1	0	

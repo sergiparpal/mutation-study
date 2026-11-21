@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testBreakerClosesAfterGoingBelowClosingThresholdInInterval()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest.testBreakerClosesAfterGoingBelowClosingThresholdInInterval(EventCountCircuitBreakerAgentTest.java:316)
+
+2) org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testBreakerOpensAfterExceedingOpeningThresholdInInterval()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest.testBreakerOpensAfterExceedingOpeningThresholdInInterval(EventCountCircuitBreakerAgentTest.java:291)
+
+Tests run: 19, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 19, failed: 2
+FAILURES!!!

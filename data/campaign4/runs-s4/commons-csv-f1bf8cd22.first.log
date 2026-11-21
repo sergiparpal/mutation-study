@@ -1,0 +1,26 @@
+1) org.apache.commons.csv.CSVParserAgentTest#deprecatedConstructor_nullFormat_throwsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.csv.CSVParserAgentTest.deprecatedConstructor_nullFormat_throwsIllegalArgumentException(CSVParserAgentTest.java:127)
+Caused by: java.lang.NullPointerException: format
+
+2) org.apache.commons.csv.CSVParserAgentTest#parseReader_nullReader_throwsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.csv.CSVParserAgentTest.parseReader_nullReader_throwsIllegalArgumentException(CSVParserAgentTest.java:93)
+Caused by: java.lang.NullPointerException: origin
+
+3) org.apache.commons.csv.CSVParserAgentTest#stream_returnsSequentialStreamOverAllRecords()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <3>
+    at org.apache.commons.csv.CSVParserAgentTest.stream_returnsSequentialStreamOverAllRecords(CSVParserAgentTest.java:546)
+
+4) org.apache.commons.csv.CSVParserAgentTest#deprecatedConstructor_nullReader_throwsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.csv.CSVParserAgentTest.deprecatedConstructor_nullReader_throwsIllegalArgumentException(CSVParserAgentTest.java:117)
+Caused by: java.lang.NullPointerException: origin
+
+5) org.apache.commons.csv.CSVParserAgentTest#getHeaderMapAndNames_withoutHeaderFormat_areEmpty()
+org.opentest4j.AssertionFailedError: expected: not <null>
+    at org.apache.commons.csv.CSVParserAgentTest.getHeaderMapAndNames_withoutHeaderFormat_areEmpty(CSVParserAgentTest.java:468)
+
+Tests run: 37, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 37, failed: 5
+FAILURES!!!

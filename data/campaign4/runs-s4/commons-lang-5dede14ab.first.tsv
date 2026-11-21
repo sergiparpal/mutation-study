@@ -1,0 +1,32 @@
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsAccessibleFalseForPrivateMember()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsPackageFalseForPrivate()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testCompareConstructorFitSameConstructorIsZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsAccessibleFalseForNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsPackageFalseForProtected()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsAccessibleTrueForPublicMember()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsPublicTrueForPublicMember()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingMethodUnassignableActualType()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testSetAccessibleWorkaroundOnPublicMemberReturnsSameInstance()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testCompareMethodFitSameMethodIsZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingMethodAssignableActualType()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsPackageTrueForStaticOrFinalAlone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsStaticFalseForNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingMethodWrongParameterCount()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingConstructorUnassignableActualType()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsPublicFalseForNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testPackagePrivateConstructorIsUsable()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingConstructorExactType()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testCompareMethodFitPrefersMoreSpecificParameter()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingMethodExactType()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testSetAccessibleWorkaroundOnPrivateMemberMakesItAccessible()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsPublicFalseForPrivateMember()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingMethodTwoArgMethod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsStaticFalseForInstanceMember()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingMethodNoArgMethod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsPackageTrueForNoModifiers()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testCompareConstructorFitPrefersMoreSpecificParameter()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testSetAccessibleWorkaroundWithNullReturnsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsStaticTrueForStaticMember()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsPackageFalseForPublic()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingConstructorWrongParameterCount()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingConstructorAssignableActualType()	1	0	

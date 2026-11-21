@@ -1,0 +1,27 @@
+1) org.apache.commons.csv.CSVPrinterAgentTest#testPrintUsesStringValueOfForNull()
+org.opentest4j.AssertionFailedError: expected: <null> but was: <>
+    at org.apache.commons.csv.CSVPrinterAgentTest.testPrintUsesStringValueOfForNull(CSVPrinterAgentTest.java:258)
+
+2) org.apache.commons.csv.CSVPrinterAgentTest#testPrintRecordsWithSimpleObjectsWritesASingleRecord()
+org.opentest4j.AssertionFailedError: expected: <a,b,c
+> but was: <a
+b
+c
+>
+    at org.apache.commons.csv.CSVPrinterAgentTest.testPrintRecordsWithSimpleObjectsWritesASingleRecord(CSVPrinterAgentTest.java:394)
+
+3) org.apache.commons.csv.CSVPrinterAgentTest#testConstructorWritesHeaderImmediatelyWithoutCountingIt()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+    at org.apache.commons.csv.CSVPrinterAgentTest.testConstructorWritesHeaderImmediatelyWithoutCountingIt(CSVPrinterAgentTest.java:233)
+
+4) org.apache.commons.csv.CSVPrinterAgentTest#testPrintlnWritesRecordSeparatorAndCompletesARecord()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+    at org.apache.commons.csv.CSVPrinterAgentTest.testPrintlnWritesRecordSeparatorAndCompletesARecord(CSVPrinterAgentTest.java:308)
+
+5) org.apache.commons.csv.CSVPrinterAgentTest#testFlushPropagatesIOException()
+org.opentest4j.AssertionFailedError: Expected java.io.IOException to be thrown, but nothing was thrown.
+    at org.apache.commons.csv.CSVPrinterAgentTest.testFlushPropagatesIOException(CSVPrinterAgentTest.java:631)
+
+Tests run: 41, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 41, failed: 5
+FAILURES!!!

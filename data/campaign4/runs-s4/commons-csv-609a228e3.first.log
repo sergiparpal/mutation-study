@@ -1,0 +1,44 @@
+1) org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullFormatThrowsIllegalArgumentException()
+java.lang.NullPointerException: format
+    at java.base/java.util.Objects.requireNonNull(Objects.java:248)
+    at org.apache.commons.csv.CSVParser.<init>(CSVParser.java:574)
+    at org.apache.commons.csv.CSVParser.<init>(CSVParser.java:542)
+    at org.apache.commons.csv.CSVParserAgentTest.testDeprecatedConstructorNullFormatThrowsIllegalArgumentException(CSVParserAgentTest.java:210)
+
+2) org.apache.commons.csv.CSVParserAgentTest#testParseStringBasicRecords()
+org.opentest4j.AssertionFailedError: expected: <3> but was: <1>
+    at org.apache.commons.csv.CSVParserAgentTest.testParseStringBasicRecords(CSVParserAgentTest.java:60)
+
+3) org.apache.commons.csv.CSVParserAgentTest#testParseReaderNullThrowsIllegalArgumentException()
+java.lang.NullPointerException: origin
+    at java.base/java.util.Objects.requireNonNull(Objects.java:248)
+    at org.apache.commons.io.build.AbstractOrigin.<init>(AbstractOrigin.java:1188)
+    at org.apache.commons.io.build.AbstractOrigin$ReaderOrigin.<init>(AbstractOrigin.java:909)
+    at org.apache.commons.io.build.AbstractOriginSupplier.newReaderOrigin(AbstractOriginSupplier.java:175)
+    at org.apache.commons.io.build.AbstractOriginSupplier.setReader(AbstractOriginSupplier.java:373)
+    at org.apache.commons.csv.CSVParser.parse(CSVParser.java:419)
+    at org.apache.commons.csv.CSVParserAgentTest.testParseReaderNullThrowsIllegalArgumentException(CSVParserAgentTest.java:90)
+
+4) org.apache.commons.csv.CSVParserAgentTest#testIteratorRethrowsIOExceptionAsIllegalStateException()
+java.io.UncheckedIOException: java.io.IOException: Simulated read failure
+    at org.apache.commons.io.function.Uncheck.wrap(Uncheck.java:371)
+    at org.apache.commons.io.function.Uncheck.get(Uncheck.java:215)
+    at org.apache.commons.csv.CSVParser$CSVRecordIterator.getNextRecord(CSVParser.java:252)
+    at org.apache.commons.csv.CSVParser$CSVRecordIterator.hasNext(CSVParser.java:266)
+    at org.apache.commons.csv.CSVParserAgentTest.testIteratorRethrowsIOExceptionAsIllegalStateException(CSVParserAgentTest.java:456)
+Caused by: java.io.IOException: Simulated read failure
+
+5) org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullReaderThrowsIllegalArgumentException()
+java.lang.NullPointerException: origin
+    at java.base/java.util.Objects.requireNonNull(Objects.java:248)
+    at org.apache.commons.io.build.AbstractOrigin.<init>(AbstractOrigin.java:1188)
+    at org.apache.commons.io.build.AbstractOrigin$ReaderOrigin.<init>(AbstractOrigin.java:909)
+    at org.apache.commons.io.build.AbstractOriginSupplier.newReaderOrigin(AbstractOriginSupplier.java:175)
+    at org.apache.commons.io.build.AbstractOriginSupplier.setReader(AbstractOriginSupplier.java:373)
+    at org.apache.commons.csv.CSVParser.<init>(CSVParser.java:573)
+    at org.apache.commons.csv.CSVParser.<init>(CSVParser.java:542)
+    at org.apache.commons.csv.CSVParserAgentTest.testDeprecatedConstructorNullReaderThrowsIllegalArgumentException(CSVParserAgentTest.java:197)
+
+Tests run: 39, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 39, failed: 5
+FAILURES!!!

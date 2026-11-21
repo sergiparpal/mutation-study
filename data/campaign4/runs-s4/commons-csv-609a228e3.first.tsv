@@ -1,0 +1,39 @@
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testIteratorOnClosedParserYieldsNoRecords()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetRecordNumberProgressesFromZero()	1	0	
+FAILED	method	org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullFormatThrowsIllegalArgumentException()	1	1	java.lang.NullPointerException: format
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorWithRecordNumberOffset()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParsePathBasicRecords()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetRecordsStartsAtCurrentParsePosition()	1	0	
+FAILED	method	org.apache.commons.csv.CSVParserAgentTest#testParseStringBasicRecords()	1	1	org.opentest4j.AssertionFailedError: expected: <3> but was: <1>
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testStreamProducesAllRecords()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseReaderBasicRecords()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseFileBasicRecords()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetRecordsOnEmptyInputIsEmptyNotNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testHasHeaderCommentFalseByDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testHasTrailerCommentFalseByDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetCurrentLineNumberProgresses()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapRawMatchesHeaderMap()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testBuilderReturnsUsableInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapReturnsIndependentCopy()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseUrlNullThrowsNullPointerException()	1	0	
+FAILED	method	org.apache.commons.csv.CSVParserAgentTest#testParseReaderNullThrowsIllegalArgumentException()	1	1	java.lang.NullPointerException: origin
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseStringNullThrowsNullPointerException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderNamesOrderAndReadOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testBuilderSetRecordNumberAffectsFirstRecordNumber()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetFirstEndOfLine()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testTrailerCommentDetectedAfterLastRecord()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseInputStreamBasicRecords()	1	0	
+FAILED	method	org.apache.commons.csv.CSVParserAgentTest#testIteratorRethrowsIOExceptionAsIllegalStateException()	1	1	java.io.UncheckedIOException: java.io.IOException: Simulated read failure
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetRecordsThrowsUncheckedIOExceptionOnReadFailure()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testHeaderCommentDetectedBeforeExplicitHeader()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testIteratorTraversesAllRecords()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParsePathNullThrowsNullPointerException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testBuilderOffsetAndTrackBytesSettersDoNotBreakParsing()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testIsClosedReflectsCloseCall()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testNextRecordReturnsNullAtEndOfStream()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseFileNullThrowsNullPointerException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorBasic()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapContainsColumnIndices()	1	0	
+FAILED	method	org.apache.commons.csv.CSVParserAgentTest#testDeprecatedConstructorNullReaderThrowsIllegalArgumentException()	1	1	java.lang.NullPointerException: origin
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testBuilderGetProducesWorkingParser()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseUrlBasicRecords()	1	0	

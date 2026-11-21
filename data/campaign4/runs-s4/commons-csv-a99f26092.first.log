@@ -1,0 +1,12 @@
+1) org.apache.commons.csv.CSVFormatAgentTest#testInformixUnloadFormat()
+org.opentest4j.AssertionFailedError: expected: <,> but was: <|>
+    at org.apache.commons.csv.CSVFormatAgentTest.testInformixUnloadFormat(CSVFormatAgentTest.java:56)
+
+2) org.apache.commons.csv.CSVFormatAgentTest#testPredefinedFormatsAreDistinct()
+org.opentest4j.AssertionFailedError: expected: not equal but was: <Delimiter=<	> Escape=<\> QuoteMode=<ALL_NON_NULL> NullString=<\N> RecordSeparator=<
+> SkipHeaderRecord:false>
+    at org.apache.commons.csv.CSVFormatAgentTest.testPredefinedFormatsAreDistinct(CSVFormatAgentTest.java:152)
+
+Tests run: 97, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 97, failed: 2
+FAILURES!!!

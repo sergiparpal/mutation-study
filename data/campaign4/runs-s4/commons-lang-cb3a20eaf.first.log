@@ -1,0 +1,23 @@
+1) org.apache.commons.lang3.text.StrSubstitutorAgentTest#testStaticReplaceWithMapNullSuffixThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.lang3.text.StrSubstitutorAgentTest.testStaticReplaceWithMapNullSuffixThrows(StrSubstitutorAgentTest.java:142)
+Caused by: java.lang.NullPointerException: suffix
+
+2) org.apache.commons.lang3.text.StrSubstitutorAgentTest#testConstructorMapPrefixSuffixNullPrefixThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.lang3.text.StrSubstitutorAgentTest.testConstructorMapPrefixSuffixNullPrefixThrows(StrSubstitutorAgentTest.java:181)
+Caused by: java.lang.NullPointerException: prefix
+
+3) org.apache.commons.lang3.text.StrSubstitutorAgentTest#testStaticReplaceWithMapNullPrefixThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.lang3.text.StrSubstitutorAgentTest.testStaticReplaceWithMapNullPrefixThrows(StrSubstitutorAgentTest.java:133)
+Caused by: java.lang.NullPointerException: prefix
+
+4) org.apache.commons.lang3.text.StrSubstitutorAgentTest#testConstructorMapPrefixSuffixNullSuffixThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.lang3.text.StrSubstitutorAgentTest.testConstructorMapPrefixSuffixNullSuffixThrows(StrSubstitutorAgentTest.java:190)
+Caused by: java.lang.NullPointerException: suffix
+
+Tests run: 64, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 64, failed: 4
+FAILURES!!!

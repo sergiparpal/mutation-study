@@ -1,0 +1,22 @@
+1) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomRangeCharsArrayOutOfBoundsThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.ArrayIndexOutOfBoundsException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomRangeCharsArrayOutOfBoundsThrows(RandomStringUtilsAgentTest.java:323)
+Caused by: java.lang.IllegalArgumentException: start >= chars.length
+
+2) org.apache.commons.lang3.RandomStringUtilsAgentTest#testNextRangeCharsArrayOutOfBoundsThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.ArrayIndexOutOfBoundsException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testNextRangeCharsArrayOutOfBoundsThrows(RandomStringUtilsAgentTest.java:705)
+Caused by: java.lang.IllegalArgumentException: start >= chars.length
+
+3) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomMasterCharsArrayOutOfBoundsThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.ArrayIndexOutOfBoundsException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomMasterCharsArrayOutOfBoundsThrows(RandomStringUtilsAgentTest.java:392)
+Caused by: java.lang.IllegalArgumentException: start >= chars.length
+
+4) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomMasterZeroStartEndUsesPrintableAsciiWhenLettersAndNumbersFalse()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomMasterZeroStartEndUsesPrintableAsciiWhenLettersAndNumbersFalse(RandomStringUtilsAgentTest.java:366)
+
+Tests run: 85, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 85, failed: 4
+FAILURES!!!

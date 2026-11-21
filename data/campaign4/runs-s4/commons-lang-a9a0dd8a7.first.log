@@ -1,0 +1,13 @@
+1) org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentUnsupportedFragment()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.expectNpe(DateUtilsAgentTest.java:63)
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testGetFragmentUnsupportedFragment(DateUtilsAgentTest.java:519)
+Caused by: java.lang.IllegalArgumentException: The fragment 7 is not supported
+
+2) org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentInMinutes()
+org.opentest4j.AssertionFailedError: expected: <15> but was: <435>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testGetFragmentInMinutes(DateUtilsAgentTest.java:462)
+
+Tests run: 79, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 79, failed: 2
+FAILURES!!!

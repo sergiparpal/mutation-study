@@ -1,0 +1,6 @@
+org.apache.commons.lang3.StringUtilsAgentTest#testTrimAsciiControl()
+org.apache.commons.lang3.StringUtilsAgentTest#testJoinObjectArrayStringRange()
+org.apache.commons.lang3.StringUtilsAgentTest#testSubstringBeforeAfter()
+org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfDifference()
+org.apache.commons.lang3.StringUtilsAgentTest#testRemoveChar()
+org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateWithMarkerAndOffset()

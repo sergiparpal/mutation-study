@@ -1,0 +1,239 @@
+CLI:    2.1.316 (Claude Code)  (/home/sergi/.local/share/claude/versions/2.1.316)
+model:  claude-sonnet-5
+commit: 18929a35396067c51879ee3b931ae52f10a05f5d
+start:  2026-11-20T17:21:12Z
+
+ 1  commons-lang-d98cea29f     m4  ok
+ 1  commons-lang-d98cea29f     s4  ok
+ 2  commons-lang-6dbbbb308     s4  ok
+ 2  commons-lang-6dbbbb308     m4  ok
+ 3  commons-lang-184c9e832     m4  ok
+ 3  commons-lang-184c9e832     s4  ok
+ 4  commons-lang-b11591895     s4  ok
+ 4  commons-lang-b11591895     m4  ok
+ 5  commons-lang-7b7be629d     m4  ok
+ 5  commons-lang-7b7be629d     s4  ok
+ 6  commons-csv-a99f26092      s4  ok
+ 6  commons-csv-a99f26092      m4  ok
+ 7  commons-lang-c99f2ddfe     m4  ok
+ 7  commons-lang-c99f2ddfe     s4  ok
+ 8  commons-lang-aae7f0e61     s4  ok
+ 8  commons-lang-aae7f0e61     m4  ok
+ 9  commons-lang-d732cf0f8     m4  ok
+ 9  commons-lang-d732cf0f8     s4  ok
+10  commons-cli-db57942a6      s4  ok
+10  commons-cli-db57942a6      m4  ok
+11  commons-lang-57bd7dd09     m4  ok
+11  commons-lang-57bd7dd09     s4  ok
+12  commons-lang-10f442145     s4  ok
+12  commons-lang-10f442145     m4  ok
+13  commons-lang-0b4a9d95d     m4  ok
+13  commons-lang-0b4a9d95d     s4  ok
+14  commons-lang-4060e60f4     s4  ok
+14  commons-lang-4060e60f4     m4  ok
+15  commons-lang-aafee70bf     m4  ok
+15  commons-lang-aafee70bf     s4  ok
+16  commons-lang-2c3748412     s4  ok
+16  commons-lang-2c3748412     m4  ok
+17  commons-lang-79380dba9     m4  ok
+17  commons-lang-79380dba9     s4  ok
+18  commons-lang-b1aba6833     s4  ok
+18  commons-lang-b1aba6833     m4  ok
+19  commons-lang-5914a8e80     m4  ok
+19  commons-lang-5914a8e80     s4  ok
+20  commons-lang-9bcc0d0bf     s4  ok
+20  commons-lang-9bcc0d0bf     m4  ok
+21  commons-lang-f4442b1c9     m4  ok
+21  commons-lang-f4442b1c9     s4  ok
+22  commons-csv-1a8403dd5      s4  ok
+22  commons-csv-1a8403dd5      m4  ok
+23  commons-csv-609a228e3      m4  ok
+23  commons-csv-609a228e3      s4  ok
+24  commons-lang-c7f1a6d27     s4  ok
+24  commons-lang-c7f1a6d27     m4  ok
+25  commons-lang-14deed1bf     m4  ok
+25  commons-lang-14deed1bf     s4  ok
+26  commons-lang-45c80d995     s4  ok
+26  commons-lang-45c80d995     m4  ok
+27  commons-lang-fbae26f08     m4  ok
+27  commons-lang-fbae26f08     s4  ok
+28  commons-lang-4c3f1dd00     s4  ok
+28  commons-lang-4c3f1dd00     m4  ok
+29  commons-lang-5dede14ab     m4  ok
+29  commons-lang-5dede14ab     s4  ok
+30  commons-lang-19b59ffdd     s4  ok
+30  commons-lang-19b59ffdd     m4  ok
+31  commons-lang-05fffe85e     m4  ok
+31  commons-lang-05fffe85e     s4  ok
+32  commons-lang-52c06bea2     s4  ok
+32  commons-lang-52c06bea2     m4  ok
+33  commons-lang-ddf5625d5     m4  ok
+33  commons-lang-ddf5625d5     s4  ok
+34  commons-lang-daa17b862     s4  ok
+34  commons-lang-daa17b862     m4  ok
+35  commons-lang-1418a770b     m4  ok
+35  commons-lang-1418a770b     s4  ok
+36  commons-lang-c79a10240     s4  ok
+36  commons-lang-c79a10240     m4  ok
+37  commons-lang-8425918f9     m4  ok
+37  commons-lang-8425918f9     s4  ok
+38  commons-csv-1e3de1274      s4  ok
+38  commons-csv-1e3de1274      m4  ok
+39  commons-lang-d927bfc84     m4  ok
+39  commons-lang-d927bfc84     s4  ok
+40  commons-lang-26ead6134     s4  ok
+40  commons-lang-26ead6134     m4  ok
+41  commons-csv-b5940a642      m4  ok
+41  commons-csv-b5940a642      s4  ok
+42  commons-csv-f53d04737      s4  ok
+42  commons-csv-f53d04737      m4  ok
+43  commons-csv-23eb602d2      m4  ok
+43  commons-csv-23eb602d2      s4  ok
+44  commons-cli-f3ba9c951      s4  ok
+44  commons-cli-f3ba9c951      m4  ok
+45  commons-csv-274b4ceba      m4  ok
+45  commons-csv-274b4ceba      s4  ok
+46  commons-lang-f164995c9     s4  ok
+46  commons-lang-f164995c9     m4  ok
+47  commons-lang-df5245a79     m4  ok
+47  commons-lang-df5245a79     s4  ok
+48  commons-lang-83fe22025     s4  ok
+48  commons-lang-83fe22025     m4  ok
+49  commons-lang-cb3a20eaf     m4  ok
+49  commons-lang-cb3a20eaf     s4  ok
+50  commons-csv-bbdfad773      s4  ok
+50  commons-csv-bbdfad773      m4  ok
+51  commons-lang-18063c1f6     m4  ok
+51  commons-lang-18063c1f6     s4  ok
+52  commons-cli-8010193ee      s4  ok
+52  commons-cli-8010193ee      m4  ok
+53  commons-lang-aa47951bd     m4  ok
+53  commons-lang-aa47951bd     s4  ok
+54  commons-lang-89047990d     s4  ok
+54  commons-lang-89047990d     m4  ok
+55  commons-lang-1c1a79822     m4  ok
+55  commons-lang-1c1a79822     s4  ok
+56  commons-lang-651283fed     s4  ok
+56  commons-lang-651283fed     m4  ok
+57  commons-cli-0f561e597      m4  ok
+57  commons-cli-0f561e597      s4  ok
+58  commons-lang-060ab31e5     s4  ok
+58  commons-lang-060ab31e5     m4  ok
+59  commons-lang-5b3a81dcd     m4  ok
+59  commons-lang-5b3a81dcd     s4  ok
+60  commons-lang-0add789ed     s4  ok
+60  commons-lang-0add789ed     m4  ok
+61  commons-lang-dda928301     m4  ok
+61  commons-lang-dda928301     s4  ok
+62  commons-lang-0953617b7     s4  ok
+62  commons-lang-0953617b7     m4  ok
+63  commons-lang-7da57b615     m4  ok
+63  commons-lang-7da57b615     s4  ok
+64  commons-lang-4e1f3eef1     s4  ok
+64  commons-lang-4e1f3eef1     m4  ok
+65  commons-lang-54ee8ec1c     m4  ok
+65  commons-lang-54ee8ec1c     s4  ok
+66  commons-lang-9e0fd0787     s4  agent tests do not compile in the project
+66  commons-lang-9e0fd0787     m4  ok
+67  commons-lang-f4bdd4e1d     m4  ok
+67  commons-lang-f4bdd4e1d     s4  ok
+68  commons-cli-f92c4ce0f      s4  ok
+68  commons-cli-f92c4ce0f      m4  ok
+69  commons-lang-864dd6ea8     m4  ok
+69  commons-lang-864dd6ea8     s4  ok
+70  commons-lang-e1ffb6ea0     s4  ok
+70  commons-lang-e1ffb6ea0     m4  ok
+71  commons-lang-ae85262f0     m4  ok
+71  commons-lang-ae85262f0     s4  ok
+72  commons-lang-5904c573f     s4  ok
+72  commons-lang-5904c573f     m4  ok
+73  commons-lang-4a6a98432     m4  ok
+73  commons-lang-4a6a98432     s4  ok
+74  commons-lang-127050d2b     s4  ok
+74  commons-lang-127050d2b     m4  ok
+75  commons-lang-35d652e9e     m4  ok
+75  commons-lang-35d652e9e     s4  ok
+76  commons-lang-13d25e059     s4  ok
+76  commons-lang-13d25e059     m4  ok
+77  commons-lang-7d325c2a5     m4  ok
+77  commons-lang-7d325c2a5     s4  ok
+78  commons-lang-f015a7ed9     s4  ok
+78  commons-lang-f015a7ed9     m4  ok
+79  commons-cli-7d77ecce8      m4  ok
+79  commons-cli-7d77ecce8      s4  ok
+80  commons-lang-a0ffef035     s4  ok
+80  commons-lang-a0ffef035     m4  ok
+81  commons-lang-3df7f4440     m4  ok
+81  commons-lang-3df7f4440     s4  ok
+82  commons-lang-3f0c0fd5c     s4  ok
+82  commons-lang-3f0c0fd5c     m4  ok
+83  commons-lang-2626360ce     m4  ok
+83  commons-lang-2626360ce     s4  ok
+84  commons-lang-d215e7fec     s4  ok
+84  commons-lang-d215e7fec     m4  ok
+85  commons-lang-43154e016     m4  ok
+85  commons-lang-43154e016     s4  ok
+86  commons-lang-7c7bc19f2     s4  ok
+86  commons-lang-7c7bc19f2     m4  ok
+87  commons-lang-355f24676     m4  ok
+87  commons-lang-355f24676     s4  ok
+88  commons-csv-89784890b      s4  ok
+88  commons-csv-89784890b      m4  ok
+89  commons-csv-09e27ffdb      m4  ok
+89  commons-csv-09e27ffdb      s4  ok
+90  commons-lang-edcc0ff2c     s4  ok
+90  commons-lang-edcc0ff2c     m4  ok
+91  commons-csv-5e2d0590c      m4  ok
+91  commons-csv-5e2d0590c      s4  ok
+92  commons-lang-2011ce3ba     s4  ok
+92  commons-lang-2011ce3ba     m4  ok
+93  commons-lang-75086d398     m4  ok
+93  commons-lang-75086d398     s4  ok
+94  commons-lang-a9a0dd8a7     s4  ok
+94  commons-lang-a9a0dd8a7     m4  ok
+95  commons-lang-fa59a3159     m4  ok
+95  commons-lang-fa59a3159     s4  ok
+96  commons-csv-f1bf8cd22      s4  ok
+96  commons-csv-f1bf8cd22      m4  ok
+97  commons-lang-28f46460d     m4  ok
+97  commons-lang-28f46460d     s4  ok
+98  commons-lang-3e50a7f9c     s4  agent produced no test file
+98  commons-lang-3e50a7f9c     m4  ok
+99  commons-lang-526a03a87     m4  ok
+99  commons-lang-526a03a87     s4  ok
+100  commons-lang-eedd91729     s4  ok
+100  commons-lang-eedd91729     m4  ok
+101  commons-lang-2240c1f93     m4  ok
+101  commons-lang-2240c1f93     s4  agent produced no test file
+102  commons-csv-afbf34ad9      s4  ok
+102  commons-csv-afbf34ad9      m4  ok
+103  commons-lang-e2838b281     m4  ok
+103  commons-lang-e2838b281     s4  ok
+104  commons-lang-4a5ef8ed2     s4  ok
+104  commons-lang-4a5ef8ed2     m4  ok
+105  commons-csv-6595acc09      m4  ok
+105  commons-csv-6595acc09      s4  ok
+106  commons-lang-46d9a80e5     s4  ok
+106  commons-lang-46d9a80e5     m4  ok
+107  commons-csv-b29fb40ac      m4  ok
+107  commons-csv-b29fb40ac      s4  ok
+108  commons-lang-b62244517     s4  ok
+108  commons-lang-b62244517     m4  ok
+109  commons-lang-0c4093928     m4  ok
+109  commons-lang-0c4093928     s4  ok
+110  commons-lang-c07bc828f     s4  ok
+110  commons-lang-c07bc828f     m4  ok
+111  commons-lang-1c27f93c1     m4  ok
+111  commons-lang-1c27f93c1     s4  ok
+112  commons-lang-4052e9862     s4  ok
+112  commons-lang-4052e9862     m4  ok
+113  commons-lang-5d46a39e4     m4  ok
+113  commons-lang-5d46a39e4     s4  ok
+114  commons-lang-7c91ce989     s4  ok
+114  commons-lang-7c91ce989     m4  ok
+115  commons-lang-4bfbfeabe     m4  ok
+115  commons-lang-4bfbfeabe     s4  ok
+
+m4: 115 runs with a status, 115 packaged
+s4: 115 runs with a status, 112 packaged
+end:    2026-11-21T07:27:04Z

@@ -1,0 +1,26 @@
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testGetImplicitUpperBounds()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testToLongString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testGetTypeArgumentsTypeClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testGetTypeArgumentsParameterizedType()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testGenericInterfaceFixtureIsAssignable()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testWrap()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testToString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testIsInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testIsArrayType()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testContainsTypeVariables()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testParameterizeWithOwner()	1	1	java.lang.IllegalArgumentException: class java.lang.String is invalid owner type for parameterized class org.apache.commons.lang3.reflect.TypeUtilsAgentTest$Box
+FAILED	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testParameterizeVarargsAndMap()	1	1	org.opentest4j.AssertionFailedError: expected: <null> but was: <org.apache.commons.lang3.reflect.TypeUtilsAgentTest>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testUnrollVariables()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testIsAssignable()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testTypesSatisfyVariables()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testWildcardTypeBuilder()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testNormalizeUpperBounds()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testDetermineTypeArguments()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testGenericArrayType()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testGetRawType()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testEquals()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testGetArrayComponentType()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testGetImplicitBounds()	1	1	org.opentest4j.AssertionFailedError: expected: <java.lang.Number> but was: <java.lang.Comparable<T>>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testGetImplicitLowerBounds()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testDeprecatedConstructor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testWildcardAllField()	1	0	

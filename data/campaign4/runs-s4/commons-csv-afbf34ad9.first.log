@@ -1,0 +1,19 @@
+1) org.apache.commons.csv.LexerAgentTest#testNextTokenLastRecordWithoutTrailingNewlineStillEndsRecord()
+org.opentest4j.AssertionFailedError: expected: <EORECORD> but was: <EOF>
+    at org.apache.commons.csv.LexerAgentTest.testNextTokenLastRecordWithoutTrailingNewlineStillEndsRecord(LexerAgentTest.java:417)
+
+2) org.apache.commons.csv.LexerAgentTest#testIsDelimiterTrueForMultiCharDelimiterAndDoesNotConsumeOnPeek()
+org.opentest4j.AssertionFailedError: expected: <124> but was: <88>
+    at org.apache.commons.csv.LexerAgentTest.testIsDelimiterTrueForMultiCharDelimiterAndDoesNotConsumeOnPeek(LexerAgentTest.java:243)
+
+3) org.apache.commons.csv.LexerAgentTest#testIsEscapeDelimiterTrueForDocumentedExample()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.csv.LexerAgentTest.testIsEscapeDelimiterTrueForDocumentedExample(LexerAgentTest.java:264)
+
+4) org.apache.commons.csv.LexerAgentTest#testGetBytesReadIncreasesAfterReadingTokens()
+org.opentest4j.AssertionFailedError: Expected bytes read to increase after consuming input ==> expected: <true> but was: <false>
+    at org.apache.commons.csv.LexerAgentTest.testGetBytesReadIncreasesAfterReadingTokens(LexerAgentTest.java:67)
+
+Tests run: 47, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 47, failed: 4
+FAILURES!!!
