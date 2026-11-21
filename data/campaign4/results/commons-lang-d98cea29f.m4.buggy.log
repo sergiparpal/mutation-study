@@ -1,0 +1,8 @@
+1) org.apache.commons.lang3.builder.DiffBuilderAgentTest#testAppendObjectIncompatibleArrayTypesComparedAsObjects()
+java.lang.ClassCastException: class [J cannot be cast to class [I ([J and [I are in module java.base of loader 'bootstrap')
+    at org.apache.commons.lang3.builder.DiffBuilder.append(DiffBuilder.java:553)
+    at org.apache.commons.lang3.builder.DiffBuilderAgentTest.testAppendObjectIncompatibleArrayTypesComparedAsObjects(DiffBuilderAgentTest.java:345)
+
+Tests run: 44, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 44, failed: 1
+FAILURES!!!

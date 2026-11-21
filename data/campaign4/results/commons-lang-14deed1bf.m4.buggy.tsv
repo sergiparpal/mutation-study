@@ -1,0 +1,20 @@
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateAtNonZeroIndexReturnsLengthConsumed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testHexEntityUpperXWithSemicolon()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateReturnsZeroWhenNotEnoughRoomAfterAmpersandHash()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testNotAnEntityPlainAmpersand()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testDecimalEntityMissingSemicolonDefaultIgnored()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testSupplementaryCharacterUnescaping()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testDecimalEntityWithSemicolon()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testNonNumericEntityReturnsZeroAndWritesNothing()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testHexEntityLowerXWithSemicolon()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testDecimalEntityMissingSemicolonErrors()	1	0	
+FAILED	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testEntityValueAboveMaxCodePointReturnsZero()	1	1	java.lang.IllegalArgumentException: Not a valid Unicode code point: 0x110000
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testIsSetWithMultipleOptions()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testZeroCodePointEntity()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTrailingLowerXOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testDefaultOptionIsSemiColonRequired()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testHexOnlyXWithNothingAfterReturnsZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testDecimalEntityMissingSemicolonOptional()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTrailingUpperXOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTrailingHashOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateReturnsZeroWhenCharAtIndexIsNotAmpersand()	1	0	

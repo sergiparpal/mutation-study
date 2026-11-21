@@ -1,0 +1,17 @@
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptStringReturnsFalse()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptPrimitiveWrapperReturnsFalse()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptAtomicBooleanReturnsFalse()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testToStringBuilderFullyRecursesNestedObjectGraph()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailNullValueDelegatesToSuper()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionOfEmptyCollection()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptCustomClassReturnsTrue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailIntegerValueDelegatesToSuper()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptMutableBooleanReturnsFalse()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptObjectClassReturnsTrue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCustomObjectIsRecursivelyFormatted()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testToStringBuilderOnNullObjectReturnsNullText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailMutableBooleanDelegatesToSuper()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailAtomicBooleanDelegatesToSuper()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailStringValueDelegatesToSuper()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionIsRecursivelyFormatted()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptNumberSubclassReturnsFalse()	1	0	

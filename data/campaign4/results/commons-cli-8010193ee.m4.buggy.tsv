@@ -1,0 +1,21 @@
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterReturnsDoubleForDecimalString()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testCustomLambdaImplementationCanThrowCheckedException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testUrlConverterThrowsOnMalformedUrl()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testClassConverterThrowsOnUnknownClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterThrowsOnGarbageInput()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterParsesValidDate()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testUrlConverterCreatesUrl()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testPathConverterThrowsOnInvalidPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDefaultWithEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testFileConverterThrowsOnNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testObjectConverterInstantiatesClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testObjectConverterThrowsOnUnknownClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDefaultReturnsSameString()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testPathConverterCreatesPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterThrowsOnNonNumeric()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testClassConverterFindsExistingClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterReturnsLongForIntegerString()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDefaultConverterIsNotEqualToOtherConstants()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testFileConverterCreatesFile()	1	0	
+FAILED	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterThrowsOnInvalidDay()	1	1	org.opentest4j.AssertionFailedError: Expected java.text.ParseException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterThrowsOnMalformedDecimal()	1	0	

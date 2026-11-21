@@ -1,0 +1,23 @@
+1) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptFiltersMutableBoolean()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAcceptFiltersMutableBoolean(RecursiveToStringStyleAgentTest.java:103)
+
+2) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptFiltersBoxedPrimitives()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAcceptFiltersBoxedPrimitives(RecursiveToStringStyleAgentTest.java:67)
+
+3) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptFiltersNumberSubclasses()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAcceptFiltersNumberSubclasses(RecursiveToStringStyleAgentTest.java:88)
+
+4) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptFiltersAtomicBoolean()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAcceptFiltersAtomicBoolean(RecursiveToStringStyleAgentTest.java:96)
+
+5) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptFiltersString()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAcceptFiltersString(RecursiveToStringStyleAgentTest.java:81)
+
+Tests run: 19, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 19, failed: 5, left out beforehand: 1
+FAILURES!!!

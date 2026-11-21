@@ -1,0 +1,20 @@
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateNotEnoughDigitsThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateDirectMethodNoMatchReturnsZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateBackslashWithoutU()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateDirectMethodWithPlusConsumedCount()	1	0	
+FAILED	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateSignCharacterInUnicodeValueThrows()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testHighValueCodePoint()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateDirectMethodReturnsConsumedCount()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateWithMultipleUChars()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateNullInput()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateUnicodeLowercaseHex()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateInvalidHexThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateWithMultipleUCharsAndPlusSign()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateTrailingBackslash()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateEmptyInput()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateEmbeddedInLargerString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateNoBackslash()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateBackslashAtEndOfInput()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateWithPlusSign()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateUnicodeUppercaseHex()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateDirectMethodAtNonZeroIndex()	1	0	

@@ -1,0 +1,19 @@
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testUrlConverter()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testClassConverter()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testPathConverter()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testObjectConverter()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testCustomConverterImplementation()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterRejectsGarbage()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterRejectsOutOfRangeDay()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterDecimal()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterFormatsEnglishLocale()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterInteger()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testObjectConverterNoAccessibleConstructorThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterInvalidThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDefaultConverterIsIdentity()	1	0	
+FAILED	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterRejectsTrailingText()	1	1	org.opentest4j.AssertionFailedError: Expected java.text.ParseException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testFileConverter()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testUrlConverterInvalidThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testPathConverterInvalidThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testObjectConverterUnknownClassThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testFileConverterNullThrows()	1	0	

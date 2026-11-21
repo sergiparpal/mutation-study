@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.time.DurationUtilsAgentTest#testAcceptSplitsNegativeDurationWithNonNegativeNanos()
+org.opentest4j.AssertionFailedError: expected: <-2> but was: <-1>
+    at org.apache.commons.lang3.time.DurationUtilsAgentTest.testAcceptSplitsNegativeDurationWithNonNegativeNanos(DurationUtilsAgentTest.java:68)
+
+Tests run: 32, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 32, failed: 1
+FAILURES!!!

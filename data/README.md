@@ -1955,6 +1955,26 @@ measured, with the reasons for each decision. In short:
 - **Refused calls.** The harness refused 29 calls in `m4` and 30 in `s4`. The
   sandbox denied 84 `s4` commands a hidden program, and no `m4` command.
 
+### Detection
+
+`./bin/measure-campaign4.sh` ran once, on 21 November 2026, from 09:50 to
+10:40 UTC, after the audit was committed. Each suite is compiled on its own
+against the fix commit and against its parent, and run on both. The tests
+left out at acceptance are left out again. Its record is
+`campaign4/results/`: per suite, the compiler's log, the runs on both
+revisions and the verdict, and `verdicts.csv`.
+
+| arm | suites | `Fail` | `Pass` | `Broken` |
+|---|---|---|---|---|
+| `m4` | 115 | 21 | 94 | 0 |
+| `s4` | 112 | 3 | 109 | 0 |
+
+- Every suite compiles against both revisions and passes again on the fix
+  commit, so every subject with a suite in both arms has a verdict in both.
+- No verdict is a timeout. Nothing was measured a second time.
+- The records were searched for details of the machine before they were
+  committed. Nothing needed redacting.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -2020,6 +2040,6 @@ mistake for results:
 - [x] Post-cutoff pool classified by fault type, blind: a corpus matched to the Defects4J sample can take at most 69 of the new subjects, omissions binding (`postcutoff-pool/fault-types.tsv`)
 - [x] Fourth campaign prepared: protocol, scripts, checks without the model on its 115 unmatched post-cutoff subjects, and a pilot (`campaign4/`)
 - [x] Fourth campaign's protocol fixed before any run on the subjects (`campaign4/PROTOCOL.md`)
-- [x] Fourth campaign's 230 runs made and audited: 227 accepted suites, 115 in `m4` and 112 in `s4`, and no violation (`campaign4/runs-m4/`, `runs-s4/`, `suites/`, `audit.txt`)
+- [x] Fourth campaign's 230 runs made, audited and measured for detection: 227 accepted suites, 115 in `m4` and 112 in `s4`, no violation, and a verdict for every suite (`campaign4/runs-m4/`, `runs-s4/`, `suites/`, `audit.txt`, `results/`)
 - [ ] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed
 - [ ] A matched post-cutoff corpus large enough to test the effect size
