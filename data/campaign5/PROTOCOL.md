@@ -1,11 +1,11 @@
 # Fifth campaign: protocol (draft)
 
 **Draft of 21 November 2026, not fixed.** No run has been made with the model
-for this campaign. The scripts this file names are not written yet, and the
-checks without the model and the pilot below have not been made. It will be
+for this campaign. The scripts this file names are written, and have been
+tried without the model on two subjects ("Checks to be made without the
+model", below). The full checks and the pilot have not been made. It will be
 fixed as the fourth campaign's was: by the merge of the pull request that adds
-it, after those checks and the pilot. Until then it can change. The decisions
-still open are listed at the end.
+it, after those checks and the pilot. Until then it can change.
 
 ## Why a fifth campaign
 
@@ -69,8 +69,10 @@ place of `$SHA`.
 (`../campaign4/subjects/`) as they are. On 21 November 2026, in the pool's
 clones, every one of the 115 fix commits was found to have a single parent.
 Every class under test was also found to exist at that parent, so the prompt
-names the same classes in both arms. The fourth campaign's arms have run on
-these subjects, and their results are known. That is why `m5` is run again
+names the same classes in both arms. `bin/subjects-campaign5.py` writes
+`subjects.txt` by the rule in the table; with `--check`, it confirms the list
+and makes both checks again. The fourth campaign's arms have run on these
+subjects, and their results are known. That is why `m5` is run again
 and not replaced by `m4`. `b5` has no earlier counterpart.
 
 **A run is final.** A run is made again in two cases only. The first is that a
@@ -106,9 +108,11 @@ order.
 2. **Audit.** `./bin/audit-campaign5.py data/campaign5 -v > data/campaign5/audit.txt`.
    Every flagged command is read with its result. The runs with a violation,
    as defined below, are listed in `data/campaign5/violations.txt`. The
-   closing message of every `b5` run is read, and those that say the code
-   under test is wrong are listed in `data/campaign5/closing-b5.txt`, with the
-   words that say it. Both files are committed even if they are empty.
+   closing message of every `b5` run is read
+   (`./bin/audit-campaign5.py data/campaign5 --closing`). Those that say the
+   code under test is wrong are listed in `data/campaign5/closing-b5.txt`,
+   with the words that say it. Both files are committed even if they are
+   empty.
 3. **Measurement.** `./bin/measure-campaign5.sh`.
 4. **Mutation score and line coverage.** `./bin/mutation-campaign5.sh`.
 5. **Analysis.** `./bin/analyze-campaign5.py > data/campaign5/analysis.txt`.
@@ -281,7 +285,28 @@ None is a test of this protocol.
 
 ## Checks to be made without the model
 
-These have not been made yet.
+The full checks have not been made yet; a first trial has.
+
+**Tried so far.** On 21 November 2026 the scripts were tried without the
+model on two subjects, `commons-csv-b5940a642` and `commons-lang-1418a770b`,
+in both arms. The output was kept outside the repository.
+
+- **Generation.** Each revision was exported and built, and the agent's
+  scripts compiled and ran a two-test class. The prompt is the same file in
+  both arms. The `b5` stand-ins are the parent's versions of the test files:
+  122 and 9 test methods, against the fix's 123 and 13.
+- **Measurement.** The `m5` stand-ins are `Fail` and the `b5` ones `Pass`. On
+  neither subject does a test of the parent fail on the fix.
+- **The left-out run.** It was tried by leaving one test out of each suite of
+  one subject. In `m5`, a trigger test was left out, and it failed on the
+  parent. In `b5`, a test that passes on both revisions was left out, and it
+  passed on the fix.
+- **Mutation.** PIT gave each suite a figure, on its own revision. The
+  methods it kept are those the measurement ran in all four suites.
+- **Analysis.** It ran on this output. It also ran on made-up verdicts for 112
+  subjects, and reached each of the three outcomes of the decision rule.
+
+**Still to be made:**
 
 - **The sandbox.** Run both checks of step 0.
 - **The subjects, with no model call.** Run the generator and the measurement
@@ -311,16 +336,6 @@ user's agreement: the third campaign's two pilot subjects,
 (`CSVPrinter`), each in both arms. At `m4`'s cost, $0.53 a suite at list
 prices, that is about $2. The pilot's record goes in `pilot/`. It is not part
 of any result.
-
-## Decisions still open
-
-These are listed here while this is a draft, and removed when it is fixed.
-
-1. **Two arms or one.** The design above runs `b5` and `m5`: 230 runs, about
-   $122 at `m4`'s list price a suite. The alternative runs `b5` alone: 115
-   runs, about $61. In that design, the comparison with detection is made
-   against `m4`, and it is descriptive, since `m4`'s results are known. The
-   alternative also loses the estimate of variation between runs.
 
 ## Deviations
 
