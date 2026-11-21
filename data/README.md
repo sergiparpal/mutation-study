@@ -850,7 +850,8 @@ checkouts, are in `postcutoff-revalidation/`.
   candidate meets the contract: twelve of the first corpus's fourteen
   candidates do, not eleven, and the third campaign, whose subjects are the
   validated commits of both corpora, would have had 29. Its protocol and
-  results stand as run.
+  results stand as run. The candidate is eligible in the post-cutoff pool and
+  is one of the fourth campaign's subjects (both below).
 
 The trigger pattern also misses a failure inside a lambda (reported as
 `Class.lambda$name$N:line`), an error with no line in the test class
@@ -2177,7 +2178,7 @@ mistake for results:
   file one candidate left staged, which broke the next two checkouts.
   Described under Post-cutoff corpora. One of the five,
   `commons-lang-ae85262f0`, meets the contract and is in neither corpus nor
-  the third campaign.
+  the third campaign; it is one of the fourth campaign's subjects.
 - **Figures that were wrong and went unnoticed**, because nothing in the
   pipeline failed: `mut_killed` counting uncovered mutants, `Broken` suites
   counted as missed detections, the doubled test totals, and the RAT audit
