@@ -33,7 +33,7 @@ fixed before the first run (`data/campaign2/PROTOCOL.md`).
 
 Detection is over the 39 bugs with a verdict in both arms: 16 faults are
 detected by the first arm alone and one by the second alone (exact McNemar,
-*p* = 2.8 × 10⁻⁴). Mutation score and coverage are over the 36 of those bugs
+*p* = 2.7 × 10⁻⁴). Mutation score and coverage are over the 36 of those bugs
 that have every measurement in both arms. On those 36, **detection loses 65%
 of its value, mutation score 28% and line coverage 16%.** The gap between the
 first two losses is 37 points, with a 95% bootstrap interval of 12 to 59. That
@@ -254,8 +254,11 @@ table above:
 
 ## Reproducing
 
-`./bin/report-figures.py` recomputes every figure in the write-up from `data/`
-and needs neither Defects4J nor model access. `./bin/analyze-campaign2.py`,
+`./bin/report-figures.py` recomputes the figures of §3 of the write-up from
+`data/`. The evidence of §3.9 is printed by `./bin/audit-trigger-leaks.py`,
+and what the transcript audits found is in the `audit.txt` and
+`violations.txt` of `data/campaign2/` to `data/campaign4/`. None of it needs
+Defects4J or model access. `./bin/analyze-campaign2.py`,
 `./bin/analyze-campaign3.py` and `./bin/analyze-campaign4.py` print the
 second, third and fourth campaigns' analyses on their own, and
 `./bin/analyze-mutation-campaign3.py` the third campaign's mutation figures.
