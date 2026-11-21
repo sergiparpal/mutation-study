@@ -1,0 +1,5 @@
+org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomStartEndCharsOutOfBoundsThrows()
+org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomWithEmptyStringThrows()
+org.apache.commons.lang3.RandomStringUtilsAgentTest#testNextStartEndCharsOutOfBoundsThrows()
+org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomCoreOutOfBoundsThrows()
+org.apache.commons.lang3.RandomStringUtilsAgentTest#testNextWithEmptyStringThrows()

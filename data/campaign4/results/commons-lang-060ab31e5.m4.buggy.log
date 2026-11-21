@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.math.NumberUtilsAgentTest#testCreateBigIntegerDoubleSignThrows()
+org.opentest4j.AssertionFailedError: Expected java.lang.NumberFormatException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.math.NumberUtilsAgentTest.testCreateBigIntegerDoubleSignThrows(NumberUtilsAgentTest.java:178)
+
+Tests run: 93, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 93, failed: 1
+FAILURES!!!

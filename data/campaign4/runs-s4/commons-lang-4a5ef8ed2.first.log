@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfAny()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <-1>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfAny(StringUtilsAgentTest.java:258)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviate()
+org.opentest4j.AssertionFailedError: expected: <abcdefg> but was: <abcd>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testAbbreviate(StringUtilsAgentTest.java:1105)
+
+Tests run: 43, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 43, failed: 2
+FAILURES!!!

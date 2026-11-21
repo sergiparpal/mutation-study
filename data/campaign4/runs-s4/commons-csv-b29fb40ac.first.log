@@ -1,0 +1,21 @@
+1) org.apache.commons.csv.LexerAgentTest#testGetBytesReadAndCharacterPositionIncreaseAfterReading()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.csv.LexerAgentTest.testGetBytesReadAndCharacterPositionIncreaseAfterReading(LexerAgentTest.java:57)
+
+2) org.apache.commons.csv.LexerAgentTest#testGetFirstEolAfterCrLf()
+org.opentest4j.AssertionFailedError: expected: <
+> but was: <null>
+    at org.apache.commons.csv.LexerAgentTest.testGetFirstEolAfterCrLf(LexerAgentTest.java:105)
+
+3) org.apache.commons.csv.LexerAgentTest#testNextTokenSimpleRecordNoTrailingNewline()
+org.opentest4j.AssertionFailedError: expected: <EORECORD> but was: <EOF>
+    at org.apache.commons.csv.LexerAgentTest.testNextTokenSimpleRecordNoTrailingNewline(LexerAgentTest.java:333)
+
+4) org.apache.commons.csv.LexerAgentTest#testGetFirstEolAfterLineFeed()
+org.opentest4j.AssertionFailedError: expected: <
+> but was: <null>
+    at org.apache.commons.csv.LexerAgentTest.testGetFirstEolAfterLineFeed(LexerAgentTest.java:96)
+
+Tests run: 37, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 37, failed: 4
+FAILURES!!!

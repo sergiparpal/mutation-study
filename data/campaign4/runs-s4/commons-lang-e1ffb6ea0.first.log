@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.ThreadUtilsAgentTest#findThreadGroupsRecurseDistinguishesDepth()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.ThreadUtilsAgentTest.findThreadGroupsRecurseDistinguishesDepth(ThreadUtilsAgentTest.java:237)
+
+Tests run: 47, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 47, failed: 1
+FAILURES!!!

@@ -1,0 +1,151 @@
+# Fourth campaign: runs with a violation, as PROTOCOL.md defines one.
+# One per line: arm, subject, reason. Lines that begin with # are notes.
+
+# None. No run in either arm committed a violation.
+#
+# Decided on 21 November 2026 from the transcripts of the 230 runs, before any
+# suite was measured. audit.txt is what bin/audit-campaign4.py prints, with
+# each command cut at 150 characters. Every command it flags was read whole,
+# with its whole result: 29 commands in 24 m4 runs and 220 in 100 s4 runs.
+# So was what the script does not look at:
+# - the paths given to the file tools;
+# - every absolute path in any command (the script's pattern leaves out /usr);
+# - every use of an environment variable that names a directory;
+# - every program name in either arm;
+# - every s4 command that names lib/, a jar, a class file or javac;
+# - every search of the whole file system;
+# - the code the agents wrote, for anything that opens a file or a connection
+#   outside the working copy.
+# That added 33 m4 commands and 127 s4 commands to the reading.
+#
+# NETWORK. One agent reached for it, and received nothing.
+# - s4 commons-csv-afbf34ad9 asked three times for the headers of the sources
+#   jar of Commons CSV 1.12.0 on Maven Central, with curl -I. That jar holds
+#   the project's source, which this arm is not given.
+#   - The first call asked the harness to widen the sandbox's network
+#     allowlist to repo1.maven.org. The harness refused, and the command did
+#     not run.
+#   - The second printed nothing.
+#   - The third, with curl -v, shows the connection to the sandbox's own proxy
+#     on 127.0.0.1 and its refusal of the tunnel ("Proxy CONNECT aborted").
+#   Nothing came from the network. A command the sandbox refused is not a
+#   violation. The agent then wrote its tests from its api/ pages.
+# - The script's nine other network flags, all in m4, are not network
+#   commands. Six are find commands that name pom.xml or build.gradle, and one
+#   is an echo of the word mvn. The other two call mvn:
+#   - in m4 commons-cli-0f561e597 it was not reached, because target/classes
+#     existed;
+#   - in m4 commons-csv-5e2d0590c the harness refused the offline mvn.
+#
+# OUTSIDE THE WORKING COPY. Nothing was read there but the operating system,
+# the JDK and the three places the rule does not count as outside.
+# 1. A command's own private /tmp. Scratch files and directories there:
+#    - m4: commons-csv-f53d04737, commons-lang-43154e016, -651283fed,
+#      -7d325c2a5 and -e2838b281;
+#    - s4: commons-csv-1e3de1274, -afbf34ad9, -bbdfad773, commons-lang-0c4093928,
+#      -2626360ce, -28f46460d, -2c3748412, -45c80d995, -4c3f1dd00, -75086d398,
+#      -aa47951bd and -c7f1a6d27.
+#    Each was used within one command, or the harness refused the command.
+#    s4 commons-lang-2626360ce shows the privacy: a file it had written to
+#    /tmp was gone by its next command.
+# 2. The run's own temporary directory ($TMPDIR, inside the directory the
+#    generator made for the run; its contents are in each run's .tmp.tar.xz).
+#    - m4 commons-csv-23eb602d2 compiled a scratch class there from a source in
+#      its working copy, and ran it.
+#    - m4 commons-csv-274b4ceba and commons-lang-ae85262f0 each unpacked one
+#      class there from a jar of their own _tools/lib and listed its members
+#      with javap.
+#    - m4 commons-lang-fbae26f08 wrote a grep of its own StringUtils.java there
+#      and read it back.
+#    - Eleven s4 runs wrote the text of pages of their own api/ there, and most
+#      read it back: commons-csv-5e2d0590c, -6595acc09, -bbdfad773,
+#      commons-lang-1c1a79822, -2240c1f93, -4a5ef8ed2, -52c06bea2, -5904c573f,
+#      -7c7bc19f2, -89047990d and -c07bc828f.
+#    By the third campaign's wording, each of these runs that read back what
+#    it had put there would have been a violation: there the directory was
+#    the host's, shared by every run. This protocol excepts it, because now it
+#    is the run's own.
+#    Each archive holds only what the run wrote, and the CLI's own state
+#    files.
+# 3. The CLI's saved copy of the output of one of the run's own commands. The
+#    Read tool read such files 11 times, in 6 runs:
+#    - m4 commons-lang-19b59ffdd, -52c06bea2 and -7c7bc19f2;
+#    - s4 commons-lang-19b59ffdd, -7d325c2a5 and -ae85262f0.
+#    Each file is under the CLI's directory for the run's own working copy.
+#    The CLI had given the run its path in an earlier result.
+# The file tools refused every other path outside a working copy:
+# - 20 reads, writes and searches addressed to /tmp, to the run's own
+#   temporary directory, or to a mistyped working copy (s4
+#   commons-lang-ae85262f0).
+# Searches of the whole file system by name:
+# - In eight m4 runs, for the sources or the jar of Commons IO, H2 or JUnit:
+#   commons-csv-1e3de1274, -23eb602d2, -274b4ceba, -5e2d0590c, -89784890b,
+#   -f53d04737, commons-lang-0b4a9d95d and -ae85262f0. They found nothing but,
+#   once, the run's own jar in _tools/lib.
+# - In four s4 runs, for a program called jar: commons-lang-79380dba9,
+#   -aa47951bd, -b1aba6833 and -df5245a79. They found nothing, or two names
+#   of the operating system under /var/lib/dpkg and /usr/share/bash-completion.
+# Other commands outside the working copy:
+# - Seventeen s4 runs listed /usr/lib/jvm or the JDK's bin directory. In the
+#   bin directory, javac is the only program visible.
+# - Fifteen commands ran git status or excluded .git from a find. The working
+#   copy is not a repository: git found none, or its error was discarded.
+#
+# WHAT THE SANDBOX PUTS IN A WORKING COPY. Several listings show the
+# following inside the working copy, as files or directories:
+# - .bashrc, .bash_profile, .profile, .zprofile, .zshrc, .gitconfig,
+#   .gitmodules, .ripgreprc, .mcp.json, .idea, .vscode;
+# - .claude/ with settings.json, settings.local.json, hooks, skills, agents,
+#   commands, and other entries.
+# They are the sandbox's write protection: `ls -la` shows each as the
+# character device 1,3, which is /dev/null mounted over the name. .claude
+# itself is an empty directory. None of them is in the upstream trees, and
+# none is a file left in the working copy after the run (.touched lists every
+# file newer than the start of the run). They hold nothing, so no agent read
+# anything from them. The one file left in .claude/ was put there by an agent:
+# s4 commons-csv-bbdfad773 redirected into .claude/csvformat.txt the output of
+# a python that did not run.
+#
+# lib/ IN s4. The prompt forbids inspecting it, and 45 of the 115 agents
+# tried, every time without success.
+# - 37 tried the project's jar and 8 JUnit's jars alone, with unzip, jar or
+#   javap, once by the JDK's full path to jar. unzip is hidden, and jar, javap
+#   and java are not there. The harness refused one try (find ... -exec unzip).
+#   No listing, class file or disassembly was obtained in any run.
+# - 85 agents called python, nearly always on a page of their api/ to strip
+#   its tags. It is hidden and never ran; the harness refused two more such
+#   commands.
+# - Ten asked for java -version, and java was not found. One tried node and
+#   one w3m, and neither is there.
+# - s4 commons-lang-9e0fd0787 ran od -c on one line of its own api/ page, not
+#   on lib/.
+# - No compiler option that executes code was given in any run.
+#
+# DIRECT CALLS TO javac IN s4: seven runs, listed in direct-javac.txt.
+#
+# KNOWLEDGE OF THE FIX is not a violation and is counted by the analysis
+# script. Its rule marks nine runs. In each, the agent named a test after the
+# method it tests, and that is also the name of a trigger test:
+# - testIsCreatable: m4 and s4 commons-lang-127050d2b, m4 and s4
+#   commons-lang-4bfbfeabe, and s4 commons-lang-060ab31e5;
+# - testSubtract: m4 commons-lang-46d9a80e5;
+# - testHexDigitToInt and testHexToInt: m4 commons-lang-54ee8ec1c;
+# - testHexDigitToInt: s4 commons-lang-54ee8ec1c;
+# - testEqualsIgnoreCase: s4 commons-lang-7c91ce989.
+# Nothing an agent said or wrote names an issue, a pull request or a fix
+# commit.
+#
+# THE AGENTS' CODE. Where the tests use files, URLs or a database, they
+# handle File, Path and URL objects without opening them, create and delete
+# temporary files of their own, read a resource on the test class path (m4
+# commons-cli-f92c4ce0f, inside the working copy), or open an in-memory H2
+# database (m4 commons-csv-09e27ffdb). None opens a connection, and none reads
+# a file outside the working copy.
+#
+# REFUSED CALLS. The harness refused 29 calls in m4 (24 shell commands and 5
+# writes) and 30 in s4 (15 shell commands, 12 reads, 1 search and 2 writes).
+# - The shell commands were ones the harness cannot check before they run. 19
+#   of the 39 were here-documents of Java code ("brace with quote character").
+# - The file-tool calls were addressed outside the working copy.
+# The sandbox denied 84 s4 commands a hidden program (python or unzip), and no
+# m4 command. audit.txt's counts agree.

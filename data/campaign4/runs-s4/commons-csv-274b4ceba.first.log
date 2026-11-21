@@ -1,0 +1,11 @@
+1) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadEmptyStreamReturnsEof()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testReadEmptyStreamReturnsEof(ExtendedBufferedReaderAgentTest.java:60)
+
+2) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadSingleCharUpdatesPositionAndLastChar()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <3>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testReadSingleCharUpdatesPositionAndLastChar(ExtendedBufferedReaderAgentTest.java:52)
+
+Tests run: 19, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 19, failed: 2
+FAILURES!!!

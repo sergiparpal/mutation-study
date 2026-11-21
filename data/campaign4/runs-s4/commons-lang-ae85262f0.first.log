@@ -1,0 +1,15 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testSplitPreserveAllTokensStringSeparatorMax()
+org.opentest4j.AssertionFailedError: array lengths differ, expected: <5> but was: <4>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSplitPreserveAllTokensStringSeparatorMax(StringUtilsAgentTest.java:1539)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateMarkerOffsetMaxWidth()
+org.opentest4j.AssertionFailedError: expected: <abcdefghijklmno> but was: <defg>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testAbbreviateMarkerOffsetMaxWidth(StringUtilsAgentTest.java:76)
+
+3) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfAnyCharSequences()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <-1>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfAnyCharSequences(StringUtilsAgentTest.java:633)
+
+Tests run: 215, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 215, failed: 3
+FAILURES!!!

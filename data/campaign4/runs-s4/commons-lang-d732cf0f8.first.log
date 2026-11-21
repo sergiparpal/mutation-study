@@ -1,0 +1,17 @@
+1) org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testParameterizeWithOwner()
+java.lang.IllegalArgumentException: class java.lang.String is invalid owner type for parameterized class org.apache.commons.lang3.reflect.TypeUtilsAgentTest$Box
+    at org.apache.commons.lang3.Validate.isTrue(Validate.java:589)
+    at org.apache.commons.lang3.reflect.TypeUtils.parameterizeWithOwner(TypeUtils.java:1643)
+    at org.apache.commons.lang3.reflect.TypeUtilsAgentTest.testParameterizeWithOwner(TypeUtilsAgentTest.java:317)
+
+2) org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testParameterizeVarargsAndMap()
+org.opentest4j.AssertionFailedError: expected: <null> but was: <org.apache.commons.lang3.reflect.TypeUtilsAgentTest>
+    at org.apache.commons.lang3.reflect.TypeUtilsAgentTest.testParameterizeVarargsAndMap(TypeUtilsAgentTest.java:294)
+
+3) org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testGetImplicitBounds()
+org.opentest4j.AssertionFailedError: expected: <java.lang.Number> but was: <java.lang.Comparable<T>>
+    at org.apache.commons.lang3.reflect.TypeUtilsAgentTest.testGetImplicitBounds(TypeUtilsAgentTest.java:134)
+
+Tests run: 26, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 26, failed: 3
+FAILURES!!!

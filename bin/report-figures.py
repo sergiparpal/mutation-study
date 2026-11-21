@@ -12,6 +12,8 @@ campaign: this script runs bin/analyze-campaign2.py and
 bin/describe-campaign2.py and prints what they print. §3.11 is the third: it
 runs bin/analyze-campaign3.py, bin/analyze-mutation-campaign3.py (mutation
 score and coverage, measured after the campaign) and bin/describe-campaign3.py.
+§3.12 is the fourth: it runs bin/analyze-campaign4.py, whose analysis includes
+mutation score and coverage, and bin/describe-campaign4.py.
 
 Conventions, all of them stated in the write-up:
 
@@ -274,6 +276,14 @@ def main():
     section("§3.11  Third campaign: descriptive figures")
     sys.stdout.flush()
     subprocess.run([sys.executable, "-B", "bin/describe-campaign3.py"], check=False)
+
+    # ---- §3.12 -----------------------------------------------------------
+    section("§3.12  Fourth campaign: the analysis fixed by its protocol")
+    sys.stdout.flush()
+    subprocess.run([sys.executable, "-B", "bin/analyze-campaign4.py"], check=False)
+    section("§3.12  Fourth campaign: descriptive figures")
+    sys.stdout.flush()
+    subprocess.run([sys.executable, "-B", "bin/describe-campaign4.py"], check=False)
 
 
 if __name__ == "__main__":

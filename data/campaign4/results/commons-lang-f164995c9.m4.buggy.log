@@ -1,0 +1,8 @@
+1) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testInvokeStaticMethod_instanceMethodNotFoundAsStatic()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.NoSuchMethodException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testInvokeStaticMethod_instanceMethodNotFoundAsStatic(MethodUtilsAgentTest.java:485)
+Caused by: java.lang.NullPointerException
+
+Tests run: 49, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 49, failed: 1
+FAILURES!!!

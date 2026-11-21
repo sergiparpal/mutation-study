@@ -1,0 +1,3 @@
+MethodUtilsTest.testInvokeExactStaticMethodRejectsInstanceMethod
+MethodUtilsTest.testInvokeStaticMethodIgnoresInstanceOverloads
+MethodUtilsTest.testInvokeStaticMethodRejectsInstanceMethod

@@ -1,0 +1,33 @@
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testCaseFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testContainsFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testTrimAsciiControl()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testPadFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testWrapAndUnwrap()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testReplaceFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <foo> but was: <f>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testChompChopDifference()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testReverseFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testCountMatches()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testSubstringFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <a> but was: <abc>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testIsBlankIsNotBlank()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testIsAnyAllNoneBlank()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testIsAnyAllNoneEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testStartsEndsWithFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testDefaultAndFirstNon()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testEqualsAndCompare()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testJoinFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testStripAccentsAndMisc()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testIsEmptyIsNotEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testStripVariants()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testSplitByCharacterTypeCamelCaseExact()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testCommonPrefixDigitsLength()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testToCodePointsAndOverlay()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testSplitFamily()	1	1	org.opentest4j.AssertionFailedError: array contents differ at index [1], expected: <b> but was: <b.c>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testCharClassPredicates()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfBoundaries()	1	1	org.opentest4j.AssertionFailedError: expected: <2> but was: <5>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testNormalizeAndDeleteWhitespace()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testRepeat()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testDistanceAlgorithms()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testCapitalizeAndSwapCaseEdgeCases()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testLeftRightMid()	1	1	org.opentest4j.AssertionFailedError: expected: <bc> but was: <abc>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testTrimAndTrimToNullEmpty()	1	0	

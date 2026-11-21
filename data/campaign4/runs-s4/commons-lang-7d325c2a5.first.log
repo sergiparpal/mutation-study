@@ -1,0 +1,26 @@
+1) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomStartEndCharsOutOfBoundsThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.ArrayIndexOutOfBoundsException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomStartEndCharsOutOfBoundsThrows(RandomStringUtilsAgentTest.java:620)
+Caused by: java.lang.IllegalArgumentException: end > chars.length
+
+2) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomWithEmptyStringThrows()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomWithEmptyStringThrows(RandomStringUtilsAgentTest.java:658)
+
+3) org.apache.commons.lang3.RandomStringUtilsAgentTest#testNextStartEndCharsOutOfBoundsThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.ArrayIndexOutOfBoundsException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testNextStartEndCharsOutOfBoundsThrows(RandomStringUtilsAgentTest.java:235)
+Caused by: java.lang.IllegalArgumentException: end > chars.length
+
+4) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomCoreOutOfBoundsThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.ArrayIndexOutOfBoundsException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomCoreOutOfBoundsThrows(RandomStringUtilsAgentTest.java:718)
+Caused by: java.lang.IllegalArgumentException: end > chars.length
+
+5) org.apache.commons.lang3.RandomStringUtilsAgentTest#testNextWithEmptyStringThrows()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testNextWithEmptyStringThrows(RandomStringUtilsAgentTest.java:278)
+
+Tests run: 99, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 99, failed: 5
+FAILURES!!!

@@ -1,0 +1,16 @@
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testShutdownDoesNotStopExternallySuppliedExecutorService()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testShutdownStopsOwnExecutorService()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testSetLimitAndGetLimit()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testNegativeLimitActsAsNoLimit()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testDeprecatedConstructorRejectsNonPositivePeriod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testTryAcquireWithinAndAtLimit()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testTryAcquireAfterShutdownThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testTryAcquireWithNoLimit()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testIsShutdownAndShutdownIsIdempotent()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testAcquireBlocksAndIsReleasedWhenPeriodEnds()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testEndOfPeriodResetsCounterAndUpdatesStatistics()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testNoLimitConstant()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testGetPeriodAndUnitFromBuilder()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testAcquireAfterShutdownThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testGetExecutorServiceReturnsSuppliedService()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testBuilderRejectsNonPositivePeriod()	1	0	

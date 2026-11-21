@@ -1,0 +1,2 @@
+org.apache.commons.lang3.ClassUtilsAgentTest#getSimpleNameObject()
+org.apache.commons.lang3.ClassUtilsAgentTest#getClassRejectsTooManyArrayDimensions()

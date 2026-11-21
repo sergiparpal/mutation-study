@@ -1,0 +1,2 @@
+./.csvprinter_text.txt
+./tests/org/apache/commons/csv/CSVPrinterAgentTest.java

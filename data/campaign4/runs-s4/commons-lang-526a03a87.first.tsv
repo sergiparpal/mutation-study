@@ -1,0 +1,74 @@
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateTriesEachPatternInTurn()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentInSeconds()	1	1	org.opentest4j.AssertionFailedError: expected: <26110> but was: <83710>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testCeilingArithmeticOverflow()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testAddMinutes()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateLenientAllowsOverflow()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testToLocalDateTimeNullTimeZoneMapsToDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testRoundArithmeticOverflow()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateWithLocaleNullArguments()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testCeilingCalendar()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testSetMilliseconds()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testIsSameInstantCalendar()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testToLocalDateTimeSingleArgUsesDefaultZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testAddDays()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testIteratorRangeMonthSunday()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateStrictlyMustConsumeWholeString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testToCalendarWithTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testRoundObject()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testIteratorInvalidRangeStyle()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testTruncateArithmeticOverflow()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentInHours()	1	1	org.opentest4j.AssertionFailedError: expected: <7> but was: <23>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testAddSeconds()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testAddYearsLeapRollover()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testSetMinutes()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testToCalendar()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testIteratorRangeWeekSunday()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testToOffsetDateTimeSingleArgUsesDefaultZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateStrictlyNullLocaleFallsBackToDefault()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentInDaysDate()	1	1	org.opentest4j.AssertionFailedError: expected: <28> but was: <27>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testAddHours()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testRoundDownBoundary()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testAddWeeks()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testCeilingDate()	1	1	org.opentest4j.AssertionFailedError: expected: <Sun Mar 31 16:00:00 PST 2002> but was: <Mon Apr 01 00:00:00 PST 2002>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testRoundCalendar()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testTruncateObject()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateStrictlyHappyPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testMillisConstants()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateStrictlyRejectsOverflow()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testTruncatedCompareToCalendar()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testSetSeconds()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentInMilliseconds()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testIsSameInstantDate()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateNoPatternsAtAll()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testCeilingObject()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testToZonedDateTimeSingleArgUsesDefaultZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testToLocalDateTimeWithTimeZone()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testRoundDate()	1	1	org.opentest4j.AssertionFailedError: expected: <Sun Mar 31 16:00:00 PST 2002> but was: <Mon Apr 01 00:00:00 PST 2002>
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testAddMonthsRollover()	1	1	org.opentest4j.AssertionFailedError: expected: <Sun Mar 01 16:00:00 PST 2020> but was: <Sat Feb 29 16:00:00 PST 2020>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateHappyPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testTruncatedCompareToDate()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testTruncatedEqualsCalendar()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testIteratorNullArguments()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testToOffsetDateTimeWithTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateStrictlyNullArguments()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testTruncateCalendar()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testSetMonths()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testToZonedDateTimeWithTimeZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testTruncatedEqualsDate()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateWithLocale()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentInMinutes()	1	1	org.opentest4j.AssertionFailedError: expected: <15> but was: <44595>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateNoMatchingPattern()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testIsSameDayCalendar()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testSetDays()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateMustConsumeWholeString()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testTruncateDate()	1	1	org.opentest4j.AssertionFailedError: expected: <Thu Feb 28 16:00:00 PST 2002> but was: <Fri Mar 01 00:00:00 PST 2002>
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testIsSameDayDate()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateNullLocaleFallsBackToDefault()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testIteratorObjectOverload()	1	1	org.opentest4j.AssertionFailedError: expected: <Sun Jun 30 00:00:00 PDT 2002> but was: <Sat Jun 29 17:00:00 PDT 2002>
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testIteratorDateOverload()	1	1	org.opentest4j.AssertionFailedError: expected: <Sat Jun 29 17:00:00 PDT 2002> but was: <Sun Jun 30 00:00:00 PDT 2002>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testAddMilliseconds()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentInDaysCalendar()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testIsSameLocalTime()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testSetHours()	1	1	org.opentest4j.AssertionFailedError: expected: <Tue Jan 14 16:30:00 PST 2020> but was: <Wed Jan 15 00:30:00 PST 2020>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testSetYears()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DateUtilsAgentTest#testParseDateNullArguments()	1	0	

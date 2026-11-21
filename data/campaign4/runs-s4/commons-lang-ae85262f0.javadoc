@@ -1,0 +1,12 @@
+/home/sergi/.cache/gen-stage/w-64KZ9JJI/src/main/java/org/apache/commons/lang3/StringUtils.java:531: warning - Tag @link: reference not found: org.apache.commons.text.WordUtils#capitalize(String)
+/home/sergi/.cache/gen-stage/w-64KZ9JJI/src/main/java/org/apache/commons/lang3/StringUtils.java:544: warning - Tag @see: reference not found: org.apache.commons.text.WordUtils#capitalize(String)
+/home/sergi/.cache/gen-stage/w-64KZ9JJI/src/main/java/org/apache/commons/lang3/StringUtils.java:8696: warning - Tag @link: reference not found: org.apache.commons.text.WordUtils#swapCase(String)
+/home/sergi/.cache/gen-stage/w-64KZ9JJI/src/main/java/org/apache/commons/lang3/StringUtils.java:9042: warning - Tag @link: reference not found: org.apache.commons.text.WordUtils#uncapitalize(String)
+/home/sergi/.cache/gen-stage/w-64KZ9JJI/src/main/java/org/apache/commons/lang3/StringUtils.java:9055: warning - Tag @see: reference not found: org.apache.commons.text.WordUtils#uncapitalize(String)
+/home/sergi/.cache/gen-stage/w-64KZ9JJI/src/main/java/org/apache/commons/lang3/package-info.java:19: warning - Tag @link: reference not found: java.lang
+/home/sergi/.cache/gen-stage/w-64KZ9JJI/src/main/java/org/apache/commons/lang3/package-info.java:23: warning - Tag @link: reference not found: org.apache.commons.lang3.math
+/home/sergi/.cache/gen-stage/w-64KZ9JJI/src/main/java/org/apache/commons/lang3/package-info.java:23: warning - Tag @link: reference not found: org.apache.commons.lang3.concurrent
+/home/sergi/.cache/gen-stage/w-64KZ9JJI/src/main/java/org/apache/commons/lang3/package-info.java:23: warning - Tag @link: reference not found: org.apache.commons.lang3.builder
+/home/sergi/.cache/gen-stage/w-64KZ9JJI/src/main/java/org/apache/commons/lang3/package-info.java:19: warning - Tag @link: reference not found: java.lang
+/home/sergi/.cache/gen-stage/w-64KZ9JJI/src/main/java/org/apache/commons/lang3/package-info.java:19: warning - Tag @link: reference not found: java.lang
+11 warnings

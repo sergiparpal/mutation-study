@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.ValidateAgentTest#testNoNullElementsIterable_containsNull_throwsIaeWithIndex()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.ValidateAgentTest.testNoNullElementsIterable_containsNull_throwsIaeWithIndex(ValidateAgentTest.java:491)
+
+2) org.apache.commons.lang3.ValidateAgentTest#testNoNullElementsIterableWithMessage_containsNull_appendsIndexToMessage()
+org.opentest4j.AssertionFailedError: expected: <Null element at position 1> but was: <Null element at position 0>
+    at org.apache.commons.lang3.ValidateAgentTest.testNoNullElementsIterableWithMessage_containsNull_appendsIndexToMessage(ValidateAgentTest.java:504)
+
+Tests run: 96, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 96, failed: 2
+FAILURES!!!

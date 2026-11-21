@@ -1,0 +1,15 @@
+1) org.apache.commons.lang3.exception.ExceptionUtilsAgentTest#testGetRootCause_withoutCauseReturnsNull()
+org.opentest4j.AssertionFailedError: expected: <null> but was: <java.lang.RuntimeException: grc-alone>
+    at org.apache.commons.lang3.exception.ExceptionUtilsAgentTest.testGetRootCause_withoutCauseReturnsNull(ExceptionUtilsAgentTest.java:231)
+
+2) org.apache.commons.lang3.exception.ExceptionUtilsAgentTest#testGetMessage_nullMessageStillIncludesClassName()
+org.opentest4j.AssertionFailedError: expected: <RuntimeException: null> but was: <RuntimeException: >
+    at org.apache.commons.lang3.exception.ExceptionUtilsAgentTest.testGetMessage_nullMessageStillIncludesClassName(ExceptionUtilsAgentTest.java:210)
+
+3) org.apache.commons.lang3.exception.ExceptionUtilsAgentTest#testGetDefaultCauseMethodNames_contentAndOrder()
+org.opentest4j.AssertionFailedError: array lengths differ, expected: <8> but was: <12>
+    at org.apache.commons.lang3.exception.ExceptionUtilsAgentTest.testGetDefaultCauseMethodNames_contentAndOrder(ExceptionUtilsAgentTest.java:182)
+
+Tests run: 72, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 72, failed: 3
+FAILURES!!!

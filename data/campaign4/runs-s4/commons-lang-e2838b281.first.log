@@ -1,0 +1,20 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateWithMarker()
+org.opentest4j.AssertionFailedError: expected: <abcdefg> but was: <abcd>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testAbbreviateWithMarker(StringUtilsAgentTest.java:1615)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfAnyCharSequences()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <-1>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfAnyCharSequences(StringUtilsAgentTest.java:408)
+
+3) org.apache.commons.lang3.StringUtilsAgentTest#testReplaceAllAndFirstAndPatternRegex()
+org.opentest4j.AssertionFailedError: expected: <ABC_123> but was: <ABC___123>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testReplaceAllAndFirstAndPatternRegex(StringUtilsAgentTest.java:1000)
+
+4) org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateWithMarkerAndOffset()
+java.lang.IllegalArgumentException: Minimum abbreviation width is 1
+    at org.apache.commons.lang3.StringUtils.abbreviate(StringUtils.java:366)
+    at org.apache.commons.lang3.StringUtilsAgentTest.testAbbreviateWithMarkerAndOffset(StringUtilsAgentTest.java:1628)
+
+Tests run: 164, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 164, failed: 4
+FAILURES!!!

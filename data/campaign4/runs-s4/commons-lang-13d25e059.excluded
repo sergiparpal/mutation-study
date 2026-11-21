@@ -1,0 +1,5 @@
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISODocumentedExample()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISOZero()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testContainsTokenWithValue()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenEqualsAndHashCodeDependOnValueOnly()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTablePattern6()

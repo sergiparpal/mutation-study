@@ -1,0 +1,17 @@
+1) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorNullLocaleThrowsNullPointerException()
+org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testConstructorNullLocaleThrowsNullPointerException(FastDatePrinterAgentTest.java:72)
+
+2) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testSelectNumberRuleReturnsNonNullRule()
+java.lang.IllegalArgumentException
+    at org.apache.commons.lang3.time.FastDatePrinter$PaddedNumberField.<init>(FastDatePrinter.java:375)
+    at org.apache.commons.lang3.time.FastDatePrinter.selectNumberRule(FastDatePrinter.java:1674)
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testSelectNumberRuleReturnsNonNullRule(FastDatePrinterAgentTest.java:411)
+
+3) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorWithInvalidPatternEventuallyThrowsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testConstructorWithInvalidPatternEventuallyThrowsIllegalArgumentException(FastDatePrinterAgentTest.java:84)
+
+Tests run: 39, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 39, failed: 3
+FAILURES!!!

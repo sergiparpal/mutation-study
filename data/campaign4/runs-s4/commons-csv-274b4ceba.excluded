@@ -1,0 +1,2 @@
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadEmptyStreamReturnsEof()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadSingleCharUpdatesPositionAndLastChar()

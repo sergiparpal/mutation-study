@@ -1,0 +1,17 @@
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadCharArrayNegativeLengthThrowsIndexOutOfBounds()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testGetBytesReadWithTrackingEnabledAndCharsetCountsAsciiBytes()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testGetBytesReadDefaultConstructorStaysZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testMarkAndResetRestoresStreamPosition()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadCharArrayZeroLengthReturnsZeroAndReadsNothing()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineOnEmptyStreamReturnsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testInitialStateBeforeAnyRead()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testResetWithoutPriorMarkThrowsIOException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadCharArrayFillsBufferAndTracksPosition()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineWithCrLfTerminatorEndsOnLastEolChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineDropsTerminatorAndTracksLineNumberAndPosition()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testGetBytesReadTrackingEnabledButNullCharsetStaysZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadCharArrayLengthBeyondBufferThrowsIndexOutOfBounds()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testGetBytesReadTrackingDisabledWithCharsetStaysZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadCharArrayNegativeOffsetThrowsIndexOutOfBounds()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadCharArrayWithOffsetReadsAvailableCharsThenEof()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testCloseThenReadThrowsIOException()	1	0	

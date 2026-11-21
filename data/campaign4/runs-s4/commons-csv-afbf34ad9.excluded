@@ -1,0 +1,4 @@
+org.apache.commons.csv.LexerAgentTest#testNextTokenLastRecordWithoutTrailingNewlineStillEndsRecord()
+org.apache.commons.csv.LexerAgentTest#testIsDelimiterTrueForMultiCharDelimiterAndDoesNotConsumeOnPeek()
+org.apache.commons.csv.LexerAgentTest#testIsEscapeDelimiterTrueForDocumentedExample()
+org.apache.commons.csv.LexerAgentTest#testGetBytesReadIncreasesAfterReadingTokens()

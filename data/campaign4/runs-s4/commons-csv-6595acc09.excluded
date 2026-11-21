@@ -1,0 +1,2 @@
+org.apache.commons.csv.CSVFormatAgentTest#testWithRecordSeparatorStringRejectsInvalid()
+org.apache.commons.csv.CSVFormatAgentTest#testInformixUnloadFormat()

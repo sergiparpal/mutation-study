@@ -1,0 +1,4 @@
+./.cu_text.txt
+./tests/org/apache/commons/lang3/reflect/ConstructorUtilsAgentTest.java
+./tests/org/apache/commons/lang3/reflect/MemberUtilsAgentTest.java
+./tests/org/apache/commons/lang3/reflect/MethodUtilsAgentTest.java

@@ -1,0 +1,2 @@
+org.apache.commons.lang3.builder.HashCodeBuilderAgentTest#testAppendBooleanTrueAddsOne()
+org.apache.commons.lang3.builder.HashCodeBuilderAgentTest#testAppendBooleanFalseAddsZero()

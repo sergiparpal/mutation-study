@@ -1,0 +1,19 @@
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testHelpOptionsEmptyInitially()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testNewInstanceStartsEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testAddRequiredOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testAddOptionInstance()	1	0	
+FAILED	method	org.apache.commons.cli.OptionsAgentTest#testGetMatchingOptions()	1	1	org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testGetOptionsIsReadOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testToString()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testAddOptionGroup()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testAddOptionGroupClearsRequiredFlag()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testGetOptionHyphenHandling()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testAddOptionsDuplicateThrowsException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testAddOptions()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testAddOptionShortOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testGetRequiredOptionsIsReadOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testGetOptionUnknown()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testAddOptionShortAndLong()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testGetMatchingOptionsNullAndEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testGetOptionGroupNullWhenNotInGroup()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.OptionsAgentTest#testAddOptionShortOnlyWithHasArg()	1	0	

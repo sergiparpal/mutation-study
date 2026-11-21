@@ -1,0 +1,14 @@
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testEscapeWithPlus()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testBasicEscape()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testIncompleteHexDigitsThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testEscapeWithMultipleUAndPlus()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testLowercaseHexDigits()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testNoBackslashReturnsZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testUppercaseHexDigits()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testEscapeEmbeddedInLargerString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testLoneBackslashAtEndOfStringReturnsZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testWriterIOExceptionPropagates()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testInvalidHexDigitsThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testEscapeWithMultipleU()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testBackslashNotFollowedByUReturnsZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testConstructor()	1	0	

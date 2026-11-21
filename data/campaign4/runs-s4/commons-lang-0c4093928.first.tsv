@@ -1,0 +1,95 @@
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredFieldWithForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetDeclaredFieldPrivateWithForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldByNameNullTarget()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByFieldNullField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteStaticFieldByFieldWithForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetAllFieldsList()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredFieldNotPublic()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.IllegalArgumentException>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldsWithAnnotationNullAnnotation()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByFieldAccessible()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldNotAccessible()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByFieldNotAssignable()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldsListWithAnnotation()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredStaticFieldNotFound()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteStaticFieldByClassAndName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredStaticFieldNullClass()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByFieldWithForceAccess()	1	1	org.opentest4j.AssertionFailedError: expected: <55> but was: <222>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testRemoveFinalModifierDeprecatedOverloadNullField()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldAmbiguousShadowedField()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByClassAndName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testRemoveFinalModifier()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteStaticFieldByFieldNotStatic()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredFieldWithForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByFieldWithForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetDeclaredFieldPublic()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldWithForceAccessMakesAccessible()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldAccessiblePublic()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByNameWithForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredStaticFieldNotStatic()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testRemoveFinalModifierNullField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredFieldNullTarget()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testSetAccessibleForceTrueOnPrivateField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetAllFieldsListNullClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetDeclaredFieldPrivateWithoutForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldStaticAllowsNullTarget()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredFieldNotAssignable()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldByNameWithForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldByNameNotFound()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByClassAndNameNotFound()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetAllFieldsNullClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByFieldNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByNameNotFound()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteStaticFieldByFieldFinal()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredStaticFieldNullClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByFieldNotAccessible()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByClassAndNameNullClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldConsidersSuperclasses()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredStaticFieldNotPublic()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.NullPointerException>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldsWithAnnotation()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetAllFields()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredStaticFieldNotStatic()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByFieldNotStatic()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByNameNullTarget()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByClassAndNameNotStatic()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldNullField()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredFieldNotPublic()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.IllegalArgumentException>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetDeclaredFieldNullClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByClassAndNameConsidersSuperclasses()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetDeclaredFieldNullName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteStaticFieldByField()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByClassAndNameWithForceAccess()	1	1	org.opentest4j.AssertionFailedError: expected: <55> but was: <222>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredStaticFieldWithForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldNullClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredFieldBlankName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredStaticField()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredStaticFieldNotPublicWithoutForceAccess()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.NullPointerException>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testRemoveFinalModifierDeprecatedOverload()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteStaticFieldByClassAndNameNullClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByNameConsidersSuperclasses()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteStaticFieldByClassAndNameWithForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByFieldStaticAllowsNullTarget()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetDeclaredFieldBlankName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredStaticField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteStaticFieldByClassAndNameNotFoundWithForceAccess()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldByNameNotAccessible()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.IllegalArgumentException>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteStaticFieldByClassAndNameNotStatic()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByFieldFinal()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadFieldByNameConsidersSuperclasses()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldBlankName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldProtectedWithoutForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteStaticFieldByFieldNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetDeclaredFieldDoesNotConsiderParents()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldsWithAnnotationNoneFound()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteDeclaredStaticFieldWithForceAccess()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testSetAccessibleForceFalseOnPublicField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetAllFieldsEmptyForObjectLikeClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredFieldNullTarget()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldProtectedWithForceAccess()	1	0	
+FAILED	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testWriteFieldByNameNotAccessible()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalAccessException> but was: <java.lang.IllegalArgumentException>
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadStaticFieldByField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldsWithAnnotationNullClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testConstructor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testGetFieldsListWithAnnotationNullClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.FieldUtilsAgentTest#testReadDeclaredFieldNotDeclaredInTargetClass()	1	0	

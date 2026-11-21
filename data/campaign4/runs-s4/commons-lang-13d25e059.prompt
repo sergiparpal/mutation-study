@@ -1,0 +1,32 @@
+Write JUnit test classes for the following classes:
+
+  - org.apache.commons.lang3.time.DurationFormatUtils
+
+You do NOT have the implementation source. You have:
+  api/          generated javadoc for the classes above: this is your spec
+  lib/          the compiled project and JUnit (junit-jupiter-api-5.14.3.jar)
+  compile.sh    compiles everything under tests/ against lib/
+
+Requirements:
+- One test class per class above, named <ClassName>AgentTest, in the same
+  package, under tests/ following the package directory structure.
+- The test class must be SELF-CONTAINED: do not extend or import any other
+  test class or test helper. Any fixture you need, define inside your file.
+- Match the JUnit version present in lib/.
+- This project compiles with --release 8. Use only syntax valid at that
+  level: no underscores in numeric literals, no diamond operator, no lambdas,
+  no try-with-resources unless the level allows them.
+- Assert on returned values and on observable state, not merely that no
+  exception is thrown.
+- Cover boundary and error cases, not just the happy path.
+- Base every expectation on the documented contract in api/. Where the javadoc
+  is silent, prefer asserting what the contract implies over guessing at an
+  implementation detail.
+- Do not modify or create any file other than the test classes named above.
+
+Restrictions:
+- Do NOT run the tests. Compile them with ./compile.sh, nothing else.
+- Do NOT decompile, disassemble, unpack or otherwise inspect lib/. Read api/
+  for the API.
+
+Finish when ./compile.sh reports success.

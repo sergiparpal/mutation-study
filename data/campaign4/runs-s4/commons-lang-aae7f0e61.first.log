@@ -1,0 +1,15 @@
+1) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsListWithAnnotationFourArgSupersIgnoreAccess()
+org.opentest4j.AssertionFailedError: expected: <4> but was: <5>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetMethodsListWithAnnotationFourArgSupersIgnoreAccess(MethodUtilsAgentTest.java:298)
+
+2) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsWithAnnotationFourArgSupersIgnoreAccess()
+org.opentest4j.AssertionFailedError: expected: <4> but was: <5>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetMethodsWithAnnotationFourArgSupersIgnoreAccess(MethodUtilsAgentTest.java:370)
+
+3) org.apache.commons.lang3.reflect.MethodUtilsAgentTest#testGetMethodsListWithAnnotationFourArgSupersNoIgnoreAccess()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <4>
+    at org.apache.commons.lang3.reflect.MethodUtilsAgentTest.testGetMethodsListWithAnnotationFourArgSupersNoIgnoreAccess(MethodUtilsAgentTest.java:309)
+
+Tests run: 52, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 52, failed: 3
+FAILURES!!!

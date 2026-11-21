@@ -1,0 +1,37 @@
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testCloseSetsClosedFlag()	1	0	
+FAILED	method	org.apache.commons.csv.LexerAgentTest#testGetBytesReadAndCharacterPositionIncreaseAfterReading()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testReadEndOfLineTrueForLf()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsStartOfLineTrueForCr()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsStartOfLineTrueForLf()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testReadEndOfLineGreedilyConsumesPairedLineFeed()	1	0	
+FAILED	method	org.apache.commons.csv.LexerAgentTest#testGetFirstEolAfterCrLf()	1	1	org.opentest4j.AssertionFailedError: expected: <  > but was: <null>
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsCommentStartFalseWhenNotConfigured()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsDelimiterTrueForDefaultComma()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsDelimiterFalseForOrdinaryChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsEscapeFalseWhenNotConfigured()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsClosedInitiallyFalse()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsDelimiterTrueForConfiguredSemicolon()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testReadEndOfLineFalseForOrdinaryChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testGetCurrentLineNumberIncrementsAfterRecord()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testTrimTrailingSpacesNoTrailingSpacesUnchanged()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testTrimTrailingSpacesAllSpacesBecomesEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsEscapeDelimiterFalseWhenEscapeNotTheCurrentChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testGetFirstEolInitiallyNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testNextTokenEmptyInputReturnsEof()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testNextTokenMultipleRecords()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testGetCurrentLineNumberInitiallyZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsQuoteCharTrueForConfiguredQuote()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsEndOfFileTrueForEofMarker()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testNextTokenRecordWithTrailingNewline()	1	0	
+FAILED	method	org.apache.commons.csv.LexerAgentTest#testNextTokenSimpleRecordNoTrailingNewline()	1	1	org.opentest4j.AssertionFailedError: expected: <EORECORD> but was: <EOF>
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsEndOfFileFalseForOrdinaryChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testNextTokenCommentLineIsReportedAsComment()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testNextTokenQuotedFieldPreservesEmbeddedDelimiter()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsCommentStartTrueWhenConfigured()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testGetBytesReadAndCharacterPositionInitiallyZero()	1	0	
+FAILED	method	org.apache.commons.csv.LexerAgentTest#testGetFirstEolAfterLineFeed()	1	1	org.opentest4j.AssertionFailedError: expected: < > but was: <null>
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testReadEscapeThrowsIoExceptionAtEndOfStream()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testTrimTrailingSpacesRemovesTrailingWhitespace()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsQuoteCharFalseForOrdinaryChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsStartOfLineFalseForOrdinaryChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.LexerAgentTest#testIsEscapeTrueWhenConfigured()	1	0	

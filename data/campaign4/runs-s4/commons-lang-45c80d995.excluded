@@ -1,0 +1,2 @@
+org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testBreakerClosesAfterGoingBelowClosingThresholdInInterval()
+org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testBreakerOpensAfterExceedingOpeningThresholdInInterval()

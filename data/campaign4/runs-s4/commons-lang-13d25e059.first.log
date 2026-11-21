@@ -1,0 +1,23 @@
+1) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISODocumentedExample()
+org.opentest4j.AssertionFailedError: expected: <P7D6TH5M4.321S> but was: <P0Y0M7DT6H5M4.321S>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatDurationISODocumentedExample(DurationFormatUtilsAgentTest.java:90)
+
+2) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISOZero()
+org.opentest4j.AssertionFailedError: expected: <P0D0TH0M0.000S> but was: <P0Y0M0DT0H0M0.000S>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatDurationISOZero(DurationFormatUtilsAgentTest.java:96)
+
+3) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testContainsTokenWithValue()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testContainsTokenWithValue(DurationFormatUtilsAgentTest.java:468)
+
+4) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenEqualsAndHashCodeDependOnValueOnly()
+org.opentest4j.AssertionFailedError: expected: <H> but was: <HHH>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testTokenEqualsAndHashCodeDependOnValueOnly(DurationFormatUtilsAgentTest.java:442)
+
+5) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationExampleTablePattern6()
+org.opentest4j.AssertionFailedError: expected: <(00)> but was: <(01)>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatDurationExampleTablePattern6(DurationFormatUtilsAgentTest.java:200)
+
+Tests run: 46, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 46, failed: 5
+FAILURES!!!

@@ -1,0 +1,4 @@
+org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomRangeCharsArrayOutOfBoundsThrows()
+org.apache.commons.lang3.RandomStringUtilsAgentTest#testNextRangeCharsArrayOutOfBoundsThrows()
+org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomMasterCharsArrayOutOfBoundsThrows()
+org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomMasterZeroStartEndUsesPrintableAsciiWhenLettersAndNumbersFalse()

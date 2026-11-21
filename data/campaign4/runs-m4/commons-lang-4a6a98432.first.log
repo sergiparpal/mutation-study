@@ -1,0 +1,82 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testRemoveFirstAndAll()
+org.opentest4j.AssertionFailedError: expected: <-> but was: <AB>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testRemoveFirstAndAll(StringUtilsAgentTest.java:646)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testGetFuzzyDistance()
+org.opentest4j.AssertionFailedError: expected: <3> but was: <0>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testGetFuzzyDistance(StringUtilsAgentTest.java:987)
+
+3) org.apache.commons.lang3.StringUtilsAgentTest#testSubstringBetween()
+org.opentest4j.AssertionFailedError: expected: <> but was: <null>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSubstringBetween(StringUtilsAgentTest.java:382)
+
+4) org.apache.commons.lang3.StringUtilsAgentTest#testGetBytes()
+org.opentest4j.AssertionFailedError: expected: <null> but was: <[]>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testGetBytes(StringUtilsAgentTest.java:950)
+
+5) org.apache.commons.lang3.StringUtilsAgentTest#testReplaceEachRepeatedly()
+org.opentest4j.AssertionFailedError: expected: <tcte> but was: <wtcte>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testReplaceEachRepeatedly(StringUtilsAgentTest.java:692)
+
+6) org.apache.commons.lang3.StringUtilsAgentTest#testStrip()
+org.opentest4j.AssertionFailedError: expected: <abcyx> but was: <abc>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testStrip(StringUtilsAgentTest.java:125)
+
+7) org.apache.commons.lang3.StringUtilsAgentTest#testLastIndexOf()
+org.opentest4j.AssertionFailedError: expected: <7> but was: <5>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testLastIndexOf(StringUtilsAgentTest.java:220)
+
+8) org.apache.commons.lang3.StringUtilsAgentTest#testSubstringBeforeAfter()
+org.opentest4j.AssertionFailedError: expected: <abc> but was: <>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSubstringBeforeAfter(StringUtilsAgentTest.java:364)
+
+9) org.apache.commons.lang3.StringUtilsAgentTest#testJoinWith()
+java.lang.IllegalArgumentException: Object varargs must not be null
+    at org.apache.commons.lang3.StringUtils.joinWith(StringUtils.java:4751)
+    at org.apache.commons.lang3.StringUtilsAgentTest.testJoinWith(StringUtilsAgentTest.java:431)
+
+10) org.apache.commons.lang3.StringUtilsAgentTest#testSubstringBeforeAfterLast()
+org.opentest4j.AssertionFailedError: expected: <> but was: <abc>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSubstringBeforeAfterLast(StringUtilsAgentTest.java:371)
+
+11) org.apache.commons.lang3.StringUtilsAgentTest#testSubstringsBetween()
+org.opentest4j.AssertionFailedError: actual array was <null>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSubstringsBetween(StringUtilsAgentTest.java:392)
+
+12) org.apache.commons.lang3.StringUtilsAgentTest#testGetJaroWinklerDistance()
+org.opentest4j.AssertionFailedError: expected: <1.0> but was: <0.0>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testGetJaroWinklerDistance(StringUtilsAgentTest.java:1006)
+
+13) org.apache.commons.lang3.StringUtilsAgentTest#testGetLevenshteinDistance()
+org.opentest4j.AssertionFailedError: expected: <7> but was: <8>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testGetLevenshteinDistance(StringUtilsAgentTest.java:965)
+
+14) org.apache.commons.lang3.StringUtilsAgentTest#testCompare()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testCompare(StringUtilsAgentTest.java:185)
+
+15) org.apache.commons.lang3.StringUtilsAgentTest#testDifference()
+org.opentest4j.AssertionFailedError: expected: <> but was: <null>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testDifference(StringUtilsAgentTest.java:911)
+
+16) org.apache.commons.lang3.StringUtilsAgentTest#testToEncodedStringAndToString()
+java.lang.NullPointerException
+    at java.base/java.lang.String.<init>(String.java:561)
+    at org.apache.commons.lang3.StringUtils.toString(StringUtils.java:8725)
+    at org.apache.commons.lang3.StringUtilsAgentTest.testToEncodedStringAndToString(StringUtilsAgentTest.java:1020)
+
+17) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOf()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOf(StringUtilsAgentTest.java:205)
+
+18) org.apache.commons.lang3.StringUtilsAgentTest#testRemove()
+org.opentest4j.AssertionFailedError: expected: <qeu> but was: <qeed>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testRemove(StringUtilsAgentTest.java:627)
+
+19) org.apache.commons.lang3.StringUtilsAgentTest#testRepeat()
+org.opentest4j.AssertionFailedError: expected: <> but was: <null>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testRepeat(StringUtilsAgentTest.java:796)
+
+Tests run: 94, Failures: 19, Aborted: 0, Skipped: 0
+Test methods: 94, failed: 19
+FAILURES!!!

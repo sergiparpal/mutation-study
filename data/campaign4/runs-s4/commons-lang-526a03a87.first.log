@@ -1,0 +1,51 @@
+1) org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentInSeconds()
+org.opentest4j.AssertionFailedError: expected: <26110> but was: <83710>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testGetFragmentInSeconds(DateUtilsAgentTest.java:416)
+
+2) org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentInHours()
+org.opentest4j.AssertionFailedError: expected: <7> but was: <23>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testGetFragmentInHours(DateUtilsAgentTest.java:378)
+
+3) org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentInDaysDate()
+org.opentest4j.AssertionFailedError: expected: <28> but was: <27>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testGetFragmentInDaysDate(DateUtilsAgentTest.java:347)
+
+4) org.apache.commons.lang3.time.DateUtilsAgentTest#testCeilingDate()
+org.opentest4j.AssertionFailedError: expected: <Sun Mar 31 16:00:00 PST 2002> but was: <Mon Apr 01 00:00:00 PST 2002>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testCeilingDate(DateUtilsAgentTest.java:179)
+
+5) org.apache.commons.lang3.time.DateUtilsAgentTest#testRoundDate()
+org.opentest4j.AssertionFailedError: expected: <Sun Mar 31 16:00:00 PST 2002> but was: <Mon Apr 01 00:00:00 PST 2002>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testRoundDate(DateUtilsAgentTest.java:232)
+
+6) org.apache.commons.lang3.time.DateUtilsAgentTest#testAddMonthsRollover()
+org.opentest4j.AssertionFailedError: expected: <Sun Mar 01 16:00:00 PST 2020> but was: <Sat Feb 29 16:00:00 PST 2020>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testAddMonthsRollover(DateUtilsAgentTest.java:148)
+
+7) org.apache.commons.lang3.time.DateUtilsAgentTest#testGetFragmentInMinutes()
+org.opentest4j.AssertionFailedError: expected: <15> but was: <44595>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testGetFragmentInMinutes(DateUtilsAgentTest.java:398)
+
+8) org.apache.commons.lang3.time.DateUtilsAgentTest#testTruncateDate()
+org.opentest4j.AssertionFailedError: expected: <Thu Feb 28 16:00:00 PST 2002> but was: <Fri Mar 01 00:00:00 PST 2002>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testTruncateDate(DateUtilsAgentTest.java:290)
+
+9) org.apache.commons.lang3.time.DateUtilsAgentTest#testIsSameDayDate()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testIsSameDayDate(DateUtilsAgentTest.java:451)
+
+10) org.apache.commons.lang3.time.DateUtilsAgentTest#testIteratorObjectOverload()
+org.opentest4j.AssertionFailedError: expected: <Sun Jun 30 00:00:00 PDT 2002> but was: <Sat Jun 29 17:00:00 PDT 2002>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testIteratorObjectOverload(DateUtilsAgentTest.java:589)
+
+11) org.apache.commons.lang3.time.DateUtilsAgentTest#testIteratorDateOverload()
+org.opentest4j.AssertionFailedError: expected: <Sat Jun 29 17:00:00 PDT 2002> but was: <Sun Jun 30 00:00:00 PDT 2002>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testIteratorDateOverload(DateUtilsAgentTest.java:577)
+
+12) org.apache.commons.lang3.time.DateUtilsAgentTest#testSetHours()
+org.opentest4j.AssertionFailedError: expected: <Tue Jan 14 16:30:00 PST 2020> but was: <Wed Jan 15 00:30:00 PST 2020>
+    at org.apache.commons.lang3.time.DateUtilsAgentTest.testSetHours(DateUtilsAgentTest.java:811)
+
+Tests run: 74, Failures: 12, Aborted: 0, Skipped: 0
+Test methods: 74, failed: 12
+FAILURES!!!

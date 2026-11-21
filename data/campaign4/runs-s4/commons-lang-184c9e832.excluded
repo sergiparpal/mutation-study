@@ -1,0 +1,2 @@
+org.apache.commons.lang3.text.WordUtilsAgentTest#testWrap4_longWordWrapped()
+org.apache.commons.lang3.text.WordUtilsAgentTest#testWrap5_spaceWrapOnMatchesFourArgVersion()

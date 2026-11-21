@@ -1,0 +1,5 @@
+org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendSuperAppendsNonNullSuperToString()
+org.apache.commons.lang3.builder.ToStringStyleAgentTest#testJsonStyleFormat()
+org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendCyclicObjectUsesStandardToString()
+org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendToStringAppendsNonNullToString()
+org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendIdentityHashCodeContainsTheHashValue()

@@ -1,0 +1,3 @@
+org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testParameterizeWithOwner()
+org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testParameterizeVarargsAndMap()
+org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testGetImplicitBounds()

@@ -1,0 +1,35 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testSplitByWholeSeparator()
+org.opentest4j.AssertionFailedError: array contents differ at index [1], expected: <cd> but was: <de>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSplitByWholeSeparator(StringUtilsAgentTest.java:1231)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testSplitPreserveAllTokensWithMax()
+org.opentest4j.AssertionFailedError: array contents differ at index [1], expected: <..b.c> but was: <.b.c>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSplitPreserveAllTokensWithMax(StringUtilsAgentTest.java:1224)
+
+3) org.apache.commons.lang3.StringUtilsAgentTest#testPrependIfMissingDeprecated()
+org.opentest4j.AssertionFailedError: expected: <XYZabc> but was: <xyzXYZabc>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testPrependIfMissingDeprecated(StringUtilsAgentTest.java:2069)
+
+4) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfAnyButCharSequence()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <3>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfAnyButCharSequence(StringUtilsAgentTest.java:548)
+
+5) org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateMarker()
+org.opentest4j.AssertionFailedError: expected: <abcdefg> but was: <abcd>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testAbbreviateMarker(StringUtilsAgentTest.java:1865)
+
+6) org.apache.commons.lang3.StringUtilsAgentTest#testJoinObjectArrayStringWithRange()
+org.opentest4j.AssertionFailedError: Expected java.lang.ArrayIndexOutOfBoundsException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.StringUtilsAgentTest.testJoinObjectArrayStringWithRange(StringUtilsAgentTest.java:1291)
+
+7) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfAnyCharSequence()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <0>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfAnyCharSequence(StringUtilsAgentTest.java:526)
+
+8) org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateMarkerOffset()
+org.opentest4j.AssertionFailedError: expected: <abcdefghijklmno> but was: <fghijklmno>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testAbbreviateMarkerOffset(StringUtilsAgentTest.java:1886)
+
+Tests run: 209, Failures: 8, Aborted: 0, Skipped: 0
+Test methods: 209, failed: 8
+FAILURES!!!

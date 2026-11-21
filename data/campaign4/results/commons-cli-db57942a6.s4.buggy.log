@@ -1,0 +1,11 @@
+1) org.apache.commons.cli.OptionsAgentTest#testGetMatchingOptionsNullAndEmpty()
+java.lang.NullPointerException
+    at java.base/java.lang.String.startsWith(String.java:1428)
+    at java.base/java.lang.String.startsWith(String.java:1470)
+    at org.apache.commons.cli.Options.lambda$getMatchingOptions$2(Options.java:227)
+    at org.apache.commons.cli.Options.getMatchingOptions(Options.java:226)
+    at org.apache.commons.cli.OptionsAgentTest.testGetMatchingOptionsNullAndEmpty(OptionsAgentTest.java:191)
+
+Tests run: 18, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 18, failed: 1, left out beforehand: 1
+FAILURES!!!

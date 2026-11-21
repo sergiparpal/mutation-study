@@ -1,0 +1,23 @@
+1) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testParseTokenSingleNonLetterCharacter()
+org.opentest4j.AssertionFailedError: expected: <-> but was: <'->
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testParseTokenSingleNonLetterCharacter(FastDatePrinterAgentTest.java:374)
+
+2) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorNullTimeZoneThrowsNPE()
+org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testConstructorNullTimeZoneThrowsNPE(FastDatePrinterAgentTest.java:57)
+
+3) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testIso8601ExtendedTimeZonePattern()
+org.opentest4j.AssertionFailedError: expected: <+00:00> but was: <Z>
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testIso8601ExtendedTimeZonePattern(FastDatePrinterAgentTest.java:216)
+
+4) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorNullLocaleThrowsNPE()
+org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testConstructorNullLocaleThrowsNPE(FastDatePrinterAgentTest.java:66)
+
+5) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorInvalidPatternThrowsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testConstructorInvalidPatternThrowsIllegalArgumentException(FastDatePrinterAgentTest.java:75)
+
+Tests run: 42, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 42, failed: 5
+FAILURES!!!

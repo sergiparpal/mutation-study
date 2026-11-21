@@ -1,0 +1,23 @@
+1) org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendSuperAppendsNonNullSuperToString()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.builder.ToStringStyleAgentTest.testAppendSuperAppendsNonNullSuperToString(ToStringStyleAgentTest.java:650)
+
+2) org.apache.commons.lang3.builder.ToStringStyleAgentTest#testJsonStyleFormat()
+org.opentest4j.AssertionFailedError: expected: <{"name": "John Doe", "age": 33, "smoker": false}> but was: <{"name":"John Doe","age":33,"smoker":false}>
+    at org.apache.commons.lang3.builder.ToStringStyleAgentTest.testJsonStyleFormat(ToStringStyleAgentTest.java:95)
+
+3) org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendCyclicObjectUsesStandardToString()
+org.opentest4j.AssertionFailedError: expected: <cyclicValue> but was: <java.lang.String@49ec71f8>
+    at org.apache.commons.lang3.builder.ToStringStyleAgentTest.testAppendCyclicObjectUsesStandardToString(ToStringStyleAgentTest.java:466)
+
+4) org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendToStringAppendsNonNullToString()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.builder.ToStringStyleAgentTest.testAppendToStringAppendsNonNullToString(ToStringStyleAgentTest.java:664)
+
+5) org.apache.commons.lang3.builder.ToStringStyleAgentTest#testAppendIdentityHashCodeContainsTheHashValue()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.builder.ToStringStyleAgentTest.testAppendIdentityHashCodeContainsTheHashValue(ToStringStyleAgentTest.java:407)
+
+Tests run: 57, Failures: 5, Aborted: 0, Skipped: 0
+Test methods: 57, failed: 5
+FAILURES!!!

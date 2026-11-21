@@ -1,0 +1,15 @@
+1) org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testNoOptionsSetByDefault()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest.testNoOptionsSetByDefault(NumericEntityUnescaperAgentTest.java:43)
+
+2) org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testNoArgumentOptionsLeavesEverythingUnset()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest.testNoArgumentOptionsLeavesEverythingUnset(NumericEntityUnescaperAgentTest.java:79)
+
+3) org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testDefaultConstructorIgnoresMissingSemicolon()
+org.opentest4j.AssertionFailedError: expected: <4> but was: <0>
+    at org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest.testDefaultConstructorIgnoresMissingSemicolon(NumericEntityUnescaperAgentTest.java:195)
+
+Tests run: 23, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 23, failed: 3
+FAILURES!!!

@@ -1,0 +1,35 @@
+1) org.apache.commons.csv.LexerAgentTest#testIsStartOfLineTrueForEndOfFileSentinel()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.csv.LexerAgentTest.testIsStartOfLineTrueForEndOfFileSentinel(LexerAgentTest.java:257)
+
+2) org.apache.commons.csv.LexerAgentTest#testReadEscapePassesThroughUnknownCharacter()
+org.opentest4j.AssertionFailedError: expected: <120> but was: <-1>
+    at org.apache.commons.csv.LexerAgentTest.testReadEscapePassesThroughUnknownCharacter(LexerAgentTest.java:407)
+
+3) org.apache.commons.csv.LexerAgentTest#testGetCurrentLineNumberAdvancesAfterNewline()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+    at org.apache.commons.csv.LexerAgentTest.testGetCurrentLineNumberAdvancesAfterNewline(LexerAgentTest.java:102)
+
+4) org.apache.commons.csv.LexerAgentTest#testGetBytesReadIncreasesAfterReading()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.csv.LexerAgentTest.testGetBytesReadIncreasesAfterReading(LexerAgentTest.java:65)
+
+5) org.apache.commons.csv.LexerAgentTest#testIsEscapeDelimiterTrueWhenEscapedDelimiterFollows()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.csv.LexerAgentTest.testIsEscapeDelimiterTrueWhenEscapedDelimiterFollows(LexerAgentTest.java:213)
+
+6) org.apache.commons.csv.LexerAgentTest#testNextTokenAfterEofKeepsReturningEof()
+org.opentest4j.AssertionFailedError: expected: <EORECORD> but was: <EOF>
+    at org.apache.commons.csv.LexerAgentTest.testNextTokenAfterEofKeepsReturningEof(LexerAgentTest.java:308)
+
+7) org.apache.commons.csv.LexerAgentTest#testNextTokenSimpleFields()
+org.opentest4j.AssertionFailedError: expected: <EORECORD> but was: <EOF>
+    at org.apache.commons.csv.LexerAgentTest.testNextTokenSimpleFields(LexerAgentTest.java:284)
+
+8) org.apache.commons.csv.LexerAgentTest#testNextTokenQuotedField()
+org.opentest4j.AssertionFailedError: expected: <EORECORD> but was: <EOF>
+    at org.apache.commons.csv.LexerAgentTest.testNextTokenQuotedField(LexerAgentTest.java:331)
+
+Tests run: 46, Failures: 8, Aborted: 0, Skipped: 0
+Test methods: 46, failed: 8
+FAILURES!!!

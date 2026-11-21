@@ -1,0 +1,23 @@
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateReturnsZeroForHashWithNoDigits()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateZeroCodePoint()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testOptionValueOfValidName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testOptionValueOfInvalidNameThrowsIllegalArgumentException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateReturnsZeroForLoneAmpersand()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testIsSetReturnsTrueOnlyForOptionPassedToConstructor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testErrorIfNoSemiColonSucceedsWhenSemicolonPresent()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateHexEntityLowercaseX()	1	0	
+FAILED	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateDefaultStopsAtNonDigitWithoutConsumingIt()	1	1	org.opentest4j.AssertionFailedError: expected: <4> but was: <0>
+FAILED	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateDefaultIgnoresMissingSemicolonAtEndOfInput()	1	1	org.opentest4j.AssertionFailedError: expected: <4> but was: <0>
+FAILED	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testIsSetReturnsFalseForAllOptionsWhenNoneSet()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateReturnsZeroWhenCharacterAtIndexIsNotAmpersand()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testSemiColonRequiredRejectsEntityMissingSemicolon()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testOptionValuesOrderAndCount()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateDecimalEntityWithSemicolon()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateAtNonZeroIndexWithinLargerSequence()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testOptionValueOfNullThrowsNullPointerException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateSupplementaryCodePoint()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testSemiColonRequiredAcceptsEntityWithSemicolon()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateHexEntityUppercaseX()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testErrorIfNoSemiColonThrowsWhenSemicolonMissing()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testIsSetReturnsTrueForEachOptionPassedWhenMultiplePassed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testTranslateReturnsZeroWhenNoHashAfterAmpersand()	1	0	

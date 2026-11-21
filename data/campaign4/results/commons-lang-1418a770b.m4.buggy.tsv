@@ -1,0 +1,17 @@
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptStringReturnsFalse()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptPrimitiveWrapperReturnsFalse()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptAtomicBooleanReturnsFalse()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testToStringBuilderFullyRecursesNestedObjectGraph()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailNullValueDelegatesToSuper()	1	1	java.lang.NullPointerException
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionOfEmptyCollection()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptCustomClassReturnsTrue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailIntegerValueDelegatesToSuper()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptMutableBooleanReturnsFalse()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptObjectClassReturnsTrue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCustomObjectIsRecursivelyFormatted()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testToStringBuilderOnNullObjectReturnsNullText()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailMutableBooleanDelegatesToSuper()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <org.apache.commons.lang3.mutable.MutableBoolean@3c407114[value=false]>
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailAtomicBooleanDelegatesToSuper()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <java.util.concurrent.atomic.AtomicBoolean@2c767a52[value=1]>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailStringValueDelegatesToSuper()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionIsRecursivelyFormatted()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptNumberSubclassReturnsFalse()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>

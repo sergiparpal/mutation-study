@@ -1,0 +1,19 @@
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectFieldNameDoesNotAffectOutput()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptAllowsArbitraryClasses()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionEmptyDoesNotThrow()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptAllowsPrimitiveTypes()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionWithAcceptedElement()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptFiltersMutableBoolean()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testConstructorCreatesUsableInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectNullBufferThrows()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptFiltersBoxedPrimitives()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectDoesNotRecurseIntoNumber()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionWithNonAcceptedElement()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectDoesNotRecurseIntoString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectRecursesThroughMultipleLevels()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptFiltersNumberSubclasses()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionNullThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectRecursesIntoAcceptedClass()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptFiltersAtomicBoolean()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptFiltersString()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testInstanceIsSerializable()	1	0	

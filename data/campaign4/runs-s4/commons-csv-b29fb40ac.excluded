@@ -1,0 +1,4 @@
+org.apache.commons.csv.LexerAgentTest#testGetBytesReadAndCharacterPositionIncreaseAfterReading()
+org.apache.commons.csv.LexerAgentTest#testGetFirstEolAfterCrLf()
+org.apache.commons.csv.LexerAgentTest#testNextTokenSimpleRecordNoTrailingNewline()
+org.apache.commons.csv.LexerAgentTest#testGetFirstEolAfterLineFeed()

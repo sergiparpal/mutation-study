@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.math.NumberUtilsAgentTest#testIsParsable()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.math.NumberUtilsAgentTest.testIsParsable(NumberUtilsAgentTest.java:410)
+
+Tests run: 110, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 110, failed: 1
+FAILURES!!!

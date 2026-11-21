@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testAppendIfMissing()
+org.opentest4j.AssertionFailedError: expected: <abcmno> but was: <abcxyz>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testAppendIfMissing(StringUtilsAgentTest.java:105)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfAnyCharSequences()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <-1>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfAnyCharSequences(StringUtilsAgentTest.java:429)
+
+Tests run: 135, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 135, failed: 2
+FAILURES!!!

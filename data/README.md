@@ -1843,10 +1843,310 @@ detection by the Defects4J sample's fault types.
   November 2026, on the third campaign's two pilot subjects in both arms, with
   their audit, detection and mutation measurements. It is not part of any
   result.
+- `campaign4/runs-m4/`, `campaign4/runs-s4/`: each run's record, by subject.
+  It holds the prompt, the settings, the transcript (`.stream.jsonl.xz`), the
+  CLI's result (`.json`), the run's metadata (`.meta.json`), what the run left
+  in its own temporary directory (`.tmp.tar.xz`), the acceptance logs and the
+  status.
+- `campaign4/suites/`: the accepted suites, as the agents wrote them.
+- `campaign4/generation.log`, `campaign4/launch.out`: the generator's log, and
+  the runner's, one line a run.
 
 The protocol reports the checks without the model and the pilot. The checks
 were a dry run of the generator and both measurements on the 115 subjects, and
-their output is not kept. No run with the model has been made on the subjects.
+their output is not kept.
+
+### The runs
+
+`bin/run-campaign4.sh` made the 230 runs in one session, from 17:21 UTC on 20
+November 2026 to 07:27 UTC on 21 November, from commit `18929a3`: the
+subjects in the order of `subjects.txt`, both arms of a subject before the
+next, the first arm alternating, one agent at a time. Every run reports
+`claude-sonnet-5` and Claude Code 2.1.316, and every revision was built with
+Java 11.0.33 and Maven 3.9.16 at `--release 8`. No run was cut short by a
+usage limit and none was made twice.
+
+| | `m4` | `s4` |
+|---|---|---|
+| runs that left an accepted suite | 115 | 112 |
+| tests written | 5755 | 7299 |
+| tests left out at acceptance | 41 (0.7%), in 4 suites | 237 (3.2%), in 77 suites |
+| turns a run, mean and most | 20.9, 52 | 18.1, 52 |
+| list price | $61.38, $0.53 a suite | $98.68, $0.88 a suite |
+
+Fourteen runs did not end by themselves: they reached the turn limit, 4 in
+`m4` and 10 in `s4`. Each had made 50 responses and reports 51 turns. No run
+reached the cost limit. Two runs that ended by the agent's own decision report
+52 turns: they called several tools in one response, and made 42 and 48
+responses.
+
+Eleven of the fourteen runs that reached the limit left an accepted suite all
+the same. The other three are the three `s4` runs without one. In
+`commons-lang-2240c1f93` and `commons-lang-3e50a7f9c` the agent wrote no test
+file. In `commons-lang-9e0fd0787` its tests do not compile in the project.
+Under the protocol a run that completes is final, so these three subjects are
+outside the paired set.
+
+The tests left out, per project:
+
+- `m4`: Lang 41 of 4892; none of CSV's 724 or CLI's 139.
+- `s4`: Lang 187 of 6248 (3.0%), CSV 47 of 899 (5.2%), CLI 3 of 152.
+
+The search of the working copies found nothing in 226 of the 230. In the `m4`
+copies of `commons-lang-1418a770b`, `-b1aba6833`, `-7c91ce989` and
+`-c07bc828f` it found what the dry run had: names of the subjects' trigger
+tests in other test classes of Commons Lang. Examples are `testBigDecimal` in
+`EqualsBuilderTest` and `testConstants` in `NumberUtilsTest`.
+
+The records were searched for details of the machine they were made on before
+they were committed, inside the compressed transcripts and archives too.
+Nothing needed redacting.
+
+### The audit
+
+`campaign4/audit.txt` is the output of `bin/audit-campaign4.py -v` on the 230
+transcripts. `campaign4/violations.txt` and `campaign4/direct-javac.txt` are
+the lists the protocol asks for. They were committed before anything was
+measured, with the reasons for each decision. In short:
+
+- **What was read.** Every command the script flags was read whole, with its
+  whole result: 29 commands in 24 `m4` runs and 220 in 100 `s4` runs. So was
+  what the script does not look at, as in the third campaign: the file tools'
+  paths, absolute paths, directory variables, program names, `s4` commands
+  that name `lib/`, a jar or `javac`, searches of the whole file system, and
+  the agents' code.
+- **No run committed a violation.**
+- **Network.** One agent reached for it: the `s4` agent of
+  `commons-csv-afbf34ad9`. It asked three times for the sources jar of
+  Commons CSV on Maven Central. The harness refused to widen the network
+  allowlist, and the sandbox's proxy refused the connection. Nothing came
+  back.
+- **Outside the working copy.** Nothing was read there but the operating
+  system and the JDK, plus the three places the rule leaves out:
+  - a command's own private `/tmp`;
+  - the run's own temporary directory;
+  - the CLI's saved copies of the output of the run's own commands, read 11
+    times in 6 runs.
+
+  Four `m4` runs and eleven `s4` runs used their own temporary directory for
+  scratch classes, classes unpacked from their own `_tools/lib`, or the text
+  of their own `api/` pages. Under the third campaign's wording, those that
+  read it back would have been violations.
+- **What the sandbox puts in a working copy.** Listings show `.bashrc`,
+  `.gitconfig`, `.mcp.json`, `.vscode`, `.claude/settings.json` and the like
+  inside each working copy. They are the sandbox's write protection: each is
+  `/dev/null` mounted over the name, and `.claude` is an empty directory.
+  They are not in the upstream trees, and they hold nothing.
+- **`lib/` in `s4`.** 45 of the 115 agents tried to list or open a jar: 37
+  the project's and 8 JUnit's alone. None succeeded: `unzip` is hidden, and
+  `jar`, `javap` and `java` are not there. 85 called `python`, nearly always
+  to strip the tags from an `api/` page. It is hidden and never ran.
+- **Direct calls to `javac` in `s4`.** Seven runs, listed in
+  `direct-javac.txt`. Three compiled their own tests with deprecation warnings
+  on. Four compiled a scratch class, two of which only print the default time
+  zone. Under the protocol none is a violation. The seven are left out in the
+  fifth sensitivity analysis.
+- **Knowledge of the fix.** The script's rule marks nine runs, four `m4` and
+  five `s4`. Each is for a test the agent named after the method it tests,
+  which is also the name of a trigger test: `testIsCreatable`,
+  `testSubtract`, `testHexDigitToInt`, `testHexToInt` and
+  `testEqualsIgnoreCase`. Nothing an agent said or wrote names an issue, a
+  pull request or a fix commit.
+- **Refused calls.** The harness refused 29 calls in `m4` and 30 in `s4`. The
+  sandbox denied 84 `s4` commands a hidden program, and no `m4` command.
+
+### Detection
+
+`./bin/measure-campaign4.sh` ran once, on 21 November 2026, from 09:50 to
+10:40 UTC, after the audit was committed. Each suite is compiled on its own
+against the fix commit and against its parent, and run on both. The tests
+left out at acceptance are left out again. Its record is
+`campaign4/results/`: per suite, the compiler's log, the runs on both
+revisions and the verdict, and `verdicts.csv`.
+
+| arm | suites | `Fail` | `Pass` | `Broken` |
+|---|---|---|---|---|
+| `m4` | 115 | 21 | 94 | 0 |
+| `s4` | 112 | 3 | 109 | 0 |
+
+- Every suite compiles against both revisions and passes again on the fix
+  commit, so every subject with a suite in both arms has a verdict in both.
+- No verdict is a timeout. Nothing was measured a second time.
+- The records were searched for details of the machine before they were
+  committed. Nothing needed redacting.
+
+### Mutation score and line coverage
+
+`./bin/mutation-campaign4.sh` ran once, on 21 November 2026, from 10:42 to
+12:37 UTC, after detection was committed. It measures as the third campaign
+did afterwards ("Mutation score and line coverage, measured afterwards",
+above): PIT 1.30.2 and its default mutators, on the classes the fix modifies
+and the classes nested in them, with each suite as accepted. PIT's jars were
+already on the machine and matched the hashes in the script, so nothing was
+fetched. Its record is `campaign4/mutation/`. Per suite, it holds PIT's log,
+its XML record of every mutant, the test methods the filter kept and left out,
+the compiler's output and the row of `mutation.csv`.
+
+- **PIT finished on every one of the 227 suites.** Each compiles against the
+  fix commit, PIT found each green on the unmutated code, and none ran out of
+  time. PIT took between 1 and 150 seconds a suite, 15 at the median. 221
+  suites have a mutation score and a line-coverage figure, 112 in `m4` and 109
+  in `s4`. The other six are those of the three subjects whose fix is in
+  `Converter` (below).
+- **The tests PIT ran are the ones detection ran.** In every suite, the test
+  methods the filter kept are those detection ran on the fix commit: 5,714 in
+  `m4` and 7,062 in `s4`. The methods it left out are the 41 and 237 left out
+  at acceptance. The check counts the methods kept against
+  `methods_run_on_fixed` in `results/verdicts.csv`, and the methods left out
+  against the keys of each suite's `excluded.txt`, as the third campaign's
+  mutation analysis does. The header of `bin/mutation-campaign4.sh` says the
+  analysis makes this comparison, but `bin/analyze-campaign4.py` does not, so
+  it was made separately.
+- **The mutants.** Both suites of a subject are mutated in the same classes.
+  On the 112 subjects with a suite in both arms, each arm faces the same
+  37,246 mutants. The three subjects with only an `m4` suite add 5,786, in
+  `StringUtils`, `ArrayUtils` and `StrBuilder`. Of the 80,278 mutants in all,
+  PIT counts 36,022 as detected: 35,569 killed, 348 timed out and 105 out of
+  memory. None is a run error, not viable or equivalent.
+- **No mutation score.** In the three `commons-cli` subjects whose fix is in
+  `Converter` (`commons-cli-f3ba9c951`, `-8010193ee`, `-7d77ecce8`), PIT made
+  no mutant and counted no line in either arm, as in the protocol's dry run.
+  The complete set leaves them out.
+- **Subjects the dry run noted:**
+  - The four subjects whose fix is in `FastDateParser` took 10 to 20 seconds
+    a suite. With the developers' tests, PIT had not finished them within the
+    dry run's 30 minutes.
+  - `commons-lang-c07bc828f` has a figure in both arms. Neither agent's suite
+    tests `java.awt.headless`.
+- **Java's `assert` statements.** No test of the 227 suites uses one. Two
+  mutated methods hold one, and each holds on the unmutated code:
+  - `Conversion.shortToBinary` in `commons-lang-54ee8ec1c`, right after the
+    check that makes it hold, as in the third campaign;
+  - `ExtendedMessageFormat.appendQuotedString` in `commons-lang-2011ce3ba`,
+    `-5b3a81dcd`, `-8425918f9` and `-d927bfc84`. Its every caller reaches it
+    only on a quote character, which is what it asserts.
+- **The time of day in PIT's logs** is in the fixed time zone of the
+  measurement's environment (`America/Los_Angeles`), as in the third
+  campaign's.
+- The records were searched for details of the machine before they were
+  committed, inside the compressed XML too. Nothing needed redacting.
+
+### Analysis
+
+`./bin/analyze-campaign4.py > data/campaign4/analysis.txt` ran once, on 21
+November 2026, with the script as it was fixed with the protocol. It ran after
+the mutation measurement had been committed (`96c9497`). No run has a
+violation, so the primary analysis keeps every run. The paired set is the 112
+subjects with a suite in both arms.
+
+- **H1, the arms differ in detection: rejected, with `m4` above `s4`.**
+  - `m4` detects 21/112 (18.8%) and `s4` 3/112 (2.7%).
+  - Both arms detect two faults, `m4` alone 19, and `s4` alone one
+    (`commons-lang-7da57b615`, negative durations in `DurationUtils.accept`).
+  - Exact McNemar, two-sided: *p* = 4.0 × 10⁻⁵.
+  - The difference is +16.1 points, with a 95% bootstrap interval of [+8.9,
+    +23.2].
+- **H2, detection falls further than mutation score: supported.** The
+  complete set is 109 subjects: the paired set less the three `Converter`
+  subjects, two of which only `m4` detects.
+
+  | | `m4` | `s4` | fall |
+  |---|---|---|---|
+  | detection | 19/109 — 17.4% | 3/109 — 2.8% | 84.2% |
+  | mutation score, pooled | 43.6% | 50.1% | −15.0% |
+  | line coverage, pooled | 62.1% | 68.4% | −10.2% |
+
+  - fall(detection) − fall(mutation score) is +99.2 points, with a 95%
+    interval of [+73.8, +120.9]. No resample was left out for want of an `m4`
+    detection.
+  - Against line coverage the figure is +94.4 points [+70.7, +113.7].
+- **The decision**, as the protocol's table words it: "On faults that
+  postdate the model's training data, the arms differ in detection in the
+  direction they do on Defects4J, and detection falls further than mutation
+  score: the claim of the paper's title holds on these faults. Recall of the
+  benchmark does not account for it."
+- **Why the falls in mutation score and coverage are negative.** The
+  analysis script prints the means over suites. The other figures here are
+  descriptive. `bin/describe-campaign4.py` prints them from
+  `mutation/mutation.csv` and the subjects' `classes.txt`.
+  - Pooled over the complete set, `s4`'s suites detect more mutants than
+    `m4`'s.
+  - As means over suites, `m4`'s are higher: 62.4% against 56.4%. `m4` has
+    the higher score in 80 of the 109 subjects, `s4` in 25, and the two are
+    equal in 4.
+  - The pooled figure weights each subject by its mutants. The eight subjects
+    whose fix is in `StringUtils` hold 11,765 of each arm's 37,246 mutants
+    (31.6%). Their verdicts are `Pass` in both arms. There `s4` detects 62.4%
+    of the mutants and `m4` 32.7%. Over the other 101 subjects, `m4` detects
+    48.6% and `s4` 44.4%.
+- **Composition** (secondary, no decision rule). Weighted by the Defects4J
+  sample's fault types, detection is 16.0% in `m4` and 3.6% in `s4`. The
+  difference is +12.4 points, with an interval stratified by type of [+4.6,
+  +20.7]. By type, on the paired set:
+
+  | type | subjects | `m4` | `s4` |
+  |---|---|---|---|
+  | omission | 35 | 7 | 2 |
+  | missing clause | 18 | 10 | 1 |
+  | state | 12 | 1 | 0 |
+  | substitution | 22 | 0 | 0 |
+  | algorithm | 17 | 0 | 0 |
+  | API (weight zero) | 8 | 3 | 0 |
+- **Sensitivity**, none confirmatory. Every analysis has the same direction:
+  - **With the runs with a violation:** there are none.
+  - **Intention to treat**, 115 subjects: 21/115 against 3/115, *p* = 4.0 ×
+    10⁻⁵, +15.7 points [+8.7, +22.6].
+  - **Without the nine runs the knowledge rule marks**, 106 subjects: 20/106
+    against 3/106, *p* = 7.6 × 10⁻⁵, +16.0 points [+8.5, +23.6].
+  - **Verdicts by timeout:** there are none.
+  - **Without the seven `s4` runs that called `javac`**, 105 subjects:
+    20/105 against 3/105, *p* = 7.6 × 10⁻⁵, +16.2 points [+8.6, +23.8].
+  - **Only the 108 subjects the strict reading keeps**, 105 of them paired:
+    the same figures. The seven subjects it leaves out are not those of the
+    `javac` runs, and again one of them is an `m4` detection.
+
+Descriptive, and no test of the protocol, as the analysis script prints them:
+
+- **By project**, on the paired set:
+  - Commons Lang: 15 and 2 of 90;
+  - Commons CSV: 3 and 0 of 16;
+  - Commons CLI: 3 and 1 of 6.
+- **By date of the fix**:
+  - up to 22 September 2026, the end of the matched corpus's window: 17 and
+    2 of 84;
+  - after it: 4 and 1 of 28.
+- **The third campaign beside this one.** Its difference is +13.0 points and
+  this one's +16.1. The difference between the two differences is +3.0
+  points [−13.6, +17.2]. The subjects differ, are selected by different
+  rules, and are run in different sandboxes.
+- **The second campaign beside this one.** Its difference on Defects4J is
+  +38.5 points (22/39 against 7/39) and this one's +16.1. The difference
+  between the two differences is −22.4 points [−40.5, −3.9]. The campaigns
+  differ in more than the date of the faults. This is not a measurement of
+  what recall contributes.
+
+`bin/describe-campaign4.py`, written on 21 November 2026 after the analysis,
+prints the descriptive figures the write-up quotes and the analysis script
+does not:
+
+- the tests left out at acceptance per project, turns and cost;
+- the faults each arm detects, with the class each fix modifies;
+- mutation score and line coverage subject by subject, the share of mutants
+  each arm's tests reach, and the subjects whose fix is in `StringUtils` apart
+  from the rest;
+- counts from the transcripts.
+
+Those counts agree with the audit's (above):
+- 45 `s4` runs tried to list or open a jar of `lib/`. In one of them,
+  `commons-lang-ae85262f0`, the only try was a command the harness refused.
+- 85 called `python` in a command the harness ran, and the harness refused two
+  more such commands.
+- 10 asked for `java -version`, and 2 tried to run a class with `java`.
+- 7 called `javac` on their own sources or a list of them, and the harness
+  refused 4 more such commands.
+- The harness refused 29 calls in `m4` and 30 in `s4`.
+
+`bin/report-figures.py` runs both scripts for §3.12 of the write-up.
 
 ## Infrastructure failures and exclusions
 
@@ -1913,5 +2213,8 @@ mistake for results:
 - [x] Post-cutoff pool classified by fault type, blind: a corpus matched to the Defects4J sample can take at most 69 of the new subjects, omissions binding (`postcutoff-pool/fault-types.tsv`)
 - [x] Fourth campaign prepared: protocol, scripts, checks without the model on its 115 unmatched post-cutoff subjects, and a pilot (`campaign4/`)
 - [x] Fourth campaign's protocol fixed before any run on the subjects (`campaign4/PROTOCOL.md`)
-- [ ] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed
+- [x] Fourth campaign's 230 runs made, audited and measured for detection: 227 accepted suites, 115 in `m4` and 112 in `s4`, no violation, and a verdict for every suite (`campaign4/runs-m4/`, `runs-s4/`, `suites/`, `audit.txt`, `results/`)
+- [x] Fourth campaign's mutation score and line coverage measured with PIT: it finished on all 227 suites, and 221 have a figure. The other six, those of the three subjects whose fix is in `Converter`, have no mutant (`campaign4/mutation/`)
+- [x] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed. Detection is 18.8% against 2.7% over 112 pairs, and H1 is rejected. H2 is supported: +99.2 points [+73.8, +120.9], with `s4`'s pooled mutation score above `m4`'s (`campaign4/analysis.txt`)
+- [x] Write-up carries the fourth campaign: `PREPRINT.md` §2.12 and §3.12, and the abstract, introduction, discussion, threats, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign4.py`, and §3.12 in `bin/report-figures.py`
 - [ ] A matched post-cutoff corpus large enough to test the effect size

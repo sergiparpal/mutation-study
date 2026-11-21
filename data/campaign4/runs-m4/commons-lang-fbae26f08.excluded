@@ -1,0 +1,8 @@
+org.apache.commons.lang3.StringUtilsAgentTest#testReplaceFamily()
+org.apache.commons.lang3.StringUtilsAgentTest#testSubstringFamily()
+org.apache.commons.lang3.StringUtilsAgentTest#testEqualsAndCompare()
+org.apache.commons.lang3.StringUtilsAgentTest#testToCodePointsAndOverlay()
+org.apache.commons.lang3.StringUtilsAgentTest#testSplitFamily()
+org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfBoundaries()
+org.apache.commons.lang3.StringUtilsAgentTest#testDistanceAlgorithms()
+org.apache.commons.lang3.StringUtilsAgentTest#testLeftRightMid()
