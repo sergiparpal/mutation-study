@@ -26,7 +26,7 @@ kept and audited, and its hypotheses, tests and exclusions were fixed before
 its first run.
 
 In the second campaign, over the 39 bugs with a verdict in both arms,
-real-fault detection falls from **56% to 18%** (exact McNemar, *p* = 2.8 ×
+real-fault detection falls from **56% to 18%** (exact McNemar, *p* = 2.7 ×
 10⁻⁴). **The metrics ordinarily reported alongside detection move far less.**
 On the 36 bugs that also have a mutation score in both arms, mutation score
 falls from 54% to 39% and line coverage from 84% to 70%: detection loses 65%
@@ -123,7 +123,7 @@ the one thing intended; §5.1 lists every difference we know of.
 In the second campaign, over the 39 bugs with a verdict in both arms,
 real-fault detection falls from **56% to 18%**. Sixteen faults are detected by
 the implementation-visible arm alone and one by the specification-only arm
-alone; an exact McNemar test gives *p* = 2.8 × 10⁻⁴.
+alone; an exact McNemar test gives *p* = 2.7 × 10⁻⁴.
 
 **The usual metrics move, but far less.** On the 36 bugs with every
 measurement in both arms, mutation score falls from 54% to 39% and line
@@ -1292,7 +1292,7 @@ mutant, reproducibly. The complete set has 36 bugs.
 
 **H1: the arms differ in detection.** Of the 39 bugs, six are detected by both
 arms, 16 by M2 alone, one by S2 alone and 16 by neither. The exact McNemar
-test gives *p* = 2.8 × 10⁻⁴, and H1 is rejected with M2 above S2. The
+test gives *p* = 2.7 × 10⁻⁴, and H1 is rejected with M2 above S2. The
 difference is 38.5 points, with a 95% bootstrap interval of 20.5 to 56.4.
 
 **H2: detection falls further than mutation score.** On the complete set:
@@ -1615,8 +1615,8 @@ in the third campaign.
 - *`lib/` in S4.* 45 of the 115 S4 agents tried to list or open a jar there,
   against 22 of 40 in the second campaign and 5 of 28 in the third. None
   succeeded: `unzip` is hidden, and the JDK's other launchers are not there.
-- *Python.* 85 S4 agents called it, nearly always to strip the tags from a
-  javadoc page. It is hidden as well.
+- *Python.* 86 S4 agents tried to call it, nearly always to strip the tags
+  from a javadoc page. It is hidden as well.
 - *The compiler.* Seven S4 agents called it directly. Three wanted to see the
   deprecation warnings in their own tests. Four compiled scratch classes, two
   of which print the default time zone. None gave the compiler an option that
@@ -1766,10 +1766,11 @@ the answer either, because withholding the implementation removes information a
 real developer would have.
 
 The mechanism shows on faults the model cannot have seen as well. The fourth
-campaign took 112 fix commits that postdate its training data, under the
+campaign took 115 fix commits that postdate its training data, under the
 second campaign's controls and a tighter sandbox. There the arms are at 19%
-and 3% (§3.12). The implementation-visible arm detects 19 faults the other
-misses, and the other detects one fault it misses.
+and 3% over the 112 with a verdict in both (§3.12). The implementation-visible
+arm detects 19 faults the other misses, and the other detects one fault it
+misses.
 
 The third campaign had put 23 earlier faults at 35% and 22% (§3.11). The
 difference is in the same direction and of nearly the same size, and its test
@@ -1819,12 +1820,14 @@ implementation-visible ones 46%, and neither detects any of the eight faults.
 
 This is not a failure of mutation analysis on its own terms, and it does not
 contradict the established result that mutation score predicts real-fault
-detection (Just et al., FSE 2014; see §6): here, too, the population with the
-higher score detects more. Mutation score asks whether a suite's assertions are
-strong enough to distinguish the program from small syntactic variants of it.
-The specification-only suites are moderately worse at that. They assert on
+detection (Just et al., FSE 2014; see §6). In the first three campaigns, too,
+the arm with the higher score detects more, and in the fourth it does as a
+mean over suites, though not when the mutants are pooled (§3.12). Mutation
+score asks whether a suite's assertions are strong enough to distinguish the
+program from small syntactic variants of it. On Defects4J the
+specification-only suites are moderately worse at that. They assert on
 returned values, exact exception messages and persisted state, and on the code
-they reach they kill 55% of mutants against 64%.
+they reach they kill 55% of mutants against 64% in the second campaign.
 
 What the metric cannot see is where the expected values came from, and in this
 study that is, we argue, where most of the difference in detection lies. A test
@@ -2155,9 +2158,9 @@ an agent's access to the implementation may matter differently.
 **One run per bug per arm, in each campaign.** LLM output is stochastic and no
 variance estimate was collected; the figures carry no confidence interval
 attributable to sampling the model, and the bootstrap intervals of §3.10 to
-§3.12 resample bugs, not runs. Repeated runs would be the standard remedy and
-were not affordable at roughly $1 per suite across 80 suites. The two Defects4J
-campaigns are the nearest thing to a repetition, under conditions that differ:
+§3.12 resample bugs, not runs. Repeated runs would be the standard remedy, and
+none was made for that purpose. The two Defects4J campaigns are the nearest
+thing to a repetition, under conditions that differ:
 the implementation-visible arms detect 26 and 20 of the same 36 bugs with 20 in
 common, and the specification-only arms six and seven of 37 with four in
 common. The effect, three-fold in the second campaign and five-fold in the
@@ -2634,9 +2637,10 @@ Every suite in their study — developer-written, or generated by EvoSuite,
 Randoop or JCrasher — derives its expectations from the implementation it is
 run against.
 
-In our data the direction is the same: the arm with the higher mutation score
-detects more faults. What we vary is the *information available to the
-generator*, and along that axis the size of a difference in mutation score says
+In our data the direction is the same, but for the fourth campaign's pooled
+scores (§3.12): the arm with the higher mutation score detects more faults.
+What we vary is the *information available to the generator*, and along that
+axis the size of a difference in mutation score says
 little about the size of the difference in detection: a loss of 28% against
 one of 65% between the arms of the second campaign and, in the first, almost
 nothing against a factor of three between EvoSuite and the specification-only
