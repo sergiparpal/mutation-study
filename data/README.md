@@ -1624,11 +1624,33 @@ arms. Two things differ from the campaigns' settings:
 output. It holds what the run's own command printed and nothing else. The
 violation rules of both protocols count reading it, as they are written.
 
-**To be done again** before any campaign, on the machine and with the CLI
-binary that campaign will use: the temporary directory and the confinement of
-the file tools are the CLI's behaviour and may change with its version, and the
-jars are the machine's. Neither file under `sandbox/` is the verbose output,
-which lists the other sessions' directories and the machine's mount table.
+**How far it reaches** was tried on 21 November 2026, after the fourth
+campaign, with `bin/probe-saved-copies.py` and no model. The script runs the
+CLI as the probe does, with the probe's settings and stand-in, and plants
+files holding a random word for the run to try to read
+(`sandbox/saved-copies.txt`, and under the settings of the two campaigns
+`sandbox/saved-copies-as-run.txt`). It used CLI 2.1.316, the binary of the
+second, third and fourth campaigns. In both arms and under both settings, the
+Read tool opens the `tool-results` directory of the run's own session: the
+saved copy, and a file planted beside it. It refuses every other file tried:
+
+- the rest of the run's session directory, and of the directory the CLI keeps
+  for the run's working copy;
+- the saved copy of another session of the same working copy;
+- the saved copy, a memory note and the transcript of another working copy;
+- a file in `~/.claude` itself, and one in a directory named `tool-results`
+  outside `~/.claude`.
+
+The Glob and Grep tools refuse `~/.claude/projects`, and a command cannot
+print a file there. The exception therefore reaches no further than the run's
+own session.
+
+**To be done again** before any campaign, with both scripts, on the machine and
+with the CLI binary that campaign will use: the temporary directory and the
+confinement of the file tools are the CLI's behaviour and may change with its
+version, and the jars are the machine's. Neither `probe.txt` nor
+`probe-as-run.txt` is the probe's verbose output, which lists the other
+sessions' directories and the machine's mount table.
 
 ## Post-cutoff pool (counted 2026-11-19)
 
@@ -2222,4 +2244,5 @@ mistake for results:
 - [x] Fourth campaign's mutation score and line coverage measured with PIT: it finished on all 227 suites, and 221 have a figure. The other six, those of the three subjects whose fix is in `Converter`, have no mutant (`campaign4/mutation/`)
 - [x] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed. Detection is 18.8% against 2.7% over 112 pairs, and H1 is rejected. H2 is supported: +99.2 points [+73.8, +120.9], with `s4`'s pooled mutation score above `m4`'s (`campaign4/analysis.txt`)
 - [x] Write-up carries the fourth campaign: `PREPRINT.md` §2.12 and §3.12, and the abstract, introduction, discussion, threats, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign4.py`, and §3.12 in `bin/report-figures.py`
+- [x] How far the Read tool's exception for the CLI's saved copies reaches, tried without the model: the `tool-results` directory of the run's own session and nothing else, in both arms and under both settings (`bin/probe-saved-copies.py`, `sandbox/saved-copies.txt`, `sandbox/saved-copies-as-run.txt`)
 - [ ] A matched post-cutoff corpus large enough to test the effect size. Not pursued (21 November 2026): a corpus matched to the Defects4J sample can take at most 69 of the pool's 131 new subjects, 115 of which the fourth campaign has run, and its analysis weights detection by the sample's fault types instead (`campaign4/analysis.txt`)

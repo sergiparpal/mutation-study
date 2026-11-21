@@ -159,7 +159,11 @@ by `bin/analyze-mutation-campaign3.py`; their output is in
 settings for any later run, which give each run a temporary directory of its
 own and hide the operating system's jars, and a check of them that calls no
 model. Its output under those settings and under the two campaigns' is in
-`data/sandbox/`.
+`data/sandbox/`. `bin/probe-saved-copies.py`, written after the fourth
+campaign, checks in the same way how far the one exception those settings leave
+reaches: the Read tool on the copy the CLI saves of a run's long output. It
+reaches no further than the run's own session; the output is in
+`data/sandbox/` too.
 
 The fourth campaign is under `data/campaign4/`. It makes the comparison on 115
 of the pool's post-cutoff subjects, not matched by fault type, under those
