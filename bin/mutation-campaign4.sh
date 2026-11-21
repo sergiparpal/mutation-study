@@ -61,8 +61,10 @@
 #   does not finish within PIT_TIMEOUT seconds.
 #
 #   The filter records each test method the platform asks it about, kept or
-#   left out. The analysis compares the methods kept with the methods the
-#   measurement ran on the fixed revision, suite by suite.
+#   left out. bin/analyze-campaign4.py does not compare the methods kept with
+#   the methods the measurement ran on the fixed revision; that comparison was
+#   made separately (data/README.md). Corrected on 21 November 2026, after the
+#   run; the copy that ran is in the protocol's merge commit, 18929a3.
 #
 # Per suite, in <OUT>/mutation/:
 #   <subject>.<arm>.pit.log            what PIT printed
