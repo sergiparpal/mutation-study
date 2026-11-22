@@ -1,9 +1,10 @@
-# Fifth campaign: protocol (draft)
+# Fifth campaign: protocol
 
-**Draft, not fixed.** No run has been made on the subjects. The scripts this
-file names are written, and the checks without the model and the pilot have
-been made (below). The protocol will be fixed as the fourth campaign's was: by
-the merge of the pull request that adds it. Until then it can change.
+Fixed on 22 November 2026, before any run on the subjects, by the merge of the
+pull request that adds it (#31), after the checks without the model and the
+pilot below. The merge commit, with the scripts as they are in it, is the
+reference. Anything done differently afterwards is a deviation and is listed at
+the end, with its date and reason, before the step it affects.
 
 ## Why a fifth campaign
 
@@ -411,4 +412,4 @@ is under the user's home, which no agent can read.
 
 ## Deviations
 
-None. This is a draft, and nothing has been run.
+None.
