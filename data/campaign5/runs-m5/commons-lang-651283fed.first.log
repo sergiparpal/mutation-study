@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testSetAccessibleWorkaroundForcesAccessForPublicMethodOfPackagePrivateSuperclass()
+org.opentest4j.AssertionFailedError: expected: <org.apache.commons.lang3.reflect.MemberUtilsAgentTestPackagePrivateBase> but was: <org.apache.commons.lang3.reflect.MemberUtilsAgentTest.PublicFixture>
+    at org.apache.commons.lang3.reflect.MemberUtilsAgentTest.testSetAccessibleWorkaroundForcesAccessForPublicMethodOfPackagePrivateSuperclass(MemberUtilsAgentTest.java:254)
+
+Tests run: 94, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 94, failed: 1
+FAILURES!!!

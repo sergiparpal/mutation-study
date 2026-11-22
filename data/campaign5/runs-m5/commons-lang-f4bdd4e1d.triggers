@@ -1,0 +1,2 @@
+FastDateParserTest.testWeekYearParsingOutOfRangeDayOfWeek
+FastDateParserTest.testWeekYearParsingStrictDayOfWeek

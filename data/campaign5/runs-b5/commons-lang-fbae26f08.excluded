@@ -1,0 +1,7 @@
+org.apache.commons.lang3.StringUtilsAgentTest#testReplaceFamily()
+org.apache.commons.lang3.StringUtilsAgentTest#testCountMatchesAndLength()
+org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfDifferenceAndCommonPrefix()
+org.apache.commons.lang3.StringUtilsAgentTest#testJoinFamily()
+org.apache.commons.lang3.StringUtilsAgentTest#testSplitFamily()
+org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfFamily()
+org.apache.commons.lang3.StringUtilsAgentTest#testChompChop()

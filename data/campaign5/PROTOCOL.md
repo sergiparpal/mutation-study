@@ -412,4 +412,39 @@ is under the user's home, which no agent can read.
 
 ## Deviations
 
-None.
+**22 November 2026, during generation, before the runs it affects: the
+machine's Java changed.** Generation began at 08:19:58 UTC from `c5d8557`. At
+14:12 UTC a package installation on the machine, unrelated to the campaign,
+brought in Java 21's runtime as the default runtime. At 14:13:38 UTC the
+system's `java` became Java 21's; `javac` stayed Java 11's. The harness finds
+`java` on the `PATH` (`bin/campaign3-lib.sh`), so from then on Maven ran on
+Java 21. Under Java 21 the projects' parent POM activates profiles that need a
+plugin the offline Maven repository does not hold (`apache-rat-plugin` 0.18),
+and no revision could be staged.
+
+- **119 runs started before the change:** subjects 1 to 59 of
+  `subjects.txt` in both arms, and subject 60 (`commons-lang-3f0c0fd5c`) in
+  `m5`. All of them record Java 11, and all but one ran on it throughout.
+- **One of them straddles the change:** `m5` on `commons-lang-3f0c0fd5c`. Its
+  agent started at 14:13:13 UTC, on Java 11. Its three runs of
+  `_tools/test.sh` (14:14:11 to 14:14:58 UTC) and its acceptance (14:15:04
+  UTC, no test left out of 38) ran on Java 21's JVM, with Java 11's compiler.
+  It completed, and a run that completes is not made again ("A run is final").
+  It is kept in every analysis. The write-up also gives H1 without that
+  subject, as a descriptive figure.
+- **The other 111 runs failed at staging, before the agent was started:**
+  subject 60 in `b5`, and subjects 61 to 115 in both arms. Their status reads
+  "the faulty revision does not build" or "the fixed revision does not
+  build". No model was called for them. These are harness failures, which "A
+  run is final" makes again once the harness is fixed. The records of their
+  first attempts are kept in `runs-b5/harness-failed/` and
+  `runs-m5/harness-failed/`.
+- **The fix.** The system's `java` was set back to Java 11
+  (`update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java`),
+  which also stops a later installation from changing it. Before generation
+  was resumed, `java`, `javac` and Maven were checked to run on Java 11, and
+  both revisions of subject 60 were staged again.
+- **The rest of the generation** is resumed after this entry is committed, in
+  the order of `subjects.txt`, from subject 60 in `b5`. The scripts are
+  `c5d8557`'s, unchanged. The runs made from here on record the commit that
+  adds this entry.

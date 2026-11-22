@@ -1,0 +1,31 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testReplaceFamily()
+org.opentest4j.AssertionFailedError: expected: <jelmo> but was: <jellm>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testReplaceFamily(StringUtilsAgentTest.java:387)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testCountMatchesAndLength()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <4>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testCountMatchesAndLength(StringUtilsAgentTest.java:551)
+
+3) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfDifferenceAndCommonPrefix()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfDifferenceAndCommonPrefix(StringUtilsAgentTest.java:222)
+
+4) org.apache.commons.lang3.StringUtilsAgentTest#testJoinFamily()
+org.opentest4j.AssertionFailedError: Expected java.lang.ArrayIndexOutOfBoundsException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.StringUtilsAgentTest.testJoinFamily(StringUtilsAgentTest.java:423)
+
+5) org.apache.commons.lang3.StringUtilsAgentTest#testSplitFamily()
+org.opentest4j.AssertionFailedError: array lengths differ, expected: <3> but was: <2>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSplitFamily(StringUtilsAgentTest.java:453)
+
+6) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfFamily()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <3>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfFamily(StringUtilsAgentTest.java:196)
+
+7) org.apache.commons.lang3.StringUtilsAgentTest#testChompChop()
+org.opentest4j.AssertionFailedError: expected: <abc> but was: <ab>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testChompChop(StringUtilsAgentTest.java:575)
+
+Tests run: 29, Failures: 7, Aborted: 0, Skipped: 0
+Test methods: 29, failed: 7
+FAILURES!!!

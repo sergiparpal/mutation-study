@@ -1,0 +1,4 @@
+ValidateDoublesTest.exclusiveBetweenRejectsNaN
+ValidateDoublesTest.exclusiveBetweenWithMessageRejectsNaN
+ValidateDoublesTest.inclusiveBetweenRejectsNaN
+ValidateDoublesTest.inclusiveBetweenWithMessageRejectsNaN

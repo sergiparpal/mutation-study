@@ -1,0 +1,29 @@
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testContainsFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testUpperLowerCase()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testToCodePointsAndValueOf()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testDeleteWhitespaceAndNormalizeSpace()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testPadFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testDifferenceAndLevenshtein()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testTruncate()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testReplaceFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <jelmo> but was: <jellm>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testCapitalizeUncapitalizeSwapCase()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testSubstringFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testConstructorAndConstants()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testEqualsFamily()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testCountMatchesAndLength()	1	1	org.opentest4j.AssertionFailedError: expected: <2> but was: <4>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testStripAccentsAndTrimAsciiControl()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testIsEmptyIsBlank()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testRepeatReverseRotate()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testDefaultAndFirstNon()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfDifferenceAndCommonPrefix()	1	1	org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testIsAnyAllBlankEmpty()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testJoinFamily()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.ArrayIndexOutOfBoundsException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testCompare()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testTrimAndStrip()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviate()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testStartsEndsWith()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testSplitFamily()	1	1	org.opentest4j.AssertionFailedError: array lengths differ, expected: <3> but was: <2>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <2> but was: <3>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testIsAlphaNumericFamily()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testChompChop()	1	1	org.opentest4j.AssertionFailedError: expected: <abc> but was: <ab>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testOverlayAndWrap()	1	0	

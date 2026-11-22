@@ -1,0 +1,15 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testReplaceFamily()
+org.opentest4j.AssertionFailedError: expected: <texttexttexttext> but was: <XexXXexXXexXXexX>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testReplaceFamily(StringUtilsAgentTest.java:454)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testSubstringAroundFamily()
+org.opentest4j.AssertionFailedError: expected: <bc> but was: <bcbc>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSubstringAroundFamily(StringUtilsAgentTest.java:554)
+
+3) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfFamily()
+org.opentest4j.AssertionFailedError: expected: <3> but was: <4>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfFamily(StringUtilsAgentTest.java:243)
+
+Tests run: 50, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 50, failed: 3
+FAILURES!!!
