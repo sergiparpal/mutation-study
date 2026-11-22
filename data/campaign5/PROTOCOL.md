@@ -1,10 +1,9 @@
 # Fifth campaign: protocol (draft)
 
-**Draft, not fixed.** No run has been made with the model for this campaign.
-The scripts this file names are written, and the checks without the model
-have been made (below). The pilot has not been run. The protocol will be fixed
-as the fourth campaign's was: by the merge of the pull request that adds it,
-after the pilot. Until then it can change.
+**Draft, not fixed.** No run has been made on the subjects. The scripts this
+file names are written, and the checks without the model and the pilot have
+been made (below). The protocol will be fixed as the fourth campaign's was: by
+the merge of the pull request that adds it. Until then it can change.
 
 ## Why a fifth campaign
 
@@ -372,12 +371,43 @@ tried two things the full check could not:
 
 ## Pilot
 
-The pilot has not been run. It is four runs with the model, made only with the
-user's agreement: the third campaign's two pilot subjects,
+The pilot was four runs with the model, made on 22 November 2026 with the
+user's agreement. They were the third campaign's two pilot subjects,
 `commons-lang-6c4269eb8` (`WordUtils`) and `commons-csv-ab3d7236`
-(`CSVPrinter`), each in both arms. At `m4`'s cost, $0.53 a suite at list
-prices, that is about $2. The pilot's record goes in `pilot/`. It is not part
-of any result.
+(`CSVPrinter`), each in both arms. The generator was this campaign's, at
+commit `160b7a2`. The subjects' records were the third campaign's
+(`../campaign3/pilot/subjects/`). For both, the fix commit has one parent and
+the class under test exists there. This campaign's scripts then audited the
+runs and measured them and their mutation score. The record is in `pilot/`,
+with the audit's output in `pilot/audit.txt`. It is not part of any result.
+
+- **Runs.** All four ended normally on `claude-sonnet-5`, CLI 2.1.316. They
+  ran from 07:53 to 08:01 UTC and cost $1.43 at list prices. In `b5` they took
+  17 turns (`commons-lang`) and 30 (`commons-csv`); in `m5`, 12 and 19.
+- **Commands.** Each agent read its working copy and wrote its test class and
+  nothing else. It ran the class through `_tools/test.sh`. The transcripts
+  show no network or version-control command and no path outside the working
+  copy. The harness refused nothing and the sandbox denied nothing.
+- **Audit.** It flagged no command, and no run names the fix.
+- **Closing messages.** Neither `b5` agent's closing message says the code
+  under test is wrong. Each describes the tests it wrote, and
+  `pilot/closing-b5.txt` is empty.
+- **Temporary directory.** No command named the run's own temporary
+  directory. At the end it held only the CLI's empty directories
+  (`.tmp.tar.xz`).
+- **Measurement.** Acceptance left out no test: 25 and 37 methods in `b5`, 47
+  and 30 in `m5`. All four suites are `Pass`, as in the third and fourth
+  campaigns' pilots. The verdicts check the pipeline and nothing else.
+- **Mutation.** PIT gave each suite a figure on its own revision, and kept the
+  methods the measurement ran.
+- **The records** were searched for the machine's name, its time zone, its
+  operating system and details of the account, with the transcripts and
+  archives unpacked. None of these is in them.
+
+The third campaign chose its pilot on classes that no subject had under test.
+Here, as in the fourth campaign, two subjects do: `commons-lang-184c9e832`
+(`WordUtils`) and `commons-csv-09e27ffdb` (`CSVPrinter`). The pilot's record
+is under the user's home, which no agent can read.
 
 ## Deviations
 
