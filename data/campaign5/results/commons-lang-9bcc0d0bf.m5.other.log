@@ -1,0 +1,13 @@
+1) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomStaticStartBeyondCharsLengthThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.ArrayIndexOutOfBoundsException>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomStaticStartBeyondCharsLengthThrows(RandomStringUtilsAgentTest.java:236)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+
+2) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomStaticEndBeyondCharsLengthThrows()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.ArrayIndexOutOfBoundsException>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomStaticEndBeyondCharsLengthThrows(RandomStringUtilsAgentTest.java:248)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+
+Tests run: 41, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 41, failed: 2
+FAILURES!!!

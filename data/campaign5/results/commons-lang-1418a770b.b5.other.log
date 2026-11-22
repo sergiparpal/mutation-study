@@ -1,0 +1,56 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.commons.lang3.builder.ReflectionToStringBuilder (file:/home/sergi/.cache/gen-stage/measure-a2k5CbBV/fixed/target/classes/) to field java.lang.Integer.DigitOnes
+WARNING: Please consider reporting this to the maintainers of org.apache.commons.lang3.builder.ReflectionToStringBuilder
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+1) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptOverrideStillRecursesForNonExcludedClass()
+java.lang.StackOverflowError
+    at java.base/java.util.WeakHashMap.hash(WeakHashMap.java:298)
+    at org.apache.commons.lang3.builder.ToStringStyle.register(ToStringStyle.java:616)
+    at org.apache.commons.lang3.builder.ToStringStyle.appendClassName(ToStringStyle.java:1055)
+    at org.apache.commons.lang3.builder.ToStringStyle.appendStart(ToStringStyle.java:1581)
+    at org.apache.commons.lang3.builder.ToStringBuilder.<init>(ToStringBuilder.java:258)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.<init>(ReflectionToStringBuilder.java:553)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:386)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:189)
+    at org.apache.commons.lang3.builder.RecursiveToStringStyle.appendDetail(RecursiveToStringStyle.java:106)
+    at org.apache.commons.lang3.builder.ToStringStyle.appendInternal(ToStringStyle.java:1550)
+    at org.apache.commons.lang3.builder.ToStringStyle.append(ToStringStyle.java:989)
+    at org.apache.commons.lang3.builder.ToStringBuilder.append(ToStringBuilder.java:822)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.appendFieldsIn(ReflectionToStringBuilder.java:658)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:852)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:387)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:189)
+    at org.apache.commons.lang3.builder.RecursiveToStringStyle.appendDetail(RecursiveToStringStyle.java:106)
+    at org.apache.commons.lang3.builder.ToStringStyle.appendInternal(ToStringStyle.java:1550)
+    at org.apache.commons.lang3.builder.ToStringStyle.append(ToStringStyle.java:989)
+    at org.apache.commons.lang3.builder.ToStringBuilder.append(ToStringBuilder.java:822)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.appendFieldsIn(ReflectionToStringBuilder.java:658)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:852)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:387)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:189)
+    at org.apache.commons.lang3.builder.RecursiveToStringStyle.appendDetail(RecursiveToStringStyle.java:106)
+    at org.apache.commons.lang3.builder.ToStringStyle.appendInternal(ToStringStyle.java:1550)
+    at org.apache.commons.lang3.builder.ToStringStyle.append(ToStringStyle.java:989)
+    at org.apache.commons.lang3.builder.ToStringBuilder.append(ToStringBuilder.java:822)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.appendFieldsIn(ReflectionToStringBuilder.java:658)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:852)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:387)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:189)
+    at org.apache.commons.lang3.builder.RecursiveToStringStyle.appendDetail(RecursiveToStringStyle.java:106)
+    at org.apache.commons.lang3.builder.ToStringStyle.appendInternal(ToStringStyle.java:1550)
+    at org.apache.commons.lang3.builder.ToStringStyle.append(ToStringStyle.java:989)
+    at org.apache.commons.lang3.builder.ToStringBuilder.append(ToStringBuilder.java:822)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.appendFieldsIn(ReflectionToStringBuilder.java:658)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:852)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:387)
+    at org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(ReflectionToStringBuilder.java:189)
+    ...
+
+2) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailWithNullValueThrowsNullPointerException()
+org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAppendDetailWithNullValueThrowsNullPointerException(RecursiveToStringStyleAgentTest.java:88)
+
+Tests run: 13, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 13, failed: 2
+FAILURES!!!

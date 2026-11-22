@@ -1,0 +1,17 @@
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetFutureBeforeStartThrowsIllegalStateException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testBuilderWithExternalExecutor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testBuilderDefaultInitializerReturnsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testBuilderWithCustomInitializerSupplier()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetBeforeStartThrowsIllegalStateException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetWrapsCheckedExceptionInConcurrentException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetReturnsSameResultOnRepeatedCalls()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testIsStartedInitiallyFalse()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testSetExternalExecutorAfterStartThrowsIllegalStateException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testIsInitializedTrueAfterSuccessfulCompletion()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testStartReturnsTrueOnlyOnce()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetRethrowsRuntimeExceptionDirectly()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testTemporaryExecutorIsCreatedAndShutDownAfterCompletion()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testExternalExecutorIsUsedAndNotShutDown()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testSetExternalExecutorBeforeStartIsHonored()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetTaskCountDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetActiveExecutorNullBeforeStart()	1	0	

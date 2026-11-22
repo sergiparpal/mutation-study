@@ -1,0 +1,19 @@
+1) org.apache.commons.lang3.time.DurationUtilsAgentTest#testToMillisIntClampsToMinValueOnOverflow()
+java.lang.ArithmeticException: long overflow
+    at java.base/java.lang.Math.multiplyExact(Math.java:949)
+    at java.base/java.lang.Math.multiplyExact(Math.java:925)
+    at java.base/java.time.Duration.toMillis(Duration.java:1225)
+    at org.apache.commons.lang3.time.DurationUtils.toMillisInt(DurationUtils.java:255)
+    at org.apache.commons.lang3.time.DurationUtilsAgentTest.testToMillisIntClampsToMinValueOnOverflow(DurationUtilsAgentTest.java:236)
+
+2) org.apache.commons.lang3.time.DurationUtilsAgentTest#testToMillisIntClampsToMaxValueOnOverflow()
+java.lang.ArithmeticException: long overflow
+    at java.base/java.lang.Math.multiplyExact(Math.java:949)
+    at java.base/java.lang.Math.multiplyExact(Math.java:925)
+    at java.base/java.time.Duration.toMillis(Duration.java:1225)
+    at org.apache.commons.lang3.time.DurationUtils.toMillisInt(DurationUtils.java:255)
+    at org.apache.commons.lang3.time.DurationUtilsAgentTest.testToMillisIntClampsToMaxValueOnOverflow(DurationUtilsAgentTest.java:230)
+
+Tests run: 64, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 64, failed: 2
+FAILURES!!!

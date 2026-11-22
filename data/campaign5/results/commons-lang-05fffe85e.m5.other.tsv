@@ -1,0 +1,19 @@
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testIndependentInstancesDoNotShareState()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testDeeplyNestedReflectionObject()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testBlank()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testPrimitiveWrapperValueIsNotRecursed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testNestedReflectionObject()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testStringValueIsNotRecursed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testMultipleFields()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testEmptyIntArray()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testIndentStateDoesNotDriftAcrossCalls()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testObjectArrayWithNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testAppendDetailStringDirectCallIsNotRecursed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testAppendDetailObjectDirectCall()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testIntArray()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testNullIntArray()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testNullValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testAppendSuper()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testEqualsAndHashCodeAreObjectIdentity()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testSingleField()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testAppendDetailNullObjectDirectCall()	1	1	java.lang.NullPointerException

@@ -1,0 +1,15 @@
+1) org.apache.commons.lang3.math.NumberUtilsAgentTest#testCreateBigInteger()
+org.opentest4j.AssertionFailedError: Expected java.lang.NumberFormatException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.math.NumberUtilsAgentTest.testCreateBigInteger(NumberUtilsAgentTest.java:88)
+
+2) org.apache.commons.lang3.math.NumberUtilsAgentTest#testIsCreatable()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.math.NumberUtilsAgentTest.testIsCreatable(NumberUtilsAgentTest.java:203)
+
+3) org.apache.commons.lang3.math.NumberUtilsAgentTest#testCreateNumberInvalid()
+org.opentest4j.AssertionFailedError: Expected java.lang.NumberFormatException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.math.NumberUtilsAgentTest.testCreateNumberInvalid(NumberUtilsAgentTest.java:191)
+
+Tests run: 62, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 62, failed: 3
+FAILURES!!!

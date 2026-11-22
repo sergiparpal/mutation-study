@@ -1,0 +1,9 @@
+1) org.apache.commons.lang3.LocaleUtilsAgentTest#testToLocaleStringNumericAreaCodeBypassesLanguageValidation()
+java.lang.IllegalArgumentException: Invalid locale format: ZZ_012
+    at org.apache.commons.lang3.LocaleUtils.parseLocale(LocaleUtils.java:362)
+    at org.apache.commons.lang3.LocaleUtils.toLocale(LocaleUtils.java:443)
+    at org.apache.commons.lang3.LocaleUtilsAgentTest.testToLocaleStringNumericAreaCodeBypassesLanguageValidation(LocaleUtilsAgentTest.java:378)
+
+Tests run: 55, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 55, failed: 1
+FAILURES!!!

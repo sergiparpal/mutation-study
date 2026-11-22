@@ -1,0 +1,1 @@
+commons-csv-bbdfad773,m5,fixed,Fail,,96,0,1,org.apache.commons.csv.CSVFormatAgentTest#testFormatMultiCharDelimiterTrailingPartialMatchIsQuoted(),,,2,0

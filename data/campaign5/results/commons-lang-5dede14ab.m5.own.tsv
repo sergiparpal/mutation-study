@@ -1,0 +1,16 @@
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingMethodVarArgsFirstParamMismatch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testSetAccessibleWorkaroundAppliesToPackagePrivateDeclaringClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testSetAccessibleWorkaroundLeavesPublicDeclaringClassUntouched()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testCompareMethodFitPrefersNarrowerPrimitive()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsPackage()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testCompareConstructorFitPrefersExactTypeMatch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingMethodVarArgsExplicitArray()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsPublic()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsStatic()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingConstructor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingMethodExactAndAssignable()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingMethodVarArgsNoneProvided()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testSetAccessibleWorkaroundNoOpWhenAlreadyAccessible()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testCompareMethodFitPrefersExactTypeMatch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsMatchingMethodVarArgsSomeProvided()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.reflect.MemberUtilsAgentTest#testIsAccessible()	1	0	
