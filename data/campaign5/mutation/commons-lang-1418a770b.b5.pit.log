@@ -1,0 +1,54 @@
+1:10:42 PM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+1:10:42 PM PIT >> INFO : Created 1 mutation test units in pre scan
+1:10:42 PM PIT >> INFO : Sending 5 test classes to minion
+1:10:42 PM PIT >> INFO : Sent tests to minion
+1:10:43 PM PIT >> INFO : Calculated coverage in 0 seconds.
+1:10:43 PM PIT >> INFO : 0 tests took longer than 2000 ms
+1:10:43 PM PIT >> INFO : Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest]/[method:testFullToStringWithNullFieldDoesNotRecurse()]) took 16 ms
+1:10:43 PM PIT >> INFO : Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest]/[method:testAppendDetailWithCollectionRecursesIntoEachElement()]) covered 20 blocks
+1:10:43 PM PIT >> INFO : Created 1 mutation test units
+1:10:44 PM PIT >> INFO : Completed in 1 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 4 Killed 4 (100%)
+> KILLED 4 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 3 Killed 3 (100%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : < 1 second
+--------------------------------------------------------------------------------
+> Total  : 1 seconds
+--------------------------------------------------------------------------------
+> 0 tests took longer than 2000 ms
+> Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest]/[method:testFullToStringWithNullFieldDoesNotRecurse()]) took 16 ms
+> Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest]/[method:testAppendDetailWithCollectionRecursesIntoEachElement()]) covered 20 blocks
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 14/14 (100%)
+>> 5 tests examined
+>> Generated 8 mutations Killed 8 (100%)
+>> Mutations with no coverage 0. Test strength 100%
+>> Ran 12 tests (1.5 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/

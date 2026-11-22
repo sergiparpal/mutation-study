@@ -1,0 +1,54 @@
+1:50:42 PM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+1:50:42 PM PIT >> INFO : Created 1 mutation test units in pre scan
+1:50:42 PM PIT >> INFO : Sending 13 test classes to minion
+1:50:42 PM PIT >> INFO : Sent tests to minion
+1:50:43 PM PIT >> INFO : Calculated coverage in 0 seconds.
+1:50:43 PM PIT >> INFO : 0 tests took longer than 2000 ms
+1:50:43 PM PIT >> INFO : Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.cli.TypeHandlerAgentTest]/[method:testCreateDateValid()]) took 44 ms
+1:50:43 PM PIT >> INFO : Largest test ([engine:junit-jupiter]/[class:org.apache.commons.cli.TypeHandlerAgentTest]/[method:testCreateClassInvalid()]) covered 38 blocks
+1:50:43 PM PIT >> INFO : Created 1 mutation test units
+1:50:44 PM PIT >> INFO : Completed in 1 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 13 Killed 13 (100%)
+> KILLED 13 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 2 Killed 2 (100%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : 1 seconds
+--------------------------------------------------------------------------------
+> Total  : 1 seconds
+--------------------------------------------------------------------------------
+> 0 tests took longer than 2000 ms
+> Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.cli.TypeHandlerAgentTest]/[method:testCreateDateValid()]) took 44 ms
+> Largest test ([engine:junit-jupiter]/[class:org.apache.commons.cli.TypeHandlerAgentTest]/[method:testCreateClassInvalid()]) covered 38 blocks
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 42/42 (100%)
+>> 13 tests examined
+>> Generated 16 mutations Killed 16 (100%)
+>> Mutations with no coverage 0. Test strength 100%
+>> Ran 17 tests (1.06 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
