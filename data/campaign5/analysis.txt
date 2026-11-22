@@ -1,0 +1,88 @@
+Fifth campaign: 115 subjects, arms b5, m5; seed 20261122, 10000 resamples
+
+Runs
+  b5: 115 runs of 115, 115 with an accepted suite; $58.63 at list prices, 19.8 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['16a2ea4', 'c5d8557']
+      tests left out at acceptance: 25 of 5192 (0.5%)
+  m5: 115 runs of 115, 115 with an accepted suite; $60.05 at list prices, 20.6 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['16a2ea4', 'c5d8557']
+      tests left out at acceptance: 14 of 5500 (0.3%)
+
+Subjects outside the paired set
+  none
+
+Runs with a violation: none
+
+The certification rate (b5)
+  7 of 115 suites certify the fault (6.1%); 95% bootstrap interval [1.7%, 10.4%]
+
+H1: certification in b5 and detection in m5 differ
+  paired set: 115 subjects
+      b5 certifies 7/115 (6.1%)   m5 detects 26/115 (22.6%)
+      both 4, b5 only 3, m5 only 22, neither 86
+      exact McNemar, two-sided: p = 0.000157
+      difference b5 - m5 -16.5 points, 95% bootstrap interval [-24.3, -8.7]
+  Outcome: H1 rejected, b5 below m5. The sign of the effect follows the
+  revision the agent reads, but its size does not
+
+Mutation score and line coverage, each arm on its own revision (secondary)
+  complete set: 112 of the 115 paired subjects
+  pooled mutation score: b5 42.1%   m5 41.1%   difference +1.0 points, 95% bootstrap interval [-2.6, +5.1]
+  pooled line coverage: b5 60.4%   m5 58.6%   difference +1.7 points, 95% bootstrap interval [-3.0, +7.2]
+  b5 suites that certify: 7; pooled mutation score 63.5%, line coverage 83.7%
+  m5 suites that detect: 24; pooled mutation score 54.7%, line coverage 71.8%
+
+The tests PIT ran against the tests the measurement ran
+  230 of 230 suites with a mutation figure agree
+
+Tests left out at acceptance, run on the other revision (secondary)
+  b5: 3 suites had tests left out and run on the other revision; 0 of 25 such methods pass there (expected the repaired behaviour), in 0 suites
+  m5: 3 suites had tests left out and run on the other revision; 0 of 14 such methods pass there (expected the faulty behaviour), in 0 suites
+  b5 runs whose closing message says the code under test is wrong: 0
+
+Sensitivity analyses (none is confirmatory)
+  1. runs with a violation included: 115 subjects
+      b5 certifies 7/115 (6.1%)   m5 detects 26/115 (22.6%)
+      both 4, b5 only 3, m5 only 22, neither 86
+      exact McNemar, two-sided: p = 0.000157
+      difference b5 - m5 -16.5 points, 95% bootstrap interval [-24.3, -8.7]
+  2. intention to treat: 115 subjects
+      b5 certifies 7/115 (6.1%)   m5 detects 26/115 (22.6%)
+      both 4, b5 only 3, m5 only 22, neither 86
+      exact McNemar, two-sided: p = 0.000157
+      difference b5 - m5 -16.5 points, 95% bootstrap interval [-24.3, -8.7]
+  runs that name the fix: 9 — b5 commons-lang-060ab31e5, b5 commons-lang-127050d2b, b5 commons-lang-54ee8ec1c, b5 commons-lang-7c91ce989, m5 commons-lang-060ab31e5, m5 commons-lang-127050d2b, m5 commons-lang-4bfbfeabe, m5 commons-lang-54ee8ec1c, m5 commons-lang-7c91ce989
+  3. runs that name the fix left out: 110 subjects
+      b5 certifies 6/110 (5.5%)   m5 detects 25/110 (22.7%)
+      both 4, b5 only 2, m5 only 21, neither 83
+      exact McNemar, two-sided: p = 6.6e-05
+      difference b5 - m5 -17.3 points, 95% bootstrap interval [-25.5, -9.1]
+  4. Fail by timeout read as Pass: 115 subjects
+      b5 certifies 7/115 (6.1%)   m5 detects 25/115 (21.7%)
+      both 4, b5 only 3, m5 only 21, neither 87
+      exact McNemar, two-sided: p = 0.000277
+      difference b5 - m5 -15.7 points, 95% bootstrap interval [-23.5, -7.8]
+  5. the strict screen's subjects only (108): 108 subjects
+      b5 certifies 7/108 (6.5%)   m5 detects 25/108 (23.1%)
+      both 4, b5 only 3, m5 only 21, neither 80
+      exact McNemar, two-sided: p = 0.000277
+      difference b5 - m5 -16.7 points, 95% bootstrap interval [-25.0, -8.3]
+
+Descriptive comparisons (none is a test of the protocol)
+  by project
+      commons-cli              6 subjects   b5 certifies   0   m5 detects   4
+      commons-csv             16 subjects   b5 certifies   0   m5 detects   4
+      commons-lang            93 subjects   b5 certifies   7   m5 detects  18
+  by fault type
+      ALGORITHM               17 subjects   b5 certifies   2   m5 detects   3
+      API                      9 subjects   b5 certifies   0   m5 detects   6
+      MISSING_CLAUSE          19 subjects   b5 certifies   3   m5 detects   6
+      OMISSION                35 subjects   b5 certifies   0   m5 detects  10
+      STATE                   12 subjects   b5 certifies   1   m5 detects   1
+      SUBSTITUTION            23 subjects   b5 certifies   1   m5 detects   0
+  by date of the fix (up to 2026-09-22 or after)
+      after                   29 subjects   b5 certifies   2   m5 detects   4
+      up to 2026-09-22        86 subjects   b5 certifies   5   m5 detects  22
+  m4 (first) beside m5 (second), the same condition run twice: 115 subjects; Fail in both 16, only the first 5, only the second 10; agreement 87.0%, Cohen's kappa 0.60
+  s4 (first) beside b5 (second), neither shown the repair: 112 subjects; Fail in both 1, only the first 2, only the second 6; agreement 92.9%, Cohen's kappa 0.17
+
