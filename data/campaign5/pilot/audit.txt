@@ -1,0 +1,10 @@
+b5: 2 transcripts
+  commons-csv-ab3d7236       commands=14  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  commons-lang-6c4269eb8     commands=5   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  runs with a flagged command: 0 of 2; calls the harness refused: 0; commands the sandbox denied: 0; runs that touched another file: 0; runs that name the fix: 0
+
+m5: 2 transcripts
+  commons-csv-ab3d7236       commands=10  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  commons-lang-6c4269eb8     commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  runs with a flagged command: 0 of 2; calls the harness refused: 0; commands the sandbox denied: 0; runs that touched another file: 0; runs that name the fix: 0
+

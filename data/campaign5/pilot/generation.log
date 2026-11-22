@@ -1,0 +1,44 @@
+[commons-lang-6c4269eb8] staging the faulty revision (w-XG5iGRHr)
+[commons-lang-6c4269eb8] leak scan: clean
+[commons-lang-6c4269eb8] invoking agent (claude-sonnet-5, b5)
+[commons-lang-6c4269eb8] agent done: $0.324 turns=17 state=ok
+[commons-lang-6c4269eb8] left out 0 of 25 tests
+[commons-lang-6c4269eb8] packaged: commons-lang-6c4269eb8-b5.tar.bz2
+
+b5 suites packaged: 1
+failures:           0
+tests left out:     0 of 25 (0.0%)
+cost, as reported:  $0.32
+[commons-lang-6c4269eb8] staging the fixed revision (w-HawbG24l)
+[commons-lang-6c4269eb8] leak scan: clean
+[commons-lang-6c4269eb8] invoking agent (claude-sonnet-5, m5)
+[commons-lang-6c4269eb8] agent done: $0.215 turns=12 state=ok
+[commons-lang-6c4269eb8] left out 0 of 47 tests
+[commons-lang-6c4269eb8] packaged: commons-lang-6c4269eb8-m5.tar.bz2
+
+m5 suites packaged: 1
+failures:           0
+tests left out:     0 of 47 (0.0%)
+cost, as reported:  $0.22
+[commons-csv-ab3d7236] staging the fixed revision (w-WPwy7Y7M)
+[commons-csv-ab3d7236] leak scan: clean
+[commons-csv-ab3d7236] invoking agent (claude-sonnet-5, m5)
+[commons-csv-ab3d7236] agent done: $0.392 turns=19 state=ok
+[commons-csv-ab3d7236] left out 0 of 30 tests
+[commons-csv-ab3d7236] packaged: commons-csv-ab3d7236-m5.tar.bz2
+
+m5 suites packaged: 2
+failures:           0
+tests left out:     0 of 77 (0.0%)
+cost, as reported:  $0.61
+[commons-csv-ab3d7236] staging the faulty revision (w-Gqzn9ZPw)
+[commons-csv-ab3d7236] leak scan: clean
+[commons-csv-ab3d7236] invoking agent (claude-sonnet-5, b5)
+[commons-csv-ab3d7236] agent done: $0.495 turns=30 state=ok
+[commons-csv-ab3d7236] left out 0 of 37 tests
+[commons-csv-ab3d7236] packaged: commons-csv-ab3d7236-b5.tar.bz2
+
+b5 suites packaged: 2
+failures:           0
+tests left out:     0 of 62 (0.0%)
+cost, as reported:  $0.82

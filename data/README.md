@@ -2175,6 +2175,33 @@ Those counts agree with the audit's (above):
 
 `bin/report-figures.py` runs both scripts for §3.12 of the write-up.
 
+## Fifth campaign
+
+The fifth campaign shows the implementation-visible agent the faulty revision
+of each fix, the parent of the fix commit (`b5`). Beside it, the fourth
+campaign's implementation-visible arm is made again on the fix commit (`m5`).
+Its subjects are the fourth campaign's 115, with their records, and its
+conditions are the fourth campaign's. A `b5` suite is accepted on the faulty
+revision, and one that then fails on the fix certifies the fault.
+
+The protocol is `campaign5/PROTOCOL.md`. It was fixed on 22 November 2026,
+before any run on the subjects, by the merge of its pull request. Its estimate
+is the certification rate. Its hypothesis, H1, is that certification in `b5`
+and detection in `m5` differ.
+
+- `campaign5/subjects.txt`: the subjects in the order of the runs, with the
+  fourth campaign's columns. `bin/subjects-campaign5.py` writes it from
+  `campaign4/subjects.txt`. Its `--check` confirms the list, and checks that
+  every fix commit has one parent at which every class under test exists. The
+  records are the fourth campaign's (`campaign4/subjects/`).
+- `campaign5/probe.txt`, `campaign5/saved-copies.txt`: the output of
+  `bin/agent-sandbox.py probe` and of `bin/probe-saved-copies.py`, with CLI
+  2.1.316.
+- `campaign5/pilot/`: the pilot. It is four runs with the model, made on 22
+  November 2026 on the third campaign's two pilot subjects, in both arms. It
+  holds their audit, their closing messages, and their measurement and
+  mutation measurement. It is not part of any result.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -2245,4 +2272,6 @@ mistake for results:
 - [x] Fourth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed. Detection is 18.8% against 2.7% over 112 pairs, and H1 is rejected. H2 is supported: +99.2 points [+73.8, +120.9], with `s4`'s pooled mutation score above `m4`'s (`campaign4/analysis.txt`)
 - [x] Write-up carries the fourth campaign: `PREPRINT.md` §2.12 and §3.12, and the abstract, introduction, discussion, threats, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign4.py`, and §3.12 in `bin/report-figures.py`
 - [x] How far the Read tool's exception for the CLI's saved copies reaches, tried without the model: the `tool-results` directory of the run's own session and nothing else, in both arms and under both settings (`bin/probe-saved-copies.py`, `sandbox/saved-copies.txt`, `sandbox/saved-copies-as-run.txt`)
+- [x] Fifth campaign prepared: protocol, scripts, checks without the model on the fourth campaign's 115 subjects in both arms, and a pilot (`campaign5/`)
+- [x] Fifth campaign's protocol fixed before any run on the subjects (`campaign5/PROTOCOL.md`)
 - [ ] A matched post-cutoff corpus large enough to test the effect size. Not pursued (21 November 2026): a corpus matched to the Defects4J sample can take at most 69 of the pool's 131 new subjects, 115 of which the fourth campaign has run, and its analysis weights detection by the sample's fault types instead (`campaign4/analysis.txt`)

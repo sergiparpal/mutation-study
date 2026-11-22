@@ -1,0 +1,5 @@
+subject,arm,own_revision,verdict,note,methods_run_on_own,keys_left_out,failing_on_other,failing_keys,left_out_methods_run_on_other,left_out_passing_on_other,seconds_own,seconds_other
+commons-lang-6c4269eb8,b5,faulty,Pass,,25,0,0,,,,0,0
+commons-lang-6c4269eb8,m5,fixed,Pass,,47,0,0,,,,0,0
+commons-csv-ab3d7236,b5,faulty,Pass,,37,0,0,,,,1,0
+commons-csv-ab3d7236,m5,fixed,Pass,,30,0,0,,,,1,1
