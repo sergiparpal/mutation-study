@@ -1,11 +1,10 @@
 # Fifth campaign: protocol (draft)
 
-**Draft of 21 November 2026, not fixed.** No run has been made with the model
-for this campaign. The scripts this file names are written, and have been
-tried without the model on two subjects ("Checks to be made without the
-model", below). The full checks and the pilot have not been made. It will be
-fixed as the fourth campaign's was: by the merge of the pull request that adds
-it, after those checks and the pilot. Until then it can change.
+**Draft, not fixed.** No run has been made with the model for this campaign.
+The scripts this file names are written, and the checks without the model
+have been made (below). The pilot has not been run. The protocol will be fixed
+as the fourth campaign's was: by the merge of the pull request that adds it,
+after the pilot. Until then it can change.
 
 ## Why a fifth campaign
 
@@ -283,50 +282,93 @@ None is a test of this protocol.
 - **The subjects have been used.** `m4` and `s4` ran on them, and their
   results are known. That is why `m5` is made again.
 
-## Checks to be made without the model
+## Checks made without the model
 
-The full checks have not been made yet; a first trial has.
+**The sandbox.** On 21 November 2026, with CLI 2.1.316, the binary of the
+runs, both checks of step 0 passed every check in both arms (`probe.txt`,
+`saved-copies.txt`). The first gave what it gave for the fourth campaign,
+apart from the random names of the runs' temporary directories and the number
+of the CLI's own entries in them. In the second, the Read tool opened the
+`tool-results` directory of the run's own session and nothing else that was
+tried.
 
-**Tried so far.** On 21 November 2026 the scripts were tried without the
-model on two subjects, `commons-csv-b5940a642` and `commons-lang-1418a770b`,
-in both arms. The output was kept outside the repository.
+**The subjects, with no model call.** From 21 November 2026 at 18:33 UTC to
+22 November at 04:05, the generator, the measurement and the mutation
+measurement were run on all 115 subjects in both arms (`DRY=1`), and the
+analysis on their output. Developers' tests stood in for the agent's suite:
 
-- **Generation.** Each revision was exported and built, and the agent's
-  scripts compiled and ran a two-test class. The prompt is the same file in
-  both arms. The `b5` stand-ins are the parent's versions of the test files:
-  122 and 9 test methods, against the fix's 123 and 13.
-- **Measurement.** The `m5` stand-ins are `Fail` and the `b5` ones `Pass`. On
-  neither subject does a test of the parent fail on the fix.
-- **The left-out run.** It was tried by leaving one test out of each suite of
-  one subject. In `m5`, a trigger test was left out, and it failed on the
-  parent. In `b5`, a test that passes on both revisions was left out, and it
-  passed on the fix.
-- **Mutation.** PIT gave each suite a figure, on its own revision. The
-  methods it kept are those the measurement ran in all four suites.
-- **Analysis.** It ran on this output. It also ran on made-up verdicts for 112
-  subjects, and reached each of the three outcomes of the decision rule.
+- in `m5`, as in the fourth campaign, their test classes for the fix, renamed;
+- in `b5`, the parent's versions of the test files the fix touches, renamed.
+  They pass on the parent by construction. Where the fix changed one of them
+  so that it no longer holds, it fails on the fix commit.
 
-**Still to be made:**
+The output was kept outside the repository, where no agent can read it, and is
+deleted before any run.
 
-- **The sandbox.** Run both checks of step 0.
-- **The subjects, with no model call.** Run the generator and the measurement
-  on all 115 subjects in both arms (`DRY=1`), and the mutation measurement on
-  both arms. The output is kept outside the repository, where no agent can
-  read it, and deleted before any run. The stand-ins for the agent's suite are
-  as follows:
-  - **`m5`:** as in the fourth campaign, the developers' own test classes for
-    the fix, renamed. Each should come out `Fail`.
-  - **`b5`:** the parent's own versions of the test files the fix commit
-    touches, renamed. They pass on the parent by construction. Where the fix
-    changed one of their assertions, they fail on the fix commit; elsewhere
-    they pass. The `Fail` verdicts should therefore fall on those subjects and
-    no others. This checks the verdict in the direction the campaign needs.
-    Subjects with no such file have no stand-in in `b5`, and are listed.
-- **The search of the working copies** for issue identifiers, pull-request
-  numbers, fix-commit hashes, subject lines and trigger-test names, in both
-  arms.
-- **The analysis.** Run it on that output. Run it again on a copy with made-up
-  verdicts, so that H1 is rejected in each direction.
+- **Generation.** Both revisions of every subject were exported and built
+  offline. The agent's scripts compiled and ran a two-test class in all 230
+  working copies. Every `m5` stand-in was accepted with no test left out:
+  8,190 test methods, as in the fourth campaign. Seven `b5` subjects have no
+  stand-in, because the only test file each fix touches is one it adds:
+  `commons-lang-0953617b7`, `19b59ffdd`, `4052e9862`, `864dd6ea8`,
+  `c79a10240`, `daa17b862` and `e2838b281`. The other 108 were accepted with no
+  test left out: 8,006 test methods.
+- **The search of the working copies** found, in both arms, what it found in
+  the fourth campaign and nothing else. That is a trigger test's name in the
+  working copies of four subjects, each time a method of the same name in
+  another test class (`commons-lang-1418a770b`, `7c91ce989`, `b1aba6833`,
+  `c07bc828f`). The files and lines are the same in both arms.
+- **Measurement.** All 115 `m5` stand-ins are `Fail`. Two of them are `Fail`
+  by timeout on the parent, `commons-lang-184c9e832` and `5d46a39e4`, the two
+  the fourth campaign's check found. Of the 108 `b5` stand-ins, three are
+  `Fail` and 105 `Pass`:
+  - In `commons-lang-4a5ef8ed2` and `3df7f4440`, the fix changed an assertion
+    of the failing test, and the old one does not hold on the fix. The test,
+    as it stood before the fix, encoded the faulty behaviour.
+  - In `commons-lang-f4442b1c9`, no assertion changed. The fix changed the
+    signature of a private constructor that the test reaches by reflection.
+    The parent's test therefore fails on the fix for a reason other than the
+    fault, the kind of failure that "A failing test is not always about the
+    fault" describes.
+  - Three more fixes rewrote or extended an assertion of a test that was
+    already there, without reversing it (`commons-lang-45c80d995`,
+    `5904c573f`, `b62244517`). The parent's tests pass on the fix there.
+
+  The `b5` verdicts are `Fail` where the fix changed the failing test, and
+  nowhere else.
+- **The left-out run** had nothing to run: no stand-in test was left out at
+  acceptance. It was tried on exclusions made by hand in the first trial,
+  below.
+- **Mutation.** PIT gave a figure for 107 `m5` suites and 100 `b5` suites. In
+  both arms it gave none for the same eight subjects, the fourth campaign's
+  exceptions:
+  - the four whose fix is in `FastDateParser`, which did not finish within
+    the 30 minutes this check allowed; the campaign allows two hours;
+  - `commons-lang-c07bc828f`, whose developers' test of `java.awt.headless`
+    fails under PIT;
+  - the three `commons-cli` subjects whose fix is in `Converter`, which have no
+    mutant.
+
+  In all 213 suites on which PIT finished, the methods it kept are those the
+  measurement ran.
+- **Analysis.** It ran on this output, with a paired set of 108 subjects and a
+  complete set of 100.
+- **Durations.** Generation took 53 minutes. The measurement took 1 hour 32
+  minutes, 40 of them in the two runs that end by timeout. The mutation
+  measurement of both arms took 7 hours 6 minutes, 4 hours of them in the
+  eight runs that did not finish.
+
+The check found no fault in the scripts.
+
+**The first trial**, on 21 November 2026, ran the scripts on two subjects,
+`commons-csv-b5940a642` and `commons-lang-1418a770b`, in both arms. It also
+tried two things the full check could not:
+
+- **The left-out run**, by leaving one test out of each suite of one subject.
+  In `m5` a trigger test was left out, and it failed on the parent. In `b5` a
+  test that passes on both revisions was left out, and it passed on the fix.
+- **The analysis on made-up verdicts** for 112 subjects, which reached each of
+  the three outcomes of the decision rule.
 
 ## Pilot
 
