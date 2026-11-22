@@ -73,6 +73,16 @@ detect far less on these faults than on Defects4J, and the gap between them is
 narrower in points. The corpora differ in more than the date of their faults,
 so they cannot say how much of the Defects4J figure recall does account for.
 
+A fifth campaign ran the condition the others leave out: the
+implementation-visible agent shown the faulty revision of the same 115
+faults, beside the arm that reads the repair, run again. Shown the fault and
+asked for passing tests, its suites lock the fault in on **7 of the 115
+(6%)**. They pass on the faulty code and fail on the repair. Shown the repair,
+the suites detect the fault on 26 (23%; *p* = 1.6 × 10⁻⁴). The sign of the
+effect follows the revision the agent reads, but its size does not. The two
+arms' pooled mutation scores are 42% and 41%. Run twice, the arm that reads
+the repair changes its verdict on 15 of the 115 faults.
+
 Three further observations. An agent writing from javadoc alone is wrong about
 the code in one test out of fifteen, and catches seven faults, one of which the
 implementation-visible arm misses. An EvoSuite baseline sits between the arms
@@ -159,6 +169,15 @@ not account for the effect. Both arms detect much less on the newer faults
 than on Defects4J, in corpora that differ in more than their date, and we
 cannot say how much of the Defects4J figure is recall that the source cues.
 
+The fifth campaign (§2.13, §3.13) ran the condition the regression setting
+leaves out. It showed the implementation-visible agent the faulty revision of
+the same 115 faults, beside the fourth campaign's arm run again on the
+repair. Shown the fault, the agent's suites lock it in on 7 of the 115
+subjects. Shown the repair, they detect it on 26, and the test rejects
+(*p* = 1.6 × 10⁻⁴). The sign of the effect follows the revision the agent
+reads, but its size does not, and the omissions suggest why (§4.1). The two
+arms' mutation scores are within a point of each other.
+
 Contributions:
 
 1. A controlled measurement of how much of an agent's apparent fault-detection
@@ -201,6 +220,13 @@ Contributions:
    one's audit found open, both hypotheses hold: 19% against 3% over 112
    subjects. Pooled, the mutation score there is higher for the suites that
    detect less.
+9. The condition the regression setting leaves out, measured on real faults.
+   Shown the faulty revision of 115 post-cutoff faults and asked for passing
+   tests, the agent's suites certify the fault on 6% of them, a quarter as
+   often as the same agent detects it from the repair. The two arms' mutation
+   scores are level. The same campaign makes the study's one measurement of
+   variation between runs: run twice, the implementation-visible arm changes
+   verdict on 15 of 115 subjects.
 
 ---
 
@@ -213,7 +239,9 @@ the agent is given, what is enforced and what is recorded. §2.11 describes a
 third campaign, which takes the second's conditions to faults that postdate
 the model's training data. §2.12 describes a fourth, which does the same on
 115 more such faults, with a tighter sandbox and mutation score in its
-protocol.
+protocol. §2.13 describes a fifth, which shows the implementation-visible agent
+the faulty revision of the same 115 faults, beside the fourth campaign's arm
+run again.
 
 ### 2.1 Subjects
 
@@ -811,6 +839,74 @@ sensitivity analysis.
   launchers but the compiler. It does not hide every other general-purpose
   tool, and the transcript audit covers the rest.
 
+### 2.13 The fifth campaign
+
+The fifth campaign runs a condition that no earlier campaign covered: the
+implementation-visible agent is shown the **faulty** revision. §4.1 says what
+it should then do. An agent that encodes the code it reads, shown faulty code,
+writes tests that pass on that code and fail on the repair. Such a suite
+*certifies* the fault: run against the repair, it would report a regression.
+
+**The subjects** are the fourth campaign's 115, with their records. Every fix
+commit has a single parent, and every class under test exists there, so the
+prompt names the same classes in both arms.
+
+**The arms.** B5 works on the parent of the fix commit. Its working copy,
+prompt, sandbox and acceptance are the fourth campaign's M4, applied to that
+revision. Its suite is therefore accepted on the faulty code it was written
+against. M5 is M4 made again on the fix commit, beside B5. The two arms of a
+subject run one after the other, and which goes first alternates.
+
+The prompt is the same text in both arms and says nothing about a fault. Like
+M4's, it ends "Finish when all your tests pass". The campaign therefore
+measures what an agent does when it is asked to write tests for code that has
+a fault it has not been told of, the setting of tests written after the code.
+It does not measure an agent asked to look for faults.
+
+**The outcomes.** A B5 suite certifies the fault when it passes on the parent
+and at least one of its tests fails on the fix commit. The fourth campaign's
+rules apply, with the revisions swapped. An M5 suite detects the fault as in
+the fourth campaign. Mutation score and coverage are measured with PIT, each
+suite on the revision it was accepted on.
+
+**The analysis was fixed in advance** (`data/campaign5/PROTOCOL.md`). As in the
+fourth campaign, a dry run of every step and four pilot runs came first.
+
+- *The estimate* is the certification rate, with a percentile bootstrap
+  interval over subjects.
+- *H1* is that certification in B5 and detection in M5 differ. The test is
+  exact McNemar, two-sided, at α = 0.05, on the subjects with a verdict in
+  both arms. If the mechanism of §4.1 were the whole story, the two rates
+  would be close. If B5 certifies far less often than M5 detects, the repaired
+  code does more than get copied.
+- *Secondary outcomes, with no decision rule:*
+  - mutation score and coverage, each arm on its own revision;
+  - the tests left out at acceptance, run on the other revision;
+  - the B5 closing messages that say the code under test is wrong, read
+    before anything was measured.
+- *A repetition.* M5 beside M4 is the same condition run twice on the same
+  subjects. It is the study's first measurement of how far a verdict varies
+  between runs.
+
+The protocol also fixes what this paper says if H1 is rejected with B5 below
+M5. In that case the sign of the effect follows the revision the agent reads,
+but its size does not, and §4.1 is qualified accordingly.
+
+**What the test can show.** Suppose there are 112 pairs and M5 detects as
+often as M4 did. H1 then rejects with probability 0.67 if certification is
+half as frequent as detection, and 0.97 if it is a quarter. It does not find a
+small difference.
+
+**What the fifth campaign does not control**, besides what the fourth does
+not:
+
+- *What a failing test is about.* In either arm, a test can fail on the other
+  revision because of something else the fix commit changed.
+- *How old the faulty code is.* It stood in the library before the fix, so the
+  model may have seen it in training. It cannot have seen the fix.
+- *That the subjects had been used.* M4 and S4 ran on them a day or two
+  earlier. That is why M5 is run again rather than compared with M4.
+
 ---
 
 ## 3. Results
@@ -820,7 +916,9 @@ and §3.9 what an audit of that campaign found. §3.10 reports the second
 campaign, which is the confirmatory result. §3.11 reports the third, on
 faults that postdate the model's training data, whose test does not reject.
 §3.12 reports the fourth, on 115 more such faults, where both of its
-hypotheses hold.
+hypotheses hold. §3.13 reports the fifth, on the same 115 faults. There, the
+agent shown the faulty code locks the fault in far less often than the agent
+shown the repaired code detects it.
 
 ### 3.1 First campaign: the two arms
 
@@ -1740,25 +1838,194 @@ too. So none of this measures what recall contributed on Defects4J.
 **Cost.** At list prices the 115 M4 runs cost $61.38 and the 115 S4 runs
 $98.68, or $0.53 and $0.88 a suite, in 21 and 18 turns a run on average.
 
+### 3.13 Fifth campaign: the faulty revision
+
+The 230 runs of the fifth campaign (§2.13) were made on 22 November 2026, from
+08:20 to 19:49 UTC, in the order the protocol fixes. None was cut short by a
+usage limit. Seven reached the limit of 50 turns, four in B5 and three in M5,
+and every run left an accepted suite. The B5 agents wrote 5,192 tests and the
+M5 agents 5,500.
+
+**The machine's Java changed during the runs.** At 14:13 UTC a package
+installation unrelated to the campaign made Java 21's runtime the machine's
+default. The harness finds Java on the path, so from then on no revision could
+be built offline.
+
+- The 111 runs still to be made failed before their agent started. Those are
+  harness failures, which the protocol makes again once the harness is fixed.
+- Java 11 was restored and the deviation was entered in the protocol and
+  committed. The 111 runs were then made, from 15:01 UTC.
+- One run had started 25 seconds before the change. Its agent ran its tests,
+  and the harness ran its acceptance, on Java 21's virtual machine. The run
+  completed, so by the protocol it is kept. Its subject is `Pass` in both
+  arms, so H1's counts and *p* are the same without it.
+
+**The audit found no violation.** Every flagged command was read with its
+result.
+
+- *The network.* The only commands that reach for it call Maven, which the
+  sandbox leaves without a Maven to start.
+- *Outside the working copy.* Nothing was read but these:
+  - the operating system and the JDK;
+  - a command's private `/tmp`;
+  - the run's own temporary directory;
+  - the harness's saved copy of the run's own long output.
+- *Naming the fix.* Nine runs, four of B5 and five of M5, name a trigger test.
+  Each time, the agent named its test after the method it tests.
+- *The B5 closing messages* were read before anything was measured. None says
+  the code under test is wrong. Four call a behaviour a quirk and test it as
+  it is. One says that two behaviours did not match the agent's reading of the
+  javadoc, and that it asserted what the code does.
+
+**Measurement.** Every suite compiles against both revisions and passes again
+on its own. No suite is `Broken`, so the paired set is all 115 subjects. One
+M5 verdict is `Fail` by timeout.
+
+| | B5 (reads the faulty code) | M5 (reads the repaired code) |
+|---|---|---|
+| **Fault certified** (B5) or **detected** (M5), 115 subjects | **7/115 — 6.1%** | **26/115 — 22.6%** |
+
+**The certification rate** is 6.1%, with a 95% bootstrap interval from 1.7% to
+10.4%.
+
+**H1 is rejected, with B5 below M5.** Of the 115 subjects:
+
+- four are certified by B5 and detected by M5;
+- three are certified only;
+- 22 are detected only;
+- 86 are neither.
+
+The exact McNemar test gives *p* = 1.6 × 10⁻⁴. The difference is −16.5
+points, with a 95% bootstrap interval of −24.3 to −8.7. By the rule fixed in
+the protocol, the sign of the effect follows the revision the agent reads, but
+its size does not. Shown the faulty code, the agent locks the fault in about a
+quarter as often as it detects the fault when shown the repaired code.
+
+**What the certifying tests assert.** Six of the seven certifications rest on
+one failing test and the seventh on two. In six, the failing test asserts the
+very behaviour the fix corrects, and its name often says so:
+
+- `testSleepQuietlySwallowsInterruptedException`: the fix makes
+  `ThreadUtils.sleepQuietly` restore the thread's interrupt flag.
+- `testToLocaleStringNumericAreaCodeBypassesLanguageValidation`: an
+  operator-precedence bug in `LocaleUtils` let an invalid language through
+  when the country was a numeric area code.
+- `testUnescapeCsvSingleQuoteCharacterThrows`: `unescapeCsv` failed on a field
+  that is a single quote character. In its closing message this agent called
+  the exception "a library edge-case quirk".
+- Three more tests expect behaviour the fix removed. `ExtendedMessageFormat`
+  rejects an unterminated quote, `MultilineRecursiveToStringStyle` throws on a
+  null value, and `NumberUtils.isCreatable` rejects an input that
+  `createNumber` accepts.
+
+The seventh is `commons-lang-1418a770b`. There the two failing tests assert
+other behaviours the same fix changed: that a null value throws, and that a
+subclass's own `accept` still recurses. Neither is the recursion into
+`BigDecimal` that the fix is about.
+
+**Mutation score does not tell the arms apart.** Each arm is measured on its
+own revision. Over the 112 subjects with a figure in both arms, the pooled
+mutation score is 42.1% in B5 and 41.1% in M5. The difference is 1.0 point,
+with an interval from −2.6 to 5.1. Line coverage is 60.4% and 58.6%. As means
+over suites the scores are 62.3% and 61.8%, and B5 scores higher in 58
+subjects and M5 in 50.
+
+Within each arm, the suites that fail on the other revision score higher than
+the rest:
+
+- the seven B5 suites that certify the fault average 79.8%, against 61.1% for
+  the others;
+- the 24 M5 suites that detect it and have a figure average 75.2%, against
+  58.1%.
+
+A high mutation score goes with a suite that registers the fix, whichever way
+it registers it.
+
+**Sensitivity.** None of these is confirmatory, and none reads differently.
+
+- *Without the nine runs that name a trigger test*: 6/110 against 25/110,
+  *p* = 6.6 × 10⁻⁵.
+- *Timeouts read as passes*: 7/115 against 25/115, *p* = 2.8 × 10⁻⁴.
+- *Only the 108 subjects the strict reading of the screen keeps*: 7/108
+  against 25/108, *p* = 2.8 × 10⁻⁴.
+
+No run committed a violation and every subject has a verdict in both arms, so
+the other two analyses are the primary one.
+
+**Where the difference is.** By fault type:
+
+| fault type | subjects | B5 certifies | M5 detects |
+|---|---|---|---|
+| omission | 35 | 0 | 10 |
+| missing clause | 19 | 3 | 6 |
+| API | 9 | 0 | 6 |
+| algorithm | 17 | 2 | 3 |
+| state | 12 | 1 | 1 |
+| substitution | 23 | 1 | 0 |
+
+B5 certifies none of the omissions, of which M5 detects ten. Where the fix
+adds code, the repaired revision shows the agent the case that matters, and
+the faulty revision has nothing there for it to read.
+
+By project, all seven certifications are in Commons Lang, where M5 detects 18
+of 93. M5 also detects 4 of the 16 subjects of Commons CSV and 4 of the 6 of
+Commons CLI.
+
+**Tests the acceptance left out.** It left out 25 of the B5 tests, in three
+suites, and 14 of the M5 tests, in three. None of them passes when run on the
+other revision. So no B5 agent wrote a test for the repaired behaviour that
+acceptance then discarded.
+
+**The same condition, run twice.** M5 is M4 made again, a day or two later.
+On the same 115 subjects the two runs' verdicts agree on 100, 87%, with a
+Cohen's κ of 0.60. Of the 31 subjects either run detects, both detect 16, M4
+alone 5 and M5 alone 10. Fifteen subjects therefore change verdict between two
+runs of one condition. This is the study's first measurement of that variation
+(§5.4).
+
+**B5 beside S4.** Neither arm is shown the repair. On the 112 subjects with a
+verdict in both, S4 detects 3 faults and B5 certifies 7. One subject is in
+both.
+
+**Cost.** At list prices the 115 B5 runs cost $58.63 and the 115 M5 runs
+$60.05, or $0.51 and $0.52 a suite. They took 19.8 and 20.6 turns a run on
+average.
+
 ---
 
 ## 4. Discussion
 
 ### 4.1 The suite mirrors whatever implementation it reads
 
-The mechanism is simple and its sign depends entirely on which revision the
-agent is shown. An agent writing tests against code it can read encodes that
+The mechanism is simple, and its sign depends on which revision the agent is
+shown. An agent writing tests against code it can read encodes that
 code's behaviour as the expected behaviour. Show it the *repaired* code and its
 tests encode the repair, so they detect the fault by construction. Show it
 *faulty* code and its tests encode the fault, so they cannot detect it.
 
 The second case is the familiar worry — tests written after the code inherit
-the code's mistakes — and it is what makes the first case easy to overlook. Our
-arms isolate the first. The implementation-visible arm's figure is not a
+the code's mistakes — and it is what makes the first case easy to overlook.
+The first four campaigns isolate the first case, and the fifth measures the
+second. The implementation-visible arm's figure is not a
 measure of testing ability but a product of the evaluation protocol itself: of
 the repaired code, with which the arm reaches 56%, and of what a standard
 checkout puts beside the code, with which it reached 72% in a campaign that
 differed in other ways as well (§3.9, §3.10).
+
+The two cases are not mirror images. The fifth campaign showed the agent the
+faulty revision of 115 post-cutoff faults. Its suites lock the fault in on 6%
+of them. Shown the repaired revision of the same faults, the agent's suites
+detect it on 23% (§3.13). The sign follows the revision, as the mechanism
+says, but the size does not. So reading the repaired code does more than hand
+the agent an expected value to copy.
+
+The fault types suggest what more. There are 35 omissions, faults whose fix
+adds the code that handles a case. The agent shown the repair detects ten of
+them, and the agent shown the fault certifies none. Code that handles a case
+points the agent at that case, and code that lacks it gives the agent nothing
+to test. The implementation-visible arm's advantage is therefore partly
+transcription and partly direction: the repaired code tells the agent where to
+look as well as what to expect.
 
 Neither arm establishes what an agent would score against genuinely unknown
 code. The specification-only arm's 18% is closer to that question but is not
@@ -1847,6 +2114,15 @@ suites, and detects twice as many faults (§3.10). Coverage separates EvoSuite
 from the specification-only suites in both campaigns and from the
 implementation-visible suites in neither.
 
+The fifth campaign shows the same from another side (§3.13). Its two arms
+read two revisions of the same code, and each is scored on the revision it
+read. Their pooled mutation scores are 42% and 41%, while one arm's suites
+lock the fault in on 6% of the subjects and the other's detect it on 23%.
+Within each arm, the suites that register the fix score higher than the rest,
+whichever way they register it: the seven that certify the fault average 80%.
+A mutation score measures how firmly a suite pins down the code it was written
+against. Whether that code was right is outside it.
+
 Stated as one sentence: **mutation score tracks the strength of a suite's
 assertions, and tracks the provenance of its expectations only as far as the
 two happen to move together.** On Defects4J our arms moved them together a
@@ -1873,7 +2149,10 @@ description supports 25% detection in their setting; partial API documentation
 supports 18% in ours; that description with a faulty implementation added
 supports 14% in theirs; the repaired implementation produces 56% in ours, and
 a Defects4J checkout of it 72% — figures that measure transcription, and in
-the second case some of the benchmark's own leakage, not testing.
+the second case some of the benchmark's own leakage, not testing. Our fifth
+campaign gives the agent a faulty implementation with no description, and asks
+for tests that pass on it. Under that acceptance such a suite cannot detect
+the fault, and it certifies the fault on 6% of the subjects (§3.13).
 
 The practical reading is not "withhold the implementation". It is that the
 detection rate of a generated suite is largely a function of what the agent was
@@ -1912,25 +2191,37 @@ This doubles generation cost — $0.40 to $1 per suite at the prices in §3.6 an
 one approach the data supports directly, in contrast to mutation feedback,
 which it supports only weakly.
 
-### 4.6 The condition we did not run
+### 4.6 The condition the fifth campaign adds
 
 The complementary condition — the agent writing tests against the **buggy**
-revision — is not covered by our arms, though it is well represented in the
-literature: it is TOGA's evaluation setting, TDD-Bench Verified's premise, one
-side of the designs of Konstantinou et al. and of Huang et al., and, on
-Defects4J itself, one of the two inputs Zhao et al. give their models (§6).
+revision — is well represented in the literature. It is TOGA's evaluation
+setting and TDD-Bench Verified's premise. It is one side of the designs of
+Konstantinou et al. and of Huang et al. On Defects4J itself, it is one of the
+two inputs Zhao et al. give their models (§6). Published work measures how
+often such suites fail to detect. Huang et al. come nearest to the other
+question: of the tests their models write from an incorrect solution, 34.8%
+pass on it, against 26.3% of the tests written from the correct one. That is
+a rate per test, on programming tasks, and a test that never reaches the fault
+passes on the faulty code too. None that we found reports, for real faults,
+how often a suite encodes the fault as expected behaviour.
 
-What would be specific to this harness is the *certification* rate: how often a
-suite written against the buggy revision passes on it and fails on the fixed
-one, locking the defect in place rather than merely missing it. Published work
-measures how often such suites fail to detect. Huang et al. come nearest to
-the other question: of the tests their models write from an incorrect
-solution, 34.8% pass on it, against 26.3% of the tests written from the
-correct one. That is a rate per test, on programming tasks, and a test that
-never reaches the fault passes on the faulty code too. None that we found
-reports, for real faults, how often a suite encodes the fault as expected
-behaviour. The harness supports the condition with a one-character change to
-the checkout.
+The fifth campaign measures that *certification* rate (§2.13, §3.13). Its
+suites pass on the faulty revision and fail on the repair in 7 of 115
+post-cutoff faults, 6.1%, with an interval from 1.7% to 10.4%. Each of them
+asserts, as expected, a behaviour that the fix changed. In six of the seven it
+is the behaviour the fix corrects.
+
+Two things in the setting bear on the figure:
+
+- *The prompt asks for tests that pass.* An agent that saw a test fail on the
+  faulty code and changed the expectation was doing what it was asked.
+- *Acceptance discards a test that fails on the faulty code.* None of the 25
+  tests it discarded in this arm expected the repaired behaviour. And no
+  agent's closing message said the code was wrong.
+
+What remains unrun is narrower. The faulty revision on Defects4J has not been
+run, where recall could point the agent at the fix. Nor has an agent been
+asked to look for faults rather than to make its tests pass.
 
 ## 5. Threats to validity
 
@@ -2066,7 +2357,21 @@ Settings under which it does neither are in the repository with that check
 (`bin/agent-sandbox.py`). The fourth campaign ran under them, after the check
 had passed in both arms (§2.12). Its audit found no command that read
 anything outside the working copy except the operating system, the JDK and
-the run's own files.
+the run's own files. The fifth campaign's audit found the same (§3.13). In
+both campaigns, most agents' listings of their working copy show a `.claude`
+folder that the harness's sandbox mounts there. No agent read a file in it,
+and none could write there.
+
+**The fifth campaign's machine changed during its runs.** At 14:13 UTC on 22
+November a package installation made Java 21's runtime the machine's default
+(§3.13). The harness takes Java from that default, and every run started
+after the change failed before its agent began. These runs were made again
+once Java 11 was restored, as the protocol provides for failures of the
+harness, and the deviation is recorded in the protocol. One run straddles the
+change: its tests and its acceptance ran on Java 21's virtual machine. It is
+kept, and its subject is `Pass` in both arms. That a change outside the study
+reached the harness at all is itself a gap: the harness depends on the
+machine's default Java.
 
 **The tooling produced wrong figures without flagging them.** A table whose
 column was named `mut_killed` counted unexecuted mutants; a build that failed
@@ -2092,8 +2397,11 @@ that does not compile against the buggy revision, because it uses something
 the fix added, is `Broken` rather than detecting: two Defects4J suites of the
 first campaign (§2.9), both Cli-21 suites of the second (§3.10), one
 post-cutoff suite of the earlier runs (§3.8) and both suites of one subject
-of the third campaign (§3.11) are in that position. No suite of the fourth
-campaign is (§3.12).
+of the third campaign (§3.11) are in that position. No suite of the fourth or
+fifth campaign is (§3.12, §3.13). Certification, the fifth campaign's measure,
+is the same measure in reverse and has the same limit. In one of its seven,
+the failing tests assert behaviours the fix changed besides the fault
+(§3.13).
 
 **Javadoc is not an independent specification.** The S arm's oracle is
 documentation written by the same developers as the code, and sometimes derived
@@ -2105,13 +2413,15 @@ direction.
 **Mutation score is measured over the classes the fix modifies**, which is
 Defects4J's default scope. A wider scope would change the absolute figures,
 though there is no obvious reason it would change the between-arm comparison.
-In the third and fourth campaigns it is measured with PIT and its default
+In the third, fourth and fifth campaigns it is measured with PIT and its default
 mutators instead of Major, over the same classes and the classes nested in
 them, so its levels are not comparable with the Defects4J campaigns'. H2
 compares the falls between the arms. In the fourth campaign the scope is also
 uneven between subjects. Eight fixes in `StringUtils` put a third of the
 mutants in one class, and three fixes in an interface whose code is all in
-lambdas put none in theirs.
+lambdas put none in theirs. In the fifth campaign, each arm is measured on the
+revision it was written against. The two arms therefore face the mutants of
+two versions of the same classes.
 
 **The mutation and coverage figures are pooled.** Averaged per suite instead,
 the two arms of the first campaign are at 67.6% and 48.5% rather than 58% and
@@ -2156,20 +2466,35 @@ an agent's access to the implementation may matter differently.
 
 ### 5.4 Conclusion validity
 
-**One run per bug per arm, in each campaign.** LLM output is stochastic and no
-variance estimate was collected; the figures carry no confidence interval
-attributable to sampling the model, and the bootstrap intervals of §3.10 to
-§3.12 resample bugs, not runs. Repeated runs would be the standard remedy, and
-none was made for that purpose. The two Defects4J campaigns are the nearest
-thing to a repetition, under conditions that differ:
-the implementation-visible arms detect 26 and 20 of the same 36 bugs with 20 in
-common, and the specification-only arms six and seven of 37 with four in
-common. The effect, three-fold in the second campaign and five-fold in the
-first, is large relative to any plausible run-to-run variation, but this is an
-argument, not a measurement. In the first campaign, where a run was lost to an
-infrastructure failure it was repeated (§3.6), so a few suites are a second
-draw; that is not a replication, and the first draws were not kept. In the
-second, the third and the fourth no run was repeated.
+**One run per subject per arm, and one repetition.** LLM output is
+stochastic. Each campaign has one run per subject and arm, and the bootstrap
+intervals of §3.10 to §3.13 resample subjects, not runs.
+
+The fifth campaign gives the study its one measurement of the variation
+between runs. It ran the fourth campaign's implementation-visible arm again on
+the same 115 subjects (§3.13). The two runs' verdicts agree on 100 of them,
+with κ = 0.60. Fifteen change: five are detected only the first time and ten
+only the second. The verdict on a single subject is therefore not a stable
+property of the condition.
+
+The between-arm differences that the tests rest on are larger than that
+variation. There are 19 discordant pairs against one in the fourth campaign,
+and 22 against three in the fifth.
+
+On Defects4J the variation was not measured. The two Defects4J campaigns are
+the nearest thing to a repetition there, under conditions that differ. The
+implementation-visible arms detect 26 and 20 of the same 36 bugs, with 20 in
+common. The specification-only arms detect six and seven of 37, with four in
+common.
+
+Other runs were made twice for other reasons:
+
+- In the first campaign, where a run was lost to an infrastructure failure it
+  was repeated (§3.6), so a few suites are a second draw. That is not a
+  replication, and the first draws were not kept.
+- In the second, third and fourth campaigns no run was repeated.
+- In the fifth, 111 runs whose harness failed before the agent started were
+  made again, as its protocol provides (§3.13).
 
 **The first campaign's comparison had no analysis fixed in advance; the
 second's had.** In the first campaign only the first arm had a decision rule.
@@ -2187,15 +2512,17 @@ was known, and its analysis — the pairing, the exact test, the choice of
 metrics — was not specified beforehand. The second campaign's hypotheses,
 tests, exclusions and decision rule are in a protocol committed before its
 first run (§2.10), and the repository's history shows the order: protocol,
-runs, audit, measurement, analysis. The same holds for the third and fourth
-campaigns (§2.11, §2.12).
+runs, audit, measurement, analysis. The same holds for the third, fourth and
+fifth campaigns (§2.11 to §2.13).
 
 **The tests describe consistency of direction, not effect size in a
 population.** The *p* values of §3.1 and §3.10 say the asymmetry between the
 arms is very unlikely under the null; they say nothing about how large the gap
 would be in a different corpus. The third and fourth campaigns are different
 corpora. There the gap is 13 points, with an interval from 0 to 26 (§3.11),
-and 16 points, from 9 to 23 (§3.12).
+and 16 points, from 9 to 23 (§3.12). The fifth campaign's test compares two
+conditions that both read code, on the fourth campaign's subjects. There the
+difference is −16.5 points, from −24.3 to −8.7 (§3.13).
 
 The interval for H2, 12 to 59 points, is wide. It supports the statement that
 detection falls further than mutation score and gives little hold on by how
@@ -2605,6 +2932,9 @@ is wrong — which our specification-only arm is not.
 The figures are not directly comparable — different corpora, languages, models
 and fault distributions. The ordering is the point, and the last two rows are
 the ones that concern evaluation methodology rather than development practice.
+The fifth campaign's arm that reads the faulty implementation has no row. Its
+suites are accepted on the faulty code, so they cannot detect the fault; they
+certify it instead, in 6% of the subjects (§3.13).
 
 ### Coverage and mutants as proxies
 
@@ -2639,7 +2969,10 @@ Randoop or JCrasher — derives its expectations from the implementation it is
 run against.
 
 In our data the direction is the same, but for the fourth campaign's pooled
-scores (§3.12): the arm with the higher mutation score detects more faults.
+scores (§3.12): the arm with the higher mutation score detects more faults. In
+the fifth campaign the arms' scores are level, and within each arm the
+association holds in both directions. The suites that certify a fault score
+higher than the others, as the suites that detect one do (§3.13).
 What we vary is the *information available to the generator*, and along that
 axis the size of a difference in mutation score says
 little about the size of the difference in detection: a loss of 28% against
@@ -2786,6 +3119,15 @@ newer faults, in corpora that differ from Defects4J in more than their date,
 and we cannot say how much of the Defects4J figure is recall that the source
 cues.
 
+A fifth campaign showed the agent the faulty revision of the same 115 faults,
+beside the arm that reads the repair, run again. Shown the fault, the suites
+lock it in on 6% of the subjects. Shown the repair, they detect it on 23%,
+and the test fixed beforehand rejects (*p* = 1.6 × 10⁻⁴). The sign of the
+effect follows the revision the agent reads, but its size does not: the
+repaired code also shows the agent where to look. Mutation score puts the two
+arms within a point of each other. Run twice, the arm that reads the repair
+gives a different verdict on 15 of the 115 faults.
+
 The third campaign's audit also found the sandbox leaving a shared directory
 open, which only the transcripts show that no agent used: a sandbox's settings
 are a claim, and the record of what the agents did is the check on it.
@@ -2857,6 +3199,25 @@ the subjects come from is counted by `bin/count-postcutoff-pool.py` and
 classified by fault type with `bin/classify-postcutoff-pool.py`, under
 `data/postcutoff-pool/`.
 
+The fifth campaign's scripts were committed with its protocol
+(`data/campaign5/PROTOCOL.md`) before its runs:
+
+- `bin/subjects-campaign5.py`, which writes its subject list from the fourth
+  campaign's;
+- `bin/generate-campaign5.sh`, which gives each arm its revision;
+- `bin/run-campaign5.sh`;
+- `bin/audit-campaign5.py`;
+- `bin/measure-campaign5.sh`, which runs each suite on its own revision and on
+  the other;
+- `bin/mutation-campaign5.sh`;
+- `bin/analyze-campaign5.py`.
+
+They use `bin/campaign3-lib.sh`, `bin/AgentTestRunner.java`,
+`bin/ExcludedTestsFilter.java` and `bin/agent-sandbox.py` unchanged.
+`bin/probe-saved-copies.py` checks how far the one exception left in the
+sandbox reaches. `bin/describe-campaign5.py`, written after the analysis,
+prints the descriptive figures of §3.13.
+
 Raw artifacts are under `data/`. For the first campaign: one directory per arm
 holding, for each bug, the record of the run (its closing message, cost and
 turn count, not a transcript) and the intermediate logs; the packaged suites;
@@ -2881,8 +3242,19 @@ directory; the suites as the agents wrote them; the audit's output, the list
 of violations, which is empty, and the list of direct compiler calls, with
 the reason for each decision; the logs and verdicts of the measurement; PIT's
 log and its record of every mutant for every suite; and the analysis as the
-script printed it. The method record, including the deviations and tooling
-failures encountered, is in `data/README.md`.
+script printed it. For the fifth campaign, under `data/campaign5/`:
+
+- the same record of every run as for the fourth, with the first attempts of
+  the 111 runs the harness failed, in `harness-failed/`;
+- the suites;
+- the audit's output, and the lists of violations and of closing messages,
+  both empty, with the reason for each decision;
+- the logs and verdicts of the measurement;
+- PIT's log and its record of every mutant;
+- the analysis as the script printed it.
+
+The method record, including the deviations and tooling failures encountered,
+is in `data/README.md`.
 
 **The figures need neither model access nor a Defects4J installation.**
 `bin/report-figures.py` recomputes most of the figures of §3 from the files
@@ -2893,10 +3265,11 @@ under `data/`, among them the cost of a run whose record was overwritten
 (§3.6) and the fault types of the Defects4J sample (§3.8). Re-measuring
 from the packaged suites in `data/agent-suites/` and `data/campaign2/suites/`
 needs Defects4J (`bin/analyze-agent-suites.sh`). Re-measuring those in
-`data/campaign3/suites/` and `data/campaign4/suites/` needs clones of the
-three upstream repositories, Java 11, and Maven with the projects'
-dependencies in its local repository (`bin/measure-campaign3.sh`,
-`bin/measure-campaign4.sh`). Their mutation score also needs PIT, which
-`bin/mutation-campaign3.sh` and `bin/mutation-campaign4.sh` fetch once and
-check against the hashes written in them. Regenerating the suites needs the
-model.
+`data/campaign3/suites/`, `data/campaign4/suites/` and
+`data/campaign5/suites/` needs clones of the three upstream repositories, Java
+11, and Maven with the projects' dependencies in its local repository
+(`bin/measure-campaign3.sh`, `bin/measure-campaign4.sh`,
+`bin/measure-campaign5.sh`). Their mutation score also needs PIT, which
+`bin/mutation-campaign3.sh`, `bin/mutation-campaign4.sh` and
+`bin/mutation-campaign5.sh` fetch once and check against the hashes written in
+them. Regenerating the suites needs the model.

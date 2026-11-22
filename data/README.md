@@ -2201,6 +2201,153 @@ and detection in `m5` differ.
   November 2026 on the third campaign's two pilot subjects, in both arms. It
   holds their audit, their closing messages, and their measurement and
   mutation measurement. It is not part of any result.
+- `campaign5/probe-before-runs.txt`, `campaign5/saved-copies-before-runs.txt`:
+  the same two checks, made again before the runs, as the protocol's step 0
+  requires. Every check passed.
+
+### The runs
+
+`./bin/run-campaign5.sh` started on 22 November 2026 at 08:19:58 UTC, from
+`c5d8557`, the protocol's merge commit. It ran detached, under a launcher that
+would have run it again after a stop at the usage limit; no such stop
+happened. The generation ended at 19:48:39 UTC. Its log is
+`campaign5/generation.log`, and the runner's is `campaign5/launch.out`.
+
+**The machine's Java changed at 14:13:38 UTC.** The protocol's Deviations
+section has the full account.
+
+- A package installation unrelated to the campaign brought in Java 21's
+  runtime and made it the system's `java`.
+- `bin/campaign3-lib.sh` gives the harness a `PATH` that reaches the system's
+  `java`, so Maven ran on Java 21. Java 21 activates profiles of the Commons
+  parent POM that need a plugin the offline repository lacks
+  (`apache-rat-plugin` 0.18).
+- From subject 60 in `b5` on, 111 runs failed at staging, before the agent
+  started. Their first attempts are in `runs-b5/harness-failed/` and
+  `runs-m5/harness-failed/`, a status and a build log each.
+- Java 11 was restored, and the deviation was entered in the protocol and
+  committed (`16a2ea4`). The 111 runs were then made from 15:01:30 UTC.
+- One run, `m5` on `commons-lang-3f0c0fd5c`, straddles the change. Its
+  subject is `Pass` in both arms, so H1's counts and *p* are the same without
+  it.
+
+The runs:
+
+- All 230 runs ended with an accepted suite. Seven reached the limit of 50
+  turns, four in `b5` and three in `m5`.
+- Acceptance left out 25 of the 5,192 `b5` tests, in three suites. It left
+  out 14 of the 5,500 `m5` tests, also in three.
+- At list prices `b5` cost $58.63 and `m5` $60.05, or $0.51 and $0.52 a
+  suite, in 19.8 and 20.6 turns a run.
+- 119 runs were made from `c5d8557` and 111 from `16a2ea4`. The scripts are
+  the same in both commits.
+
+`campaign5/runs-b5/` and `campaign5/runs-m5/` hold each run's record, as the
+fourth campaign's do. `campaign5/suites/` holds the accepted suites, as the
+agents wrote them.
+
+### The audit
+
+`./bin/audit-campaign5.py data/campaign5 -v > data/campaign5/audit.txt`, read
+on 22 November 2026 before anything was measured.
+
+- **Violations.** `campaign5/violations.txt` lists no run. Its comments say
+  what was flagged, and why none of it is a violation.
+- **Closing messages.** `campaign5/closing-b5.txt` lists no run either: none
+  of the 115 `b5` closing messages says the code under test is wrong. Its
+  comments give the four that call a behaviour a quirk, and the one that found
+  the javadoc and the code disagreeing and asserted the code.
+- **Naming the fix.** Nine runs name a trigger test, four of `b5` and five of
+  `m5`. Each time the agent named a test after the method it tests. The runs
+  are `commons-lang-060ab31e5`, `127050d2b`, `54ee8ec1c` and `7c91ce989` in
+  both arms, and `4bfbfeabe` in `m5`.
+
+**The `.claude` folder in the working copy.** In 78 `b5` and 76 `m5`
+transcripts, a command's output lists a `.claude` folder in the working copy.
+In 14 and 16 of them the listing also shows the folder's entries: `loop.md`,
+`skills`, `hooks`, `agents`, `output-styles`, `settings.local.json`,
+`schedule` and a `.cc-writes` subfolder. Some listings also show `.vscode`.
+
+- No subject tracks these folders, and none appears in any run's `.touched`,
+  which lists what the run left in the working copy on the host. The CLI's
+  sandbox creates them inside its own view of the working copy. They are
+  read-only there, and their entries carry the names of the CLI's own project
+  settings.
+- The fourth campaign's transcripts show the same, in 83 `m4` and 40 `s4`
+  runs, 23 and 39 of them with the entries.
+- No agent read a file in the folder. Three tried to write a scratch file in
+  `.cc-writes`, or in a path of that name, and none could. The folder is
+  read-only, and the harness refused the file tool.
+
+### Detection and certification
+
+`./bin/measure-campaign5.sh` ran from 19:54:59 to 21:08:23 UTC on 22 November
+2026, on Java 11 (`campaign5/results/`). Every suite compiles against both
+revisions and passes again on its own, so no suite is `Broken`.
+
+- `b5`: 7 suites are `Fail` (they certify the fault) and 108 `Pass`.
+- `m5`: 26 suites are `Fail` (they detect it) and 89 `Pass`. One `Fail` is by
+  timeout, on `commons-lang-5d46a39e4`. That suite does not finish on the
+  parent within 20 minutes, as the developers' tests did not in the check.
+- The tests left out at acceptance were run on the other revision. Three
+  suites in each arm had any, 25 methods in `b5` and 14 in `m5`, and none of
+  them passes there.
+
+### Mutation score and line coverage
+
+`./bin/mutation-campaign5.sh` ran from 21:09:56 to 23:06:43 UTC, on Java 11
+(`campaign5/mutation/`). PIT finished on all 230 suites, each on its own
+revision, and 224 have a figure. The other six are the three `commons-cli`
+subjects whose fix is in `Converter`, which have no mutant in either arm. No
+suite took more than about a minute. In all 230, the methods the filter kept
+are those the measurement ran (`analysis.txt`).
+
+### Analysis
+
+`./bin/analyze-campaign5.py > data/campaign5/analysis.txt`. The paired set is
+all 115 subjects.
+
+- **Certification.** 7 of 115 `b5` suites certify the fault, 6.1% [1.7%,
+  10.4%].
+- **H1.** `b5` certifies 7 and `m5` detects 26. Both happen on 4 subjects,
+  `b5` alone on 3 and `m5` alone on 22. Exact McNemar gives *p* = 0.000157,
+  and the difference is −16.5 points [−24.3, −8.7]. H1 is rejected with `b5`
+  below `m5`.
+- **Mutation score (secondary).** The pooled scores are 42.1% and 41.1%,
+  +1.0 [−2.6, +5.1]. Line coverage is 60.4% and 58.6%.
+- **Sensitivity.** All five analyses keep the direction.
+- **Descriptive.** By fault type, `OMISSION` is 0 against 10. `m4` and `m5`
+  agree on 87% of the subjects (κ 0.60): 15 subjects change verdict.
+
+`bin/describe-campaign5.py`, written on 23 November 2026 after the analysis,
+prints the descriptive figures that §3.13 quotes.
+
+**What the certifying tests assert** (read on 23 November 2026, after the
+analysis). For each `b5` suite that certifies, `bin/describe-campaign5.py`
+lists the tests that fail on the fix commit and the fix's subject line. Read
+against the fix's diff, six assert the very behaviour the fix corrects:
+
+- `commons-lang-05fffe85e`: `MultilineRecursiveToStringStyle` throws
+  `NullPointerException` on a null value; the fix adds the null check.
+- `commons-lang-0b4a9d95d`: `LocaleUtils.toLocale` accepts an invalid language
+  with a numeric area code; the fix corrects the operator precedence.
+- `commons-lang-127050d2b`: `NumberUtils.isCreatable` returns false for an
+  input that the fix makes it accept, so that it matches `createNumber`.
+- `commons-lang-5b3a81dcd`: `ExtendedMessageFormat` rejects an unterminated
+  quote; the fix appends the rest of the pattern instead.
+- `commons-lang-6dbbbb308`: `StringEscapeUtils.unescapeCsv` throws on a field
+  that is a single quote character; the fix checks the length first.
+- `commons-lang-e1ffb6ea0`: `ThreadUtils.sleepQuietly` leaves the interrupt
+  flag cleared; the fix restores it.
+
+The seventh is `commons-lang-1418a770b`. Its fix stops `RecursiveToStringStyle`
+from recursing, by default, into `BigDecimal`, wrapper types and other
+numbers. The two failing tests assert other behaviours that the same change
+alters:
+
+- `appendDetail` throws `NullPointerException` on a null value;
+- a subclass whose own `accept` excludes only `String` still recurses into a
+  nested object. On the fix, this overflows the stack.
 
 ## Infrastructure failures and exclusions
 
@@ -2274,4 +2421,6 @@ mistake for results:
 - [x] How far the Read tool's exception for the CLI's saved copies reaches, tried without the model: the `tool-results` directory of the run's own session and nothing else, in both arms and under both settings (`bin/probe-saved-copies.py`, `sandbox/saved-copies.txt`, `sandbox/saved-copies-as-run.txt`)
 - [x] Fifth campaign prepared: protocol, scripts, checks without the model on the fourth campaign's 115 subjects in both arms, and a pilot (`campaign5/`)
 - [x] Fifth campaign's protocol fixed before any run on the subjects (`campaign5/PROTOCOL.md`)
+- [x] Fifth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed. Certification is 6.1% (7/115) against detection 22.6% (26/115), and H1 is rejected with `b5` below `m5` (*p* = 0.000157); the pooled mutation scores are 42.1% and 41.1%. The deviation of 22 November (the machine's Java) is in the protocol (`campaign5/`)
+- [x] Write-up carries the fifth campaign: `PREPRINT.md` §2.13 and §3.13, and the abstract, introduction, discussion (§4.1, §4.2, §4.3, §4.6), threats, related work, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign5.py`, and §3.13 in `bin/report-figures.py`
 - [ ] A matched post-cutoff corpus large enough to test the effect size. Not pursued (21 November 2026): a corpus matched to the Defects4J sample can take at most 69 of the pool's 131 new subjects, 115 of which the fourth campaign has run, and its analysis weights detection by the sample's fault types instead (`campaign4/analysis.txt`)

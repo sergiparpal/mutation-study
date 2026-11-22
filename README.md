@@ -19,7 +19,8 @@ Two suites per bug from the same agent and model, under two conditions: the
 agent either works in the project's source tree or sees only its javadoc. The
 comparison was run twice on the same 40 Defects4J bugs, and twice more on
 faults fixed after the model's training data ends: 28 in a third campaign and
-115 in a fourth.
+115 in a fourth. A fifth campaign showed the agent the faulty revision of the
+fourth campaign's 115 faults.
 
 **The second campaign is the controlled one.** Its working copies hold nothing
 of the benchmark's own, a sandbox enforces the conditions, every run's
@@ -105,6 +106,44 @@ They hold a third of the mutants, and the specification-only suites cover
 them more widely. As means over suites the scores are 62% and 56%, in the
 usual order. Both arms detect far less than on Defects4J.
 
+**The fifth campaign shows the agent the faulty code.** It runs on the fourth
+campaign's 115 subjects, with two arms:
+
+- one implementation-visible arm works on the parent of the fix commit, and
+  its suite is accepted there;
+- the fourth campaign's implementation-visible arm is run again beside it, on
+  the fix.
+
+A suite written against the faulty revision that fails on the fix *certifies*
+the fault. The protocol is `data/campaign5/PROTOCOL.md`.
+
+| arm | fault certified or detected | mutation score | line coverage |
+|---|---|---|---|
+| reads the faulty code | **7/115 — 6% certified** | 42% | 60% |
+| reads the repaired code | **26/115 — 23% detected** | 41% | 59% |
+
+The two arms split the 115 subjects like this:
+
+- four are certified by the first arm and detected by the second;
+- three are certified only;
+- 22 are detected only.
+
+The exact McNemar test gives *p* = 1.6 × 10⁻⁴, and the difference is −16.5
+points, with an interval of −24.3 to −8.7. **The sign of the effect follows
+the revision the agent reads, but its size does not.** Shown the faulty code,
+the agent locks the fault in about a quarter as often as it detects the fault
+from the repair. Of the 35 omissions, it certifies none, where the other arm
+detects ten.
+
+Mutation score cannot tell the arms apart: pooled over the 112 subjects with a
+figure, it is 42% and 41%. Run twice on the same subjects, the arm that reads
+the repaired code changes its verdict on 15 of the 115.
+
+During the runs, a package installation changed the machine's Java. The 111
+runs still to come failed before their agent started, and were made again, as
+the protocol provides for such failures. Its Deviations section records what
+happened.
+
 Mutation score and coverage measure how much of a program a suite exercises
 and how hard it checks what it exercises. Neither measures where the expected
 values came from.
@@ -188,15 +227,22 @@ revision that fails on the fix certifies the fault. The campaign measures how
 often that happens, and whether it happens as often as the other arm detects
 the fault. The directory holds:
 
-- its protocol (`PROTOCOL.md`), fixed before any run on the subjects;
+- its protocol (`PROTOCOL.md`), fixed before any run on the subjects, with the
+  deviation recorded during the runs;
 - the subject list;
-- the output of the two sandbox checks;
-- the pilot (`pilot/`).
+- the output of the two sandbox checks, before the pilot and before the runs;
+- the pilot (`pilot/`);
+- the records of its 230 runs (`runs-b5/`, `runs-m5/`, `suites/`), with the
+  first attempts the harness failed (`harness-failed/`);
+- their audit (`audit.txt`, `violations.txt`, `closing-b5.txt`);
+- the measurement (`results/`), mutation score and line coverage
+  (`mutation/`), and the analysis (`analysis.txt`).
 
 Its scripts are `bin/subjects-campaign5.py`, `bin/generate-campaign5.sh`,
 `bin/run-campaign5.sh`, `bin/audit-campaign5.py`, `bin/measure-campaign5.sh`,
 `bin/mutation-campaign5.sh` and `bin/analyze-campaign5.py`, all committed with
-its protocol. They use `bin/campaign3-lib.sh`, `bin/AgentTestRunner.java`,
+its protocol, and `bin/describe-campaign5.py`, written after the analysis.
+They use `bin/campaign3-lib.sh`, `bin/AgentTestRunner.java`,
 `bin/ExcludedTestsFilter.java` and `bin/agent-sandbox.py` unchanged.
 
 ## What this does not show
@@ -242,6 +288,17 @@ table above:
   statistic, 99 points, comes from the pooling.
 - **The fourth campaign's subjects are not matched to the Defects4J sample by
   fault type.** Weighted to it, detection is 16.0% against 3.6%.
+- **The faulty-revision condition measures tests written to pass.** The fifth
+  campaign's agent is asked to make its tests pass on the code it reads, and
+  acceptance drops any that fail there. So it measures how often tests written
+  after faulty code lock the fault in. It does not measure how well an agent
+  finds faults when asked to. One of its seven certifications rests on
+  behaviours the fix changed besides the fault.
+- **Verdicts vary between runs.** Each campaign has one run per subject and
+  arm. The fifth campaign ran the fourth's implementation-visible arm again on
+  the same 115 subjects, and 15 verdicts changed (agreement 87%, κ 0.60). The
+  between-arm differences the tests rest on are larger than that. But no
+  single verdict should be read as a property of its subject.
 - **The sandbox was less tight than its settings were meant to make it.** The
   third campaign's audit found that the directory the harness gives commands
   for temporary files is the host's own and shared by every run, in that
@@ -254,8 +311,8 @@ table above:
   result is the same with them in (9/27 against 6/27, *p* = 0.25). A check made
   after the campaign, with its settings and no model, confirmed that a command
   could list and read that directory. Settings that close it are in
-  `bin/agent-sandbox.py`, and the fourth campaign ran under them; its audit
-  found no violation.
+  `bin/agent-sandbox.py`, and the fourth and fifth campaigns ran under them.
+  Neither campaign's audit found a violation.
 - **Contamination is measured, not bounded.** A direct probe finds two of the
   forty faults recalled with their mechanism and two more recognised, and
   benchmark identifiers not memorised. But recall may be cued by the source
@@ -282,10 +339,10 @@ from `data/`. The evidence of §3.9 is printed by `./bin/audit-trigger-leaks.py`
 the classification of §3.3 is recorded in `data/contract-violation.md`, and
 some other figures are quoted from records under `data/`, as the script's
 header describes. What the transcript audits found is in the `audit.txt` and
-`violations.txt` of `data/campaign2/` to `data/campaign4/`. None of it needs
-Defects4J or model access. `./bin/analyze-campaign2.py`,
-`./bin/analyze-campaign3.py` and `./bin/analyze-campaign4.py` print the
-second, third and fourth campaigns' analyses on their own, and
+`violations.txt` of `data/campaign2/` to `data/campaign5/`. None of it needs
+Defects4J or model access. `./bin/analyze-campaign2.py` to
+`./bin/analyze-campaign5.py` print the second to fifth campaigns' analyses on
+their own, and
 `./bin/analyze-mutation-campaign3.py` the third campaign's mutation figures.
 No Python script under `bin/` needs a package outside the standard library
 except `bin/zenodo-metadata.py`, which reads `CITATION.cff` with PyYAML.
@@ -293,10 +350,10 @@ except `bin/zenodo-metadata.py`, which reads `CITATION.cff` with PyYAML.
 Re-measuring from the packaged suites in `data/agent-suites/` and
 `data/campaign2/suites/` needs Defects4J v3.0.1 under Java 11 with
 `TZ=America/Los_Angeles` (`bin/analyze-agent-suites.sh`). The post-cutoff
-corpora and the third and fourth campaigns' suites (`bin/measure-campaign3.sh`,
-`bin/measure-campaign4.sh`) need clones of the upstream repositories, Java 11
-and Maven 3.9+. Their mutation score (`bin/mutation-campaign3.sh`,
-`bin/mutation-campaign4.sh`) also needs PIT, which each script fetches from
+corpora and the third to fifth campaigns' suites (`bin/measure-campaign3.sh`
+to `bin/measure-campaign5.sh`) need clones of the upstream repositories, Java
+11 and Maven 3.9+. Their mutation score (`bin/mutation-campaign3.sh` to
+`bin/mutation-campaign5.sh`) also needs PIT, which each script fetches from
 Maven Central once and checks against the hashes written in it.
 Regenerating the suites needs the model and costs between $0.40 and $1 per
 suite at list prices.
