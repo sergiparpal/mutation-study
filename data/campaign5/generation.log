@@ -5446,3 +5446,1226 @@ failed subjects:
   commons-lang-e2838b281: the fixed revision does not build
   commons-lang-f164995c9: the fixed revision does not build
   commons-lang-f4442b1c9: the fixed revision does not build
+[commons-lang-3f0c0fd5c] staging the faulty revision (w-XP0wj0Yu)
+[commons-lang-3f0c0fd5c] leak scan: clean
+[commons-lang-3f0c0fd5c] invoking agent (claude-sonnet-5, b5)
+[commons-lang-3f0c0fd5c] agent done: $0.678 turns=35 state=ok
+[commons-lang-3f0c0fd5c] left out 0 of 28 tests
+[commons-lang-3f0c0fd5c] packaged: commons-lang-3f0c0fd5c-b5.tar.bz2
+
+b5 suites packaged: 60
+failures:           0
+tests left out:     10 of 2695 (0.4%)
+cost, as reported:  $32.93
+[commons-csv-bbdfad773] staging the faulty revision (w-9Ic0Nupx)
+[commons-csv-bbdfad773] leak scan: clean
+[commons-csv-bbdfad773] invoking agent (claude-sonnet-5, b5)
+[commons-csv-bbdfad773] agent done: $0.501 turns=13 state=ok
+[commons-csv-bbdfad773] left out 0 of 50 tests
+[commons-csv-bbdfad773] packaged: commons-csv-bbdfad773-b5.tar.bz2
+
+b5 suites packaged: 61
+failures:           0
+tests left out:     10 of 2745 (0.4%)
+cost, as reported:  $33.44
+[commons-csv-bbdfad773] staging the fixed revision (w-2oUFvAij)
+[commons-csv-bbdfad773] leak scan: clean
+[commons-csv-bbdfad773] invoking agent (claude-sonnet-5, m5)
+[commons-csv-bbdfad773] agent done: $1.106 turns=31 state=ok
+[commons-csv-bbdfad773] left out 0 of 96 tests
+[commons-csv-bbdfad773] packaged: commons-csv-bbdfad773-m5.tar.bz2
+
+m5 suites packaged: 61
+failures:           0
+tests left out:     2 of 2795 (0.1%)
+cost, as reported:  $33.22
+[commons-lang-7d325c2a5] staging the fixed revision (w-AYjCmJEv)
+[commons-lang-7d325c2a5] leak scan: clean
+[commons-lang-7d325c2a5] invoking agent (claude-sonnet-5, m5)
+[commons-lang-7d325c2a5] agent done: $0.261 turns=9 state=ok
+[commons-lang-7d325c2a5] left out 0 of 31 tests
+[commons-lang-7d325c2a5] packaged: commons-lang-7d325c2a5-m5.tar.bz2
+
+m5 suites packaged: 62
+failures:           0
+tests left out:     2 of 2826 (0.1%)
+cost, as reported:  $33.48
+[commons-lang-7d325c2a5] staging the faulty revision (w-hAWJFLI6)
+[commons-lang-7d325c2a5] leak scan: clean
+[commons-lang-7d325c2a5] invoking agent (claude-sonnet-5, b5)
+[commons-lang-7d325c2a5] agent done: $0.254 turns=8 state=ok
+[commons-lang-7d325c2a5] left out 0 of 39 tests
+[commons-lang-7d325c2a5] packaged: commons-lang-7d325c2a5-b5.tar.bz2
+
+b5 suites packaged: 62
+failures:           0
+tests left out:     10 of 2784 (0.4%)
+cost, as reported:  $33.69
+[commons-csv-5e2d0590c] staging the faulty revision (w-U7A53dZ7)
+[commons-csv-5e2d0590c] leak scan: clean
+[commons-csv-5e2d0590c] invoking agent (claude-sonnet-5, b5)
+[commons-csv-5e2d0590c] agent done: $0.485 turns=13 state=ok
+[commons-csv-5e2d0590c] left out 0 of 54 tests
+[commons-csv-5e2d0590c] packaged: commons-csv-5e2d0590c-b5.tar.bz2
+
+b5 suites packaged: 63
+failures:           0
+tests left out:     10 of 2838 (0.4%)
+cost, as reported:  $34.17
+[commons-csv-5e2d0590c] staging the fixed revision (w-fgaJLQCW)
+[commons-csv-5e2d0590c] leak scan: clean
+[commons-csv-5e2d0590c] invoking agent (claude-sonnet-5, m5)
+[commons-csv-5e2d0590c] agent done: $0.747 turns=23 state=ok
+[commons-csv-5e2d0590c] left out 0 of 52 tests
+[commons-csv-5e2d0590c] packaged: commons-csv-5e2d0590c-m5.tar.bz2
+
+m5 suites packaged: 63
+failures:           0
+tests left out:     2 of 2878 (0.1%)
+cost, as reported:  $34.23
+[commons-lang-060ab31e5] staging the fixed revision (w-rTquDU0K)
+[commons-lang-060ab31e5] leak scan: clean
+[commons-lang-060ab31e5] invoking agent (claude-sonnet-5, m5)
+[commons-lang-060ab31e5] agent done: $0.403 turns=13 state=ok
+[commons-lang-060ab31e5] left out 0 of 62 tests
+[commons-lang-060ab31e5] packaged: commons-lang-060ab31e5-m5.tar.bz2
+
+m5 suites packaged: 64
+failures:           0
+tests left out:     2 of 2940 (0.1%)
+cost, as reported:  $34.63
+[commons-lang-060ab31e5] staging the faulty revision (w-mY1pTKiA)
+[commons-lang-060ab31e5] leak scan: clean
+[commons-lang-060ab31e5] invoking agent (claude-sonnet-5, b5)
+[commons-lang-060ab31e5] agent done: $0.524 turns=18 state=ok
+[commons-lang-060ab31e5] left out 0 of 45 tests
+[commons-lang-060ab31e5] packaged: commons-lang-060ab31e5-b5.tar.bz2
+
+b5 suites packaged: 64
+failures:           0
+tests left out:     10 of 2883 (0.3%)
+cost, as reported:  $34.70
+[commons-lang-4e1f3eef1] staging the faulty revision (w-Q1ziBZ5T)
+[commons-lang-4e1f3eef1] leak scan: clean
+[commons-lang-4e1f3eef1] invoking agent (claude-sonnet-5, b5)
+[commons-lang-4e1f3eef1] agent done: $0.128 turns=10 state=ok
+[commons-lang-4e1f3eef1] left out 0 of 22 tests
+[commons-lang-4e1f3eef1] packaged: commons-lang-4e1f3eef1-b5.tar.bz2
+
+b5 suites packaged: 65
+failures:           0
+tests left out:     10 of 2905 (0.3%)
+cost, as reported:  $34.83
+[commons-lang-4e1f3eef1] staging the fixed revision (w-8sqHIULy)
+[commons-lang-4e1f3eef1] leak scan: clean
+[commons-lang-4e1f3eef1] invoking agent (claude-sonnet-5, m5)
+[commons-lang-4e1f3eef1] agent done: $0.211 turns=14 state=ok
+[commons-lang-4e1f3eef1] left out 0 of 17 tests
+[commons-lang-4e1f3eef1] packaged: commons-lang-4e1f3eef1-m5.tar.bz2
+
+m5 suites packaged: 65
+failures:           0
+tests left out:     2 of 2957 (0.1%)
+cost, as reported:  $34.84
+[commons-lang-355f24676] staging the fixed revision (w-CWXIEapp)
+[commons-lang-355f24676] leak scan: clean
+[commons-lang-355f24676] invoking agent (claude-sonnet-5, m5)
+[commons-lang-355f24676] agent done: $0.256 turns=10 state=ok
+[commons-lang-355f24676] left out 0 of 71 tests
+[commons-lang-355f24676] packaged: commons-lang-355f24676-m5.tar.bz2
+
+m5 suites packaged: 66
+failures:           0
+tests left out:     2 of 3028 (0.1%)
+cost, as reported:  $35.10
+[commons-lang-355f24676] staging the faulty revision (w-qNDvyCXQ)
+[commons-lang-355f24676] leak scan: clean
+[commons-lang-355f24676] invoking agent (claude-sonnet-5, b5)
+[commons-lang-355f24676] agent done: $0.282 turns=12 state=ok
+[commons-lang-355f24676] left out 0 of 76 tests
+[commons-lang-355f24676] packaged: commons-lang-355f24676-b5.tar.bz2
+
+b5 suites packaged: 66
+failures:           0
+tests left out:     10 of 2981 (0.3%)
+cost, as reported:  $35.11
+[commons-lang-4c3f1dd00] staging the faulty revision (w-ngFTqEOV)
+[commons-lang-4c3f1dd00] leak scan: clean
+[commons-lang-4c3f1dd00] invoking agent (claude-sonnet-5, b5)
+[commons-lang-4c3f1dd00] agent done: $0.415 turns=29 state=ok
+[commons-lang-4c3f1dd00] left out 0 of 30 tests
+[commons-lang-4c3f1dd00] packaged: commons-lang-4c3f1dd00-b5.tar.bz2
+
+b5 suites packaged: 67
+failures:           0
+tests left out:     10 of 3011 (0.3%)
+cost, as reported:  $35.52
+[commons-lang-4c3f1dd00] staging the fixed revision (w-5AWeivfc)
+[commons-lang-4c3f1dd00] leak scan: clean
+[commons-lang-4c3f1dd00] invoking agent (claude-sonnet-5, m5)
+[commons-lang-4c3f1dd00] agent done: $0.566 turns=32 state=ok
+[commons-lang-4c3f1dd00] left out 0 of 24 tests
+[commons-lang-4c3f1dd00] packaged: commons-lang-4c3f1dd00-m5.tar.bz2
+
+m5 suites packaged: 67
+failures:           0
+tests left out:     2 of 3052 (0.1%)
+cost, as reported:  $35.67
+[commons-csv-609a228e3] staging the fixed revision (w-8YbJz24l)
+[commons-csv-609a228e3] leak scan: clean
+[commons-csv-609a228e3] invoking agent (claude-sonnet-5, m5)
+[commons-csv-609a228e3] agent done: $0.754 turns=26 state=ok
+[commons-csv-609a228e3] left out 0 of 36 tests
+[commons-csv-609a228e3] packaged: commons-csv-609a228e3-m5.tar.bz2
+
+m5 suites packaged: 68
+failures:           0
+tests left out:     2 of 3088 (0.1%)
+cost, as reported:  $36.42
+[commons-csv-609a228e3] staging the faulty revision (w-FlipzQyg)
+[commons-csv-609a228e3] leak scan: clean
+[commons-csv-609a228e3] invoking agent (claude-sonnet-5, b5)
+[commons-csv-609a228e3] agent done: $0.368 turns=18 state=ok
+[commons-csv-609a228e3] left out 0 of 26 tests
+[commons-csv-609a228e3] packaged: commons-csv-609a228e3-b5.tar.bz2
+
+b5 suites packaged: 68
+failures:           0
+tests left out:     10 of 3037 (0.3%)
+cost, as reported:  $35.89
+[commons-lang-e2838b281] staging the faulty revision (w-UmSiCTG9)
+[commons-lang-e2838b281] leak scan: clean
+[commons-lang-e2838b281] invoking agent (claude-sonnet-5, b5)
+[commons-lang-e2838b281] agent done: $0.268 turns=15 state=ok
+[commons-lang-e2838b281] left out 0 of 23 tests
+[commons-lang-e2838b281] packaged: commons-lang-e2838b281-b5.tar.bz2
+
+b5 suites packaged: 69
+failures:           0
+tests left out:     10 of 3060 (0.3%)
+cost, as reported:  $36.16
+[commons-lang-e2838b281] staging the fixed revision (w-C6y3mQFg)
+[commons-lang-e2838b281] leak scan: clean
+[commons-lang-e2838b281] invoking agent (claude-sonnet-5, m5)
+[commons-lang-e2838b281] agent done: $0.523 turns=30 state=ok
+[commons-lang-e2838b281] left out 0 of 31 tests
+[commons-lang-e2838b281] packaged: commons-lang-e2838b281-m5.tar.bz2
+
+m5 suites packaged: 69
+failures:           0
+tests left out:     2 of 3119 (0.1%)
+cost, as reported:  $36.94
+[commons-lang-b1aba6833] staging the fixed revision (w-hd0Z4hZe)
+[commons-lang-b1aba6833] leak scan:  1 trigger name;
+[commons-lang-b1aba6833] invoking agent (claude-sonnet-5, m5)
+[commons-lang-b1aba6833] agent done: $0.780 turns=18 state=ok
+[commons-lang-b1aba6833] left out 0 of 195 tests
+[commons-lang-b1aba6833] packaged: commons-lang-b1aba6833-m5.tar.bz2
+
+m5 suites packaged: 70
+failures:           0
+tests left out:     2 of 3314 (0.1%)
+cost, as reported:  $37.72
+[commons-lang-b1aba6833] staging the faulty revision (w-y3hzwkqz)
+[commons-lang-b1aba6833] leak scan:  1 trigger name;
+[commons-lang-b1aba6833] invoking agent (claude-sonnet-5, b5)
+[commons-lang-b1aba6833] agent done: $0.795 turns=18 state=ok
+[commons-lang-b1aba6833] left out 0 of 168 tests
+[commons-lang-b1aba6833] packaged: commons-lang-b1aba6833-b5.tar.bz2
+
+b5 suites packaged: 70
+failures:           0
+tests left out:     10 of 3228 (0.3%)
+cost, as reported:  $36.95
+[commons-lang-c07bc828f] staging the faulty revision (w-vO5FqTmO)
+[commons-lang-c07bc828f] leak scan:  2 trigger name;
+[commons-lang-c07bc828f] invoking agent (claude-sonnet-5, b5)
+[commons-lang-c07bc828f] agent done: $0.459 turns=19 state=ok
+[commons-lang-c07bc828f] left out 0 of 31 tests
+[commons-lang-c07bc828f] packaged: commons-lang-c07bc828f-b5.tar.bz2
+
+b5 suites packaged: 71
+failures:           0
+tests left out:     10 of 3259 (0.3%)
+cost, as reported:  $37.41
+[commons-lang-c07bc828f] staging the fixed revision (w-ifXQI4FZ)
+[commons-lang-c07bc828f] leak scan:  2 trigger name;
+[commons-lang-c07bc828f] invoking agent (claude-sonnet-5, m5)
+[commons-lang-c07bc828f] agent done: $0.542 turns=24 state=ok
+[commons-lang-c07bc828f] left out 0 of 35 tests
+[commons-lang-c07bc828f] packaged: commons-lang-c07bc828f-m5.tar.bz2
+
+m5 suites packaged: 71
+failures:           0
+tests left out:     2 of 3349 (0.1%)
+cost, as reported:  $38.27
+[commons-lang-0c4093928] staging the fixed revision (w-ivyj4YbR)
+[commons-lang-0c4093928] leak scan: clean
+[commons-lang-0c4093928] invoking agent (claude-sonnet-5, m5)
+[commons-lang-0c4093928] agent done: $0.336 turns=13 state=ok
+[commons-lang-0c4093928] left out 0 of 50 tests
+[commons-lang-0c4093928] packaged: commons-lang-0c4093928-m5.tar.bz2
+
+m5 suites packaged: 72
+failures:           0
+tests left out:     2 of 3399 (0.1%)
+cost, as reported:  $38.60
+[commons-lang-0c4093928] staging the faulty revision (w-GXo6pJmZ)
+[commons-lang-0c4093928] leak scan: clean
+[commons-lang-0c4093928] invoking agent (claude-sonnet-5, b5)
+[commons-lang-0c4093928] agent done: $0.382 turns=14 state=ok
+[commons-lang-0c4093928] left out 0 of 57 tests
+[commons-lang-0c4093928] packaged: commons-lang-0c4093928-b5.tar.bz2
+
+b5 suites packaged: 72
+failures:           0
+tests left out:     10 of 3316 (0.3%)
+cost, as reported:  $37.79
+[commons-lang-d215e7fec] staging the faulty revision (w-rjpngmYI)
+[commons-lang-d215e7fec] leak scan: clean
+[commons-lang-d215e7fec] invoking agent (claude-sonnet-5, b5)
+[commons-lang-d215e7fec] agent done: $0.824 turns=31 state=ok
+[commons-lang-d215e7fec] left out 0 of 47 tests
+[commons-lang-d215e7fec] packaged: commons-lang-d215e7fec-b5.tar.bz2
+
+b5 suites packaged: 73
+failures:           0
+tests left out:     10 of 3363 (0.3%)
+cost, as reported:  $38.62
+[commons-lang-d215e7fec] staging the fixed revision (w-3tFD4XUb)
+[commons-lang-d215e7fec] leak scan: clean
+[commons-lang-d215e7fec] invoking agent (claude-sonnet-5, m5)
+[commons-lang-d215e7fec] agent done: $0.539 turns=17 state=ok
+[commons-lang-d215e7fec] left out 0 of 41 tests
+[commons-lang-d215e7fec] packaged: commons-lang-d215e7fec-m5.tar.bz2
+
+m5 suites packaged: 73
+failures:           0
+tests left out:     2 of 3440 (0.1%)
+cost, as reported:  $39.14
+[commons-lang-c99f2ddfe] staging the fixed revision (w-eyfKdz58)
+[commons-lang-c99f2ddfe] leak scan: clean
+[commons-lang-c99f2ddfe] invoking agent (claude-sonnet-5, m5)
+[commons-lang-c99f2ddfe] agent done: $0.626 turns=31 state=ok
+[commons-lang-c99f2ddfe] left out 0 of 47 tests
+[commons-lang-c99f2ddfe] packaged: commons-lang-c99f2ddfe-m5.tar.bz2
+
+m5 suites packaged: 74
+failures:           0
+tests left out:     2 of 3487 (0.1%)
+cost, as reported:  $39.77
+[commons-lang-c99f2ddfe] staging the faulty revision (w-Mvk64YnT)
+[commons-lang-c99f2ddfe] leak scan: clean
+[commons-lang-c99f2ddfe] invoking agent (claude-sonnet-5, b5)
+[commons-lang-c99f2ddfe] agent done: $0.681 turns=39 state=ok
+[commons-lang-c99f2ddfe] left out 0 of 49 tests
+[commons-lang-c99f2ddfe] packaged: commons-lang-c99f2ddfe-b5.tar.bz2
+
+b5 suites packaged: 74
+failures:           0
+tests left out:     10 of 3412 (0.3%)
+cost, as reported:  $39.30
+[commons-lang-7c91ce989] staging the faulty revision (w-Fv1fSkpf)
+[commons-lang-7c91ce989] leak scan:  1 trigger name;
+[commons-lang-7c91ce989] invoking agent (claude-sonnet-5, b5)
+[commons-lang-7c91ce989] agent done: $0.853 turns=22 state=ok
+[commons-lang-7c91ce989] left out 0 of 155 tests
+[commons-lang-7c91ce989] packaged: commons-lang-7c91ce989-b5.tar.bz2
+
+b5 suites packaged: 75
+failures:           0
+tests left out:     10 of 3567 (0.3%)
+cost, as reported:  $40.15
+[commons-lang-7c91ce989] staging the fixed revision (w-xZSYUp59)
+[commons-lang-7c91ce989] leak scan:  1 trigger name;
+[commons-lang-7c91ce989] invoking agent (claude-sonnet-5, m5)
+[commons-lang-7c91ce989] agent done: $0.716 turns=20 state=ok
+[commons-lang-7c91ce989] left out 0 of 142 tests
+[commons-lang-7c91ce989] packaged: commons-lang-7c91ce989-m5.tar.bz2
+
+m5 suites packaged: 75
+failures:           0
+tests left out:     2 of 3629 (0.1%)
+cost, as reported:  $40.48
+[commons-lang-19b59ffdd] staging the fixed revision (w-JO52A3fS)
+[commons-lang-19b59ffdd] leak scan: clean
+[commons-lang-19b59ffdd] invoking agent (claude-sonnet-5, m5)
+[commons-lang-19b59ffdd] agent done: $1.220 turns=51 state=error
+[commons-lang-19b59ffdd] round 1: left out 12 failing test(s)
+[commons-lang-19b59ffdd] left out 12 of 56 tests
+[commons-lang-19b59ffdd] packaged: commons-lang-19b59ffdd-m5.tar.bz2
+
+m5 suites packaged: 76
+failures:           0
+tests left out:     14 of 3685 (0.4%)
+cost, as reported:  $41.70
+[commons-lang-19b59ffdd] staging the faulty revision (w-FlOFriOV)
+[commons-lang-19b59ffdd] leak scan: clean
+[commons-lang-19b59ffdd] invoking agent (claude-sonnet-5, b5)
+[commons-lang-19b59ffdd] agent done: $0.899 turns=41 state=ok
+[commons-lang-19b59ffdd] left out 0 of 31 tests
+[commons-lang-19b59ffdd] packaged: commons-lang-19b59ffdd-b5.tar.bz2
+
+b5 suites packaged: 76
+failures:           0
+tests left out:     10 of 3598 (0.3%)
+cost, as reported:  $41.05
+[commons-lang-75086d398] staging the faulty revision (w-YAQZ7SwH)
+[commons-lang-75086d398] leak scan: clean
+[commons-lang-75086d398] invoking agent (claude-sonnet-5, b5)
+[commons-lang-75086d398] agent done: $0.958 turns=20 state=ok
+[commons-lang-75086d398] left out 0 of 25 tests
+[commons-lang-75086d398] packaged: commons-lang-75086d398-b5.tar.bz2
+
+b5 suites packaged: 77
+failures:           0
+tests left out:     10 of 3623 (0.3%)
+cost, as reported:  $42.01
+[commons-lang-75086d398] staging the fixed revision (w-Fs8i3rWz)
+[commons-lang-75086d398] leak scan: clean
+[commons-lang-75086d398] invoking agent (claude-sonnet-5, m5)
+[commons-lang-75086d398] agent done: $1.129 turns=22 state=ok
+[commons-lang-75086d398] left out 0 of 107 tests
+[commons-lang-75086d398] packaged: commons-lang-75086d398-m5.tar.bz2
+
+m5 suites packaged: 77
+failures:           0
+tests left out:     14 of 3792 (0.4%)
+cost, as reported:  $42.83
+[commons-lang-10f442145] staging the fixed revision (w-Pcj7BPPv)
+[commons-lang-10f442145] leak scan: clean
+[commons-lang-10f442145] invoking agent (claude-sonnet-5, m5)
+[commons-lang-10f442145] agent done: $0.294 turns=12 state=ok
+[commons-lang-10f442145] left out 0 of 80 tests
+[commons-lang-10f442145] packaged: commons-lang-10f442145-m5.tar.bz2
+
+m5 suites packaged: 78
+failures:           0
+tests left out:     14 of 3872 (0.4%)
+cost, as reported:  $43.13
+[commons-lang-10f442145] staging the faulty revision (w-vyj9NzYQ)
+[commons-lang-10f442145] leak scan: clean
+[commons-lang-10f442145] invoking agent (claude-sonnet-5, b5)
+[commons-lang-10f442145] agent done: $0.282 turns=11 state=ok
+[commons-lang-10f442145] left out 0 of 68 tests
+[commons-lang-10f442145] packaged: commons-lang-10f442145-b5.tar.bz2
+
+b5 suites packaged: 78
+failures:           0
+tests left out:     10 of 3691 (0.3%)
+cost, as reported:  $42.29
+[commons-lang-7da57b615] staging the faulty revision (w-MAxJ60MC)
+[commons-lang-7da57b615] leak scan: clean
+[commons-lang-7da57b615] invoking agent (claude-sonnet-5, b5)
+[commons-lang-7da57b615] agent done: $0.187 turns=11 state=ok
+[commons-lang-7da57b615] left out 0 of 39 tests
+[commons-lang-7da57b615] packaged: commons-lang-7da57b615-b5.tar.bz2
+
+b5 suites packaged: 79
+failures:           0
+tests left out:     10 of 3730 (0.3%)
+cost, as reported:  $42.48
+[commons-lang-7da57b615] staging the fixed revision (w-CWiu2WJ4)
+[commons-lang-7da57b615] leak scan: clean
+[commons-lang-7da57b615] invoking agent (claude-sonnet-5, m5)
+[commons-lang-7da57b615] agent done: $0.257 turns=12 state=ok
+[commons-lang-7da57b615] left out 0 of 33 tests
+[commons-lang-7da57b615] packaged: commons-lang-7da57b615-m5.tar.bz2
+
+m5 suites packaged: 79
+failures:           0
+tests left out:     14 of 3905 (0.4%)
+cost, as reported:  $43.38
+[commons-lang-d98cea29f] staging the fixed revision (w-emgXlA8K)
+[commons-lang-d98cea29f] leak scan: clean
+[commons-lang-d98cea29f] invoking agent (claude-sonnet-5, m5)
+[commons-lang-d98cea29f] agent done: $0.489 turns=16 state=ok
+[commons-lang-d98cea29f] left out 0 of 66 tests
+[commons-lang-d98cea29f] packaged: commons-lang-d98cea29f-m5.tar.bz2
+
+m5 suites packaged: 80
+failures:           0
+tests left out:     14 of 3971 (0.4%)
+cost, as reported:  $43.87
+[commons-lang-d98cea29f] staging the faulty revision (w-SruQo5Wf)
+[commons-lang-d98cea29f] leak scan: clean
+[commons-lang-d98cea29f] invoking agent (claude-sonnet-5, b5)
+[commons-lang-d98cea29f] agent done: $0.358 turns=15 state=ok
+[commons-lang-d98cea29f] left out 0 of 44 tests
+[commons-lang-d98cea29f] packaged: commons-lang-d98cea29f-b5.tar.bz2
+
+b5 suites packaged: 80
+failures:           0
+tests left out:     10 of 3774 (0.3%)
+cost, as reported:  $42.84
+[commons-lang-83fe22025] staging the faulty revision (w-EaVvfxT6)
+[commons-lang-83fe22025] leak scan: clean
+[commons-lang-83fe22025] invoking agent (claude-sonnet-5, b5)
+[commons-lang-83fe22025] agent done: $0.354 turns=8 state=ok
+[commons-lang-83fe22025] left out 0 of 59 tests
+[commons-lang-83fe22025] packaged: commons-lang-83fe22025-b5.tar.bz2
+
+b5 suites packaged: 81
+failures:           0
+tests left out:     10 of 3833 (0.3%)
+cost, as reported:  $43.19
+[commons-lang-83fe22025] staging the fixed revision (w-P7Bvfhm5)
+[commons-lang-83fe22025] leak scan: clean
+[commons-lang-83fe22025] invoking agent (claude-sonnet-5, m5)
+[commons-lang-83fe22025] agent done: $0.392 turns=13 state=ok
+[commons-lang-83fe22025] left out 0 of 94 tests
+[commons-lang-83fe22025] packaged: commons-lang-83fe22025-m5.tar.bz2
+
+m5 suites packaged: 81
+failures:           0
+tests left out:     14 of 4065 (0.3%)
+cost, as reported:  $44.27
+[commons-lang-3e50a7f9c] staging the fixed revision (w-w17GDfP0)
+[commons-lang-3e50a7f9c] leak scan: clean
+[commons-lang-3e50a7f9c] invoking agent (claude-sonnet-5, m5)
+[commons-lang-3e50a7f9c] agent done: $0.382 turns=24 state=ok
+[commons-lang-3e50a7f9c] left out 0 of 18 tests
+[commons-lang-3e50a7f9c] packaged: commons-lang-3e50a7f9c-m5.tar.bz2
+
+m5 suites packaged: 82
+failures:           0
+tests left out:     14 of 4083 (0.3%)
+cost, as reported:  $44.65
+[commons-lang-3e50a7f9c] staging the faulty revision (w-zTFyOIit)
+[commons-lang-3e50a7f9c] leak scan: clean
+[commons-lang-3e50a7f9c] invoking agent (claude-sonnet-5, b5)
+[commons-lang-3e50a7f9c] agent done: $0.763 turns=35 state=ok
+[commons-lang-3e50a7f9c] left out 0 of 58 tests
+[commons-lang-3e50a7f9c] packaged: commons-lang-3e50a7f9c-b5.tar.bz2
+
+b5 suites packaged: 82
+failures:           0
+tests left out:     10 of 3891 (0.3%)
+cost, as reported:  $43.95
+[commons-lang-b11591895] staging the faulty revision (w-efvI1L4T)
+[commons-lang-b11591895] leak scan: clean
+[commons-lang-b11591895] invoking agent (claude-sonnet-5, b5)
+[commons-lang-b11591895] agent done: $0.153 turns=8 state=ok
+[commons-lang-b11591895] left out 0 of 18 tests
+[commons-lang-b11591895] packaged: commons-lang-b11591895-b5.tar.bz2
+
+b5 suites packaged: 83
+failures:           0
+tests left out:     10 of 3909 (0.3%)
+cost, as reported:  $44.11
+[commons-lang-b11591895] staging the fixed revision (w-rd9pjprW)
+[commons-lang-b11591895] leak scan: clean
+[commons-lang-b11591895] invoking agent (claude-sonnet-5, m5)
+[commons-lang-b11591895] agent done: $0.145 turns=12 state=ok
+[commons-lang-b11591895] left out 0 of 20 tests
+[commons-lang-b11591895] packaged: commons-lang-b11591895-m5.tar.bz2
+
+m5 suites packaged: 83
+failures:           0
+tests left out:     14 of 4103 (0.3%)
+cost, as reported:  $44.79
+[commons-lang-4060e60f4] staging the fixed revision (w-p1tkfJdM)
+[commons-lang-4060e60f4] leak scan: clean
+[commons-lang-4060e60f4] invoking agent (claude-sonnet-5, m5)
+[commons-lang-4060e60f4] agent done: $0.583 turns=16 state=ok
+[commons-lang-4060e60f4] left out 0 of 62 tests
+[commons-lang-4060e60f4] packaged: commons-lang-4060e60f4-m5.tar.bz2
+
+m5 suites packaged: 84
+failures:           0
+tests left out:     14 of 4165 (0.3%)
+cost, as reported:  $45.38
+[commons-lang-4060e60f4] staging the faulty revision (w-abaSF9IR)
+[commons-lang-4060e60f4] leak scan: clean
+[commons-lang-4060e60f4] invoking agent (claude-sonnet-5, b5)
+[commons-lang-4060e60f4] agent done: $0.496 turns=15 state=ok
+[commons-lang-4060e60f4] left out 0 of 30 tests
+[commons-lang-4060e60f4] packaged: commons-lang-4060e60f4-b5.tar.bz2
+
+b5 suites packaged: 84
+failures:           0
+tests left out:     10 of 3939 (0.3%)
+cost, as reported:  $44.60
+[commons-csv-b29fb40ac] staging the faulty revision (w-EgPLvpc4)
+[commons-csv-b29fb40ac] leak scan: clean
+[commons-csv-b29fb40ac] invoking agent (claude-sonnet-5, b5)
+[commons-csv-b29fb40ac] agent done: $0.626 turns=27 state=ok
+[commons-csv-b29fb40ac] left out 0 of 27 tests
+[commons-csv-b29fb40ac] packaged: commons-csv-b29fb40ac-b5.tar.bz2
+
+b5 suites packaged: 85
+failures:           0
+tests left out:     10 of 3966 (0.3%)
+cost, as reported:  $45.23
+[commons-csv-b29fb40ac] staging the fixed revision (w-CoiWFasj)
+[commons-csv-b29fb40ac] leak scan: clean
+[commons-csv-b29fb40ac] invoking agent (claude-sonnet-5, m5)
+[commons-csv-b29fb40ac] agent done: $0.514 turns=24 state=ok
+[commons-csv-b29fb40ac] left out 0 of 35 tests
+[commons-csv-b29fb40ac] packaged: commons-csv-b29fb40ac-m5.tar.bz2
+
+m5 suites packaged: 85
+failures:           0
+tests left out:     14 of 4200 (0.3%)
+cost, as reported:  $45.89
+[commons-lang-2c3748412] staging the fixed revision (w-HS3pxVO6)
+[commons-lang-2c3748412] leak scan: clean
+[commons-lang-2c3748412] invoking agent (claude-sonnet-5, m5)
+[commons-lang-2c3748412] agent done: $0.347 turns=9 state=ok
+[commons-lang-2c3748412] left out 0 of 76 tests
+[commons-lang-2c3748412] packaged: commons-lang-2c3748412-m5.tar.bz2
+
+m5 suites packaged: 86
+failures:           0
+tests left out:     14 of 4276 (0.3%)
+cost, as reported:  $46.24
+[commons-lang-2c3748412] staging the faulty revision (w-dJrHrRa8)
+[commons-lang-2c3748412] leak scan: clean
+[commons-lang-2c3748412] invoking agent (claude-sonnet-5, b5)
+[commons-lang-2c3748412] agent done: $0.313 turns=8 state=ok
+[commons-lang-2c3748412] left out 0 of 46 tests
+[commons-lang-2c3748412] packaged: commons-lang-2c3748412-b5.tar.bz2
+
+b5 suites packaged: 86
+failures:           0
+tests left out:     10 of 4012 (0.2%)
+cost, as reported:  $45.54
+[commons-lang-1c1a79822] staging the faulty revision (w-EOTU3r0i)
+[commons-lang-1c1a79822] leak scan: clean
+[commons-lang-1c1a79822] invoking agent (claude-sonnet-5, b5)
+[commons-lang-1c1a79822] agent done: $0.485 turns=17 state=ok
+[commons-lang-1c1a79822] left out 0 of 56 tests
+[commons-lang-1c1a79822] packaged: commons-lang-1c1a79822-b5.tar.bz2
+
+b5 suites packaged: 87
+failures:           0
+tests left out:     10 of 4068 (0.2%)
+cost, as reported:  $46.03
+[commons-lang-1c1a79822] staging the fixed revision (w-vBeuWoMB)
+[commons-lang-1c1a79822] leak scan: clean
+[commons-lang-1c1a79822] invoking agent (claude-sonnet-5, m5)
+[commons-lang-1c1a79822] agent done: $0.660 turns=17 state=ok
+[commons-lang-1c1a79822] left out 0 of 26 tests
+[commons-lang-1c1a79822] packaged: commons-lang-1c1a79822-m5.tar.bz2
+
+m5 suites packaged: 87
+failures:           0
+tests left out:     14 of 4302 (0.3%)
+cost, as reported:  $46.90
+[commons-lang-52c06bea2] staging the fixed revision (w-xC7CwgiB)
+[commons-lang-52c06bea2] leak scan: clean
+[commons-lang-52c06bea2] invoking agent (claude-sonnet-5, m5)
+[commons-lang-52c06bea2] agent done: $0.724 turns=36 state=ok
+[commons-lang-52c06bea2] left out 0 of 75 tests
+[commons-lang-52c06bea2] packaged: commons-lang-52c06bea2-m5.tar.bz2
+
+m5 suites packaged: 88
+failures:           0
+tests left out:     14 of 4377 (0.3%)
+cost, as reported:  $47.62
+[commons-lang-52c06bea2] staging the faulty revision (w-3sXlqxHQ)
+[commons-lang-52c06bea2] leak scan: clean
+[commons-lang-52c06bea2] invoking agent (claude-sonnet-5, b5)
+[commons-lang-52c06bea2] agent done: $0.493 turns=23 state=ok
+[commons-lang-52c06bea2] left out 0 of 33 tests
+[commons-lang-52c06bea2] packaged: commons-lang-52c06bea2-b5.tar.bz2
+
+b5 suites packaged: 88
+failures:           0
+tests left out:     10 of 4101 (0.2%)
+cost, as reported:  $46.52
+[commons-lang-5d46a39e4] staging the faulty revision (w-w0iCJN2B)
+[commons-lang-5d46a39e4] leak scan: clean
+[commons-lang-5d46a39e4] invoking agent (claude-sonnet-5, b5)
+[commons-lang-5d46a39e4] agent done: $0.698 turns=27 state=ok
+[commons-lang-5d46a39e4] left out 0 of 68 tests
+[commons-lang-5d46a39e4] packaged: commons-lang-5d46a39e4-b5.tar.bz2
+
+b5 suites packaged: 89
+failures:           0
+tests left out:     10 of 4169 (0.2%)
+cost, as reported:  $47.22
+[commons-lang-5d46a39e4] staging the fixed revision (w-RFF7CoPr)
+[commons-lang-5d46a39e4] leak scan: clean
+[commons-lang-5d46a39e4] invoking agent (claude-sonnet-5, m5)
+[commons-lang-5d46a39e4] agent done: $0.495 turns=17 state=ok
+[commons-lang-5d46a39e4] left out 0 of 64 tests
+[commons-lang-5d46a39e4] packaged: commons-lang-5d46a39e4-m5.tar.bz2
+
+m5 suites packaged: 89
+failures:           0
+tests left out:     14 of 4441 (0.3%)
+cost, as reported:  $48.12
+[commons-lang-ae85262f0] staging the fixed revision (w-9rOfo6pt)
+[commons-lang-ae85262f0] leak scan: clean
+[commons-lang-ae85262f0] invoking agent (claude-sonnet-5, m5)
+[commons-lang-ae85262f0] agent done: $0.744 turns=40 state=ok
+[commons-lang-ae85262f0] left out 0 of 23 tests
+[commons-lang-ae85262f0] packaged: commons-lang-ae85262f0-m5.tar.bz2
+
+m5 suites packaged: 90
+failures:           0
+tests left out:     14 of 4464 (0.3%)
+cost, as reported:  $48.86
+[commons-lang-ae85262f0] staging the faulty revision (w-oJ1eUaxl)
+[commons-lang-ae85262f0] leak scan: clean
+[commons-lang-ae85262f0] invoking agent (claude-sonnet-5, b5)
+[commons-lang-ae85262f0] agent done: $0.377 turns=17 state=ok
+[commons-lang-ae85262f0] left out 0 of 69 tests
+[commons-lang-ae85262f0] packaged: commons-lang-ae85262f0-b5.tar.bz2
+
+b5 suites packaged: 90
+failures:           0
+tests left out:     10 of 4238 (0.2%)
+cost, as reported:  $47.60
+[commons-lang-18063c1f6] staging the faulty revision (w-hVKRSJ3T)
+[commons-lang-18063c1f6] leak scan: clean
+[commons-lang-18063c1f6] invoking agent (claude-sonnet-5, b5)
+[commons-lang-18063c1f6] agent done: $0.711 turns=23 state=ok
+[commons-lang-18063c1f6] left out 0 of 56 tests
+[commons-lang-18063c1f6] packaged: commons-lang-18063c1f6-b5.tar.bz2
+
+b5 suites packaged: 91
+failures:           0
+tests left out:     10 of 4294 (0.2%)
+cost, as reported:  $48.31
+[commons-lang-18063c1f6] staging the fixed revision (w-BNp9nbZn)
+[commons-lang-18063c1f6] leak scan: clean
+[commons-lang-18063c1f6] invoking agent (claude-sonnet-5, m5)
+[commons-lang-18063c1f6] agent done: $0.535 turns=21 state=ok
+[commons-lang-18063c1f6] left out 0 of 58 tests
+[commons-lang-18063c1f6] packaged: commons-lang-18063c1f6-m5.tar.bz2
+
+m5 suites packaged: 91
+failures:           0
+tests left out:     14 of 4522 (0.3%)
+cost, as reported:  $49.40
+[commons-lang-5dede14ab] staging the fixed revision (w-3Foj682i)
+[commons-lang-5dede14ab] leak scan: clean
+[commons-lang-5dede14ab] invoking agent (claude-sonnet-5, m5)
+[commons-lang-5dede14ab] agent done: $0.230 turns=13 state=ok
+[commons-lang-5dede14ab] left out 0 of 16 tests
+[commons-lang-5dede14ab] packaged: commons-lang-5dede14ab-m5.tar.bz2
+
+m5 suites packaged: 92
+failures:           0
+tests left out:     14 of 4538 (0.3%)
+cost, as reported:  $49.63
+[commons-lang-5dede14ab] staging the faulty revision (w-j7IK4uQR)
+[commons-lang-5dede14ab] leak scan: clean
+[commons-lang-5dede14ab] invoking agent (claude-sonnet-5, b5)
+[commons-lang-5dede14ab] agent done: $0.379 turns=15 state=ok
+[commons-lang-5dede14ab] left out 0 of 34 tests
+[commons-lang-5dede14ab] packaged: commons-lang-5dede14ab-b5.tar.bz2
+
+b5 suites packaged: 92
+failures:           0
+tests left out:     10 of 4328 (0.2%)
+cost, as reported:  $48.69
+[commons-lang-43154e016] staging the faulty revision (w-qGTcKjyG)
+[commons-lang-43154e016] leak scan: clean
+[commons-lang-43154e016] invoking agent (claude-sonnet-5, b5)
+[commons-lang-43154e016] agent done: $0.534 turns=14 state=ok
+[commons-lang-43154e016] left out 0 of 38 tests
+[commons-lang-43154e016] packaged: commons-lang-43154e016-b5.tar.bz2
+
+b5 suites packaged: 93
+failures:           0
+tests left out:     10 of 4366 (0.2%)
+cost, as reported:  $49.22
+[commons-lang-43154e016] staging the fixed revision (w-m5SggcWL)
+[commons-lang-43154e016] leak scan: clean
+[commons-lang-43154e016] invoking agent (claude-sonnet-5, m5)
+[commons-lang-43154e016] agent done: $0.730 turns=27 state=ok
+[commons-lang-43154e016] left out 0 of 74 tests
+[commons-lang-43154e016] packaged: commons-lang-43154e016-m5.tar.bz2
+
+m5 suites packaged: 93
+failures:           0
+tests left out:     14 of 4612 (0.3%)
+cost, as reported:  $50.36
+[commons-lang-2011ce3ba] staging the fixed revision (w-xDFXDykC)
+[commons-lang-2011ce3ba] leak scan: clean
+[commons-lang-2011ce3ba] invoking agent (claude-sonnet-5, m5)
+[commons-lang-2011ce3ba] agent done: $0.308 turns=18 state=ok
+[commons-lang-2011ce3ba] left out 0 of 24 tests
+[commons-lang-2011ce3ba] packaged: commons-lang-2011ce3ba-m5.tar.bz2
+
+m5 suites packaged: 94
+failures:           0
+tests left out:     14 of 4636 (0.3%)
+cost, as reported:  $50.66
+[commons-lang-2011ce3ba] staging the faulty revision (w-eD1Br9R0)
+[commons-lang-2011ce3ba] leak scan: clean
+[commons-lang-2011ce3ba] invoking agent (claude-sonnet-5, b5)
+[commons-lang-2011ce3ba] agent done: $0.209 turns=13 state=ok
+[commons-lang-2011ce3ba] left out 0 of 22 tests
+[commons-lang-2011ce3ba] packaged: commons-lang-2011ce3ba-b5.tar.bz2
+
+b5 suites packaged: 94
+failures:           0
+tests left out:     10 of 4388 (0.2%)
+cost, as reported:  $49.43
+[commons-lang-3df7f4440] staging the faulty revision (w-2lmL7riR)
+[commons-lang-3df7f4440] leak scan: clean
+[commons-lang-3df7f4440] invoking agent (claude-sonnet-5, b5)
+[commons-lang-3df7f4440] agent done: $0.240 turns=14 state=ok
+[commons-lang-3df7f4440] left out 0 of 39 tests
+[commons-lang-3df7f4440] packaged: commons-lang-3df7f4440-b5.tar.bz2
+
+b5 suites packaged: 95
+failures:           0
+tests left out:     10 of 4427 (0.2%)
+cost, as reported:  $49.67
+[commons-lang-3df7f4440] staging the fixed revision (w-GENdv1f8)
+[commons-lang-3df7f4440] leak scan: clean
+[commons-lang-3df7f4440] invoking agent (claude-sonnet-5, m5)
+[commons-lang-3df7f4440] agent done: $0.257 turns=12 state=ok
+[commons-lang-3df7f4440] left out 0 of 47 tests
+[commons-lang-3df7f4440] packaged: commons-lang-3df7f4440-m5.tar.bz2
+
+m5 suites packaged: 95
+failures:           0
+tests left out:     14 of 4683 (0.3%)
+cost, as reported:  $50.92
+[commons-lang-e1ffb6ea0] staging the fixed revision (w-Sui0GT7S)
+[commons-lang-e1ffb6ea0] leak scan: clean
+[commons-lang-e1ffb6ea0] invoking agent (claude-sonnet-5, m5)
+[commons-lang-e1ffb6ea0] agent done: $0.345 turns=18 state=ok
+[commons-lang-e1ffb6ea0] left out 0 of 50 tests
+[commons-lang-e1ffb6ea0] packaged: commons-lang-e1ffb6ea0-m5.tar.bz2
+
+m5 suites packaged: 96
+failures:           0
+tests left out:     14 of 4733 (0.3%)
+cost, as reported:  $51.27
+[commons-lang-e1ffb6ea0] staging the faulty revision (w-dBwAzVAP)
+[commons-lang-e1ffb6ea0] leak scan: clean
+[commons-lang-e1ffb6ea0] invoking agent (claude-sonnet-5, b5)
+[commons-lang-e1ffb6ea0] agent done: $0.385 turns=12 state=ok
+[commons-lang-e1ffb6ea0] left out 0 of 36 tests
+[commons-lang-e1ffb6ea0] packaged: commons-lang-e1ffb6ea0-b5.tar.bz2
+
+b5 suites packaged: 96
+failures:           0
+tests left out:     10 of 4463 (0.2%)
+cost, as reported:  $50.05
+[commons-lang-127050d2b] staging the faulty revision (w-YtgTu7X1)
+[commons-lang-127050d2b] leak scan: clean
+[commons-lang-127050d2b] invoking agent (claude-sonnet-5, b5)
+[commons-lang-127050d2b] agent done: $0.436 turns=13 state=ok
+[commons-lang-127050d2b] left out 0 of 56 tests
+[commons-lang-127050d2b] packaged: commons-lang-127050d2b-b5.tar.bz2
+
+b5 suites packaged: 97
+failures:           0
+tests left out:     10 of 4519 (0.2%)
+cost, as reported:  $50.49
+[commons-lang-127050d2b] staging the fixed revision (w-vslPTlSx)
+[commons-lang-127050d2b] leak scan: clean
+[commons-lang-127050d2b] invoking agent (claude-sonnet-5, m5)
+[commons-lang-127050d2b] agent done: $0.415 turns=10 state=ok
+[commons-lang-127050d2b] left out 0 of 36 tests
+[commons-lang-127050d2b] packaged: commons-lang-127050d2b-m5.tar.bz2
+
+m5 suites packaged: 97
+failures:           0
+tests left out:     14 of 4769 (0.3%)
+cost, as reported:  $51.68
+[commons-lang-d927bfc84] staging the fixed revision (w-rC8omvu5)
+[commons-lang-d927bfc84] leak scan: clean
+[commons-lang-d927bfc84] invoking agent (claude-sonnet-5, m5)
+[commons-lang-d927bfc84] agent done: $0.225 turns=13 state=ok
+[commons-lang-d927bfc84] left out 0 of 26 tests
+[commons-lang-d927bfc84] packaged: commons-lang-d927bfc84-m5.tar.bz2
+
+m5 suites packaged: 98
+failures:           0
+tests left out:     14 of 4795 (0.3%)
+cost, as reported:  $51.91
+[commons-lang-d927bfc84] staging the faulty revision (w-RDF19NI4)
+[commons-lang-d927bfc84] leak scan: clean
+[commons-lang-d927bfc84] invoking agent (claude-sonnet-5, b5)
+[commons-lang-d927bfc84] agent done: $0.310 turns=16 state=ok
+[commons-lang-d927bfc84] left out 0 of 19 tests
+[commons-lang-d927bfc84] packaged: commons-lang-d927bfc84-b5.tar.bz2
+
+b5 suites packaged: 98
+failures:           0
+tests left out:     10 of 4538 (0.2%)
+cost, as reported:  $50.80
+[commons-lang-b62244517] staging the faulty revision (w-rgLWOYk5)
+[commons-lang-b62244517] leak scan: clean
+[commons-lang-b62244517] invoking agent (claude-sonnet-5, b5)
+[commons-lang-b62244517] agent done: $0.564 turns=30 state=ok
+[commons-lang-b62244517] left out 0 of 97 tests
+[commons-lang-b62244517] packaged: commons-lang-b62244517-b5.tar.bz2
+
+b5 suites packaged: 99
+failures:           0
+tests left out:     10 of 4635 (0.2%)
+cost, as reported:  $51.36
+[commons-lang-b62244517] staging the fixed revision (w-gy8YwvOe)
+[commons-lang-b62244517] leak scan: clean
+[commons-lang-b62244517] invoking agent (claude-sonnet-5, m5)
+[commons-lang-b62244517] agent done: $0.417 turns=16 state=ok
+[commons-lang-b62244517] left out 0 of 53 tests
+[commons-lang-b62244517] packaged: commons-lang-b62244517-m5.tar.bz2
+
+m5 suites packaged: 99
+failures:           0
+tests left out:     14 of 4848 (0.3%)
+cost, as reported:  $52.32
+[commons-lang-5904c573f] staging the fixed revision (w-9rU8I4XY)
+[commons-lang-5904c573f] leak scan: clean
+[commons-lang-5904c573f] invoking agent (claude-sonnet-5, m5)
+[commons-lang-5904c573f] agent done: $0.601 turns=21 state=ok
+[commons-lang-5904c573f] left out 0 of 94 tests
+[commons-lang-5904c573f] packaged: commons-lang-5904c573f-m5.tar.bz2
+
+m5 suites packaged: 100
+failures:           0
+tests left out:     14 of 4942 (0.3%)
+cost, as reported:  $52.92
+[commons-lang-5904c573f] staging the faulty revision (w-zqbvPnJ1)
+[commons-lang-5904c573f] leak scan: clean
+[commons-lang-5904c573f] invoking agent (claude-sonnet-5, b5)
+[commons-lang-5904c573f] agent done: $0.417 turns=11 state=ok
+[commons-lang-5904c573f] left out 0 of 55 tests
+[commons-lang-5904c573f] packaged: commons-lang-5904c573f-b5.tar.bz2
+
+b5 suites packaged: 100
+failures:           0
+tests left out:     10 of 4690 (0.2%)
+cost, as reported:  $51.78
+[commons-lang-4a6a98432] staging the faulty revision (w-OxwHJ6Ry)
+[commons-lang-4a6a98432] leak scan: clean
+[commons-lang-4a6a98432] invoking agent (claude-sonnet-5, b5)
+[commons-lang-4a6a98432] agent done: $1.499 turns=51 state=error
+[commons-lang-4a6a98432] round 1: left out 15 failing test(s)
+[commons-lang-4a6a98432] left out 15 of 70 tests
+[commons-lang-4a6a98432] packaged: commons-lang-4a6a98432-b5.tar.bz2
+
+b5 suites packaged: 101
+failures:           0
+tests left out:     25 of 4760 (0.5%)
+cost, as reported:  $53.28
+[commons-lang-4a6a98432] staging the fixed revision (w-gf620Obi)
+[commons-lang-4a6a98432] leak scan: clean
+[commons-lang-4a6a98432] invoking agent (claude-sonnet-5, m5)
+[commons-lang-4a6a98432] agent done: $1.135 turns=45 state=ok
+[commons-lang-4a6a98432] left out 0 of 27 tests
+[commons-lang-4a6a98432] packaged: commons-lang-4a6a98432-m5.tar.bz2
+
+m5 suites packaged: 101
+failures:           0
+tests left out:     14 of 4969 (0.3%)
+cost, as reported:  $54.06
+[commons-csv-f53d04737] staging the fixed revision (w-qdwyliLT)
+[commons-csv-f53d04737] leak scan: clean
+[commons-csv-f53d04737] invoking agent (claude-sonnet-5, m5)
+[commons-csv-f53d04737] agent done: $0.303 turns=17 state=ok
+[commons-csv-f53d04737] left out 0 of 23 tests
+[commons-csv-f53d04737] packaged: commons-csv-f53d04737-m5.tar.bz2
+
+m5 suites packaged: 102
+failures:           0
+tests left out:     14 of 4992 (0.3%)
+cost, as reported:  $54.36
+[commons-csv-f53d04737] staging the faulty revision (w-PCxBpDsK)
+[commons-csv-f53d04737] leak scan: clean
+[commons-csv-f53d04737] invoking agent (claude-sonnet-5, b5)
+[commons-csv-f53d04737] agent done: $0.358 turns=16 state=ok
+[commons-csv-f53d04737] left out 0 of 15 tests
+[commons-csv-f53d04737] packaged: commons-csv-f53d04737-b5.tar.bz2
+
+b5 suites packaged: 102
+failures:           0
+tests left out:     25 of 4775 (0.5%)
+cost, as reported:  $53.64
+[commons-cli-8010193ee] staging the faulty revision (w-wIsBedMy)
+[commons-cli-8010193ee] leak scan: clean
+[commons-cli-8010193ee] invoking agent (claude-sonnet-5, b5)
+[commons-cli-8010193ee] agent done: $0.127 turns=8 state=ok
+[commons-cli-8010193ee] left out 0 of 21 tests
+[commons-cli-8010193ee] packaged: commons-cli-8010193ee-b5.tar.bz2
+
+b5 suites packaged: 103
+failures:           0
+tests left out:     25 of 4796 (0.5%)
+cost, as reported:  $53.77
+[commons-cli-8010193ee] staging the fixed revision (w-YGRiJ5SC)
+[commons-cli-8010193ee] leak scan: clean
+[commons-cli-8010193ee] invoking agent (claude-sonnet-5, m5)
+[commons-cli-8010193ee] agent done: $0.209 turns=19 state=ok
+[commons-cli-8010193ee] left out 0 of 18 tests
+[commons-cli-8010193ee] packaged: commons-cli-8010193ee-m5.tar.bz2
+
+m5 suites packaged: 103
+failures:           0
+tests left out:     14 of 5010 (0.3%)
+cost, as reported:  $54.57
+[commons-lang-dda928301] staging the fixed revision (w-ekA1nnpG)
+[commons-lang-dda928301] leak scan: clean
+[commons-lang-dda928301] invoking agent (claude-sonnet-5, m5)
+[commons-lang-dda928301] agent done: $0.398 turns=17 state=ok
+[commons-lang-dda928301] left out 0 of 31 tests
+[commons-lang-dda928301] packaged: commons-lang-dda928301-m5.tar.bz2
+
+m5 suites packaged: 104
+failures:           0
+tests left out:     14 of 5041 (0.3%)
+cost, as reported:  $54.97
+[commons-lang-dda928301] staging the faulty revision (w-6oAsjz67)
+[commons-lang-dda928301] leak scan: clean
+[commons-lang-dda928301] invoking agent (claude-sonnet-5, b5)
+[commons-lang-dda928301] agent done: $0.595 turns=26 state=ok
+[commons-lang-dda928301] left out 0 of 35 tests
+[commons-lang-dda928301] packaged: commons-lang-dda928301-b5.tar.bz2
+
+b5 suites packaged: 104
+failures:           0
+tests left out:     25 of 4831 (0.5%)
+cost, as reported:  $54.36
+[commons-lang-f164995c9] staging the faulty revision (w-HJjqOUWO)
+[commons-lang-f164995c9] leak scan: clean
+[commons-lang-f164995c9] invoking agent (claude-sonnet-5, b5)
+[commons-lang-f164995c9] agent done: $0.541 turns=20 state=ok
+[commons-lang-f164995c9] left out 0 of 42 tests
+[commons-lang-f164995c9] packaged: commons-lang-f164995c9-b5.tar.bz2
+
+b5 suites packaged: 105
+failures:           0
+tests left out:     25 of 4873 (0.5%)
+cost, as reported:  $54.90
+[commons-lang-f164995c9] staging the fixed revision (w-p3A7Abjp)
+[commons-lang-f164995c9] leak scan: clean
+[commons-lang-f164995c9] invoking agent (claude-sonnet-5, m5)
+[commons-lang-f164995c9] agent done: $0.452 turns=20 state=ok
+[commons-lang-f164995c9] left out 0 of 50 tests
+[commons-lang-f164995c9] packaged: commons-lang-f164995c9-m5.tar.bz2
+
+m5 suites packaged: 105
+failures:           0
+tests left out:     14 of 5091 (0.3%)
+cost, as reported:  $55.42
+[commons-lang-f4442b1c9] staging the fixed revision (w-dzRbXk35)
+[commons-lang-f4442b1c9] leak scan: clean
+[commons-lang-f4442b1c9] invoking agent (claude-sonnet-5, m5)
+[commons-lang-f4442b1c9] agent done: $0.844 turns=37 state=ok
+[commons-lang-f4442b1c9] left out 0 of 32 tests
+[commons-lang-f4442b1c9] packaged: commons-lang-f4442b1c9-m5.tar.bz2
+
+m5 suites packaged: 106
+failures:           0
+tests left out:     14 of 5123 (0.3%)
+cost, as reported:  $56.26
+[commons-lang-f4442b1c9] staging the faulty revision (w-nmULJ7Ny)
+[commons-lang-f4442b1c9] leak scan: clean
+[commons-lang-f4442b1c9] invoking agent (claude-sonnet-5, b5)
+[commons-lang-f4442b1c9] agent done: $0.492 turns=18 state=ok
+[commons-lang-f4442b1c9] left out 0 of 31 tests
+[commons-lang-f4442b1c9] packaged: commons-lang-f4442b1c9-b5.tar.bz2
+
+b5 suites packaged: 106
+failures:           0
+tests left out:     25 of 4904 (0.5%)
+cost, as reported:  $55.39
+[commons-csv-1a8403dd5] staging the faulty revision (w-WZAqXrjL)
+[commons-csv-1a8403dd5] leak scan: clean
+[commons-csv-1a8403dd5] invoking agent (claude-sonnet-5, b5)
+[commons-csv-1a8403dd5] agent done: $0.849 turns=24 state=ok
+[commons-csv-1a8403dd5] left out 0 of 52 tests
+[commons-csv-1a8403dd5] packaged: commons-csv-1a8403dd5-b5.tar.bz2
+
+b5 suites packaged: 107
+failures:           0
+tests left out:     25 of 4956 (0.5%)
+cost, as reported:  $56.24
+[commons-csv-1a8403dd5] staging the fixed revision (w-KtV1hkhh)
+[commons-csv-1a8403dd5] leak scan: clean
+[commons-csv-1a8403dd5] invoking agent (claude-sonnet-5, m5)
+[commons-csv-1a8403dd5] agent done: $0.845 turns=36 state=ok
+[commons-csv-1a8403dd5] left out 0 of 64 tests
+[commons-csv-1a8403dd5] packaged: commons-csv-1a8403dd5-m5.tar.bz2
+
+m5 suites packaged: 107
+failures:           0
+tests left out:     14 of 5187 (0.3%)
+cost, as reported:  $57.11
+[commons-cli-f3ba9c951] staging the fixed revision (w-jbeLhIDM)
+[commons-cli-f3ba9c951] leak scan: clean
+[commons-cli-f3ba9c951] invoking agent (claude-sonnet-5, m5)
+[commons-cli-f3ba9c951] agent done: $0.195 turns=14 state=ok
+[commons-cli-f3ba9c951] left out 0 of 25 tests
+[commons-cli-f3ba9c951] packaged: commons-cli-f3ba9c951-m5.tar.bz2
+
+m5 suites packaged: 108
+failures:           0
+tests left out:     14 of 5212 (0.3%)
+cost, as reported:  $57.31
+[commons-cli-f3ba9c951] staging the faulty revision (w-gskeLgFv)
+[commons-cli-f3ba9c951] leak scan: clean
+[commons-cli-f3ba9c951] invoking agent (claude-sonnet-5, b5)
+[commons-cli-f3ba9c951] agent done: $0.153 turns=11 state=ok
+[commons-cli-f3ba9c951] left out 0 of 20 tests
+[commons-cli-f3ba9c951] packaged: commons-cli-f3ba9c951-b5.tar.bz2
+
+b5 suites packaged: 108
+failures:           0
+tests left out:     25 of 4976 (0.5%)
+cost, as reported:  $56.39
+[commons-lang-8425918f9] staging the faulty revision (w-1YowSdSm)
+[commons-lang-8425918f9] leak scan: clean
+[commons-lang-8425918f9] invoking agent (claude-sonnet-5, b5)
+[commons-lang-8425918f9] agent done: $0.216 turns=14 state=ok
+[commons-lang-8425918f9] left out 0 of 23 tests
+[commons-lang-8425918f9] packaged: commons-lang-8425918f9-b5.tar.bz2
+
+b5 suites packaged: 109
+failures:           0
+tests left out:     25 of 4999 (0.5%)
+cost, as reported:  $56.61
+[commons-lang-8425918f9] staging the fixed revision (w-03p4a9L9)
+[commons-lang-8425918f9] leak scan: clean
+[commons-lang-8425918f9] invoking agent (claude-sonnet-5, m5)
+[commons-lang-8425918f9] agent done: $0.356 turns=21 state=ok
+[commons-lang-8425918f9] left out 0 of 19 tests
+[commons-lang-8425918f9] packaged: commons-lang-8425918f9-m5.tar.bz2
+
+m5 suites packaged: 109
+failures:           0
+tests left out:     14 of 5231 (0.3%)
+cost, as reported:  $57.66
+[commons-lang-aa47951bd] staging the fixed revision (w-8O0Wtv26)
+[commons-lang-aa47951bd] leak scan: clean
+[commons-lang-aa47951bd] invoking agent (claude-sonnet-5, m5)
+[commons-lang-aa47951bd] agent done: $0.444 turns=22 state=ok
+[commons-lang-aa47951bd] left out 0 of 36 tests
+[commons-lang-aa47951bd] packaged: commons-lang-aa47951bd-m5.tar.bz2
+
+m5 suites packaged: 110
+failures:           0
+tests left out:     14 of 5267 (0.3%)
+cost, as reported:  $58.11
+[commons-lang-aa47951bd] staging the faulty revision (w-YttGAmjk)
+[commons-lang-aa47951bd] leak scan: clean
+[commons-lang-aa47951bd] invoking agent (claude-sonnet-5, b5)
+[commons-lang-aa47951bd] agent done: $0.229 turns=11 state=ok
+[commons-lang-aa47951bd] left out 0 of 43 tests
+[commons-lang-aa47951bd] packaged: commons-lang-aa47951bd-b5.tar.bz2
+
+b5 suites packaged: 110
+failures:           0
+tests left out:     25 of 5042 (0.5%)
+cost, as reported:  $56.84
+[commons-lang-4052e9862] staging the faulty revision (w-eBEC1ph4)
+[commons-lang-4052e9862] leak scan: clean
+[commons-lang-4052e9862] invoking agent (claude-sonnet-5, b5)
+[commons-lang-4052e9862] agent done: $0.417 turns=19 state=ok
+[commons-lang-4052e9862] left out 0 of 34 tests
+[commons-lang-4052e9862] packaged: commons-lang-4052e9862-b5.tar.bz2
+
+b5 suites packaged: 111
+failures:           0
+tests left out:     25 of 5076 (0.5%)
+cost, as reported:  $57.26
+[commons-lang-4052e9862] staging the fixed revision (w-t42lnUSw)
+[commons-lang-4052e9862] leak scan: clean
+[commons-lang-4052e9862] invoking agent (claude-sonnet-5, m5)
+[commons-lang-4052e9862] agent done: $0.462 turns=16 state=ok
+[commons-lang-4052e9862] left out 0 of 105 tests
+[commons-lang-4052e9862] packaged: commons-lang-4052e9862-m5.tar.bz2
+
+m5 suites packaged: 111
+failures:           0
+tests left out:     14 of 5372 (0.3%)
+cost, as reported:  $58.57
+[commons-lang-89047990d] staging the fixed revision (w-bxwRse2z)
+[commons-lang-89047990d] leak scan: clean
+[commons-lang-89047990d] invoking agent (claude-sonnet-5, m5)
+[commons-lang-89047990d] agent done: $0.304 turns=15 state=ok
+[commons-lang-89047990d] left out 0 of 19 tests
+[commons-lang-89047990d] packaged: commons-lang-89047990d-m5.tar.bz2
+
+m5 suites packaged: 112
+failures:           0
+tests left out:     14 of 5391 (0.3%)
+cost, as reported:  $58.87
+[commons-lang-89047990d] staging the faulty revision (w-Ko2jPJ7l)
+[commons-lang-89047990d] leak scan: clean
+[commons-lang-89047990d] invoking agent (claude-sonnet-5, b5)
+[commons-lang-89047990d] agent done: $0.322 turns=18 state=ok
+[commons-lang-89047990d] left out 0 of 25 tests
+[commons-lang-89047990d] packaged: commons-lang-89047990d-b5.tar.bz2
+
+b5 suites packaged: 112
+failures:           0
+tests left out:     25 of 5101 (0.5%)
+cost, as reported:  $57.58
+[commons-lang-13d25e059] staging the faulty revision (w-thyIxKE8)
+[commons-lang-13d25e059] leak scan: clean
+[commons-lang-13d25e059] invoking agent (claude-sonnet-5, b5)
+[commons-lang-13d25e059] agent done: $0.311 turns=17 state=ok
+[commons-lang-13d25e059] left out 0 of 29 tests
+[commons-lang-13d25e059] packaged: commons-lang-13d25e059-b5.tar.bz2
+
+b5 suites packaged: 113
+failures:           0
+tests left out:     25 of 5130 (0.5%)
+cost, as reported:  $57.89
+[commons-lang-13d25e059] staging the fixed revision (w-eE6L95sl)
+[commons-lang-13d25e059] leak scan: clean
+[commons-lang-13d25e059] invoking agent (claude-sonnet-5, m5)
+[commons-lang-13d25e059] agent done: $0.337 turns=21 state=ok
+[commons-lang-13d25e059] left out 0 of 34 tests
+[commons-lang-13d25e059] packaged: commons-lang-13d25e059-m5.tar.bz2
+
+m5 suites packaged: 113
+failures:           0
+tests left out:     14 of 5425 (0.3%)
+cost, as reported:  $59.21
+[commons-lang-5914a8e80] staging the fixed revision (w-FPQSovP4)
+[commons-lang-5914a8e80] leak scan: clean
+[commons-lang-5914a8e80] invoking agent (claude-sonnet-5, m5)
+[commons-lang-5914a8e80] agent done: $0.389 turns=17 state=ok
+[commons-lang-5914a8e80] left out 0 of 23 tests
+[commons-lang-5914a8e80] packaged: commons-lang-5914a8e80-m5.tar.bz2
+
+m5 suites packaged: 114
+failures:           0
+tests left out:     14 of 5448 (0.3%)
+cost, as reported:  $59.60
+[commons-lang-5914a8e80] staging the faulty revision (w-cuYPv0Ln)
+[commons-lang-5914a8e80] leak scan: clean
+[commons-lang-5914a8e80] invoking agent (claude-sonnet-5, b5)
+[commons-lang-5914a8e80] agent done: $0.330 turns=15 state=ok
+[commons-lang-5914a8e80] left out 0 of 21 tests
+[commons-lang-5914a8e80] packaged: commons-lang-5914a8e80-b5.tar.bz2
+
+b5 suites packaged: 114
+failures:           0
+tests left out:     25 of 5151 (0.5%)
+cost, as reported:  $58.22
+[commons-lang-7b7be629d] staging the faulty revision (w-pUNaXOdh)
+[commons-lang-7b7be629d] leak scan: clean
+[commons-lang-7b7be629d] invoking agent (claude-sonnet-5, b5)
+[commons-lang-7b7be629d] agent done: $0.407 turns=18 state=ok
+[commons-lang-7b7be629d] left out 0 of 41 tests
+[commons-lang-7b7be629d] packaged: commons-lang-7b7be629d-b5.tar.bz2
+
+b5 suites packaged: 115
+failures:           0
+tests left out:     25 of 5192 (0.5%)
+cost, as reported:  $58.63
+[commons-lang-7b7be629d] staging the fixed revision (w-udB2ISXM)
+[commons-lang-7b7be629d] leak scan: clean
+[commons-lang-7b7be629d] invoking agent (claude-sonnet-5, m5)
+[commons-lang-7b7be629d] agent done: $0.454 turns=22 state=ok
+[commons-lang-7b7be629d] left out 0 of 52 tests
+[commons-lang-7b7be629d] packaged: commons-lang-7b7be629d-m5.tar.bz2
+
+m5 suites packaged: 115
+failures:           0
+tests left out:     14 of 5500 (0.3%)
+cost, as reported:  $60.05

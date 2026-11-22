@@ -237,3 +237,123 @@ start:  2026-11-22T08:19:58Z
 b5: 115 runs with a status, 59 packaged
 m5: 115 runs with a status, 60 packaged
 end:    2026-11-22T14:20:13Z
+CLI:    2.1.316 (Claude Code)  (/home/sergi/.local/share/claude/versions/2.1.316)
+model:  claude-sonnet-5
+commit: 16a2ea41325d625c0274ececdf780000497173e4
+start:  2026-11-22T15:01:30Z
+
+60  commons-lang-3f0c0fd5c     b5  ok
+61  commons-csv-bbdfad773      b5  ok
+61  commons-csv-bbdfad773      m5  ok
+62  commons-lang-7d325c2a5     m5  ok
+62  commons-lang-7d325c2a5     b5  ok
+63  commons-csv-5e2d0590c      b5  ok
+63  commons-csv-5e2d0590c      m5  ok
+64  commons-lang-060ab31e5     m5  ok
+64  commons-lang-060ab31e5     b5  ok
+65  commons-lang-4e1f3eef1     b5  ok
+65  commons-lang-4e1f3eef1     m5  ok
+66  commons-lang-355f24676     m5  ok
+66  commons-lang-355f24676     b5  ok
+67  commons-lang-4c3f1dd00     b5  ok
+67  commons-lang-4c3f1dd00     m5  ok
+68  commons-csv-609a228e3      m5  ok
+68  commons-csv-609a228e3      b5  ok
+69  commons-lang-e2838b281     b5  ok
+69  commons-lang-e2838b281     m5  ok
+70  commons-lang-b1aba6833     m5  ok
+70  commons-lang-b1aba6833     b5  ok
+71  commons-lang-c07bc828f     b5  ok
+71  commons-lang-c07bc828f     m5  ok
+72  commons-lang-0c4093928     m5  ok
+72  commons-lang-0c4093928     b5  ok
+73  commons-lang-d215e7fec     b5  ok
+73  commons-lang-d215e7fec     m5  ok
+74  commons-lang-c99f2ddfe     m5  ok
+74  commons-lang-c99f2ddfe     b5  ok
+75  commons-lang-7c91ce989     b5  ok
+75  commons-lang-7c91ce989     m5  ok
+76  commons-lang-19b59ffdd     m5  ok
+76  commons-lang-19b59ffdd     b5  ok
+77  commons-lang-75086d398     b5  ok
+77  commons-lang-75086d398     m5  ok
+78  commons-lang-10f442145     m5  ok
+78  commons-lang-10f442145     b5  ok
+79  commons-lang-7da57b615     b5  ok
+79  commons-lang-7da57b615     m5  ok
+80  commons-lang-d98cea29f     m5  ok
+80  commons-lang-d98cea29f     b5  ok
+81  commons-lang-83fe22025     b5  ok
+81  commons-lang-83fe22025     m5  ok
+82  commons-lang-3e50a7f9c     m5  ok
+82  commons-lang-3e50a7f9c     b5  ok
+83  commons-lang-b11591895     b5  ok
+83  commons-lang-b11591895     m5  ok
+84  commons-lang-4060e60f4     m5  ok
+84  commons-lang-4060e60f4     b5  ok
+85  commons-csv-b29fb40ac      b5  ok
+85  commons-csv-b29fb40ac      m5  ok
+86  commons-lang-2c3748412     m5  ok
+86  commons-lang-2c3748412     b5  ok
+87  commons-lang-1c1a79822     b5  ok
+87  commons-lang-1c1a79822     m5  ok
+88  commons-lang-52c06bea2     m5  ok
+88  commons-lang-52c06bea2     b5  ok
+89  commons-lang-5d46a39e4     b5  ok
+89  commons-lang-5d46a39e4     m5  ok
+90  commons-lang-ae85262f0     m5  ok
+90  commons-lang-ae85262f0     b5  ok
+91  commons-lang-18063c1f6     b5  ok
+91  commons-lang-18063c1f6     m5  ok
+92  commons-lang-5dede14ab     m5  ok
+92  commons-lang-5dede14ab     b5  ok
+93  commons-lang-43154e016     b5  ok
+93  commons-lang-43154e016     m5  ok
+94  commons-lang-2011ce3ba     m5  ok
+94  commons-lang-2011ce3ba     b5  ok
+95  commons-lang-3df7f4440     b5  ok
+95  commons-lang-3df7f4440     m5  ok
+96  commons-lang-e1ffb6ea0     m5  ok
+96  commons-lang-e1ffb6ea0     b5  ok
+97  commons-lang-127050d2b     b5  ok
+97  commons-lang-127050d2b     m5  ok
+98  commons-lang-d927bfc84     m5  ok
+98  commons-lang-d927bfc84     b5  ok
+99  commons-lang-b62244517     b5  ok
+99  commons-lang-b62244517     m5  ok
+100  commons-lang-5904c573f     m5  ok
+100  commons-lang-5904c573f     b5  ok
+101  commons-lang-4a6a98432     b5  ok
+101  commons-lang-4a6a98432     m5  ok
+102  commons-csv-f53d04737      m5  ok
+102  commons-csv-f53d04737      b5  ok
+103  commons-cli-8010193ee      b5  ok
+103  commons-cli-8010193ee      m5  ok
+104  commons-lang-dda928301     m5  ok
+104  commons-lang-dda928301     b5  ok
+105  commons-lang-f164995c9     b5  ok
+105  commons-lang-f164995c9     m5  ok
+106  commons-lang-f4442b1c9     m5  ok
+106  commons-lang-f4442b1c9     b5  ok
+107  commons-csv-1a8403dd5      b5  ok
+107  commons-csv-1a8403dd5      m5  ok
+108  commons-cli-f3ba9c951      m5  ok
+108  commons-cli-f3ba9c951      b5  ok
+109  commons-lang-8425918f9     b5  ok
+109  commons-lang-8425918f9     m5  ok
+110  commons-lang-aa47951bd     m5  ok
+110  commons-lang-aa47951bd     b5  ok
+111  commons-lang-4052e9862     b5  ok
+111  commons-lang-4052e9862     m5  ok
+112  commons-lang-89047990d     m5  ok
+112  commons-lang-89047990d     b5  ok
+113  commons-lang-13d25e059     b5  ok
+113  commons-lang-13d25e059     m5  ok
+114  commons-lang-5914a8e80     m5  ok
+114  commons-lang-5914a8e80     b5  ok
+115  commons-lang-7b7be629d     b5  ok
+115  commons-lang-7b7be629d     m5  ok
+
+b5: 115 runs with a status, 115 packaged
+m5: 115 runs with a status, 115 packaged
+end:    2026-11-22T19:48:39Z

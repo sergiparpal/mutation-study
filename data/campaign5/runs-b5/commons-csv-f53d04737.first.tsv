@@ -1,0 +1,15 @@
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testMarkAndResetRestoreAllTrackedState()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineWithLoneTrailingCarriageReturn()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testCloseSetsLastCharToEofAndBlocksFurtherReads()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testPeekDoesNotAdvancePositionOrLastChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testGetLineNumberAccountsForPartialLineBeforeTerminator()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testGetPositionTracksBulkReads()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testPeekBetweenMarkAndResetMovesMarkToPeekPoint()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testGetPositionTracksSingleCharReads()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testMarkAndResetRestoreBytesRead()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testLoneLowSurrogateThrowsCharacterCodingExceptionOnRead()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadZeroLengthDoesNotAdvanceStateAndReturnsZeroEvenAtEof()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testInitialState()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testTrailingHighSurrogateDoesNotThrowAndContributesZeroBytes()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadTracksAsciiOneBytePerChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadStaysZeroWithoutByteTracking()	1	0	
