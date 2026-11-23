@@ -1,0 +1,35 @@
+CLI 2.1.316 (Claude Code)
+
+implementation-visible arm, the settings of bin/agent-sandbox.py
+  note  the Read tool on the run's own saved copy: read  [~/.claude/projects/<working copy>/<session>/tool-results/<file>]
+  note  the Read tool on own-results-dir, a file the CLI did not write, beside the saved copy: read
+  ok    the Read tool does not read own-session-dir, a file in the run's session directory, outside tool-results  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read own-project-dir, a file in the directory the CLI keeps for the working copy  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read sibling-session, a saved copy of another session of the same working copy  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read other-saved, a saved copy of a session of another working copy  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read other-memory, a memory note of another working copy  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read other-transcript, a session transcript of another working copy  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read claude-root, a file in ~/.claude, outside projects  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read lookalike, a file in a directory named tool-results outside ~/.claude  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Glob tool finds none of them under ~/.claude/projects  [~/.claude/projects is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Grep tool finds none of them under ~/.claude/projects  [~/.claude/projects is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    a command cannot print other-saved  [cat: <the file>: No such file or directory]
+  note  15 requests for a model's answer, all of them to the stand-in
+
+specification-only arm, the settings of bin/agent-sandbox.py
+  note  the Read tool on the run's own saved copy: read  [~/.claude/projects/<working copy>/<session>/tool-results/<file>]
+  note  the Read tool on own-results-dir, a file the CLI did not write, beside the saved copy: read
+  ok    the Read tool does not read own-session-dir, a file in the run's session directory, outside tool-results  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read own-project-dir, a file in the directory the CLI keeps for the working copy  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read sibling-session, a saved copy of another session of the same working copy  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read other-saved, a saved copy of a session of another working copy  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read other-memory, a memory note of another working copy  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read other-transcript, a session transcript of another working copy  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read claude-root, a file in ~/.claude, outside projects  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Read tool does not read lookalike, a file in a directory named tool-results outside ~/.claude  [<the file> is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Glob tool finds none of them under ~/.claude/projects  [~/.claude/projects is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    the Grep tool finds none of them under ~/.claude/projects  [~/.claude/projects is outside <working copy>; --restricted confines the file tools to the working directory.]
+  ok    a command cannot print other-saved  [cat: <the file>: No such file or directory]
+  note  15 requests for a model's answer, all of them to the stand-in
+
+every check passed

@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateLeadingPlusSignInHexValueThrows()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest.testTranslateLeadingPlusSignInHexValueThrows(UnicodeUnescaperAgentTest.java:130)
+
+2) org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateLeadingMinusSignInHexValueThrows()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest.testTranslateLeadingMinusSignInHexValueThrows(UnicodeUnescaperAgentTest.java:138)
+
+Tests run: 17, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 17, failed: 2
+FAILURES!!!

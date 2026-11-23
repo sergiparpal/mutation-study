@@ -1,0 +1,3 @@
+StringUtilsIndexOfAnyTest.testLargeNegativeStartIndexClampsToZero
+StringUtilsIndexOfAnyTest.testNegativeStartIndexClampsToZero
+StringUtilsIndexOfAnyTest.testNegativeStartIndexDoesNotThrow

@@ -1,0 +1,16 @@
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#appendDetailWithMutableBooleanAppendsRawValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#appendDetailWithCollectionOfCustomObjectsRecurses()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#acceptAllowsPrimitiveTypeItself()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#acceptRejectsPrimitiveWrapperClasses()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#appendDetailWithCustomObjectRecursesIntoFields()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#appendDetailWithAtomicBooleanAppendsRawValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#acceptRejectsString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#appendDetailWithEmptyCollection()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#acceptRejectsAtomicBooleanAndMutableBoolean()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#appendDetailWithStringAppendsRawValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#reflectionToStringBuilderHandlesNullNestedField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#acceptAllowsCustomClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#acceptRejectsNumberSubclassesThatAreNotWrappers()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#appendDetailWithNullValueDelegatesToSuperAppend()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#appendDetailWithBoxedPrimitiveAppendsRawValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#reflectionToStringBuilderProducesRecursiveSingleLineOutput()	1	0	

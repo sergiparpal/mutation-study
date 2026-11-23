@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testAppendDetailWithNullObjectValueThrowsNullPointerException()
+org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest.testAppendDetailWithNullObjectValueThrowsNullPointerException(MultilineRecursiveToStringStyleAgentTest.java:243)
+
+Tests run: 16, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 16, failed: 1
+FAILURES!!!

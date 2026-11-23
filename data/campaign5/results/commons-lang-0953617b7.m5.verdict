@@ -1,0 +1,1 @@
+commons-lang-0953617b7,m5,fixed,Fail,,61,0,1,org.apache.commons.lang3.builder.HashCodeBuilderAgentTest#testAppendObjectArrayWithSelfReferenceDoesNotInfiniteLoop(),,,0,0

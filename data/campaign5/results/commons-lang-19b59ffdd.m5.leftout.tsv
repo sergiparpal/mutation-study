@@ -1,0 +1,12 @@
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testLastIndexOfFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <2> but was: <5>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testDefaultValues()	1	1	org.opentest4j.AssertionFailedError: expected: <> but was: <default>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testStripFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <abc  > but was: <abc>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testSubstringFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <ab> but was: <abc>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testJoinWith()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testToStringBytes()	1	1	java.lang.NullPointerException
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testRemoveFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <qeout> but was: <qeed>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testFuzzyAndJaroWinklerDistance()	1	1	org.opentest4j.AssertionFailedError: expected: <3> but was: <0>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testToCodePointsAndEncoding()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testOrdinalIndexOfAndLastOrdinalIndexOf()	1	1	org.opentest4j.AssertionFailedError: expected: <5> but was: <4>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testCenter()	1	1	org.opentest4j.AssertionFailedError: expected: <yayxay> but was: <yzayzy>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testLeftRightMid()	1	1	org.opentest4j.AssertionFailedError: expected: <c> but was: <>

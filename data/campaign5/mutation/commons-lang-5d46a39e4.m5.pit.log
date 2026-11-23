@@ -1,0 +1,101 @@
+2:40:31 PM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+2:40:31 PM PIT >> INFO : Created 1 mutation test units in pre scan
+2:40:31 PM PIT >> INFO : Sending 18 test classes to minion
+2:40:31 PM PIT >> INFO : Sent tests to minion
+2:40:32 PM PIT >> INFO : Calculated coverage in 0 seconds.
+2:40:32 PM PIT >> INFO : 0 tests took longer than 2000 ms
+2:40:32 PM PIT >> INFO : Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.RandomStringUtilsAgentTest]/[method:testRandomStringCharsNull()]) took 48 ms
+2:40:32 PM PIT >> INFO : Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.RandomStringUtilsAgentTest]/[method:testRandomAlphabeticRange()]) covered 78 blocks
+2:40:32 PM PIT >> INFO : Created 1 mutation test units
+2:40:37 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:40:42 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:40:47 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:40:51 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:40:56 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:01 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:06 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:11 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:16 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:21 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:26 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:30 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:35 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:40 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:45 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:52 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:41:56 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:42:01 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:42:06 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:42:11 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:42:16 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:42:21 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:42:26 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+2:42:27 PM PIT >> INFO : Completed in 115 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE
+>> Generated 14 Killed 10 (71%)
+> KILLED 5 SURVIVED 4 TIMED_OUT 5 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 14 Killed 3 (21%)
+> KILLED 2 SURVIVED 11 TIMED_OUT 1 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 6 Killed 6 (100%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 3 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 5 Killed 5 (100%)
+> KILLED 5 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 37 Killed 24 (65%)
+> KILLED 12 SURVIVED 13 TIMED_OUT 12 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 9 Killed 5 (56%)
+> KILLED 3 SURVIVED 4 TIMED_OUT 2 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 41 Killed 38 (93%)
+> KILLED 38 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 3 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : 1 minutes and 54 seconds
+--------------------------------------------------------------------------------
+> Total  : 1 minutes and 55 seconds
+--------------------------------------------------------------------------------
+> 0 tests took longer than 2000 ms
+> Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.RandomStringUtilsAgentTest]/[method:testRandomStringCharsNull()]) took 48 ms
+> Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.RandomStringUtilsAgentTest]/[method:testRandomAlphabeticRange()]) covered 78 blocks
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 125/129 (97%)
+>> 18 tests examined
+>> Generated 126 mutations Killed 91 (72%)
+>> Mutations with no coverage 3. Test strength 74%
+>> Ran 936 tests (7.43 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/

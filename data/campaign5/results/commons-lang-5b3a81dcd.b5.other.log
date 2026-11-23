@@ -1,0 +1,8 @@
+1) org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testUnterminatedQuotedStringThrowsIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest.assertThrowsWithMessageContaining(ExtendedMessageFormatAgentTest.java:138)
+    at org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest.testUnterminatedQuotedStringThrowsIllegalArgumentException(ExtendedMessageFormatAgentTest.java:314)
+
+Tests run: 29, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 29, failed: 1
+FAILURES!!!

@@ -1,0 +1,7 @@
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testReplaceFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <jelmo> but was: <jellm>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testCountMatchesAndLength()	1	1	org.opentest4j.AssertionFailedError: expected: <2> but was: <4>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfDifferenceAndCommonPrefix()	1	1	org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testJoinFamily()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.ArrayIndexOutOfBoundsException to be thrown, but nothing was thrown.
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testSplitFamily()	1	1	org.opentest4j.AssertionFailedError: array lengths differ, expected: <3> but was: <2>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <2> but was: <3>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testChompChop()	1	1	org.opentest4j.AssertionFailedError: expected: <abc> but was: <ab>

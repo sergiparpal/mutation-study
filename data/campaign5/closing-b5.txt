@@ -1,0 +1,24 @@
+# Fifth campaign, step 2: the b5 runs whose closing message says the code
+# under test is wrong (PROTOCOL.md, "Procedure"), one per line: arm, subject,
+# the words that say it. All 115 closing messages were read on 22 November
+# 2026 (./bin/audit-campaign5.py data/campaign5 --closing), before anything
+# was measured.
+#
+# None of them says so. Not listed, because they describe a behaviour as
+# unusual and test it as it is, without calling it wrong:
+#   commons-csv-f53d04737   "the EOF decrement quirk"
+#   commons-lang-0add789ed  "a documented quirk around `format(Calendar)` when
+#                           the calendar's zone differs from the printer's"
+#   commons-lang-6dbbbb308  "two library edge-case quirks (a lone-quote
+#                           `StringIndexOutOfBoundsException` and quotes not
+#                           being stripped when the quoted CSV content has no
+#                           special chars)"
+#   commons-lang-c7f1a6d27  "numeric/ISO timezone offsets incl. an
+#                           implementation quirk"
+# Not listed either: one message reports a behaviour that did not match the
+# agent's reading of the javadoc, and says the agent asserted the behaviour:
+#   commons-lang-a9a0dd8a7  "a couple of edge-case behaviors I initially
+#                           assumed from the javadoc (...) didn't match the
+#                           actual runtime behavior, so I verified them
+#                           empirically against the compiled class before
+#                           asserting on them"

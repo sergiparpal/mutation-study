@@ -1,0 +1,16 @@
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testBooleanArrayField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testBlank()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testByteShortLongFloatDoubleArrayFields()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testNullObjectField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testReflectionOfNestedObject()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testPrimitiveWrapperFieldIsNotRecursed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testStringFieldIsNotRecursed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testRawObjectFieldHoldingPrimitiveArrayUsesReflectionAppendArrayDetail()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testEmptyArrayField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testNullArrayField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testObjectArrayWithNestedObjectIsDoublyIndented()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testIntArrayField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testTwoDimensionalIntArray()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testStyleInstanceIsReusableAcrossMultipleToStringCallsWithoutAccumulatingIndent()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testCharArrayField()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testAppendDetailWithNullObjectValueThrowsNullPointerException()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.

@@ -1,0 +1,7 @@
+1) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadAsciiTracksOneBytePerChar()
+org.opentest4j.AssertionFailedError: expected: <3> but was: <6>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testBytesReadAsciiTracksOneBytePerChar(ExtendedBufferedReaderAgentTest.java:80)
+
+Tests run: 29, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 29, failed: 1
+FAILURES!!!

@@ -1,0 +1,17 @@
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateMaxValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateInvalidHexDigitsThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateInsufficientHexDigitsThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateBackslashFollowedByNonU()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateZeroValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateWithMultipleUChars()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateLeadingPlusSignInHexValueThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateAtNonZeroIndex()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateViaCharSequenceTranslator()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateNotEscape()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateLeadingMinusSignInHexValueThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateWithMultipleUCharsAndPlusSign()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateNoHexDigitsAtAllThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateBackslashAtEndOfInput()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateWithPlusSign()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateLowercaseHex()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateBasic()	1	0	

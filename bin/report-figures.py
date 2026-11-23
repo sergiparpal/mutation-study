@@ -14,7 +14,8 @@ bin/describe-campaign2.py and prints what they print. §3.11 is the third: it
 runs bin/analyze-campaign3.py, bin/analyze-mutation-campaign3.py (mutation
 score and coverage, measured after the campaign) and bin/describe-campaign3.py.
 §3.12 is the fourth: it runs bin/analyze-campaign4.py, whose analysis includes
-mutation score and coverage, and bin/describe-campaign4.py. If a script it runs
+mutation score and coverage, and bin/describe-campaign4.py. §3.13 is the fifth:
+it runs bin/analyze-campaign5.py and bin/describe-campaign5.py. If a script it runs
 fails, the report stops there, with a line naming the script, and exits with
 status 1.
 
@@ -26,7 +27,9 @@ number of bugs EvoSuite produced a suite for (§3.5) and the cost of a run whose
 record was overwritten (§3.6), both in data/README.md; the fault types of the
 Defects4J sample (§3.8, data/fault-taxonomy.csv); and the second campaign's
 analysis without the S2 run of Csv-10 (§3.10,
-data/campaign2/analysis-without-s2-Csv-10.txt).
+data/campaign2/analysis-without-s2-Csv-10.txt). Also not printed: the reading
+of what the fifth campaign's certifying tests encode (§3.13), which is in
+data/README.md beside the tests that describe-campaign5.py lists.
 
 Conventions, all of them stated in the write-up:
 
@@ -302,6 +305,12 @@ def main():
     run("-B", "bin/analyze-campaign4.py")
     section("§3.12  Fourth campaign: descriptive figures")
     run("-B", "bin/describe-campaign4.py")
+
+    # ---- §3.13 -----------------------------------------------------------
+    section("§3.13  Fifth campaign: the analysis fixed by its protocol")
+    run("-B", "bin/analyze-campaign5.py")
+    section("§3.13  Fifth campaign: descriptive figures")
+    run("-B", "bin/describe-campaign5.py")
 
 
 if __name__ == "__main__":

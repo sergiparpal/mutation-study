@@ -1,0 +1,7 @@
+1) org.apache.commons.cli.TypeHandlerAgentTest#testCharacterConverterNonBmpThrowsParseException()
+org.opentest4j.AssertionFailedError: Expected org.apache.commons.cli.ParseException to be thrown, but nothing was thrown.
+    at org.apache.commons.cli.TypeHandlerAgentTest.testCharacterConverterNonBmpThrowsParseException(TypeHandlerAgentTest.java:292)
+
+Tests run: 37, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 37, failed: 1
+FAILURES!!!

@@ -1,0 +1,14 @@
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testBuilderWithExternalExecutor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetRethrowsRuntimeExceptionUnwrapped()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetActiveExecutorUsesTemporaryExecutorWhenNoneProvided()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testSetExternalExecutorAfterStartThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testExecutorConstructorSetsExternalExecutor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetWrapsCheckedExceptionInConcurrentException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetFutureBeforeStartThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testBuilderCreatesWorkingInitializer()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetTaskCountDefaultIsOne()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetActiveExecutorUsesExternalExecutorWhenProvided()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testStartReturnsTrueOnlyOnce()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testGetBlocksUntilInitializationComplete()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testIsInitializedFalseAfterFailure()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest#testDefaultConstructorHasNoExternalExecutor()	1	0	

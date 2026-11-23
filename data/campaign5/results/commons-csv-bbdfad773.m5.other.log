@@ -1,0 +1,7 @@
+1) org.apache.commons.csv.CSVFormatAgentTest#testFormatMultiCharDelimiterTrailingPartialMatchIsQuoted()
+org.opentest4j.AssertionFailedError: expected: <"a|"||b> but was: <a|||b>
+    at org.apache.commons.csv.CSVFormatAgentTest.testFormatMultiCharDelimiterTrailingPartialMatchIsQuoted(CSVFormatAgentTest.java:591)
+
+Tests run: 96, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 96, failed: 1
+FAILURES!!!

@@ -1,0 +1,72 @@
+2:31:50 PM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+2:31:50 PM PIT >> INFO : Created 3 mutation test units in pre scan
+2:31:50 PM PIT >> INFO : Sending 3 test classes to minion
+2:31:50 PM PIT >> INFO : Sent tests to minion
+2:31:51 PM PIT >> INFO : Calculated coverage in 0 seconds.
+2:31:51 PM PIT >> INFO : 0 tests took longer than 2000 ms
+2:31:51 PM PIT >> INFO : Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.DiffBuilderAgentTest]/[method:testAppendBooleanArrayDifferentProducesDiff()]) took 21 ms
+2:31:51 PM PIT >> INFO : Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.DiffBuilderAgentTest]/[method:testAppendDiffResultMergesNestedDiffsWithPrefixedFieldNames()]) covered 68 blocks
+2:31:51 PM PIT >> INFO : Created 3 mutation test units
+2:31:59 PM PIT >> INFO : Completed in 9 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 3 Killed 2 (67%)
+> KILLED 2 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 2 Killed 1 (50%)
+> KILLED 1 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 59 Killed 47 (80%)
+> KILLED 47 SURVIVED 12 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 65 Killed 43 (66%)
+> KILLED 43 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 22 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 12 Killed 7 (58%)
+> KILLED 7 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 5 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 2 Killed 1 (50%)
+> KILLED 1 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : 8 seconds
+--------------------------------------------------------------------------------
+> Total  : 8 seconds
+--------------------------------------------------------------------------------
+> 0 tests took longer than 2000 ms
+> Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.DiffBuilderAgentTest]/[method:testAppendBooleanArrayDifferentProducesDiff()]) took 21 ms
+> Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.builder.DiffBuilderAgentTest]/[method:testAppendDiffResultMergesNestedDiffsWithPrefixedFieldNames()]) covered 68 blocks
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 85/92 (92%)
+>> 3 tests examined
+>> Generated 143 mutations Killed 101 (71%)
+>> Mutations with no coverage 27. Test strength 87%
+>> Ran 367 tests (2.57 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/

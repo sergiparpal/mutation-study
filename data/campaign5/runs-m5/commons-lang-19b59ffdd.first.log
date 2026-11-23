@@ -1,0 +1,53 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testLastIndexOfFamily()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <5>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testLastIndexOfFamily(StringUtilsAgentTest.java:426)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testDefaultValues()
+org.opentest4j.AssertionFailedError: expected: <> but was: <default>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testDefaultValues(StringUtilsAgentTest.java:173)
+
+3) org.apache.commons.lang3.StringUtilsAgentTest#testStripFamily()
+org.opentest4j.AssertionFailedError: expected: <abc  > but was: <abc>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testStripFamily(StringUtilsAgentTest.java:682)
+
+4) org.apache.commons.lang3.StringUtilsAgentTest#testSubstringFamily()
+org.opentest4j.AssertionFailedError: expected: <ab> but was: <abc>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSubstringFamily(StringUtilsAgentTest.java:730)
+
+5) org.apache.commons.lang3.StringUtilsAgentTest#testJoinWith()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.StringUtilsAgentTest.testJoinWith(StringUtilsAgentTest.java:415)
+
+6) org.apache.commons.lang3.StringUtilsAgentTest#testToStringBytes()
+java.lang.NullPointerException
+    at java.base/java.lang.String.<init>(String.java:561)
+    at org.apache.commons.lang3.StringUtils.toString(StringUtils.java:8742)
+    at org.apache.commons.lang3.StringUtilsAgentTest.testToStringBytes(StringUtilsAgentTest.java:770)
+
+7) org.apache.commons.lang3.StringUtilsAgentTest#testRemoveFamily()
+org.opentest4j.AssertionFailedError: expected: <qeout> but was: <qeed>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testRemoveFamily(StringUtilsAgentTest.java:526)
+
+8) org.apache.commons.lang3.StringUtilsAgentTest#testFuzzyAndJaroWinklerDistance()
+org.opentest4j.AssertionFailedError: expected: <3> but was: <0>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testFuzzyAndJaroWinklerDistance(StringUtilsAgentTest.java:881)
+
+9) org.apache.commons.lang3.StringUtilsAgentTest#testToCodePointsAndEncoding()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.StringUtilsAgentTest.testToCodePointsAndEncoding(StringUtilsAgentTest.java:752)
+
+10) org.apache.commons.lang3.StringUtilsAgentTest#testOrdinalIndexOfAndLastOrdinalIndexOf()
+org.opentest4j.AssertionFailedError: expected: <5> but was: <4>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testOrdinalIndexOfAndLastOrdinalIndexOf(StringUtilsAgentTest.java:909)
+
+11) org.apache.commons.lang3.StringUtilsAgentTest#testCenter()
+org.opentest4j.AssertionFailedError: expected: <yayxay> but was: <yzayzy>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testCenter(StringUtilsAgentTest.java:82)
+
+12) org.apache.commons.lang3.StringUtilsAgentTest#testLeftRightMid()
+org.opentest4j.AssertionFailedError: expected: <c> but was: <>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testLeftRightMid(StringUtilsAgentTest.java:454)
+
+Tests run: 56, Failures: 12, Aborted: 0, Skipped: 0
+Test methods: 56, failed: 12
+FAILURES!!!

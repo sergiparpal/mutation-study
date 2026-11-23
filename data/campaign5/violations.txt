@@ -1,0 +1,22 @@
+# Fifth campaign, step 2: runs with a violation (PROTOCOL.md, "Exclusions"),
+# one per line: arm, subject, reason. Decided on 22 November 2026 from
+# audit.txt, before anything was measured. Every flagged command was read
+# with its result.
+#
+# None. What was flagged, and why none of it is a violation:
+#   network (12)  `mvn`, which the sandbox leaves without a Maven to start
+#                 ("command not found"), or the word "gradle" in a `find`.
+#                 No command received data.
+#   vcs (18)      `git status` or `git log`, which fail ("not a git
+#                 repository"), or a `find` that excludes `.git`.
+#   outside (23)  The command's own private /tmp, written and read within
+#                 the same command; files in the working copy; commands the
+#                 harness refused; one `find /` that found nothing (b5
+#                 commons-csv-274b4ceba); and one `cat` of the CLI's saved
+#                 copy of the run's own output, which the sandbox did not
+#                 let it see (m5 commons-lang-2240c1f93).
+#   own tmp (2)   The run's own temporary directory (b5 commons-lang-18063c1f6).
+# The file tools: seven calls on a path outside the working copy, all refused
+# by --restricted, and one Read of the CLI's saved copy of the run's own
+# command's output (b5 commons-lang-c99f2ddfe), which the protocol does not
+# count as outside.
