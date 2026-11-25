@@ -1,0 +1,35 @@
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#constructorNullFormatThrowsNPE()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printRecordMultipleCallsAccumulateCount()	1	0	
+FAILED	method	org.apache.commons.csv.CSVPrinterAgentTest#constructorWithHeaderDoesNotCountAsRecord()	1	1	org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#constructorNullAppendableThrowsNPE()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printPropagatesIOExceptionFromAppendable()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#flushDelegatesToFlushableAppendable()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printRecordsStreamWithNestedArraysPrintsMultipleRecords()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#closeWithExplicitFlushFlagFlushesEvenWithoutAutoFlush()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#recordCountStartsAtZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#constructorWithHeaderCommentsPrintsComments()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printCommentSingleLine()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printNullValuePrintsEmptyByDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printRecordVarargsWritesDelimitedLineAndIncrementsCount()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printRecordsResultSetWithHeaderFlagPrintsHeaderThenRows()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printRecordsIterableOfIterablesPrintsOneRecordPerNestedElement()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#constructorSkipHeaderRecordDoesNotPrintHeader()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printRecordEmptyVarargsPrintsJustSeparator()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printRecordsVarargsWithNestedArraysPrintsMultipleRecords()	1	0	
+FAILED	method	org.apache.commons.csv.CSVPrinterAgentTest#printRecordsIterableFlatPrintsSingleRecord()	1	1	org.opentest4j.AssertionFailedError: expected: <a,b  > but was: <a  b  >
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printRecordStreamWritesSingleRecord()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printCommentMultiLineSplitsIntoMultipleCommentLines()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#closeWithAutoFlushFormatFlushesBeforeClosing()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printRecordIterableWritesDelimitedLine()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printHeadersWritesColumnLabelsFromResultSetMetaData()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printValueNeedingQuotingIsQuoted()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#closeWithoutAutoFlushDoesNotFlushButDoesClose()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printCommentDoesNothingWhenMarkerNotSet()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#closeOnNonCloseableAppendableDoesNotThrow()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printlnDoesNotIncrementRecordCount()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#constructorWithHeaderPrintsHeaderLine()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#getOutReturnsSameInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printRecordsResultSetWritesEachRowAndIncrementsCount()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printCommentNullDoesNothingEvenWhenMarkerSet()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printCommentDoesNotCountAsRecord()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVPrinterAgentTest#printSimpleValues()	1	0	

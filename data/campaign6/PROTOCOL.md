@@ -2,12 +2,12 @@
 
 Draft of 25 November 2026. Its two open decisions were taken the same day: the
 campaign has two arms, `f6` and `m6`, and `f6`'s request is the explicit
-paragraph below. No model has been run. The protocol will be fixed, as the
-earlier campaigns' were, by the merge of the pull request that adds it. That
-merge comes after the checks without the model and the pilot below are made.
-The merge commit, with the scripts as they are in it, is then the reference.
-Anything done differently afterwards is a deviation and is listed at the end,
-with its date and reason, before the step it affects.
+paragraph below. No run has been made on the subjects. The checks without the
+model and the pilot have been made, the same day (below). The protocol will be
+fixed, as the earlier campaigns' were, by the merge of the pull request that
+adds it. The merge commit, with the scripts as they are in it, is then the
+reference. Anything done differently afterwards is a deviation and is listed
+at the end, with its date and reason, before the step it affects.
 
 ## Why a sixth campaign
 
@@ -590,12 +590,72 @@ It also tried what the full check could not:
 
 ## Pilot
 
-Four runs with the model, made only with the user's agreement: the third
-campaign's two pilot subjects, `commons-lang-6c4269eb8` (`WordUtils`) and
-`commons-csv-ab3d7236` (`CSVPrinter`), each in both arms. The fifth campaign's
-pilot on the same subjects cost $1.43 at list prices. This campaign's scripts
-then audit the runs and measure them and their mutation score. The record will
-be in `pilot/`. It is not part of any result.
+The pilot was four runs with the model, made on 25 November 2026 with the
+user's agreement. It used the third campaign's two pilot subjects,
+`commons-lang-6c4269eb8` (`WordUtils`) and `commons-csv-ab3d7236`
+(`CSVPrinter`), each in both arms. The generator was this campaign's, at
+commit `13ce63a`, after the checks above and their fix. The subjects' records
+were the third campaign's (`../campaign3/pilot/subjects/`). This campaign's
+scripts then audited the runs and measured them and their mutation score. The
+record is in `pilot/`, with the audit's output in `pilot/audit.txt`. It is not
+part of any result.
+
+The two faults are these. In `WordUtils.containsAllWords`, the pattern that
+looks for each word does not match across a line break; the fix adds
+`Pattern.DOTALL`. In `CSVPrinter.printComment`, each comment line ends with
+`println()`, which also writes the format's trailing delimiter; the fix ends
+it with the record separator alone.
+
+- **Runs.** All four ended normally on `claude-sonnet-5`, CLI 2.1.316. They
+  ran from 20:41 to 20:51 UTC and cost $1.56 at list prices; the fifth
+  campaign's pilot cost $1.43. In `f6` they took 21 turns (`commons-lang`) and
+  15 (`commons-csv`); in `m6`, 15 and 18.
+- **Commands.** Each agent read its working copy and wrote its test class and
+  nothing else. It ran the class through `_tools/test.sh`. The transcripts
+  show no network command and no path outside the working copy. The sandbox
+  denied nothing.
+  - In `f6` on `commons-lang`, the harness refused two calls, each because it
+    needed an approval that nobody can give. One was a `python3 -c` and the
+    other a shell computation. Both worked out lengths and positions in a
+    string for a test of `wrap`.
+  - In `f6` on `commons-csv`, the agent ran `git status`, which found no
+    repository: the working copy has no history.
+- **Audit.** It flagged that one `git status`, which received nothing and is
+  not a violation. No run names the fix.
+- **Closing messages.** The two `f6` messages, read before anything was
+  measured:
+  - On `commons-lang`, no test was named as showing a bug. The agent wrote
+    that four of its tests had failed along the way, and that in each case it
+    had found the test, not the code, to be wrong. It tested
+    `containsAllWords`, but not across a line break.
+  - On `commons-csv`, two tests were named as showing bugs. One was that
+    `getRecordCount()` counts the header that the constructor prints. The
+    other was that `printRecords(Iterable)` prints simple objects one record
+    each. Neither is the fault, so the one line of `pilot/closing-f6.txt`
+    reads `other`.
+- **Temporary directory.** No command named the run's own temporary
+  directory. At the end it held only the CLI's empty directories
+  (`.tmp.tar.xz`).
+- **Measurement.** Acceptance left out no test in three suites: 56 and 53
+  methods on `commons-lang` in `f6` and `m6`, and 38 on `commons-csv` in `m6`.
+  In `f6` on `commons-csv` it left out the two tests the agent named, of 35.
+  Both fail again on the faulty revision, and both fail on the fix commit as
+  well, so they are false alarms. No suite detects the fault and none
+  certifies it: all four are `Pass`, as in the earlier campaigns' pilots. The
+  verdicts check the pipeline and nothing else.
+- **Mutation.** PIT gave each suite a figure on its own revision. It kept the
+  methods the measurement ran, and left out the two that acceptance left out.
+- **The records** were searched for the machine's name, its time zone, its
+  operating system and details of the account, with the transcripts and
+  archives unpacked. None of these is in them. The CLI's first event in each
+  transcript lists the same built-in plugins and agents as in the fifth
+  campaign's pilot.
+
+The third campaign chose its pilot on classes that no subject had under test.
+Here, as in the fourth and fifth campaigns, two subjects do:
+`commons-lang-184c9e832` (`WordUtils`) and `commons-csv-09e27ffdb`
+(`CSVPrinter`). The pilot's record is under the user's home, which no agent
+can read.
 
 ## Deviations
 

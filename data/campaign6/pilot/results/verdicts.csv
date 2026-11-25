@@ -1,0 +1,5 @@
+subject,arm,own_revision,verdict,note,methods_run_on_own,keys_left_out,failing_on_other,failing_keys,left_out_methods_run_on_other,left_out_passing_on_other,seconds_own,seconds_other,detection,detection_note,left_out_failing_again_on_own,left_out_detecting,left_out_false_alarms,left_out_unstable,detecting_keys
+commons-lang-6c4269eb8,f6,faulty,Pass,,56,0,0,,,,0,0,Pass,nothing was left out at acceptance,,,,,
+commons-lang-6c4269eb8,m6,fixed,Pass,,53,0,0,,,,0,0,Pass,,,,,,
+commons-csv-ab3d7236,f6,faulty,Pass,,33,2,0,,2,0,1,1,Pass,,2,0,2,0,
+commons-csv-ab3d7236,m6,fixed,Pass,,38,0,0,,,,0,1,Pass,,,,,,
