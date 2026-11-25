@@ -20,11 +20,13 @@
 #     "Finish when all your tests pass.", replaced by a paragraph that asks
 #     for faults;
 #   - at acceptance in f6, a suite whose every test fails on the faulty
-#     revision is kept, and a suite that does not finish there is run again
-#     one class at a time, a class that does not finish being left out as a
-#     whole (.split);
+#     revision is kept, and a suite that does not finish there, or ends the
+#     runner without its report, is run again one class at a time, a class
+#     that does either being left out as a whole (.split);
 #   - the first run at acceptance (.first.log, .first.tsv) is the first that
 #     ends with a report, which in f6 can be the one after that split;
+#   - each run at acceptance starts with the previous run's report removed,
+#     so that a run that ends without one cannot be read as having written it;
 #   - in a dry run, both arms' stand-in suite is the developers' test classes
 #     for the fix, renamed, as m5's was; in f6 they are staged on the faulty
 #     revision, where their trigger tests should fail;
@@ -91,7 +93,8 @@
 #   .excluded         the tests left out, one key per line
 #   .pruned           "<left out> <total>" test methods
 #   .split            in f6, the classes left out at acceptance because they
-#                     did not finish when run on their own
+#                     did not finish, or ended the runner without its report,
+#                     when run on their own
 #
 # ACCEPTANCE
 # ----------
@@ -103,10 +106,13 @@
 #
 # In f6 the tests left out are the suite's findings, and two of m4's rules for
 # a failed run do not apply. A suite whose every test fails is kept. A suite
-# that does not finish within RUN_TIMEOUT is run again one class at a time,
-# with the same limit, and a class that does not finish is left out as a
-# whole; if the rest, run together again, still does not finish, the run has
-# no suite.
+# that does not finish within RUN_TIMEOUT, or that ends the runner without its
+# report, is run again one class at a time, with the same limit, and a class
+# that does either is left out as a whole; if the rest, run together again,
+# still does not finish or still ends without a report, the run has no suite.
+# The runner writes its report whenever it gets to the end, so a run without
+# one died on the way, as a JVM does when a test exhausts its heap. In m6, as
+# in m4, such a run is a suite that fails with nothing more to leave out.
 #
 # The model is named by its full id, the CLI is run from its versioned binary
 # and told not to update itself, and each run records the commit of this
@@ -673,6 +679,7 @@ print(f'{state}|{res}|{cost:.3f}|{turns}')" 2>/dev/null)
     rm -f "$R.split"
     ACCEPTED=no
     for round in $(seq 1 $MAX_ROUNDS); do
+        rm -f "$S/_acc/report.tsv"
         (cd "$S" && c3_env timeout "$RUN_TIMEOUT" java -cp "$CP_RUN" AgentTestRunner \
             --report "$S/_acc/report.tsv" --exclude "$R.excluded" $RUN_CLASSES) \
             > "$R.accepted.log" 2>&1 < /dev/null
@@ -682,22 +689,37 @@ print(f'{state}|{res}|{cost:.3f}|{turns}')" 2>/dev/null)
         if [ "$round" -eq 1 ] || [ ! -s "$R.first.tsv" ]; then
             cp "$R.accepted.log" "$R.first.log"; cp "$R.accepted.tsv" "$R.first.tsv"
         fi
+        # in f6, a run that ends without the runner's report has not finished either
+        WHY=""
         if [ "$RC" -eq 124 ] || [ "$RC" -eq 137 ]; then
+            WHY="does not finish"
+        elif [ "$ARM" = "f6" ] && [ ! -f "$S/_acc/report.tsv" ]; then
+            WHY="ends without the runner's report (exit $RC)"
+        fi
+        if [ -n "$WHY" ]; then
             if [ "$ARM" = "f6" ] && [ ! -f "$R.split" ]; then
-                # one class at a time; a class that does not finish is left out whole
+                # one class at a time; a class that does not finish, or ends
+                # without a report, is left out whole
                 : > "$R.split"
                 for C in $RUN_CLASSES; do
+                    rm -f "$S/_acc/class.tsv"
                     (cd "$S" && c3_env timeout "$RUN_TIMEOUT" java -cp "$CP_RUN" AgentTestRunner \
-                        --exclude "$R.excluded" "$C") > /dev/null 2>&1 < /dev/null
+                        --report "$S/_acc/class.tsv" --exclude "$R.excluded" "$C") > /dev/null 2>&1 < /dev/null
                     RCC=$?
-                    if [ "$RCC" -eq 124 ] || [ "$RCC" -eq 137 ]; then
+                    if [ "$RCC" -eq 124 ] || [ "$RCC" -eq 137 ] || [ ! -f "$S/_acc/class.tsv" ]; then
                         echo "$C" >> "$R.split"; echo "$C" >> "$R.excluded"
                     fi
                 done
-                echo "[$TAG] round $round: the suite does not finish; $(grep -c . "$R.split") class(es) left out as a whole"
+                rm -f "$S/_acc/class.tsv"
+                echo "[$TAG] round $round: the suite $WHY; $(grep -c . "$R.split") class(es) left out as a whole"
                 [ -s "$R.split" ] && continue
             fi
-            fail "the suite does not finish on the $REV_KIND revision (${RUN_TIMEOUT}s)"; break
+            if [ "$WHY" = "does not finish" ]; then
+                fail "the suite does not finish on the $REV_KIND revision (${RUN_TIMEOUT}s)"
+            else
+                fail "the suite $WHY on the $REV_KIND revision"
+            fi
+            break
         fi
         [ "$RC" -eq 0 ] && { ACCEPTED=yes; break; }
         if [ "$RC" -eq 2 ]; then

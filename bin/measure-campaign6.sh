@@ -65,7 +65,11 @@
 #   lists them. Every key that campaign left out was a method's, so none of
 #   its figures depends on this.) Each class has RUN_TIMEOUT seconds; one that
 #   does not finish is recorded as such, with the line
-#   `NOT_FINISHED<tab>class<tab><class>` in the report.
+#   `NOT_FINISHED<tab>class<tab><class>` in the report. One that ends the
+#   runner without its report, which the runner writes whenever it gets to the
+#   end, has the line `NO_REPORT<tab>class<tab><class>`: its JVM died on the
+#   way, as one does when a test exhausts its heap. Below, a class that does
+#   not finish is either.
 #
 #   A left-out method fails again on the faulty revision when it fails there,
 #   when a class it belongs to fails there as a whole, or when its class does
@@ -76,8 +80,10 @@
 #   not fail again is unstable. A class that finishes on neither revision, so
 #   that none of its methods is known, counts as one false alarm. f6's
 #   detection has the note `timeout` when every test that detects belongs to
-#   a class that did not finish on the faulty revision, and failed there for
-#   no other reason.
+#   a class that ran out of time (NOT_FINISHED) on the faulty revision, and
+#   failed there for no other reason. A class that ended without a report
+#   gives no note, as m6's verdict has none when its suite ends without a
+#   report on the faulty revision.
 #
 # Columns of verdicts.csv: the fifth campaign's thirteen, then detection,
 # detection_note, left_out_failing_again_on_own, left_out_detecting,
@@ -145,8 +151,9 @@ csv() { python3 -c 'import csv, sys; csv.writer(sys.stdout, lineterminator="").w
 #
 # The left-out tests on one revision, one class at a time, from the classes
 # compiled into <revision dir>/_m-$ARM. Writes <prefix>.log and <prefix>.tsv:
-# the runner's reports one after another, and NOT_FINISHED for a class that
-# does not finish within RUN_TIMEOUT seconds.
+# the runner's reports one after another, NOT_FINISHED for a class that does
+# not finish within RUN_TIMEOUT seconds and NO_REPORT for one that ends the
+# runner without its report.
 left_out_runs() {
     local rev=$1 prefix=$2 first=$3 excl=$4 t=$5 C RC
     : > "$prefix.log"; : > "$prefix.tsv"
@@ -183,6 +190,8 @@ EOF
             printf 'NOT_FINISHED\tclass\t%s\t0\t0\tdid not finish within %s seconds\n' "$C" "$RUN_TIMEOUT" >> "$prefix.tsv"
         elif [ -f "$t/one.tsv" ]; then
             cat "$t/one.tsv" >> "$prefix.tsv"
+        else
+            printf 'NO_REPORT\tclass\t%s\t0\t0\tthe runner ended without its report (exit %s)\n' "$C" "$RC" >> "$prefix.tsv"
         fi
     done
 }
@@ -194,7 +203,7 @@ EOF
 # those that passed there; and with the own revision's report (f6): those that
 # failed again on the own revision, those that detect, the false alarms, the
 # unstable, the keys that detect, and `timeout` when every test that detects
-# rests only on a class that did not finish on the own revision.
+# rests only on a class that ran out of time on the own revision.
 left_out_counts() {
     python3 - "$@" <<'EOF'
 import sys
@@ -210,7 +219,9 @@ def left_out(key):
     return key in excluded or any(c in excluded for c in chain(key))
 
 def read(path):
-    methods, failed, unfinished = {}, set(), set()
+    """Methods and their status, classes failed as a whole, classes that did
+    not finish (out of time or without a report), classes out of time."""
+    methods, failed, unfinished, out_of_time = {}, set(), set(), set()
     try:
         rows = [l.rstrip("\n").split("\t") for l in open(path, errors="replace")]
     except OSError:
@@ -219,14 +230,16 @@ def read(path):
         if len(cols) < 3:
             continue
         status, kind, key = cols[:3]
-        if status == "NOT_FINISHED":
+        if status in ("NOT_FINISHED", "NO_REPORT"):
             unfinished.add(key)
+            if status == "NOT_FINISHED":
+                out_of_time.add(key)
         elif kind == "method":
             if left_out(key):
                 methods[key] = status
         elif status == "FAILED":
             failed.add(key)
-    return methods, failed, unfinished
+    return methods, failed, unfinished, out_of_time
 
 other = read(other_path)
 own = read(own_path) if own_path != "-" else None
@@ -251,13 +264,16 @@ def failed_own(key):
 def unfinished_own(key):
     return chain(key)[0] in own[2]
 
+def out_of_time_own(key):
+    return chain(key)[0] in own[3]
+
 again = [k for k in known if failed_own(k) or unfinished_own(k)]
 detect = sorted(k for k in again if passes(k))
 alarms = [k for k in again if not passes(k)]
 unstable = [k for k in known if not (failed_own(k) or unfinished_own(k))]
 # a class that finished on neither revision: none of its methods is known
 blind = [c for c in own[2] if c in other[2] and not any(chain(k)[0] == c for k in known)]
-timeout = bool(detect) and all(unfinished_own(k) and not failed_own(k) for k in detect)
+timeout = bool(detect) and all(out_of_time_own(k) and not failed_own(k) for k in detect)
 print("\x1f".join(str(x) for x in (ran, passed, len(again) + len(blind), len(detect),
                                  len(alarms) + len(blind), len(unstable), ";".join(detect),
                                  "timeout" if timeout else "")))

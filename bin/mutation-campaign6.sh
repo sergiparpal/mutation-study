@@ -7,9 +7,12 @@
 # The fifth campaign's bin/mutation-campaign5.sh with the arms, the paths and
 # the subjects' list changed, and one rule added: an f6 suite whose every test
 # was left out at acceptance has no figure, since nothing of it passes on its
-# own revision. Each suite is measured on its own revision: the fix commit in
-# m6, its parent in f6. As in the fifth campaign, it is a step of the
-# protocol, run after the measurement and before the analysis:
+# own revision. The note of a suite on which PIT stops quotes the first line
+# of PIT's log that reports an error, as before, but no longer one of the
+# lines that name the tests left out, whose names can match. Each suite is
+# measured on its own revision: the fix commit in m6, its parent in f6. As in
+# the fifth campaign, it is a step of the protocol, run after the measurement
+# and before the analysis:
 #
 #     with PIT and its default mutators, on the classes the fix modifies,
 #     with the suite as accepted
@@ -318,7 +321,7 @@ while read -r TAG _rest; do
                 0) [ -f "$T/pit-$ARM/mutations.xml" ] || { STATUS=none; NOTE="PIT wrote no report"; } ;;
                 124|137) STATUS=none; NOTE="PIT did not finish within $PIT_TIMEOUT seconds" ;;
                 *) STATUS=none
-                   NOTE=$(grep -m1 -E 'did not pass without mutation|Exception|ERROR' "$P.pit.log" | cut -c1-200)
+                   NOTE=$(grep -v 'c3.exclude: left out' "$P.pit.log" | grep -m1 -E 'did not pass without mutation|Exception|ERROR' | cut -c1-200)
                    NOTE="PIT stopped (status $RC)${NOTE:+: $NOTE}" ;;
             esac
             sort -u "$T/tests-$ARM" > "$P.tests"
