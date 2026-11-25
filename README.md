@@ -245,6 +245,26 @@ its protocol, and `bin/describe-campaign5.py`, written after the analysis.
 They use `bin/campaign3-lib.sh`, `bin/AgentTestRunner.java`,
 `bin/ExcludedTestsFilter.java` and `bin/agent-sandbox.py` unchanged.
 
+The sixth campaign is under `data/campaign6/`. It uses the fourth campaign's
+115 subjects. One implementation-visible arm is shown the faulty revision, the
+parent of the fix commit, and asked to look for faults in it. Its tests that
+fail on the faulty revision are its findings, and a finding that passes on the
+fix detects the fault. The fourth campaign's implementation-visible arm is run
+a third time beside it, on the fix commit. The campaign measures how often the
+agent asked to look detects the fault, and whether it does so as often as the
+other arm. The directory holds:
+
+- its protocol (`PROTOCOL.md`), fixed before any run on the subjects;
+- the subject list;
+- the output of the two sandbox checks;
+- the pilot (`pilot/`).
+
+Its scripts are `bin/subjects-campaign6.py`, `bin/generate-campaign6.sh`,
+`bin/run-campaign6.sh`, `bin/audit-campaign6.py`, `bin/measure-campaign6.sh`,
+`bin/mutation-campaign6.sh` and `bin/analyze-campaign6.py`, all committed with
+its protocol. They use `bin/campaign3-lib.sh`, `bin/AgentTestRunner.java`,
+`bin/ExcludedTestsFilter.java` and `bin/agent-sandbox.py` unchanged.
+
 ## What this does not show
 
 Several things, recorded here because they are easy to over-read from the

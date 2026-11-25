@@ -1,13 +1,10 @@
-# Sixth campaign: protocol (draft)
+# Sixth campaign: protocol
 
-Draft of 25 November 2026. Its two open decisions were taken the same day: the
-campaign has two arms, `f6` and `m6`, and `f6`'s request is the explicit
-paragraph below. No run has been made on the subjects. The checks without the
-model and the pilot have been made, the same day (below). The protocol will be
-fixed, as the earlier campaigns' were, by the merge of the pull request that
-adds it. The merge commit, with the scripts as they are in it, is then the
-reference. Anything done differently afterwards is a deviation and is listed
-at the end, with its date and reason, before the step it affects.
+Fixed on 25 November 2026, before any run on the subjects, by the merge of the
+pull request that adds it (#33), after the checks without the model and the
+pilot below. The merge commit, with the scripts as they are in it, is the
+reference. Anything done differently afterwards is a deviation and is listed at
+the end, with its date and reason, before the step it affects.
 
 ## Why a sixth campaign
 
@@ -258,9 +255,8 @@ Sets:
 
 ## Estimate, hypothesis, test and decision rule
 
-All are in `bin/analyze-campaign6.py`, to be committed with this file. The
-order of the subjects and every interval use Python's
-`random.Random(20261125)`.
+All are in `bin/analyze-campaign6.py`, committed with this file. The order of
+the subjects and every interval use Python's `random.Random(20261125)`.
 
 **The detection rate when asked to look for faults.** This is `f6`'s share of
 `Fail` among its subjects with a detection verdict. It comes with a 95%
@@ -659,4 +655,4 @@ can read.
 
 ## Deviations
 
-None. The protocol is not fixed yet.
+None.
