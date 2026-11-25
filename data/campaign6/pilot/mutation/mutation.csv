@@ -1,0 +1,5 @@
+subject,arm,status,note,generated,detected,killed,timed_out,memory_error,run_error,non_viable,equivalent,survived,no_coverage,lines_covered,lines_total,methods_kept,methods_left_out,keys_excluded,seconds
+commons-lang-6c4269eb8,f6,ok,,103,88,87,1,0,0,0,0,14,1,131,133,56,0,0,11
+commons-lang-6c4269eb8,m6,ok,,103,83,82,1,0,0,0,0,19,1,131,133,53,0,0,11
+commons-csv-ab3d7236,f6,ok,,78,57,57,0,0,0,0,0,11,10,112,122,33,2,2,7
+commons-csv-ab3d7236,m6,ok,,79,61,61,0,0,0,0,0,10,8,119,127,38,0,0,7

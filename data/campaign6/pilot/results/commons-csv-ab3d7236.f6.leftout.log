@@ -1,0 +1,15 @@
+---- org.apache.commons.csv.CSVPrinterAgentTest ----
+1) org.apache.commons.csv.CSVPrinterAgentTest#constructorWithHeaderDoesNotCountAsRecord()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+    at org.apache.commons.csv.CSVPrinterAgentTest.constructorWithHeaderDoesNotCountAsRecord(CSVPrinterAgentTest.java:139)
+
+2) org.apache.commons.csv.CSVPrinterAgentTest#printRecordsIterableFlatPrintsSingleRecord()
+org.opentest4j.AssertionFailedError: expected: <a,b
+> but was: <a
+b
+>
+    at org.apache.commons.csv.CSVPrinterAgentTest.printRecordsIterableFlatPrintsSingleRecord(CSVPrinterAgentTest.java:297)
+
+Tests run: 2, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 2, failed: 2, left out beforehand: 33
+FAILURES!!!

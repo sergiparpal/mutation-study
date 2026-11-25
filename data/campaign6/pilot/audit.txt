@@ -1,0 +1,12 @@
+f6: 2 transcripts
+  commons-csv-ab3d7236       commands=10  refused=0  denied=0  network=0 vcs=1 outside=0 own_tmp=0 other=0
+      [vcs] git status --porcelain 2>/dev/null || echo "not a git repo"; find src/test/java -newer _tools/test.sh -name '*.java'
+          -> not a git repo src/test/java/org/apache/commons/csv/CSVPrinterAgentTest.java
+  commons-lang-6c4269eb8     commands=12  refused=2  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  runs with a flagged command: 1 of 2; calls the harness refused: 2; commands the sandbox denied: 0; runs that touched another file: 0; runs that name the fix: 0
+
+m6: 2 transcripts
+  commons-csv-ab3d7236       commands=11  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  commons-lang-6c4269eb8     commands=5   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  runs with a flagged command: 0 of 2; calls the harness refused: 0; commands the sandbox denied: 0; runs that touched another file: 0; runs that name the fix: 0
+

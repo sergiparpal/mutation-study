@@ -2349,6 +2349,38 @@ alters:
 - a subclass whose own `accept` excludes only `String` still recurses into a
   nested object. On the fix, this overflows the stack.
 
+## Sixth campaign
+
+The sixth campaign shows the implementation-visible agent the faulty revision
+of each fix, the parent of the fix commit, and asks it to look for faults in
+that code (`f6`). Beside it, the fourth campaign's implementation-visible arm
+is made a third time on the fix commit (`m6`). Its subjects are the fourth
+campaign's 115, with their records. Its conditions are the fourth campaign's,
+with two exceptions in `f6`: its prompt ends with the request in place of
+`m4`'s last sentence, and its acceptance keeps a suite whose every test fails
+and runs one that does not finish a class at a time. The tests that `f6`'s
+acceptance leaves out, those that fail on the faulty revision, are its
+findings. A finding that fails there again and passes on the fix detects the
+fault.
+
+The protocol is `campaign6/PROTOCOL.md`. It was fixed on 25 November 2026,
+before any run on the subjects, by the merge of its pull request. Its estimate
+is `f6`'s detection rate. Its hypothesis, H1, is that detection in `f6` and
+detection in `m6` differ.
+
+- `campaign6/subjects.txt`: the subjects in the order of the runs, with the
+  fourth campaign's columns. `bin/subjects-campaign6.py` writes it from
+  `campaign4/subjects.txt`. Its `--check` confirms the list, and checks that
+  every fix commit has one parent at which every class under test exists. The
+  records are the fourth campaign's (`campaign4/subjects/`).
+- `campaign6/probe.txt`, `campaign6/saved-copies.txt`: the output of
+  `bin/agent-sandbox.py probe` and of `bin/probe-saved-copies.py`, with CLI
+  2.1.316.
+- `campaign6/pilot/`: the pilot. It is four runs with the model, made on 25
+  November 2026 on the third campaign's two pilot subjects, in both arms. It
+  holds their audit, their closing messages, and their measurement and
+  mutation measurement. It is not part of any result.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -2423,4 +2455,6 @@ mistake for results:
 - [x] Fifth campaign's protocol fixed before any run on the subjects (`campaign5/PROTOCOL.md`)
 - [x] Fifth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed. Certification is 6.1% (7/115) against detection 22.6% (26/115), and H1 is rejected with `b5` below `m5` (*p* = 0.000157); the pooled mutation scores are 42.1% and 41.1%. The deviation of 22 November (the machine's Java) is in the protocol (`campaign5/`)
 - [x] Write-up carries the fifth campaign: `PREPRINT.md` §2.13 and §3.13, and the abstract, introduction, discussion (§4.1, §4.2, §4.3, §4.6), threats, related work, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign5.py`, and §3.13 in `bin/report-figures.py`
+- [x] Sixth campaign prepared: protocol, scripts, checks without the model on the fourth campaign's 115 subjects in both arms, and a pilot (`campaign6/`)
+- [x] Sixth campaign's protocol fixed before any run on the subjects (`campaign6/PROTOCOL.md`)
 - [ ] A matched post-cutoff corpus large enough to test the effect size. Not pursued (21 November 2026): a corpus matched to the Defects4J sample can take at most 69 of the pool's 131 new subjects, 115 of which the fourth campaign has run, and its analysis weights detection by the sample's fault types instead (`campaign4/analysis.txt`)

@@ -1,0 +1,1 @@
+f6 commons-csv-ab3d7236 other getRecordCount() returns 1 instead of 0 after the constructor prints the header; printRecords(Iterable) of simple objects prints each as its own record, "a\nb\n" instead of "a,b\n"
