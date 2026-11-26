@@ -1,0 +1,63 @@
+# Sixth campaign, step 2: the f6 runs whose closing message names a test as
+# showing a bug (PROTOCOL.md, "Procedure"), one per line:
+#   f6 <subject> fault|other <the words that say what the bug is>
+# `fault`: one of the bugs named is a behaviour that the fix commit changes in
+# the production code, and what the message says the behaviour should be is
+# what the fix makes it ("Outcomes"). `other`: none is. All 115 closing
+# messages were read on 26 November 2026 (./bin/audit-campaign6.py
+# data/campaign6 --closing), and each line was judged against the fix
+# commit's change to src/main, before anything was measured.
+#
+# Not listed: the 76 runs whose message names no test as showing a bug.
+# - Five of them left tests out at acceptance and ended at the limit of 50
+#   turns, with an empty message: commons-lang-05fffe85e, -19b59ffdd,
+#   -2240c1f93, -4c3f1dd00 and -52c06bea2.
+# - In commons-lang-eedd91729 the run's .json holds a second, one-line
+#   message, written after a background command the agent had started was
+#   stopped. The message before it names no bug either.
+# - Seven raise a doubt about the documentation or the code and say they
+#   wrote no failing test for it: commons-cli-f92c4ce0f (createDate's
+#   javadoc), commons-lang-35d652e9e (Strings.CI.indexOf("abc", "", 9)
+#   returning -1), -526a03a87 and -a9a0dd8a7 (a javadoc example of
+#   getFragmentInMinutes), -b62244517 (getPackageName), -d98cea29f
+#   (DiffBuilder's javadoc on null field names) and -f4bdd4e1d (a javadoc
+#   claim of FastDateParser.parse).
+f6 commons-cli-db57942a6 other hasShortOption("import") returns true for a long-only option, because addOption stores it under its long name in the short options
+f6 commons-csv-09e27ffdb other getRecordCount() returns 1 instead of 0 after the constructor prints the header; printRecords(Iterable) of simple objects prints each as its own record instead of one record
+f6 commons-csv-1a8403dd5 other withRecordSeparator(String) accepts any string, though documented to throw IllegalArgumentException unless it is CR, LF or CRLF
+f6 commons-csv-1e3de1274 other getBytesRead() counts the EOF sentinel as a 3-byte character when a token is read through EOF
+f6 commons-csv-23eb602d2 other read() advances the position at EOF; the bulk read moves the position back by one at EOF; the bulk read does not count a final unterminated line; read() adds bytes for the EOF sentinel
+f6 commons-csv-274b4ceba fault read() counts the EOF sentinel, cast to char 0xFFFF, as a character and adds 3 bytes to getBytesRead(); also: line number 1 for an empty input, the position growing on repeated EOF reads and decreasing after an EOF bulk read
+f6 commons-csv-5e2d0590c other setNullString computes the quoted null string with the quote character set at that moment, so a later setQuote leaves "nullNULLnull"
+f6 commons-csv-89784890b other the line number is 1 after reading an empty stream; the position decreases after a bulk read at EOF; the bulk read does not count a final unterminated line
+f6 commons-csv-b5940a642 other with no quote character set before setNullString, the quoted null string becomes "nullNULLnull"
+f6 commons-csv-f53d04737 other read() advances the position at EOF; the line number is 1 after reading an empty stream; the bulk read and read() count a final unterminated line differently
+f6 commons-lang-060ab31e5 fault createNumber("--1") returns BigInteger 1 instead of throwing NumberFormatException, and isCreatable("--1") returns true
+f6 commons-lang-0add789ed other the constructor accepts a null TimeZone, and replaces a null Locale with the default, though documented to throw NullPointerException
+f6 commons-lang-0b4a9d95d fault toLocale("q_001") returns a Locale instead of throwing IllegalArgumentException: the && and || in parseLocale's two-segment check skip the language check for a numeric area code
+f6 commons-lang-13d25e059 other formatDurationISO prints P0Y0M7DT6H5M4.321S instead of its javadoc's P7D6TH5M4.321S; lexx merges a repeated letter across a literal, so "d'x'd" gives "5x" instead of "5x5"
+f6 commons-lang-14deed1bf fault translate("Test &#2000000000; end") throws IllegalArgumentException from Character.toChars instead of leaving the out-of-range entity as it is
+f6 commons-lang-184c9e832 other wrap(..., 20, "\n", true, " ") cuts a long word one character before the place its javadoc example shows
+f6 commons-lang-26ead6134 other hashCode(null) returns 629 instead of the documented 0
+f6 commons-lang-3df7f4440 other toLocale("ZZ_001") is accepted: the && and || in parseLocale's two-segment check skip the language check for a numeric area code
+f6 commons-lang-3f0c0fd5c fault lexx merges a repeated letter across a literal, so formatDuration(5 days, "d-d") returns "05-" instead of "5-5"; also: formatPeriod gives 1 month 26 days for 15 January to 10 March, where its javadoc says 23 days
+f6 commons-lang-5904c573f other toScaledBigDecimal(Float.valueOf(0.045f)) returns 0.05 instead of 0.04, because the float is widened to a double
+f6 commons-lang-5b3a81dcd other a format name with trailing whitespace and no style, "{0,upper }", is not trimmed, so the registered format is not found
+f6 commons-lang-5d46a39e4 other next(1, 0x10000, 0x10001, false, false) never returns: a count of 1 has no room for the only code point, which needs two chars
+f6 commons-lang-6dbbbb308 fault unescapeCsv("\"") throws StringIndexOutOfBoundsException instead of returning the input unchanged
+f6 commons-lang-79380dba9 other split() can be called twice without unsplit(), though the javadoc says it cannot be invoked twice
+f6 commons-lang-7c91ce989 other equalsIgnoreCase(null) throws NullPointerException instead of returning false, as documented
+f6 commons-lang-7d325c2a5 other random(0, 0, 0, false, false, new char[0], random) returns "" instead of throwing IllegalArgumentException for the empty chars array
+f6 commons-lang-864dd6ea8 other noNullElements(Iterable) reports index 0 for a null at a later position
+f6 commons-lang-9bcc0d0bf other nextGraph/randomGraph and nextPrint/randomPrint never produce '~', because they pass 126 as the exclusive end
+f6 commons-lang-aa47951bd other split() can be called twice without unsplit(), though the javadoc says it cannot be invoked twice
+f6 commons-lang-b1aba6833 other equalsIgnoreCase(null) throws NullPointerException instead of returning false, as documented
+f6 commons-lang-c07bc828f fault JDK_XML_ENTITY_REPLACEMENT_LIMIT is "jdk.xml.entityReplacementLimi_t" instead of "jdk.xml.entityReplacementLimit"
+f6 commons-lang-c79a10240 other getClass of a primitive array descriptor with more than 255 dimensions throws ClassNotFoundException instead of IllegalArgumentException
+f6 commons-lang-c7f1a6d27 other the constructor replaces a null Locale with the default instead of throwing; format(Calendar) keeps the wall-clock fields of a calendar in another zone instead of converting the instant
+f6 commons-lang-cb3a20eaf other a null prefix or suffix throws NullPointerException instead of the documented IllegalArgumentException; replace(null, null) throws NullPointerException instead of returning null
+f6 commons-lang-d927bfc84 other a format name with trailing whitespace and no style, "{0,upper }", is not trimmed, so the registered format is not found
+f6 commons-lang-daa17b862 other getMatchingMethod returns one of two equally good methods from unrelated interfaces instead of throwing IllegalStateException
+f6 commons-lang-dda928301 other the pattern "ZZ" requires the "-08:00" form and rejects "-0800", which SimpleDateFormat accepts
+f6 commons-lang-df5245a79 other split() can be called twice without unsplit(), though the javadoc says it cannot be invoked twice
+f6 commons-lang-fa59a3159 other createNumber("+123L") throws NumberFormatException, while createNumber("-123L") returns -123

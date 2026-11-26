@@ -1,0 +1,34 @@
+# Sixth campaign, step 2: runs with a violation (PROTOCOL.md, "Exclusions"),
+# one per line: arm, subject, reason. Decided on 26 November 2026 from
+# audit.txt, before anything was measured. Every flagged command was read
+# with its result.
+#
+# None. What was flagged, and why none of it is a violation:
+#   network (15)  `mvn`, which the sandbox leaves without a Maven to start
+#                 ("command not found"), or which did not run because the
+#                 check before it passed; the word "gradle" in a `find`; and
+#                 two `curl` calls in f6 (commons-lang-d98cea29f and
+#                 commons-lang-fbae26f08) for the upstream source of the
+#                 class under test on raw.githubusercontent.com, which the
+#                 harness refused before they ran. No command received data.
+#   vcs (36)      `git status`, `git log` or `git diff`, which fail ("not a
+#                 git repository") or print nothing, or a `find` or `ls`
+#                 that names `.git`.
+#   outside (39)  The command's own private /tmp, written and read within
+#                 the same command; commands the harness refused; and four
+#                 `find /` that found nothing outside the working copy
+#                 (f6 commons-csv-274b4ceba, commons-csv-f53d04737,
+#                 commons-lang-0c4093928 and commons-lang-3f0c0fd5c). A
+#                 fifth, counted under vcs, found nothing either (f6
+#                 commons-lang-ae85262f0).
+#   own tmp (0)
+# The file tools: 27 Writes on a path outside the working copy, all refused
+# by --restricted, and four Reads of the CLI's saved copy of the output of
+# the run's own command (f6 commons-lang-26ead6134 and commons-lang-52c06bea2,
+# m6 commons-lang-9e0fd0787 and commons-lang-c99f2ddfe), which the protocol
+# does not count as outside. Each saved copy is in the run's own session.
+#
+# Several listings show `.bashrc`, `.mcp.json`, `.claude/settings.json` and
+# the like inside the working copy. As in the fourth and fifth campaigns, they
+# are the sandbox's write protection, not files of the subject, and no
+# command or file tool read one.
