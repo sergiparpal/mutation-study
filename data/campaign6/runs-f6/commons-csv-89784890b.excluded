@@ -1,0 +1,3 @@
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadLineNumberConsistentWithSingleCharReadAtEof()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadAtEofReturnsEofAndSetsLastChar()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testLineNumberForEmptyStreamIsZero()

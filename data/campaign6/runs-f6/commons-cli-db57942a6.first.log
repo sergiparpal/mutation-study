@@ -1,0 +1,7 @@
+1) org.apache.commons.cli.OptionsAgentTest#testHasShortOptionFalseForLongOnlyOption()
+org.opentest4j.AssertionFailedError: a long-only option has no short name, so hasShortOption must be false ==> expected: <false> but was: <true>
+    at org.apache.commons.cli.OptionsAgentTest.testHasShortOptionFalseForLongOnlyOption(OptionsAgentTest.java:310)
+
+Tests run: 33, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 33, failed: 1
+FAILURES!!!

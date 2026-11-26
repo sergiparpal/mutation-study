@@ -1,0 +1,15 @@
+1) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadAtEofDoesNotAdvancePosition()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testReadAtEofDoesNotAdvancePosition(ExtendedBufferedReaderAgentTest.java:75)
+
+2) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadLineCountingMatchesSingleCharReadAcrossSmallBuffers()
+org.opentest4j.AssertionFailedError: expected: <5> but was: <4>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testBulkReadLineCountingMatchesSingleCharReadAcrossSmallBuffers(ExtendedBufferedReaderAgentTest.java:187)
+
+3) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testEmptyStreamSingleReadLineNumberStaysZero()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testEmptyStreamSingleReadLineNumberStaysZero(ExtendedBufferedReaderAgentTest.java:86)
+
+Tests run: 30, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 30, failed: 3
+FAILURES!!!

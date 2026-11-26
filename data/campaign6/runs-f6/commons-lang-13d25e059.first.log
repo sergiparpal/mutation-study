@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testSameLetterTokenSeparatedByLiteralAreIndependentOccurrences()
+org.opentest4j.AssertionFailedError: expected: <5x5> but was: <5x>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testSameLetterTokenSeparatedByLiteralAreIndependentOccurrences(DurationFormatUtilsAgentTest.java:331)
+
+2) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISOMatchesJavadocExample()
+org.opentest4j.AssertionFailedError: expected: <P7D6TH5M4.321S> but was: <P0Y0M7DT6H5M4.321S>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatDurationISOMatchesJavadocExample(DurationFormatUtilsAgentTest.java:129)
+
+Tests run: 36, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 36, failed: 2
+FAILURES!!!

@@ -1,0 +1,36 @@
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationLiteralOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLeadingOptionalBlockDropsLeadingZeroFields()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testNestedOptionalBlockThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testUnmatchedQuoteThrows()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testSameLetterTokenSeparatedByLiteralAreIndependentOccurrences()	1	1	org.opentest4j.AssertionFailedError: expected: <5x5> but was: <5x>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsZeroBothSuppressed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationRepeatedTokenWidensField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationNullFormatThrowsNpe()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationMillisecondsAloneNotForcedToThreeDigits()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsSingularPluralization()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodExactlyOneYear()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISOMatchesJavadocExample()	1	1	org.opentest4j.AssertionFailedError: expected: <P7D6TH5M4.321S> but was: <P0Y0M7DT6H5M4.321S>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationHMSZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFullyOptionalMultiTokenNoLiteralsCanProduceEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testOptionalBlockWithLiteralBraces()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodEqualInstantsIsAllZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationHMSOneMillisecond()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationMillisecondsAfterSecondsAlwaysAtLeastThreeDigits()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodYearsMonthsDays()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsMixedUnitsNoSuppress()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationBasicPadded()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodISO()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testUnopenedOptionalCloseThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationZeroPadded()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationHoursRollOverWithoutDayToken()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsOneDayNoSuppress()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISOZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodStartAfterEndThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsZeroNoSuppress()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testUnmatchedOptionalOpenThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testOptionalBlockSuppressesZeroFieldAndTrailingLiteral()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodDaysOnlyAcrossLeapYear()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationNegativeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationNoPadding()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testPublicConstructorIsUsable()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFullyOptionalPatternCanProduceEmptyString()	1	0	

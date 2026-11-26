@@ -1,0 +1,40 @@
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodBasicFields()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationLiteralText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodWithoutDayTokenRollsDaysIntoHours()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodMonthsAreCalculatedFirstPerJavadocExample()	1	1	org.opentest4j.AssertionFailedError: expected: <1M 23D> but was: <1M 26D>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testOptionalBlockWithLeadingLiteralOnlyPrintedWhenFollowingFieldNonZeroExample()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenToStringRepeatsValueByCount()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testOptionalBlockWithoutLiteralsExample()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodStartGreaterThanEndThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodEqualStartAndEndIsAllZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsZeroBothSuppressed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsZeroNoSuppression()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFixedWidthFieldsExample()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsSingularPluralization()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationEscapedApostropheInsideLiteral()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationZeroDoesNotThrow()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISOOneDay()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxGroupsRepeatedTokenCharacters()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testOptionalBlockEntirelyOptionalCanBeEmptyExample()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsTwoDaysThreeHoursBothSuppressed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodISOOneDay()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationZeroPadded()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationSecondsMillisecondCarryUsesThreeDigitWidth()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testTokenContainsTokenWithValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testMultipleOptionalBlocksChooseFirstNonZeroExample()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationISOZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsOneDaySuppressTrailingOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsOneDayBothSuppressed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationNestedOptionalThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWordsOneHourSuppressLeadingOnly()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationDoesNotMergeFieldsSeparatedByLiteralText()	1	1	org.opentest4j.AssertionFailedError: expected: <5-5> but was: <05->
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationUnopenedOptionalCloseThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationUnterminatedQuoteThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testOptionalBlockWithLiteralsExample()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationWithDayToken()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationNegativeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationHMSCarriesOverFields()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationNoPadding()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testOptionalBlockSuppressesLiteralsWhenZeroExample()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationUnmatchedOptionalThrows()	1	0	
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxDoesNotMergeTokensSeparatedByLiteralText()	1	1	org.opentest4j.AssertionFailedError: expected: <3> but was: <2>

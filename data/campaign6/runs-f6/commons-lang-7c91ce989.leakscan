@@ -1,0 +1,1 @@
+trigger name	src/test/java/org/apache/commons/lang3/StringUtilsEqualsIndexOfTest.java:269	void testEqualsIgnoreCase() {

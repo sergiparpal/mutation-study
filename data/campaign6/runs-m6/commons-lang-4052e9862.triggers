@@ -1,0 +1,4 @@
+ClassUtilsShortClassNameTest.testDollarSignImmediatelyAfterPackage
+ClassUtilsShortClassNameTest.testDollarSignWithinName
+ClassUtilsShortClassNameTest.testMultipleDollarSigns
+ClassUtilsShortClassNameTest.testNe$tedClassName

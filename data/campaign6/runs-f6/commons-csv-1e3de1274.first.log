@@ -1,0 +1,7 @@
+1) org.apache.commons.csv.LexerAgentTest#testGetBytesReadDoesNotCountPhantomEofCharacter()
+org.opentest4j.AssertionFailedError: expected: <3> but was: <6>
+    at org.apache.commons.csv.LexerAgentTest.testGetBytesReadDoesNotCountPhantomEofCharacter(LexerAgentTest.java:425)
+
+Tests run: 36, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 36, failed: 1
+FAILURES!!!

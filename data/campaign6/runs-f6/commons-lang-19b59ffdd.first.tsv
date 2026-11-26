@@ -1,0 +1,32 @@
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testCaseFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testContainsFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testWrapUnwrap()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testPaddingFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testDeleteWhitespaceAndNormalizeSpace()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testRemoveRegexFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testDefaultsAndFirstNon()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testTruncate()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testAppendPrependIfMissing()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testDistanceMetrics()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testOverlay()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testAbbreviateFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testCountMatches()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testSubstringFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <cba> but was: <ba>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testLeftRightMidLength()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testCharacterTypeChecks()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testIsAllAnyNoneBlankEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testEqualsFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testValueOfAndCodePointsAndBytes()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testIsEmptyIsBlank()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testRepeatReverseRotate()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testStartsEndsWithFamily()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testCompareFamily()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testJoinFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <a:null:c> but was: <a::c>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testTrimAndStrip()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testSplitFamily()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <1> but was: <6>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testChompChop()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testGetIfBlankGetIfEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testDifferenceAndCommonPrefixAndDigits()	1	0	
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testReplaceAndRemoveFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <zbz> but was: <zBz>
+SUCCESSFUL	method	org.apache.commons.lang3.StringUtilsAgentTest#testIdentitySameInstanceWhenUnchanged()	1	0	

@@ -1,0 +1,4 @@
+org.apache.commons.lang3.StringUtilsAgentTest#testSubstringFamily()
+org.apache.commons.lang3.StringUtilsAgentTest#testJoinFamily()
+org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfFamily()
+org.apache.commons.lang3.StringUtilsAgentTest#testReplaceAndRemoveFamily()

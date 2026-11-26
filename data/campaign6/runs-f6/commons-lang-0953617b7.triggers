@@ -1,0 +1,2 @@
+HashCodeBuilderCycleTest.cyclicPeerDoesNotOverflowStack
+HashCodeBuilderCycleTest.selfReferentialDoesNotOverflowStack

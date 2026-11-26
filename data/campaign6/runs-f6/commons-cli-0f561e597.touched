@@ -1,0 +1,5 @@
+./src/test/java/org/apache/commons/cli/help/TextStyleAgentTest.java
+./target/classes/org/apache/commons/cli/help/TextStyle$1.class
+./target/classes/org/apache/commons/cli/help/TextStyle$Alignment.class
+./target/classes/org/apache/commons/cli/help/TextStyle$Builder.class
+./target/classes/org/apache/commons/cli/help/TextStyle.class

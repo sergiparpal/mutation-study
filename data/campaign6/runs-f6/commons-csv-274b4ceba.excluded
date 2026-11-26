@@ -1,0 +1,4 @@
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadAtEofOfEmptyInput()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testPositionDoesNotGrowOnRepeatedEofReads()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadPositionNeverDecreasesAtEof()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testByteTrackingDoesNotCountEofSentinel()

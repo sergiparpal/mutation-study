@@ -1,0 +1,8 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.commons.lang3.reflect.FieldUtils (file:/home/sergi/.cache/gen-stage/w-tmMMQqpF/target/classes/) to field java.lang.reflect.Field.modifiers
+WARNING: Please consider reporting this to the maintainers of org.apache.commons.lang3.reflect.FieldUtils
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Tests run: 43, Failures: 0, Aborted: 0, Skipped: 0
+Test methods: 43, failed: 0
+OK

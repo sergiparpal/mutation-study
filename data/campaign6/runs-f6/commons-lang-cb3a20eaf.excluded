@@ -1,0 +1,3 @@
+org.apache.commons.lang3.text.StrSubstitutorAgentTest#testConstructorRejectsNullSuffixWithIllegalArgumentException()
+org.apache.commons.lang3.text.StrSubstitutorAgentTest#testConstructorRejectsNullPrefixWithIllegalArgumentException()
+org.apache.commons.lang3.text.StrSubstitutorAgentTest#testStaticReplaceWithNullSourceAndNullPropertiesReturnsNull()

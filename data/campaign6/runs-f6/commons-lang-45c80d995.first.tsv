@@ -1,0 +1,17 @@
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testManualOpenAndCloseResetTheCounter()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testNegativeIncrementIsRejected()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testIncrementAndCheckStateWithExplicitIncrement()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testChangeListenerNotifiedOnAutomaticOpening()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testOpeningThresholdZeroOpensOnFirstEvent()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testStaysOpenWithinClosingIntervalRegardlessOfEvents()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testChangeListenerNotifiedOnManualTransitions()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testCheckStateDoesNotIncrementCounter()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testAutomaticallyClosesAfterClosingIntervalWithFewEvents()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testThreeArgConstructorUsesSameThresholdAndIntervalForBothStates()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testStaysOpenAfterClosingIntervalWhenEventsReachClosingThreshold()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testSixArgConstructorSetsIndependentValues()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testManualOpenWhenAlreadyClosedHasNoEffectBesidesState()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testOpeningThresholdBoundaryNotExceeded()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testCounterResetsWhenOpeningIntervalElapses()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testNewInstanceStartsClosed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.EventCountCircuitBreakerAgentTest#testFourArgConstructorUsesSameIntervalForBothStates()	1	0	

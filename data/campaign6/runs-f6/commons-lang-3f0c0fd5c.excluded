@@ -1,0 +1,3 @@
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodMonthsAreCalculatedFirstPerJavadocExample()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationDoesNotMergeFieldsSeparatedByLiteralText()
+org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxDoesNotMergeTokensSeparatedByLiteralText()

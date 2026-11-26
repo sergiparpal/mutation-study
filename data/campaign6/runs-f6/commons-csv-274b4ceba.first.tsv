@@ -1,0 +1,23 @@
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testSurrogatePairByteLengthOverSingleCharReads()	1	0	
+FAILED	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadAtEofOfEmptyInput()	1	1	org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadBufferZeroLengthIsNoOp()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadBufferPartialAtEof()	1	0	
+FAILED	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testPositionDoesNotGrowOnRepeatedEofReads()	1	1	org.opentest4j.AssertionFailedError: expected: <2> but was: <3>
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testMarkAndResetRestoreBytesRead()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadBufferIntoOffsetPreservesExistingContent()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testCloseSetsLastCharToEofAndRejectsFurtherReads()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineNoTrailingTerminatorReturnsLastChunk()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testLoneLowSurrogateThrowsCharacterCodingException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineVariousEolStyles()	1	0	
+FAILED	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadPositionNeverDecreasesAtEof()	1	1	org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+FAILED	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testByteTrackingDoesNotCountEofSentinel()	1	1	org.opentest4j.AssertionFailedError: expected: <1> but was: <4>
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadSingleCharUpdatesState()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testInitialState()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testByteTrackingDisabledWithoutCharset()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineInterleavedWithReadAndPeek()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadBufferTracksCrlfSplitAcrossCalls()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadByteTrackingIgnoresEof()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testGetLineNumberCountsFinalLineWithoutTrailingNewline()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testMarkAndResetRestoreState()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testPeekDoesNotConsumeOrMutateState()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testByteTrackingDisabledWhenTrackBytesFalse()	1	0	

@@ -1,0 +1,18 @@
+1) org.apache.commons.lang3.text.StrSubstitutorAgentTest#testConstructorRejectsNullSuffixWithIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.lang3.text.StrSubstitutorAgentTest.testConstructorRejectsNullSuffixWithIllegalArgumentException(StrSubstitutorAgentTest.java:347)
+Caused by: java.lang.NullPointerException: suffix
+
+2) org.apache.commons.lang3.text.StrSubstitutorAgentTest#testConstructorRejectsNullPrefixWithIllegalArgumentException()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+    at org.apache.commons.lang3.text.StrSubstitutorAgentTest.testConstructorRejectsNullPrefixWithIllegalArgumentException(StrSubstitutorAgentTest.java:335)
+Caused by: java.lang.NullPointerException: prefix
+
+3) org.apache.commons.lang3.text.StrSubstitutorAgentTest#testStaticReplaceWithNullSourceAndNullPropertiesReturnsNull()
+java.lang.NullPointerException
+    at org.apache.commons.lang3.text.StrSubstitutor.replace(StrSubstitutor.java:228)
+    at org.apache.commons.lang3.text.StrSubstitutorAgentTest.testStaticReplaceWithNullSourceAndNullPropertiesReturnsNull(StrSubstitutorAgentTest.java:81)
+
+Tests run: 33, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 33, failed: 3
+FAILURES!!!

@@ -1,0 +1,19 @@
+1) org.apache.commons.lang3.ArrayUtilsAgentTest#testRemoveElementsVarargs()
+org.opentest4j.AssertionFailedError: array lengths differ, expected: <2> but was: <3>
+    at org.apache.commons.lang3.ArrayUtilsAgentTest.testRemoveElementsVarargs(ArrayUtilsAgentTest.java:594)
+
+2) org.apache.commons.lang3.ArrayUtilsAgentTest#testHashCodeNullIsZero()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <629>
+    at org.apache.commons.lang3.ArrayUtilsAgentTest.testHashCodeNullIsZero(ArrayUtilsAgentTest.java:259)
+
+3) org.apache.commons.lang3.ArrayUtilsAgentTest#testRemoveElementInt()
+org.opentest4j.AssertionFailedError: actual array was <null>
+    at org.apache.commons.lang3.ArrayUtilsAgentTest.testRemoveElementInt(ArrayUtilsAgentTest.java:576)
+
+4) org.apache.commons.lang3.ArrayUtilsAgentTest#testToStringObject()
+org.opentest4j.AssertionFailedError: expected: <<null>> but was: <{}>
+    at org.apache.commons.lang3.ArrayUtilsAgentTest.testToStringObject(ArrayUtilsAgentTest.java:855)
+
+Tests run: 100, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 100, failed: 4
+FAILURES!!!

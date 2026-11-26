@@ -1,0 +1,4 @@
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadAtEofDoesNotChangePosition()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadAtEofDoesNotAdvancePosition()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadLineNumberDoesNotDropWhenEofIsReached()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadAtEofDoesNotAddBytes()

@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.LocaleUtilsAgentTest#testToLocaleStringUppercaseLanguageWithNumericCountryMustBeRejected()
+org.opentest4j.AssertionFailedError: Expected IllegalArgumentException but got: zz_001
+    at org.apache.commons.lang3.LocaleUtilsAgentTest.testToLocaleStringUppercaseLanguageWithNumericCountryMustBeRejected(LocaleUtilsAgentTest.java:356)
+
+Tests run: 35, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 35, failed: 1
+FAILURES!!!

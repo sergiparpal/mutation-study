@@ -1,0 +1,30 @@
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testResetWithoutMarkThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testGetLastCharReflectsOnlyReadNotPeek()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineBasic()	1	0	
+FAILED	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadAtEofDoesNotAdvancePosition()	1	1	org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadSingleCharUpdatesLastCharAndPosition()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadReturnsCharactersAndUpdatesState()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testGetLineNumberLookahead()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testLoneLowSurrogateThrowsOnRead()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadNegativeLengthThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadZeroLengthReturnsZeroWithoutConsuming()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineOnEmptyStreamReturnsNull()	1	0	
+FAILED	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadLineCountingMatchesSingleCharReadAcrossSmallBuffers()	1	1	org.opentest4j.AssertionFailedError: expected: <5> but was: <4>
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadAtEofReturnsEofAndSetsLastChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadOffsetOutOfBoundsThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineHandlesCrLfAndLoneCr()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testEmptyStreamBulkReadLineNumberStaysZero()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadTrackedForSupplementaryCharacterViaBulkRead()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testPeekAtEofReturnsEof()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadNotTrackedWithoutEncoder()	1	0	
+FAILED	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testEmptyStreamSingleReadLineNumberStaysZero()	1	1	org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testInitialState()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testCloseSetsLastCharToEof()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testUnmappableCharacterThrowsOnRead()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadTrackedForAsciiCharacters()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadAfterCloseThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testMarkAndResetRestoreState()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testPeekDoesNotAdvanceStateOrPosition()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadLineDropsTerminators()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadTrackedForMultiByteCharacters()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testLineNumberWithCrLfAndLfCr()	1	0	

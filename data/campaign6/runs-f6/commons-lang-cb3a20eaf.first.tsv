@@ -1,0 +1,33 @@
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testReplaceWithStringReturnsSameInstanceWhenUnaltered()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testBasicReplaceWithMap()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testStaticReplaceWithCustomPrefixSuffix()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testCyclicSubstitutionThrowsIllegalStateException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testSetVariableResolverCustomLookup()	1	0	
+FAILED	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testConstructorRejectsNullSuffixWithIllegalArgumentException()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testResolveVariableCanBeOverriddenBySubclass()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testReplaceInStrBuilderReturnsFalseWhenNoVariables()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testReplaceWithOffsetAndLengthOnlyProcessesPortion()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testReplaceNullSourceVariants()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testValueDelimiterDisabledWhenSetToEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testReplaceCharArrayWithOffsetLength()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testStaticReplaceWithNullPropertiesReturnsSourceToString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testReplaceInStringBufferMutatesAndReturnsTrue()	1	0	
+FAILED	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testConstructorRejectsNullPrefixWithIllegalArgumentException()	1	1	org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.NullPointerException>
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testReplaceSystemProperties()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testStaticReplaceWithProperties()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testCustomVariablePrefixAndSuffixChars()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testDefaultValueDelimiterUsedWhenVariableUnresolved()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testDefaultValueNotUsedWhenVariableResolved()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testDeepAcyclicNestingExceedsMaxDepth()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testSubstitutionInVariableNamesDisabledLeavesNestedUnresolved()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testPreserveEscapesKeepsEscapeCharacter()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testEnableSubstitutionInVariableNames()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testReplaceInStringBuilderMutatesAndReturnsTrue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testReplaceInStrBuilderMutatesAndReturnsTrue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testEscapeCharacterPreventsSubstitutionAndIsRemovedByDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testDefaultPrefixSuffixMatchersAreTheStandardOnes()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testReplaceUnknownVariableLeftUntouched()	1	0	
+FAILED	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testStaticReplaceWithNullSourceAndNullPropertiesReturnsNull()	1	1	java.lang.NullPointerException
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testStaticReplaceWithMap()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testReplaceInStrBuilderReturnsFalseWhenNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.StrSubstitutorAgentTest#testEscapeCharDisabledTreatsDollarLiterally()	1	0	

@@ -1,0 +1,19 @@
+1) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadAtEofDoesNotChangePosition()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testBulkReadAtEofDoesNotChangePosition(ExtendedBufferedReaderAgentTest.java:114)
+
+2) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadAtEofDoesNotAdvancePosition()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testReadAtEofDoesNotAdvancePosition(ExtendedBufferedReaderAgentTest.java:96)
+
+3) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadLineNumberDoesNotDropWhenEofIsReached()
+org.opentest4j.AssertionFailedError: expected: <3> but was: <2>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testBulkReadLineNumberDoesNotDropWhenEofIsReached(ExtendedBufferedReaderAgentTest.java:291)
+
+4) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadAtEofDoesNotAddBytes()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <4>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testBytesReadAtEofDoesNotAddBytes(ExtendedBufferedReaderAgentTest.java:427)
+
+Tests run: 27, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 27, failed: 4
+FAILURES!!!
