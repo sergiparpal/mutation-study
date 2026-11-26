@@ -1,0 +1,21 @@
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateLowerAndUpperHex()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateSimple()	1	0	
+FAILED	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateThrowsOnLeadingMinusSign()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateMaxFourHexDigitValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateReturnsZeroWhenNotFollowedByU()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateWithPlusSeparator()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateReturnsZeroWhenNoBackslash()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateZeroValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateAtNonZeroIndex()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateNoEscapesPassesThrough()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateConsumedLengthWithExtraUAndPlus()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateUnpairedBackslashAtEnd()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateThrowsWhenNoHexDigitsAtAll()	1	0	
+FAILED	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateThrowsOnLeadingPlusSign()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateThrowsWhenNotEnoughHexDigits()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateWithinLargerString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateMultipleUChars()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateThrowsOnInvalidHexDigits()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateConsumedLengthSimple()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateReturnsZeroWhenBackslashIsLastChar()	1	0	

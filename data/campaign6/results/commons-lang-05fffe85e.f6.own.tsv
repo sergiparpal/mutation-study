@@ -1,0 +1,11 @@
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testPrimitiveArrayElementsAreIndentedFourSpaces()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testObjectArrayElementsAreRecursivelyIndentedDeeper()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testEmptyObjectHasEmptyIndentedBody()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testFieldsAreOrderedAlphabeticallyByName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testNullArrayFieldRendersNullTextNotBraces()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testEmptyPrimitiveArrayStillClosesBraceCorrectly()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testConstructorInitializesTopLevelIndentToTwoSpaces()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testSingleFieldIsIndentedByTwoSpaces()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testNestedObjectIsIndentedFourSpacesWithClosingBracketAtTwoSpaces()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testNullElementInsideObjectArrayRendersNullText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleAgentTest#testSelfReferenceIsAbbreviatedNotRecursed()	1	0	

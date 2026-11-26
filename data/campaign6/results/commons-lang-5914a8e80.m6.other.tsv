@@ -1,0 +1,25 @@
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testIsShutdownInitiallyFalse()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testAcquireBlocksUntilEndOfPeriodThenSucceeds()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testSetLimitIncreaseAllowsMoreAcquiresImmediately()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testBuilderRejectsNegativePeriod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testDeprecatedConstructorWithServiceUsesGivenExecutor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testTryAcquireRespectsLimit()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testDeprecatedConstructorRejectsNonPositivePeriod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testTryAcquireAfterShutdownThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testBuilderWithoutServiceCreatesOwnExecutor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testBuilderRejectsZeroPeriod()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testEndOfPeriodResetsCounterAndUpdatesStatistics()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testAcquireSucceedsImmediatelyWhenPermitAvailable()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testShutdownIsIdempotent()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testGetAvailablePermitsCanGoNegativeWithoutLimit()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testGetAvailablePermitsDecreasesWithEachAcquire()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testStartTimerReturnsNonNullFuture()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testSetLimitDecreaseBlocksFurtherAcquires()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testTryAcquireStartsTimerTaskOnFirstInvocation()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testAcquireAfterShutdownThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testDeprecatedConstructorWithoutServiceUsesOwnExecutor()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testTryAcquireWithoutLimitAlwaysSucceeds()	1	0	
+FAILED	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testShutdownWakesBlockedAcquireWithException()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testBuilderCreatesInstanceWithGivenParameters()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testOwnExecutorAcceptsExternalServiceDoesNotShutItDown()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testGetAverageCallsPerPeriodIsZeroBeforeAnyPeriodEnds()	1	0	

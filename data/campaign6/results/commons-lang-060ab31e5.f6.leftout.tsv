@@ -1,0 +1,2 @@
+SUCCESSFUL	method	org.apache.commons.lang3.math.NumberUtilsAgentTest#testIsCreatableInvalidNumbers()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.math.NumberUtilsAgentTest#testCreateNumberDoubleSignThrows()	1	0	

@@ -1,0 +1,12 @@
+---- org.apache.commons.lang3.StringUtilsAgentTest ----
+1) org.apache.commons.lang3.StringUtilsAgentTest#testReplaceFamily()
+org.opentest4j.AssertionFailedError: expected: <<a>> but was: <<a><b>>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testReplaceFamily(StringUtilsAgentTest.java:434)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfFamily()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfFamily(StringUtilsAgentTest.java:230)
+
+Tests run: 2, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 2, failed: 2, left out beforehand: 42
+FAILURES!!!

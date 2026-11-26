@@ -1,0 +1,37 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.commons.lang3.builder.ReflectionToStringBuilder (file:/home/sergi/.cache/gen-stage/measure-eSW3I0s7/faulty/target/classes/) to field java.util.concurrent.atomic.AtomicBoolean.VALUE
+WARNING: Please consider reporting this to the maintainers of org.apache.commons.lang3.builder.ReflectionToStringBuilder
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+1) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptRejectsAtomicBoolean()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAcceptRejectsAtomicBoolean(RecursiveToStringStyleAgentTest.java:93)
+
+2) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptRejectsString()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAcceptRejectsString(RecursiveToStringStyleAgentTest.java:80)
+
+3) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectNull()
+java.lang.NullPointerException
+    at org.apache.commons.lang3.builder.RecursiveToStringStyle.appendDetail(RecursiveToStringStyle.java:90)
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAppendDetailObjectNull(RecursiveToStringStyleAgentTest.java:117)
+
+4) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectAtomicBooleanIsNotRecursed()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <java.util.concurrent.atomic.AtomicBoolean@28eaa59a[value=1]>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAppendDetailObjectAtomicBooleanIsNotRecursed(RecursiveToStringStyleAgentTest.java:143)
+
+5) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptRejectsNumberSubclasses()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAcceptRejectsNumberSubclasses(RecursiveToStringStyleAgentTest.java:86)
+
+6) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptRejectsMutableBoolean()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAcceptRejectsMutableBoolean(RecursiveToStringStyleAgentTest.java:99)
+
+7) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptRejectsPrimitiveWrappers()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAcceptRejectsPrimitiveWrappers(RecursiveToStringStyleAgentTest.java:67)
+
+Tests run: 17, Failures: 7, Aborted: 0, Skipped: 0
+Test methods: 17, failed: 7
+FAILURES!!!

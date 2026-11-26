@@ -1,0 +1,9 @@
+---- org.apache.commons.lang3.RandomStringUtilsAgentTest ----
+1) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomAstralOnlyRangeWithCountOneDoesNotHang()
+org.opentest4j.AssertionFailedError: execution timed out after 3000 ms
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomAstralOnlyRangeWithCountOneDoesNotHang(RandomStringUtilsAgentTest.java:418)
+Caused by: org.junit.jupiter.api.AssertTimeoutPreemptively$ExecutionTimeoutException: Execution timed out in thread junit-timeout-thread-1
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 58
+FAILURES!!!

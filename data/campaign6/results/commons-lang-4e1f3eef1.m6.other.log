@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateThrowsOnLeadingMinusSign()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest.testTranslateThrowsOnLeadingMinusSign(UnicodeUnescaperAgentTest.java:161)
+
+2) org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest#testTranslateThrowsOnLeadingPlusSign()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.text.translate.UnicodeUnescaperAgentTest.testTranslateThrowsOnLeadingPlusSign(UnicodeUnescaperAgentTest.java:148)
+
+Tests run: 21, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 21, failed: 2
+FAILURES!!!

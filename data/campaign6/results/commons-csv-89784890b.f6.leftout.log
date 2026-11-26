@@ -1,0 +1,16 @@
+---- org.apache.commons.csv.ExtendedBufferedReaderAgentTest ----
+1) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadLineNumberConsistentWithSingleCharReadAtEof()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testBulkReadLineNumberConsistentWithSingleCharReadAtEof(ExtendedBufferedReaderAgentTest.java:204)
+
+2) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadAtEofReturnsEofAndSetsLastChar()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testBulkReadAtEofReturnsEofAndSetsLastChar(ExtendedBufferedReaderAgentTest.java:185)
+
+3) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testLineNumberForEmptyStreamIsZero()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testLineNumberForEmptyStreamIsZero(ExtendedBufferedReaderAgentTest.java:127)
+
+Tests run: 3, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 3, failed: 3, left out beforehand: 25
+FAILURES!!!

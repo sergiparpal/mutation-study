@@ -1,0 +1,11 @@
+1) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadArrayFillsFullArrayDespiteShortUnderlyingReads()
+org.opentest4j.AssertionFailedError: expected: <5> but was: <1>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testReadArrayFillsFullArrayDespiteShortUnderlyingReads(ExtendedBufferedReaderAgentTest.java:129)
+
+2) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testPeekArrayFillsFullArrayDespiteShortUnderlyingReads()
+org.opentest4j.AssertionFailedError: expected: <5> but was: <1>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testPeekArrayFillsFullArrayDespiteShortUnderlyingReads(ExtendedBufferedReaderAgentTest.java:172)
+
+Tests run: 26, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 26, failed: 2
+FAILURES!!!

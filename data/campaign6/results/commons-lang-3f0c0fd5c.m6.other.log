@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDuration_escapedSingleQuoteLiteral()
+org.opentest4j.AssertionFailedError: expected: <5'5 seconds> but was: <05' seconds>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatDuration_escapedSingleQuoteLiteral(DurationFormatUtilsAgentTest.java:100)
+
+Tests run: 26, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 26, failed: 1
+FAILURES!!!

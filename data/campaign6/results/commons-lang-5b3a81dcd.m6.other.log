@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testUnmatchedQuoteTreatedAsClosedAtEndOfPattern()
+java.lang.IllegalArgumentException: Unterminated quoted string at position 4
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.appendQuotedString(ExtendedMessageFormat.java:177)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.applyPattern(ExtendedMessageFormat.java:203)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:133)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:144)
+    at org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest.testUnmatchedQuoteTreatedAsClosedAtEndOfPattern(ExtendedMessageFormatAgentTest.java:158)
+
+Tests run: 25, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 25, failed: 1
+FAILURES!!!

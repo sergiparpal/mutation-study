@@ -1,0 +1,8 @@
+---- org.apache.commons.lang3.time.DurationFormatUtilsAgentTest ----
+1) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodMonthsAreCalculatedFirstPerJavadocExample()
+org.opentest4j.AssertionFailedError: expected: <1M 23D> but was: <1M 26D>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatPeriodMonthsAreCalculatedFirstPerJavadocExample(DurationFormatUtilsAgentTest.java:252)
+
+Tests run: 3, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 3, failed: 1, left out beforehand: 37
+FAILURES!!!

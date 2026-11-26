@@ -1,0 +1,12 @@
+---- org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest ----
+1) org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest#testOutOfRangeCodePointIsIgnoredNotThrown()
+java.lang.IllegalArgumentException: Not a valid Unicode code point: 0x77359400
+    at java.base/java.lang.Character.toChars(Character.java:8576)
+    at org.apache.commons.lang3.text.translate.NumericEntityUnescaper.translate(NumericEntityUnescaper.java:154)
+    at org.apache.commons.lang3.text.translate.CharSequenceTranslator.translate(CharSequenceTranslator.java:112)
+    at org.apache.commons.lang3.text.translate.CharSequenceTranslator.translate(CharSequenceTranslator.java:73)
+    at org.apache.commons.lang3.text.translate.NumericEntityUnescaperAgentTest.testOutOfRangeCodePointIsIgnoredNotThrown(NumericEntityUnescaperAgentTest.java:228)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 23
+FAILURES!!!

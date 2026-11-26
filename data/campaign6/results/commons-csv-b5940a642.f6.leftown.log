@@ -1,0 +1,8 @@
+---- org.apache.commons.csv.CSVFormatAgentTest ----
+1) org.apache.commons.csv.CSVFormatAgentTest#testNullStringNotCorruptedWhenQuoteCharacterUnsetAtSetNullStringTime()
+org.opentest4j.AssertionFailedError: expected: <NULL> but was: <nullNULLnull>
+    at org.apache.commons.csv.CSVFormatAgentTest.testNullStringNotCorruptedWhenQuoteCharacterUnsetAtSetNullStringTime(CSVFormatAgentTest.java:499)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 61
+FAILURES!!!

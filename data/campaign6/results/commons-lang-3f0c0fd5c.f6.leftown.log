@@ -1,0 +1,16 @@
+---- org.apache.commons.lang3.time.DurationFormatUtilsAgentTest ----
+1) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodMonthsAreCalculatedFirstPerJavadocExample()
+org.opentest4j.AssertionFailedError: expected: <1M 23D> but was: <1M 26D>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatPeriodMonthsAreCalculatedFirstPerJavadocExample(DurationFormatUtilsAgentTest.java:252)
+
+2) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationDoesNotMergeFieldsSeparatedByLiteralText()
+org.opentest4j.AssertionFailedError: expected: <5-5> but was: <05->
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testFormatDurationDoesNotMergeFieldsSeparatedByLiteralText(DurationFormatUtilsAgentTest.java:352)
+
+3) org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxDoesNotMergeTokensSeparatedByLiteralText()
+org.opentest4j.AssertionFailedError: expected: <3> but was: <2>
+    at org.apache.commons.lang3.time.DurationFormatUtilsAgentTest.testLexxDoesNotMergeTokensSeparatedByLiteralText(DurationFormatUtilsAgentTest.java:339)
+
+Tests run: 3, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 3, failed: 3, left out beforehand: 37
+FAILURES!!!

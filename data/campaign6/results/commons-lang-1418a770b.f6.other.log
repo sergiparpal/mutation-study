@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptDefaultsToTrue()
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+    at org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest.testAcceptDefaultsToTrue(RecursiveToStringStyleAgentTest.java:143)
+
+Tests run: 13, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 13, failed: 1
+FAILURES!!!

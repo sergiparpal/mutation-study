@@ -1,0 +1,20 @@
+---- org.apache.commons.lang3.RandomStringUtilsAgentTest ----
+1) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomGraphStaticCanProduceTilde()
+org.opentest4j.AssertionFailedError: randomGraph() never produced '~' (126), the upper bound of the documented [:graph:] range ==> expected: <true> but was: <false>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomGraphStaticCanProduceTilde(RandomStringUtilsAgentTest.java:494)
+
+2) org.apache.commons.lang3.RandomStringUtilsAgentTest#testNextGraphInstanceCanProduceTilde()
+org.opentest4j.AssertionFailedError: nextGraph() never produced '~' (126), the upper bound of the documented [:graph:] range ==> expected: <true> but was: <false>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testNextGraphInstanceCanProduceTilde(RandomStringUtilsAgentTest.java:470)
+
+3) org.apache.commons.lang3.RandomStringUtilsAgentTest#testNextPrintInstanceCanProduceTilde()
+org.opentest4j.AssertionFailedError: nextPrint() never produced '~' (126), the upper bound of the documented [:print:] range ==> expected: <true> but was: <false>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testNextPrintInstanceCanProduceTilde(RandomStringUtilsAgentTest.java:488)
+
+4) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomPrintStaticCanProduceTilde()
+org.opentest4j.AssertionFailedError: randomPrint() never produced '~' (126), the upper bound of the documented [:print:] range ==> expected: <true> but was: <false>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomPrintStaticCanProduceTilde(RandomStringUtilsAgentTest.java:500)
+
+Tests run: 4, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 4, failed: 4, left out beforehand: 51
+FAILURES!!!

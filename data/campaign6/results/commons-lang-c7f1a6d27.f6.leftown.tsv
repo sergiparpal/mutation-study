@@ -1,0 +1,2 @@
+FAILED	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorNullLocaleThrowsNullPointerException()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+FAILED	method	org.apache.commons.lang3.time.FastDatePrinterAgentTest#testFormatCalendarConvertsToPrinterTimeZoneWithoutPriorMillisAccess()	1	1	org.opentest4j.AssertionFailedError: expected: <2020-12-31 20:30:00> but was: <2021-01-01 05:30:00>

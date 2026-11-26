@@ -1,0 +1,15 @@
+---- org.apache.commons.lang3.StringEscapeUtilsAgentTest ----
+1) org.apache.commons.lang3.StringEscapeUtilsAgentTest#testUnescapeCsvSingleQuoteCharacterDoesNotThrow()
+java.lang.StringIndexOutOfBoundsException: begin 1, end 0, length 1
+    at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3319)
+    at java.base/java.lang.String.substring(String.java:1874)
+    at java.base/java.lang.String.subSequence(String.java:1913)
+    at org.apache.commons.lang3.StringEscapeUtils$CsvUnescaper.translate(StringEscapeUtils.java:89)
+    at org.apache.commons.lang3.text.translate.CharSequenceTranslator.translate(CharSequenceTranslator.java:112)
+    at org.apache.commons.lang3.text.translate.CharSequenceTranslator.translate(CharSequenceTranslator.java:73)
+    at org.apache.commons.lang3.StringEscapeUtils.unescapeCsv(StringEscapeUtils.java:682)
+    at org.apache.commons.lang3.StringEscapeUtilsAgentTest.testUnescapeCsvSingleQuoteCharacterDoesNotThrow(StringEscapeUtilsAgentTest.java:340)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 45
+FAILURES!!!

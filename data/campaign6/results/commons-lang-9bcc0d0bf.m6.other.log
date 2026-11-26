@@ -1,0 +1,13 @@
+1) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomStartGreaterOrEqualCharsLengthThrows()
+java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:418)
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomStartGreaterOrEqualCharsLengthThrows(RandomStringUtilsAgentTest.java:242)
+
+2) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomEndGreaterThanCharsLengthThrows()
+java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+    at org.apache.commons.lang3.RandomStringUtils.random(RandomStringUtils.java:418)
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomEndGreaterThanCharsLengthThrows(RandomStringUtilsAgentTest.java:253)
+
+Tests run: 45, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 45, failed: 2
+FAILURES!!!

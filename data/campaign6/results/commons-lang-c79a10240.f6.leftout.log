@@ -1,0 +1,9 @@
+---- org.apache.commons.lang3.ClassUtilsAgentTest ----
+1) org.apache.commons.lang3.ClassUtilsAgentTest#testGetClassTooManyArrayDimensionsPrimitiveDescriptorThrowsIllegalArgument()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.IllegalArgumentException> but was: <java.lang.ClassNotFoundException>
+    at org.apache.commons.lang3.ClassUtilsAgentTest.testGetClassTooManyArrayDimensionsPrimitiveDescriptorThrowsIllegalArgument(ClassUtilsAgentTest.java:250)
+Caused by: java.lang.ClassNotFoundException: [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[I
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 56
+FAILURES!!!

@@ -1,0 +1,8 @@
+---- org.apache.commons.csv.CSVFormatAgentTest ----
+1) org.apache.commons.csv.CSVFormatAgentTest#testNullStringQuotedRegardlessOfSetterOrder()
+org.opentest4j.AssertionFailedError: expected: <"NULL"> but was: <nullNULLnull>
+    at org.apache.commons.csv.CSVFormatAgentTest.testNullStringQuotedRegardlessOfSetterOrder(CSVFormatAgentTest.java:763)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 75
+FAILURES!!!

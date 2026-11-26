@@ -1,0 +1,21 @@
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterDecimalReturnsDouble()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testObjectConverterNoPublicNoArgConstructorThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testConverterIsFunctionalInterface()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testFileConverterHappyPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterIntegerLikeReturnsLong()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testClassConverterHappyPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testUrlConverterHappyPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterDotOnlyThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testClassConverterUnknownClassThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testFileConverterNullThrowsNullPointerException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDefaultConverterIsIdentity()	1	0	
+FAILED	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterOutOfRangeFieldThrows()	1	1	org.opentest4j.AssertionFailedError: Expected java.text.ParseException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterInvalidStringThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testObjectConverterHappyPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testPathConverterHappyPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testUrlConverterInvalidUrlThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testCustomConverterImplementationPropagatesDeclaredException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testPathConverterInvalidPathThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testObjectConverterUnknownClassThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterGarbageStringThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterHappyPath()	1	0	

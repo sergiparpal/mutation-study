@@ -1,0 +1,4 @@
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testSubstringFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <cba> but was: <ba>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testJoinFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <a:null:c> but was: <a::c>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <1> but was: <6>
+FAILED	method	org.apache.commons.lang3.StringUtilsAgentTest#testReplaceAndRemoveFamily()	1	1	org.opentest4j.AssertionFailedError: expected: <zbz> but was: <zBz>

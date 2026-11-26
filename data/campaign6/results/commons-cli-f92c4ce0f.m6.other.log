@@ -1,0 +1,7 @@
+1) org.apache.commons.cli.TypeHandlerAgentTest#testCreateValueWithCharacterUnicodeEscapeOutsideBmpThrowsParseException()
+org.opentest4j.AssertionFailedError: Expected org.apache.commons.cli.ParseException to be thrown, but nothing was thrown.
+    at org.apache.commons.cli.TypeHandlerAgentTest.testCreateValueWithCharacterUnicodeEscapeOutsideBmpThrowsParseException(TypeHandlerAgentTest.java:235)
+
+Tests run: 30, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 30, failed: 1
+FAILURES!!!

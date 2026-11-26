@@ -1,0 +1,16 @@
+---- org.apache.commons.csv.CSVPrinterAgentTest ----
+1) org.apache.commons.csv.CSVPrinterAgentTest#testRecordCountExcludesHeaderRecord()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+    at org.apache.commons.csv.CSVPrinterAgentTest.testRecordCountExcludesHeaderRecord(CSVPrinterAgentTest.java:286)
+
+2) org.apache.commons.csv.CSVPrinterAgentTest#testPrintRecordsFlatIterablePrintsSingleRecord()
+org.opentest4j.AssertionFailedError: expected: <a,b,c
+> but was: <a
+b
+c
+>
+    at org.apache.commons.csv.CSVPrinterAgentTest.testPrintRecordsFlatIterablePrintsSingleRecord(CSVPrinterAgentTest.java:197)
+
+Tests run: 2, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 2, failed: 2, left out beforehand: 28
+FAILURES!!!

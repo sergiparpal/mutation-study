@@ -1,0 +1,8 @@
+---- org.apache.commons.lang3.ArrayUtilsAgentTest ----
+1) org.apache.commons.lang3.ArrayUtilsAgentTest#testHashCodeNull()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <629>
+    at org.apache.commons.lang3.ArrayUtilsAgentTest.testHashCodeNull(ArrayUtilsAgentTest.java:248)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 98
+FAILURES!!!

@@ -1,0 +1,12 @@
+---- org.apache.commons.lang3.math.NumberUtilsAgentTest ----
+1) org.apache.commons.lang3.math.NumberUtilsAgentTest#testIsCreatableInvalidNumbers()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.math.NumberUtilsAgentTest.testIsCreatableInvalidNumbers(NumberUtilsAgentTest.java:446)
+
+2) org.apache.commons.lang3.math.NumberUtilsAgentTest#testCreateNumberDoubleSignThrows()
+org.opentest4j.AssertionFailedError: Expected java.lang.NumberFormatException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.math.NumberUtilsAgentTest.testCreateNumberDoubleSignThrows(NumberUtilsAgentTest.java:454)
+
+Tests run: 2, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 2, failed: 2, left out beforehand: 67
+FAILURES!!!

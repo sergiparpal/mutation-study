@@ -1,0 +1,13 @@
+1) org.apache.commons.lang3.LocaleUtilsAgentTest#testToLocaleStringJapanSpecialCase()
+java.lang.IllegalArgumentException: Invalid locale format: ja_JP_JP_#u-ca-japanese
+    at org.apache.commons.lang3.LocaleUtils.toLocale(LocaleUtils.java:409)
+    at org.apache.commons.lang3.LocaleUtilsAgentTest.testToLocaleStringJapanSpecialCase(LocaleUtilsAgentTest.java:354)
+
+2) org.apache.commons.lang3.LocaleUtilsAgentTest#testToLocaleStringThailandSpecialCase()
+java.lang.IllegalArgumentException: Invalid locale format: th_TH_TH_#u-nu-thai
+    at org.apache.commons.lang3.LocaleUtils.toLocale(LocaleUtils.java:409)
+    at org.apache.commons.lang3.LocaleUtilsAgentTest.testToLocaleStringThailandSpecialCase(LocaleUtilsAgentTest.java:349)
+
+Tests run: 49, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 49, failed: 2
+FAILURES!!!

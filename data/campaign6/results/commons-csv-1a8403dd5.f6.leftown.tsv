@@ -1,0 +1,1 @@
+FAILED	method	org.apache.commons.csv.CSVFormatAgentTest#testWithRecordSeparatorRejectsInvalidString()	1	1	org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.

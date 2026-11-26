@@ -1,0 +1,25 @@
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testParseRoundTripsSimpleArguments()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testEqualsReturnsFalseForNonExtendedMessageFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testEqualsReturnsFalseForDifferentPattern()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testUnmatchedBracesWithoutRegistryThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testQuotedLiteralTextIsNotParsedAsFormatElement()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testEqualsAndHashCodeForEquivalentInstances()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testSetFormatByArgumentIndexThrowsUnsupportedOperationException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testLocaleConstructorUsesProvidedLocale()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testSimplePatternWithoutRegistry()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testSetFormatsThrowsUnsupportedOperationException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testEqualsReflexive()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testCustomFormatRegistryAppliedAndToPatternPreservesCustomDescription()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testUnterminatedFormatElementThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testMixedCustomAndStandardFormatElements()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testNullPatternThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testInvalidArgumentIndexThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testChoiceFormatPatternPreservedInToPattern()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testEqualsReturnsFalseForNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testSetFormatsByArgumentIndexThrowsUnsupportedOperationException()	1	0	
+FAILED	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testUnmatchedQuoteTreatedAsClosedAtEndOfPattern()	1	1	java.lang.IllegalArgumentException: Unterminated quoted string at position 4
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testUnknownFormatNameFallsBackToStandardFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testWhitespaceAroundArgumentIndexIsIgnored()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testEmptyPatternProducesEmptyOutput()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testSetFormatThrowsUnsupportedOperationException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testNullRegistryStillAllowsStandardFormats()	1	0	

@@ -1,0 +1,1 @@
+commons-lang-3f0c0fd5c,f6,faulty,Pass,,37,3,0,,3,2,0,1,Fail,,3,2,1,0,org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationDoesNotMergeFieldsSeparatedByLiteralText();org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxDoesNotMergeTokensSeparatedByLiteralText()

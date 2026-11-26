@@ -1,0 +1,1 @@
+FAILED	method	org.apache.commons.lang3.time.FastDateParserAgentTest#testTwoLetterZPatternAcceptsRfc822FormatLikeSimpleDateFormat()	1	1	java.text.ParseException: Unparseable date: '2020-01-01T10:00:00-0800', parse position = java.text.ParsePosition[index=19,errorIndex=19]
