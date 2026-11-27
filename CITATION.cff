@@ -31,9 +31,12 @@ abstract: >-
   over suites. A fifth campaign showed the agent the faulty revision of the
   same 115 faults. Its suites lock the fault in on 7 of them (6%), against 26
   (23%) detected by the arm that reads the repair (p = 0.00016), at pooled
-  mutation scores of 42% and 41%. The repository holds the generation and
-  measurement scripts, the protocols and full records of the second to fifth
-  campaigns,
+  mutation scores of 42% and 41%. A sixth showed it the same faulty revisions
+  and asked it to look for faults. Its suites detect the fault on 7 of 113
+  subjects (6%), against 27 (24%) for the arm that reads the repair
+  (p = 0.00004), while scoring higher on mutation, 46% against 41% pooled.
+  The repository holds the generation and measurement scripts, the protocols
+  and full records of the second to sixth campaigns,
   the per-suite measurements, an EvoSuite baseline, a hand classification of
   the 40 faults, a probe of what the model recalls about each fault with no
   code in context, two post-cutoff replication corpora and the pool of

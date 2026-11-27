@@ -1,0 +1,20 @@
+---- org.apache.commons.csv.ExtendedBufferedReaderAgentTest ----
+1) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadAtEofOfEmptyInput()
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testReadAtEofOfEmptyInput(ExtendedBufferedReaderAgentTest.java:99)
+
+2) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testPositionDoesNotGrowOnRepeatedEofReads()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <3>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testPositionDoesNotGrowOnRepeatedEofReads(ExtendedBufferedReaderAgentTest.java:129)
+
+3) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadPositionNeverDecreasesAtEof()
+org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testBulkReadPositionNeverDecreasesAtEof(ExtendedBufferedReaderAgentTest.java:146)
+
+4) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testByteTrackingDoesNotCountEofSentinel()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <4>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testByteTrackingDoesNotCountEofSentinel(ExtendedBufferedReaderAgentTest.java:159)
+
+Tests run: 4, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 4, failed: 4, left out beforehand: 19
+FAILURES!!!

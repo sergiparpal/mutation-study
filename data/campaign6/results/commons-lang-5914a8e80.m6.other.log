@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest#testShutdownWakesBlockedAcquireWithException()
+org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+    at org.apache.commons.lang3.concurrent.TimedSemaphoreAgentTest.testShutdownWakesBlockedAcquireWithException(TimedSemaphoreAgentTest.java:358)
+
+Tests run: 25, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 25, failed: 1
+FAILURES!!!

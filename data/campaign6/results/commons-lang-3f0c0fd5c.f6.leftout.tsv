@@ -1,0 +1,3 @@
+FAILED	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatPeriodMonthsAreCalculatedFirstPerJavadocExample()	1	1	org.opentest4j.AssertionFailedError: expected: <1M 23D> but was: <1M 26D>
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testFormatDurationDoesNotMergeFieldsSeparatedByLiteralText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.time.DurationFormatUtilsAgentTest#testLexxDoesNotMergeTokensSeparatedByLiteralText()	1	0	

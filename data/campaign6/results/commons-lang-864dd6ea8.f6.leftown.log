@@ -1,0 +1,8 @@
+---- org.apache.commons.lang3.ValidateAgentTest ----
+1) org.apache.commons.lang3.ValidateAgentTest#testNoNullElementsIterable_withNullElementThrowsIAE_withIndex()
+org.opentest4j.AssertionFailedError: expected: <The validated collection contains null element at index: 1> but was: <The validated collection contains null element at index: 0>
+    at org.apache.commons.lang3.ValidateAgentTest.testNoNullElementsIterable_withNullElementThrowsIAE_withIndex(ValidateAgentTest.java:356)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 81
+FAILURES!!!

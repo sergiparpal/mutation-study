@@ -1,0 +1,2 @@
+trigger name	src/test/java/org/apache/commons/lang3/builder/EqualsBuilderTest.java:384	void testBigDecimal() {
+trigger name	src/test/java/org/apache/commons/lang3/builder/EqualsBuilderTest.java:403	void testBigInteger() {

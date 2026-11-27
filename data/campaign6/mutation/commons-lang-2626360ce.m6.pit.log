@@ -1,0 +1,75 @@
+12:30:26 AM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+12:30:26 AM PIT >> INFO : Created 3 mutation test units in pre scan
+12:30:26 AM PIT >> INFO : Sending 13 test classes to minion
+12:30:26 AM PIT >> INFO : Sent tests to minion
+12:30:27 AM PIT >> INFO : Calculated coverage in 0 seconds.
+12:30:27 AM PIT >> INFO : 0 tests took longer than 2000 ms
+12:30:27 AM PIT >> INFO : Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest]/[method:testBuilderWithExternalExecutor()]) took 18 ms
+12:30:27 AM PIT >> INFO : Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest]/[method:testBuilderCloserIsInvokedOnClose()]) covered 49 blocks
+12:30:27 AM PIT >> INFO : Created 3 mutation test units
+12:30:32 AM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+12:30:32 AM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+12:30:36 AM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+12:30:36 AM PIT >> INFO : Completed in 10 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 6 Killed 4 (67%)
+> KILLED 3 SURVIVED 0 TIMED_OUT 1 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 2 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 5 Killed 4 (80%)
+> KILLED 4 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 11 Killed 9 (82%)
+> KILLED 9 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 8 Killed 8 (100%)
+> KILLED 6 SURVIVED 0 TIMED_OUT 2 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 2 Killed 2 (100%)
+> KILLED 2 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : 9 seconds
+--------------------------------------------------------------------------------
+> Total  : 10 seconds
+--------------------------------------------------------------------------------
+> 0 tests took longer than 2000 ms
+> Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest]/[method:testBuilderWithExternalExecutor()]) took 18 ms
+> Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.concurrent.BackgroundInitializerAgentTest]/[method:testBuilderCloserIsInvokedOnClose()]) covered 49 blocks
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 51/59 (86%)
+>> 13 tests examined
+>> Generated 33 mutations Killed 28 (85%)
+>> Mutations with no coverage 4. Test strength 97%
+>> Ran 66 tests (2 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/

@@ -1,0 +1,1 @@
+FAILED	method	org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testTrailingWhitespaceAfterFormatNameIsTrimmed()	1	1	java.lang.IllegalArgumentException: unknown format type: upper 

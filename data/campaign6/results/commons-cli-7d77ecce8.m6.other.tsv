@@ -1,0 +1,21 @@
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterThrowsOnInvalidDayOfMonth()	1	0	
+FAILED	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterThrowsOnTrailingGarbage()	1	1	org.opentest4j.AssertionFailedError: Expected java.text.ParseException to be thrown, but nothing was thrown.
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterParsesLongWithoutDecimalPoint()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testUrlConverterThrowsOnMalformedUrl()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterThrowsOnGarbage()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testObjectConverterCreatesInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterParsesValidDate()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testUrlConverterCreatesUrl()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDefaultConverterReturnsInputUnchanged()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testPathConverterThrowsOnInvalidPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testCustomConverterImplementation()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testFileConverterThrowsOnNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testNumberConverterParsesDoubleWithDecimalPoint()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testPathConverterCreatesPath()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testObjectConverterThrowsForUnknownClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testFileConverterCreatesFile()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testClassConverterThrowsForUnknownClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testClassConverterFindsClass()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDateConverterThrowsOnEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testCustomConverterPropagatesCheckedException()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ConverterAgentTest#testDefaultConverterWithEmptyString()	1	0	

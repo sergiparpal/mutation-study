@@ -1,0 +1,4 @@
+org.apache.commons.lang3.ArrayUtilsAgentTest#testRemoveElementsVarargs()
+org.apache.commons.lang3.ArrayUtilsAgentTest#testHashCodeNullIsZero()
+org.apache.commons.lang3.ArrayUtilsAgentTest#testRemoveElementInt()
+org.apache.commons.lang3.ArrayUtilsAgentTest#testToStringObject()

@@ -1,0 +1,7 @@
+1) org.apache.commons.lang3.reflect.TypeUtilsAgentTest#testWildcardTypeBuilderNoBounds()
+org.opentest4j.AssertionFailedError: array lengths differ, expected: <0> but was: <1>
+    at org.apache.commons.lang3.reflect.TypeUtilsAgentTest.testWildcardTypeBuilderNoBounds(TypeUtilsAgentTest.java:501)
+
+Tests run: 64, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 64, failed: 1
+FAILURES!!!

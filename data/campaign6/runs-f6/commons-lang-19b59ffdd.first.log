@@ -1,0 +1,19 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testSubstringFamily()
+org.opentest4j.AssertionFailedError: expected: <cba> but was: <ba>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testSubstringFamily(StringUtilsAgentTest.java:290)
+
+2) org.apache.commons.lang3.StringUtilsAgentTest#testJoinFamily()
+org.opentest4j.AssertionFailedError: expected: <a:null:c> but was: <a::c>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testJoinFamily(StringUtilsAgentTest.java:338)
+
+3) org.apache.commons.lang3.StringUtilsAgentTest#testIndexOfFamily()
+org.opentest4j.AssertionFailedError: expected: <1> but was: <6>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testIndexOfFamily(StringUtilsAgentTest.java:268)
+
+4) org.apache.commons.lang3.StringUtilsAgentTest#testReplaceAndRemoveFamily()
+org.opentest4j.AssertionFailedError: expected: <zbz> but was: <zBz>
+    at org.apache.commons.lang3.StringUtilsAgentTest.testReplaceAndRemoveFamily(StringUtilsAgentTest.java:370)
+
+Tests run: 32, Failures: 4, Aborted: 0, Skipped: 0
+Test methods: 32, failed: 4
+FAILURES!!!

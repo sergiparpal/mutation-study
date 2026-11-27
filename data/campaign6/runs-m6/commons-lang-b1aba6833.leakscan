@@ -1,0 +1,1 @@
+trigger name	src/test/java/org/apache/commons/lang3/StringUtilsEqualsIndexOfTest.java:667	void testLastIndexOf_String() {

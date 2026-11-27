@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorNullLocaleThrowsNullPointerExceptionPerJavadoc()
+org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testConstructorNullLocaleThrowsNullPointerExceptionPerJavadoc(FastDatePrinterAgentTest.java:444)
+
+2) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorNullTimeZoneThrowsNullPointerExceptionPerJavadoc()
+org.opentest4j.AssertionFailedError: Expected java.lang.NullPointerException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testConstructorNullTimeZoneThrowsNullPointerExceptionPerJavadoc(FastDatePrinterAgentTest.java:438)
+
+Tests run: 50, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 50, failed: 2
+FAILURES!!!

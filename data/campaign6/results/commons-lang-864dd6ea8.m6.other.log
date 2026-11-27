@@ -1,0 +1,11 @@
+1) org.apache.commons.lang3.ValidateAgentTest#testExclusiveBetweenDoubleNaNFails()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.ValidateAgentTest.testExclusiveBetweenDoubleNaNFails(ValidateAgentTest.java:48)
+
+2) org.apache.commons.lang3.ValidateAgentTest#testInclusiveBetweenDoubleNaNFails()
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+    at org.apache.commons.lang3.ValidateAgentTest.testInclusiveBetweenDoubleNaNFails(ValidateAgentTest.java:129)
+
+Tests run: 97, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 97, failed: 2
+FAILURES!!!

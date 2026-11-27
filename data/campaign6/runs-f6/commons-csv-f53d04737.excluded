@@ -1,0 +1,3 @@
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testReadAtEofDoesNotAdvancePosition()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBulkReadLineCountingMatchesSingleCharReadAcrossSmallBuffers()
+org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testEmptyStreamSingleReadLineNumberStaysZero()

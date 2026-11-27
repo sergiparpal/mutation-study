@@ -1,0 +1,125 @@
+Sixth campaign: 115 subjects, arms f6, m6; seed 20261125, 10000 resamples
+
+Runs
+  f6: 115 runs of 115, 113 with an accepted suite; $90.27 at list prices, 25.1 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['7f5a2cd']
+      tests left out at acceptance: 74 of 6020 (1.2%)
+      runs that reached the limit of turns or budget: 8 — commons-lang-7c7bc19f2, commons-lang-52c06bea2, commons-lang-ae85262f0, commons-lang-fbae26f08, commons-lang-19b59ffdd, commons-lang-05fffe85e, commons-lang-2240c1f93, commons-lang-4c3f1dd00
+      suites with a class left out because it did not finish: 0
+      no suite: commons-lang-ae85262f0: agent tests do not compile in the project
+      no suite: commons-lang-fbae26f08: agent produced no test file
+  m6: 115 runs of 115, 115 with an accepted suite; $56.55 at list prices, 19.8 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['7f5a2cd']
+      tests left out at acceptance: 0 of 5494 (0.0%)
+      runs that reached the limit of turns or budget: 0
+
+Subjects outside the paired set
+  commons-lang-ae85262f0: f6: agent tests do not compile in the project
+  commons-lang-fbae26f08: f6: agent produced no test file
+
+Runs with a violation: none
+
+The detection rate when asked to look for faults (f6)
+  7 of 113 suites detect the fault (6.2%); 95% bootstrap interval [2.7%, 10.6%]
+
+H1: detection in f6 and detection in m6 differ
+  paired set: 113 subjects
+      f6 detects 7/113 (6.2%)   m6 detects 27/113 (23.9%)
+      both 5, f6 only 2, m6 only 22, neither 84
+      exact McNemar, two-sided: p = 3.59e-05
+      difference f6 - m6 -17.7 points, 95% bootstrap interval [-25.7, -10.6]
+  Outcome: H1 rejected, f6 below m6. Even asked to look for faults, the agent
+  shown the faulty code detects the fault less often than the regression setting
+  credits; the difference and its interval measure by how much
+
+Certification under the request (secondary)
+  f6: 5 of 113 suites certify the fault (4.4%); 95% bootstrap interval [0.9%, 8.8%]
+  f6 suites whose every test was left out, so with no certification verdict: 0
+  beside b5, the fifth campaign's, on the 113 subjects with a verdict in both:
+      f6 certifies 5, b5 7; both 3, f6 only 2, b5 only 4, neither 104
+      exact McNemar p = 0.688, a description: b5 ran in another campaign
+
+The tests f6 left out at acceptance: its findings (secondary)
+  44 f6 suites had tests left out and run on both revisions
+  failing again on the faulty revision: 74; of them, detecting 9 and false alarms 65; share detecting 12.2%
+  left out but passing on the faulty revision when run again (unstable): 0
+  suites with at least one false alarm: 39
+  false alarms in the 7 suites that detect: 4 in all, median 0
+
+Closing messages of f6, read at the audit (secondary)
+  runs whose message names a test as showing a bug: 39; of them, naming the fault: 7
+      names the fault      7 runs; detection Fail in 7 of the 7 with a verdict
+      names another bug   32 runs; detection Fail in 0 of the 32 with a verdict
+      names no bug        76 runs; detection Fail in 0 of the 74 with a verdict
+
+Tests m6 left out at acceptance, run on the faulty revision (secondary)
+  m6: 0 suites had tests left out and run on the faulty revision; 0 of 0 such methods pass there (expected the faulty behaviour), in 0 suites
+
+Mutation score and line coverage, each arm on its own revision (secondary)
+  f6's tests that fail on the faulty revision, its findings, are not in its score
+  complete set: 110 of the 113 paired subjects
+  pooled mutation score: f6 45.7%   m6 41.2%   difference +4.5 points, 95% bootstrap interval [+0.8, +8.4]
+  pooled line coverage: f6 63.5%   m6 59.5%   difference +4.0 points, 95% bootstrap interval [-0.3, +8.6]
+  f6 suites that detect: 7; pooled mutation score 53.1%, line coverage 71.8%
+  m6 suites that detect: 25; pooled mutation score 63.4%, line coverage 84.4%
+
+The tests PIT ran against the tests the measurement ran
+  228 of 228 suites with a mutation figure agree
+
+Sensitivity analyses (none is confirmatory)
+  1. runs with a violation included: 113 subjects
+      f6 detects 7/113 (6.2%)   m6 detects 27/113 (23.9%)
+      both 5, f6 only 2, m6 only 22, neither 84
+      exact McNemar, two-sided: p = 3.59e-05
+      difference f6 - m6 -17.7 points, 95% bootstrap interval [-25.7, -10.6]
+  2. intention to treat: 115 subjects
+      f6 detects 7/115 (6.1%)   m6 detects 27/115 (23.5%)
+      both 5, f6 only 2, m6 only 22, neither 86
+      exact McNemar, two-sided: p = 3.59e-05
+      difference f6 - m6 -17.4 points, 95% bootstrap interval [-25.2, -9.6]
+  runs that name the fix: 8 — f6 commons-lang-127050d2b, f6 commons-lang-4bfbfeabe, f6 commons-lang-7c91ce989, m6 commons-lang-060ab31e5, m6 commons-lang-127050d2b, m6 commons-lang-46d9a80e5, m6 commons-lang-4bfbfeabe, m6 commons-lang-54ee8ec1c
+  3. runs that name the fix left out: 107 subjects
+      f6 detects 6/107 (5.6%)   m6 detects 26/107 (24.3%)
+      both 4, f6 only 2, m6 only 22, neither 79
+      exact McNemar, two-sided: p = 3.59e-05
+      difference f6 - m6 -18.7 points, 95% bootstrap interval [-27.1, -10.3]
+  4. detection by timeout read as none: 113 subjects
+      f6 detects 7/113 (6.2%)   m6 detects 26/113 (23.0%)
+      both 5, f6 only 2, m6 only 21, neither 85
+      exact McNemar, two-sided: p = 6.6e-05
+      difference f6 - m6 -16.8 points, 95% bootstrap interval [-24.8, -9.7]
+  5. the strict screen's subjects only (108): 106 subjects
+      f6 detects 7/106 (6.6%)   m6 detects 27/106 (25.5%)
+      both 5, f6 only 2, m6 only 22, neither 77
+      exact McNemar, two-sided: p = 3.59e-05
+      difference f6 - m6 -18.9 points, 95% bootstrap interval [-27.4, -11.3]
+  6. f6 detection only where the closing message names a test that detects: 113 subjects
+      f6 detects 7/113 (6.2%)   m6 detects 27/113 (23.9%)
+      both 5, f6 only 2, m6 only 22, neither 84
+      exact McNemar, two-sided: p = 3.59e-05
+      difference f6 - m6 -17.7 points, 95% bootstrap interval [-25.7, -10.6]
+
+Descriptive comparisons (none is a test of the protocol)
+  by project
+      commons-cli              6 subjects   f6 detects   0   m6 detects   4
+      commons-csv             16 subjects   f6 detects   1   m6 detects   3
+      commons-lang            91 subjects   f6 detects   6   m6 detects  20
+  by fault type
+      ALGORITHM               17 subjects   f6 detects   0   m6 detects   3
+      API                      9 subjects   f6 detects   0   m6 detects   5
+      MISSING_CLAUSE          18 subjects   f6 detects   2   m6 detects   8
+      OMISSION                34 subjects   f6 detects   3   m6 detects   9
+      STATE                   12 subjects   f6 detects   0   m6 detects   2
+      SUBSTITUTION            23 subjects   f6 detects   2   m6 detects   0
+  by date of the fix (up to 2026-09-22 or after)
+      after                   29 subjects   f6 detects   0   m6 detects   5
+      up to 2026-09-22        84 subjects   f6 detects   7   m6 detects  22
+  m4 (first) beside m6 (second), the same condition: 115 subjects; Fail in both 16, only the first 5, only the second 11; agreement 86.1%, Cohen's kappa 0.58
+  m5 (first) beside m6 (second), the same condition: 115 subjects; Fail in both 19, only the first 7, only the second 8; agreement 87.0%, Cohen's kappa 0.63
+  m4, m5 and m6, the same condition run three times: 115 subjects; detected in none 79, in one 11, in two 12, in all three 13; Fleiss' kappa 0.60
+  s4 (first) beside f6's detection (second), neither shown the repair: 110 subjects; Fail in both 0, only the first 3, only the second 7; agreement 90.9%, Cohen's kappa -0.04
+  f6 beside b5, the same revision under another request: f6 detects 7; b5's left-out tests detect in 0
+      f6: tests left out at acceptance 74 of 6020 (1.2%)
+      b5: tests left out at acceptance 25 of 5192 (0.5%)
+  §6's table gains the row 'faulty implementation, asked to look for faults': 6.2%
+

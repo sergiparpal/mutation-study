@@ -1,0 +1,7 @@
+1) org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadSingleCharReadsMultiByteChars()
+org.opentest4j.AssertionFailedError: expected: <6> but was: <9>
+    at org.apache.commons.csv.ExtendedBufferedReaderAgentTest.testBytesReadSingleCharReadsMultiByteChars(ExtendedBufferedReaderAgentTest.java:83)
+
+Tests run: 20, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 20, failed: 1
+FAILURES!!!

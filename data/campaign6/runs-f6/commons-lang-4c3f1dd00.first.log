@@ -1,0 +1,10 @@
+1) org.apache.commons.lang3.StringUtilsAgentTest#testJoinObjectArrayStringDelimiterRange()
+java.lang.NullPointerException: The delimiter must not be null
+    at java.base/java.util.Objects.requireNonNull(Objects.java:248)
+    at org.apache.commons.lang3.stream.LangCollectors.lambda$joining$0(LangCollectors.java:210)
+    at org.apache.commons.lang3.StringUtils.join(StringUtils.java:4639)
+    at org.apache.commons.lang3.StringUtilsAgentTest.testJoinObjectArrayStringDelimiterRange(StringUtilsAgentTest.java:434)
+
+Tests run: 86, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 86, failed: 1
+FAILURES!!!

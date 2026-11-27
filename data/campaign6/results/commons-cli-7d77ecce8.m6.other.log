@@ -1,0 +1,7 @@
+1) org.apache.commons.cli.ConverterAgentTest#testDateConverterThrowsOnTrailingGarbage()
+org.opentest4j.AssertionFailedError: Expected java.text.ParseException to be thrown, but nothing was thrown.
+    at org.apache.commons.cli.ConverterAgentTest.testDateConverterThrowsOnTrailingGarbage(ConverterAgentTest.java:175)
+
+Tests run: 21, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 21, failed: 1
+FAILURES!!!

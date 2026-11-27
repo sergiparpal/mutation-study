@@ -1,0 +1,8 @@
+1) org.apache.commons.lang3.RandomStringUtilsAgentTest#testRandomFullOverloadArrayIndexOutOfBoundsWhenRangeExceedsCharsLength()
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.ArrayIndexOutOfBoundsException> but was: <java.lang.IllegalArgumentException>
+    at org.apache.commons.lang3.RandomStringUtilsAgentTest.testRandomFullOverloadArrayIndexOutOfBoundsWhenRangeExceedsCharsLength(RandomStringUtilsAgentTest.java:204)
+Caused by: java.lang.IllegalArgumentException: end > chars.length
+
+Tests run: 51, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 51, failed: 1, left out beforehand: 4
+FAILURES!!!

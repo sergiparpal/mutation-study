@@ -1,0 +1,17 @@
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptRejectsAtomicBoolean()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptRejectsString()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectNestedCustomType()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectCustomTypeIsRecursed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectNumberIsNotRecursed()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectNull()	1	1	java.lang.NullPointerException
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testToStringEndToEnd()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectAtomicBooleanIsNotRecursed()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <java.util.concurrent.atomic.AtomicBoolean@28eaa59a[value=1]>
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptRejectsNumberSubclasses()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptRejectsMutableBoolean()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptRejectsPrimitiveWrappers()	1	1	org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionOfCustomObjectsIsRecursed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailObjectStringIsNotRecursed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionNullThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptAllowsOtherClasses()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionOfPlainValues()	1	0	

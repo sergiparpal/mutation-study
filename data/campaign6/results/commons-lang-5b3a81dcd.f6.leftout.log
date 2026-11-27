@@ -1,0 +1,13 @@
+---- org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest ----
+1) org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testTrailingWhitespaceAfterFormatNameIsTrimmed()
+java.lang.IllegalArgumentException: unknown format type: upper 
+    at java.base/java.text.MessageFormat.makeFormat(MessageFormat.java:1559)
+    at java.base/java.text.MessageFormat.applyPattern(MessageFormat.java:492)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.applyPattern(ExtendedMessageFormat.java:242)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:136)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:147)
+    at org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest.testTrailingWhitespaceAfterFormatNameIsTrimmed(ExtendedMessageFormatAgentTest.java:146)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 22
+FAILURES!!!

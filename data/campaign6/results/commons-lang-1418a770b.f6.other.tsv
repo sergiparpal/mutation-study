@@ -1,0 +1,13 @@
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailCollectionOverload()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptFalseFallsBackToPlainToString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailDirectlyWithObject()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailDirectlyWithString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testNullStringField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testEmptyCollectionField()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testPrimitivesAndWrapperAreNotRecursed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testStringFieldIsNotQuotedOrRecursed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testNestedObjectIsRecursed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testCollectionFieldAppendsClassNameAndIdentityHashCodeOfCollection()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAppendDetailDirectlyWithPrimitiveWrapper()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testSimpleObjectNoFields()	1	0	
+FAILED	method	org.apache.commons.lang3.builder.RecursiveToStringStyleAgentTest#testAcceptDefaultsToTrue()	1	1	org.opentest4j.AssertionFailedError: expected: <true> but was: <false>

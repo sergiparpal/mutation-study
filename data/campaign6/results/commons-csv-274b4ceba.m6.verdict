@@ -1,0 +1,1 @@
+commons-csv-274b4ceba,m6,fixed,Fail,,20,0,1,org.apache.commons.csv.ExtendedBufferedReaderAgentTest#testBytesReadSingleCharReadsMultiByteChars(),,,1,1,Fail,,,,,,

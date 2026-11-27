@@ -1,0 +1,8 @@
+1) org.apache.commons.lang3.text.StrBuilderAgentTest#testEqualsIgnoreCaseNullIsDocumentedAsFalse()
+java.lang.NullPointerException
+    at org.apache.commons.lang3.text.StrBuilder.equalsIgnoreCase(StrBuilder.java:1907)
+    at org.apache.commons.lang3.text.StrBuilderAgentTest.testEqualsIgnoreCaseNullIsDocumentedAsFalse(StrBuilderAgentTest.java:585)
+
+Tests run: 148, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 148, failed: 1
+FAILURES!!!
