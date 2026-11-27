@@ -2380,6 +2380,188 @@ detection in `m6` differ.
   November 2026 on the third campaign's two pilot subjects, in both arms. It
   holds their audit, their closing messages, and their measurement and
   mutation measurement. It is not part of any result.
+- `campaign6/probe-before-runs.txt`, `campaign6/saved-copies-before-runs.txt`:
+  the same two checks, made again before the runs, as the protocol's step 0
+  requires, and committed before the first run (`7f5a2cd`). Every check
+  passed. The first differs from `probe.txt` only in the random names of the
+  temporary directories, and the second is `saved-copies.txt` byte for byte.
+
+### The runs
+
+`./bin/run-campaign6.sh` started on 26 November 2026 at 07:15:48 UTC, from
+`7f5a2cd`, the commit of step 0, whose scripts are those of the protocol's
+merge commit `b97d406`. It ran detached, under a launcher that would have run
+it again after a stop at the usage limit; no such stop happened. The first run
+started at 07:16:00 UTC and the last ended at 20:23:23 UTC. The generation's
+log is `campaign6/generation.log`, and the runner's is `campaign6/launch.out`.
+
+- 228 of the 230 runs ended with an accepted suite: all 115 in `m6` and 113
+  in `f6`. Eight `f6` runs reached the limit of 50 turns, and no `m6` run did.
+  Two of the eight left no suite: in `commons-lang-ae85262f0` the agent's
+  tests do not compile in the project, and in `commons-lang-fbae26f08` the
+  agent wrote no test file. The other six left a suite and no closing message.
+- Acceptance left out 74 of the 6,020 `f6` tests, in 44 suites: its findings.
+  It left out none of the 5,494 `m6` tests.
+- At list prices `f6` cost $90.27 and `m6` $56.55, or $0.78 and $0.49 a run,
+  against about $120 estimated for both before the runs. The `f6` runs took
+  25.4 turns on average and the `m6` runs 19.8.
+- `analysis.txt` gives 25.1 turns for `f6`, because it reads each run's
+  `.json`, which holds the run's last result. In `commons-lang-eedd91729` the
+  agent wrote a second, one-line message after a background command it had
+  started was stopped. That result counts its own one turn, not the run's 28.
+  The cost in the `.json` is the session's total, so no cost is affected.
+  `bin/describe-campaign6.py` sums the turns over the results in the
+  transcript.
+
+`campaign6/runs-f6/` and `campaign6/runs-m6/` hold each run's record, as the
+fifth campaign's do. `campaign6/suites/` holds the 228 accepted suites, as the
+agents wrote them.
+
+**Another job shared the machine.** From 15:05 UTC on 26 November 2026 to
+06:22 UTC the next day, a job unrelated to the study ran on the same machine:
+a loop of test runs of other projects, in bursts of 10 to 16 processes. It
+used up to about 14 of the 16 cores and up to about 10 GB of memory, and it
+overlapped the last five hours of generation and all of the measurement. The
+protocol does not fix the machine's load, and nothing in the campaign was
+changed for it.
+
+- No verdict of the measurement rests on a test that failed by a timeout,
+  except `m6`'s on `commons-lang-5d46a39e4`, whose suite does not finish on
+  the parent, as `m5`'s did. The one `f6` finding that failed by a timeout,
+  on the same subject, wraps a call that never returns, on either revision, in
+  an `assertTimeoutPreemptively` of 3 seconds.
+- The mutation measurement was started at 21:47 UTC on 26 November and
+  stopped after one suite, since PIT counts a mutant that times out or runs
+  out of memory as detected. That start's files were removed. The measurement
+  was started again at 06:23 UTC on 27 November, after the job had ended.
+  During it the load stayed below 10 and at least 11.7 GB of memory was free.
+  The suite measured in both starts, `commons-lang-aafee70bf` in `f6`, gave
+  the same figures.
+
+### The audit
+
+`./bin/audit-campaign6.py data/campaign6 -v > data/campaign6/audit.txt`, read
+on 26 November 2026 before anything was measured.
+
+- **Violations.** `campaign6/violations.txt` lists no run. Its comments say
+  what was flagged, and why none of it is a violation. Two `f6` agents
+  (`commons-lang-d98cea29f` and `fbae26f08`) tried `curl` for the upstream
+  source of the class under test on `raw.githubusercontent.com`, which would
+  have held the fix. The harness refused both calls before they ran.
+- **Closing messages.** Every `f6` closing message was read
+  (`./bin/audit-campaign6.py data/campaign6 --closing`), and each line of
+  `campaign6/closing-f6.txt` was judged against the fix commit's change to the
+  production code before anything was measured. 39 messages name a test as
+  showing a bug, and 7 of them name the fault. The file's comments list the
+  runs left out and why. Five runs that left tests failing ended at the limit
+  of turns with no message, and seven raise a doubt without a failing test.
+- **Naming the fix.** Eight runs name a trigger test: three of `f6`
+  (`commons-lang-127050d2b`, `4bfbfeabe` and `7c91ce989`) and five of `m6`
+  (`060ab31e5`, `127050d2b`, `46d9a80e5`, `4bfbfeabe` and `54ee8ec1c`). Each
+  time the agent named a test after the method it tests.
+
+**The `.claude` folder in the working copy** shows as in the fourth and fifth
+campaigns. In 84 `f6` and 71 `m6` transcripts it is listed, in 18 and 16 with
+its entries. No agent read a file in it.
+
+### Detection
+
+`./bin/measure-campaign6.sh` ran from 20:38:48 to 21:42:02 UTC on 26 November
+2026, on Java 11 (`campaign6/results/`). Every suite compiles against both
+revisions, and every `m6` suite passes again on its own, so no suite is
+`Broken`.
+
+- `f6`: 7 suites are `Fail` (they detect the fault) and 106 `Pass`. They are
+  the seven runs that `closing-f6.txt` marks `fault`. Five suites certify the
+  fault, and none of them detects it.
+- `m6`: 27 suites are `Fail` and 88 `Pass`. One `Fail` is by timeout, on
+  `commons-lang-5d46a39e4`, as in `m5`.
+- The `f6` findings, 74 methods in 44 suites, were run again on the faulty
+  revision and on the fix. All 74 fail again on the faulty revision. Nine pass
+  on the fix and detect the fault, in seven suites; 65 are false alarms, in 39.
+  No `m6` suite left a test out.
+
+### Mutation score and line coverage
+
+`./bin/mutation-campaign6.sh` ran from 06:23:24 to 08:31:29 UTC on 27 November
+2026, on Java 11 (`campaign6/mutation/`). PIT finished on all 228 suites, each
+on its own revision and without the tests acceptance left out, and 222 have a
+figure. The other six are the three `commons-cli` subjects whose fix is in
+`Converter`, which have no mutant in either arm. No suite took PIT more than
+about four minutes. In all 228, the methods the filter kept are those the
+measurement ran (`analysis.txt`).
+
+### Analysis
+
+`./bin/analyze-campaign6.py > data/campaign6/analysis.txt`. The paired set has
+113 subjects: the two `f6` runs without a suite put theirs outside it.
+
+- **Detection when asked to look for faults.** 7 of 113 `f6` suites detect
+  the fault, 6.2% [2.7%, 10.6%].
+- **H1.** `f6` detects 7 and `m6` 27. Both detect on 5 subjects, `f6` alone
+  on 2 and `m6` alone on 22. Exact McNemar gives *p* = 3.59 × 10⁻⁵, and the
+  difference is −17.7 points [−25.7, −10.6]. H1 is rejected with `f6` below
+  `m6`.
+- **Certification (secondary).** 5 of 113, 4.4% [0.9%, 8.8%]. Beside `b5`'s 7
+  on the same subjects: both 3, `f6` only 2 and `b5` only 4, with a
+  descriptive McNemar *p* of 0.688.
+- **Findings (secondary).** 74, of which 9 detect (12.2%) and 65 are false
+  alarms, in 39 suites.
+- **Closing messages (secondary).** The 7 runs that name the fault are the 7
+  that detect. None of the 32 that name another bug detects, nor any of the
+  74 with a verdict that name none.
+- **Mutation score (secondary).** On the 110 subjects of the complete set, the
+  pooled scores are 45.7% and 41.2%, +4.5 [+0.8, +8.4]. Line coverage is
+  63.5% and 59.5%.
+- **Sensitivity.** All six analyses keep the direction, with *p* between
+  3.59 × 10⁻⁵ and 6.6 × 10⁻⁵.
+- **Descriptive.** By fault type, `f6` detects 3 of 34 omissions and none of
+  the 38 algorithm, API and state faults. It is above `m6` only on
+  substitutions, 2 against 0. `m4`, `m5` and `m6` give a Fleiss' κ of 0.60.
+  `s4` and `f6` share no detection.
+
+`bin/describe-campaign6.py`, written on 27 November 2026 after the analysis,
+prints the descriptive figures that §3.14 quotes.
+
+**What the detecting tests assert** (read on 27 November 2026, after the
+analysis). Each of the seven `f6` detections rests on one test or two. The
+closing message names them with the fault, and each asserts the behaviour
+that the fix makes:
+
+- `commons-csv-274b4ceba`: `testByteTrackingDoesNotCountEofSentinel`;
+- `commons-lang-060ab31e5`: `testCreateNumberDoubleSignThrows` and
+  `testIsCreatableInvalidNumbers`;
+- `commons-lang-0b4a9d95d`: `testToLocaleStringInvalidLanguageWithNumericAreaCodeThrows`.
+  The `b5` test that certified this fault on the same revision was
+  `testToLocaleStringNumericAreaCodeBypassesLanguageValidation`;
+- `commons-lang-14deed1bf`: `testOutOfRangeCodePointIsIgnoredNotThrown`;
+- `commons-lang-3f0c0fd5c`: `testFormatDurationDoesNotMergeFieldsSeparatedByLiteralText`
+  and `testLexxDoesNotMergeTokensSeparatedByLiteralText`;
+- `commons-lang-6dbbbb308`: `testUnescapeCsvSingleQuoteCharacterDoesNotThrow`,
+  where `b5`'s was `testUnescapeCsvSingleQuoteCharacterThrows`;
+- `commons-lang-c07bc828f`: `testJdkXmlEntityReplacementLimitConstantIsSpelledCorrectly`.
+
+**What the other bugs are** (read on 27 November 2026, after the analysis). A
+false alarm is a finding that the fix does not repair. Of the 32 runs whose
+closing message names a bug other than the fault, four name one that is the
+fault of another of the 115 subjects, repaired by a later fix. In each case
+the run's fix commit is an ancestor of that later fix, and the later fix
+changes the behaviour the message names:
+
+- `commons-lang-3df7f4440` names the precedence of `&&` and `||` in
+  `LocaleUtils.parseLocale`, the fault of `0b4a9d95d`;
+- `commons-lang-13d25e059` names `DurationFormatUtils.lexx` merging a
+  repeated field across a literal, the fault of `3f0c0fd5c`;
+- `commons-csv-1e3de1274` and `23eb602d2` name the end-of-stream sentinel
+  counted in the bytes read, the fault of `274b4ceba`. `1e3de1274` tests
+  `Lexer`, whose `getBytesRead` returns the reader's.
+
+Three behaviours are named in more than one run, and none of them is the fault
+of a subject: `StopWatch.split` called twice without `unsplit` (`79380dba9`,
+`aa47951bd` and `df5245a79`), `StrBuilder.equalsIgnoreCase(null)` throwing
+(`7c91ce989` and `b1aba6833`), and `ExtendedMessageFormat` not trimming a
+format name followed by a space (`5b3a81dcd` and `d927bfc84`). Whether the
+projects count them as bugs was not checked.
 
 ## Infrastructure failures and exclusions
 
@@ -2457,4 +2639,6 @@ mistake for results:
 - [x] Write-up carries the fifth campaign: `PREPRINT.md` §2.13 and §3.13, and the abstract, introduction, discussion (§4.1, §4.2, §4.3, §4.6), threats, related work, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign5.py`, and §3.13 in `bin/report-figures.py`
 - [x] Sixth campaign prepared: protocol, scripts, checks without the model on the fourth campaign's 115 subjects in both arms, and a pilot (`campaign6/`)
 - [x] Sixth campaign's protocol fixed before any run on the subjects (`campaign6/PROTOCOL.md`)
+- [x] Sixth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed. Asked to look for faults, `f6` detects 6.2% (7/113) against `m6`'s 23.9% (27/113), and H1 is rejected with `f6` below `m6` (*p* = 3.59 × 10⁻⁵); the pooled mutation scores are 45.7% and 41.2%. No deviation; another job shared the machine during generation and measurement, and PIT ran after it (`campaign6/`)
+- [x] Write-up carries the sixth campaign: `PREPRINT.md` §2.14 and §3.14, and the abstract, introduction, discussion (§4.1, §4.2, §4.3, §4.6), threats, related work, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign6.py`, and §3.14 in `bin/report-figures.py`
 - [ ] A matched post-cutoff corpus large enough to test the effect size. Not pursued (21 November 2026): a corpus matched to the Defects4J sample can take at most 69 of the pool's 131 new subjects, 115 of which the fourth campaign has run, and its analysis weights detection by the sample's fault types instead (`campaign4/analysis.txt`)

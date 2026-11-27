@@ -15,9 +15,10 @@ runs bin/analyze-campaign3.py, bin/analyze-mutation-campaign3.py (mutation
 score and coverage, measured after the campaign) and bin/describe-campaign3.py.
 §3.12 is the fourth: it runs bin/analyze-campaign4.py, whose analysis includes
 mutation score and coverage, and bin/describe-campaign4.py. §3.13 is the fifth:
-it runs bin/analyze-campaign5.py and bin/describe-campaign5.py. If a script it runs
-fails, the report stops there, with a line naming the script, and exits with
-status 1.
+it runs bin/analyze-campaign5.py and bin/describe-campaign5.py. §3.14 is the
+sixth: it runs bin/analyze-campaign6.py and bin/describe-campaign6.py. If a
+script it runs fails, the report stops there, with a line naming the script,
+and exits with status 1.
 
 Not printed here: §3.3, a reading of the javadoc recorded in
 data/contract-violation.md and data/contract-violation.csv, and the evidence
@@ -29,7 +30,9 @@ Defects4J sample (§3.8, data/fault-taxonomy.csv); and the second campaign's
 analysis without the S2 run of Csv-10 (§3.10,
 data/campaign2/analysis-without-s2-Csv-10.txt). Also not printed: the reading
 of what the fifth campaign's certifying tests encode (§3.13), which is in
-data/README.md beside the tests that describe-campaign5.py lists.
+data/README.md beside the tests that describe-campaign5.py lists, and the
+reading of the sixth campaign's detecting tests and of the other bugs its
+closing messages name (§3.14), also in data/README.md.
 
 Conventions, all of them stated in the write-up:
 
@@ -311,6 +314,12 @@ def main():
     run("-B", "bin/analyze-campaign5.py")
     section("§3.13  Fifth campaign: descriptive figures")
     run("-B", "bin/describe-campaign5.py")
+
+    # ---- §3.14 -----------------------------------------------------------
+    section("§3.14  Sixth campaign: the analysis fixed by its protocol")
+    run("-B", "bin/analyze-campaign6.py")
+    section("§3.14  Sixth campaign: descriptive figures")
+    run("-B", "bin/describe-campaign6.py")
 
 
 if __name__ == "__main__":

@@ -20,7 +20,7 @@ agent either works in the project's source tree or sees only its javadoc. The
 comparison was run twice on the same 40 Defects4J bugs, and twice more on
 faults fixed after the model's training data ends: 28 in a third campaign and
 115 in a fourth. A fifth campaign showed the agent the faulty revision of the
-fourth campaign's 115 faults.
+fourth campaign's 115 faults, and a sixth asked it to look for faults there.
 
 **The second campaign is the controlled one.** Its working copies hold nothing
 of the benchmark's own, a sandbox enforces the conditions, every run's
@@ -144,6 +144,39 @@ runs still to come failed before their agent started, and were made again, as
 the protocol provides for such failures. Its Deviations section records what
 happened.
 
+**The sixth campaign asks the agent shown the faulty code to look for
+faults.** It runs on the same 115 subjects, with two arms:
+
+- one implementation-visible arm works on the parent of the fix commit and is
+  asked to find bugs. Its tests that fail there are kept as its findings, and
+  a finding that passes on the fix detects the fault;
+- the fourth campaign's implementation-visible arm is run a third time beside
+  it, on the fix.
+
+The protocol is `data/campaign6/PROTOCOL.md`.
+
+| arm | fault detected | mutation score | line coverage |
+|---|---|---|---|
+| reads the faulty code, asked to look for faults | **7/113 — 6%** | 46% | 64% |
+| reads the repaired code | **27/113 — 24%** | 41% | 60% |
+
+Detection is over the 113 subjects with a suite in both arms. Five are
+detected by both arms, two by the first alone and 22 by the second alone
+(exact McNemar, *p* = 3.6 × 10⁻⁵). The difference is −17.7 points, with an
+interval of −25.7 to −10.6. **Even asked to look, the agent shown the faulty
+code detects the fault a quarter as often as the regression setting credits
+it.** The seven runs that detect are exactly the seven whose closing message
+names the fault. Of the 74 findings, 65 do not pass on the fix. In four runs,
+though, the bug they show is another subject's fault, repaired by a later
+fix.
+
+Mutation score and coverage are over the 110 subjects with a figure in both
+arms, and the first arm's findings are not in them, since PIT needs a suite
+that passes. Pooled, the score is higher in the arm that detects less: 45.7%
+against 41.2%, +4.5 points with an interval of +0.8 to +8.4. Run three times,
+the arm that reads the repaired code gives verdicts that agree with a Fleiss'
+κ of 0.60.
+
 Mutation score and coverage measure how much of a program a suite exercises
 and how hard it checks what it exercises. Neither measures where the expected
 values came from.
@@ -256,13 +289,18 @@ other arm. The directory holds:
 
 - its protocol (`PROTOCOL.md`), fixed before any run on the subjects;
 - the subject list;
-- the output of the two sandbox checks;
-- the pilot (`pilot/`).
+- the output of the two sandbox checks, before the pilot and before the runs;
+- the pilot (`pilot/`);
+- the records of its 230 runs (`runs-f6/`, `runs-m6/`, `suites/`);
+- their audit (`audit.txt`, `violations.txt`, `closing-f6.txt`);
+- the measurement (`results/`), mutation score and line coverage
+  (`mutation/`), and the analysis (`analysis.txt`).
 
 Its scripts are `bin/subjects-campaign6.py`, `bin/generate-campaign6.sh`,
 `bin/run-campaign6.sh`, `bin/audit-campaign6.py`, `bin/measure-campaign6.sh`,
 `bin/mutation-campaign6.sh` and `bin/analyze-campaign6.py`, all committed with
-its protocol. They use `bin/campaign3-lib.sh`, `bin/AgentTestRunner.java`,
+its protocol, and `bin/describe-campaign6.py`, written after the analysis.
+They use `bin/campaign3-lib.sh`, `bin/AgentTestRunner.java`,
 `bin/ExcludedTestsFilter.java` and `bin/agent-sandbox.py` unchanged.
 
 ## What this does not show
@@ -308,17 +346,24 @@ table above:
   statistic, 99 points, comes from the pooling.
 - **The fourth campaign's subjects are not matched to the Defects4J sample by
   fault type.** Weighted to it, detection is 16.0% against 3.6%.
-- **The faulty-revision condition measures tests written to pass.** The fifth
+- **Each faulty-revision condition measures one request.** The fifth
   campaign's agent is asked to make its tests pass on the code it reads, and
   acceptance drops any that fail there. So it measures how often tests written
-  after faulty code lock the fault in. It does not measure how well an agent
-  finds faults when asked to. One of its seven certifications rests on
-  behaviours the fix changed besides the fault.
+  after faulty code lock the fault in, and one of its seven certifications
+  rests on behaviours the fix changed besides the fault. The sixth's agent is
+  asked to find bugs, in one explicit wording, and the prompt names the
+  classes to look in. A vaguer request, or none of the names, could find less.
+- **A false alarm is relative to one fix.** In the sixth campaign, a finding
+  that does not pass on the fix counts as a false alarm, and 65 of the 74 do
+  not. In four runs, though, what the findings show is another subject's
+  fault, which a later fix repaired. The count of false alarms is an upper
+  bound on the findings that show no fault, not a measure of them.
 - **Verdicts vary between runs.** Each campaign has one run per subject and
-  arm. The fifth campaign ran the fourth's implementation-visible arm again on
-  the same 115 subjects, and 15 verdicts changed (agreement 87%, κ 0.60). The
-  between-arm differences the tests rest on are larger than that. But no
-  single verdict should be read as a property of its subject.
+  arm. The fifth and sixth campaigns ran the fourth's implementation-visible
+  arm again on the same 115 subjects. Between the first two runs 15 verdicts
+  changed (agreement 87%, κ 0.60), and between the last two 15 again (87%,
+  κ 0.63). The between-arm differences the tests rest on are larger than that.
+  But no single verdict should be read as a property of its subject.
 - **The sandbox was less tight than its settings were meant to make it.** The
   third campaign's audit found that the directory the harness gives commands
   for temporary files is the host's own and shared by every run, in that
@@ -331,8 +376,13 @@ table above:
   result is the same with them in (9/27 against 6/27, *p* = 0.25). A check made
   after the campaign, with its settings and no model, confirmed that a command
   could list and read that directory. Settings that close it are in
-  `bin/agent-sandbox.py`, and the fourth and fifth campaigns ran under them.
-  Neither campaign's audit found a violation.
+  `bin/agent-sandbox.py`, and the fourth to sixth campaigns ran under them.
+  None of their audits found a violation.
+- **The sixth campaign shared its machine** with an unrelated job, during the
+  last five hours of generation and all of the measurement. No verdict rests
+  on a test that failed by a timeout, apart from one hang that the fifth
+  campaign's run shows too. PIT, which counts a mutant that times out as
+  detected, was run after the job had ended.
 - **Contamination is measured, not bounded.** A direct probe finds two of the
   forty faults recalled with their mechanism and two more recognised, and
   benchmark identifiers not memorised. But recall may be cued by the source
@@ -359,9 +409,9 @@ from `data/`. The evidence of §3.9 is printed by `./bin/audit-trigger-leaks.py`
 the classification of §3.3 is recorded in `data/contract-violation.md`, and
 some other figures are quoted from records under `data/`, as the script's
 header describes. What the transcript audits found is in the `audit.txt` and
-`violations.txt` of `data/campaign2/` to `data/campaign5/`. None of it needs
+`violations.txt` of `data/campaign2/` to `data/campaign6/`. None of it needs
 Defects4J or model access. `./bin/analyze-campaign2.py` to
-`./bin/analyze-campaign5.py` print the second to fifth campaigns' analyses on
+`./bin/analyze-campaign6.py` print the second to sixth campaigns' analyses on
 their own, and
 `./bin/analyze-mutation-campaign3.py` the third campaign's mutation figures.
 No Python script under `bin/` needs a package outside the standard library
@@ -370,10 +420,10 @@ except `bin/zenodo-metadata.py`, which reads `CITATION.cff` with PyYAML.
 Re-measuring from the packaged suites in `data/agent-suites/` and
 `data/campaign2/suites/` needs Defects4J v3.0.1 under Java 11 with
 `TZ=America/Los_Angeles` (`bin/analyze-agent-suites.sh`). The post-cutoff
-corpora and the third to fifth campaigns' suites (`bin/measure-campaign3.sh`
-to `bin/measure-campaign5.sh`) need clones of the upstream repositories, Java
+corpora and the third to sixth campaigns' suites (`bin/measure-campaign3.sh`
+to `bin/measure-campaign6.sh`) need clones of the upstream repositories, Java
 11 and Maven 3.9+. Their mutation score (`bin/mutation-campaign3.sh` to
-`bin/mutation-campaign5.sh`) also needs PIT, which each script fetches from
+`bin/mutation-campaign6.sh`) also needs PIT, which each script fetches from
 Maven Central once and checks against the hashes written in it.
 Regenerating the suites needs the model and costs between $0.40 and $1 per
 suite at list prices.
