@@ -1,0 +1,7 @@
+FAILED	method	org.apache.commons.lang.text.StrBuilderAgentTest#testIndexOfStringIgnoresDataBeyondLogicalSize()	1	1	junit.framework.AssertionFailedError: expected:<-1> but was:<2>
+FAILED	method	org.apache.commons.lang.text.StrBuilderAgentTest#testAppendFixedWidthPadRightNullObjectUsesNullText()	1	1	java.lang.NullPointerException
+FAILED	method	org.apache.commons.lang.text.StrBuilderAgentTest#testEqualsIgnoreCaseNullReturnsFalse()	1	1	java.lang.NullPointerException
+FAILED	method	org.apache.commons.lang.text.StrBuilderAgentTest#testIndexOfCharIgnoresDataBeyondLogicalSize()	1	1	junit.framework.AssertionFailedError: expected:<-1> but was:<2>
+FAILED	method	org.apache.commons.lang.text.StrBuilderAgentTest#testContainsCharIgnoresDataBeyondLogicalSize()	1	1	junit.framework.AssertionFailedError: builder shrunk to 'ab' must not contain leftover 'c'
+FAILED	method	org.apache.commons.lang.text.StrBuilderAgentTest#testEqualsStrBuilderNullReturnsFalse()	1	1	java.lang.NullPointerException
+FAILED	method	org.apache.commons.lang.text.StrBuilderAgentTest#testAppendFixedWidthPadLeftNullObjectUsesNullText()	1	1	java.lang.NullPointerException

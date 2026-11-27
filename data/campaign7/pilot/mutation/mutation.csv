@@ -1,0 +1,7 @@
+bug,arm,version,status,note,mut_generated,mut_covered,mut_killed,mut_killed_d4j,lines_total,lines_covered,branches_total,branches_covered,methods_kept,methods_left_out,keys_excluded,files_left_out,files_added,seconds
+Lang-61,f7,61b,ok,,1750,1568,803,985,656,575,464,339,153,7,7,0,0,60
+Lang-61,m7,61f,ok,,1756,1657,877,976,656,605,464,360,120,0,0,0,0,59
+Csv-11,f7,11b,ok,,79,75,66,70,106,97,58,50,35,0,0,0,0,29
+Csv-11,m7,11f,ok,,84,81,65,68,106,98,62,52,33,0,0,0,0,29
+Cli-5,f7,5b,ok,,24,24,24,24,11,10,8,8,16,0,0,0,0,29
+Cli-5,m7,5f,ok,,25,25,25,25,13,12,10,10,15,0,0,0,0,29

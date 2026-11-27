@@ -1,12 +1,12 @@
 # Seventh campaign: protocol (draft)
 
 Draft of 27 November 2026. It is not fixed yet. It will be fixed before any
-run on the subjects, by the merge of the pull request that adds it, after the
-checks without the model and the pilot below. The merge commit, with the
-scripts as they are in it, will be the reference. Anything done differently
-afterwards is a deviation and is listed at the end, with its date and reason,
-before the step it affects. No model has been run for this campaign. Its
-scripts are written, and the checks without the model below have been made.
+run on the subjects, by the merge of the pull request that adds it. The merge
+commit, with the scripts as they are in it, will be the reference. Anything
+done differently afterwards is a deviation and is listed at the end, with its
+date and reason, before the step it affects. Its scripts are written, and the
+checks without the model and the pilot below have been made, the same day. No
+run has been made on the subjects.
 
 ## Why a seventh campaign
 
@@ -735,14 +735,86 @@ complete set, why it is outside.
 
 ## Pilot
 
-To be made after the checks, and only with the user's agreement: six runs with
-the model, on the second campaign's three pilot bugs, which are outside the
-sample: Lang-61 (`StrBuilder`), Csv-11 (`CSVParser`) and Cli-5 (`Util`), each
-in both arms. That is about $3 at list prices. Csv-11's class is one that
-three bugs of the sample have under test. This campaign's scripts will audit
-the runs, measure them and their mutation score, and search the records for
-the machine's details, as in the sixth campaign. The record will be in
-`pilot/`. It is not part of any result.
+The pilot was six runs with the model, made on 27 November 2026 with the
+user's agreement. It used the second campaign's three pilot bugs, which are
+outside the sample: Lang-61 (`StrBuilder`), Csv-11 (`CSVParser`) and Cli-5
+(`Util`), each in both arms. The generator was this campaign's, at commit
+`13b534b`, after the checks above. Just before it, the output of those checks
+was deleted, and both checks of step 0 were made again. Every check of both
+passed. `saved-copies.txt` came out the same byte for byte, and the probe
+differed from `probe.txt` only in temporary names and in the count of entries
+when a run starts, 3 or 4. This campaign's scripts then audited the runs and
+measured them and their mutation score. The record is in `pilot/`, with the
+audit's output in `pilot/audit.txt`. It is not part of any result.
+
+The three faults are these. In `StrBuilder.indexOf(String, int)`, the search
+takes its bound from the buffer's capacity instead of the builder's length, so
+it can find characters left beyond the length; the fixed version bounds it by
+the length. In `CSVParser`, a header that the null string has made `null`
+throws `NullPointerException` when the header map is built; the fixed version
+tests for `null` first. `Util.stripLeadingHyphens(null)` throws
+`NullPointerException`, where the fixed version returns `null`.
+
+- **Runs.** All six ended normally on `claude-sonnet-5`, CLI 2.1.316. They
+  ran from 23:06 to 23:18 UTC and cost $2.18 at list prices, $1.19 in `f7` and
+  $0.99 in `m7`. The draft had put the pilot at about $3. The runs took 17
+  turns on Lang-61 and on Csv-11 in both arms, and 9 in `f7` and 8 in `m7` on
+  Cli-5.
+- **Commands.** Each agent read its working copy and wrote one test class and
+  nothing else. It ran the class through `_tools/test.sh`. In `m7` on Lang-61
+  the agent also ran JUnit's `JUnitCore` itself, on the jars in `_tools/lib`.
+  The transcripts show no network command and no path outside the working
+  copy. The sandbox denied nothing. In `f7` on Lang-61, the harness refused
+  one call, a shell loop over the test files, because it needed an approval
+  that nobody can give.
+- **Audit.** It flagged no command. No run names the bug.
+- **Closing messages.** The three `f7` messages, read before anything was
+  measured:
+  - On Lang-61, seven tests were named as showing bugs. One is the fault:
+    `indexOf(String, int)` takes its bound from the buffer's capacity instead
+    of the builder's length. The other six are about code that the source
+    patch does not change. Two are `indexOf(char, int)` and `contains(char)`,
+    which the message says search the capacity too. Two are
+    `equals(StrBuilder)` and `equalsIgnoreCase(StrBuilder)` given `null`. Two
+    are `appendFixedWidthPadLeft` and `appendFixedWidthPadRight` given a
+    `null` object when there is no null text. The one line of
+    `pilot/closing-f7.txt` reads `fault`.
+  - On Csv-11 and Cli-5, no test was named as showing a bug. On Cli-5 the
+    agent found that `stripLeadingHyphens(null)` throws
+    `NullPointerException`, and wrote its test to expect it.
+- **Temporary directory.** No command named the run's own temporary
+  directory. At the end it held only the CLI's empty directories
+  (`.tmp.tar.xz`).
+- **Measurement.** In `f7` on Lang-61, acceptance left out the seven tests
+  the agent named, of 160. All seven fail again on the buggy version. One, the
+  test of `indexOf(String, int)`, passes on the fixed version and detects the
+  fault. The other six fail there in the same way, so they are false alarms.
+  Acceptance left out no test in the other five suites: 120 methods in `m7` on
+  Lang-61, 35 and 33 on Csv-11, 16 and 15 on Cli-5. On Cli-5 the `f7` suite
+  certifies the fault: its test that expects `NullPointerException` fails on
+  the fixed version. The `m7` suite there detects the fault, with a test that
+  expects `null`. No other suite detects or certifies it, and none is
+  `Broken`. So each arm detects the fault once: `f7` on Lang-61 and `m7` on
+  Cli-5. The verdicts check the pipeline and nothing else.
+- **Mutation.** Major gave every suite a figure on its own version, and
+  Cobertura a line coverage. The check run found in each archive the tests
+  acceptance kept, and none of them failed there. In `f7` on Lang-61 the
+  seven tests left out were disabled. Pooled, `f7` killed 48.2% of its mutants
+  and covered 88.2% of the lines, and `m7` 51.8% and 92.3%. Each version has
+  its own mutants: the fixed version has 6 more than the buggy one on
+  Lang-61, 5 more on Csv-11 and 1 more on Cli-5, from the lines the source
+  patch changes.
+- **The records** were searched for the machine's name, its time zone, its
+  operating system and details of the account, with the transcripts and
+  archives unpacked. None of these is in them. The CLI's first event in each
+  transcript lists the same built-in plugins and agents as in the sixth
+  campaign's pilot, but for the first run, `f7` on Lang-61, whose list lacks
+  the `web-fetch` agent. The first runs of the fifth and sixth campaigns lack
+  it too. No run can call an agent: its tools are Bash, Read, Write, Edit,
+  Glob and Grep.
+
+Csv-11's class is one that three bugs of the sample have under test. The
+pilot's record is under the user's home, which no agent can read.
 
 ## Deviations
 

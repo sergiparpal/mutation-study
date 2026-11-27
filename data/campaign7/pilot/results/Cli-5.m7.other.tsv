@@ -1,0 +1,15 @@
+FAILED	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensNull()	1	1	java.lang.NullPointerException
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensDoubleHyphen()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensSingleHyphen()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensNoHyphen()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensOnlyDoubleHyphen()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensOnlySingleHyphen()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensTripleHyphen()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesBoth()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesLeadingOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesTrailingOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesNoQuotes()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesOnlyOneQuoteChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesNullThrowsNPE()	1	0	

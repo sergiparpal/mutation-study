@@ -1,0 +1,9 @@
+org/apache/commons/lang/text/StrBuilderAgentTest.java: disabled org.apache.commons.lang.text.StrBuilderAgentTest#testAppendFixedWidthPadLeftNullObjectUsesNullText()
+org/apache/commons/lang/text/StrBuilderAgentTest.java: disabled org.apache.commons.lang.text.StrBuilderAgentTest#testAppendFixedWidthPadRightNullObjectUsesNullText()
+org/apache/commons/lang/text/StrBuilderAgentTest.java: disabled org.apache.commons.lang.text.StrBuilderAgentTest#testContainsCharIgnoresDataBeyondLogicalSize()
+org/apache/commons/lang/text/StrBuilderAgentTest.java: disabled org.apache.commons.lang.text.StrBuilderAgentTest#testEqualsIgnoreCaseNullReturnsFalse()
+org/apache/commons/lang/text/StrBuilderAgentTest.java: disabled org.apache.commons.lang.text.StrBuilderAgentTest#testEqualsStrBuilderNullReturnsFalse()
+org/apache/commons/lang/text/StrBuilderAgentTest.java: disabled org.apache.commons.lang.text.StrBuilderAgentTest#testIndexOfCharIgnoresDataBeyondLogicalSize()
+org/apache/commons/lang/text/StrBuilderAgentTest.java: disabled org.apache.commons.lang.text.StrBuilderAgentTest#testIndexOfStringIgnoresDataBeyondLogicalSize()
+disabled in org/apache/commons/lang/text/StrBuilderAgentTest.java: 7 of 7 keys
+check run: the archive runs the 153 tests acceptance kept; 0 of them fail there

@@ -1,0 +1,16 @@
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensDoubleHyphen()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensSingleHyphen()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensNoHyphen()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensOnlySingleHyphen()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensOnlyDoubleHyphen()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensTripleHyphen()	1	0	
+FAILED	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensNullThrowsNPE()	1	1	junit.framework.AssertionFailedError: Expected NullPointerException for null input
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesBothSides()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesLeadingOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesTrailingOnly()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesNoQuotes()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesSingleQuoteChar()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesTwoQuoteChars()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.UtilAgentTest#testStripLeadingAndTrailingQuotesNullThrowsNPE()	1	0	

@@ -1,0 +1,10 @@
+1) org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensNull()
+java.lang.NullPointerException
+    at org.apache.commons.cli.Util.stripLeadingHyphens(Util.java:36)
+    at org.apache.commons.cli.UtilAgentTest.testStripLeadingHyphensNull(UtilAgentTest.java:24)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 15, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 15, failed: 1
+FAILURES!!!
