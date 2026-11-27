@@ -2563,6 +2563,39 @@ of a subject: `StopWatch.split` called twice without `unsplit` (`79380dba9`,
 format name followed by a space (`5b3a81dcd` and `d927bfc84`). Whether the
 projects count them as bugs was not checked.
 
+## Seventh campaign
+
+The seventh campaign shows the implementation-visible agent Defects4J's buggy
+version of each bug of the sample, and asks it to look for faults in that code
+(`f7`), with the sixth campaign's request. Beside it, the second campaign's
+implementation-visible arm is made a second time on the fixed version (`m7`).
+Its subjects are the sample's 40 bugs. The working copy and the prompt are the
+second campaign's, made from the arm's version. The sandbox, acceptance and
+measurement are the sixth campaign's, run with `bin/AgentTestRunner4.java` on
+JUnit 4. In `f7` the prompt ends with the request in place of `m2`'s last
+sentence, and acceptance keeps a suite whose every test fails and runs one
+that does not finish a class at a time. The tests that `f7`'s acceptance
+leaves out, those that fail on the buggy version, are its findings. A finding
+that fails there again and passes on the fixed version detects the fault.
+
+The protocol is `campaign7/PROTOCOL.md`. It was fixed on 28 November 2026,
+before any run on the subjects, by the merge of its pull request. Its estimate
+is `f7`'s detection rate. Its hypothesis, H1, is that detection in `f7` and
+detection in `m7` differ.
+
+- `campaign7/subjects.txt`: the 40 bugs in the order of the runs, with each
+  bug's fault type and issue. `bin/subjects-campaign7.py` writes it from
+  `sample.txt`. Its `--check` confirms the list, and checks in Defects4J's
+  metadata that every test file of each bug's test patch holds one of its
+  trigger tests.
+- `campaign7/probe.txt`, `campaign7/saved-copies.txt`: the output of
+  `bin/agent-sandbox.py probe` and of `bin/probe-saved-copies.py`, with CLI
+  2.1.316.
+- `campaign7/pilot/`: the pilot. It is six runs with the model, made on 27
+  November 2026 on the second campaign's three pilot bugs, in both arms. It
+  holds their audit, their closing messages, and their measurement and
+  mutation measurement. It is not part of any result.
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -2641,4 +2674,6 @@ mistake for results:
 - [x] Sixth campaign's protocol fixed before any run on the subjects (`campaign6/PROTOCOL.md`)
 - [x] Sixth campaign run: the 115 subjects in both arms, 230 runs, audited, measured and analysed. Asked to look for faults, `f6` detects 6.2% (7/113) against `m6`'s 23.9% (27/113), and H1 is rejected with `f6` below `m6` (*p* = 3.59 × 10⁻⁵); the pooled mutation scores are 45.7% and 41.2%. No deviation; another job shared the machine during generation and measurement, and PIT ran after it (`campaign6/`)
 - [x] Write-up carries the sixth campaign: `PREPRINT.md` §2.14 and §3.14, and the abstract, introduction, discussion (§4.1, §4.2, §4.3, §4.6), threats, related work, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign6.py`, and §3.14 in `bin/report-figures.py`
+- [x] Seventh campaign prepared: protocol, scripts, checks without the model on the sample's 40 bugs in both arms, and a pilot (`campaign7/`)
+- [x] Seventh campaign's protocol fixed before any run on the subjects (`campaign7/PROTOCOL.md`)
 - [ ] A matched post-cutoff corpus large enough to test the effect size. Not pursued (21 November 2026): a corpus matched to the Defects4J sample can take at most 69 of the pool's 131 new subjects, 115 of which the fourth campaign has run, and its analysis weights detection by the sample's fault types instead (`campaign4/analysis.txt`)

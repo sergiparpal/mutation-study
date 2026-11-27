@@ -1,12 +1,10 @@
-# Seventh campaign: protocol (draft)
+# Seventh campaign: protocol
 
-Draft of 27 November 2026. It is not fixed yet. It will be fixed before any
-run on the subjects, by the merge of the pull request that adds it. The merge
-commit, with the scripts as they are in it, will be the reference. Anything
-done differently afterwards is a deviation and is listed at the end, with its
-date and reason, before the step it affects. Its scripts are written, and the
-checks without the model and the pilot below have been made, the same day. No
-run has been made on the subjects.
+Fixed on 28 November 2026, before any run on the subjects, by the merge of the
+pull request that adds it (#35), after the checks without the model and the
+pilot below. The merge commit, with the scripts as they are in it, is the
+reference. Anything done differently afterwards is a deviation and is listed at
+the end, with its date and reason, before the step it affects.
 
 ## Why a seventh campaign
 
@@ -757,9 +755,8 @@ tests for `null` first. `Util.stripLeadingHyphens(null)` throws
 
 - **Runs.** All six ended normally on `claude-sonnet-5`, CLI 2.1.316. They
   ran from 23:06 to 23:18 UTC and cost $2.18 at list prices, $1.19 in `f7` and
-  $0.99 in `m7`. The draft had put the pilot at about $3. The runs took 17
-  turns on Lang-61 and on Csv-11 in both arms, and 9 in `f7` and 8 in `m7` on
-  Cli-5.
+  $0.99 in `m7`. The estimate had been about $3. The runs took 17 turns on
+  Lang-61 and on Csv-11 in both arms, and 9 in `f7` and 8 in `m7` on Cli-5.
 - **Commands.** Each agent read its working copy and wrote one test class and
   nothing else. It ran the class through `_tools/test.sh`. In `m7` on Lang-61
   the agent also ran JUnit's `JUnitCore` itself, on the jars in `_tools/lib`.
