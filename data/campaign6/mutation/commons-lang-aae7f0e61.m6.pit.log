@@ -1,0 +1,102 @@
+11:23:51 PM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+11:23:51 PM PIT >> INFO : Created 1 mutation test units in pre scan
+11:23:52 PM PIT >> INFO : Sending 22 test classes to minion
+11:23:52 PM PIT >> INFO : Sent tests to minion
+11:23:52 PM PIT >> INFO : Calculated coverage in 0 seconds.
+11:23:52 PM PIT >> INFO : 0 tests took longer than 2000 ms
+11:23:52 PM PIT >> INFO : Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.MethodUtilsAgentTest]/[method:testGetMatchingMethod_emptyNameThrows()]) took 80 ms
+11:23:52 PM PIT >> INFO : Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.MethodUtilsAgentTest]/[method:testGetMatchingMethod_ambiguousOverloadsThrowsIllegalStateException()]) covered 104 blocks
+11:23:52 PM PIT >> INFO : Created 1 mutation test units
+11:24:02 PM PIT >> INFO : Completed in 11 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE
+>> Generated 11 Killed 4 (36%)
+> KILLED 4 SURVIVED 4 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 3 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 11 Killed 6 (55%)
+> KILLED 6 SURVIVED 2 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 3 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 5 Killed 2 (40%)
+> KILLED 2 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 2 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 2 Killed 0 (0%)
+> KILLED 0 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 8 Killed 5 (63%)
+> KILLED 5 SURVIVED 3 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 5 Killed 5 (100%)
+> KILLED 5 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 59 Killed 19 (32%)
+> KILLED 19 SURVIVED 27 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 13 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 32 Killed 25 (78%)
+> KILLED 25 SURVIVED 3 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 4 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 11 Killed 8 (73%)
+> KILLED 8 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 2 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 6 Killed 5 (83%)
+> KILLED 5 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 1 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 4 Killed 3 (75%)
+> KILLED 3 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : 9 seconds
+--------------------------------------------------------------------------------
+> Total  : 11 seconds
+--------------------------------------------------------------------------------
+> 0 tests took longer than 2000 ms
+> Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.MethodUtilsAgentTest]/[method:testGetMatchingMethod_emptyNameThrows()]) took 80 ms
+> Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.reflect.MethodUtilsAgentTest]/[method:testGetMatchingMethod_ambiguousOverloadsThrowsIllegalStateException()]) covered 104 blocks
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 210/258 (81%)
+>> 22 tests examined
+>> Generated 154 mutations Killed 82 (53%)
+>> Mutations with no coverage 29. Test strength 66%
+>> Ran 299 tests (1.94 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/

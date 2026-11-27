@@ -1,0 +1,114 @@
+10:57:05 PM PIT >> INFO : Verbose logging is disabled. If you encounter a problem, please enable it before reporting an issue.
+10:57:05 PM PIT >> INFO : Created 1 mutation test units in pre scan
+10:57:05 PM PIT >> INFO : Sending 1 test classes to minion
+10:57:05 PM PIT >> INFO : Sent tests to minion
+10:57:06 PM PIT >> INFO : Calculated coverage in 0 seconds.
+10:57:06 PM PIT >> INFO : 0 tests took longer than 2000 ms
+10:57:06 PM PIT >> INFO : Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.StringUtilsAgentTest]/[method:testContainsFamily()]) took 65 ms
+10:57:06 PM PIT >> INFO : Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.StringUtilsAgentTest]/[method:testContainsFamily()]) covered 94 blocks
+10:57:06 PM PIT >> INFO : Created 1 mutation test units
+10:57:18 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+10:57:21 PM PIT >> WARNING : Minion exited abnormally due to MEMORY_ERROR
+10:57:46 PM PIT >> WARNING : Minion exited abnormally due to MEMORY_ERROR
+10:57:51 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+10:58:17 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+10:58:23 PM PIT >> WARNING : Minion exited abnormally due to TIMED_OUT
+10:58:23 PM PIT >> INFO : Completed in 78 seconds
+================================================================================
+- Mutators
+================================================================================
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_ORDER_ELSE
+>> Generated 184 Killed 65 (35%)
+> KILLED 65 SURVIVED 55 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 64 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator
+>> Generated 184 Killed 52 (28%)
+> KILLED 52 SURVIVED 68 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 64 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.IncrementsMutator
+>> Generated 39 Killed 14 (36%)
+> KILLED 11 SURVIVED 2 TIMED_OUT 1 NON_VIABLE 0 
+> MEMORY_ERROR 2 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 23 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.PrimitiveReturnsMutator
+>> Generated 65 Killed 25 (38%)
+> KILLED 25 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 39 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator
+>> Generated 27 Killed 1 (4%)
+> KILLED 1 SURVIVED 3 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 23 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanTrueReturnValsMutator
+>> Generated 64 Killed 38 (59%)
+> KILLED 38 SURVIVED 3 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 23 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.InvertNegsMutator
+>> Generated 1 Killed 1 (100%)
+> KILLED 1 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 0 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator_EQUAL_ELSE
+>> Generated 436 Killed 171 (39%)
+> KILLED 169 SURVIVED 86 TIMED_OUT 2 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 179 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.NullReturnValsMutator
+>> Generated 40 Killed 15 (38%)
+> KILLED 15 SURVIVED 1 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 24 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.MathMutator
+>> Generated 180 Killed 70 (39%)
+> KILLED 69 SURVIVED 32 TIMED_OUT 1 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 78 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.EmptyObjectReturnValsMutator
+>> Generated 256 Killed 136 (53%)
+> KILLED 136 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 120 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+> org.pitest.mutationtest.engine.gregor.mutators.returns.BooleanFalseReturnValsMutator
+>> Generated 41 Killed 27 (66%)
+> KILLED 27 SURVIVED 0 TIMED_OUT 0 NON_VIABLE 0 
+> MEMORY_ERROR 0 NOT_STARTED 0 STARTED 0 RUN_ERROR 0 
+> NO_COVERAGE 14 EQUIVALENT 0 
+--------------------------------------------------------------------------------
+================================================================================
+- Timings
+================================================================================
+> pre-scan for mutations : < 1 second
+> scan classpath : < 1 second
+> coverage and dependency analysis : < 1 second
+> build mutation tests : < 1 second
+> run mutation analysis : 1 minutes and 17 seconds
+--------------------------------------------------------------------------------
+> Total  : 1 minutes and 18 seconds
+--------------------------------------------------------------------------------
+> 0 tests took longer than 2000 ms
+> Slowest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.StringUtilsAgentTest]/[method:testContainsFamily()]) took 65 ms
+> Largest test ([engine:junit-jupiter]/[class:org.apache.commons.lang3.StringUtilsAgentTest]/[method:testContainsFamily()]) covered 94 blocks
+================================================================================
+- Statistics
+================================================================================
+>> Line Coverage (for mutated classes only): 882/1575 (56%)
+>> 1 tests examined
+>> Generated 1517 mutations Killed 615 (41%)
+>> Mutations with no coverage 651. Test strength 71%
+>> Ran 934 tests (0.62 tests per mutation)
+Enhanced functionality available at https://www.arcmutate.com/
