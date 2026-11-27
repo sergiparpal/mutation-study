@@ -1,0 +1,53 @@
+# Seventh campaign: the subjects, in the order of the runs.
+#
+# The 40 bugs of the sample (data/sample.txt), named <project>-<id> as in the
+# second campaign. The order is random.Random(20261127).shuffle of the tags
+# sorted. Both arms of a bug are run before the next: f7 first for the 1st,
+# 3rd, 5th ... bug and m7 first for the 2nd, 4th, 6th ... (bin/run-campaign7.sh).
+# Each bug's classes under test, trigger tests and issue are Defects4J's, read
+# when each version is staged (bin/campaign7-lib.sh).
+#
+# fault type: data/fault-taxonomy.csv as classified.
+# issue: the report Defects4J gives for the bug (active-bugs.csv).
+#
+# bug       fault type       issue
+Lang-13   OMISSION         LANG-788
+Cli-17    OMISSION         CLI-163
+Lang-65   OMISSION         LANG-59
+Gson-3    OMISSION         624
+Csv-3     OMISSION         CSV-58
+Csv-8     STATE            CSV-114
+Gson-4    ALGORITHM        773
+Lang-23   OMISSION         LANG-636
+Gson-15   MISSING_CLAUSE   1090
+Lang-62   OMISSION         LANG-292
+Lang-43   OMISSION         LANG-477
+Csv-16    API              CSV-224
+Lang-56   STATE            LANG-303
+Lang-21   SUBSTITUTION     LANG-677
+Csv-4     OMISSION         CSV-100
+Gson-8    OMISSION         817
+Gson-16   OMISSION         1128
+Cli-10    STATE            CLI-156
+Cli-21    ALGORITHM        CLI-150
+Csv-6     OMISSION         CSV-111
+Lang-36   MISSING_CLAUSE   LANG-521
+Gson-5    OMISSION         768
+Cli-32    ALGORITHM        CLI-193
+Gson-7    MISSING_CLAUSE   604
+Cli-12    OMISSION         cli-1
+Csv-5     OMISSION         CSV-106
+Cli-28    SUBSTITUTION     CLI-201
+Lang-34   SUBSTITUTION     LANG-586
+Lang-8    SUBSTITUTION     LANG-818
+Csv-10    OMISSION         CSV-120
+Cli-38    OMISSION         CLI-265
+Gson-6    OMISSION         800
+Gson-10   OMISSION         831
+Csv-15    ALGORITHM        CSV-219
+Csv-14    SUBSTITUTION     CSV-171
+Lang-52   OMISSION         LANG-363
+Gson-14   OMISSION         1074
+Csv-7     OMISSION         CSV-112
+Lang-63   ALGORITHM        LANG-281
+Cli-15    ALGORITHM        CLI-158
