@@ -2923,8 +2923,10 @@ Two things bear on that figure:
 - *Most findings are not the fault.* Of the 74 tests that fail on the faulty
   code, 65 do not pass on the fix, in 39 suites, and 32 messages name a bug
   that is not the fault. Some of those are real: in four runs the bug named is
-  another subject's fault, which a later fix repaired. A false alarm here is
-  relative to one fix. It is not a verdict on the behaviour it tests.
+  another subject's fault, which a later fix repaired, and two behaviours that
+  several runs name are bugs the projects have not fixed (§3.14). A false
+  alarm here is relative to one fix. It is not a verdict on the behaviour it
+  tests.
 
 The seventh campaign makes the same request on Defects4J, where recall could
 point the agent at the fix (§2.15, §3.15). Shown the buggy versions of the
@@ -2942,7 +2944,8 @@ The same two things bear on that figure:
   than the fix's, and fails on the fixed version too.
 - *Most findings are not the fault.* Of the 42 tests that fail on the buggy
   code, 38 do not pass on the fixed version, in 24 suites. In two runs the bug
-  named is another of the sample's faults, which a later fix repaired.
+  named is another of the sample's faults, which a later fix repaired, and
+  Lang-23's run names a bug the project has not fixed (§3.15).
 
 Recall did not show where it would be expected. The agent detects none of the
 four faults that the probe finds recalled or recognised, and none of its
@@ -3152,11 +3155,12 @@ the failing tests assert behaviours the fix changed besides the fault
 (§3.13). The sixth and seventh campaigns' detection is the same measure
 reached from the faulty side. Their false alarms are relative to the fix in
 the same way: a finding that the fix does not repair counts as one even when
-it shows a real fault, as four do in the sixth (§3.14) and two in the seventh
-(§3.15). The measure also misses a finding of the fault whose test expects a
-repaired behaviour other than the fix's, as two of the seventh's do. And
-whether a closing message names the fault was judged by one reader, against
-the fix, before anything was measured.
+it shows a real fault. In four runs of the sixth and two of the seventh the
+fault is another subject's, and in others it is a bug the projects have not
+fixed (§3.14, §3.15). The measure also misses a finding of the fault whose
+test expects a repaired behaviour other than the fix's, as two of the
+seventh's do. And whether a closing message names the fault was judged by one
+reader, against the fix, before anything was measured.
 
 **Javadoc is not an independent specification.** The S arm's oracle is
 documentation written by the same developers as the code, and sometimes derived
