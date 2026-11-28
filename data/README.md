@@ -2814,6 +2814,17 @@ places:
   for each class with the behaviour's terms. It finds no issue on any of the
   four. The nearest are LANG-136 and LANG-1504 on `StopWatch`, and CSV-102 and
   CSV-103 on record separators.
+- **The pull requests.** The three repositories have GitHub's issues turned
+  off and take changes as pull requests, so the same terms were searched there.
+  - In 2026, pull requests changed the same methods. In `equalsIgnoreCase`,
+    case folding: commons-lang #1745, commons-text #762. In
+    `ExtendedMessageFormat`, the `StringIndexOutOfBoundsException` of an
+    unterminated `"{0 "`: commons-lang #1701, commons-text #750. Neither pair
+    touches the null case or the trimming of format names. The fixes of
+    #1745 and #1701 are the subjects `7c91ce989` and `d927bfc84`, on which
+    `f6` found two of these behaviours.
+  - No pull request touches `StopWatch`'s list of rules or the `@throws` of
+    `withRecordSeparator`.
 
 All four behaviours are in the latest releases and on the default branches.
 
@@ -2831,12 +2842,15 @@ All four behaviours are in the latest releases and on the default branches.
   the sizes before any null check. It does so in Commons Lang's `StrBuilder`
   (deprecated since 3.6), in Commons Text's `StrBuilder` (deprecated), and in
   `TextStringBuilder`, which replaces them.
-- **`ExtendedMessageFormat`.** It trims a format name before looking it up in
-  its registry only when arguments follow the name. So `{0,upper ,x}` and
+- **`ExtendedMessageFormat`.** Its class javadoc says that "format-name and
+  format-style values are trimmed of surrounding whitespace in the manner of
+  java.text.MessageFormat". The code trims a format name before looking it up
+  in its registry only when arguments follow the name. So `{0,upper ,x}` and
   `{0, upper}` find the registered format, while `{0,upper }` and
   `{ 0 , upper }` throw "unknown format type: upper ". `java.text.MessageFormat`,
   which it extends, trims the names of its own types: `{0,number }` works. The
-  same code is in Commons Text's copy, and in Lang-23's version of 2010.
+  same sentence and the same code are in Commons Text's copy, and in Lang-23's
+  version of 2010.
 
 **The two errors in the javadoc.**
 
