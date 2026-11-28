@@ -2595,6 +2595,191 @@ detection in `m7` differ.
   November 2026 on the second campaign's three pilot bugs, in both arms. It
   holds their audit, their closing messages, and their measurement and
   mutation measurement. It is not part of any result.
+- `campaign7/probe-before-runs.txt`, `campaign7/saved-copies-before-runs.txt`:
+  the same two checks, made again before the runs, as the protocol's step 0
+  requires, and committed before the first run (`e8fa593`). Every check
+  passed. The first differs from `probe.txt` only in the random names of the
+  temporary directories, and in one run's own directory holding 4 entries
+  when it starts, where it held 3. The second is `saved-copies.txt` byte for
+  byte.
+
+### The runs
+
+`./bin/run-campaign7.sh` started on 28 November 2026 at 00:05:43 UTC, from
+`e8fa593`, the commit of step 0, whose scripts are those of the protocol's
+merge commit `f7c1252`. It ran detached, under a launcher that would have run
+it again after a stop at the usage limit; no such stop happened. The first run
+started at 00:05:58 UTC and the last ended at 03:47:05 UTC. The generation's
+log is `campaign7/generation.log`, and the runner's is `campaign7/launch.out`.
+
+- All 80 runs ended with an accepted suite. Every run reports
+  `claude-sonnet-5` and CLI 2.1.316, and each was staged on Java 11 with
+  Defects4J `v3.0.1-7-g8c16da82`.
+- One `m7` run, Lang-56, reached the limit of 50 turns, with a suite and no
+  closing message. No `f7` run did, and no run has more than one result.
+- Acceptance left out 42 of the 1,552 `f7` tests, in 26 suites: its findings.
+  It left out 1 of the 1,358 `m7` tests, in Lang-56. No class was left out as
+  a whole, and no suite had to be run a class at a time.
+- At list prices `f7` cost $20.55 and `m7` $16.83, or $0.51 and $0.42 a run,
+  against about $42 estimated for both before the runs. No run cost more than
+  $1.41. The `f7` runs took 19.8 turns on average and the `m7` runs 18.6.
+
+`campaign7/runs-f7/` and `campaign7/runs-m7/` hold each run's record, as the
+sixth campaign's do. `campaign7/suites/` holds the 80 accepted suites, as the
+agents wrote them.
+
+**One edit to the records.** In the transcript of `f7` on Gson-8
+(`campaign7/runs-f7/Gson-8.stream.jsonl.xz`), a scratch program the agent
+wrote in its working copy, and removed before it finished, made the JVM
+crash. The crash message names the machine's core-dump handler, and that name
+is replaced by `[redacted]` in its two occurrences, as in the second
+campaign's Gson log. The transcript was then compressed again, and every line
+of it still reads as JSON. The records were searched for details of the
+machine before they were committed, inside the compressed transcripts and
+archives too. Nothing else needed redacting.
+
+### The audit
+
+`./bin/audit-campaign7.py data/campaign7 -v > data/campaign7/audit.txt`, read
+on 28 November 2026 before anything was measured.
+
+- **Violations.** `campaign7/violations.txt` lists no run. Its comments say
+  what was flagged, and why none of it is a violation. No command reached for
+  the network. Five commands would have written a scratch program under
+  `/tmp`, and the harness refused each before it ran. The harness refused 41
+  calls in all, 22 in `f7` and 19 in `m7`.
+- **Closing messages.** Every `f7` closing message was read
+  (`./bin/audit-campaign7.py data/campaign7 --closing`), and each line of
+  `campaign7/closing-f7.txt` was judged against the bug's source patch in
+  Defects4J before anything was measured. 26 messages name a test as showing
+  a bug, and 6 of them name the fault. The 26 are the runs whose acceptance
+  left a test out. The file's comments give the reading used where a message
+  allows more than one behaviour, and list the 14 runs whose message names no
+  test as showing a bug.
+- **Naming the bug.** Both runs of Lang-36 name its trigger test
+  `testIsNumber`: each agent gave that name to a test of its own, of
+  `NumberUtils.isNumber`, as `m2`'s agent had in the second campaign.
+- **Files other than the test classes.** One run left some: `m7` on Lang-56,
+  ten scratch files in `_tools/out2/`. The protocol counts such runs and does
+  not exclude them.
+
+**The `.claude` folder in the working copy** shows as in the fourth to sixth
+campaigns. In 32 `f7` and 30 `m7` transcripts it is listed, in 7 and 9 with
+its entries. No agent read a file in it.
+
+### Detection
+
+`./bin/measure-campaign7.sh` ran from 04:00:10 to 04:14:44 UTC on 28 November
+2026, on Java 11 (`campaign7/results/`). Every suite but one compiles against
+both versions, and every `m7` suite passes again on its own.
+
+- `f7`: 4 suites are `Fail` (they detect the fault) and 36 `Pass`. They are
+  Cli-28, Cli-32, Gson-15 and Lang-36, four of the six runs that
+  `closing-f7.txt` marks `fault`. Four suites certify the fault, those of
+  Csv-3, Csv-8, Gson-4 and Lang-63, and none of them detects it.
+- `m7`: 21 suites are `Fail`, 18 `Pass` and 1 `Broken`. The `Broken` suite,
+  Cli-21's, calls `getCurrentOption` and `setCurrentOption`, which the fix
+  adds, so it does not compile on the buggy version. In the second campaign
+  neither suite of Cli-21 compiled there, for the same reason.
+- The `f7` findings, 42 methods in 26 suites, were run again on the buggy
+  version and on the fixed one. All 42 fail again on the buggy version. Four
+  pass on the fixed version and detect the fault, one in each suite above; 38
+  are false alarms, in 24 suites. The one test `m7` left out, Lang-56's, fails
+  on the buggy version too.
+- No verdict and no finding rests on a timeout.
+
+### Mutation score and line coverage
+
+`./bin/mutation-campaign7.sh` ran from 04:16:14 to 05:04:06 UTC on 28 November
+2026, on Java 11 (`campaign7/mutation/`). Coverage was measured on all 80
+suites, and mutation on the 76 outside Gson-14 and Gson-16, each suite on its
+own version. The 43 tests acceptance left out, 42 in `f7` and one in `m7`,
+were disabled in the source. No class had to be left out of an archive, and
+no suite needed one of the developers' test classes. The check run of every
+archive ran exactly the tests acceptance kept, and none of them failed. No
+suite needed the correction of Defects4J for Cli, and none took more than a
+minute. Pooled over the 38 suites with a mutation figure in each arm, the
+`f7` suites kill 54.4% of their mutants and the `m7` suites 53.3%. Major again
+left an empty `mmlc.log` in the repository's root, which was removed.
+
+### Analysis
+
+`./bin/analyze-campaign7.py > data/campaign7/analysis.txt`. The paired set has
+39 bugs: `m7`'s `Broken` suite of Cli-21 puts it outside.
+
+- **Detection when asked to look for faults.** 4 of 40 `f7` suites detect
+  the fault, 10.0% [2.5%, 20.0%].
+- **H1.** `f7` detects 4 and `m7` 21. Both detect on 3 bugs, `f7` alone on 1
+  (Cli-28) and `m7` alone on 18. Exact McNemar gives *p* = 7.63 × 10⁻⁵, and
+  the difference is −43.6 points [−61.5, −25.6]. H1 is rejected with `f7`
+  below `m7`.
+- **The corpus (secondary).** `f7` 10.3% beside `f6` 6.2%, +4.1 points
+  [−5.7, +15.2]; `m7` 53.8% beside `m6` 23.9%, +30.0 [+12.6, +47.2]; the
+  difference inside the campaign −43.6 points beside −17.7, −25.9
+  [−44.8, −6.9]. Weighted to the sample's fault types, `f6` and `m6` are at
+  6.8% and 22.2%.
+- **Certification (secondary).** 4 of 40, 10.0% [2.5%, 20.0%], beside `b5`'s
+  7 of 115 on the post-cutoff faults.
+- **Findings (secondary).** 42, of which 4 detect (9.5%) and 38 are false
+  alarms, in 24 suites.
+- **Closing messages (secondary).** Of the 6 runs that name the fault, 4
+  detect it. None of the 20 that name another bug detects, nor any of the 14
+  that name none.
+- **Mutation score (secondary).** On the 37 bugs of the complete set, the
+  pooled scores are 54.2% and 53.1%, +1.1 [−2.0, +4.4]. Line coverage is
+  83.0% and 82.4%. In all 80 suites, the tests in the archive for Major are
+  those the measurement ran.
+- **Sensitivity.** All six analyses keep the direction, with *p* between
+  7.63 × 10⁻⁵ and 1.45 × 10⁻⁴.
+- **Descriptive.** By fault type, `f7` detects none of the 22 omissions, where
+  `m7` detects 13. `m2` and `m7` agree on 87.2% of the 39 bugs, κ 0.74. `s2`
+  and `f7` share two detections. Of the four bugs the memorisation probe
+  flagged, `f7` detects none and `m7` one, Lang-43.
+
+`bin/describe-campaign7.py`, written on 28 November 2026 after the analysis,
+prints the descriptive figures that §3.15 quotes.
+
+**What the detecting tests assert** (read on 28 November 2026, after the
+analysis). Each of the four `f7` detections rests on one test. The closing
+message names it with the fault, and each asserts the behaviour that the fix
+makes:
+
+- Cli-28: `testPropertyProcessingContinuesAfterDisabledFlag`, that a property
+  set to true is applied after one set to false;
+- Cli-32: `testFindWrapPosNoWhitespaceAnywhereInText`, that
+  `findWrapPos("abcdefghij", 4, 0)` returns a position in the text or −1;
+- Gson-15: `testNonFiniteDoublesSucceedWhenLenient`, that a lenient writer
+  writes NaN and the infinities;
+- Lang-36: `testCreateNumberTrailingDot`, that `createNumber("1.")` returns
+  1.0.
+
+Two runs whose message names the fault do not detect it, because their tests
+expect a repaired behaviour other than the fix's. Csv-4's
+`testNoHeaderMapWhenFormatHasNoHeader` asserts that `getHeaderMap()` is empty
+when the format has no header, and the fixed version returns `null`, so the
+test throws `NullPointerException` on both versions. Lang-43's
+`testAppendQuotedStringAdvancesPastLeadingQuote` asserts that the parse
+position moves past a leading quote and that the quoted text `x` is appended.
+The fixed version moves it and appends the quote.
+
+**What the other bugs are** (read on 28 November 2026, after the analysis). A
+false alarm is a finding that the fix does not repair. Of the 20 runs whose
+closing message names a bug other than the fault, two name one that is the
+fault of another bug of the sample, repaired by a later fix. In each case the
+run's fix commit is an ancestor of that later fix (checked in Defects4J's
+repositories), and the later fix changes the behaviour the message names:
+
+- Cli-10 names the `break` in `Parser.processProperties`, the fault of
+  Cli-28. Cli-10's fix commit is of May 2008 and Cli-28's of June 2010;
+- Gson-4 names `JsonWriter.value(double)` throwing on NaN and the infinities
+  when the writer is lenient, the fault of Gson-15. Gson-4's fix commit is of
+  January 2016 and Gson-15's of May 2017.
+
+One behaviour is named in two runs, Csv-14 and Csv-15:
+`CSVFormat.withRecordSeparator(String)` accepts any string. Lang-23's names
+one that two `f6` runs named in the same class in 2026, `5b3a81dcd` and
+`d927bfc84`: `ExtendedMessageFormat` does not trim a format name followed by
+a space. Whether the projects count these as bugs was not checked.
 
 ## Infrastructure failures and exclusions
 
@@ -2676,4 +2861,6 @@ mistake for results:
 - [x] Write-up carries the sixth campaign: `PREPRINT.md` §2.14 and §3.14, and the abstract, introduction, discussion (§4.1, §4.2, §4.3, §4.6), threats, related work, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign6.py`, and §3.14 in `bin/report-figures.py`
 - [x] Seventh campaign prepared: protocol, scripts, checks without the model on the sample's 40 bugs in both arms, and a pilot (`campaign7/`)
 - [x] Seventh campaign's protocol fixed before any run on the subjects (`campaign7/PROTOCOL.md`)
+- [x] Seventh campaign run: the sample's 40 bugs in both arms, 80 runs, audited, measured and analysed. Asked to look for faults, `f7` detects 10.0% (4/40); on the 39 paired bugs it detects 4 against `m7`'s 21, and H1 is rejected with `f7` below `m7` (*p* = 7.63 × 10⁻⁵); the pooled mutation scores are 54.2% and 53.1%. No deviation; one transcript redacted (`campaign7/`)
+- [x] Write-up carries the seventh campaign: `PREPRINT.md` §2.15 and §3.15, and the abstract, introduction, discussion (§4.1, §4.2, §4.3, §4.6), threats, related work, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign7.py`, and §3.15 in `bin/report-figures.py`
 - [ ] A matched post-cutoff corpus large enough to test the effect size. Not pursued (21 November 2026): a corpus matched to the Defects4J sample can take at most 69 of the pool's 131 new subjects, 115 of which the fourth campaign has run, and its analysis weights detection by the sample's fault types instead (`campaign4/analysis.txt`)

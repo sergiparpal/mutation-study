@@ -20,7 +20,9 @@ agent either works in the project's source tree or sees only its javadoc. The
 comparison was run twice on the same 40 Defects4J bugs, and twice more on
 faults fixed after the model's training data ends: 28 in a third campaign and
 115 in a fourth. A fifth campaign showed the agent the faulty revision of the
-fourth campaign's 115 faults, and a sixth asked it to look for faults there.
+fourth campaign's 115 faults, and a sixth asked it to look for faults there. A
+seventh asked it to look for faults in Defects4J's buggy versions of the 40
+bugs.
 
 **The second campaign is the controlled one.** Its working copies hold nothing
 of the benchmark's own, a sandbox enforces the conditions, every run's
@@ -177,6 +179,39 @@ against 41.2%, +4.5 points with an interval of +0.8 to +8.4. Run three times,
 the arm that reads the repaired code gives verdicts that agree with a Fleiss'
 κ of 0.60.
 
+**The seventh campaign makes the same request on Defects4J.** It runs on the
+40 bugs of the first two campaigns, with two arms:
+
+- one implementation-visible arm works on Defects4J's buggy version of each
+  bug and is asked to find bugs, in the sixth campaign's words. A finding that
+  passes on the fixed version detects the fault;
+- the second campaign's implementation-visible arm is run a second time
+  beside it, on the fixed version.
+
+The protocol is `data/campaign7/PROTOCOL.md`.
+
+| arm | fault detected | mutation score | line coverage |
+|---|---|---|---|
+| reads the faulty code, asked to look for faults | **4/39 — 10%** | 54% | 83% |
+| reads the repaired code | **21/39 — 54%** | 53% | 82% |
+
+Detection is over the 39 bugs with a verdict in both arms. Three are detected
+by both arms, one by the first alone and 18 by the second alone (exact
+McNemar, *p* = 7.6 × 10⁻⁵). The difference is −43.6 points, with an interval
+of −61.5 to −25.6. **On Defects4J too, the agent asked to look detects the
+fault a fifth as often as the regression setting credits it.** The gap is
+wider than on the post-cutoff faults. Asked to look, the agent finds about as
+little as there, 10% against 6%, while the arm that reads the repair detects
+54% against 24%. The first arm detects none of the 22 omissions, and none of
+the four faults the memorisation probe flags. Of its 42 findings, 38 do not
+pass on the fixed version.
+
+Mutation score and coverage are over the 37 bugs with a figure in both arms,
+measured with Major as in the second campaign, and the first arm's findings
+are not in them. Run a second time, the arm that reads the repaired code
+detects 21 of the 39 bugs where it had detected 22, and the two runs agree on
+34 of them (κ 0.74).
+
 Mutation score and coverage measure how much of a program a suite exercises
 and how hard it checks what it exercises. Neither measures where the expected
 values came from.
@@ -315,14 +350,19 @@ directory holds:
 
 - its protocol (`PROTOCOL.md`), fixed before any run on the subjects;
 - the subject list;
-- the output of the two sandbox checks;
-- the pilot (`pilot/`).
+- the output of the two sandbox checks, before the pilot and before the runs;
+- the pilot (`pilot/`);
+- the records of its 80 runs (`runs-f7/`, `runs-m7/`, `suites/`);
+- their audit (`audit.txt`, `violations.txt`, `closing-f7.txt`);
+- the measurement (`results/`), mutation score and line coverage
+  (`mutation/`), and the analysis (`analysis.txt`).
 
 Its scripts are `bin/subjects-campaign7.py`, `bin/generate-campaign7.sh`,
 `bin/run-campaign7.sh`, `bin/audit-campaign7.py`, `bin/measure-campaign7.sh`,
 `bin/mutation-campaign7.sh`, `bin/analyze-campaign7.py`,
 `bin/disable-tests-campaign7.py`, `bin/campaign7-lib.sh` and
-`bin/AgentTestRunner4.java`, all committed with its protocol. They use
+`bin/AgentTestRunner4.java`, all committed with its protocol, and
+`bin/describe-campaign7.py`, written after the analysis. They use
 `bin/agent-sandbox.py`, `bin/merge-agent-metrics.py` and helpers of
 `bin/campaign3-lib.sh` unchanged.
 
@@ -349,7 +389,8 @@ table above:
 - **The second campaign is the same forty bugs.** Its analysis was fixed
   before its runs, with the first campaign's results already known. It shows
   that the effect survives control on new runs. It does not show that it holds
-  on new faults. There is one run per bug and arm in each campaign.
+  on new faults. There is one run per bug and arm in each campaign. The
+  seventh campaign is on the same forty bugs again.
 - **On new faults the effect rests on one campaign.** The third campaign's
   test does not reject: 8/23 against 5/23, *p* = 0.25, three discordant pairs
   where the test needed six. The fourth's does, on 112 subjects.
@@ -376,17 +417,24 @@ table above:
   rests on behaviours the fix changed besides the fault. The sixth's agent is
   asked to find bugs, in one explicit wording, and the prompt names the
   classes to look in. A vaguer request, or none of the names, could find less.
+  The seventh's agent is given the same request, on Defects4J.
 - **A false alarm is relative to one fix.** In the sixth campaign, a finding
   that does not pass on the fix counts as a false alarm, and 65 of the 74 do
   not. In four runs, though, what the findings show is another subject's
-  fault, which a later fix repaired. The count of false alarms is an upper
-  bound on the findings that show no fault, not a measure of them.
+  fault, which a later fix repaired. In the seventh, 38 of the 42 do not pass
+  on the fixed version, and in two runs they show another bug's fault in the
+  same way. The count of false alarms is an upper bound on the findings that
+  show no fault, not a measure of them. In the other direction, two seventh
+  campaign runs name the fault and do not detect it: their tests expect a
+  repaired behaviour other than the fix's.
 - **Verdicts vary between runs.** Each campaign has one run per subject and
   arm. The fifth and sixth campaigns ran the fourth's implementation-visible
   arm again on the same 115 subjects. Between the first two runs 15 verdicts
   changed (agreement 87%, κ 0.60), and between the last two 15 again (87%,
-  κ 0.63). The between-arm differences the tests rest on are larger than that.
-  But no single verdict should be read as a property of its subject.
+  κ 0.63). The seventh ran the second campaign's again on the 40 Defects4J
+  bugs, and 5 of 39 verdicts changed (87%, κ 0.74). The between-arm
+  differences the tests rest on are larger than that. But no single verdict
+  should be read as a property of its subject.
 - **The sandbox was less tight than its settings were meant to make it.** The
   third campaign's audit found that the directory the harness gives commands
   for temporary files is the host's own and shared by every run, in that
@@ -399,7 +447,7 @@ table above:
   result is the same with them in (9/27 against 6/27, *p* = 0.25). A check made
   after the campaign, with its settings and no model, confirmed that a command
   could list and read that directory. Settings that close it are in
-  `bin/agent-sandbox.py`, and the fourth to sixth campaigns ran under them.
+  `bin/agent-sandbox.py`, and the fourth to seventh campaigns ran under them.
   None of their audits found a violation.
 - **The sixth campaign shared its machine** with an unrelated job, during the
   last five hours of generation and all of the measurement. No verdict rests
@@ -411,7 +459,10 @@ table above:
   benchmark identifiers not memorised. But recall may be cued by the source
   rather than spontaneous, and the probe withholds the source. The second
   campaign's transcripts show no agent naming a bug, which is not the same as
-  no agent recalling one.
+  no agent recalling one. Shown the faulty source of the forty bugs and asked
+  to look for faults, the seventh campaign's agent detects none of the four
+  the probe flags. That too is what the agents did, not a bound on what they
+  recalled.
 - **The earlier runs on the post-cutoff corpora were not controlled.** Two
   corpora were mined. In their first runs the first has no valid
   specification-only result: a harness error recorded seven failed licence
@@ -432,17 +483,20 @@ from `data/`. The evidence of §3.9 is printed by `./bin/audit-trigger-leaks.py`
 the classification of §3.3 is recorded in `data/contract-violation.md`, and
 some other figures are quoted from records under `data/`, as the script's
 header describes. What the transcript audits found is in the `audit.txt` and
-`violations.txt` of `data/campaign2/` to `data/campaign6/`. None of it needs
+`violations.txt` of `data/campaign2/` to `data/campaign7/`. None of it needs
 Defects4J or model access. `./bin/analyze-campaign2.py` to
-`./bin/analyze-campaign6.py` print the second to sixth campaigns' analyses on
-their own, and
+`./bin/analyze-campaign7.py` print the second to seventh campaigns' analyses
+on their own, and
 `./bin/analyze-mutation-campaign3.py` the third campaign's mutation figures.
 No Python script under `bin/` needs a package outside the standard library
 except `bin/zenodo-metadata.py`, which reads `CITATION.cff` with PyYAML.
 
 Re-measuring from the packaged suites in `data/agent-suites/` and
 `data/campaign2/suites/` needs Defects4J v3.0.1 under Java 11 with
-`TZ=America/Los_Angeles` (`bin/analyze-agent-suites.sh`). The post-cutoff
+`TZ=America/Los_Angeles` (`bin/analyze-agent-suites.sh`). So does
+re-measuring the seventh campaign's suites (`bin/measure-campaign7.sh` and
+`bin/mutation-campaign7.sh`), whose scripts check for the Defects4J revision
+the campaign used, `v3.0.1-7-g8c16da82`. The post-cutoff
 corpora and the third to sixth campaigns' suites (`bin/measure-campaign3.sh`
 to `bin/measure-campaign6.sh`) need clones of the upstream repositories, Java
 11 and Maven 3.9+. Their mutation score (`bin/mutation-campaign3.sh` to

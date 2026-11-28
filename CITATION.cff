@@ -35,8 +35,12 @@ abstract: >-
   and asked it to look for faults. Its suites detect the fault on 7 of 113
   subjects (6%), against 27 (24%) for the arm that reads the repair
   (p = 0.00004), while scoring higher on mutation, 46% against 41% pooled.
+  A seventh made the same request on Defects4J's buggy versions of the 40
+  bugs. Its suites detect the fault on 4 of 39 (10%), against 21 (54%) for
+  the second campaign's implementation-visible arm, run again
+  (p = 0.00008), at pooled mutation scores of 54% and 53%.
   The repository holds the generation and measurement scripts, the protocols
-  and full records of the second to sixth campaigns,
+  and full records of the second to seventh campaigns,
   the per-suite measurements, an EvoSuite baseline, a hand classification of
   the 40 faults, a probe of what the model recalls about each fault with no
   code in context, two post-cutoff replication corpora and the pool of
