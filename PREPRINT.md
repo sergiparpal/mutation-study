@@ -2327,7 +2327,8 @@ two name. Two of the three are bugs, in the projects' latest releases and with
 no issue reported (data/README.md). `equalsIgnoreCase(null)` throws where its
 javadoc says it returns false, and so does Commons Text's `TextStringBuilder`,
 which replaces the class. A registered format name followed by a space is not
-found, where `java.text.MessageFormat` trims the names of its own types. The
+found, although the class's javadoc says that format names are trimmed of
+surrounding whitespace "in the manner of `java.text.MessageFormat`". The
 third is an error in the javadoc. Its list of rules says that `split` cannot
 be called twice, but the class has allowed it since 2005, and since version
 3.20.0 it keeps every split.
