@@ -1,0 +1,100 @@
+variant	change	method	lines	line_counters
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	parse(File,CSVFormat)	3	3
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	parse(String,CSVFormat)	3	3
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	parse(URL,Charset,CSVFormat)	5	4
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	<init>(Reader,CSVFormat)	10	0
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	addRecordValue()	6	0
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	close()	3	0
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	getCurrentLineNumber()	1	0
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	getHeaderMap()	1	0
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	getRecordNumber()	1	0
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	getRecords()	4	0
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	initializeHeader()	17	0
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	isClosed()	1	0
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	iterator()	1	0
+defects4j-compiled	the class Defects4J's build compiled from the source as it is	nextRecord()	24	3
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	parse(File,CSVFormat)	3	3
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	parse(String,CSVFormat)	3	3
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	parse(URL,Charset,CSVFormat)	5	4
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	<init>(Reader,CSVFormat)	10	0
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	addRecordValue()	6	0
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	close()	3	0
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	getCurrentLineNumber()	1	0
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	getHeaderMap()	1	0
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	getRecordNumber()	1	0
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	getRecords()	4	0
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	initializeHeader()	17	0
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	isClosed()	1	0
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	iterator()	1	0
+as-is	the source as it is: the conditional inside new InputStreamReader(...), itself inside new CSVParser(...)	nextRecord()	24	3
+one-line	the same statement on one line	parse(File,CSVFormat)	3	3
+one-line	the same statement on one line	parse(String,CSVFormat)	3	3
+one-line	the same statement on one line	parse(URL,Charset,CSVFormat)	4	4
+one-line	the same statement on one line	<init>(Reader,CSVFormat)	10	0
+one-line	the same statement on one line	addRecordValue()	6	0
+one-line	the same statement on one line	close()	3	0
+one-line	the same statement on one line	getCurrentLineNumber()	1	0
+one-line	the same statement on one line	getHeaderMap()	1	0
+one-line	the same statement on one line	getRecordNumber()	1	0
+one-line	the same statement on one line	getRecords()	4	0
+one-line	the same statement on one line	initializeHeader()	17	0
+one-line	the same statement on one line	isClosed()	1	0
+one-line	the same statement on one line	iterator()	1	0
+one-line	the same statement on one line	nextRecord()	24	3
+local-variable	the conditional assigned to a local variable first	parse(File,CSVFormat)	3	3
+local-variable	the conditional assigned to a local variable first	parse(String,CSVFormat)	3	3
+local-variable	the conditional assigned to a local variable first	parse(URL,Charset,CSVFormat)	5	6
+local-variable	the conditional assigned to a local variable first	<init>(Reader,CSVFormat)	10	10
+local-variable	the conditional assigned to a local variable first	addRecordValue()	6	8
+local-variable	the conditional assigned to a local variable first	close()	3	4
+local-variable	the conditional assigned to a local variable first	getCurrentLineNumber()	1	1
+local-variable	the conditional assigned to a local variable first	getHeaderMap()	1	2
+local-variable	the conditional assigned to a local variable first	getRecordNumber()	1	1
+local-variable	the conditional assigned to a local variable first	getRecords()	4	5
+local-variable	the conditional assigned to a local variable first	initializeHeader()	17	24
+local-variable	the conditional assigned to a local variable first	isClosed()	1	1
+local-variable	the conditional assigned to a local variable first	iterator()	1	1
+local-variable	the conditional assigned to a local variable first	nextRecord()	24	35
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	parse(File,CSVFormat)	3	3
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	parse(String,CSVFormat)	3	3
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	parse(URL,Charset,CSVFormat)	5	6
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	<init>(Reader,CSVFormat)	10	10
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	addRecordValue()	6	8
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	close()	3	4
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	getCurrentLineNumber()	1	1
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	getHeaderMap()	1	2
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	getRecordNumber()	1	1
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	getRecords()	4	5
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	initializeHeader()	17	24
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	isClosed()	1	1
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	iterator()	1	1
+one-constructor	the reader built in a statement of its own: the conditional inside one constructor call	nextRecord()	24	35
+static-helper	the reader built by a static method: no constructor call around the conditional	parse(File,CSVFormat)	3	3
+static-helper	the reader built by a static method: no constructor call around the conditional	parse(String,CSVFormat)	3	3
+static-helper	the reader built by a static method: no constructor call around the conditional	parse(URL,Charset,CSVFormat)	5	6
+static-helper	the reader built by a static method: no constructor call around the conditional	reader(InputStream,Charset)	1	1
+static-helper	the reader built by a static method: no constructor call around the conditional	<init>(Reader,CSVFormat)	10	10
+static-helper	the reader built by a static method: no constructor call around the conditional	addRecordValue()	6	8
+static-helper	the reader built by a static method: no constructor call around the conditional	close()	3	4
+static-helper	the reader built by a static method: no constructor call around the conditional	getCurrentLineNumber()	1	1
+static-helper	the reader built by a static method: no constructor call around the conditional	getHeaderMap()	1	2
+static-helper	the reader built by a static method: no constructor call around the conditional	getRecordNumber()	1	1
+static-helper	the reader built by a static method: no constructor call around the conditional	getRecords()	4	5
+static-helper	the reader built by a static method: no constructor call around the conditional	initializeHeader()	17	24
+static-helper	the reader built by a static method: no constructor call around the conditional	isClosed()	1	1
+static-helper	the reader built by a static method: no constructor call around the conditional	iterator()	1	1
+static-helper	the reader built by a static method: no constructor call around the conditional	nextRecord()	24	35
+no-conditional	charset passed as it is	parse(File,CSVFormat)	3	3
+no-conditional	charset passed as it is	parse(String,CSVFormat)	3	3
+no-conditional	charset passed as it is	parse(URL,Charset,CSVFormat)	4	4
+no-conditional	charset passed as it is	<init>(Reader,CSVFormat)	10	10
+no-conditional	charset passed as it is	addRecordValue()	6	8
+no-conditional	charset passed as it is	close()	3	4
+no-conditional	charset passed as it is	getCurrentLineNumber()	1	1
+no-conditional	charset passed as it is	getHeaderMap()	1	2
+no-conditional	charset passed as it is	getRecordNumber()	1	1
+no-conditional	charset passed as it is	getRecords()	4	5
+no-conditional	charset passed as it is	initializeHeader()	17	24
+no-conditional	charset passed as it is	isClosed()	1	1
+no-conditional	charset passed as it is	iterator()	1	1
+no-conditional	charset passed as it is	nextRecord()	24	35

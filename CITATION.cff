@@ -20,7 +20,7 @@ abstract: >-
   the working copy, the conditions enforced by a sandbox, every transcript
   kept and the analysis fixed in advance, real-fault detection falls from 56%
   to 18% over 39 bugs, while mutation score falls from 54% to 39% and line
-  coverage from 84% to 70%. The first campaign, on standard Defects4J
+  coverage from 85% to 71%. The first campaign, on standard Defects4J
   checkouts, gave 72% against 14%. Two further campaigns, under the second's
   conditions and protocols also fixed in advance, took the comparison to
   faults that postdate the model's training data. On 28 of them the arms

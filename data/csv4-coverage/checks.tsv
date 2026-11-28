@@ -1,0 +1,3 @@
+check	what	expected	got	holds
+check-Csv-7f-m2	Csv-7's m2 suite: lines counted either way, against Cobertura's count	93	93	yes
+check-offline-agent	the first campaign's M suite measured offline, against its run with the agent	92	92	yes

@@ -31,8 +31,8 @@ fixed before the first run (`data/campaign2/PROTOCOL.md`).
 
 | arm | real fault detected | mutation score | line coverage |
 |---|---|---|---|
-| implementation-visible | **22/39 — 56%** | 54% | 84% |
-| specification-only | **7/39 — 18%** | 39% | 70% |
+| implementation-visible | **22/39 — 56%** | 54% | 85% |
+| specification-only | **7/39 — 18%** | 39% | 71% |
 
 Detection is over the 39 bugs with a verdict in both arms: 16 faults are
 detected by the first arm alone and one by the second alone (exact McNemar,
@@ -46,9 +46,9 @@ is the pre-specified test of the claim in the title.
 
 | arm | real fault detected | mutation score | line coverage |
 |---|---|---|---|
-| implementation-visible | 26/36 — 72% | 58% | 85% |
-| specification-only | 5/36 — 14% | 44% | 73% |
-| EvoSuite (baseline) | 15/35 — 43% | 47% | 85% |
+| implementation-visible | 26/36 — 72% | 58% | 86% |
+| specification-only | 5/36 — 14% | 44% | 74% |
+| EvoSuite (baseline) | 15/35 — 43% | 47% | 86% |
 
 Such a checkout tells the agent more than the code does: Defects4J's own files
 name the bug and the tests that expose it. Without them the
@@ -192,8 +192,8 @@ The protocol is `data/campaign7/PROTOCOL.md`.
 
 | arm | fault detected | mutation score | line coverage |
 |---|---|---|---|
-| reads the faulty code, asked to look for faults | **4/39 — 10%** | 54% | 83% |
-| reads the repaired code | **21/39 — 54%** | 53% | 82% |
+| reads the faulty code, asked to look for faults | **4/39 — 10%** | 54% | 84% |
+| reads the repaired code | **21/39 — 54%** | 53% | 83% |
 
 Detection is over the 39 bugs with a verdict in both arms. Three are detected
 by both arms, one by the first alone and 18 by the second alone (exact
@@ -238,6 +238,8 @@ values came from.
 | `bin/analyze-agent-suites.sh` | measurement, wrapping Defects4J's own scripts |
 | `bin/merge-agent-metrics.py` | merges Defects4J's tables and recomputes the mutation columns from Major's output |
 | `bin/remeasure-cli-evosuite.sh` | measures five EvoSuite suites again with one path in Defects4J corrected |
+| `bin/check-cobertura-instrumentation.py` | which methods of the measured classes Cobertura gives a line counter: in Csv-4's `CSVParser`, the one class of the sample where most have none, their lines read as never executed |
+| `bin/remeasure-csv4-coverage.sh` | measures the line coverage of Csv-4's seven Cobertura-measured suites again, with JaCoCo beside Cobertura; output in `data/csv4-coverage/` |
 | `bin/report-figures.py` | recomputes most of the figures of §3 of the write-up from `data/` |
 | `bin/audit-trigger-leaks.py` | what the generated suites and run records give away about what the agent knew |
 
@@ -479,28 +481,32 @@ table above:
 ## Reproducing
 
 `./bin/report-figures.py` recomputes most of the figures of §3 of the write-up
-from `data/`. The evidence of §3.9 is printed by `./bin/audit-trigger-leaks.py`,
-the classification of §3.3 is recorded in `data/contract-violation.md`, and
-some other figures are quoted from records under `data/`, as the script's
-header describes. What the transcript audits found is in the `audit.txt` and
-`violations.txt` of `data/campaign2/` to `data/campaign7/`. None of it needs
-Defects4J or model access. `./bin/analyze-campaign2.py` to
-`./bin/analyze-campaign7.py` print the second to seventh campaigns' analyses
-on their own, and
+from `data/`. It counts Csv-4's line coverage as measured again
+(`data/csv4-coverage/`); with `--as-recorded` it prints the figures from the
+tables as they were recorded. The evidence of §3.9 is printed by
+`./bin/audit-trigger-leaks.py`, the classification of §3.3 is recorded in
+`data/contract-violation.md`, and some other figures are quoted from records
+under `data/`, as the script's header describes. What the transcript audits
+found is in the `audit.txt` and `violations.txt` of `data/campaign2/` to
+`data/campaign7/`. None of it needs Defects4J or model access.
+`./bin/analyze-campaign2.py` to `./bin/analyze-campaign7.py` print the second
+to seventh campaigns' analyses on their own, from the tables as recorded, and
 `./bin/analyze-mutation-campaign3.py` the third campaign's mutation figures.
 No Python script under `bin/` needs a package outside the standard library
 except `bin/zenodo-metadata.py`, which reads `CITATION.cff` with PyYAML.
 
 Re-measuring from the packaged suites in `data/agent-suites/` and
 `data/campaign2/suites/` needs Defects4J v3.0.1 under Java 11 with
-`TZ=America/Los_Angeles` (`bin/analyze-agent-suites.sh`). So does
-re-measuring the seventh campaign's suites (`bin/measure-campaign7.sh` and
+`TZ=America/Los_Angeles` (`bin/analyze-agent-suites.sh`). So does re-measuring
+the seventh campaign's suites (`bin/measure-campaign7.sh` and
 `bin/mutation-campaign7.sh`), whose scripts check for the Defects4J revision
-the campaign used, `v3.0.1-7-g8c16da82`. The post-cutoff
-corpora and the third to sixth campaigns' suites (`bin/measure-campaign3.sh`
-to `bin/measure-campaign6.sh`) need clones of the upstream repositories, Java
-11 and Maven 3.9+. Their mutation score (`bin/mutation-campaign3.sh` to
-`bin/mutation-campaign6.sh`) also needs PIT, which each script fetches from
-Maven Central once and checks against the hashes written in it.
-Regenerating the suites needs the model and costs between $0.40 and $1 per
-suite at list prices.
+the campaign used, `v3.0.1-7-g8c16da82`. So does measuring Csv-4's line
+coverage again (`bin/remeasure-csv4-coverage.sh`), which also fetches JaCoCo
+from Maven Central and checks it against the hashes written in it. The
+post-cutoff corpora and the third to sixth campaigns' suites
+(`bin/measure-campaign3.sh` to `bin/measure-campaign6.sh`) need clones of the
+upstream repositories, Java 11 and Maven 3.9+. Their mutation score
+(`bin/mutation-campaign3.sh` to `bin/mutation-campaign6.sh`) also needs PIT,
+which each script fetches from Maven Central once and checks against the
+hashes written in it. Regenerating the suites needs the model and costs
+between $0.40 and $1 per suite at list prices.
