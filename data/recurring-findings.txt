@@ -1,0 +1,35 @@
+commons-lang3 3.22.0, commons-text 1.15.0, commons-csv 1.14.1
+
+1. StopWatch: the class's javadoc says split(), suspend() and stop() cannot be invoked twice
+split(), split() -> accepted; getSplits().size() = 2
+suspend(), suspend() -> IllegalStateException: "Stopwatch must be running to suspend."
+stop(), stop() -> IllegalStateException: "Stopwatch is not running."
+
+2. equalsIgnoreCase(null): the javadoc of each says "null returns false"
+commons-lang3 StrBuilder.equals((StrBuilder) null) -> false
+commons-lang3 StrBuilder.equalsIgnoreCase(null) -> NullPointerException
+commons-text StrBuilder.equalsIgnoreCase(null) -> NullPointerException
+commons-text TextStringBuilder.equals((TextStringBuilder) null) -> false
+commons-text TextStringBuilder.equalsIgnoreCase(null) -> NullPointerException
+
+3. ExtendedMessageFormat with a format registered as "upper", formatting "ab"
+commons-lang3 "{0,upper}" -> AB
+commons-text  "{0,upper}" -> AB
+commons-lang3 "{0, upper}" -> AB
+commons-text  "{0, upper}" -> AB
+commons-lang3 "{0,upper }" -> IllegalArgumentException: "unknown format type: upper "
+commons-text  "{0,upper }" -> IllegalArgumentException: "unknown format type: upper "
+commons-lang3 "{ 0 , upper }" -> IllegalArgumentException: "unknown format type: upper "
+commons-text  "{ 0 , upper }" -> IllegalArgumentException: "unknown format type: upper "
+commons-lang3 "{0,upper ,x}" -> AB
+commons-text  "{0,upper ,x}" -> AB
+java.text.MessageFormat "{0,number }", formatting 1.5 -> 1.5
+
+4. CSVFormat.withRecordSeparator: the javadoc of the String overload says it throws IllegalArgumentException if the separator is none of CR, LF or CRLF
+CSVFormat.DEFAULT.withRecordSeparator("abc") -> accepted; record separator "abc"
+CSVFormat.DEFAULT.withRecordSeparator('x') -> accepted; record separator "x"
+
+Other claims of the same runs
+Csv-15: CSVFormat.DEFAULT.withTrim().equals(CSVFormat.DEFAULT) -> false
+Csv-15: CSVFormat.DEFAULT.withAllowMissingColumnNames().equals(CSVFormat.DEFAULT) -> false
+Lang-23: commons-lang3 ExtendedMessageFormat("'{0}' {1,upper}").toPattern() -> '{'0} {1}
