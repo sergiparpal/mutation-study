@@ -1,0 +1,10 @@
+--- a/bin/mutation-campaign7.sh
++++ b/bin/mutation-campaign7.sh
+@@ -407,6 +407,7 @@
+         echo >> "$Q.row"
+         printf '[%s] %s  %s  mutants %s/%s  lines %s/%s  developers'"'"' files added %s  %s\n' "$TAG" "$ARM" "$STATUS" \
+             "${KILL:--}" "${GEN:--}" "${LC:--}" "${LT:--}" "$ADDED" "${NOTE}"
++        [ -d "$A/d" ] && cp -a "$A/d" "$KEEP/$TAG.$ARM.d"
+         rm -rf "$A"
+     done
+ done < "$SUBJECTS"

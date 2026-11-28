@@ -1,0 +1,8 @@
+run	table	key_columns	key	lines_total	recorded	cobertura	jacoco	corrected	method
+c1-agent	data/agent-metrics-final.csv	project_id,version_id,test_suite_source	Csv,4f,agent	100	28	28	91	92	agent
+c1-spec	data/agent-metrics-final.csv	project_id,version_id,test_suite_source	Csv,4f,spec	100	27	27	76	77	agent
+c1-evosuite	data/agent-metrics-final.csv	project_id,version_id,test_suite_source	Csv,4f,evosuite	100	21	21	87	89	offline
+c2-m2	data/campaign2/results/agent-metrics.csv	project_id,version_id,test_suite_source	Csv,4f,m2	100	27	27	92	94	agent
+c2-s2	data/campaign2/results/agent-metrics.csv	project_id,version_id,test_suite_source	Csv,4f,s2	100	26	26	73	75	agent
+c7-m7	data/campaign7/mutation/mutation.csv	bug,arm	Csv-4,m7	100	24	24	89	90	agent
+c7-f7	data/campaign7/mutation/mutation.csv	bug,arm	Csv-4,f7	100	28	28	94	95	agent
