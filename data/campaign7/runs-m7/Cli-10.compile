@@ -1,0 +1,2 @@
+Note: src/test/org/apache/commons/cli/ParserAgentTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.

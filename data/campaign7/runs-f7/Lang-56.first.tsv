@@ -1,0 +1,38 @@
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testLiteralQuotedText()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testAccessorsWithExplicitTimeZoneAndLocale()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatCalendarForcedZoneOverridesCalendarZoneWithoutMutatingCaller()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatDateMatchesSimpleDateFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTwoDigitYearMatchesSimpleDateFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetDateTimeInstanceMatchesSimpleDateFormatPattern()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatObjectWithUnsupportedTypeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatObjectDispatchesByType()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testToString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetDateInstanceInvalidStyleThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testPaddedFourDigitYearBoundaries()	1	0	
+FAILED	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetMaxLengthEstimate_bug_ignoresPaddedFieldWidth()	1	1	junit.framework.AssertionFailedError: getMaxLengthEstimate() [4] should be >= actual formatted length [5]
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testInvalidPatternLetterThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetDateInstanceMatchesSimpleDateFormatPattern()	1	0	
+FAILED	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetMaxLengthEstimate_bug_timeZoneColonVariantUnderestimated()	1	1	junit.framework.AssertionFailedError: getMaxLengthEstimate() [5] should be >= actual formatted length [6]
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testEqualsAndHashCodeContract()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatCalendarUsesCalendarZoneWhenNotForced()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatLongMatchesFormatDate()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetInstanceNoArgUsesDefaultPattern()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTimeZoneNameNonForcedUsesCalendarZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatObjectWithNullThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTimeZoneNameForcedUsesFormatterZone()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testUnpaddedMonthAndDayMatchSimpleDateFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testConstructorRejectsNullPattern()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTimeZoneNumberWithColon()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testHourFieldsMatchSimpleDateFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testNullPatternThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetInstanceCachesSamePatternAndArgs()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetDateInstanceCaching()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetInstanceDifferentArgsAreDifferentInstances()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetTimeInstanceMatchesSimpleDateFormatPattern()	1	0	
+FAILED	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testUnterminatedQuote_bug_shouldRejectMalformedPattern()	1	1	junit.framework.AssertionFailedError: FastDateFormat should reject an unterminated quoted literal like SimpleDateFormat does
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testLiteralEscapedQuote()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTimeZoneNumberNegativeOffset()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testParseObjectAlwaysReturnsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testStyleConstantsMatchDateFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTimeZoneNumberNoColon()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testAccessorsWithDefaults()	1	0	

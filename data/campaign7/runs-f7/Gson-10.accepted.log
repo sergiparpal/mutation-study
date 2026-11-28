@@ -1,0 +1,8 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.gson.internal.bind.ReflectiveTypeAdapterFactory (file:/home/sergi/.cache/gen-stage/w-K5OflwDL/target/classes/) to field java.lang.Integer.value
+WARNING: Please consider reporting this to the maintainers of com.google.gson.internal.bind.ReflectiveTypeAdapterFactory
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Tests run: 16, Failures: 0, Aborted: 0, Skipped: 0
+Test methods: 16, failed: 0, left out beforehand: 1
+OK

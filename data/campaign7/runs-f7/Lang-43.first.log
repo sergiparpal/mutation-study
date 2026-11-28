@@ -1,0 +1,9 @@
+1) org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testAppendQuotedStringAdvancesPastLeadingQuote()
+junit.framework.AssertionFailedError: parse position must advance past the quoted text, but stayed at 0
+    at org.apache.commons.lang.text.ExtendedMessageFormatAgentTest.testAppendQuotedStringAdvancesPastLeadingQuote(ExtendedMessageFormatAgentTest.java:300)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 22, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 22, failed: 1
+FAILURES!!!

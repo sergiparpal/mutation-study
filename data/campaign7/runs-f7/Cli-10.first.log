@@ -1,0 +1,9 @@
+1) org.apache.commons.cli.ParserAgentTest#testPropertiesAreAllProcessedIndependently()
+junit.framework.AssertionFailedError: property "x" should still be processed even though the earlier property "f" was a non-enabled flag
+    at org.apache.commons.cli.ParserAgentTest.testPropertiesAreAllProcessedIndependently(ParserAgentTest.java:423)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 26, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 26, failed: 1
+FAILURES!!!

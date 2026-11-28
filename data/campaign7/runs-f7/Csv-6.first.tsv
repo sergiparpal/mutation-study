@@ -1,0 +1,27 @@
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByNameUnmappedName()	1	0	
+FAILED	method	org.apache.commons.csv.CSVRecordAgentTest#testToMapNullMappingIsEmpty()	1	1	java.lang.NullPointerException
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testPutIn()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testToMap()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByIndexOutOfBounds()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testSize()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetRecordNumber()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testToString()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsSetFalseWhenMappedButMissingValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsMappedTrueAndFalse()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByNameNoMapping()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByNameInconsistentRecord()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsConsistentMatchingMapping()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetCommentNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsSetFalseWhenNotMapped()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByIndex()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsMappedNullMapping()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByEnum()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByName()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetByIndexNegative()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsConsistentMismatchedMapping()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testGetComment()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testSizeNullValues()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testValues()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIterator()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsConsistentNullMapping()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVRecordAgentTest#testIsSetTrue()	1	0	

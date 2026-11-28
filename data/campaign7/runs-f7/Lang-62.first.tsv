@@ -1,0 +1,35 @@
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testUnescapeUnterminatedEntityLeftLiteral()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testUnescapeNoAmpersandReturnsSameContent()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testUnescapeBasicXmlChars()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testEscapePlainTextUnchanged()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testUnescapeAmpersandFollowedByAnotherAmpersandBeforeSemicolon()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testUnescapeHexNumericReferenceLowerAndUpperX()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testXmlEntitiesKnown()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testUnescapeDecimalNumericReference()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testHashEntityMapAddAndLookup()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testHtml40HasNoAposButHasHtml40Entities()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testLookupEntityMapSmallAndLargeValues()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testArrayEntityMapAddAndLookup()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testEntityNameUnknownValueReturnsNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testEscapeBasicXmlChars()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testEscapeUnescapeRoundTripForNumericReference()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testEscapeWriterMatchesEscapeString()	1	0	
+FAILED	method	org.apache.commons.lang.EntitiesAgentTest#testEntityNameNegativeValueDoesNotThrow()	1	1	java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 256
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testFillWithHtml40EntitiesPopulatesAllGroups()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testEscapeEmptyString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testUnescapeEmptyEntityLeftLiteral()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testUnescapeInvalidNumericReferenceLeftLiteral()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testEntityValueUnknownNameReturnsMinusOne()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testBinaryEntityMapOrderedLookupAfterUnorderedInsertion()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testTreeEntityMapAddAndLookup()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testArrayEntityMapGrowsBeyondInitialCapacity()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testEntityValueNullNameReturnsMinusOne()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testAddEntitiesArray()	1	0	
+FAILED	method	org.apache.commons.lang.EntitiesAgentTest#testBinaryEntityMapDuplicateValueAtFirstSlotIsIgnored()	1	1	java.lang.ArrayIndexOutOfBoundsException: arraycopy: source index -1 out of bounds for int[100]
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testHtml32HasNoApos()	1	0	
+FAILED	method	org.apache.commons.lang.EntitiesAgentTest#testLookupEntityMapNegativeValueDoesNotThrow()	1	1	java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 256
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testUnescapeUnknownEntityNameLeftLiteral()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testUnescapeWriterMatchesUnescapeString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testEscapeHighCharacterWithoutEntityUsesNumericReference()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testEscapeHighCharacterWithEntityUsesName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.EntitiesAgentTest#testAddEntityAndLookupBothWays()	1	0	

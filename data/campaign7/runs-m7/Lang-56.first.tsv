@@ -1,0 +1,25 @@
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTimeZoneNameRuleMatchesTimeZoneDisplayName()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testDateTimeInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testSerialization()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatCalendar()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testAccessors()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testToString()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatObjectUnknownTypeThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testPaddedYear()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatObjectDispatch()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTwoDigitYear()	1	0	
+FAILED	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTimeZoneOverridesCalendarWhenForced()	1	1	junit.framework.ComparisonFailure: expected:<1[5]> but was:<1[0]>
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatDate()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatLong()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testMonthVariants()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testDateInstance()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testParseObjectNotSupported()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetInstanceCaching()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTwentyFourHourFieldMidnightIsTwentyFour()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testIllegalPatternLetterThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testEqualsAndHashCode()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTwelveHourFieldMidnightIsTwelve()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetInstanceNullPatternThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testFormatIntoStringBuffer()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testGetInstanceDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.time.FastDateFormatAgentTest#testTimeZoneNumberRule()	1	0	

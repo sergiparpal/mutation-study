@@ -1,0 +1,89 @@
+CLI:    2.1.316 (Claude Code)  (/home/sergi/.local/share/claude/versions/2.1.316)
+model:  claude-sonnet-5
+commit: e8fa593e6f5525e9d9bfa5d6ce106f2b1cce4b92
+start:  2026-11-28T00:05:43Z
+
+ 1  Lang-13    f7  ok
+ 1  Lang-13    m7  ok
+ 2  Cli-17     m7  ok
+ 2  Cli-17     f7  ok
+ 3  Lang-65    f7  ok
+ 3  Lang-65    m7  ok
+ 4  Gson-3     m7  ok
+ 4  Gson-3     f7  ok
+ 5  Csv-3      f7  ok
+ 5  Csv-3      m7  ok
+ 6  Csv-8      m7  ok
+ 6  Csv-8      f7  ok
+ 7  Gson-4     f7  ok
+ 7  Gson-4     m7  ok
+ 8  Lang-23    m7  ok
+ 8  Lang-23    f7  ok
+ 9  Gson-15    f7  ok
+ 9  Gson-15    m7  ok
+10  Lang-62    m7  ok
+10  Lang-62    f7  ok
+11  Lang-43    f7  ok
+11  Lang-43    m7  ok
+12  Csv-16     m7  ok
+12  Csv-16     f7  ok
+13  Lang-56    f7  ok
+13  Lang-56    m7  ok
+14  Lang-21    m7  ok
+14  Lang-21    f7  ok
+15  Csv-4      f7  ok
+15  Csv-4      m7  ok
+16  Gson-8     m7  ok
+16  Gson-8     f7  ok
+17  Gson-16    f7  ok
+17  Gson-16    m7  ok
+18  Cli-10     m7  ok
+18  Cli-10     f7  ok
+19  Cli-21     f7  ok
+19  Cli-21     m7  ok
+20  Csv-6      m7  ok
+20  Csv-6      f7  ok
+21  Lang-36    f7  ok
+21  Lang-36    m7  ok
+22  Gson-5     m7  ok
+22  Gson-5     f7  ok
+23  Cli-32     f7  ok
+23  Cli-32     m7  ok
+24  Gson-7     m7  ok
+24  Gson-7     f7  ok
+25  Cli-12     f7  ok
+25  Cli-12     m7  ok
+26  Csv-5      m7  ok
+26  Csv-5      f7  ok
+27  Cli-28     f7  ok
+27  Cli-28     m7  ok
+28  Lang-34    m7  ok
+28  Lang-34    f7  ok
+29  Lang-8     f7  ok
+29  Lang-8     m7  ok
+30  Csv-10     m7  ok
+30  Csv-10     f7  ok
+31  Cli-38     f7  ok
+31  Cli-38     m7  ok
+32  Gson-6     m7  ok
+32  Gson-6     f7  ok
+33  Gson-10    f7  ok
+33  Gson-10    m7  ok
+34  Csv-15     m7  ok
+34  Csv-15     f7  ok
+35  Csv-14     f7  ok
+35  Csv-14     m7  ok
+36  Lang-52    m7  ok
+36  Lang-52    f7  ok
+37  Gson-14    f7  ok
+37  Gson-14    m7  ok
+38  Csv-7      m7  ok
+38  Csv-7      f7  ok
+39  Lang-63    f7  ok
+39  Lang-63    m7  ok
+40  Cli-15     m7  ok
+40  Cli-15     f7  ok
+
+f7: 40 runs with a status, 40 packaged
+m7: 40 runs with a status, 40 packaged
+end:    2026-11-28T03:47:06Z

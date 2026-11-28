@@ -1,0 +1,3 @@
+org.apache.commons.csv.LexerAgentTest#testDisabledQuoteCharDoesNotMatchSentinelCharacter()
+org.apache.commons.csv.LexerAgentTest#testDisabledCommentStartDoesNotMatchSentinelCharacter()
+org.apache.commons.csv.LexerAgentTest#testDisabledEscapeDoesNotMatchSentinelCharacter()

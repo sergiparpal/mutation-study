@@ -1,0 +1,26 @@
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testNullArgumentsTreatedAsEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testSimpleOptionIsSet()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testOptionWithArgumentValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testMissingArgumentThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testOptionalArgumentNotConsumedFromNextOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testUnrecognizedOptionThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testMissingRequiredOptionSingular()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testMissingRequiredOptionsPlural()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testRequiredOptionPresentDoesNotThrow()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testOptionGroupAlreadySelectedThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testRequiredOptionGroupSatisfiedByOneOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testRequiredOptionGroupUnsatisfiedThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testSingleDashIsArgumentWhenNotStopping()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testSingleDashStopsParsingWhenStopAtNonOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testDoubleDashIsExcludedFromRemainingArgs()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testOnlyOneDoubleDashKeptWhenTwoPresent()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testStopAtNonOptionArgument()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testStopAtNonOptionUnrecognizedOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testQuotesAreStrippedFromOptionValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testOptionValuesAreClearedBetweenParses()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testPropertyFillsOptionWithArgNotOnCommandLine()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testPropertyDoesNotOverrideCommandLineValue()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testPropertyTrueEnablesFlagOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testPropertyFalseDoesNotEnableFlagOption()	1	0	
+FAILED	method	org.apache.commons.cli.ParserAgentTest#testPropertiesAreAllProcessedIndependently()	1	1	junit.framework.AssertionFailedError: property "x" should still be processed even though the earlier property "f" was a non-enabled flag
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testNullPropertiesAreIgnored()	1	0	

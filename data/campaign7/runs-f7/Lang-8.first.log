@@ -1,0 +1,9 @@
+1) org.apache.commons.lang3.time.FastDatePrinterAgentTest#testConstructorThrowsNpeForNullTimeZone()
+java.lang.AssertionError: Expected NullPointerException for null timeZone, per class javadoc
+    at org.apache.commons.lang3.time.FastDatePrinterAgentTest.testConstructorThrowsNpeForNullTimeZone(FastDatePrinterAgentTest.java:539)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 47, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 47, failed: 1
+FAILURES!!!

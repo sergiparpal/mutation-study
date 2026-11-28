@@ -1,0 +1,2 @@
+org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testWhitespaceAroundFormatElementIsTrimmed()
+org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testQuotedLiteralBraceBeforeCustomFormatElement()

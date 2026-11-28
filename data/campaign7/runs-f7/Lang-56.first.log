@@ -1,0 +1,21 @@
+1) org.apache.commons.lang.time.FastDateFormatAgentTest#testGetMaxLengthEstimate_bug_ignoresPaddedFieldWidth()
+junit.framework.AssertionFailedError: getMaxLengthEstimate() [4] should be >= actual formatted length [5]
+    at org.apache.commons.lang.time.FastDateFormatAgentTest.testGetMaxLengthEstimate_bug_ignoresPaddedFieldWidth(FastDateFormatAgentTest.java:148)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.lang.time.FastDateFormatAgentTest#testGetMaxLengthEstimate_bug_timeZoneColonVariantUnderestimated()
+junit.framework.AssertionFailedError: getMaxLengthEstimate() [5] should be >= actual formatted length [6]
+    at org.apache.commons.lang.time.FastDateFormatAgentTest.testGetMaxLengthEstimate_bug_timeZoneColonVariantUnderestimated(FastDateFormatAgentTest.java:191)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+3) org.apache.commons.lang.time.FastDateFormatAgentTest#testUnterminatedQuote_bug_shouldRejectMalformedPattern()
+junit.framework.AssertionFailedError: FastDateFormat should reject an unterminated quoted literal like SimpleDateFormat does
+    at org.apache.commons.lang.time.FastDateFormatAgentTest.testUnterminatedQuote_bug_shouldRejectMalformedPattern(FastDateFormatAgentTest.java:262)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 38, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 38, failed: 3
+FAILURES!!!

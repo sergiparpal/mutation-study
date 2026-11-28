@@ -1,0 +1,12 @@
+1) org.apache.commons.cli.HelpFormatterAgentTest#testFindWrapPosNoWhitespaceAnywhereInText()
+java.lang.StringIndexOutOfBoundsException: String index out of range: 10
+    at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:47)
+    at java.base/java.lang.String.charAt(String.java:693)
+    at org.apache.commons.cli.HelpFormatter.findWrapPos(HelpFormatter.java:937)
+    at org.apache.commons.cli.HelpFormatterAgentTest.testFindWrapPosNoWhitespaceAnywhereInText(HelpFormatterAgentTest.java:299)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 49, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 49, failed: 1
+FAILURES!!!

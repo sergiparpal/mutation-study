@@ -1,0 +1,2 @@
+Note: src/test/java/org/apache/commons/cli/HelpFormatterAgentTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.

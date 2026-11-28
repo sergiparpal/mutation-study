@@ -1,0 +1,33 @@
+Write JUnit test classes for the following classes:
+
+  - org.apache.commons.lang.time.DurationFormatUtils
+
+You are in the project's source tree. The classes are under src/java/ and
+the project's existing tests under src/test/.
+
+Requirements:
+- One test class per class above, named <ClassName>AgentTest, in the same
+  package, under src/test/ following the package directory structure.
+- The test class must be SELF-CONTAINED: do not extend or import any other
+  test class or test helper. Any fixture you need, define inside your file.
+- Match the JUnit version used by the other test classes in this project.
+  Check them before writing. Some of these projects ship JUnit 3.8 only, where
+  org.junit.Test and org.junit.Assert do not exist.
+- This project compiles with -source 1.6. Use only syntax valid at that
+  level: no underscores in numeric literals, no diamond operator, no lambdas,
+  no try-with-resources unless the level allows them.
+- Assert on returned values and on observable state, not merely that no
+  exception is thrown.
+- Cover boundary and error cases, not just the happy path.
+- Do not modify or create any file other than the test classes named above.
+
+Compile and run your tests with ./_tools/test.sh, which compiles every
+*AgentTest.java under src/test/ and runs it.
+
+The classes may contain bugs, and your tests are meant to find them. Write
+each test for the behaviour the class should have, as its documentation and
+the rest of the project describe it, not for whatever the code happens to
+do. When a test fails, decide whether the test or the code is wrong: correct
+a wrong test, and leave a test that fails because the code is wrong as it
+is. Finish when every test that still fails is one you believe shows a bug,
+and name those tests in your final message, with the bug each one shows.

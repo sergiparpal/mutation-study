@@ -1,0 +1,907 @@
+[Lang-13] staging the buggy version (w-ovZZCOVT)
+[Lang-13] leak scan:  1 bug id;
+[Lang-13] invoking agent (claude-sonnet-5, f7)
+[Lang-13] agent done: $0.255 turns=18 state=ok
+[Lang-13] left out 0 of 19 tests
+[Lang-13] packaged: Lang-13-f7.tar.bz2
+
+f7 suites packaged: 1
+failures:           0
+tests left out:     0 of 19 (0.0%)
+cost, as reported:  $0.25
+[Lang-13] staging the fixed version (w-M2ioJIxO)
+[Lang-13] leak scan:  1 bug id;
+[Lang-13] invoking agent (claude-sonnet-5, m7)
+[Lang-13] agent done: $0.193 turns=14 state=ok
+[Lang-13] left out 0 of 19 tests
+[Lang-13] packaged: Lang-13-m7.tar.bz2
+
+m7 suites packaged: 1
+failures:           0
+tests left out:     0 of 19 (0.0%)
+cost, as reported:  $0.19
+[Cli-17] staging the fixed version (w-t4Ex8eD6)
+[Cli-17] leak scan: clean
+[Cli-17] invoking agent (claude-sonnet-5, m7)
+[Cli-17] agent done: $0.403 turns=19 state=ok
+[Cli-17] left out 0 of 27 tests
+[Cli-17] packaged: Cli-17-m7.tar.bz2
+
+m7 suites packaged: 2
+failures:           0
+tests left out:     0 of 46 (0.0%)
+cost, as reported:  $0.60
+[Cli-17] staging the buggy version (w-NScoNfQo)
+[Cli-17] leak scan: clean
+[Cli-17] invoking agent (claude-sonnet-5, f7)
+[Cli-17] agent done: $0.594 turns=20 state=ok
+[Cli-17] round 1: left out 1 failing test(s)
+[Cli-17] left out 1 of 22 tests
+[Cli-17] packaged: Cli-17-f7.tar.bz2
+
+f7 suites packaged: 2
+failures:           0
+tests left out:     1 of 41 (2.4%)
+cost, as reported:  $0.85
+[Lang-65] staging the buggy version (w-YcgH5aCi)
+[Lang-65] leak scan:  3 issue id;
+[Lang-65] invoking agent (claude-sonnet-5, f7)
+[Lang-65] agent done: $0.547 turns=21 state=ok
+[Lang-65] left out 0 of 64 tests
+[Lang-65] packaged: Lang-65-f7.tar.bz2
+
+f7 suites packaged: 3
+failures:           0
+tests left out:     1 of 105 (1.0%)
+cost, as reported:  $1.40
+[Lang-65] staging the fixed version (w-lw4RoaSy)
+[Lang-65] leak scan:  3 issue id;
+[Lang-65] invoking agent (claude-sonnet-5, m7)
+[Lang-65] agent done: $0.611 turns=19 state=ok
+[Lang-65] left out 0 of 46 tests
+[Lang-65] packaged: Lang-65-m7.tar.bz2
+
+m7 suites packaged: 3
+failures:           0
+tests left out:     0 of 92 (0.0%)
+cost, as reported:  $1.21
+[Gson-3] staging the fixed version (w-q8UwtRhe)
+[Gson-3] leak scan: clean
+[Gson-3] invoking agent (claude-sonnet-5, m7)
+[Gson-3] agent done: $0.157 turns=8 state=ok
+[Gson-3] left out 0 of 19 tests
+[Gson-3] packaged: Gson-3-m7.tar.bz2
+
+m7 suites packaged: 4
+failures:           0
+tests left out:     0 of 111 (0.0%)
+cost, as reported:  $1.36
+[Gson-3] staging the buggy version (w-dsx0O8xk)
+[Gson-3] leak scan: clean
+[Gson-3] invoking agent (claude-sonnet-5, f7)
+[Gson-3] agent done: $0.299 turns=15 state=ok
+[Gson-3] left out 0 of 24 tests
+[Gson-3] packaged: Gson-3-f7.tar.bz2
+
+f7 suites packaged: 4
+failures:           0
+tests left out:     1 of 129 (0.8%)
+cost, as reported:  $1.69
+[Csv-3] staging the buggy version (w-xT6Xf4yr)
+[Csv-3] leak scan: clean
+[Csv-3] invoking agent (claude-sonnet-5, f7)
+[Csv-3] agent done: $0.494 turns=24 state=ok
+[Csv-3] round 1: left out 3 failing test(s)
+[Csv-3] left out 3 of 29 tests
+[Csv-3] packaged: Csv-3-f7.tar.bz2
+
+f7 suites packaged: 5
+failures:           0
+tests left out:     4 of 158 (2.5%)
+cost, as reported:  $2.19
+[Csv-3] staging the fixed version (w-aDlgfNCZ)
+[Csv-3] leak scan: clean
+[Csv-3] invoking agent (claude-sonnet-5, m7)
+[Csv-3] agent done: $0.334 turns=22 state=ok
+[Csv-3] left out 0 of 27 tests
+[Csv-3] packaged: Csv-3-m7.tar.bz2
+
+m7 suites packaged: 5
+failures:           0
+tests left out:     0 of 138 (0.0%)
+cost, as reported:  $1.70
+[Csv-8] staging the fixed version (w-gPhp7r2e)
+[Csv-8] leak scan: clean
+[Csv-8] invoking agent (claude-sonnet-5, m7)
+[Csv-8] agent done: $0.268 turns=13 state=ok
+[Csv-8] left out 0 of 43 tests
+[Csv-8] packaged: Csv-8-m7.tar.bz2
+
+m7 suites packaged: 6
+failures:           0
+tests left out:     0 of 181 (0.0%)
+cost, as reported:  $1.97
+[Csv-8] staging the buggy version (w-PYqFlJuq)
+[Csv-8] leak scan: clean
+[Csv-8] invoking agent (claude-sonnet-5, f7)
+[Csv-8] agent done: $0.359 turns=16 state=ok
+[Csv-8] left out 0 of 56 tests
+[Csv-8] packaged: Csv-8-f7.tar.bz2
+
+f7 suites packaged: 6
+failures:           0
+tests left out:     4 of 214 (1.9%)
+cost, as reported:  $2.55
+[Gson-4] staging the buggy version (w-GEp4Qmax)
+[Gson-4] leak scan: clean
+[Gson-4] invoking agent (claude-sonnet-5, f7)
+[Gson-4] agent done: $0.571 turns=22 state=ok
+[Gson-4] round 1: left out 1 failing test(s)
+[Gson-4] left out 1 of 54 tests
+[Gson-4] packaged: Gson-4-f7.tar.bz2
+
+f7 suites packaged: 7
+failures:           0
+tests left out:     5 of 268 (1.9%)
+cost, as reported:  $3.12
+[Gson-4] staging the fixed version (w-CX0nzT6s)
+[Gson-4] leak scan: clean
+[Gson-4] invoking agent (claude-sonnet-5, m7)
+[Gson-4] agent done: $0.574 turns=20 state=ok
+[Gson-4] left out 0 of 58 tests
+[Gson-4] packaged: Gson-4-m7.tar.bz2
+
+m7 suites packaged: 7
+failures:           0
+tests left out:     0 of 239 (0.0%)
+cost, as reported:  $2.54
+[Lang-23] staging the fixed version (w-OS0fOK5D)
+[Lang-23] leak scan: clean
+[Lang-23] invoking agent (claude-sonnet-5, m7)
+[Lang-23] agent done: $0.591 turns=29 state=ok
+[Lang-23] left out 0 of 25 tests
+[Lang-23] packaged: Lang-23-m7.tar.bz2
+
+m7 suites packaged: 8
+failures:           0
+tests left out:     0 of 264 (0.0%)
+cost, as reported:  $3.13
+[Lang-23] staging the buggy version (w-LQzv5j4h)
+[Lang-23] leak scan: clean
+[Lang-23] invoking agent (claude-sonnet-5, f7)
+[Lang-23] agent done: $0.915 turns=29 state=ok
+[Lang-23] round 1: left out 2 failing test(s)
+[Lang-23] left out 2 of 26 tests
+[Lang-23] packaged: Lang-23-f7.tar.bz2
+
+f7 suites packaged: 8
+failures:           0
+tests left out:     7 of 294 (2.4%)
+cost, as reported:  $4.03
+[Gson-15] staging the buggy version (w-inFA09Lx)
+[Gson-15] leak scan: clean
+[Gson-15] invoking agent (claude-sonnet-5, f7)
+[Gson-15] agent done: $0.446 turns=18 state=ok
+[Gson-15] round 1: left out 1 failing test(s)
+[Gson-15] left out 1 of 38 tests
+[Gson-15] packaged: Gson-15-f7.tar.bz2
+
+f7 suites packaged: 9
+failures:           0
+tests left out:     8 of 332 (2.4%)
+cost, as reported:  $4.48
+[Gson-15] staging the fixed version (w-tpz9X8Xd)
+[Gson-15] leak scan: clean
+[Gson-15] invoking agent (claude-sonnet-5, m7)
+[Gson-15] agent done: $0.231 turns=10 state=ok
+[Gson-15] left out 0 of 39 tests
+[Gson-15] packaged: Gson-15-m7.tar.bz2
+
+m7 suites packaged: 9
+failures:           0
+tests left out:     0 of 303 (0.0%)
+cost, as reported:  $3.36
+[Lang-62] staging the fixed version (w-yHB3InSr)
+[Lang-62] leak scan: clean
+[Lang-62] invoking agent (claude-sonnet-5, m7)
+[Lang-62] agent done: $0.367 turns=19 state=ok
+[Lang-62] left out 0 of 44 tests
+[Lang-62] packaged: Lang-62-m7.tar.bz2
+
+m7 suites packaged: 10
+failures:           0
+tests left out:     0 of 347 (0.0%)
+cost, as reported:  $3.73
+[Lang-62] staging the buggy version (w-EUdtCawg)
+[Lang-62] leak scan: clean
+[Lang-62] invoking agent (claude-sonnet-5, f7)
+[Lang-62] agent done: $0.405 turns=13 state=ok
+[Lang-62] round 1: left out 3 failing test(s)
+[Lang-62] left out 3 of 35 tests
+[Lang-62] packaged: Lang-62-f7.tar.bz2
+
+f7 suites packaged: 10
+failures:           0
+tests left out:     11 of 367 (3.0%)
+cost, as reported:  $4.88
+[Lang-43] staging the buggy version (w-Bhey3blM)
+[Lang-43] leak scan: clean
+[Lang-43] invoking agent (claude-sonnet-5, f7)
+[Lang-43] agent done: $0.911 turns=38 state=ok
+[Lang-43] round 1: left out 1 failing test(s)
+[Lang-43] left out 1 of 22 tests
+[Lang-43] packaged: Lang-43-f7.tar.bz2
+
+f7 suites packaged: 11
+failures:           0
+tests left out:     12 of 389 (3.1%)
+cost, as reported:  $5.79
+[Lang-43] staging the fixed version (w-qg1Do942)
+[Lang-43] leak scan: clean
+[Lang-43] invoking agent (claude-sonnet-5, m7)
+[Lang-43] agent done: $0.714 turns=25 state=ok
+[Lang-43] left out 0 of 25 tests
+[Lang-43] packaged: Lang-43-m7.tar.bz2
+
+m7 suites packaged: 11
+failures:           0
+tests left out:     0 of 372 (0.0%)
+cost, as reported:  $4.44
+[Csv-16] staging the fixed version (w-4hlVriPW)
+[Csv-16] leak scan: clean
+[Csv-16] invoking agent (claude-sonnet-5, m7)
+[Csv-16] agent done: $0.261 turns=15 state=ok
+[Csv-16] left out 0 of 28 tests
+[Csv-16] packaged: Csv-16-m7.tar.bz2
+
+m7 suites packaged: 12
+failures:           0
+tests left out:     0 of 400 (0.0%)
+cost, as reported:  $4.71
+[Csv-16] staging the buggy version (w-eGi4bQzN)
+[Csv-16] leak scan: clean
+[Csv-16] invoking agent (claude-sonnet-5, f7)
+[Csv-16] agent done: $0.290 turns=17 state=ok
+[Csv-16] left out 0 of 26 tests
+[Csv-16] packaged: Csv-16-f7.tar.bz2
+
+f7 suites packaged: 12
+failures:           0
+tests left out:     12 of 415 (2.9%)
+cost, as reported:  $6.09
+[Lang-56] staging the buggy version (w-J8JiTedk)
+[Lang-56] leak scan: clean
+[Lang-56] invoking agent (claude-sonnet-5, f7)
+[Lang-56] agent done: $0.864 turns=19 state=ok
+[Lang-56] round 1: left out 3 failing test(s)
+[Lang-56] left out 3 of 38 tests
+[Lang-56] packaged: Lang-56-f7.tar.bz2
+
+f7 suites packaged: 13
+failures:           0
+tests left out:     15 of 453 (3.3%)
+cost, as reported:  $6.95
+[Lang-56] staging the fixed version (w-itObuTpK)
+[Lang-56] leak scan: clean
+[Lang-56] invoking agent (claude-sonnet-5, m7)
+[Lang-56] agent done: $1.414 turns=51 state=error
+[Lang-56] round 1: left out 1 failing test(s)
+[Lang-56] left out 1 of 25 tests
+[Lang-56] packaged: Lang-56-m7.tar.bz2
+
+m7 suites packaged: 13
+failures:           0
+tests left out:     1 of 425 (0.2%)
+cost, as reported:  $6.12
+[Lang-21] staging the fixed version (w-CLgyWhF4)
+[Lang-21] leak scan: clean
+[Lang-21] invoking agent (claude-sonnet-5, m7)
+[Lang-21] agent done: $0.504 turns=14 state=ok
+[Lang-21] left out 0 of 59 tests
+[Lang-21] packaged: Lang-21-m7.tar.bz2
+
+m7 suites packaged: 14
+failures:           0
+tests left out:     1 of 484 (0.2%)
+cost, as reported:  $6.62
+[Lang-21] staging the buggy version (w-2KGo9s0w)
+[Lang-21] leak scan: clean
+[Lang-21] invoking agent (claude-sonnet-5, f7)
+[Lang-21] agent done: $0.773 turns=24 state=ok
+[Lang-21] round 1: left out 1 failing test(s)
+[Lang-21] left out 1 of 79 tests
+[Lang-21] packaged: Lang-21-f7.tar.bz2
+
+f7 suites packaged: 14
+failures:           0
+tests left out:     16 of 532 (3.0%)
+cost, as reported:  $7.72
+[Csv-4] staging the buggy version (w-lJ4DKFCO)
+[Csv-4] leak scan: clean
+[Csv-4] invoking agent (claude-sonnet-5, f7)
+[Csv-4] agent done: $0.326 turns=20 state=ok
+[Csv-4] round 1: left out 1 failing test(s)
+[Csv-4] left out 1 of 33 tests
+[Csv-4] packaged: Csv-4-f7.tar.bz2
+
+f7 suites packaged: 15
+failures:           0
+tests left out:     17 of 565 (3.0%)
+cost, as reported:  $8.05
+[Csv-4] staging the fixed version (w-dEsJPapq)
+[Csv-4] leak scan: clean
+[Csv-4] invoking agent (claude-sonnet-5, m7)
+[Csv-4] agent done: $0.308 turns=20 state=ok
+[Csv-4] left out 0 of 23 tests
+[Csv-4] packaged: Csv-4-m7.tar.bz2
+
+m7 suites packaged: 15
+failures:           0
+tests left out:     1 of 507 (0.2%)
+cost, as reported:  $6.93
+[Gson-8] staging the fixed version (w-ElVzqr7m)
+[Gson-8] leak scan: clean
+[Gson-8] invoking agent (claude-sonnet-5, m7)
+[Gson-8] agent done: $0.125 turns=12 state=ok
+[Gson-8] left out 0 of 8 tests
+[Gson-8] packaged: Gson-8-m7.tar.bz2
+
+m7 suites packaged: 16
+failures:           0
+tests left out:     1 of 515 (0.2%)
+cost, as reported:  $7.06
+[Gson-8] staging the buggy version (w-EpHAq4q5)
+[Gson-8] leak scan: clean
+[Gson-8] invoking agent (claude-sonnet-5, f7)
+[Gson-8] agent done: $0.222 turns=17 state=ok
+[Gson-8] left out 0 of 7 tests
+[Gson-8] packaged: Gson-8-f7.tar.bz2
+
+f7 suites packaged: 16
+failures:           0
+tests left out:     17 of 572 (3.0%)
+cost, as reported:  $8.27
+[Gson-16] staging the buggy version (w-rkH2G1Pb)
+[Gson-16] leak scan: clean
+[Gson-16] invoking agent (claude-sonnet-5, f7)
+[Gson-16] agent done: $0.433 turns=15 state=ok
+[Gson-16] round 1: left out 3 failing test(s)
+[Gson-16] left out 3 of 46 tests
+[Gson-16] packaged: Gson-16-f7.tar.bz2
+
+f7 suites packaged: 17
+failures:           0
+tests left out:     20 of 618 (3.2%)
+cost, as reported:  $8.70
+[Gson-16] staging the fixed version (w-2OohELyv)
+[Gson-16] leak scan: clean
+[Gson-16] invoking agent (claude-sonnet-5, m7)
+[Gson-16] agent done: $0.320 turns=14 state=ok
+[Gson-16] left out 0 of 47 tests
+[Gson-16] packaged: Gson-16-m7.tar.bz2
+
+m7 suites packaged: 17
+failures:           0
+tests left out:     1 of 562 (0.2%)
+cost, as reported:  $7.38
+[Cli-10] staging the fixed version (w-AO0LUaLF)
+[Cli-10] leak scan: clean
+[Cli-10] invoking agent (claude-sonnet-5, m7)
+[Cli-10] agent done: $0.333 turns=19 state=ok
+[Cli-10] left out 0 of 26 tests
+[Cli-10] packaged: Cli-10-m7.tar.bz2
+
+m7 suites packaged: 18
+failures:           0
+tests left out:     1 of 588 (0.2%)
+cost, as reported:  $7.71
+[Cli-10] staging the buggy version (w-ZlnwTwny)
+[Cli-10] leak scan: clean
+[Cli-10] invoking agent (claude-sonnet-5, f7)
+[Cli-10] agent done: $0.489 turns=22 state=ok
+[Cli-10] round 1: left out 1 failing test(s)
+[Cli-10] left out 1 of 26 tests
+[Cli-10] packaged: Cli-10-f7.tar.bz2
+
+f7 suites packaged: 18
+failures:           0
+tests left out:     21 of 644 (3.3%)
+cost, as reported:  $9.19
+[Cli-21] staging the buggy version (w-WcMvMpDB)
+[Cli-21] leak scan: clean
+[Cli-21] invoking agent (claude-sonnet-5, f7)
+[Cli-21] agent done: $1.376 turns=44 state=ok
+[Cli-21] round 1: left out 1 failing test(s)
+[Cli-21] left out 1 of 75 tests
+[Cli-21] packaged: Cli-21-f7.tar.bz2
+
+f7 suites packaged: 19
+failures:           0
+tests left out:     22 of 719 (3.1%)
+cost, as reported:  $10.57
+[Cli-21] staging the fixed version (w-zPjfKzBn)
+[Cli-21] leak scan: clean
+[Cli-21] invoking agent (claude-sonnet-5, m7)
+[Cli-21] agent done: $1.312 turns=44 state=ok
+[Cli-21] left out 0 of 65 tests
+[Cli-21] packaged: Cli-21-m7.tar.bz2
+
+m7 suites packaged: 19
+failures:           0
+tests left out:     1 of 653 (0.2%)
+cost, as reported:  $9.02
+[Csv-6] staging the fixed version (w-m6TKshXO)
+[Csv-6] leak scan: clean
+[Csv-6] invoking agent (claude-sonnet-5, m7)
+[Csv-6] agent done: $0.137 turns=9 state=ok
+[Csv-6] left out 0 of 27 tests
+[Csv-6] packaged: Csv-6-m7.tar.bz2
+
+m7 suites packaged: 20
+failures:           0
+tests left out:     1 of 680 (0.1%)
+cost, as reported:  $9.16
+[Csv-6] staging the buggy version (w-KzNioChp)
+[Csv-6] leak scan: clean
+[Csv-6] invoking agent (claude-sonnet-5, f7)
+[Csv-6] agent done: $0.159 turns=10 state=ok
+[Csv-6] round 1: left out 1 failing test(s)
+[Csv-6] left out 1 of 27 tests
+[Csv-6] packaged: Csv-6-f7.tar.bz2
+
+f7 suites packaged: 20
+failures:           0
+tests left out:     23 of 746 (3.1%)
+cost, as reported:  $10.73
+[Lang-36] staging the buggy version (w-rSCJLght)
+[Lang-36] leak scan: clean
+[Lang-36] invoking agent (claude-sonnet-5, f7)
+[Lang-36] agent done: $0.456 turns=14 state=ok
+[Lang-36] round 1: left out 2 failing test(s)
+[Lang-36] left out 2 of 50 tests
+[Lang-36] packaged: Lang-36-f7.tar.bz2
+
+f7 suites packaged: 21
+failures:           0
+tests left out:     25 of 796 (3.1%)
+cost, as reported:  $11.18
+[Lang-36] staging the fixed version (w-0xpFeupu)
+[Lang-36] leak scan: clean
+[Lang-36] invoking agent (claude-sonnet-5, m7)
+[Lang-36] agent done: $0.339 turns=13 state=ok
+[Lang-36] left out 0 of 38 tests
+[Lang-36] packaged: Lang-36-m7.tar.bz2
+
+m7 suites packaged: 21
+failures:           0
+tests left out:     1 of 718 (0.1%)
+cost, as reported:  $9.50
+[Gson-5] staging the fixed version (w-GGBLliMC)
+[Gson-5] leak scan: clean
+[Gson-5] invoking agent (claude-sonnet-5, m7)
+[Gson-5] agent done: $0.169 turns=11 state=ok
+[Gson-5] left out 0 of 24 tests
+[Gson-5] packaged: Gson-5-m7.tar.bz2
+
+m7 suites packaged: 22
+failures:           0
+tests left out:     1 of 742 (0.1%)
+cost, as reported:  $9.67
+[Gson-5] staging the buggy version (w-YMUCVsmQ)
+[Gson-5] leak scan: clean
+[Gson-5] invoking agent (claude-sonnet-5, f7)
+[Gson-5] agent done: $0.307 turns=10 state=ok
+[Gson-5] left out 0 of 31 tests
+[Gson-5] packaged: Gson-5-f7.tar.bz2
+
+f7 suites packaged: 22
+failures:           0
+tests left out:     25 of 827 (3.0%)
+cost, as reported:  $11.49
+[Cli-32] staging the buggy version (w-b8Zv39Ct)
+[Cli-32] leak scan: clean
+[Cli-32] invoking agent (claude-sonnet-5, f7)
+[Cli-32] agent done: $0.495 turns=20 state=ok
+[Cli-32] round 1: left out 1 failing test(s)
+[Cli-32] left out 1 of 49 tests
+[Cli-32] packaged: Cli-32-f7.tar.bz2
+
+f7 suites packaged: 23
+failures:           0
+tests left out:     26 of 876 (3.0%)
+cost, as reported:  $11.98
+[Cli-32] staging the fixed version (w-39czhSJx)
+[Cli-32] leak scan: clean
+[Cli-32] invoking agent (claude-sonnet-5, m7)
+[Cli-32] agent done: $0.276 turns=12 state=ok
+[Cli-32] left out 0 of 26 tests
+[Cli-32] packaged: Cli-32-m7.tar.bz2
+
+m7 suites packaged: 23
+failures:           0
+tests left out:     1 of 768 (0.1%)
+cost, as reported:  $9.94
+[Gson-7] staging the fixed version (w-ZM25vWyY)
+[Gson-7] leak scan: clean
+[Gson-7] invoking agent (claude-sonnet-5, m7)
+[Gson-7] agent done: $0.503 turns=17 state=ok
+[Gson-7] left out 0 of 37 tests
+[Gson-7] packaged: Gson-7-m7.tar.bz2
+
+m7 suites packaged: 24
+failures:           0
+tests left out:     1 of 805 (0.1%)
+cost, as reported:  $10.45
+[Gson-7] staging the buggy version (w-D2pvjbWO)
+[Gson-7] leak scan: clean
+[Gson-7] invoking agent (claude-sonnet-5, f7)
+[Gson-7] agent done: $0.518 turns=19 state=ok
+[Gson-7] round 1: left out 1 failing test(s)
+[Gson-7] left out 1 of 47 tests
+[Gson-7] packaged: Gson-7-f7.tar.bz2
+
+f7 suites packaged: 24
+failures:           0
+tests left out:     27 of 923 (2.9%)
+cost, as reported:  $12.50
+[Cli-12] staging the buggy version (w-Tt8hg2AY)
+[Cli-12] leak scan: clean
+[Cli-12] invoking agent (claude-sonnet-5, f7)
+[Cli-12] agent done: $0.369 turns=16 state=ok
+[Cli-12] left out 0 of 17 tests
+[Cli-12] packaged: Cli-12-f7.tar.bz2
+
+f7 suites packaged: 25
+failures:           0
+tests left out:     27 of 940 (2.9%)
+cost, as reported:  $12.87
+[Cli-12] staging the fixed version (w-9Bsk6D4S)
+[Cli-12] leak scan: clean
+[Cli-12] invoking agent (claude-sonnet-5, m7)
+[Cli-12] agent done: $0.371 turns=20 state=ok
+[Cli-12] left out 0 of 16 tests
+[Cli-12] packaged: Cli-12-m7.tar.bz2
+
+m7 suites packaged: 25
+failures:           0
+tests left out:     1 of 821 (0.1%)
+cost, as reported:  $10.82
+[Csv-5] staging the fixed version (w-Utj6hAC5)
+[Csv-5] leak scan: clean
+[Csv-5] invoking agent (claude-sonnet-5, m7)
+[Csv-5] agent done: $0.282 turns=12 state=ok
+[Csv-5] left out 0 of 23 tests
+[Csv-5] packaged: Csv-5-m7.tar.bz2
+
+m7 suites packaged: 26
+failures:           0
+tests left out:     1 of 844 (0.1%)
+cost, as reported:  $11.10
+[Csv-5] staging the buggy version (w-wMRebP9e)
+[Csv-5] leak scan: clean
+[Csv-5] invoking agent (claude-sonnet-5, f7)
+[Csv-5] agent done: $0.513 turns=19 state=ok
+[Csv-5] round 1: left out 2 failing test(s)
+[Csv-5] left out 2 of 39 tests
+[Csv-5] packaged: Csv-5-f7.tar.bz2
+
+f7 suites packaged: 26
+failures:           0
+tests left out:     29 of 979 (3.0%)
+cost, as reported:  $13.39
+[Cli-28] staging the buggy version (w-KDRAhtp3)
+[Cli-28] leak scan: clean
+[Cli-28] invoking agent (claude-sonnet-5, f7)
+[Cli-28] agent done: $0.559 turns=23 state=ok
+[Cli-28] round 1: left out 2 failing test(s)
+[Cli-28] left out 2 of 24 tests
+[Cli-28] packaged: Cli-28-f7.tar.bz2
+
+f7 suites packaged: 27
+failures:           0
+tests left out:     31 of 1003 (3.1%)
+cost, as reported:  $13.94
+[Cli-28] staging the fixed version (w-1ukBArsD)
+[Cli-28] leak scan: clean
+[Cli-28] invoking agent (claude-sonnet-5, m7)
+[Cli-28] agent done: $0.446 turns=26 state=ok
+[Cli-28] left out 0 of 24 tests
+[Cli-28] packaged: Cli-28-m7.tar.bz2
+
+m7 suites packaged: 27
+failures:           0
+tests left out:     1 of 868 (0.1%)
+cost, as reported:  $11.54
+[Lang-34] staging the fixed version (w-31GR0MG7)
+[Lang-34] leak scan:  2 trigger name;
+[Lang-34] invoking agent (claude-sonnet-5, m7)
+[Lang-34] agent done: $0.593 turns=17 state=ok
+[Lang-34] left out 0 of 74 tests
+[Lang-34] packaged: Lang-34-m7.tar.bz2
+
+m7 suites packaged: 28
+failures:           0
+tests left out:     1 of 942 (0.1%)
+cost, as reported:  $12.14
+[Lang-34] staging the buggy version (w-vJkSjU4k)
+[Lang-34] leak scan:  2 trigger name;
+[Lang-34] invoking agent (claude-sonnet-5, f7)
+[Lang-34] agent done: $0.918 turns=24 state=ok
+[Lang-34] round 1: left out 1 failing test(s)
+[Lang-34] left out 1 of 59 tests
+[Lang-34] packaged: Lang-34-f7.tar.bz2
+
+f7 suites packaged: 28
+failures:           0
+tests left out:     32 of 1062 (3.0%)
+cost, as reported:  $14.86
+[Lang-8] staging the buggy version (w-zcnvFLrP)
+[Lang-8] leak scan: clean
+[Lang-8] invoking agent (claude-sonnet-5, f7)
+[Lang-8] agent done: $0.577 turns=14 state=ok
+[Lang-8] round 1: left out 1 failing test(s)
+[Lang-8] left out 1 of 47 tests
+[Lang-8] packaged: Lang-8-f7.tar.bz2
+
+f7 suites packaged: 29
+failures:           0
+tests left out:     33 of 1109 (3.0%)
+cost, as reported:  $15.44
+[Lang-8] staging the fixed version (w-doJWWqdp)
+[Lang-8] leak scan: clean
+[Lang-8] invoking agent (claude-sonnet-5, m7)
+[Lang-8] agent done: $0.281 turns=10 state=ok
+[Lang-8] left out 0 of 41 tests
+[Lang-8] packaged: Lang-8-m7.tar.bz2
+
+m7 suites packaged: 29
+failures:           0
+tests left out:     1 of 983 (0.1%)
+cost, as reported:  $12.42
+[Csv-10] staging the fixed version (w-hlY2nEPT)
+[Csv-10] leak scan:  2 trigger name;
+[Csv-10] invoking agent (claude-sonnet-5, m7)
+[Csv-10] agent done: $0.248 turns=14 state=ok
+[Csv-10] left out 0 of 32 tests
+[Csv-10] packaged: Csv-10-m7.tar.bz2
+
+m7 suites packaged: 30
+failures:           0
+tests left out:     1 of 1015 (0.1%)
+cost, as reported:  $12.67
+[Csv-10] staging the buggy version (w-gqKcbdgV)
+[Csv-10] leak scan:  2 trigger name;
+[Csv-10] invoking agent (claude-sonnet-5, f7)
+[Csv-10] agent done: $0.413 turns=21 state=ok
+[Csv-10] left out 0 of 35 tests
+[Csv-10] packaged: Csv-10-f7.tar.bz2
+
+f7 suites packaged: 30
+failures:           0
+tests left out:     33 of 1144 (2.9%)
+cost, as reported:  $15.85
+[Cli-38] staging the buggy version (w-ihrazPCq)
+[Cli-38] leak scan: clean
+[Cli-38] invoking agent (claude-sonnet-5, f7)
+[Cli-38] agent done: $0.567 turns=26 state=ok
+[Cli-38] left out 0 of 33 tests
+[Cli-38] packaged: Cli-38-f7.tar.bz2
+
+f7 suites packaged: 31
+failures:           0
+tests left out:     33 of 1177 (2.8%)
+cost, as reported:  $16.42
+[Cli-38] staging the fixed version (w-iht1IUTp)
+[Cli-38] leak scan: clean
+[Cli-38] invoking agent (claude-sonnet-5, m7)
+[Cli-38] agent done: $0.382 turns=16 state=ok
+[Cli-38] left out 0 of 33 tests
+[Cli-38] packaged: Cli-38-m7.tar.bz2
+
+m7 suites packaged: 31
+failures:           0
+tests left out:     1 of 1048 (0.1%)
+cost, as reported:  $13.05
+[Gson-6] staging the fixed version (w-0JESntTb)
+[Gson-6] leak scan: clean
+[Gson-6] invoking agent (claude-sonnet-5, m7)
+[Gson-6] agent done: $0.214 turns=16 state=ok
+[Gson-6] left out 0 of 8 tests
+[Gson-6] packaged: Gson-6-m7.tar.bz2
+
+m7 suites packaged: 32
+failures:           0
+tests left out:     1 of 1056 (0.1%)
+cost, as reported:  $13.26
+[Gson-6] staging the buggy version (w-AREBqjrW)
+[Gson-6] leak scan: clean
+[Gson-6] invoking agent (claude-sonnet-5, f7)
+[Gson-6] agent done: $0.211 turns=13 state=ok
+[Gson-6] left out 0 of 9 tests
+[Gson-6] packaged: Gson-6-f7.tar.bz2
+
+f7 suites packaged: 32
+failures:           0
+tests left out:     33 of 1186 (2.8%)
+cost, as reported:  $16.63
+[Gson-10] staging the buggy version (w-K5OflwDL)
+[Gson-10] leak scan: clean
+[Gson-10] invoking agent (claude-sonnet-5, f7)
+[Gson-10] agent done: $0.581 turns=34 state=ok
+[Gson-10] round 1: left out 1 failing test(s)
+[Gson-10] left out 1 of 17 tests
+[Gson-10] packaged: Gson-10-f7.tar.bz2
+
+f7 suites packaged: 33
+failures:           0
+tests left out:     34 of 1203 (2.8%)
+cost, as reported:  $17.21
+[Gson-10] staging the fixed version (w-kwTvNU8E)
+[Gson-10] leak scan: clean
+[Gson-10] invoking agent (claude-sonnet-5, m7)
+[Gson-10] agent done: $0.500 turns=31 state=ok
+[Gson-10] left out 0 of 13 tests
+[Gson-10] packaged: Gson-10-m7.tar.bz2
+
+m7 suites packaged: 33
+failures:           0
+tests left out:     1 of 1069 (0.1%)
+cost, as reported:  $13.76
+[Csv-15] staging the fixed version (w-ZRSeW0no)
+[Csv-15] leak scan: clean
+[Csv-15] invoking agent (claude-sonnet-5, m7)
+[Csv-15] agent done: $0.531 turns=19 state=ok
+[Csv-15] left out 0 of 32 tests
+[Csv-15] packaged: Csv-15-m7.tar.bz2
+
+m7 suites packaged: 34
+failures:           0
+tests left out:     1 of 1101 (0.1%)
+cost, as reported:  $14.29
+[Csv-15] staging the buggy version (w-cYOtevFa)
+[Csv-15] leak scan: clean
+[Csv-15] invoking agent (claude-sonnet-5, f7)
+[Csv-15] agent done: $0.411 turns=10 state=ok
+[Csv-15] round 1: left out 3 failing test(s)
+[Csv-15] left out 3 of 68 tests
+[Csv-15] packaged: Csv-15-f7.tar.bz2
+
+f7 suites packaged: 34
+failures:           0
+tests left out:     37 of 1271 (2.9%)
+cost, as reported:  $17.62
+[Csv-14] staging the buggy version (w-aDtGO0w1)
+[Csv-14] leak scan: clean
+[Csv-14] invoking agent (claude-sonnet-5, f7)
+[Csv-14] agent done: $0.551 turns=18 state=ok
+[Csv-14] round 1: left out 1 failing test(s)
+[Csv-14] left out 1 of 76 tests
+[Csv-14] packaged: Csv-14-f7.tar.bz2
+
+f7 suites packaged: 35
+failures:           0
+tests left out:     38 of 1347 (2.8%)
+cost, as reported:  $18.17
+[Csv-14] staging the fixed version (w-k3Aat8Yk)
+[Csv-14] leak scan: clean
+[Csv-14] invoking agent (claude-sonnet-5, m7)
+[Csv-14] agent done: $0.339 turns=9 state=ok
+[Csv-14] left out 0 of 56 tests
+[Csv-14] packaged: Csv-14-m7.tar.bz2
+
+m7 suites packaged: 35
+failures:           0
+tests left out:     1 of 1157 (0.1%)
+cost, as reported:  $14.63
+[Lang-52] staging the fixed version (w-eDxPWJ4R)
+[Lang-52] leak scan: clean
+[Lang-52] invoking agent (claude-sonnet-5, m7)
+[Lang-52] agent done: $0.228 turns=10 state=ok
+[Lang-52] left out 0 of 62 tests
+[Lang-52] packaged: Lang-52-m7.tar.bz2
+
+m7 suites packaged: 36
+failures:           0
+tests left out:     1 of 1219 (0.1%)
+cost, as reported:  $14.86
+[Lang-52] staging the buggy version (w-ItRF7Hvk)
+[Lang-52] leak scan: clean
+[Lang-52] invoking agent (claude-sonnet-5, f7)
+[Lang-52] agent done: $0.307 turns=18 state=ok
+[Lang-52] left out 0 of 51 tests
+[Lang-52] packaged: Lang-52-f7.tar.bz2
+
+f7 suites packaged: 36
+failures:           0
+tests left out:     38 of 1398 (2.7%)
+cost, as reported:  $18.48
+[Gson-14] staging the buggy version (w-GEUlQivH)
+[Gson-14] leak scan: clean
+[Gson-14] invoking agent (claude-sonnet-5, f7)
+[Gson-14] agent done: $0.430 turns=15 state=ok
+[Gson-14] left out 0 of 46 tests
+[Gson-14] packaged: Gson-14-f7.tar.bz2
+
+f7 suites packaged: 37
+failures:           0
+tests left out:     38 of 1444 (2.6%)
+cost, as reported:  $18.91
+[Gson-14] staging the fixed version (w-j36NrBrT)
+[Gson-14] leak scan: clean
+[Gson-14] invoking agent (claude-sonnet-5, m7)
+[Gson-14] agent done: $0.559 turns=17 state=ok
+[Gson-14] left out 0 of 59 tests
+[Gson-14] packaged: Gson-14-m7.tar.bz2
+
+m7 suites packaged: 37
+failures:           0
+tests left out:     1 of 1278 (0.1%)
+cost, as reported:  $15.42
+[Csv-7] staging the fixed version (w-AmSMd5wh)
+[Csv-7] leak scan: clean
+[Csv-7] invoking agent (claude-sonnet-5, m7)
+[Csv-7] agent done: $0.340 turns=22 state=ok
+[Csv-7] left out 0 of 24 tests
+[Csv-7] packaged: Csv-7-m7.tar.bz2
+
+m7 suites packaged: 38
+failures:           0
+tests left out:     1 of 1302 (0.1%)
+cost, as reported:  $15.76
+[Csv-7] staging the buggy version (w-xpbvKR0N)
+[Csv-7] leak scan: clean
+[Csv-7] invoking agent (claude-sonnet-5, f7)
+[Csv-7] agent done: $0.465 turns=17 state=ok
+[Csv-7] left out 0 of 41 tests
+[Csv-7] packaged: Csv-7-f7.tar.bz2
+
+f7 suites packaged: 38
+failures:           0
+tests left out:     38 of 1485 (2.6%)
+cost, as reported:  $19.38
+[Lang-63] staging the buggy version (w-4eHlm5xU)
+[Lang-63] leak scan: clean
+[Lang-63] invoking agent (claude-sonnet-5, f7)
+[Lang-63] agent done: $0.577 turns=12 state=ok
+[Lang-63] round 1: left out 3 failing test(s)
+[Lang-63] left out 3 of 28 tests
+[Lang-63] packaged: Lang-63-f7.tar.bz2
+
+f7 suites packaged: 39
+failures:           0
+tests left out:     41 of 1513 (2.7%)
+cost, as reported:  $19.95
+[Lang-63] staging the fixed version (w-PgMwfeMV)
+[Lang-63] leak scan: clean
+[Lang-63] invoking agent (claude-sonnet-5, m7)
+[Lang-63] agent done: $0.675 turns=31 state=ok
+[Lang-63] left out 0 of 23 tests
+[Lang-63] packaged: Lang-63-m7.tar.bz2
+
+m7 suites packaged: 39
+failures:           0
+tests left out:     1 of 1325 (0.1%)
+cost, as reported:  $16.44
+[Cli-15] staging the fixed version (w-aTfuJtKg)
+[Cli-15] leak scan: clean
+[Cli-15] invoking agent (claude-sonnet-5, m7)
+[Cli-15] agent done: $0.398 turns=25 state=ok
+[Cli-15] left out 0 of 33 tests
+[Cli-15] packaged: Cli-15-m7.tar.bz2
+
+m7 suites packaged: 40
+failures:           0
+tests left out:     1 of 1358 (0.1%)
+cost, as reported:  $16.83
+[Cli-15] staging the buggy version (w-auLJx1Rw)
+[Cli-15] leak scan: clean
+[Cli-15] invoking agent (claude-sonnet-5, f7)
+[Cli-15] agent done: $0.601 turns=27 state=ok
+[Cli-15] round 1: left out 1 failing test(s)
+[Cli-15] left out 1 of 39 tests
+[Cli-15] packaged: Cli-15-f7.tar.bz2
+
+f7 suites packaged: 40
+failures:           0
+tests left out:     42 of 1552 (2.7%)
+cost, as reported:  $20.55

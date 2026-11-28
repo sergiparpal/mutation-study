@@ -1,0 +1,17 @@
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testSimpleShort()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testSimpleLong()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testDoubleDash()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testSingleDash()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testStop()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testUnrecognizedOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testUnrecognizedOptionWithStopAtNonOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testMissingArg()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testPropertyOptionGnuStyle()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenDoubleDashStopsProcessing()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenSingleDashPreserved()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenKnownShortOptionUnchanged()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenUnknownOptionNotStopped()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenUnknownOptionStopped()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenPlainArgumentUnchanged()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenEmptyArguments()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testComplexShortNotBundled()	1	0	
