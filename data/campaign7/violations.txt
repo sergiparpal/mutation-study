@@ -1,0 +1,37 @@
+# Seventh campaign, step 2: runs with a violation (PROTOCOL.md, "Exclusions"),
+# one per line: arm, bug, reason. Decided on 28 November 2026 from
+# audit.txt, before anything was measured. Every flagged command was read
+# with its result.
+#
+# None. What was flagged, and why none of it is a violation:
+#   network (0)
+#   vcs (4)       `git status` or `git log`, which fail ("not a git
+#                 repository"): f7 Gson-15 and Lang-43, m7 Lang-23 and
+#                 Lang-43.
+#   outside (5)   A scratch program to be written under /tmp, in commands
+#                 the harness refused before they ran: f7 Gson-10 and
+#                 Lang-34, m7 Csv-7, Lang-23 and Lang-43.
+#   own tmp (1)   m7 Lang-63: `mkdir` of a directory in the run's own
+#                 temporary directory, which the protocol does not count as
+#                 outside. The Write into it that followed was refused.
+# The harness refused 41 calls, 22 in f7 and 19 in m7. 35 were shell commands
+# that needed an approval nobody could give: 26 write a scratch program with a
+# here-document, 4 remove the agent's own scratch files, 4 print files of the
+# working copy from a loop or a `find`, and one compiles a scratch program.
+# None ran. The other 6 were Writes on a path outside the working copy, refused
+# by --restricted. No other call of a file tool named a path outside the
+# working copy, and no Read opened a saved copy of a command's output.
+#
+# One run changed files other than its test classes: m7 Lang-56, ten scratch
+# files in _tools/out2/ (Chk2 to Chk6, source and class). The protocol counts
+# such runs here and does not exclude them.
+#
+# Both runs of Lang-36 name the trigger test testIsNumber: each agent gave that
+# name to one of its own test methods, a test of NumberUtils.isNumber. By the
+# rule under "Exclusions" both name the bug. They are not excluded, and
+# sensitivity analysis 3 leaves them out.
+#
+# A listing in m7 Lang-43 shows `.bashrc`, `.mcp.json`, `.claude` and the like
+# inside the working copy. As in the fourth to sixth campaigns, they are the
+# sandbox's write protection, not files of the bug, and no command or file
+# tool read one.

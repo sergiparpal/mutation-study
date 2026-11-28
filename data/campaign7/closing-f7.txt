@@ -1,0 +1,54 @@
+# Seventh campaign, step 2: the f7 runs whose closing message names a test as
+# showing a bug (PROTOCOL.md, "Procedure"), one per line:
+#   f7 <bug> fault|other <the words that say what the bug is>
+# `fault`: one of the bugs named is a behaviour that the bug's source patch
+# changes, and what the message says the behaviour should be is what the fixed
+# version makes it ("Outcomes"). `other`: none is. All 40 closing messages
+# were read on 28 November 2026 (./bin/audit-campaign7.py data/campaign7
+# --closing), and each line was judged against the bug's source patch in
+# Defects4J (framework/projects/<project>/patches/<id>.src.patch), before
+# anything was measured.
+#
+# Where a message allows more than one behaviour, it names the fault when the
+# fixed version's is one of them: Cli-32 ("a valid wrap position (or -1)"; the
+# fixed version returns 4) and Csv-4 ("null or an empty map"; the fixed
+# version returns null).
+#
+# Two messages name the fault of another bug of the sample, in code that is
+# the same in both versions of the bug they were run on: Cli-10's names
+# Cli-28's (processProperties' break), and Gson-4's names Gson-15's
+# (value(double) and the lenient flag). Both are `other`.
+#
+# The 26 runs listed are the 26 that left a test out at acceptance. Not
+# listed: the 14 runs whose message names no test as showing a bug, none of
+# which left a test out: Cli-12, Cli-38, Csv-7, Csv-8, Csv-10, Csv-16, Gson-3,
+# Gson-5, Gson-6, Gson-8, Gson-14, Lang-13, Lang-52 and Lang-65. Gson-8's
+# message reports, with no test, that newInstance(null) crashes the JVM
+# instead of throwing NullPointerException. In the fixed version
+# assertInstantiable throws NullPointerException there.
+f7 Cli-10 other processProperties stops at the first no-argument option whose property value is not yes, true or 1 (break instead of continue), so the properties after it are not applied
+f7 Cli-15 other addSwitch adds the option before it checks for a switch already set, so a second call throws IllegalStateException and leaves the option added twice
+f7 Cli-17 other burstToken, with stopAtNonOption false, adds the whole token "-ax" again when it meets an unknown character, instead of "-x"
+f7 Cli-21 other addOption adds an option's parents to the options list but not to nameToOption, so getOption with a parent's name returns null while hasOption(parent) is true
+f7 Cli-28 fault processProperties breaks instead of continuing when a no-argument option's property value is not yes, true or 1, so the properties after it are not applied; also: with stopAtNonOption, a bare "-" is not added to the argument list
+f7 Cli-32 fault findWrapPos("abcdefghij", 4, 0) throws StringIndexOutOfBoundsException from its forward scan (pos <= text.length(), then charAt(pos)) instead of returning a valid wrap position or -1
+f7 Csv-3 other isEscape, isQuoteChar and isCommentStart return true for the character U+FFFE when escape, quote or comments are disabled, since U+FFFE marks them disabled
+f7 Csv-4 fault getHeaderMap() throws NullPointerException when the format has no header, where it should return null or an empty map
+f7 Csv-5 other the constructor throws IllegalStateException for an inconsistent format, though documented to throw IllegalArgumentException
+f7 Csv-6 other toMap() throws NullPointerException for a record without a header mapping, though documented to return an empty map
+f7 Csv-14 other withRecordSeparator(String) accepts any string, though documented to throw IllegalArgumentException unless it is CR, LF or CRLF
+f7 Csv-15 other equals() ignores trim and allowMissingColumnNames, among other fields; withRecordSeparator(String) accepts any string, though documented to throw IllegalArgumentException unless it is CR, LF or CRLF
+f7 Gson-4 other value(double) throws IllegalArgumentException for NaN and infinities even when the writer is lenient
+f7 Gson-7 other a strict JsonReader accepts a top-level value that is neither an object nor an array, such as "true", though setLenient's javadoc says strict parsing requires one
+f7 Gson-10 other a subclass field that hides a superclass field of the same name throws "declares multiple JSON fields named value" instead of the subclass's field being used
+f7 Gson-15 fault value(double) throws IllegalArgumentException for NaN and infinities even when the writer is lenient: the !lenient guard of value(Number) is missing
+f7 Gson-16 other getArrayComponentType(String.class) returns null instead of throwing ClassCastException; getCollectionElementType and getMapKeyAndValueTypes of a raw ArrayList or HashMap subclass return type variables instead of Object
+f7 Lang-8 other the constructor accepts a null TimeZone, though documented to throw NullPointerException
+f7 Lang-21 other ceiling(date, HOUR_OF_DAY) of a date already on the hour returns the next hour instead of the date unchanged
+f7 Lang-23 other trailing whitespace after a format name is not trimmed, so "{ 0 , upper }" does not find the registered format; toPattern() throws IllegalArgumentException for "'{0}' {1,upper}"
+f7 Lang-34 other appendEnd(buffer, null) appends the content end "]" while appendStart(buffer, null) appends nothing
+f7 Lang-36 fault createNumber("1.") throws NumberFormatException instead of returning 1.0, taking the trailing '.' for a type suffix; also: isNumber("1.1L") returns true
+f7 Lang-43 fault appendQuotedString returns on a leading quote without advancing the parse position, so applyPattern with a registry and a quote in the pattern never ends
+f7 Lang-56 other getMaxLengthEstimate() underestimates "yyyyy" and the ZZ zone; a pattern with an unterminated quote is accepted instead of rejected with IllegalArgumentException
+f7 Lang-62 other LookupEntityMap.name(int) throws ArrayIndexOutOfBoundsException for a negative value instead of returning null; BinaryEntityMap.add throws ArrayIndexOutOfBoundsException for a value already at index 0 instead of ignoring it
+f7 Lang-63 other formatDuration overflows the hours of a large duration when it casts them to int; formatDurationWords leaves "0 seconds" for an all-zero duration with leading zero elements suppressed

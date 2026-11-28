@@ -1,0 +1,116 @@
+f7: 40 transcripts
+  Cli-10     commands=5   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-12     commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-15     commands=20  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-17     commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-21     commands=17  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-28     commands=12  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-32     commands=10  refused=3  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-38     commands=10  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-10     commands=4   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-14     commands=10  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-15     commands=6   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-16     commands=10  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-3      commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-4      commands=13  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-5      commands=6   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-6      commands=5   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-7      commands=6   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-8      commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-10    commands=19  refused=3  denied=0  network=0 vcs=0 outside=1 own_tmp=0 other=0
+      [outside] mkdir -p /tmp/probe && cat > /tmp/probe/Probe.java << 'EOF' import com.google.gson.Gson; public class Probe { static class Base { int value = 1; } sta
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+  Gson-14    commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-15    commands=12  refused=0  denied=0  network=0 vcs=1 outside=0 own_tmp=0 other=0
+      [vcs] git status 2>&1 | head -5; git log --oneline -- gson/src/main/java/com/google/gson/stream/JsonWriter.java 2>&1 | head -20
+          -> fatal: not a git repository (or any parent up to mount point /tmp) Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set). fatal: n
+  Gson-16    commands=10  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-3     commands=12  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-4     commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-5     commands=6   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-6     commands=10  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-7     commands=10  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-8     commands=12  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-13    commands=11  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-21    commands=16  refused=2  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-23    commands=15  refused=2  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-34    commands=8   refused=2  denied=0  network=0 vcs=0 outside=1 own_tmp=0 other=0
+      [outside] mkdir -p /tmp/dbgout && cat > /tmp/dbgout/Dbg.java << 'EOF' package org.apache.commons.lang3.builder; public class Dbg { private static class Style ex
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+  Lang-36    commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0  knew: names the trigger test testIsNumber
+  Lang-43    commands=21  refused=2  denied=0  network=0 vcs=1 outside=0 own_tmp=0 other=0
+      [vcs] git status 2>&1 | head -20 || echo "not a git repo"
+          -> fatal: not a git repository (or any parent up to mount point /tmp) Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+  Lang-52    commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-56    commands=13  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-62    commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-63    commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-65    commands=10  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-8     commands=10  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  runs with a flagged command: 4 of 40; calls the harness refused: 22; commands the sandbox denied: 0; runs that touched another file: 0; runs that name the bug: 1
+
+m7: 40 transcripts
+  Cli-10     commands=14  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-12     commands=14  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-15     commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-17     commands=10  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-21     commands=18  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-28     commands=17  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-32     commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Cli-38     commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-10     commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-14     commands=6   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-15     commands=11  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-16     commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-3      commands=11  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-4      commands=13  refused=2  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-5      commands=6   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-6      commands=5   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-7      commands=15  refused=1  denied=0  network=0 vcs=0 outside=1 own_tmp=0 other=0
+      [outside] mkdir -p /tmp/scratch && cat > /tmp/scratch/T.java <<'EOF' import org.apache.commons.csv.*; import java.util.*; public class T { public static void ma
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+  Csv-8      commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-10    commands=22  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-14    commands=11  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-15    commands=5   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-16    commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-3     commands=5   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-4     commands=9   refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-5     commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-6     commands=13  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-7     commands=10  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Gson-8     commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-13    commands=8   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-21    commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-23    commands=17  refused=3  denied=0  network=0 vcs=1 outside=1 own_tmp=0 other=0
+      [outside] mkdir -p /tmp/emf_scratch && cat > /tmp/emf_scratch/Probe.java << 'EOF' import org.apache.commons.lang3.text.ExtendedMessageFormat; import java.util.H
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [vcs] git status --short 2>&1 | head -20 || ls -la
+          -> fatal: not a git repository (or any parent up to mount point /tmp) Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+  Lang-34    commands=10  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-36    commands=7   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0  knew: names the trigger test testIsNumber
+  Lang-43    commands=15  refused=2  denied=0  network=0 vcs=1 outside=1 own_tmp=0 other=0
+      [outside] mkdir -p /tmp/scratch && cat > /tmp/scratch/Scratch.java <<'EOF' import org.apache.commons.lang.text.ExtendedMessageFormat; import java.util.*; public
+          -> Permission for this tool use was denied. It requires approval, and this session has no approval surface — nobody can answer a permission prompt here —
+      [vcs] ./_tools/test.sh 2>&1 | tail -20; echo ---; git status --porcelain 2>/dev/null || echo "not a git repo"; find . -maxdepth 1 -newer _tools/test.sh 2>/d
+          -> Note: src/test/org/apache/commons/lang/text/ExtendedMessageFormatAgentTest.java uses or overrides a deprecated API. Note: Recompile with -Xlint:deprec
+  Lang-52    commands=6   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-56    commands=31  refused=4  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=10
+      [other] ./_tools/out2/Chk2.class
+      [other] ./_tools/out2/Chk2.java
+      [other] ./_tools/out2/Chk3.class
+      [other] ./_tools/out2/Chk3.java
+      [other] ./_tools/out2/Chk4.class
+      [other] ./_tools/out2/Chk4.java
+      [other] ./_tools/out2/Chk5.class
+      [other] ./_tools/out2/Chk5.java
+      [other] ./_tools/out2/Chk6.class
+      [other] ./_tools/out2/Chk6.java
+  Lang-62    commands=11  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-63    commands=19  refused=3  denied=0  network=0 vcs=0 outside=0 own_tmp=1 other=0
+      [own tmp] mkdir -p /tmp/t-pkft3DcH/claude-1000/scratch
+          -> (Bash completed with no output)
+  Lang-65    commands=12  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-8     commands=6   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  runs with a flagged command: 4 of 40; calls the harness refused: 19; commands the sandbox denied: 0; runs that touched another file: 1; runs that name the bug: 1
+
