@@ -1,0 +1,5 @@
+org/apache/commons/csv/LexerAgentTest.java: disabled org.apache.commons.csv.LexerAgentTest#testDisabledCommentStartDoesNotMatchSentinelCharacter()
+org/apache/commons/csv/LexerAgentTest.java: disabled org.apache.commons.csv.LexerAgentTest#testDisabledEscapeDoesNotMatchSentinelCharacter()
+org/apache/commons/csv/LexerAgentTest.java: disabled org.apache.commons.csv.LexerAgentTest#testDisabledQuoteCharDoesNotMatchSentinelCharacter()
+disabled in org/apache/commons/csv/LexerAgentTest.java: 3 of 3 keys
+check run: the archive runs the 26 tests acceptance kept; 0 of them fail there

@@ -1,0 +1,9 @@
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_noAnnotation_returnsNull()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_withTypeAdapterValue_readsAndWrites()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_withTypeAdapterValue_isNullSafe()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_withTypeAdapterValue_newInstanceEachCall()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_withTypeAdapterFactoryValue_delegatesToFactory()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_withTypeAdapterFactoryValue_isNullSafe()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_invalidAnnotationValue_throwsIllegalArgumentException()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testGetTypeAdapter_withTypeAdapterValue_wrapsNullSafe()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testGetTypeAdapter_invalidValue_throwsIllegalArgumentException()	1	0	

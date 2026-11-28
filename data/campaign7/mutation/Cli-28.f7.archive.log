@@ -1,0 +1,4 @@
+org/apache/commons/cli/ParserAgentTest.java: disabled org.apache.commons.cli.ParserAgentTest#testPropertyProcessingContinuesAfterDisabledFlag()
+org/apache/commons/cli/ParserAgentTest.java: disabled org.apache.commons.cli.ParserAgentTest#testSingleDashWithStopAtNonOptionIsEaten()
+disabled in org/apache/commons/cli/ParserAgentTest.java: 2 of 2 keys
+check run: the archive runs the 22 tests acceptance kept; 0 of them fail there

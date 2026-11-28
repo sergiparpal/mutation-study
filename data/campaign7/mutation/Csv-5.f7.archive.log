@@ -1,0 +1,4 @@
+org/apache/commons/csv/CSVPrinterAgentTest.java: disabled org.apache.commons.csv.CSVPrinterAgentTest#testConstructorInconsistentFormatThrowsIllegalArgumentExceptionPerJavadoc()
+org/apache/commons/csv/CSVPrinterAgentTest.java: disabled org.apache.commons.csv.CSVPrinterAgentTest#testConstructorQuoteNoneWithoutEscapeThrowsIllegalArgumentExceptionPerJavadoc()
+disabled in org/apache/commons/csv/CSVPrinterAgentTest.java: 2 of 2 keys
+check run: the archive runs the 37 tests acceptance kept; 0 of them fail there

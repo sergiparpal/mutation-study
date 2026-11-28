@@ -1,0 +1,3 @@
+org/apache/commons/csv/CSVFormatAgentTest.java: disabled org.apache.commons.csv.CSVFormatAgentTest#testWithRecordSeparatorRejectsInvalidValue()
+disabled in org/apache/commons/csv/CSVFormatAgentTest.java: 1 of 1 keys
+check run: the archive runs the 75 tests acceptance kept; 0 of them fail there

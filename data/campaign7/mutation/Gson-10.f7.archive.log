@@ -1,0 +1,3 @@
+com/google/gson/internal/bind/ReflectiveTypeAdapterFactoryAgentTest.java: disabled com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testFieldHidingAcrossHierarchyIsSupported()
+disabled in com/google/gson/internal/bind/ReflectiveTypeAdapterFactoryAgentTest.java: 1 of 1 keys
+check run: the archive runs the 16 tests acceptance kept; 0 of them fail there

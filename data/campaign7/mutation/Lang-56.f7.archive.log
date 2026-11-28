@@ -1,0 +1,5 @@
+org/apache/commons/lang/time/FastDateFormatAgentTest.java: disabled org.apache.commons.lang.time.FastDateFormatAgentTest#testGetMaxLengthEstimate_bug_ignoresPaddedFieldWidth()
+org/apache/commons/lang/time/FastDateFormatAgentTest.java: disabled org.apache.commons.lang.time.FastDateFormatAgentTest#testGetMaxLengthEstimate_bug_timeZoneColonVariantUnderestimated()
+org/apache/commons/lang/time/FastDateFormatAgentTest.java: disabled org.apache.commons.lang.time.FastDateFormatAgentTest#testUnterminatedQuote_bug_shouldRejectMalformedPattern()
+disabled in org/apache/commons/lang/time/FastDateFormatAgentTest.java: 3 of 3 keys
+check run: the archive runs the 35 tests acceptance kept; 0 of them fail there

@@ -1,0 +1,19 @@
+Extract test suite......................................................... Executing test suite: Gson-7f-m7.1.tar.bz2
+OK
+Checking out 2b08c88c to /home/sergi/.cache/gen-stage/mutation-F0VzAGNq/run OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Apply patch................................................................ OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 2b08c88c:a02f5757..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Gson-7f......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK

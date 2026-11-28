@@ -1,0 +1,5 @@
+org/apache/commons/lang/EntitiesAgentTest.java: disabled org.apache.commons.lang.EntitiesAgentTest#testBinaryEntityMapDuplicateValueAtFirstSlotIsIgnored()
+org/apache/commons/lang/EntitiesAgentTest.java: disabled org.apache.commons.lang.EntitiesAgentTest#testEntityNameNegativeValueDoesNotThrow()
+org/apache/commons/lang/EntitiesAgentTest.java: disabled org.apache.commons.lang.EntitiesAgentTest#testLookupEntityMapNegativeValueDoesNotThrow()
+disabled in org/apache/commons/lang/EntitiesAgentTest.java: 3 of 3 keys
+check run: the archive runs the 32 tests acceptance kept; 0 of them fail there
