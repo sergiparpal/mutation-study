@@ -48,8 +48,19 @@ Conventions, all of them stated in the write-up:
 - A detection rate is over suites classified Pass or Fail. A suite classified
   Broken was never validly run against the buggy revision and is left out of
   the denominator, not counted as a miss.
+- Line coverage of Csv-4 comes from data/csv4-coverage/corrected.tsv for the
+  seven suites whose coverage Defects4J measured with Cobertura: the first
+  campaign's three, m2 and s2, m7 and f7. Cobertura gives no line counter to
+  most of CSVParser's methods, and those lines read as never executed
+  (data/README.md, "Csv-4's line coverage, measured again"). The tables keep
+  Cobertura's figures as recorded. The report runs on a copy of the
+  repository's tree made of symbolic links, in which the three tables are
+  copies with those seven rows' lines_covered replaced, and every script it
+  runs reads the copy. With --as-recorded it runs on the tree as it is, and
+  the second and seventh campaigns' analyses print what their analysis.txt
+  records.
 
-Usage: ./bin/report-figures.py        (from the repository root)
+Usage: ./bin/report-figures.py [--as-recorded]        (from the repository root)
 """
 
 import csv
@@ -59,9 +70,11 @@ import math
 import os
 import subprocess
 import sys
+import tempfile
 from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CORRECTIONS = "data/csv4-coverage/corrected.tsv"
 METRICS = "data/agent-metrics-final.csv"
 PROJECTS = [("Lang", "Commons Lang"), ("Csv", "Commons CSV"),
             ("Gson", "Gson"), ("Cli", "Commons CLI")]
@@ -151,8 +164,76 @@ def run(*args):
                  f"{status}; the report stops here")
 
 
+def corrected_tree(tmp):
+    """A tree of symbolic links to the repository's, in which each table that
+    CORRECTIONS names is a copy with lines_covered replaced in the rows it names.
+
+    Directories on the way to a corrected table are real directories of links;
+    everything else is a link to the repository's own file or directory. A row
+    whose recorded lines_total or lines_covered is not what CORRECTIONS says
+    stops the report. Returns the tree's root.
+    """
+    with open(os.path.join(ROOT, CORRECTIONS), newline="") as fh:
+        fixes = list(csv.DictReader(fh, delimiter="\t"))
+    tables = defaultdict(list)
+    for f in fixes:
+        tables[f["table"]].append(f)
+    real = {""}
+    for t in tables:
+        parts = t.split("/")
+        real.update("/".join(parts[:i]) for i in range(1, len(parts)))
+    tree = os.path.join(tmp, "tree")
+    for d in sorted(real, key=lambda x: x.count("/") if x else -1):
+        os.makedirs(os.path.join(tree, d), exist_ok=True)
+        for name in os.listdir(os.path.join(ROOT, d)):
+            rel = f"{d}/{name}" if d else name
+            if rel not in real and rel not in tables:
+                os.symlink(os.path.join(ROOT, rel), os.path.join(tree, rel))
+    for t, rows in tables.items():
+        with open(os.path.join(ROOT, t), newline="") as fh:
+            lines = fh.readlines()
+        head = next(csv.reader([lines[0]]))
+        for f in rows:
+            cols, key = f["key_columns"].split(","), f["key"].split(",")
+            idx = [head.index(c) for c in cols]
+            parsed = [next(csv.reader([l]), []) for l in lines]
+            hits = [i for i in range(1, len(lines))
+                    if len(parsed[i]) > max(idx) and [parsed[i][j] for j in idx] == key]
+            if len(hits) != 1:
+                sys.exit(f"report-figures.py: {t} has {len(hits)} rows for {key}")
+            i = hits[0]
+            body = lines[i].rstrip("\r\n")
+            fields = next(csv.reader([body]))
+            if ",".join(fields) != body:
+                sys.exit(f"report-figures.py: row {key} of {t} is quoted; not replaced")
+            lt, lc = head.index("lines_total"), head.index("lines_covered")
+            if (fields[lt], fields[lc]) != (f["lines_total"], f["recorded"]):
+                sys.exit(f"report-figures.py: {t} records {fields[lt]}/{fields[lc]} lines for "
+                         f"{key}, {CORRECTIONS} says {f['lines_total']}/{f['recorded']}")
+            fields[lc] = f["corrected"]
+            lines[i] = ",".join(fields) + lines[i][len(body):]
+        with open(os.path.join(tree, t), "w", newline="") as fh:
+            fh.writelines(lines)
+    return tree
+
+
 def main():
-    os.chdir(ROOT)
+    as_recorded = "--as-recorded" in sys.argv[1:]
+    if [a for a in sys.argv[1:] if a != "--as-recorded"]:
+        sys.exit("usage: ./bin/report-figures.py [--as-recorded]")
+    if as_recorded:
+        os.chdir(ROOT)
+        report()
+        return
+    with tempfile.TemporaryDirectory(prefix="report-figures-") as tmp:
+        os.chdir(corrected_tree(tmp))
+        print(f"Csv-4's line coverage is counted from {CORRECTIONS} in the seven suites "
+              "Cobertura measured; --as-recorded prints the tables as recorded.")
+        report()
+        os.chdir(ROOT)
+
+
+def report():
     arms = load()
     A, S, E, O = (arms[k] for k in ("agent", "spec", "evosuite", "agentopus"))
 
