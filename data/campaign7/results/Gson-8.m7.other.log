@@ -1,0 +1,19 @@
+1) com.google.gson.internal.UnsafeAllocatorAgentTest#testNewInstanceOnInterfaceThrows()
+java.lang.reflect.InvocationTargetException
+    at com.google.gson.internal.UnsafeAllocator$1.newInstance(UnsafeAllocator.java:48)
+    at com.google.gson.internal.UnsafeAllocatorAgentTest.testNewInstanceOnInterfaceThrows(UnsafeAllocatorAgentTest.java:76)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+Caused by: java.lang.InstantiationException: com.google.gson.internal.UnsafeAllocatorAgentTest$SomeInterface
+
+2) com.google.gson.internal.UnsafeAllocatorAgentTest#testNewInstanceOnAbstractClassThrows()
+java.lang.reflect.InvocationTargetException
+    at com.google.gson.internal.UnsafeAllocator$1.newInstance(UnsafeAllocator.java:48)
+    at com.google.gson.internal.UnsafeAllocatorAgentTest.testNewInstanceOnAbstractClassThrows(UnsafeAllocatorAgentTest.java:86)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+Caused by: java.lang.InstantiationException: com.google.gson.internal.UnsafeAllocatorAgentTest$AbstractClass
+
+Tests run: 8, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 8, failed: 2
+FAILURES!!!

@@ -1,0 +1,9 @@
+1) org.apache.commons.csv.LexerAgentTest#testReadEscapeMetaCharacterIsReturnedAsIs()
+java.lang.AssertionError: expected:<34> but was:<-1>
+    at org.apache.commons.csv.LexerAgentTest.testReadEscapeMetaCharacterIsReturnedAsIs(LexerAgentTest.java:120)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 26, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 26, failed: 1, left out beforehand: 3
+FAILURES!!!

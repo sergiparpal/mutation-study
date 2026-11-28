@@ -1,0 +1,1 @@
+Csv-8,f7,buggy,Fail,,56,0,1,org.apache.commons.csv.CSVFormatAgentTest#testValidateRejectsDuplicateHeaderNames(),,,0,0,Pass,nothing was left out at acceptance,,,,,

@@ -1,0 +1,23 @@
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testHeaderMapSkipHeaderRecord()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testIteratorHasNextAndNext()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testHeaderMapFromExplicitHeader()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetRecordNumberAndLineNumberTracking()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testCloseMakesParserClosedAndIteratorExhausted()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseFileFactory()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testHeaderMapFromFirstLineAutoDetected()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testUnterminatedQuoteThrowsIOException()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testConstructorRejectsNullFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetRecordsEmptyInput()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testConstructorRejectsNullReader()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testNullStringConvertsMatchingTokenToNull()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetRecordsSimple()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testIteratorRemoveUnsupported()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetRecordsStartsFromCurrentPosition()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testCloseIsIdempotent()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseFileRejectsNullFile()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testCommentsAreAttachedToFollowingRecord()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testParseStringRejectsNullString()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testIteratorNextWithoutHasNext()	1	0	
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapIsACopy()	1	0	
+FAILED	method	org.apache.commons.csv.CSVParserAgentTest#testGetHeaderMapNullWhenNoHeaderDefined()	1	1	java.lang.NullPointerException
+SUCCESSFUL	method	org.apache.commons.csv.CSVParserAgentTest#testIteratorNextThrowsWhenExhausted()	1	0	

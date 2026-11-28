@@ -1,0 +1,27 @@
+---- org.apache.commons.lang.EntitiesAgentTest ----
+1) org.apache.commons.lang.EntitiesAgentTest#testEntityNameNegativeValueDoesNotThrow()
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 256
+    at org.apache.commons.lang.Entities$LookupEntityMap.name(Entities.java:511)
+    at org.apache.commons.lang.Entities.entityName(Entities.java:723)
+    at org.apache.commons.lang.EntitiesAgentTest.testEntityNameNegativeValueDoesNotThrow(EntitiesAgentTest.java:310)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.lang.EntitiesAgentTest#testBinaryEntityMapDuplicateValueAtFirstSlotIsIgnored()
+java.lang.ArrayIndexOutOfBoundsException: arraycopy: source index -1 out of bounds for int[100]
+    at java.base/java.lang.System.arraycopy(Native Method)
+    at org.apache.commons.lang.Entities$BinaryEntityMap.add(Entities.java:673)
+    at org.apache.commons.lang.EntitiesAgentTest.testBinaryEntityMapDuplicateValueAtFirstSlotIsIgnored(EntitiesAgentTest.java:254)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+3) org.apache.commons.lang.EntitiesAgentTest#testLookupEntityMapNegativeValueDoesNotThrow()
+java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 256
+    at org.apache.commons.lang.Entities$LookupEntityMap.name(Entities.java:511)
+    at org.apache.commons.lang.EntitiesAgentTest.testLookupEntityMapNegativeValueDoesNotThrow(EntitiesAgentTest.java:306)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 3, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 3, failed: 3, left out beforehand: 32
+FAILURES!!!

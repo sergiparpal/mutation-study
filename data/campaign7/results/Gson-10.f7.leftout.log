@@ -1,0 +1,13 @@
+---- com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest ----
+1) com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testFieldHidingAcrossHierarchyIsSupported()
+java.lang.IllegalArgumentException: class com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest$Hider declares multiple JSON fields named value
+    at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:169)
+    at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:100)
+    at com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest.adapterFor(ReflectiveTypeAdapterFactoryAgentTest.java:51)
+    at com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest.testFieldHidingAcrossHierarchyIsSupported(ReflectiveTypeAdapterFactoryAgentTest.java:181)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 16
+FAILURES!!!

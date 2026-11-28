@@ -1,0 +1,15 @@
+---- org.apache.commons.lang.time.FastDateFormatAgentTest ----
+DEBUG cache size=1
+DEBUG key=FastDateFormat[HH] identical=true
+DEBUG cal class=class java.util.GregorianCalendar defaultLocale=en
+DEBUG manual clone hour=10
+DEBUG overrides=true tz=sun.util.calendar.ZoneInfo[id="GMT+05:00",offset=18000000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null] hourField=10 result=10
+1) org.apache.commons.lang.time.FastDateFormatAgentTest#testTimeZoneOverridesCalendarWhenForced()
+junit.framework.ComparisonFailure: expected:<1[5]> but was:<1[0]>
+    at org.apache.commons.lang.time.FastDateFormatAgentTest.testTimeZoneOverridesCalendarWhenForced(FastDateFormatAgentTest.java:287)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 24
+FAILURES!!!

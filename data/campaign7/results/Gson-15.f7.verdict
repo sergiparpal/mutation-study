@@ -1,0 +1,1 @@
+Gson-15,f7,buggy,Pass,,37,1,0,,1,1,0,0,Fail,,1,1,0,0,com.google.gson.stream.JsonWriterAgentTest#testNonFiniteDoublesSucceedWhenLenient()

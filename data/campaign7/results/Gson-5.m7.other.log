@@ -1,0 +1,11 @@
+1) com.google.gson.internal.bind.util.ISO8601UtilsAgentTest#testParseDateTimeWithTimeZoneOffsetHourOnly()
+java.text.ParseException: Failed to parse date ["2018-06-25T10:30:15+02']: Mismatching time zone indicator: GMT+02 given, resolves to GMT+02:00
+    at com.google.gson.internal.bind.util.ISO8601Utils.parse(ISO8601Utils.java:273)
+    at com.google.gson.internal.bind.util.ISO8601UtilsAgentTest.testParseDateTimeWithTimeZoneOffsetHourOnly(ISO8601UtilsAgentTest.java:124)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+Caused by: java.lang.IndexOutOfBoundsException: Mismatching time zone indicator: GMT+02 given, resolves to GMT+02:00
+
+Tests run: 24, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 24, failed: 1
+FAILURES!!!

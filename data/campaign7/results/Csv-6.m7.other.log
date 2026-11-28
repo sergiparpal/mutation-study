@@ -1,0 +1,19 @@
+1) org.apache.commons.csv.CSVRecordAgentTest#testToMapIsIndependentCopy()
+java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+    at org.apache.commons.csv.CSVRecord.putIn(CSVRecord.java:182)
+    at org.apache.commons.csv.CSVRecord.toMap(CSVRecord.java:212)
+    at org.apache.commons.csv.CSVRecordAgentTest.testToMapIsIndependentCopy(CSVRecordAgentTest.java:238)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.csv.CSVRecordAgentTest#testToMapWithMissingValues()
+java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+    at org.apache.commons.csv.CSVRecord.putIn(CSVRecord.java:182)
+    at org.apache.commons.csv.CSVRecord.toMap(CSVRecord.java:212)
+    at org.apache.commons.csv.CSVRecordAgentTest.testToMapWithMissingValues(CSVRecordAgentTest.java:228)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 27, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 27, failed: 2
+FAILURES!!!

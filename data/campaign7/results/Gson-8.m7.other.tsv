@@ -1,0 +1,8 @@
+SUCCESSFUL	method	com.google.gson.internal.UnsafeAllocatorAgentTest#testCreateReturnsNonNullAllocator()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.UnsafeAllocatorAgentTest#testCreateReturnsNewInstanceEachTime()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.UnsafeAllocatorAgentTest#testNewInstanceBypassesConstructor()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.UnsafeAllocatorAgentTest#testNewInstanceOfPlainObject()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.UnsafeAllocatorAgentTest#testNewInstanceLeavesFinalFieldAtDefault()	1	0	
+FAILED	method	com.google.gson.internal.UnsafeAllocatorAgentTest#testNewInstanceOnInterfaceThrows()	1	1	java.lang.reflect.InvocationTargetException
+FAILED	method	com.google.gson.internal.UnsafeAllocatorAgentTest#testNewInstanceOnAbstractClassThrows()	1	1	java.lang.reflect.InvocationTargetException
+SUCCESSFUL	method	com.google.gson.internal.UnsafeAllocatorAgentTest#testNewInstanceTwiceProducesDistinctObjects()	1	0	

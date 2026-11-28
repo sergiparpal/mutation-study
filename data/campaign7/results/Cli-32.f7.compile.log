@@ -1,0 +1,5 @@
+Note: /home/sergi/.cache/gen-stage/measure-Ms9LyvCI/suite-f7/org/apache/commons/cli/HelpFormatterAgentTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+---- the other version (fixed) ----
+Note: /home/sergi/.cache/gen-stage/measure-Ms9LyvCI/suite-f7/org/apache/commons/cli/HelpFormatterAgentTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.

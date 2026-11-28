@@ -1,0 +1,17 @@
+---- org.apache.commons.lang3.math.NumberUtilsAgentTest ----
+1) org.apache.commons.lang3.math.NumberUtilsAgentTest#testCreateNumberTrailingDot()
+java.lang.NumberFormatException: 1. is not a valid number.
+    at org.apache.commons.lang3.math.NumberUtils.createNumber(NumberUtils.java:546)
+    at org.apache.commons.lang3.math.NumberUtilsAgentTest.testCreateNumberTrailingDot(NumberUtilsAgentTest.java:252)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.lang3.math.NumberUtilsAgentTest#testIsNumberDecimalWithLongSuffixIsNotActuallyANumber()
+junit.framework.AssertionFailedError: 1.1L is not parseable as any number but isNumber reports it valid
+    at org.apache.commons.lang3.math.NumberUtilsAgentTest.testIsNumberDecimalWithLongSuffixIsNotActuallyANumber(NumberUtilsAgentTest.java:561)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 2, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 2, failed: 2, left out beforehand: 48
+FAILURES!!!

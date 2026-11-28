@@ -1,0 +1,10 @@
+---- com.google.gson.stream.JsonReaderAgentTest ----
+1) com.google.gson.stream.JsonReaderAgentTest#testTopLevelValueWithoutLenientThrows()
+junit.framework.AssertionFailedError
+    at com.google.gson.stream.JsonReaderAgentTest.testTopLevelValueWithoutLenientThrows(JsonReaderAgentTest.java:252)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 46
+FAILURES!!!

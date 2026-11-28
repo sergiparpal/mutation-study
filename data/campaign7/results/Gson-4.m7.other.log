@@ -1,0 +1,13 @@
+1) com.google.gson.stream.JsonReaderAgentTest#testTopLevelScalarAllowedWithoutLenient()
+com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 1 path $
+    at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1573)
+    at com.google.gson.stream.JsonReader.checkLenient(JsonReader.java:1422)
+    at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:586)
+    at com.google.gson.stream.JsonReader.peek(JsonReader.java:429)
+    at com.google.gson.stream.JsonReaderAgentTest.testTopLevelScalarAllowedWithoutLenient(JsonReaderAgentTest.java:154)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 58, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 58, failed: 1
+FAILURES!!!

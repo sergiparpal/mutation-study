@@ -1,0 +1,1 @@
+Csv-6,m7,fixed,Fail,,27,0,2,org.apache.commons.csv.CSVRecordAgentTest#testToMapIsIndependentCopy();org.apache.commons.csv.CSVRecordAgentTest#testToMapWithMissingValues(),,,1,0,Fail,,,,,,

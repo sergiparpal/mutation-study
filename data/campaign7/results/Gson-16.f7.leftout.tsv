@@ -1,0 +1,3 @@
+FAILED	method	com.google.gson.internal.$Gson$TypesAgentTest#testGetArrayComponentType_notAnArrayThrows()	1	1	junit.framework.AssertionFailedError: expected ClassCastException for non-array type
+FAILED	method	com.google.gson.internal.$Gson$TypesAgentTest#testGetMapKeyAndValueTypes_rawTypeDefaultsToObject()	1	1	junit.framework.AssertionFailedError: expected:<class java.lang.Object> but was:<K>
+FAILED	method	com.google.gson.internal.$Gson$TypesAgentTest#testGetCollectionElementType_rawTypeDefaultsToObject()	1	1	junit.framework.AssertionFailedError: expected:<class java.lang.Object> but was:<E>

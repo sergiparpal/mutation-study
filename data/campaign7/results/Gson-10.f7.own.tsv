@@ -1,0 +1,16 @@
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testCreateReturnsNullForPrimitiveType()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testCreateReturnsNonNullForBoxedPrimitive()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testRoundTripSimpleObject()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testTransientAndStaticFieldsExcluded()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testAlternateNameUsedOnlyForDeserialization()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testDuplicateSerializedNameThrowsIllegalArgumentException()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testSelfReferencingFieldSkippedToAvoidRecursion()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testNullIntoPrimitiveFieldLeavesExistingValueUntouched()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testUnknownPropertySkippedDuringRead()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testReadJsonNullReturnsNullInstance()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testWriteNullValueWritesJsonNull()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testInterfaceTypeProducesEmptyBoundFieldsAdapter()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testExcludeFieldStaticHelperIncludesOrdinaryField()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testExcludeFieldStaticHelperExcludesTransientField()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testExcludeFieldStaticHelperExcludesStaticField()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testInstanceExcludeFieldMatchesStaticHelper()	1	0	

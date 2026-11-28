@@ -1,0 +1,3 @@
+FAILED	method	org.apache.commons.lang.EntitiesAgentTest#testEntityNameNegativeValueDoesNotThrow()	1	1	java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 256
+FAILED	method	org.apache.commons.lang.EntitiesAgentTest#testBinaryEntityMapDuplicateValueAtFirstSlotIsIgnored()	1	1	java.lang.ArrayIndexOutOfBoundsException: arraycopy: source index -1 out of bounds for int[100]
+FAILED	method	org.apache.commons.lang.EntitiesAgentTest#testLookupEntityMapNegativeValueDoesNotThrow()	1	1	java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 256

@@ -1,0 +1,15 @@
+1) com.google.gson.internal.ConstructorConstructorAgentTest#testConcurrentNavigableMapUsesConcurrentSkipListMap()
+java.lang.ClassCastException: class java.util.TreeMap cannot be cast to class java.util.concurrent.ConcurrentNavigableMap (java.util.TreeMap and java.util.concurrent.ConcurrentNavigableMap are in module java.base of loader 'bootstrap')
+    at com.google.gson.internal.ConstructorConstructorAgentTest.testConcurrentNavigableMapUsesConcurrentSkipListMap(ConstructorConstructorAgentTest.java:213)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) com.google.gson.internal.ConstructorConstructorAgentTest#testConcurrentMapUsesConcurrentHashMap()
+java.lang.ClassCastException: class com.google.gson.internal.LinkedTreeMap cannot be cast to class java.util.concurrent.ConcurrentMap (com.google.gson.internal.LinkedTreeMap is in unnamed module of loader 'app'; java.util.concurrent.ConcurrentMap is in module java.base of loader 'bootstrap')
+    at com.google.gson.internal.ConstructorConstructorAgentTest.testConcurrentMapUsesConcurrentHashMap(ConstructorConstructorAgentTest.java:221)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 19, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 19, failed: 2
+FAILURES!!!

@@ -1,0 +1,15 @@
+1) com.google.gson.internal.$Gson$TypesAgentTest#testSupertypeOf_unwrapsNestedWildcard()
+junit.framework.AssertionFailedError: expected:<class java.lang.String> but was:<? super java.lang.String>
+    at com.google.gson.internal.$Gson$TypesAgentTest.testSupertypeOf_unwrapsNestedWildcard($Gson$TypesAgentTest.java:144)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) com.google.gson.internal.$Gson$TypesAgentTest#testSubtypeOf_unwrapsNestedWildcard()
+junit.framework.AssertionFailedError: expected:<class java.lang.Number> but was:<? extends java.lang.Number>
+    at com.google.gson.internal.$Gson$TypesAgentTest.testSubtypeOf_unwrapsNestedWildcard($Gson$TypesAgentTest.java:127)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 59, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 59, failed: 2
+FAILURES!!!

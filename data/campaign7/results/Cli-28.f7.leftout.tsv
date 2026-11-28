@@ -1,0 +1,2 @@
+FAILED	method	org.apache.commons.cli.ParserAgentTest#testSingleDashWithStopAtNonOptionIsEaten()	1	1	junit.framework.AssertionFailedError: expected:<2> but was:<1>
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testPropertyProcessingContinuesAfterDisabledFlag()	1	0	
