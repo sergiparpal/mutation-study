@@ -2323,7 +2323,14 @@ Three other behaviours were named in more than one run. `StopWatch.split` can
 be called twice without `unsplit`, which three runs name.
 `StrBuilder.equalsIgnoreCase(null)` throws, which two name. And
 `ExtendedMessageFormat` does not trim a format name followed by a space, which
-two name. We have not checked whether the projects count these as bugs.
+two name. Two of the three are bugs, in the projects' latest releases and with
+no issue reported (data/README.md). `equalsIgnoreCase(null)` throws where its
+javadoc says it returns false, and so does Commons Text's `TextStringBuilder`,
+which replaces the class. A registered format name followed by a space is not
+found, where `java.text.MessageFormat` trims the names of its own types. The
+third is an error in the javadoc. Its list of rules says that `split` cannot
+be called twice, but the class has allowed it since 2005, and since version
+3.20.0 it keeps every split.
 
 **Certification under the request.** Five of 113 F6 suites certify the fault,
 4.4%, with an interval from 0.9% to 8.8%. Each passes on the faulty revision,
@@ -2511,11 +2518,13 @@ In each case the fix commit of the bug the run was made on is an ancestor of
 the later fix, and the later fix changes the behaviour the message names.
 Cli-10's fix is two years older than Cli-28's, and Gson-4's sixteen months
 older than Gson-15's. One more behaviour is named in two runs, Csv-14 and
-Csv-15: `CSVFormat.withRecordSeparator(String)` accepts any string. And
-Lang-23's message names one that two F6 runs named in the same class of the
-2026 code (§3.14): `ExtendedMessageFormat` does not trim a format name
-followed by a space. We have not checked whether the projects count these as
-bugs.
+Csv-15: `CSVFormat.withRecordSeparator(String)` accepts any string. Its
+javadoc says the method throws unless the separator is CR, LF or CRLF. That is
+an error: the project removed the check in July 2014, four days after adding
+it, and left the sentence. And Lang-23's message names one that two F6 runs
+named in the same class of the 2026 code (§3.14): `ExtendedMessageFormat` does
+not trim a format name followed by a space. That one is a bug, in the code of
+2010 as in the latest release.
 
 **Certification under the request.** Four of the 40 F7 suites certify the
 fault, 10.0%, with an interval from 2.5% to 20.0%: those of Csv-3, Csv-8,
@@ -4057,6 +4066,9 @@ The seventh campaign's scripts were committed with its protocol
 They use `bin/agent-sandbox.py`, `bin/merge-agent-metrics.py` and helpers of
 `bin/campaign3-lib.sh` unchanged. `bin/describe-campaign7.py`, written after
 the analysis, prints the descriptive figures of §3.15.
+`bin/check-recurring-findings.sh`, with `bin/RecurringFindings.java`, runs on
+the projects' latest releases the behaviours that several F6 and F7 runs
+named, and writes `data/recurring-findings.txt`.
 
 Raw artifacts are under `data/`. For the first campaign: one directory per arm
 holding, for each bug, the record of the run (its closing message, cost and

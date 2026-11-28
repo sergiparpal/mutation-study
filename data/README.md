@@ -2570,7 +2570,9 @@ of a subject: `StopWatch.split` called twice without `unsplit` (`79380dba9`,
 `aa47951bd` and `df5245a79`), `StrBuilder.equalsIgnoreCase(null)` throwing
 (`7c91ce989` and `b1aba6833`), and `ExtendedMessageFormat` not trimming a
 format name followed by a space (`5b3a81dcd` and `d927bfc84`). Whether the
-projects count them as bugs was not checked.
+projects count them as bugs was checked on 28 November 2026. Two are bugs the
+projects have not fixed, and the third is an error in the javadoc ("The
+recurring findings, checked against the projects").
 
 ## Seventh campaign
 
@@ -2789,7 +2791,81 @@ One behaviour is named in two runs, Csv-14 and Csv-15:
 `CSVFormat.withRecordSeparator(String)` accepts any string. Lang-23's names
 one that two `f6` runs named in the same class in 2026, `5b3a81dcd` and
 `d927bfc84`: `ExtendedMessageFormat` does not trim a format name followed by
-a space. Whether the projects count these as bugs was not checked.
+a space. Whether the projects count these as bugs was checked on 28 November
+2026. The first is an error in the javadoc and the second a bug ("The
+recurring findings, checked against the projects").
+
+## The recurring findings, checked against the projects (`recurring-findings.txt`)
+
+Checked on 28 November 2026, after the sixth and seventh campaigns' analyses.
+No model was run. Four behaviours were named by more than one find-faults run,
+and none of them is the fault of a subject, so the campaigns count the tests
+that show them as false alarms. Whether each is a bug at all was read in four
+places:
+
+- **The current sources.** Shallow clones of the projects' default branches,
+  made that day: commons-lang `657ebb3`, commons-text `2af97ca` and commons-csv
+  `073c396`.
+- **The latest releases.** commons-lang3 3.22.0, commons-text 1.15.0 and
+  commons-csv 1.14.1. `bin/check-recurring-findings.sh` runs each behaviour on
+  them, with `bin/RecurringFindings.java`, and writes `recurring-findings.txt`.
+- **The histories.** The projects' own repositories.
+- **The issue tracker.** Apache JIRA's text search over LANG, TEXT and CSV,
+  for each class with the behaviour's terms. It finds no issue on any of the
+  four. The nearest are LANG-136 and LANG-1504 on `StopWatch`, and CSV-102 and
+  CSV-103 on record separators.
+
+All four behaviours are in the latest releases and on the default branches.
+
+| behaviour | named by | what it is |
+|---|---|---|
+| `StrBuilder.equalsIgnoreCase(null)` throws | `f6` on `7c91ce989` and `b1aba6833` | a bug |
+| `ExtendedMessageFormat` does not trim a format name followed by a space | `f6` on `5b3a81dcd` and `d927bfc84`, `f7` on Lang-23 | a bug |
+| `StopWatch.split()` can be called twice without `unsplit()` | `f6` on `79380dba9`, `aa47951bd` and `df5245a79` | an error in the javadoc |
+| `CSVFormat.withRecordSeparator(String)` accepts any string | `f7` on Csv-14 and Csv-15 | an error in the javadoc |
+
+**The two bugs.**
+
+- **`equalsIgnoreCase(null)`.** The method documents `null` as returning
+  `false`, as `equals` does, and throws `NullPointerException`: it compares
+  the sizes before any null check. It does so in Commons Lang's `StrBuilder`
+  (deprecated since 3.6), in Commons Text's `StrBuilder` (deprecated), and in
+  `TextStringBuilder`, which replaces them.
+- **`ExtendedMessageFormat`.** It trims a format name before looking it up in
+  its registry only when arguments follow the name. So `{0,upper ,x}` and
+  `{0, upper}` find the registered format, while `{0,upper }` and
+  `{ 0 , upper }` throw "unknown format type: upper ". `java.text.MessageFormat`,
+  which it extends, trims the names of its own types: `{0,number }` works. The
+  same code is in Commons Text's copy, and in Lang-23's version of 2010.
+
+**The two errors in the javadoc.**
+
+- **`StopWatch`.** Its class javadoc lists among its rules "split(), suspend(),
+  or stop() cannot be invoked twice". The list comes from the description of
+  LANG-136, of 2004. The state table that the issue's comments then agreed on,
+  and that was implemented in 2005, already allowed a split after a split.
+  Since 3.20.0 every split is kept (`getSplits()`, LANG-1504, commit
+  `ce2ba7b28` of 3 November 2025), and the three subjects' faulty revisions
+  have that list. `suspend()` and `stop()` do throw the second time.
+- **`CSVFormat.withRecordSeparator(String)`.** Its javadoc says it throws
+  `IllegalArgumentException` "if recordSeparator is none of CR, LF or CRLF".
+  The check was added on 10 July 2014 (`43560d92`) and removed four days later
+  as "senseless validation" (`bb54feb7`). That commit left the sentence, which
+  is in Csv-14's and Csv-15's versions and on the default branch, where the
+  method is deprecated. Its replacement, `CSVFormat.Builder.setRecordSeparator`,
+  documents no exception.
+
+**Two more claims of the same runs.**
+
+- **`CSVFormat.equals()`.** Csv-15's message says that it ignores `trim` and
+  `allowMissingColumnNames`. It did then, and CSV-242 fixed it in 2019.
+- **`toPattern()`.** Lang-23's says that it throws for `'{0}' {1,upper}`. It no
+  longer does in 3.22.0, which returns `'{'0} {1}`.
+
+Among the find-faults runs' false alarms, then, are two bugs the projects have
+not fixed. In the other two cases the agent took the documentation's word
+against the code, and the documentation was wrong. Nothing has been reported
+to the projects.
 
 ## Csv-4's line coverage, measured again (`csv4-coverage/`)
 
@@ -3008,4 +3084,5 @@ mistake for results:
 - [x] Seventh campaign run: the sample's 40 bugs in both arms, 80 runs, audited, measured and analysed. Asked to look for faults, `f7` detects 10.0% (4/40); on the 39 paired bugs it detects 4 against `m7`'s 21, and H1 is rejected with `f7` below `m7` (*p* = 7.63 × 10⁻⁵); the pooled mutation scores are 54.2% and 53.1%. No deviation; one transcript redacted (`campaign7/`)
 - [x] Write-up carries the seventh campaign: `PREPRINT.md` §2.15 and §3.15, and the abstract, introduction, discussion (§4.1, §4.2, §4.3, §4.6), threats, related work, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign7.py`, and §3.15 in `bin/report-figures.py`
 - [x] Csv-4's line coverage measured again with JaCoCo beside Cobertura, in the seven suites Cobertura measured: 75 to 95 of `CSVParser`'s 100 lines, where Cobertura had 21 to 28. Cobertura leaves most of the class uninstrumented, and no other class of the sample. The figures count the new measurement; the tables and analyses stay as recorded (`csv4-coverage/`)
+- [x] The four behaviours the find-faults runs named more than once, checked against the projects' sources, latest releases, histories and issue tracker: two bugs with no issue reported, `equalsIgnoreCase(null)` and `ExtendedMessageFormat`'s untrimmed format names, and two errors in the javadoc (`recurring-findings.txt`)
 - [ ] A matched post-cutoff corpus large enough to test the effect size. Not pursued (21 November 2026): a corpus matched to the Defects4J sample can take at most 69 of the pool's 131 new subjects, 115 of which the fourth campaign has run, and its analysis weights detection by the sample's fault types instead (`campaign4/analysis.txt`)

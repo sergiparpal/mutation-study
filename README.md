@@ -240,6 +240,7 @@ values came from.
 | `bin/remeasure-cli-evosuite.sh` | measures five EvoSuite suites again with one path in Defects4J corrected |
 | `bin/check-cobertura-instrumentation.py` | which methods of the measured classes Cobertura gives a line counter: in Csv-4's `CSVParser`, the one class of the sample where most have none, their lines read as never executed |
 | `bin/remeasure-csv4-coverage.sh` | measures the line coverage of Csv-4's seven Cobertura-measured suites again, with JaCoCo beside Cobertura; output in `data/csv4-coverage/` |
+| `bin/check-recurring-findings.sh` | runs, on the projects' latest releases, the behaviours that several find-faults runs named; output in `data/recurring-findings.txt` |
 | `bin/report-figures.py` | recomputes most of the figures of §3 of the write-up from `data/` |
 | `bin/audit-trigger-leaks.py` | what the generated suites and run records give away about what the agent knew |
 
