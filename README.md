@@ -426,10 +426,11 @@ table above:
   not. In four runs, though, what the findings show is another subject's
   fault, which a later fix repaired. In the seventh, 38 of the 42 do not pass
   on the fixed version, and in two runs they show another bug's fault in the
-  same way. The count of false alarms is an upper bound on the findings that
-  show no fault, not a measure of them. In the other direction, two seventh
-  campaign runs name the fault and do not detect it: their tests expect a
-  repaired behaviour other than the fix's.
+  same way. Two behaviours that several runs name are bugs the projects have
+  not fixed (`data/README.md`). The count of false alarms is an upper bound on
+  the findings that show no fault, not a measure of them. In the other
+  direction, two seventh campaign runs name the fault and do not detect it:
+  their tests expect a repaired behaviour other than the fix's.
 - **Verdicts vary between runs.** Each campaign has one run per subject and
   arm. The fifth and sixth campaigns ran the fourth's implementation-visible
   arm again on the same 115 subjects. Between the first two runs 15 verdicts
