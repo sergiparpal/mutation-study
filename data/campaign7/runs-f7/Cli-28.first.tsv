@@ -1,0 +1,24 @@
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testSimpleParsing()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testNullArgumentsTreatedAsEmpty()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testEmptyArgumentArray()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testUnrecognizedOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testMissingArgument()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testDoubleDashStopsOptionParsing()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testSingleDashIsTreatedAsArgument()	1	0	
+FAILED	method	org.apache.commons.cli.ParserAgentTest#testSingleDashWithStopAtNonOptionIsEaten()	1	1	junit.framework.AssertionFailedError: expected:<2> but was:<1>
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testStopAtNonOptionEatsRemainder()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testUnrecognizedArgumentWithoutStopAtNonOptionThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testNonOptionArgumentDoesNotStopParsingByDefault()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testNonOptionArgumentStopsParsingWithStopAtNonOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testMissingRequiredOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testRequiredOptionPresentDoesNotThrow()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testOptionsCanBeReusedAcrossParses()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testOptionGroupSelection()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testMissingRequiredOptionGroup()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testPropertyAddsOptionWithArgument()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testPropertyDoesNotOverrideValueAlreadySetOnCommandLine()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testPropertyFalseFlagIsNotSet()	1	0	
+FAILED	method	org.apache.commons.cli.ParserAgentTest#testPropertyProcessingContinuesAfterDisabledFlag()	1	1	junit.framework.AssertionFailedError: y is true and must be set regardless of x's position
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testUnlimitedArgs()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testProcessArgsStopsAtNextRecognizedOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.ParserAgentTest#testGetOptionsAndGetRequiredOptionsAccessors()	1	0	

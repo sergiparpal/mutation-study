@@ -1,0 +1,4 @@
+org/apache/commons/lang3/text/ExtendedMessageFormatAgentTest.java: disabled org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testQuotedLiteralBraceBeforeCustomFormatElement()
+org/apache/commons/lang3/text/ExtendedMessageFormatAgentTest.java: disabled org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testWhitespaceAroundFormatElementIsTrimmed()
+disabled in org/apache/commons/lang3/text/ExtendedMessageFormatAgentTest.java: 2 of 2 keys
+check run: the archive runs the 24 tests acceptance kept; 0 of them fail there

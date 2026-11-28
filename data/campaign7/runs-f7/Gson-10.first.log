@@ -1,0 +1,17 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.gson.internal.bind.ReflectiveTypeAdapterFactory (file:/home/sergi/.cache/gen-stage/w-K5OflwDL/target/classes/) to field java.lang.Integer.value
+WARNING: Please consider reporting this to the maintainers of com.google.gson.internal.bind.ReflectiveTypeAdapterFactory
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+1) com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testFieldHidingAcrossHierarchyIsSupported()
+java.lang.IllegalArgumentException: class com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest$Hider declares multiple JSON fields named value
+    at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:169)
+    at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:100)
+    at com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest.adapterFor(ReflectiveTypeAdapterFactoryAgentTest.java:51)
+    at com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest.testFieldHidingAcrossHierarchyIsSupported(ReflectiveTypeAdapterFactoryAgentTest.java:181)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 17, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 17, failed: 1
+FAILURES!!!

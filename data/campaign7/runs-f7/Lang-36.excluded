@@ -1,0 +1,2 @@
+org.apache.commons.lang3.math.NumberUtilsAgentTest#testCreateNumberTrailingDot()
+org.apache.commons.lang3.math.NumberUtilsAgentTest#testIsNumberDecimalWithLongSuffixIsNotActuallyANumber()

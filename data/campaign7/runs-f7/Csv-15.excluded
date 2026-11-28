@@ -1,0 +1,3 @@
+org.apache.commons.csv.CSVFormatAgentTest#testEqualsShouldDistinguishAllowMissingColumnNames()
+org.apache.commons.csv.CSVFormatAgentTest#testWithRecordSeparatorRejectsInvalidValue()
+org.apache.commons.csv.CSVFormatAgentTest#testEqualsShouldDistinguishTrimSetting()

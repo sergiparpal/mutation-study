@@ -1,0 +1,5 @@
+Note: /home/sergi/.cache/gen-stage/measure-9bAyHwJE/suite-f7/com/google/gson/internal/bind/ReflectiveTypeAdapterFactoryAgentTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+---- the other version (fixed) ----
+Note: /home/sergi/.cache/gen-stage/measure-9bAyHwJE/suite-f7/com/google/gson/internal/bind/ReflectiveTypeAdapterFactoryAgentTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.

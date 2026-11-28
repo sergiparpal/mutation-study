@@ -1,0 +1,2 @@
+FAILED	method	org.apache.commons.lang3.math.NumberUtilsAgentTest#testCreateNumberTrailingDot()	1	1	java.lang.NumberFormatException: 1. is not a valid number.
+FAILED	method	org.apache.commons.lang3.math.NumberUtilsAgentTest#testIsNumberDecimalWithLongSuffixIsNotActuallyANumber()	1	1	junit.framework.AssertionFailedError: 1.1L is not parseable as any number but isNumber reports it valid

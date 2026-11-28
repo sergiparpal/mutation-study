@@ -1,0 +1,15 @@
+1) org.apache.commons.cli.ParserAgentTest#testSingleDashWithStopAtNonOptionIsEaten()
+junit.framework.AssertionFailedError: expected:<2> but was:<1>
+    at org.apache.commons.cli.ParserAgentTest.testSingleDashWithStopAtNonOptionIsEaten(ParserAgentTest.java:186)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.cli.ParserAgentTest#testPropertyProcessingContinuesAfterDisabledFlag()
+junit.framework.AssertionFailedError: y is true and must be set regardless of x's position
+    at org.apache.commons.cli.ParserAgentTest.testPropertyProcessingContinuesAfterDisabledFlag(ParserAgentTest.java:401)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 24, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 24, failed: 2
+FAILURES!!!

@@ -1,0 +1,5 @@
+org/apache/commons/csv/CSVFormatAgentTest.java: disabled org.apache.commons.csv.CSVFormatAgentTest#testEqualsShouldDistinguishAllowMissingColumnNames()
+org/apache/commons/csv/CSVFormatAgentTest.java: disabled org.apache.commons.csv.CSVFormatAgentTest#testEqualsShouldDistinguishTrimSetting()
+org/apache/commons/csv/CSVFormatAgentTest.java: disabled org.apache.commons.csv.CSVFormatAgentTest#testWithRecordSeparatorRejectsInvalidValue()
+disabled in org/apache/commons/csv/CSVFormatAgentTest.java: 3 of 3 keys
+check run: the archive runs the 65 tests acceptance kept; 0 of them fail there

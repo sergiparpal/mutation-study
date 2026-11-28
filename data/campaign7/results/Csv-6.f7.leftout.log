@@ -1,0 +1,12 @@
+---- org.apache.commons.csv.CSVRecordAgentTest ----
+1) org.apache.commons.csv.CSVRecordAgentTest#testToMapNullMappingIsEmpty()
+java.lang.NullPointerException
+    at org.apache.commons.csv.CSVRecord.putIn(CSVRecord.java:180)
+    at org.apache.commons.csv.CSVRecord.toMap(CSVRecord.java:214)
+    at org.apache.commons.csv.CSVRecordAgentTest.testToMapNullMappingIsEmpty(CSVRecordAgentTest.java:230)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 26
+FAILURES!!!

@@ -1,0 +1,8 @@
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_returnsNullWhenNoAnnotationPresent()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_withTypeAdapterValue()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_withTypeAdapterValueIsNullSafe()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_withTypeAdapterFactoryValue()	1	0	
+FAILED	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_withFactoryReturningNullYieldsNullAdapter()	1	1	java.lang.NullPointerException
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testCreate_withInvalidAnnotationValueThrows()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testGetTypeAdapter_directTypeAdapterClass()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactoryAgentTest#testGetTypeAdapter_invalidValueThrows()	1	0	

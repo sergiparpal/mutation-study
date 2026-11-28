@@ -1,0 +1,1 @@
+FAILED	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testFieldHidingAcrossHierarchyIsSupported()	1	1	java.lang.IllegalArgumentException: class com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest$Hider declares multiple JSON fields named value

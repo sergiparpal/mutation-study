@@ -1,0 +1,2 @@
+org.apache.commons.csv.CSVPrinterAgentTest#testConstructorQuoteNoneWithoutEscapeThrowsIllegalArgumentExceptionPerJavadoc()
+org.apache.commons.csv.CSVPrinterAgentTest#testConstructorInconsistentFormatThrowsIllegalArgumentExceptionPerJavadoc()

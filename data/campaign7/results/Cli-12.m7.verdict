@@ -1,0 +1,1 @@
+Cli-12,m7,fixed,Fail,,16,0,2,org.apache.commons.cli.GnuParserAgentTest#testFlattenLongOptionWithEqualsIsSplit();org.apache.commons.cli.GnuParserAgentTest#testParseLongOptionWithEquals(),,,0,0,Fail,,,,,,

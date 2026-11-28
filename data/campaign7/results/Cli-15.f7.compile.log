@@ -1,0 +1,5 @@
+Note: /home/sergi/.cache/gen-stage/measure-uRT8fDXO/suite-f7/org/apache/commons/cli2/commandline/WriteableCommandLineImplAgentTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+---- the other version (fixed) ----
+Note: /home/sergi/.cache/gen-stage/measure-uRT8fDXO/suite-f7/org/apache/commons/cli2/commandline/WriteableCommandLineImplAgentTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.

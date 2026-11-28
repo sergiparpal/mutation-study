@@ -1,0 +1,10 @@
+---- org.apache.commons.cli2.commandline.WriteableCommandLineImplAgentTest ----
+1) org.apache.commons.cli2.commandline.WriteableCommandLineImplAgentTest#testAddOptionFullyRegistersAncestorsForTriggerLookup()
+junit.framework.AssertionFailedError: expected same:<[mygroup (-c)]> was not:<null>
+    at org.apache.commons.cli2.commandline.WriteableCommandLineImplAgentTest.testAddOptionFullyRegistersAncestorsForTriggerLookup(WriteableCommandLineImplAgentTest.java:148)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 1, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 1, failed: 1, left out beforehand: 74
+FAILURES!!!

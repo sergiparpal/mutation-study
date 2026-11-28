@@ -1,0 +1,21 @@
+---- org.apache.commons.csv.CSVFormatAgentTest ----
+1) org.apache.commons.csv.CSVFormatAgentTest#testEqualsShouldDistinguishAllowMissingColumnNames()
+java.lang.AssertionError: CSVFormat.equals() must not ignore allowMissingColumnNames
+    at org.apache.commons.csv.CSVFormatAgentTest.testEqualsShouldDistinguishAllowMissingColumnNames(CSVFormatAgentTest.java:337)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.csv.CSVFormatAgentTest#testWithRecordSeparatorRejectsInvalidValue()
+java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+3) org.apache.commons.csv.CSVFormatAgentTest#testEqualsShouldDistinguishTrimSetting()
+java.lang.AssertionError: CSVFormat.equals() must not ignore the trim setting
+    at org.apache.commons.csv.CSVFormatAgentTest.testEqualsShouldDistinguishTrimSetting(CSVFormatAgentTest.java:326)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 3, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 3, failed: 3, left out beforehand: 65
+FAILURES!!!

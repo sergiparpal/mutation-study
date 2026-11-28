@@ -1,0 +1,20 @@
+Extract test suite......................................................... Executing test suite: Cli-28b-f7.1.tar.bz2
+OK
+Checking out 3433f467 to /home/sergi/.cache/gen-stage/mutation-Qf8L2dem/run OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /home/sergi/.cache/gen-stage/mutation-Qf8L2dem/run_m OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 3433f467:10b14afb..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Cli-28b......................................... OK
+Compiling mutant definition (mml).......................................... OK
+Running ant (mutate)....................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (mutation.test)................................................ OK

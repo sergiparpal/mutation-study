@@ -1,0 +1,19 @@
+1) org.apache.commons.csv.CSVPrinterAgentTest#testConstructorQuoteNoneWithoutEscapeThrowsIllegalArgumentExceptionPerJavadoc()
+java.lang.IllegalStateException: No quotes mode set but no escape character is set
+    at org.apache.commons.csv.CSVFormat.validate(CSVFormat.java:642)
+    at org.apache.commons.csv.CSVPrinter.<init>(CSVPrinter.java:64)
+    at org.apache.commons.csv.CSVPrinterAgentTest.testConstructorQuoteNoneWithoutEscapeThrowsIllegalArgumentExceptionPerJavadoc(CSVPrinterAgentTest.java:148)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.csv.CSVPrinterAgentTest#testConstructorInconsistentFormatThrowsIllegalArgumentExceptionPerJavadoc()
+java.lang.IllegalStateException: The quoteChar character and the delimiter cannot be the same (',')
+    at org.apache.commons.csv.CSVFormat.validate(CSVFormat.java:617)
+    at org.apache.commons.csv.CSVPrinter.<init>(CSVPrinter.java:64)
+    at org.apache.commons.csv.CSVPrinterAgentTest.testConstructorInconsistentFormatThrowsIllegalArgumentExceptionPerJavadoc(CSVPrinterAgentTest.java:137)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 39, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 39, failed: 2
+FAILURES!!!

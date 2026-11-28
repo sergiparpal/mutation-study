@@ -1,0 +1,21 @@
+Extract test suite......................................................... Executing test suite: Csv-5b-f7.1.tar.bz2
+OK
+Checking out 73cc5246 to /home/sergi/.cache/gen-stage/mutation-XUqMNQVZ/run OK
+Init local repository...................................................... OK
+Tag post-fix revision...................................................... OK
+Copy generated Ant build file.............................................. OK
+Run post-checkout hook..................................................... OK
+Excluding broken/flaky tests............................................... OK
+Backing up build file: /home/sergi/.cache/gen-stage/mutation-XUqMNQVZ/run_c OK
+Initialize fixed program version........................................... OK
+Apply patch................................................................ OK
+Initialize buggy program version........................................... OK
+Diff 73cc5246:bf8f23c3..................................................... OK
+Apply patch................................................................ OK
+Tag pre-fix revision....................................................... OK
+Check out program version: Csv-5b.......................................... OK
+Running ant (compile)...................................................... OK
+Running ant (compile.gen.tests)............................................ OK
+Running ant (coverage.instrument).......................................... OK
+Running ant (run.gen.tests)................................................ OK
+Running ant (coverage.report).............................................. OK

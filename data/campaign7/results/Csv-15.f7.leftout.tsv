@@ -1,0 +1,3 @@
+FAILED	method	org.apache.commons.csv.CSVFormatAgentTest#testEqualsShouldDistinguishAllowMissingColumnNames()	1	1	java.lang.AssertionError: CSVFormat.equals() must not ignore allowMissingColumnNames
+FAILED	method	org.apache.commons.csv.CSVFormatAgentTest#testWithRecordSeparatorRejectsInvalidValue()	1	1	java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
+FAILED	method	org.apache.commons.csv.CSVFormatAgentTest#testEqualsShouldDistinguishTrimSetting()	1	1	java.lang.AssertionError: CSVFormat.equals() must not ignore the trim setting

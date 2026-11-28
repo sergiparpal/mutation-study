@@ -1,0 +1,21 @@
+1) org.apache.commons.csv.LexerAgentTest#testDisabledQuoteCharDoesNotMatchSentinelCharacter()
+java.lang.AssertionError: a disabled quote char must not match any input character, including the internal sentinel value
+    at org.apache.commons.csv.LexerAgentTest.testDisabledQuoteCharDoesNotMatchSentinelCharacter(LexerAgentTest.java:351)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.csv.LexerAgentTest#testDisabledCommentStartDoesNotMatchSentinelCharacter()
+java.lang.AssertionError: a disabled comment marker must not match any input character, including the internal sentinel value
+    at org.apache.commons.csv.LexerAgentTest.testDisabledCommentStartDoesNotMatchSentinelCharacter(LexerAgentTest.java:360)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+3) org.apache.commons.csv.LexerAgentTest#testDisabledEscapeDoesNotMatchSentinelCharacter()
+java.lang.AssertionError: a disabled escape must not match any input character, including the internal sentinel value
+    at org.apache.commons.csv.LexerAgentTest.testDisabledEscapeDoesNotMatchSentinelCharacter(LexerAgentTest.java:342)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 29, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 29, failed: 3
+FAILURES!!!

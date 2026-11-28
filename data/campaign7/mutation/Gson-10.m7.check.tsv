@@ -1,0 +1,13 @@
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testWriteAndReadRoundTrip()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testWriteNullValue()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testReadJsonNullReturnsNull()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testReadNullForPrimitiveFieldKeepsDefault()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testReadSkipsUnknownProperties()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testTransientAndStaticFieldsExcluded()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testSerializedNameAlternatesOnlyUsedForDeserialization()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testDuplicateJsonFieldNamesThrows()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testWriteFieldAvoidsRecursionWhenFieldReferencesOwner()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testInterfaceTypeHasNoBoundFields()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testCreateReturnsNullForPrimitiveType()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testReadFailsForAbstractTypeWithNoConstructor()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.bind.ReflectiveTypeAdapterFactoryAgentTest#testExcludeFieldPublicOverloadMatchesFieldLevelExclusion()	1	0	

@@ -1,0 +1,25 @@
+1) org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testWhitespaceAroundFormatElementIsTrimmed()
+java.lang.IllegalArgumentException: unknown format type: upper 
+    at java.base/java.text.MessageFormat.makeFormat(MessageFormat.java:1559)
+    at java.base/java.text.MessageFormat.applyPattern(MessageFormat.java:492)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.applyPattern(ExtendedMessageFormat.java:194)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:128)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:113)
+    at org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest.testWhitespaceAroundFormatElementIsTrimmed(ExtendedMessageFormatAgentTest.java:162)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest#testQuotedLiteralBraceBeforeCustomFormatElement()
+java.lang.IllegalArgumentException: Invalid format argument index at position 2: '
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.readArgumentIndex(ExtendedMessageFormat.java:329)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.insertFormats(ExtendedMessageFormat.java:393)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.applyPattern(ExtendedMessageFormat.java:195)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:128)
+    at org.apache.commons.lang3.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:113)
+    at org.apache.commons.lang3.text.ExtendedMessageFormatAgentTest.testQuotedLiteralBraceBeforeCustomFormatElement(ExtendedMessageFormatAgentTest.java:313)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 26, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 26, failed: 2
+FAILURES!!!

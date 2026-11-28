@@ -1,0 +1,25 @@
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testWhitespaceBeforeFormatNameIsTrimmed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testUnreadableFormatElementThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testUnmatchedFormatNameFallsBackToStandardAndThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testMultipleArgumentsWithMixedFormats()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testWhitespaceAroundArgumentIndexIsTrimmed()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testQuoteWithinCustomFormatDescription()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testPlainTextPatternWithNoFormatElements()	1	0	
+FAILED	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testQuotedLiteralIsNotParsedAsFormatElement()	1	1	java.lang.OutOfMemoryError: Java heap space
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testSetFormatByArgumentIndexThrowsUnsupportedOperationException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testConstructorDefaultLocale()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testConstructorNullRegistryBehavesLikeMessageFormat()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testSetFormatsThrowsUnsupportedOperationException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testNotEqualsForDifferentPattern()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testUnterminatedFormatElementThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testConstructorWithLocale()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testToPatternPreservesCustomFormatDescription()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testInvalidArgumentIndexThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testToPatternPreservesStandardFormatUnchanged()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testUnknownFormatWithoutRegistryThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testSetFormatsByArgumentIndexThrowsUnsupportedOperationException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testApplyPatternReplacesPreviousPattern()	1	0	
+FAILED	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testEscapedQuoteInPattern()	1	1	java.lang.OutOfMemoryError: Java heap space
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testEqualsAndHashCodeWithoutCustomFormats()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testSetFormatThrowsUnsupportedOperationException()	1	0	
+SUCCESSFUL	method	org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testCustomFormatIsUsed()	1	0	

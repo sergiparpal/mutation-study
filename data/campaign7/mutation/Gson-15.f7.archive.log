@@ -1,0 +1,3 @@
+com/google/gson/stream/JsonWriterAgentTest.java: disabled com.google.gson.stream.JsonWriterAgentTest#testNonFiniteDoublesSucceedWhenLenient()
+disabled in com/google/gson/stream/JsonWriterAgentTest.java: 1 of 1 keys
+check run: the archive runs the 37 tests acceptance kept; 0 of them fail there

@@ -1,0 +1,1 @@
+FAILED	method	com.google.gson.stream.JsonReaderAgentTest#testTopLevelValueWithoutLenientThrows()	1	1	junit.framework.AssertionFailedError

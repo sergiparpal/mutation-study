@@ -1,0 +1,1 @@
+Csv-3,m7,fixed,Fail,,27,0,1,org.apache.commons.csv.LexerAgentTest#testReadEscapeUnexpectedCharReturnsEndOfStream(),,,0,1,Fail,,,,,,

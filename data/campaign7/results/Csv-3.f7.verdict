@@ -1,0 +1,1 @@
+Csv-3,f7,buggy,Fail,,26,3,1,org.apache.commons.csv.LexerAgentTest#testReadEscapeMetaCharacterIsReturnedAsIs(),3,0,0,0,Pass,,3,0,3,0,

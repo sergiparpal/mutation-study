@@ -1,0 +1,3 @@
+FAILED	method	org.apache.commons.csv.LexerAgentTest#testDisabledQuoteCharDoesNotMatchSentinelCharacter()	1	1	java.lang.AssertionError: a disabled quote char must not match any input character, including the internal sentinel value
+FAILED	method	org.apache.commons.csv.LexerAgentTest#testDisabledCommentStartDoesNotMatchSentinelCharacter()	1	1	java.lang.AssertionError: a disabled comment marker must not match any input character, including the internal sentinel value
+FAILED	method	org.apache.commons.csv.LexerAgentTest#testDisabledEscapeDoesNotMatchSentinelCharacter()	1	1	java.lang.AssertionError: a disabled escape must not match any input character, including the internal sentinel value

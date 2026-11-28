@@ -1,0 +1,5 @@
+org/apache/commons/lang/time/DurationFormatUtilsAgentTest.java: disabled org.apache.commons.lang.time.DurationFormatUtilsAgentTest#testFormatDurationHMSLargeDurationHourOverflow()
+org/apache/commons/lang/time/DurationFormatUtilsAgentTest.java: disabled org.apache.commons.lang.time.DurationFormatUtilsAgentTest#testFormatDurationWordsAllZeroBothSuppressedShouldBeEmpty()
+org/apache/commons/lang/time/DurationFormatUtilsAgentTest.java: disabled org.apache.commons.lang.time.DurationFormatUtilsAgentTest#testFormatDurationWordsAllZeroSuppressLeadingShouldBeEmpty()
+disabled in org/apache/commons/lang/time/DurationFormatUtilsAgentTest.java: 3 of 3 keys
+check run: the archive runs the 25 tests acceptance kept; 0 of them fail there

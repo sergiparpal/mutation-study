@@ -1,0 +1,31 @@
+1) org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testQuotedLiteralIsNotParsedAsFormatElement()
+java.lang.OutOfMemoryError: Java heap space
+    at java.base/java.util.Arrays.copyOf(Arrays.java:3745)
+    at java.base/java.lang.AbstractStringBuilder.ensureCapacityInternal(AbstractStringBuilder.java:172)
+    at java.base/java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:748)
+    at java.base/java.lang.StringBuffer.append(StringBuffer.java:429)
+    at org.apache.commons.lang.text.ExtendedMessageFormat.appendQuotedString(ExtendedMessageFormat.java:422)
+    at org.apache.commons.lang.text.ExtendedMessageFormat.applyPattern(ExtendedMessageFormat.java:158)
+    at org.apache.commons.lang.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:127)
+    at org.apache.commons.lang.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:112)
+    at org.apache.commons.lang.text.ExtendedMessageFormatAgentTest.testQuotedLiteralIsNotParsedAsFormatElement(ExtendedMessageFormatAgentTest.java:157)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.lang.text.ExtendedMessageFormatAgentTest#testEscapedQuoteInPattern()
+java.lang.OutOfMemoryError: Java heap space
+    at java.base/java.util.Arrays.copyOf(Arrays.java:3745)
+    at java.base/java.lang.AbstractStringBuilder.ensureCapacityInternal(AbstractStringBuilder.java:172)
+    at java.base/java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:748)
+    at java.base/java.lang.StringBuffer.append(StringBuffer.java:429)
+    at org.apache.commons.lang.text.ExtendedMessageFormat.appendQuotedString(ExtendedMessageFormat.java:422)
+    at org.apache.commons.lang.text.ExtendedMessageFormat.applyPattern(ExtendedMessageFormat.java:158)
+    at org.apache.commons.lang.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:127)
+    at org.apache.commons.lang.text.ExtendedMessageFormat.<init>(ExtendedMessageFormat.java:112)
+    at org.apache.commons.lang.text.ExtendedMessageFormatAgentTest.testEscapedQuoteInPattern(ExtendedMessageFormatAgentTest.java:152)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 25, Failures: 2, Aborted: 0, Skipped: 0
+Test methods: 25, failed: 2
+FAILURES!!!

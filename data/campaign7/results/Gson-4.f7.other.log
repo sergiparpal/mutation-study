@@ -1,0 +1,21 @@
+1) com.google.gson.stream.JsonReaderAgentTest#testNonLenientTopLevelStringThrows()
+junit.framework.AssertionFailedError
+    at com.google.gson.stream.JsonReaderAgentTest.testNonLenientTopLevelStringThrows(JsonReaderAgentTest.java:180)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) com.google.gson.stream.JsonReaderAgentTest#testTopLevelScalarStrictThrows()
+junit.framework.AssertionFailedError
+    at com.google.gson.stream.JsonReaderAgentTest.testTopLevelScalarStrictThrows(JsonReaderAgentTest.java:265)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+3) com.google.gson.stream.JsonWriterAgentTest#testTopLevelValueStrictThrows()
+junit.framework.AssertionFailedError
+    at com.google.gson.stream.JsonWriterAgentTest.testTopLevelValueStrictThrows(JsonWriterAgentTest.java:108)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 53, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 53, failed: 3, left out beforehand: 1
+FAILURES!!!

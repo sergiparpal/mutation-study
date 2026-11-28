@@ -1,0 +1,5 @@
+Note: /home/sergi/.cache/gen-stage/measure-clPxSxNT/suite-f7/org/apache/commons/cli/ParserAgentTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+---- the other version (fixed) ----
+Note: /home/sergi/.cache/gen-stage/measure-clPxSxNT/suite-f7/org/apache/commons/cli/ParserAgentTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.

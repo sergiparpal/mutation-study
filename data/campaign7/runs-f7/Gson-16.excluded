@@ -1,0 +1,3 @@
+com.google.gson.internal.$Gson$TypesAgentTest#testGetArrayComponentType_notAnArrayThrows()
+com.google.gson.internal.$Gson$TypesAgentTest#testGetMapKeyAndValueTypes_rawTypeDefaultsToObject()
+com.google.gson.internal.$Gson$TypesAgentTest#testGetCollectionElementType_rawTypeDefaultsToObject()

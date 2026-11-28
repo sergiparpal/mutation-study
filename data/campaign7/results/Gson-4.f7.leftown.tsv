@@ -1,0 +1,1 @@
+FAILED	method	com.google.gson.stream.JsonWriterAgentTest#testNanAllowedWhenLenient()	1	1	java.lang.IllegalArgumentException: Numeric values must be finite, but was NaN

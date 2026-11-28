@@ -1,0 +1,1 @@
+FAILED	method	org.apache.commons.cli.PosixParserAgentTest#testBurstTokenUnknownCharacterAppendsOnlyThatCharacter()	1	1	junit.framework.AssertionFailedError: expected:<[-a, -x]> but was:<[-a, -ax]>

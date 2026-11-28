@@ -1,0 +1,22 @@
+---- com.google.gson.internal.$Gson$TypesAgentTest ----
+1) com.google.gson.internal.$Gson$TypesAgentTest#testGetArrayComponentType_notAnArrayThrows()
+junit.framework.AssertionFailedError: expected ClassCastException for non-array type
+    at com.google.gson.internal.$Gson$TypesAgentTest.testGetArrayComponentType_notAnArrayThrows($Gson$TypesAgentTest.java:328)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) com.google.gson.internal.$Gson$TypesAgentTest#testGetMapKeyAndValueTypes_rawTypeDefaultsToObject()
+junit.framework.AssertionFailedError: expected:<class java.lang.Object> but was:<K>
+    at com.google.gson.internal.$Gson$TypesAgentTest.testGetMapKeyAndValueTypes_rawTypeDefaultsToObject($Gson$TypesAgentTest.java:357)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+3) com.google.gson.internal.$Gson$TypesAgentTest#testGetCollectionElementType_rawTypeDefaultsToObject()
+junit.framework.AssertionFailedError: expected:<class java.lang.Object> but was:<E>
+    at com.google.gson.internal.$Gson$TypesAgentTest.testGetCollectionElementType_rawTypeDefaultsToObject($Gson$TypesAgentTest.java:342)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 3, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 3, failed: 3, left out beforehand: 43
+FAILURES!!!

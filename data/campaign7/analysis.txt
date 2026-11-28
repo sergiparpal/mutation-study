@@ -1,0 +1,131 @@
+Seventh campaign: 40 bugs, arms f7, m7; seed 20261127, 10000 resamples
+
+Runs
+  f7: 40 runs of 40, 40 with an accepted suite; $20.55 at list prices, 19.8 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['e8fa593']
+      tests left out at acceptance: 42 of 1552 (2.7%)
+      runs that reached the limit of turns or budget: 0
+      suites with a class left out because it did not finish: 0
+  m7: 40 runs of 40, 40 with an accepted suite; $16.83 at list prices, 18.6 turns a run
+      model ['claude-sonnet-5']  CLI ['2.1.316']  commits ['e8fa593']
+      tests left out at acceptance: 1 of 1358 (0.1%)
+      runs that reached the limit of turns or budget: 1 — Lang-56
+
+Bugs outside the paired set
+  Cli-21: m7: Broken (does not compile against the other version)
+
+Runs with a violation: none
+
+The detection rate when asked to look for faults (f7)
+  4 of 40 suites detect the fault (10.0%); 95% bootstrap interval [2.5%, 20.0%]
+
+H1: detection in f7 and detection in m7 differ
+  paired set: 39 bugs
+      f7 detects 4/39 (10.3%)   m7 detects 21/39 (53.8%)
+      both 3, f7 only 1, m7 only 18, neither 17
+      exact McNemar, two-sided: p = 7.63e-05
+      difference f7 - m7 -43.6 points, 95% bootstrap interval [-61.5, -25.6]
+  Outcome: H1 rejected, f7 below m7. On Defects4J too, the agent asked to look for
+  faults detects the fault less often than the regression setting credits; the
+  difference and its interval measure by how much
+
+The corpus: the seventh campaign beside the sixth (secondary, no decision rule)
+  paired sets: seventh 39 bugs, sixth 113 subjects
+  detection asked to look for faults (f7, f6): seventh 10.3%, sixth 6.2%; seventh - sixth +4.1 points, 95% bootstrap interval [-5.7, +15.2]
+  detection shown the repair (m7, m6): seventh 53.8%, sixth 23.9%; seventh - sixth +30.0 points, 95% bootstrap interval [+12.6, +47.2]
+  the difference inside the campaign, f - m: seventh -43.6 points, sixth -17.7 points; seventh - sixth -25.9 points, 95% bootstrap interval [-44.8, -6.9]
+  the share of m's detections that f also makes: seventh 14.3%, sixth 18.5%; seventh - sixth -4.2 points, 95% bootstrap interval [-25.5, +17.0]
+  the sixth campaign weighted to the sample's fault types: f6 6.8% [1.9%, 13.0%], m6 22.2% [13.6%, 31.6%], f6 - m6 -15.4 points [-23.9, -7.7]
+  The corpora differ in project, kind of fault, build and the way the faulty code is made, as
+  well as in date: none of these figures says how much of a difference is recall
+
+Certification under the request (secondary)
+  f7: 4 of 40 suites certify the fault (10.0%); 95% bootstrap interval [2.5%, 20.0%]
+  f7 suites whose every test was left out, so with no certification verdict: 0
+  beside b5's rate on the post-cutoff faults, a description: 7 of 115 (6.1%). No Defects4J arm was shown the buggy version without the request
+
+The tests f7 left out at acceptance: its findings (secondary)
+  26 f7 suites had tests left out and run on both versions
+  failing again on the buggy version: 42; of them, detecting 4 and false alarms 38; share detecting 9.5%
+  left out but passing on the buggy version when run again (unstable): 0
+  suites with at least one false alarm: 24
+  false alarms in the 4 suites that detect: 2 in all, median 1
+
+Closing messages of f7, read at the audit (secondary)
+  runs whose message names a test as showing a bug: 26; of them, naming the fault: 6
+      names the fault      6 runs; detection Fail in 4 of the 6 with a verdict
+      names another bug   20 runs; detection Fail in 0 of the 20 with a verdict
+      names no bug        14 runs; detection Fail in 0 of the 14 with a verdict
+
+Tests m7 left out at acceptance, run on the buggy version (secondary)
+  m7: 1 suites had tests left out and run on the buggy version; 0 of 1 such methods pass there (expected the faulty behaviour), in 0 suites
+
+Mutation score and line coverage, each arm on its own version (secondary)
+  f7's tests that fail on the buggy version, its findings, are not in its score
+  complete set: 37 of the 39 paired bugs
+    Gson-16: f7 ok, kept out of the mutation step, as in the second campaign; m7 ok, kept out of the mutation step, as in the second campaign
+    Gson-14: f7 ok, kept out of the mutation step, as in the second campaign; m7 ok, kept out of the mutation step, as in the second campaign
+  pooled mutation score: f7 54.2%   m7 53.1%   difference +1.1 points, 95% bootstrap interval [-2.0, +4.4]
+  pooled line coverage: f7 83.0%   m7 82.4%   difference +0.5 points, 95% bootstrap interval [-3.0, +3.7]
+  f7 suites that detect: 4; pooled mutation score 51.0%, line coverage 89.9%
+  m7 suites that detect: 20; pooled mutation score 56.5%, line coverage 83.2%
+
+The tests in the archive for Major against the tests the measurement ran
+  80 of 80 suites with a figure agree
+
+Sensitivity analyses (none is confirmatory)
+  1. runs with a violation included: 39 bugs
+      f7 detects 4/39 (10.3%)   m7 detects 21/39 (53.8%)
+      both 3, f7 only 1, m7 only 18, neither 17
+      exact McNemar, two-sided: p = 7.63e-05
+      difference f7 - m7 -43.6 points, 95% bootstrap interval [-61.5, -25.6]
+  2. intention to treat: 40 bugs
+      f7 detects 4/40 (10.0%)   m7 detects 21/40 (52.5%)
+      both 3, f7 only 1, m7 only 18, neither 18
+      exact McNemar, two-sided: p = 7.63e-05
+      difference f7 - m7 -42.5 points, 95% bootstrap interval [-60.0, -25.0]
+  runs that name the bug: 2 — f7 Lang-36, m7 Lang-36
+  3. runs that name the bug left out: 38 bugs
+      f7 detects 3/38 (7.9%)   m7 detects 20/38 (52.6%)
+      both 2, f7 only 1, m7 only 18, neither 17
+      exact McNemar, two-sided: p = 7.63e-05
+      difference f7 - m7 -44.7 points, 95% bootstrap interval [-60.5, -26.3]
+  4. detection by timeout read as none: 39 bugs
+      f7 detects 4/39 (10.3%)   m7 detects 21/39 (53.8%)
+      both 3, f7 only 1, m7 only 18, neither 17
+      exact McNemar, two-sided: p = 7.63e-05
+      difference f7 - m7 -43.6 points, 95% bootstrap interval [-61.5, -25.6]
+  5. the four bugs the memorisation probe flagged left out (Lang-8, Lang-13, Lang-43, Gson-16): 35 bugs
+      f7 detects 4/35 (11.4%)   m7 detects 20/35 (57.1%)
+      both 3, f7 only 1, m7 only 17, neither 14
+      exact McNemar, two-sided: p = 0.000145
+      difference f7 - m7 -45.7 points, 95% bootstrap interval [-62.9, -28.6]
+  6. f7 detection only where the closing message names a test that detects: 39 bugs
+      f7 detects 4/39 (10.3%)   m7 detects 21/39 (53.8%)
+      both 3, f7 only 1, m7 only 18, neither 17
+      exact McNemar, two-sided: p = 7.63e-05
+      difference f7 - m7 -43.6 points, 95% bootstrap interval [-61.5, -25.6]
+
+Descriptive comparisons (none is a test of the protocol)
+  by project
+      Cli                      7 bugs   f7 detects   2   m7 detects   3
+      Csv                     10 bugs   f7 detects   0   m7 detects   5
+      Gson                    10 bugs   f7 detects   1   m7 detects   7
+      Lang                    12 bugs   f7 detects   1   m7 detects   6
+  by fault type
+      ALGORITHM                5 bugs   f7 detects   1   m7 detects   4
+      API                      1 bugs   f7 detects   0   m7 detects   0
+      MISSING_CLAUSE           3 bugs   f7 detects   2   m7 detects   2
+      OMISSION                22 bugs   f7 detects   0   m7 detects  13
+      STATE                    3 bugs   f7 detects   0   m7 detects   2
+      SUBSTITUTION             5 bugs   f7 detects   1   m7 detects   0
+  m2 (second campaign) beside m7, one condition run twice: 39 bugs; Fail in both 19, only the first 3, only the second 2; agreement 87.2%, Cohen's kappa 0.74
+  the first campaign's M beside m7 (its working copy held Defects4J's files): 36 bugs; Fail in both 18, only the first 8, only the second 1; agreement 75.0%, Cohen's kappa 0.49
+  s2 beside f7's detection, neither shown the repair: 39 bugs; Fail in both 2, only the first 5, only the second 2; agreement 82.1%, Cohen's kappa 0.27
+  the four bugs the memorisation probe flagged: 4 paired; f7 detects 0, m7 detects 1 (Lang-13, Lang-43, Gson-16, Lang-8)
+  the other bugs: 35 paired; f7 detects 4, m7 detects 20
+  f7 runs that name the bug: 1 — Lang-36
+  m7 runs that name the bug: 1 — Lang-36
+  f7 closing messages that name the fault: 6; of them, citing the bug's issue: 0
+  §6's table gains the row 'faulty implementation, asked to look for faults, on Defects4J': 10.0%
+

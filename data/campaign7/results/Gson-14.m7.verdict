@@ -1,0 +1,1 @@
+Gson-14,m7,fixed,Fail,,59,0,2,com.google.gson.internal.$Gson$TypesAgentTest#testSupertypeOf_unwrapsNestedWildcard();com.google.gson.internal.$Gson$TypesAgentTest#testSubtypeOf_unwrapsNestedWildcard(),,,0,0,Fail,,,,,,

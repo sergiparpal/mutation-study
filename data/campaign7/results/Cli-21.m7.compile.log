@@ -1,0 +1,46 @@
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+---- the other version (buggy) ----
+/home/sergi/.cache/gen-stage/measure-jE3k1jZi/suite-m7/org/apache/commons/cli2/WriteableCommandLineAgentTest.java:199: error: cannot find symbol
+        assertEquals(root, cl.getCurrentOption());
+                             ^
+  symbol:   method getCurrentOption()
+  location: variable cl of type WriteableCommandLine
+/home/sergi/.cache/gen-stage/measure-jE3k1jZi/suite-m7/org/apache/commons/cli2/WriteableCommandLineAgentTest.java:207: error: cannot find symbol
+        cl.setCurrentOption(other);
+          ^
+  symbol:   method setCurrentOption(Option)
+  location: variable cl of type WriteableCommandLine
+/home/sergi/.cache/gen-stage/measure-jE3k1jZi/suite-m7/org/apache/commons/cli2/WriteableCommandLineAgentTest.java:208: error: cannot find symbol
+        assertEquals(other, cl.getCurrentOption());
+                              ^
+  symbol:   method getCurrentOption()
+  location: variable cl of type WriteableCommandLine
+/home/sergi/.cache/gen-stage/measure-jE3k1jZi/suite-m7/org/apache/commons/cli2/WriteableCommandLineAgentTest.java:210: error: cannot find symbol
+        cl.setCurrentOption(null);
+          ^
+  symbol:   method setCurrentOption(<null>)
+  location: variable cl of type WriteableCommandLine
+/home/sergi/.cache/gen-stage/measure-jE3k1jZi/suite-m7/org/apache/commons/cli2/WriteableCommandLineAgentTest.java:211: error: cannot find symbol
+        assertNull(cl.getCurrentOption());
+                     ^
+  symbol:   method getCurrentOption()
+  location: variable cl of type WriteableCommandLine
+/home/sergi/.cache/gen-stage/measure-jE3k1jZi/suite-m7/org/apache/commons/cli2/commandline/WriteableCommandLineImplAgentTest.java:42: error: cannot find symbol
+        assertEquals(root, cl.getCurrentOption());
+                             ^
+  symbol:   method getCurrentOption()
+  location: variable cl of type WriteableCommandLineImpl
+/home/sergi/.cache/gen-stage/measure-jE3k1jZi/suite-m7/org/apache/commons/cli2/commandline/WriteableCommandLineImplAgentTest.java:230: error: cannot find symbol
+        cl.setCurrentOption(other);
+          ^
+  symbol:   method setCurrentOption(Option)
+  location: variable cl of type WriteableCommandLineImpl
+/home/sergi/.cache/gen-stage/measure-jE3k1jZi/suite-m7/org/apache/commons/cli2/commandline/WriteableCommandLineImplAgentTest.java:231: error: cannot find symbol
+        assertSame(other, cl.getCurrentOption());
+                            ^
+  symbol:   method getCurrentOption()
+  location: variable cl of type WriteableCommandLineImpl
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+8 errors

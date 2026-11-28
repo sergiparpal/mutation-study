@@ -1,0 +1,21 @@
+1) org.apache.commons.lang.time.DurationFormatUtilsAgentTest#testFormatDurationHMSLargeDurationHourOverflow()
+junit.framework.ComparisonFailure: expected:<[2562047788015]> but was:<[-2047687697]>
+    at org.apache.commons.lang.time.DurationFormatUtilsAgentTest.testFormatDurationHMSLargeDurationHourOverflow(DurationFormatUtilsAgentTest.java:66)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.lang.time.DurationFormatUtilsAgentTest#testFormatDurationWordsAllZeroSuppressLeadingShouldBeEmpty()
+junit.framework.ComparisonFailure: expected:<[]> but was:<[0 seconds]>
+    at org.apache.commons.lang.time.DurationFormatUtilsAgentTest.testFormatDurationWordsAllZeroSuppressLeadingShouldBeEmpty(DurationFormatUtilsAgentTest.java:173)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+3) org.apache.commons.lang.time.DurationFormatUtilsAgentTest#testFormatDurationWordsAllZeroBothSuppressedShouldBeEmpty()
+junit.framework.ComparisonFailure: expected:<[]> but was:<[0 seconds]>
+    at org.apache.commons.lang.time.DurationFormatUtilsAgentTest.testFormatDurationWordsAllZeroBothSuppressedShouldBeEmpty(DurationFormatUtilsAgentTest.java:178)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 28, Failures: 3, Aborted: 0, Skipped: 0
+Test methods: 28, failed: 3
+FAILURES!!!

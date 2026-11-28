@@ -1,0 +1,1 @@
+FAILED	method	org.apache.commons.cli2.commandline.WriteableCommandLineImplAgentTest#testAddSwitchTwiceThrowsAndDoesNotDuplicateOption()	1	1	junit.framework.AssertionFailedError: expected:<1> but was:<2>

@@ -1,0 +1,5 @@
+com/google/gson/internal/$Gson$TypesAgentTest.java: disabled com.google.gson.internal.$Gson$TypesAgentTest#testGetArrayComponentType_notAnArrayThrows()
+com/google/gson/internal/$Gson$TypesAgentTest.java: disabled com.google.gson.internal.$Gson$TypesAgentTest#testGetCollectionElementType_rawTypeDefaultsToObject()
+com/google/gson/internal/$Gson$TypesAgentTest.java: disabled com.google.gson.internal.$Gson$TypesAgentTest#testGetMapKeyAndValueTypes_rawTypeDefaultsToObject()
+disabled in com/google/gson/internal/$Gson$TypesAgentTest.java: 3 of 3 keys
+check run: the archive runs the 43 tests acceptance kept; 0 of them fail there

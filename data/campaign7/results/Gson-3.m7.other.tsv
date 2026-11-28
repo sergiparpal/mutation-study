@@ -1,0 +1,19 @@
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testRawTypeInstanceCreatorIsUsedWhenNoExactMatch()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testExactTypeInstanceCreatorIsUsed()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testPublicNoArgsConstructorIsUsed()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testPrivateNoArgsConstructorIsMadeAccessible()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testConstructorThrowingExceptionIsWrapped()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testPlainListUsesArrayList()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testSortedSetUsesTreeSet()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testPlainSetUsesLinkedHashSet()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testQueueUsesLinkedList()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testEnumSetWithParameterizedTypeCreatesEmptySet()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testRawEnumSetTypeThrowsJsonIOException()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testSortedMapUsesTreeMap()	1	0	
+FAILED	method	com.google.gson.internal.ConstructorConstructorAgentTest#testConcurrentNavigableMapUsesConcurrentSkipListMap()	1	1	java.lang.ClassCastException: class java.util.TreeMap cannot be cast to class java.util.concurrent.ConcurrentNavigableMap (java.util.TreeMap and java.util.concurrent.ConcurrentNavigableMap are in module java.base of loader 'bootstrap')
+FAILED	method	com.google.gson.internal.ConstructorConstructorAgentTest#testConcurrentMapUsesConcurrentHashMap()	1	1	java.lang.ClassCastException: class com.google.gson.internal.LinkedTreeMap cannot be cast to class java.util.concurrent.ConcurrentMap (com.google.gson.internal.LinkedTreeMap is in unnamed module of loader 'app'; java.util.concurrent.ConcurrentMap is in module java.base of loader 'bootstrap')
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testStringKeyedMapUsesLinkedTreeMap()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testNonStringKeyedMapUsesLinkedHashMap()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testRawMapTypeUsesLinkedTreeMap()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testClassWithoutNoArgsConstructorUsesUnsafeAllocator()	1	0	
+SUCCESSFUL	method	com.google.gson.internal.ConstructorConstructorAgentTest#testToStringReflectsInstanceCreatorsMap()	1	0	

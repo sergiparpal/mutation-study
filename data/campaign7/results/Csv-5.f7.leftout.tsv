@@ -1,0 +1,2 @@
+FAILED	method	org.apache.commons.csv.CSVPrinterAgentTest#testConstructorQuoteNoneWithoutEscapeThrowsIllegalArgumentExceptionPerJavadoc()	1	1	java.lang.IllegalStateException: No quotes mode set but no escape character is set
+FAILED	method	org.apache.commons.csv.CSVPrinterAgentTest#testConstructorInconsistentFormatThrowsIllegalArgumentExceptionPerJavadoc()	1	1	java.lang.IllegalStateException: The quoteChar character and the delimiter cannot be the same (',')

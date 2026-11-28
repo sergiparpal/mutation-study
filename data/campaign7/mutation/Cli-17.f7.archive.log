@@ -1,0 +1,3 @@
+org/apache/commons/cli/PosixParserAgentTest.java: disabled org.apache.commons.cli.PosixParserAgentTest#testBurstTokenUnknownCharacterAppendsOnlyThatCharacter()
+disabled in org/apache/commons/cli/PosixParserAgentTest.java: 1 of 1 keys
+check run: the archive runs the 21 tests acceptance kept; 0 of them fail there

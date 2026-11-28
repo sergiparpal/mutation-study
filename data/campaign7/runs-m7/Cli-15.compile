@@ -1,0 +1,2 @@
+Note: src/test/org/apache/commons/cli2/commandline/WriteableCommandLineImplAgentTest.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.

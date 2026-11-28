@@ -1,0 +1,12 @@
+1) org.apache.commons.csv.CSVPrinterAgentTest#testConstructorWithHeaderPrintsHeaderImmediately()
+org.junit.ComparisonFailure: expected:<[A,B
+]1,2
+> but was:<[]1,2
+>
+    at org.apache.commons.csv.CSVPrinterAgentTest.testConstructorWithHeaderPrintsHeaderImmediately(CSVPrinterAgentTest.java:267)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 32, Failures: 1, Aborted: 0, Skipped: 0
+Test methods: 32, failed: 1
+FAILURES!!!

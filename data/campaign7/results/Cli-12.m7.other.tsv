@@ -1,0 +1,16 @@
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenEmptyArguments()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenPlainArguments()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenRecognizedOptionKeptAsSingleToken()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenSingleDashKept()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenDoubleDashStopsOptionProcessingAndEatsRest()	1	0	
+FAILED	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenLongOptionWithEqualsIsSplit()	1	1	junit.framework.AssertionFailedError: expected:<2> but was:<1>
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenPropertyStyleOptionIsSplit()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenUnrecognizedOptionWithoutStopIsKeptInPlace()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testFlattenUnrecognizedOptionWithStopEatsRemainingArgs()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testParseSimpleShortAndLongOptions()	1	0	
+FAILED	method	org.apache.commons.cli.GnuParserAgentTest#testParseLongOptionWithEquals()	1	1	org.apache.commons.cli.UnrecognizedOptionException: Unrecognized option: --bfile=toast
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testParsePropertyStyleOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testParseUnrecognizedOptionThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testParseMissingArgumentThrows()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testParseStopAtNonOption()	1	0	
+SUCCESSFUL	method	org.apache.commons.cli.GnuParserAgentTest#testParseNullArguments()	1	0	
