@@ -303,6 +303,29 @@ its protocol, and `bin/describe-campaign6.py`, written after the analysis.
 They use `bin/campaign3-lib.sh`, `bin/AgentTestRunner.java`,
 `bin/ExcludedTestsFilter.java` and `bin/agent-sandbox.py` unchanged.
 
+The seventh campaign is under `data/campaign7/`. It uses the sample's 40
+Defects4J bugs. One implementation-visible arm is shown Defects4J's buggy
+version of each bug and asked to look for faults in it, with the sixth
+campaign's request. Its tests that fail on the buggy version are its findings,
+and a finding that passes on the fixed version detects the fault. The second
+campaign's implementation-visible arm is run a second time beside it, on the
+fixed version. The campaign measures how often the agent asked to look detects
+the fault on Defects4J, and whether it does so as often as the other arm. The
+directory holds:
+
+- its protocol (`PROTOCOL.md`), fixed before any run on the subjects;
+- the subject list;
+- the output of the two sandbox checks;
+- the pilot (`pilot/`).
+
+Its scripts are `bin/subjects-campaign7.py`, `bin/generate-campaign7.sh`,
+`bin/run-campaign7.sh`, `bin/audit-campaign7.py`, `bin/measure-campaign7.sh`,
+`bin/mutation-campaign7.sh`, `bin/analyze-campaign7.py`,
+`bin/disable-tests-campaign7.py`, `bin/campaign7-lib.sh` and
+`bin/AgentTestRunner4.java`, all committed with its protocol. They use
+`bin/agent-sandbox.py`, `bin/merge-agent-metrics.py` and helpers of
+`bin/campaign3-lib.sh` unchanged.
+
 ## What this does not show
 
 Several things, recorded here because they are easy to over-read from the

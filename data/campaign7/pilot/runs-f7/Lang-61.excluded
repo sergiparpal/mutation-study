@@ -1,0 +1,7 @@
+org.apache.commons.lang.text.StrBuilderAgentTest#testIndexOfStringIgnoresDataBeyondLogicalSize()
+org.apache.commons.lang.text.StrBuilderAgentTest#testAppendFixedWidthPadRightNullObjectUsesNullText()
+org.apache.commons.lang.text.StrBuilderAgentTest#testEqualsIgnoreCaseNullReturnsFalse()
+org.apache.commons.lang.text.StrBuilderAgentTest#testIndexOfCharIgnoresDataBeyondLogicalSize()
+org.apache.commons.lang.text.StrBuilderAgentTest#testContainsCharIgnoresDataBeyondLogicalSize()
+org.apache.commons.lang.text.StrBuilderAgentTest#testEqualsStrBuilderNullReturnsFalse()
+org.apache.commons.lang.text.StrBuilderAgentTest#testAppendFixedWidthPadLeftNullObjectUsesNullText()

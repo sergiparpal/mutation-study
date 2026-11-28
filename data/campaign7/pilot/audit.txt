@@ -1,0 +1,12 @@
+f7: 3 transcripts
+  Cli-5      commands=4   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-11     commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-61    commands=10  refused=1  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  runs with a flagged command: 0 of 3; calls the harness refused: 1; commands the sandbox denied: 0; runs that touched another file: 0; runs that name the bug: 0
+
+m7: 3 transcripts
+  Cli-5      commands=4   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Csv-11     commands=10  refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  Lang-61    commands=9   refused=0  denied=0  network=0 vcs=0 outside=0 own_tmp=0 other=0
+  runs with a flagged command: 0 of 3; calls the harness refused: 0; commands the sandbox denied: 0; runs that touched another file: 0; runs that name the bug: 0
+

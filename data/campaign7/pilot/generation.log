@@ -1,0 +1,67 @@
+[Lang-61] staging the buggy version (w-SHajmiBT)
+[Lang-61] leak scan: clean
+[Lang-61] invoking agent (claude-sonnet-5, f7)
+[Lang-61] agent done: $0.796 turns=17 state=ok
+[Lang-61] round 1: left out 7 failing test(s)
+[Lang-61] left out 7 of 160 tests
+[Lang-61] packaged: Lang-61-f7.tar.bz2
+
+f7 suites packaged: 1
+failures:           0
+tests left out:     7 of 160 (4.4%)
+cost, as reported:  $0.80
+[Lang-61] staging the fixed version (w-awbGFgye)
+[Lang-61] leak scan: clean
+[Lang-61] invoking agent (claude-sonnet-5, m7)
+[Lang-61] agent done: $0.586 turns=17 state=ok
+[Lang-61] left out 0 of 120 tests
+[Lang-61] packaged: Lang-61-m7.tar.bz2
+
+m7 suites packaged: 1
+failures:           0
+tests left out:     0 of 120 (0.0%)
+cost, as reported:  $0.59
+[Csv-11] staging the fixed version (w-ps782KPK)
+[Csv-11] leak scan: clean
+[Csv-11] invoking agent (claude-sonnet-5, m7)
+[Csv-11] agent done: $0.309 turns=17 state=ok
+[Csv-11] left out 0 of 33 tests
+[Csv-11] packaged: Csv-11-m7.tar.bz2
+
+m7 suites packaged: 2
+failures:           0
+tests left out:     0 of 153 (0.0%)
+cost, as reported:  $0.90
+[Csv-11] staging the buggy version (w-ZslyLr4U)
+[Csv-11] leak scan: clean
+[Csv-11] invoking agent (claude-sonnet-5, f7)
+[Csv-11] agent done: $0.294 turns=17 state=ok
+[Csv-11] left out 0 of 35 tests
+[Csv-11] packaged: Csv-11-f7.tar.bz2
+
+f7 suites packaged: 2
+failures:           0
+tests left out:     7 of 195 (3.6%)
+cost, as reported:  $1.09
+[Cli-5] staging the buggy version (w-3hoOrBLl)
+[Cli-5] leak scan: clean
+[Cli-5] invoking agent (claude-sonnet-5, f7)
+[Cli-5] agent done: $0.099 turns=9 state=ok
+[Cli-5] left out 0 of 16 tests
+[Cli-5] packaged: Cli-5-f7.tar.bz2
+
+f7 suites packaged: 3
+failures:           0
+tests left out:     7 of 211 (3.3%)
+cost, as reported:  $1.19
+[Cli-5] staging the fixed version (w-uz2TXvjw)
+[Cli-5] leak scan: clean
+[Cli-5] invoking agent (claude-sonnet-5, m7)
+[Cli-5] agent done: $0.095 turns=8 state=ok
+[Cli-5] left out 0 of 15 tests
+[Cli-5] packaged: Cli-5-m7.tar.bz2
+
+m7 suites packaged: 3
+failures:           0
+tests left out:     0 of 168 (0.0%)
+cost, as reported:  $0.99

@@ -1,0 +1,10 @@
+# Seventh campaign: the pilot's bugs (data/campaign7/PROTOCOL.md, "Pilot").
+#
+# The second campaign's three pilot bugs, outside the sample. Each is run in
+# both arms: f7 first for Lang-61 and Cli-5, m7 first for Csv-11
+# (bin/run-campaign7.sh). The pilot is not part of any result.
+#
+# bug
+Lang-61
+Csv-11
+Cli-5

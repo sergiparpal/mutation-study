@@ -1,0 +1,7 @@
+subject,arm,own_version,verdict,note,methods_run_on_own,keys_left_out,failing_on_other,failing_keys,left_out_methods_run_on_other,left_out_passing_on_other,seconds_own,seconds_other,detection,detection_note,left_out_failing_again_on_own,left_out_detecting,left_out_false_alarms,left_out_unstable,detecting_keys
+Lang-61,f7,buggy,Pass,,153,7,0,,7,1,0,0,Fail,,7,1,6,0,org.apache.commons.lang.text.StrBuilderAgentTest#testIndexOfStringIgnoresDataBeyondLogicalSize()
+Lang-61,m7,fixed,Pass,,120,0,0,,,,0,0,Pass,,,,,,
+Csv-11,f7,buggy,Pass,,35,0,0,,,,0,0,Pass,nothing was left out at acceptance,,,,,
+Csv-11,m7,fixed,Pass,,33,0,0,,,,0,0,Pass,,,,,,
+Cli-5,f7,buggy,Fail,,16,0,1,org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensNullThrowsNPE(),,,0,0,Pass,nothing was left out at acceptance,,,,,
+Cli-5,m7,fixed,Fail,,15,0,1,org.apache.commons.cli.UtilAgentTest#testStripLeadingHyphensNull(),,,0,0,Fail,,,,,,

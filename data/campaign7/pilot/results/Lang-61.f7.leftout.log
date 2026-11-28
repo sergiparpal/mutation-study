@@ -1,0 +1,44 @@
+---- org.apache.commons.lang.text.StrBuilderAgentTest ----
+1) org.apache.commons.lang.text.StrBuilderAgentTest#testAppendFixedWidthPadRightNullObjectUsesNullText()
+java.lang.NullPointerException
+    at org.apache.commons.lang.text.StrBuilder.appendFixedWidthPadRight(StrBuilder.java:882)
+    at org.apache.commons.lang.text.StrBuilderAgentTest.testAppendFixedWidthPadRightNullObjectUsesNullText(StrBuilderAgentTest.java:593)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+2) org.apache.commons.lang.text.StrBuilderAgentTest#testEqualsIgnoreCaseNullReturnsFalse()
+java.lang.NullPointerException
+    at org.apache.commons.lang.text.StrBuilder.equalsIgnoreCase(StrBuilder.java:2079)
+    at org.apache.commons.lang.text.StrBuilderAgentTest.testEqualsIgnoreCaseNullReturnsFalse(StrBuilderAgentTest.java:1172)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+3) org.apache.commons.lang.text.StrBuilderAgentTest#testIndexOfCharIgnoresDataBeyondLogicalSize()
+junit.framework.AssertionFailedError: expected:<-1> but was:<2>
+    at org.apache.commons.lang.text.StrBuilderAgentTest.testIndexOfCharIgnoresDataBeyondLogicalSize(StrBuilderAgentTest.java:1011)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+4) org.apache.commons.lang.text.StrBuilderAgentTest#testContainsCharIgnoresDataBeyondLogicalSize()
+junit.framework.AssertionFailedError: builder shrunk to 'ab' must not contain leftover 'c'
+    at org.apache.commons.lang.text.StrBuilderAgentTest.testContainsCharIgnoresDataBeyondLogicalSize(StrBuilderAgentTest.java:971)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+5) org.apache.commons.lang.text.StrBuilderAgentTest#testEqualsStrBuilderNullReturnsFalse()
+java.lang.NullPointerException
+    at org.apache.commons.lang.text.StrBuilder.equals(StrBuilder.java:2105)
+    at org.apache.commons.lang.text.StrBuilderAgentTest.testEqualsStrBuilderNullReturnsFalse(StrBuilderAgentTest.java:1149)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+6) org.apache.commons.lang.text.StrBuilderAgentTest#testAppendFixedWidthPadLeftNullObjectUsesNullText()
+java.lang.NullPointerException
+    at org.apache.commons.lang.text.StrBuilder.appendFixedWidthPadLeft(StrBuilder.java:838)
+    at org.apache.commons.lang.text.StrBuilderAgentTest.testAppendFixedWidthPadLeftNullObjectUsesNullText(StrBuilderAgentTest.java:569)
+    at AgentTestRunner4.runClass(AgentTestRunner4.java:285)
+    at AgentTestRunner4.main(AgentTestRunner4.java:314)
+
+Tests run: 7, Failures: 6, Aborted: 0, Skipped: 0
+Test methods: 7, failed: 6, left out beforehand: 153
+FAILURES!!!
