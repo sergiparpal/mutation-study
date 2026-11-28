@@ -264,22 +264,23 @@ Of the first campaign. Per arm, over every suite measured:
 
 | arm | suites | real fault detected | mutation score | line coverage |
 |---|---|---|---|---|
-| `agent` (Sonnet, M) | 36 | **26/36 — 72%** | 58% | 85% |
+| `agent` (Sonnet, M) | 36 | **26/36 — 72%** | 58% | 86% |
 | `agentopus` (Opus, M) | 6 | 6/6 | 70% | 89% |
 | `spec` (Sonnet, S) | 38 | 6/37 — 16% | 44% | 73% |
-| `evosuite` | 36 | 15/35 — 43% | 47% | 85% |
+| `evosuite` | 36 | 15/35 — 43% | 47% | 86% |
 
 Detection is over suites classified `Pass` or `Fail`; one `spec` suite and one
 `evosuite` suite are `Broken`. EvoSuite's coverage is over 35 suites. Five of
 the `evosuite` rows were measured a second time under a corrected harness
-(below).
+(below). Csv-4's line coverage is counted as measured again with JaCoCo beside
+Cobertura ("Csv-4's line coverage, measured again").
 
 Paired over the 36 bugs present in both Sonnet arms:
 
 ```
 detection   M 26/36 (72%)   vs   S 5/36 (14%)
 mutation    M 58%           vs   S 44%
-coverage    M 85%           vs   S 73%
+coverage    M 86%           vs   S 74%
 
 Cli    n=7    M=5   S=1
 Csv    n=9    M=7   S=2
@@ -294,7 +295,7 @@ implementation is withheld. The effect holds in all four projects.
 
 And the standard metrics show only a fraction of it. Mutation score falls from
 58% to 44%, with the M-arm suite higher in 35 of the 36 bugs, and line coverage
-from 85% to 73% — factors of 1.3 and 1.2 against a factor of five in detection.
+from 86% to 74% — factors of 1.3 and 1.2 against a factor of five in detection.
 About half of the mutation gap is coverage (25.6% of mutants are never executed
 by the S-arm suites, against 13.6%) and half is kill rate on the mutants each
 arm does execute (59% against 67%).
@@ -876,6 +877,10 @@ on the 36 bugs with every measurement in both:
   fall(detection) - fall(mutation score)    +37.3 points, 95% interval [+12.0, +59.0]
 ```
 
+Line coverage there is as recorded. With Csv-4's lines counted as measured
+again, it falls from 84.6% to 70.9%, by 16.2% ("Csv-4's line coverage,
+measured again").
+
 Both hypotheses of the protocol hold: the arms differ in detection, and
 detection falls further than mutation score does. `campaign2/analysis.txt` is
 the analysis as the script printed it; the sections below record how the runs,
@@ -1080,7 +1085,10 @@ script as it was fixed. The paired set has 39 bugs and the complete set 36.
   pooled mutation score from 54.0% to 39.1%, by 27.7%; line coverage from
   83.7% to 70.3%, by 16.1%. The difference between the falls in detection and
   in mutation score is +37.3 points, with a 95% bootstrap interval of [+12.0,
-  +59.0]. Against coverage it is +48.9 points, [+24.0, +69.8].
+  +59.0]. Against coverage it is +48.9 points, [+24.0, +69.8]. With Csv-4's
+  line coverage measured again, coverage falls from 84.6% to 70.9% and the
+  difference is +48.8 points, [+23.9, +69.7] ("Csv-4's line coverage,
+  measured again").
 - **Sensitivity.** No run has a violation, so the first sensitivity analysis
   is the primary one. Intention to treat: 22/40 against 7/40, *p* = 0.000275.
   Without the two Lang-36 runs: 22/38 against 7/38, and the interval of H2 is
@@ -1527,7 +1535,8 @@ subjects.
   three runs that name a trigger test, 20 subjects: +17.7 points [−13.9,
   +56.4]. As means over suites, the mutation scores are 67.7% and 57.9%.
 - **The second campaign beside it**, as its analysis computes it: detection
-  falls 65.0%, mutation score 27.7%, coverage 16.1%, and the statistic is
+  falls 65.0%, mutation score 27.7%, coverage 16.1% (16.2% with Csv-4's line
+  coverage measured again), and the statistic is
   +37.3 points [+12.0, +59.0]. Descriptive: the campaigns differ in the
   mutation tool as well as in everything "Analysis" above lists.
 
@@ -2727,8 +2736,9 @@ left an empty `mmlc.log` in the repository's root, which was removed.
   that name none.
 - **Mutation score (secondary).** On the 37 bugs of the complete set, the
   pooled scores are 54.2% and 53.1%, +1.1 [−2.0, +4.4]. Line coverage is
-  83.0% and 82.4%. In all 80 suites, the tests in the archive for Major are
-  those the measurement ran.
+  83.0% and 82.4% as recorded, and 83.8% and 83.2% with Csv-4's lines counted
+  as measured again ("Csv-4's line coverage, measured again"). In all 80
+  suites, the tests in the archive for Major are those the measurement ran.
 - **Sensitivity.** All six analyses keep the direction, with *p* between
   7.63 × 10⁻⁵ and 1.45 × 10⁻⁴.
 - **Descriptive.** By fault type, `f7` detects none of the 22 omissions, where
@@ -2781,6 +2791,135 @@ one that two `f6` runs named in the same class in 2026, `5b3a81dcd` and
 `d927bfc84`: `ExtendedMessageFormat` does not trim a format name followed by
 a space. Whether the projects count these as bugs was not checked.
 
+## Csv-4's line coverage, measured again (`csv4-coverage/`)
+
+Found and measured again on 28 November 2026, in the environment of the
+original measurements (Defects4J `v3.0.1-7-g8c16da82`, Java 11). No model was
+run.
+
+**What was wrong.** Defects4J measures line coverage with Cobertura 2.0.3. In
+`CSVParser`, the class Csv-4's fix changes, Cobertura gives no line counter to
+the constructor or to the methods that follow `parse(URL, Charset,
+CSVFormat)` in the class. Their lines read as never executed, whatever a suite
+runs. Seven suites had their coverage of Csv-4 measured that way: the first
+campaign's M, S and EvoSuite suites, `m2` and `s2`, and `m7` and `f7`. They were
+credited with 21 to 28 of the class's 100 lines, while executing 41 to 67 of
+its 68 or 69 mutants. The write-up had said the two measurements could not
+both be right and that it had not found which was wrong. Three things show
+that Cobertura is the wrong one:
+
+- **Cobertura's reports contradict themselves.**
+  - In the first campaign's M suite, `parse(String, CSVFormat)` is entered 31
+    times, and its last line, which returns `new CSVParser(...)`, is hit 29
+    times. None of the constructor's ten lines is hit.
+  - The anonymous iterator's `getNextRecord()` calls `nextRecord()` 13 times,
+    and none of `nextRecord`'s 24 lines is hit.
+  - `CSVParser$2`, the switch map of `nextRecord`'s `switch`, is initialised.
+    That happens only when the `switch` runs.
+- **Major kills mutants on those lines.** In the same suite, 40 of the 57
+  killed mutants are on lines Cobertura gives no hit. A mutant changes a test's
+  outcome only if its code runs.
+- **The project's own tests fare no better.** `defects4j coverage -r`
+  on a checkout of Csv-4f, run by hand, credits the project's relevant tests
+  with 27 of the 100 lines. Its report has `parse(String, CSVFormat)` entered
+  30,051 times and the constructor never.
+
+**Why.** `bin/check-cobertura-instrumentation.py` reads the classes Cobertura
+writes. Cobertura counts a line by incrementing `__cobertura_counters` at a
+constant index where the line starts. In Csv-4, 10 of `CSVParser`'s 14 methods
+with code have no line counter, and the class has 13 counters for its 80 lines
+(`instrumentation.tsv`). `parse(URL, Charset, CSVFormat)` ends with
+
+```java
+return new CSVParser(new InputStreamReader(url.openStream(),
+                     charset == null ? Charset.forName("UTF-8") : charset), format);
+```
+
+That is a conditional inside a constructor call that is itself inside another.
+The script compiles the fixed `CSVParser.java` in six versions, which differ
+only in that statement, and instruments each the same way (`variants.tsv`):
+
+| version of the statement | line counters in the class | methods with code and no counter |
+|---|---|---|
+| as it is (the same as Defects4J's build compiled it) | 13 | 10 |
+| on one line | 13 | 10 |
+| the conditional assigned to a local variable first | 104 | 0 |
+| the reader built in a statement of its own | 104 | 0 |
+| the reader built by a static method | 105 | 0 |
+| no conditional | 102 | 0 |
+
+With one constructor call around the conditional, or none, Cobertura counts
+every method. With the two calls nested, the methods that follow in the class
+lose their counters. We have not looked into Cobertura's code for the reason.
+
+**Where else.** The same check covers both versions of the 40 bugs of the
+sample, on the class files Defects4J's coverage step instruments
+(`classes.modified` and their inner classes). Only Csv-4's `CSVParser` has a
+method without a counter, in both versions (`instrumentation.tsv`). Of the 270
+class files, 12 are interfaces, for which Cobertura writes no class. The check
+reads the class files and runs no test, so it covers every suite measured on
+those classes. Csv-4's branch coverage is wrong in the same way, and no figure
+uses it. The third to sixth campaigns measured coverage with PIT, not Cobertura.
+
+**How it was measured again.** `bin/remeasure-csv4-coverage.sh` runs
+Defects4J's coverage step again for each of the seven suites, as its campaign
+ran it. JaCoCo 0.8.16's agent is attached to every JVM the step starts,
+limited to `CSVParser` and its inner classes, and dumps the classes it
+instruments, so that what it recorded is read against the bytes that ran
+(`bin/JacocoLines.java`). Over the lines of Cobertura's report of the same run,
+a line counts as executed if Cobertura recorded a hit or JaCoCo saw one of its
+instructions run. Cobertura records no hit that did not happen. JaCoCo leaves
+out a line whose only call throws, which Cobertura counts when the line
+starts. Three of the suites needed more than that:
+
+- **The seventh campaign's two suites.** Its measurement deleted the archives
+  it measured. They are built again by `bin/mutation-campaign7.sh` itself, run
+  from a copy of `bin/` in which that script has one more line, which keeps the
+  archive (`keep-archive.patch`). The mutation step is skipped.
+- **EvoSuite's suite.** EvoSuite's runtime defines the class under test in a
+  class loader of its own, which the agent does not instrument. For it,
+  `defects4j coverage -s` runs twice in one working copy: once as it is, and
+  once with Cobertura's instrumented classes replaced by JaCoCo's offline
+  instrumentation of the same classes.
+
+Every Cobertura figure came out as its campaign's table records it. Two checks
+hold (`checks.tsv`):
+
+- On Csv-7, whose `CSVParser` Cobertura instruments fully, the `m2` suite's
+  count is Cobertura's own, 93 of 103 lines.
+- The first campaign's M suite, measured the way EvoSuite's is, comes out as it
+  does with the agent.
+
+| suite | Cobertura, as recorded and measured again | JaCoCo | counted, of 100 lines |
+|---|---|---|---|
+| first campaign, M | 28 | 91 | 92 |
+| first campaign, S | 27 | 76 | 77 |
+| first campaign, EvoSuite | 21 | 87 | 89 |
+| `m2` | 27 | 92 | 94 |
+| `s2` | 26 | 73 | 75 |
+| `m7` | 24 | 89 | 90 |
+| `f7` | 28 | 94 | 95 |
+
+`lines/` has every run line by line: Cobertura's hits and JaCoCo's verdict.
+
+**How it enters the figures.** The tables keep Cobertura's figures as
+measured: `agent-metrics-final.csv`, `campaign2/results/agent-metrics.csv` and
+`campaign7/mutation/mutation.csv`. So do the analyses as their scripts printed
+them, `campaign2/analysis.txt` and `campaign7/analysis.txt`.
+`bin/report-figures.py` applies `corrected.tsv` to copies of the three tables
+and runs every script on them; with `--as-recorded` it prints the figures from
+the tables as they are. The write-up quotes the corrected figures. Detection,
+mutation score and the tests of the hypotheses do not change.
+
+| figure, pooled line coverage | as recorded | corrected |
+|---|---|---|
+| first campaign, 36 paired bugs: M, S | 85.0%, 73.2% | 85.8%, 73.8% |
+| first campaign, every suite: M (36), S (38), EvoSuite (35) | 85.0%, 72.7%, 85.4% | 85.8%, 73.3%, 86.4% |
+| three generators, 34 bugs: M, EvoSuite, S | 84.6%, 85.4%, 72.7% | 85.4%, 86.4%, 73.4% |
+| second campaign, complete set: `m2`, `s2`, fall | 83.7%, 70.3%, 16.1% | 84.6%, 70.9%, 16.2% |
+| second campaign: fall(detection) − fall(line coverage) | +48.9 [+24.0, +69.8] | +48.8 [+23.9, +69.7] |
+| seventh campaign, complete set: `f7`, `m7`, difference | 83.0%, 82.4%, +0.5 [−3.0, +3.7] | 83.8%, 83.2%, +0.6 [−2.9, +3.8] |
+
 ## Infrastructure failures and exclusions
 
 Each project contributed its own, all recorded here because they are easy to
@@ -2811,6 +2950,11 @@ mistake for results:
   Described under Post-cutoff corpora. One of the five,
   `commons-lang-ae85262f0`, meets the contract and is in neither corpus nor
   the third campaign; it is one of the fourth campaign's subjects.
+- **Cobertura leaves methods of one class uninstrumented.** In Csv-4's
+  `CSVParser`, the constructor and the methods after `parse(URL, Charset,
+  CSVFormat)` have no line counter, and seven suites were credited with about
+  a quarter of the class's lines. Described under "Csv-4's line coverage,
+  measured again".
 - **Figures that were wrong and went unnoticed**, because nothing in the
   pipeline failed: `mut_killed` counting uncovered mutants, `Broken` suites
   counted as missed detections, the doubled test totals, and the RAT audit
@@ -2863,4 +3007,5 @@ mistake for results:
 - [x] Seventh campaign's protocol fixed before any run on the subjects (`campaign7/PROTOCOL.md`)
 - [x] Seventh campaign run: the sample's 40 bugs in both arms, 80 runs, audited, measured and analysed. Asked to look for faults, `f7` detects 10.0% (4/40); on the 39 paired bugs it detects 4 against `m7`'s 21, and H1 is rejected with `f7` below `m7` (*p* = 7.63 × 10⁻⁵); the pooled mutation scores are 54.2% and 53.1%. No deviation; one transcript redacted (`campaign7/`)
 - [x] Write-up carries the seventh campaign: `PREPRINT.md` §2.15 and §3.15, and the abstract, introduction, discussion (§4.1, §4.2, §4.3, §4.6), threats, related work, conclusion and data availability; `README.md` and `CITATION.cff`; `bin/describe-campaign7.py`, and §3.15 in `bin/report-figures.py`
+- [x] Csv-4's line coverage measured again with JaCoCo beside Cobertura, in the seven suites Cobertura measured: 75 to 95 of `CSVParser`'s 100 lines, where Cobertura had 21 to 28. Cobertura leaves most of the class uninstrumented, and no other class of the sample. The figures count the new measurement; the tables and analyses stay as recorded (`csv4-coverage/`)
 - [ ] A matched post-cutoff corpus large enough to test the effect size. Not pursued (21 November 2026): a corpus matched to the Defects4J sample can take at most 69 of the pool's 131 new subjects, 115 of which the fourth campaign has run, and its analysis weights detection by the sample's fault types instead (`campaign4/analysis.txt`)

@@ -29,7 +29,7 @@ In the second campaign, over the 39 bugs with a verdict in both arms,
 real-fault detection falls from **56% to 18%** (exact McNemar, *p* = 2.7 ×
 10⁻⁴). **The metrics ordinarily reported alongside detection move far less.**
 On the 36 bugs that also have a mutation score in both arms, mutation score
-falls from 54% to 39% and line coverage from 84% to 70%: detection loses 65%
+falls from 54% to 39% and line coverage from 85% to 71%: detection loses 65%
 of its value, mutation score 28% and coverage 16%. The gap between the first
 two losses is 37 points, with a 95% bootstrap interval of 12 to 59. That is
 the pre-specified test of the claim in the title.
@@ -161,7 +161,7 @@ alone; an exact McNemar test gives *p* = 2.7 × 10⁻⁴.
 
 **The usual metrics move, but far less.** On the 36 bugs with every
 measurement in both arms, mutation score falls from 54% to 39% and line
-coverage from 84% to 70%. Detection loses 65% of its value, mutation score 28%
+coverage from 85% to 71%. Detection loses 65% of its value, mutation score 28%
 and coverage 16%; the gap between the first two losses is 37 points, with a
 95% interval of 12 to 59. The specification-only suites are weaker than the
 implementation-visible ones on every count, but by nothing like a factor of
@@ -501,7 +501,9 @@ packaged suite:
   test executed at all, so a score read from it is inflated by the suite's
   share of uncovered mutants: here 13.6 points in the M arm and 25.6 in the S
   arm (§3.1).
-- **Line and branch coverage** — `run_coverage.pl`.
+- **Line and branch coverage** — `run_coverage.pl`, with Cobertura. In one
+  class, Csv-4's `CSVParser`, Cobertura leaves most methods without a line
+  counter. There the lines are counted from JaCoCo, run beside it (§5.2).
 
 Mutation score and coverage are pooled: mutants killed, or lines covered,
 summed over the suites of an arm and divided by the corresponding total. A
@@ -1147,7 +1149,7 @@ Over the 36 bugs measured in both arms of the first campaign:
 |---|---|---|
 | **Real fault detected** | **26/36 — 72%** | **5/36 — 14%** |
 | Mutation score | 58% | 44% |
-| Line coverage | 85% | 73% |
+| Line coverage | 86% | 74% |
 
 Detection differs by a factor of five. Mutation score differs by a factor of
 1.3 and coverage by 1.2.
@@ -1168,9 +1170,9 @@ Reported per arm over every suite measured, including the unpaired ones:
 
 | arm | suites | detection | mutation | coverage |
 |---|---|---|---|---|
-| M arm, Sonnet | 36 | 26/36 (72%) | 58% | 85% |
+| M arm, Sonnet | 36 | 26/36 (72%) | 58% | 86% |
 | S arm, Sonnet | 38 | 6/37 (16%) | 44% | 73% |
-| EvoSuite | 36 | 15/35 (43%) | 47% | 85% |
+| EvoSuite | 36 | 15/35 (43%) | 47% | 86% |
 | M arm, Opus † | 6 | 6/6 | 70% | 89% |
 
 Detection is over the suites with a valid verdict: one S-arm suite and one
@@ -1289,7 +1291,7 @@ One of the EvoSuite suites is `Broken` (§2.9), so the three are compared on the
 | | detection | mutation | coverage |
 |---|---|---|---|
 | M arm (implementation-visible) | 24/34 (71%) | 58% | 85% |
-| EvoSuite | 14/34 (41%) | 47% | 85% |
+| EvoSuite | 14/34 (41%) | 47% | 86% |
 | S arm (specification-only) | 5/34 (15%) | 44% | 73% |
 
 EvoSuite's coverage is over 33 suites (§2.9). Five of its 34 verdicts come
@@ -1311,9 +1313,9 @@ without interpreting it still reaches four faults that the agent misses.
 score puts the implementation-visible suites first and the other two close
 together: 47% for EvoSuite and 44% for the specification-only suites when
 pooled, 47% and 48% — the other way round — when averaged per suite. Their
-detection rates are 41% and 15%. Coverage does separate those two, 85% against
-73%, but then cannot tell EvoSuite from the implementation-visible suites, 85%
-for both, whose detection rates are 41% and 71%. On the mutants they execute,
+detection rates are 41% and 15%. Coverage does separate those two, 86% against
+73%, but then cannot tell EvoSuite from the implementation-visible suites, 86%
+and 85%, whose detection rates are 41% and 71%. On the mutants they execute,
 the specification-only suites kill more than EvoSuite's do, 59% against 54%,
 and detect about a third as many faults.
 
@@ -1605,7 +1607,7 @@ mutant, reproducibly. The complete set has 36 bugs.
 | **Real fault detected**, paired set, 39 bugs | **22/39 — 56%** | **7/39 — 18%** |
 | Real fault detected, complete set, 36 bugs | 20/36 — 56% | 7/36 — 19% |
 | Mutation score, complete set | 54% | 39% |
-| Line coverage, complete set | 84% | 70% |
+| Line coverage, complete set | 85% | 71% |
 
 **H1: the arms differ in detection.** Of the 39 bugs, six are detected by both
 arms, 16 by M2 alone, one by S2 alone and 16 by neither. The exact McNemar
@@ -1618,12 +1620,12 @@ difference is 38.5 points, with a 95% bootstrap interval of 20.5 to 56.4.
 |---|---|---|---|
 | Detection | 55.6% | 19.4% | 65.0% |
 | Mutation score, pooled | 54.0% | 39.1% | 27.7% |
-| Line coverage, pooled | 83.7% | 70.3% | 16.1% |
+| Line coverage, pooled | 84.6% | 70.9% | 16.2% |
 
 The fall in detection exceeds the fall in mutation score by 37.3 points, with
 a 95% bootstrap interval of 12.0 to 59.0. The lower bound is above zero and H2
 is supported. Against line coverage, a secondary result, the difference is
-48.9 points (24.0 to 69.8). By the rule fixed in the protocol, the claim in
+48.8 points (23.9 to 69.7). By the rule fixed in the protocol, the claim in
 the title stands.
 
 **Sensitivity.** None of the following is confirmatory. No run has a
@@ -1715,9 +1717,9 @@ have a verdict:
 
 | | detection | mutation | coverage |
 |---|---|---|---|
-| M2 (implementation-visible) | 20/35 (57%) | 53.7% | 83.3% |
-| EvoSuite | 15/35 (43%) | 47.1% | 85.5% |
-| S2 (specification-only) | 7/35 (20%) | 39.1% | 69.9% |
+| M2 (implementation-visible) | 20/35 (57%) | 53.7% | 84.1% |
+| EvoSuite | 15/35 (43%) | 47.1% | 86.4% |
+| S2 (specification-only) | 7/35 (20%) | 39.1% | 70.5% |
 
 EvoSuite falls between the two arms on detection and on mutation score, and is
 level with M2 on coverage. M2 and EvoSuite detect ten faults in common, ten
@@ -2526,7 +2528,7 @@ this one beside.
 **Mutation score cannot tell the arms apart.** Over the 37 bugs with a figure
 in both arms, the pooled mutation score is 54.2% in F7 and 53.1% in M7. The
 difference is 1.1 points, with an interval from −2.0 to 4.4. Line coverage is
-83.0% and 82.4%. As means over suites, the scores are 64.6% and 63.2%, and F7
+83.8% and 83.2%. As means over suites, the scores are 64.6% and 63.2%, and F7
 scores higher on 19 bugs and M7 on 17. Each arm is scored on the mutants of
 its own version, and F7's findings are not in its score, so a detection cannot
 raise it. The four F7 suites that detect average 58.9%, below the other F7
@@ -3188,11 +3190,18 @@ pooled, and 64.6% against 63.2% per suite (§3.15). The near-tie between
 EvoSuite and the first campaign's specification-only suites changes sign
 (§3.5), which is why we call it a tie.
 
-**Line coverage is not reliable for every subject.** For Csv-4 the
-implementation-visible and EvoSuite suites are credited with 28% and 21% of the
-lines of `CSVParser` while executing 93% and 94% of its mutants. The two
-measurements cannot both be right for that class, and we have not found which
-is wrong.
+**Cobertura leaves one class mostly uninstrumented.** In Csv-4's `CSVParser`,
+`parse(URL, Charset, CSVFormat)` has a conditional inside two nested
+constructor calls. Defects4J's Cobertura 2.0.3 gives no line counter to the
+constructor or to the methods that follow that one in the class. Their lines
+read as never executed, so the seven suites measured on the class were
+credited with 21% to 28% of its lines while executing 59% to 97% of its
+mutants. Major kills mutants on those lines, and the developers' own tests
+are credited with 27%. No other class of the sample is affected: we read the
+classes Cobertura writes for both versions of the 40 bugs. The figures here
+count the class's lines from JaCoCo, run beside Cobertura on the same runs.
+The seven suites then cover 75% to 95% of it, and no pooled figure quoted
+here rises by more than a point (data/README.md).
 
 ### 5.3 External validity
 
@@ -3719,9 +3728,9 @@ once suite size is controlled for, and that stronger coverage criteria add no
 insight. Note that they operationalise effectiveness as **mutation score**, not
 as real-fault detection; their result therefore concerns the relationship
 between two proxies, and is consistent with what we observe across populations,
-where EvoSuite and the implementation-visible suites have the same coverage and
-mutation scores eleven points apart in the first campaign and seven in the
-second.
+where EvoSuite and the implementation-visible suites have about the same
+coverage and mutation scores eleven points apart in the first campaign and
+seven in the second.
 
 Just, Jalali, Inozemtseva, Ernst, Holmes and Fraser, *"Are Mutants a Valid
 Substitute for Real Faults in Software Testing?"* (FSE 2014), examined 357 real
@@ -3866,7 +3875,7 @@ withholding the implementation and supplying only its documentation drops
 detection from 56% to 18%.
 
 The metrics around that number move in the same direction and nowhere near as
-far. Mutation score falls from 54% to 39% and coverage from 84% to 70%.
+far. Mutation score falls from 54% to 39% and coverage from 85% to 71%.
 Detection loses two thirds of its value and mutation score a little over a
 quarter, and the difference between the two losses is above zero with 95%
 confidence, by a test fixed before the runs. A suite's assertions can be
@@ -3954,9 +3963,16 @@ which merges their tables and recomputes the mutation columns from Major's
 per-mutant output. `bin/remeasure-cli-evosuite.sh` repeats the measurement of
 the five EvoSuite suites of §2.7 with Defects4J's JUnit path corrected; its
 output is kept apart from Defects4J's own tables, and the merged file marks
-the rows taken from it. The post-cutoff corpora are mined by
-`bin/mine-postcutoff.sh`, run by `bin/run-postcutoff.sh` and tallied from their
-logs by `bin/tally-postcutoff.py`.
+the rows taken from it. `bin/check-cobertura-instrumentation.py` reads the
+classes Cobertura writes for the sample's 40 bugs and says which methods have
+no line counter, and compiles the versions of Csv-4's `CSVParser` that locate
+the cause (§5.2). `bin/remeasure-csv4-coverage.sh`, with
+`bin/JacocoLines.java`, measures the line coverage of Csv-4's seven suites
+again with JaCoCo beside Cobertura. Their output is in `data/csv4-coverage/`;
+the tables keep Cobertura's figures, and `bin/report-figures.py` counts the
+new ones. The post-cutoff corpora are mined by `bin/mine-postcutoff.sh`, run
+by `bin/run-postcutoff.sh` and tallied from their logs by
+`bin/tally-postcutoff.py`.
 
 The second campaign has its own scripts, all but the last committed before its
 runs: `bin/generate-suites.sh`, which builds both working copies and the
@@ -4096,10 +4112,11 @@ under `data/`, among them the cost of a run whose record was overwritten
 from the packaged suites in `data/agent-suites/` and `data/campaign2/suites/`
 needs Defects4J (`bin/analyze-agent-suites.sh`), and so does re-measuring the
 suites in `data/campaign7/suites/` (`bin/measure-campaign7.sh`,
-`bin/mutation-campaign7.sh`). Re-measuring those in
-`data/campaign3/suites/` to `data/campaign6/suites/` needs clones of the three
-upstream repositories, Java 11, and Maven with the projects' dependencies in
-its local repository (`bin/measure-campaign3.sh` to
+`bin/mutation-campaign7.sh`), and Csv-4's line coverage
+(`bin/remeasure-csv4-coverage.sh`, which also needs Maven to fetch JaCoCo).
+Re-measuring those in `data/campaign3/suites/` to `data/campaign6/suites/`
+needs clones of the three upstream repositories, Java 11, and Maven with the
+projects' dependencies in its local repository (`bin/measure-campaign3.sh` to
 `bin/measure-campaign6.sh`). Their mutation score also needs PIT, which
 `bin/mutation-campaign3.sh` to `bin/mutation-campaign6.sh` fetch once and
 check against the hashes written in them. Regenerating the suites needs the
